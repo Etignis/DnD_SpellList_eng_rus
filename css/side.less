@@ -1,0 +1,95 @@
+.p_side{
+    background: rgba(0,0,0,.4);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    display: none;
+    overflow: auto;
+    color: @white;
+    .s_block{
+        float: left;
+        min-width: 13em;
+        max-width: 16em;
+        width: 98%;
+        margin: .1em;
+        text-align: right;
+        min-height: 22px;
+    }
+    .flt{
+        background: rgba(0,0,0,0.2);
+    }
+    .s_sp{
+        margin: 0;
+        padding: .1em;
+        width: 9em;
+    }
+    
+    input[type='radio']{
+        display: none;
+    }
+    
+    input[type='radio'] + label{
+            .fr-convex;    
+            @w: 2.2em;
+            @h: 1em;
+            min-width: @w;
+            min-height: @h;
+            text-align: center;
+            background: @m-gray + #111;
+           // width: 100%;
+            display: inline-block;
+            padding: .3em;
+            &:hover{
+                background: @m-gray + #222;    
+            }
+            &:active{
+                background:  @m-gray;    
+            }
+            input{
+                display: none;
+            }
+        }
+    input[type='radio']:checked + label{
+        .fr-concave;
+        background:  @m-gray - #222;  
+        padding: .3em;  
+    }
+    .hidden_spells{
+        max-width: 99.4%;
+        width: 100%;
+        text-align: left;
+        .a_h_spell{
+            display: inline-block;
+            display: none;
+            text-transform: capitalize;
+            color: @white;
+            width: 100%;
+            max-width: 2.5in;
+            padding: .3em 0;
+            &:hover{
+                color: @white - #333;
+            }
+        }
+    }
+    
+    .inline-block{
+        display: inline-block;
+    }
+    .block{
+        display: block;
+        max-width: 100%;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: @m_w_1) {
+    .p_side{
+        width: 15em;
+        margin-right: 1em;
+        float: left;
+        position: absolute;
+        .s_block{
+            width: 98%;
+        }
+    }    
+}

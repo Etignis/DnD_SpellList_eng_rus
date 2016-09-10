@@ -1,0 +1,43 @@
+.frame(@bw: 0px, @bbw: 2px, @btw: 0px, @rad1: @r-rad, @rad2: @r-rad, @rad3: @r-rad, @rad4: @r-rad){
+   //.border-rad(@r-rad);
+    .border-rad-4(@rad1, @rad2, @rad3, @rad4);
+    overflow: visible;
+    background: #fff;
+    border: @bw solid #d8d8d8;
+    border-bottom-width: @bbw;
+    border-top-width: @btw;
+}
+.frame{
+    .frame(0px, 2px, 0px)
+}
+.fr{
+    .border-rad(@r-rad);     
+    border-bottom-width: 2px;
+}
+
+.fr-basis(@bg-clr, @brd-clr, @txt-clr, @shd-clr, @inset){
+    .frame;
+    /*display: inline-block;*/
+    font-weight: bold;
+    padding: 0.7em;
+    margin: 0.3em;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-width: @bt-bord-width;
+    text-decoration: none;
+    border-color: @brd-clr;
+    color: @txt-clr;
+    background: @bg-clr;
+    box-shadow: 0 1px 0px 0px @shd-clr @inset;
+    cursor: pointer;
+    .transition();
+    .noselect;
+}
+.fr-convex{
+    @color: @m-gray;
+   .fr-basis(@color - #111, @color - #222, @white, rgba(255, 255, 255, 0.2), inset);
+}
+.fr-concave{
+    @color: @m-gray;
+   .fr-basis(@color - #111, @color, @white, rgba(0, 0, 0, 0.2), inset);
+}

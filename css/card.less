@@ -1,0 +1,473 @@
+.card {
+   /* -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+*/
+.transit(width, .3s, ease-out,0s);
+    display: inline-block;
+    width: 2.5in;
+    min-width: 2.5in;
+    height: 3.5in;
+    background: maroon!important;
+    padding: 0;
+    font-size: 10px;
+    position: relative;
+    margin: 0px;
+    vertical-align: top;
+    text-align: left;
+    z-index: 1;
+    margin: 0 1px 1px 0;
+    
+    
+     .front, .back {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+       /* -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+        
+        -webkit-transition: -webkit-transform 1s;
+        -moz-transition: -moz-transform 1s;
+        -o-transition: -o-transform 1s;
+        transition: transform 1s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;*/
+     }
+     .front {
+       /* -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        transition: opacity 1s;
+        */
+        height: 100%;
+        width: 100%;
+        padding: 10px 10px 25px;
+      /*  box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+            .body {
+                background-color: #fff!important;
+                border-radius: 5px;
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+                
+                .font_sizer{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    opacity: .3;
+                        
+                    &:hover{
+                       opacity: 1;
+                    }
+                    
+                    .f_min, .f_max{
+                        display: inline-block;
+                        padding: .2em .4em;
+                        color: #777;
+                        font-size: 14px;
+                        cursor: pointer;
+                        
+                        &:hover{
+                            color: #111;
+                        }
+                    }
+                }
+            }
+     }
+    .name {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 2px 5px;
+        margin: 0;
+        text-transform: uppercase;
+        text-align: center;
+        min-height: 20px;
+        position: relative;
+        
+        .hide_spell{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: .2em .4em;
+            cursor: pointer;
+            .transit(background, .3s);
+            &:hover{
+                background: rgba(0,0,0,.4);
+                color: @white;
+                padding: .4em .6em;
+                top: -.2em;
+                right: -.2em;
+            }
+        }
+    }
+    .lined {
+        border-bottom: 2px solid maroon;
+    }
+     .status {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        
+         li {
+            padding: 2px 4px;
+            float: left;
+            vertical-align: top;
+            font-size: 9px;
+            line-height: 9px;
+            min-height: 25px;
+            width: 50%;
+            margin: 0;
+          /*  box-sizing: border-box;
+            -moz-box-sizing: border-box;*/
+            
+             em {
+                font-style: normal;
+                text-transform: uppercase;
+                display: block;
+                color: maroon!important;
+                font-weight: bold;
+                padding-bottom: 2px;
+            }
+        }
+         li.second {
+            border-left: 2px solid maroon;
+        }
+    }
+    .need {
+        color: #fff!important;
+        background-color: maroon!important;
+        display: block;
+        padding: 2px 4px 4px;
+        font-weight: normal;
+        font-style: italic;
+        line-height: 100%;
+    }
+     .text {
+        padding: 2px 4px;
+        font-size: 10px;
+        line-height: 9px;
+        margin: 0;
+    }
+    .class {
+        position: absolute;
+        bottom: 8px;
+        color: #fff!important;
+        left: 10px;
+        font-size: 9px;
+        font-weight: normal;
+    }
+    .type {
+        position: absolute;
+        bottom: 8px;
+        color: #fff!important;
+        right: 10px;
+        font-size: 10px;
+        font-weight: normal;
+    }
+}
+
+.card * {
+    font-size: 10px;
+    color: #676a6c;//!important;
+}
+
+/* wisard */
+.card.class-1 .status li em, 
+.card.class-1 .level-1, 
+.card.class-1 .level-2, 
+.card.class-1 .b-lt, 
+.card.class-1 .b-rt, 
+.card.class-1 .b-lb, 
+.card.class-1 .b-rb, 
+.card.class-1 .icon, 
+.card.class-1 .icon-top, 
+.card.class-1 .icon-bot, 
+.class-1 .body .b-lt:after, 
+.class-1 .body .b-rt:after, 
+.class-1 .body .b-lb:after, 
+.class-1 .body .b-rb:after, 
+.class-1 .body .b-lt:before, 
+.class-1 .body .b-rt:before, 
+.class-1 .body .b-lb:before, 
+.class-1 .body .b-rb:before {
+	color: maroon!important;
+}
+.card.class-1 .back .line, 
+.card.class-1 .lined, 
+.card.class-1 .status li.second, 
+.card.class-1 .b-lt, 
+.card.class-1 .b-rt, 
+.card.class-1 .b-lb, 
+.card.class-1 .b-rb {
+      border-color: maroon!important;
+}
+.card.class-1, 
+.card.class-1 .need {
+    background-color: maroon!important;
+}
+
+/* bard */
+.card.class-2 .status li em, 
+.card.class-2 .level-2, 
+.card.class-2 .level-2, 
+.card.class-2 .b-lt, 
+.card.class-2 .b-rt, 
+.card.class-2 .b-lb, 
+.card.class-2 .b-rb, 
+.card.class-2 .icon, 
+.card.class-2 .icon-top, 
+.card.class-2 .icon-bot, 
+.class-2 .body .b-lt:after, 
+.class-2 .body .b-rt:after, 
+.class-2 .body .b-lb:after, 
+.class-2 .body .b-rb:after, 
+.class-2 .body .b-lt:before, 
+.class-2 .body .b-rt:before, 
+.class-2 .body .b-lb:before, 
+.class-2 .body .b-rb:before {
+    color: #8c5385!important;
+}
+.card.class-2 .back .line, 
+.card.class-2 .lined, 
+.card.class-2 .status li.second, 
+.card.class-2 .b-lt, 
+.card.class-2 .b-rt, 
+.card.class-2 .b-lb, 
+.card.class-2 .b-rb {
+    border-color: #8c5385!important;
+}
+.card.class-2, 
+.card.class-2 .need {
+    background-color: #8c5385!important;
+}
+
+/* cleric */
+.card.class-3 .status li em, 
+.card.class-3 .level-3, 
+.card.class-3 .level-3, 
+.card.class-3 .b-lt, 
+.card.class-3 .b-rt, 
+.card.class-3 .b-lb, 
+.card.class-3 .b-rb, 
+.card.class-3 .icon, 
+.card.class-3 .icon-top, 
+.card.class-3 .icon-bot, 
+.class-3 .body .b-lt:after, 
+.class-3 .body .b-rt:after, 
+.class-3 .body .b-lb:after, 
+.class-3 .body .b-rb:after, 
+.class-3 .body .b-lt:before, 
+.class-3 .body .b-rt:before, 
+.class-3 .body .b-lb:before, 
+.class-3 .body .b-rb:before {
+    color: #ffad46!important;
+}
+.card.class-3 .back .line, 
+.card.class-3 .lined, 
+.card.class-3 .status li.second, 
+.card.class-3 .b-lt, 
+.card.class-3 .b-rt, 
+.card.class-3 .b-lb, 
+.card.class-3 .b-rb {
+    border-color: #ffad46!important;
+}
+.card.class-3, 
+.card.class-3 .need {
+    background-color: #ffad46!important;
+}
+
+/* druid */
+.card.class-4 .status li em, 
+.card.class-4 .level-4, 
+.card.class-4 .level-4, 
+.card.class-4 .b-lt, 
+.card.class-4 .b-rt, 
+.card.class-4 .b-lb, 
+.card.class-4 .b-rb, 
+.card.class-4 .icon, 
+.card.class-4 .icon-top, 
+.card.class-4 .icon-bot, 
+.class-4 .body .b-lt:after, 
+.class-4 .body .b-rt:after, 
+.class-4 .body .b-lb:after, 
+.class-4 .body .b-rb:after, 
+.class-4 .body .b-lt:before, 
+.class-4 .body .b-rt:before, 
+.class-4 .body .b-lb:before, 
+.class-4 .body .b-rb:before {
+    color: #60b85d!important;
+}
+.card.class-4 .back .line, 
+.card.class-4 .lined, 
+.card.class-4 .status li.second, 
+.card.class-4 .b-lt, 
+.card.class-4 .b-rt, 
+.card.class-4 .b-lb, 
+.card.class-4 .b-rb {
+    border-color: #60b85d!important;
+}
+.card.class-4, 
+.card.class-4 .need {
+    background-color: #60b85d!important;
+}
+
+/* paladin */
+.card.class-5 .status li em, 
+.card.class-5 .level-1, 
+.card.class-5 .level-2, 
+.card.class-5 .b-lt, 
+.card.class-5 .b-rt, 
+.card.class-5 .b-lb, 
+.card.class-5 .b-rb, 
+.card.class-5 .icon, 
+.card.class-5 .icon-top, 
+.card.class-5 .icon-bot, 
+.class-5 .body .b-lt:after, 
+.class-5 .body .b-rt:after, 
+.class-5 .body .b-lb:after, 
+.class-5 .body .b-rb:after, 
+.class-5 .body .b-lt:before, 
+.class-5 .body .b-rt:before, 
+.class-5 .body .b-lb:before, 
+.class-5 .body .b-rb:before {
+    color: #3bafb1!important;
+}
+.card.class-5 .back .line, 
+.card.class-5 .lined, 
+.card.class-5 .status li.second, 
+.card.class-5 .b-lt, 
+.card.class-5 .b-rt, 
+.card.class-5 .b-lb, 
+.card.class-5 .b-rb {
+    border-color: #3bafb1!important;
+}
+.card.class-5, 
+.card.class-5 .need {
+    background-color: #358DB9!important;
+}
+
+/* Ranger */
+.card.class-6 .status li em, 
+.card.class-6 .level-6, 
+.card.class-6 .level-6, 
+.card.class-6 .b-lt, 
+.card.class-6 .b-rt, 
+.card.class-6 .b-lb, 
+.card.class-6 .b-rb, 
+.card.class-6 .icon, 
+.card.class-6 .icon-top, 
+.card.class-6 .icon-bot, 
+.class-6 .body .b-lt:after, 
+.class-6 .body .b-rt:after, 
+.class-6 .body .b-lb:after, 
+.class-6 .body .b-rb:after, 
+.class-6 .body .b-lt:before, 
+.class-6 .body .b-rt:before, 
+.class-6 .body .b-lb:before, 
+.class-6 .body .b-rb:before {
+    color: #857056!important;
+}
+.card.class-6 .back .line, 
+.card.class-6 .lined, 
+.card.class-6 .status li.second, 
+.card.class-6 .b-lt, 
+.card.class-6 .b-rt, 
+.card.class-6 .b-lb, 
+.card.class-6 .b-rb {
+    border-color: #857056!important;
+}
+.card.class-6, 
+.card.class-6 .need {
+    background-color: #857056!important;
+}
+
+/* warloc */
+.card.class-7 .status li em, 
+.card.class-7 .level-7, 
+.card.class-7 .level-7, 
+.card.class-7 .b-lt, 
+.card.class-7 .b-rt, 
+.card.class-7 .b-lb, 
+.card.class-7 .b-rb, 
+.card.class-7 .icon, 
+.card.class-7 .icon-top, 
+.card.class-7 .icon-bot, 
+.class-7 .body .b-lt:after, 
+.class-7 .body .b-rt:after, 
+.class-7 .body .b-lb:after, 
+.class-7 .body .b-rb:after, 
+.class-7 .body .b-lt:before, 
+.class-7 .body .b-rt:before, 
+.class-7 .body .b-lb:before, 
+.class-7 .body .b-rb:before {
+    color: #8c5385!important;
+}
+.card.class-7 .back .line, 
+.card.class-7 .lined, 
+.card.class-7 .status li.second, 
+.card.class-7 .b-lt, 
+.card.class-7 .b-rt, 
+.card.class-7 .b-lb, 
+.card.class-7 .b-rb {
+    border-color: #8c5385!important;
+}
+.card.class-7, 
+.card.class-7 .need {
+    background-color: #8c5385!important;
+}
+
+/* sorcerer */
+.card.class-8 .status li em, 
+.card.class-8 .level-1, 
+.card.class-8 .level-2, 
+.card.class-8 .b-lt, 
+.card.class-8 .b-rt, 
+.card.class-8 .b-lb, 
+.card.class-8 .b-rb, 
+.card.class-8 .icon, 
+.card.class-8 .icon-top, 
+.card.class-8 .icon-bot, 
+.class-8 .body .b-lt:after, 
+.class-8 .body .b-rt:after, 
+.class-8 .body .b-lb:after, 
+.class-8 .body .b-rb:after, 
+.class-8 .body .b-lt:before, 
+.class-8 .body .b-rt:before, 
+.class-8 .body .b-lb:before, 
+.class-8 .body .b-rb:before {
+    color: rgb(248, 58, 34)!important;
+}
+.card.class-8 .back .line, 
+.card.class-8 .lined, 
+.card.class-8 .status li.second, 
+.card.class-8 .b-lt, 
+.card.class-8 .b-rt, 
+.card.class-8 .b-lb, 
+.card.class-8 .b-rb {
+    border-color: rgb(248, 58, 34)!important;
+}
+.card.class-8, 
+.card.class-8 .need {
+    background-color: rgb(248, 58, 34)!important;
+}

@@ -1,0 +1,46 @@
+.loader{
+    @w: 40px;
+    width: @w;
+    height: @w;
+    display: inline-block;
+    background: #fff;
+    margin: 5px;
+    position: relative;
+    top: 16px;
+    .border-rad(@w/2);
+    .box-shadow(0, 2px, 2px, 2px, rgba(0,0,0,.1));
+    
+    /*/
+    @w2: @w/2;
+    @b: 4px;
+    /**/
+    /**/
+    @w2: 0px;
+    @b: @w/4;
+    /**/
+    &:after{
+        content: "";
+        position: absolute;
+        left: @w/2 - @w2/2 - @b;
+        top:  @w/2 - @w2/2 - @b;
+        width: @w2;
+        height: @w2;
+        border: @b solid #8DB6F3;
+        border-left-color: rgba(255,255,255,0);
+        border-right-color: rgba(255,255,255,0);
+        .border-rad(@w);
+        animation-name: spin;
+        animation-duration: 1200ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    /**/
+    @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+}
