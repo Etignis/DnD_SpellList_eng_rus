@@ -1,6 +1,6 @@
 $(window).load(function(){
 	f_dbg=0;
-	//console.log("/"+$(".card[data-class*='wiz']").eq(0).attr('data-level')+"/");
+	//console.log("/"+$(".cardContainer[data-class*='wiz']").eq(0).attr('data-level')+"/");
 	//$(".p_side").hide();
 	// фильтр спеллов
 	function spell_filter(cl, nm, lv, sc, s_cl, s_l1, s_l2, lang){
@@ -22,7 +22,7 @@ $(window).load(function(){
 		if(s_cl==8)
 			{tmp1="sorcerer"; tmp2="чародей"; console.log("8");}
 		//console.log("tmp1: "+tmp1);
-		$(".card").hide();
+		$(".cardContainer").hide();
 		var atr="";
 		var atr2='';
 		var f_atr2=0;
@@ -66,10 +66,10 @@ $(window).load(function(){
 		//console.log("class: "+cl+" name: "+nm+" level: "+lv+" school: "+sc);
 		console.log("atr: "+atr);
 		console.log("atr2: "+atr2);
-		$(".card"+atr).show();
+		$(".cardContainer"+atr).show();
 		if(f_atr2==1)
-			$(".card"+atr2).show();
-			$(".card").each(function(){
+			$(".cardContainer"+atr2).show();
+			$(".cardContainer").each(function(){
 				lvl = $(this).attr("data-level");
 				if(lvl<s_l1)
 					$(this).hide();
@@ -91,14 +91,14 @@ $(window).load(function(){
 		if(cl!='' || nm!='' || lv!='' || sc!='' || s_cl!=0 || s_l1!=0 || s_l2!=9 || lang!='r_all')
 			spell_filter(cl, nm, lv, sc, s_cl, s_l1, s_l2, lang);
 		else
-			$(".card").show();
+			$(".cardContainer").show();
 	}
 	
 	function make_spell_list(){
 		var s_class='', s_name='', s_lang='', result='';
 		if($('.a_h_spell').length<1)
 			{
-			$(".card").each(function(){
+			$(".cardContainer").each(function(){
 				s_class=$(this).attr("data-class");
 				s_name=$(this).attr("data-name");
 				//s_lang=$(this).attr("data-language");
@@ -133,11 +133,11 @@ $(window).load(function(){
 	
 	// скрыть / показать спеллы
 	$(".hide_spell").live("click", function(){
-		var s_name= $(this).closest(".card").attr("data-name");
-		var s_class= $(this).closest(".card").attr("data-class");
-		//var s_lang= $(this).closest(".card").attr("data-language");
+		var s_name= $(this).closest(".cardContainer").attr("data-name");
+		var s_class= $(this).closest(".cardContainer").attr("data-class");
+		//var s_lang= $(this).closest(".cardContainer").attr("data-language");
 		
-		$(this).closest(".card").hide();
+		$(this).closest(".cardContainer").hide();
 		//$(".a_h_spell[data-class="+s_class+"][data-name="+s_name+"][data-lang="+s_lang+"]").css('display', 'inline-block');
 		$(".a_h_spell[data-class='"+s_class+"'][data-name='"+s_name+"']").eq(0).css('display', 'inline-block');
 	});
@@ -147,15 +147,15 @@ $(window).load(function(){
 		//var s_lang= $(this).attr("data-lang");
 		
 		$(this).hide();
-		//$(".card[data-class="+s_class+"][data-name="+s_name+"][data-language="+s_lang+"]").show();
-		$(".card[data-class='"+s_class+"'][data-name='"+s_name+"']").eq(0).show();
+		//$(".cardContainer[data-class="+s_class+"][data-name="+s_name+"][data-language="+s_lang+"]").show();
+		$(".cardContainer[data-class='"+s_class+"'][data-name='"+s_name+"']").eq(0).show();
 		
 		return false;
 	});
 	
 	$(".f_hide_all").live("click", function(){
 		$('#dbg').fadeIn('fast', function() {
-			$(".card:visible").each(function(){
+			$(".cardContainer:visible").each(function(){
 				$(this).find(".hide_spell").click();
 			});
 
@@ -182,7 +182,7 @@ $(window).load(function(){
 	
 	// размер текста
 	$(".f_min").live("click", function(){
-		var f_s=$(this).closest(".body").find(".text").css("font-size");
+		var f_s=$(this).closest(".cont").find(".text").css("font-size");
 		f_s=f_s.substring(0, f_s.length - 1);
 		f_s=f_s.substring(0, f_s.length - 1);
 		//console.log(f_s);
@@ -190,31 +190,31 @@ $(window).load(function(){
 		if(f_s>6)
 		 f_s--;
 		console.log(f_s);
-	    $(this).closest(".body").find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+	    $(this).closest(".cont").find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
 		
 	});
 	$(".f_max").live("click", function(){
-		var f_s=$(this).closest(".body").find(".text").css("font-size");
+		var f_s=$(this).closest(".cont").find(".text").css("font-size");
 		f_s=f_s.substring(0, f_s.length - 1);
 		f_s=f_s.substring(0, f_s.length - 1);
 		if(f_s<20)
 		 f_s++;
 		console.log(f_s);
-	    $(this).closest(".body").find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+	    $(this).closest(".cont").find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
 		
 	});
 	
 	// ширина карточек
 	
 	$(".f_card_thin").live("click", function(){
-		var width = $(".card").eq(0).width();
+		var width = $(".cardContainer").eq(0).width();
 		f_dbg=1;
 		//$("#dbg").show();
-		//$.when($(".card").width(width-20+"px")).then(function(){$("#dbg").hide();f_dbg=0});
+		//$.when($(".cardContainer").width(width-20+"px")).then(function(){$("#dbg").hide();f_dbg=0});
 		
 		
 		$('#dbg').fadeIn('fast', function() {
-			$('.card').width(width-20+"px");
+			$('.cardContainer').width(width-20+"px");
 
 			$(this).hide('fast'); // имейте в виду, не будет задержки после появления сразу начнет исчезать
 			f_dbg=0;
@@ -223,18 +223,18 @@ $(window).load(function(){
 	});
 	$(".f_card_wide").live("click", function(){
 		$("#dbg").show();
-		var width = $(".card").eq(0).width();
+		var width = $(".cardContainer").eq(0).width();
 		f_dbg=1;
 		//$("#dbg").show();
 		//f_dbg=1;
-		//$.when($("#dbg").show()).then(function(){ $.when().then(function(){ $.when($(".card").width(width+20+"px")).then(function(){$("#dbg").hide();f_dbg=0}) }); });
-		//$(".card").width(width+20+"px");
-		//$.when($(".card").each(function(){ $(this).width(width+20+"px"); })).then(function(){$("#dbg").hide(); f_dbg=0});
+		//$.when($("#dbg").show()).then(function(){ $.when().then(function(){ $.when($(".cardContainer").width(width+20+"px")).then(function(){$("#dbg").hide();f_dbg=0}) }); });
+		//$(".cardContainer").width(width+20+"px");
+		//$.when($(".cardContainer").each(function(){ $(this).width(width+20+"px"); })).then(function(){$("#dbg").hide(); f_dbg=0});
 		
 		$('#dbg').fadeIn('fast', function() {
-			//$.when($('.card').width(width+20+"px")).then(function(){(this).hide('fast');});
-			//$('.card').width(width+20+"px");
-			$(".card").each(function(){ $(this).width(width+20+"px"); })
+			//$.when($('.cardContainer').width(width+20+"px")).then(function(){(this).hide('fast');});
+			//$('.cardContainer').width(width+20+"px");
+			$(".cardContainer").each(function(){ $(this).width(width+20+"px"); })
 			$(this).hide('fast'); // имейте в виду, не будет задержки после появления сразу начнет исчезать
 			f_dbg=0;
 		});
@@ -242,12 +242,12 @@ $(window).load(function(){
 	$(".f_card_norm").live("click", function(){
 		f_dbg=1;
 		//$("#dbg").show();
-		//var width = $(".card").eq(0).width();
-		//$(".card").width("2.5in");
-		//$.when($(".card").width("2.5in")).then(function(){$("#dbg").hide();f_dbg=0});
+		//var width = $(".cardContainer").eq(0).width();
+		//$(".cardContainer").width("2.5in");
+		//$.when($(".cardContainer").width("2.5in")).then(function(){$("#dbg").hide();f_dbg=0});
 		
 		$('#dbg').fadeIn('fast', function() {
-			$('.card').width("2.5in");
+			$('.cardContainer').width("2.5in");
 
 			$(this).hide('fast'); // имейте в виду, не будет задержки после появления сразу начнет исчезать
 			f_dbg=0;

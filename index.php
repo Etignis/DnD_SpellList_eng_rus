@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="description" content="Заклинания ДнД 5"> 
-    <link href="http://youknowwho.ru/source/fonts/FortAwesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="http://youknowwho.ru/source/fonts/FortAwesome/css/font-awesome.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" />
   <script type='text/javascript' src='js/jquery-m.js'></script><!-- jQuery -->
   <script type='text/javascript' src='js/magic.js'></script><!-- your script -->

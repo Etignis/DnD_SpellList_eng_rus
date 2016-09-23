@@ -90,20 +90,20 @@ $school_pt = "Abjuration|Conjuration|Divination|Enchantment|Evocation|Illusion|N
 		if (preg_match("|[А-Яа-яЁё]|", $cl))
 			$language = 'ru';
 		$fl_i='';
-		$out.="<div id='".$fl_i.$i."' class='card cardBlock ".$class."' data-class='".mb_strtolower($block[$i][8])."' data-level='".mb_strtolower ($block[$i][0])."' data-name='".mb_strtolower ($block[$i][1])."' data-school='".mb_strtolower ($block[$i][2])."' data-language='".$language."'>
-				<div class='front'>
-					<div class='body'>
-						<h3 class='name lined srname'>".$block[$i][1].$cross."</h3>
-															<ul class='status lined'>
-							<li><em>casting time</em>".$block[$i][3]."</li>
-							<li class='second'><em>range</em>".$block[$i][4]."</li>
-							<br clear='all'>
-						</ul>
-						<ul class='status lined'>
-							<li><em>components</em>".$block[$i][5]."</li>
-							<li class='second small'><em>duration</em>".$block[$i][6]."</li>			
-							<br clear='all'>
-						</ul>	
+		$out.="<div id='".$fl_i.$i."' class='cardContainer cardBlock ".$class."' data-class='".mb_strtolower($block[$i][8])."' data-level='".mb_strtolower ($block[$i][0])."' data-name='".mb_strtolower ($block[$i][1])."' data-school='".mb_strtolower ($block[$i][2])."' data-language='".$language."'>
+				<div class='panel'>
+					<div class='cont'>
+						<h1 class='name bord'>".$block[$i][1].$cross."</h1>
+							<div class='status bord'>
+								<div class='w50'><b>casting time</b>".$block[$i][3]."</div>
+								<div class='w50 second'><b>range</b>".$block[$i][4]."</div>
+								<!--br clear='all'-->
+							</div>
+							<div class='status bord'>
+								<div class='w50'><b>components</b>".$block[$i][5]."</div>
+								<div class='w50 second small'><b>duration</b>".$block[$i][6]."</div>			
+								<!--br clear='all'-->
+							</div>	
 						".$cond."
 						<div class='text-scroll'>
 							<p class='text'> ".$text.$font_size."</p>											

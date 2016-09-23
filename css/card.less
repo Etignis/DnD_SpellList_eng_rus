@@ -1,19 +1,14 @@
-.card {
-   /* -webkit-transition: -webkit-transform 1s;
-    -moz-transition: -moz-transform 1s;
-    -o-transition: -o-transform 1s;
-    transition: transform 1s;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-*/
+.cardContainer {
+   
+    h1{
+        
+    }
 .transit(width, .3s, ease-out,0s);
     display: inline-block;
     width: 2.5in;
     min-width: 2.5in;
     height: 3.5in;
-    background: maroon!important;
+    background: @c_standart!important;
     padding: 0;
     font-size: 10px;
     position: relative;
@@ -29,70 +24,48 @@
         height: 100%;
         width: 100%;
         position: absolute;
-       /* -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -o-backface-visibility: hidden;
-        backface-visibility: hidden;
-        
-        -webkit-transition: -webkit-transform 1s;
-        -moz-transition: -moz-transform 1s;
-        -o-transition: -o-transform 1s;
-        transition: transform 1s;
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -o-backface-visibility: hidden;
-        backface-visibility: hidden;*/
+       
      }
-     .front {
-       /* -webkit-transition: opacity 1s;
-        -moz-transition: opacity 1s;
-        -o-transition: opacity 1s;
-        transition: opacity 1s;
-        */
+     .panel {
+       
         height: 100%;
         width: 100%;
         padding: 10px 10px 25px;
-      /*  box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;*/
+     
         position: absolute;
         top: 0;
         left: 0;
         
-            .body {
-                background-color: #fff!important;
-                border-radius: 5px;
-                height: 100%;
-                overflow: hidden;
-                position: relative;
-                
-                .font_sizer{
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    opacity: .3;
-                        
-                    &:hover{
-                       opacity: 1;
-                    }
+        .cont {
+            background-color: #fff!important;
+            border-radius: 5px;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            
+            .font_sizer{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                opacity: .3;
                     
-                    .f_min, .f_max{
-                        display: inline-block;
-                        padding: .2em .4em;
-                        color: #777;
-                        font-size: 14px;
-                        cursor: pointer;
-                        
-                        &:hover{
-                            color: #111;
-                        }
+                &:hover{
+                   opacity: 1;
+                }
+                    
+                .f_min, .f_max{
+                    display: inline-block;
+                    padding: .2em .4em;
+                    color: #777;
+                    font-size: 14px;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        color: #111;
                     }
                 }
             }
+        }
      }
     .name {
         font-size: 14px;
@@ -120,7 +93,7 @@
             }
         }
     }
-    .lined {
+    .bord {
         border-bottom: 2px solid maroon;
     }
      .status {
@@ -128,8 +101,14 @@
         text-align: center;
         padding: 0;
         margin: 0;
+        overflow: auto;
+        &:before, &:after{
+            content:"";
+            clear: both;
+        }
         
-         li {
+        .w50 {
+            display: inline-block;
             padding: 2px 4px;
             float: left;
             vertical-align: top;
@@ -141,29 +120,29 @@
           /*  box-sizing: border-box;
             -moz-box-sizing: border-box;*/
             
-             em {
+            b {
                 font-style: normal;
                 text-transform: uppercase;
                 display: block;
-                color: maroon!important;
+                color: @c_standart!important;
                 font-weight: bold;
                 padding-bottom: 2px;
             }
         }
-         li.second {
-            border-left: 2px solid maroon;
+        .w50.second {
+            border-left: 2px solid @c_standart;
         }
     }
     .need {
         color: #fff!important;
-        background-color: maroon!important;
+        background-color: @c_standart!important;
         display: block;
         padding: 2px 4px 4px;
         font-weight: normal;
         font-style: italic;
         line-height: 100%;
     }
-     .text {
+    .text {
         padding: 2px 4px;
         font-size: 10px;
         line-height: 9px;
@@ -187,22 +166,30 @@
     }
 }
 
-.card * {
+.cardContainer * {
     font-size: 10px;
     color: #676a6c;//!important;
 }
 
+@c_red: #B71C1C;
+@c_yellow: #FBC02D;
+@c_green: #43A047;
+@c_blue: #1E88E5;
+@c_brown: #6D4C41;
+@c_purple: #7B1FA2;
+@c_standart: #546E7A;
+
 /* wisard */
-.card.class-1 .status li em, 
-.card.class-1 .level-1, 
-.card.class-1 .level-2, 
-.card.class-1 .b-lt, 
-.card.class-1 .b-rt, 
-.card.class-1 .b-lb, 
-.card.class-1 .b-rb, 
-.card.class-1 .icon, 
-.card.class-1 .icon-top, 
-.card.class-1 .icon-bot, 
+.cardContainer.class-1 .status div em, 
+.cardContainer.class-1 .level-1, 
+.cardContainer.class-1 .level-2, 
+.cardContainer.class-1 .b-lt, 
+.cardContainer.class-1 .b-rt, 
+.cardContainer.class-1 .b-lb, 
+.cardContainer.class-1 .b-rb, 
+.cardContainer.class-1 .icon, 
+.cardContainer.class-1 .icon-top, 
+.cardContainer.class-1 .icon-bot, 
 .class-1 .body .b-lt:after, 
 .class-1 .body .b-rt:after, 
 .class-1 .body .b-lb:after, 
@@ -211,33 +198,33 @@
 .class-1 .body .b-rt:before, 
 .class-1 .body .b-lb:before, 
 .class-1 .body .b-rb:before {
-	color: maroon!important;
+	color: @c_red!important;
 }
-.card.class-1 .back .line, 
-.card.class-1 .lined, 
-.card.class-1 .status li.second, 
-.card.class-1 .b-lt, 
-.card.class-1 .b-rt, 
-.card.class-1 .b-lb, 
-.card.class-1 .b-rb {
-      border-color: maroon!important;
+.cardContainer.class-1 .back .line, 
+.cardContainer.class-1 .bord, 
+.cardContainer.class-1 .status div.second, 
+.cardContainer.class-1 .b-lt, 
+.cardContainer.class-1 .b-rt, 
+.cardContainer.class-1 .b-lb, 
+.cardContainer.class-1 .b-rb {
+      border-color: @c_red!important;
 }
-.card.class-1, 
-.card.class-1 .need {
-    background-color: maroon!important;
+.cardContainer.class-1, 
+.cardContainer.class-1 .need {
+    background-color: @c_red!important;
 }
 
 /* bard */
-.card.class-2 .status li em, 
-.card.class-2 .level-2, 
-.card.class-2 .level-2, 
-.card.class-2 .b-lt, 
-.card.class-2 .b-rt, 
-.card.class-2 .b-lb, 
-.card.class-2 .b-rb, 
-.card.class-2 .icon, 
-.card.class-2 .icon-top, 
-.card.class-2 .icon-bot, 
+.cardContainer.class-2 .status div em, 
+.cardContainer.class-2 .level-2, 
+.cardContainer.class-2 .level-2, 
+.cardContainer.class-2 .b-lt, 
+.cardContainer.class-2 .b-rt, 
+.cardContainer.class-2 .b-lb, 
+.cardContainer.class-2 .b-rb, 
+.cardContainer.class-2 .icon, 
+.cardContainer.class-2 .icon-top, 
+.cardContainer.class-2 .icon-bot, 
 .class-2 .body .b-lt:after, 
 .class-2 .body .b-rt:after, 
 .class-2 .body .b-lb:after, 
@@ -246,33 +233,33 @@
 .class-2 .body .b-rt:before, 
 .class-2 .body .b-lb:before, 
 .class-2 .body .b-rb:before {
-    color: #8c5385!important;
+    color: @c_purple!important;
 }
-.card.class-2 .back .line, 
-.card.class-2 .lined, 
-.card.class-2 .status li.second, 
-.card.class-2 .b-lt, 
-.card.class-2 .b-rt, 
-.card.class-2 .b-lb, 
-.card.class-2 .b-rb {
-    border-color: #8c5385!important;
+.cardContainer.class-2 .back .line, 
+.cardContainer.class-2 .bord, 
+.cardContainer.class-2 .status div.second, 
+.cardContainer.class-2 .b-lt, 
+.cardContainer.class-2 .b-rt, 
+.cardContainer.class-2 .b-lb, 
+.cardContainer.class-2 .b-rb {
+    border-color: @c_purple!important;
 }
-.card.class-2, 
-.card.class-2 .need {
-    background-color: #8c5385!important;
+.cardContainer.class-2, 
+.cardContainer.class-2 .need {
+    background-color: @c_purple!important;
 }
 
 /* cleric */
-.card.class-3 .status li em, 
-.card.class-3 .level-3, 
-.card.class-3 .level-3, 
-.card.class-3 .b-lt, 
-.card.class-3 .b-rt, 
-.card.class-3 .b-lb, 
-.card.class-3 .b-rb, 
-.card.class-3 .icon, 
-.card.class-3 .icon-top, 
-.card.class-3 .icon-bot, 
+.cardContainer.class-3 .status div em, 
+.cardContainer.class-3 .level-3, 
+.cardContainer.class-3 .level-3, 
+.cardContainer.class-3 .b-lt, 
+.cardContainer.class-3 .b-rt, 
+.cardContainer.class-3 .b-lb, 
+.cardContainer.class-3 .b-rb, 
+.cardContainer.class-3 .icon, 
+.cardContainer.class-3 .icon-top, 
+.cardContainer.class-3 .icon-bot, 
 .class-3 .body .b-lt:after, 
 .class-3 .body .b-rt:after, 
 .class-3 .body .b-lb:after, 
@@ -281,33 +268,33 @@
 .class-3 .body .b-rt:before, 
 .class-3 .body .b-lb:before, 
 .class-3 .body .b-rb:before {
-    color: #ffad46!important;
+    color: @c_yellow!important;
 }
-.card.class-3 .back .line, 
-.card.class-3 .lined, 
-.card.class-3 .status li.second, 
-.card.class-3 .b-lt, 
-.card.class-3 .b-rt, 
-.card.class-3 .b-lb, 
-.card.class-3 .b-rb {
-    border-color: #ffad46!important;
+.cardContainer.class-3 .back .line, 
+.cardContainer.class-3 .bord, 
+.cardContainer.class-3 .status div.second, 
+.cardContainer.class-3 .b-lt, 
+.cardContainer.class-3 .b-rt, 
+.cardContainer.class-3 .b-lb, 
+.cardContainer.class-3 .b-rb {
+    border-color: @c_yellow!important;
 }
-.card.class-3, 
-.card.class-3 .need {
-    background-color: #ffad46!important;
+.cardContainer.class-3, 
+.cardContainer.class-3 .need {
+    background-color: @c_yellow!important;
 }
 
 /* druid */
-.card.class-4 .status li em, 
-.card.class-4 .level-4, 
-.card.class-4 .level-4, 
-.card.class-4 .b-lt, 
-.card.class-4 .b-rt, 
-.card.class-4 .b-lb, 
-.card.class-4 .b-rb, 
-.card.class-4 .icon, 
-.card.class-4 .icon-top, 
-.card.class-4 .icon-bot, 
+.cardContainer.class-4 .status div em, 
+.cardContainer.class-4 .level-4, 
+.cardContainer.class-4 .level-4, 
+.cardContainer.class-4 .b-lt, 
+.cardContainer.class-4 .b-rt, 
+.cardContainer.class-4 .b-lb, 
+.cardContainer.class-4 .b-rb, 
+.cardContainer.class-4 .icon, 
+.cardContainer.class-4 .icon-top, 
+.cardContainer.class-4 .icon-bot, 
 .class-4 .body .b-lt:after, 
 .class-4 .body .b-rt:after, 
 .class-4 .body .b-lb:after, 
@@ -316,33 +303,33 @@
 .class-4 .body .b-rt:before, 
 .class-4 .body .b-lb:before, 
 .class-4 .body .b-rb:before {
-    color: #60b85d!important;
+    color: @c_brown!important;
 }
-.card.class-4 .back .line, 
-.card.class-4 .lined, 
-.card.class-4 .status li.second, 
-.card.class-4 .b-lt, 
-.card.class-4 .b-rt, 
-.card.class-4 .b-lb, 
-.card.class-4 .b-rb {
-    border-color: #60b85d!important;
+.cardContainer.class-4 .back .line, 
+.cardContainer.class-4 .bord, 
+.cardContainer.class-4 .status div.second, 
+.cardContainer.class-4 .b-lt, 
+.cardContainer.class-4 .b-rt, 
+.cardContainer.class-4 .b-lb, 
+.cardContainer.class-4 .b-rb {
+    border-color: @c_brown!important;
 }
-.card.class-4, 
-.card.class-4 .need {
-    background-color: #60b85d!important;
+.cardContainer.class-4, 
+.cardContainer.class-4 .need {
+    background-color: @c_brown!important;
 }
 
 /* paladin */
-.card.class-5 .status li em, 
-.card.class-5 .level-1, 
-.card.class-5 .level-2, 
-.card.class-5 .b-lt, 
-.card.class-5 .b-rt, 
-.card.class-5 .b-lb, 
-.card.class-5 .b-rb, 
-.card.class-5 .icon, 
-.card.class-5 .icon-top, 
-.card.class-5 .icon-bot, 
+.cardContainer.class-5 .status div em, 
+.cardContainer.class-5 .level-1, 
+.cardContainer.class-5 .level-2, 
+.cardContainer.class-5 .b-lt, 
+.cardContainer.class-5 .b-rt, 
+.cardContainer.class-5 .b-lb, 
+.cardContainer.class-5 .b-rb, 
+.cardContainer.class-5 .icon, 
+.cardContainer.class-5 .icon-top, 
+.cardContainer.class-5 .icon-bot, 
 .class-5 .body .b-lt:after, 
 .class-5 .body .b-rt:after, 
 .class-5 .body .b-lb:after, 
@@ -351,33 +338,33 @@
 .class-5 .body .b-rt:before, 
 .class-5 .body .b-lb:before, 
 .class-5 .body .b-rb:before {
-    color: #3bafb1!important;
+    color: @c_blue!important;
 }
-.card.class-5 .back .line, 
-.card.class-5 .lined, 
-.card.class-5 .status li.second, 
-.card.class-5 .b-lt, 
-.card.class-5 .b-rt, 
-.card.class-5 .b-lb, 
-.card.class-5 .b-rb {
-    border-color: #3bafb1!important;
+.cardContainer.class-5 .back .line, 
+.cardContainer.class-5 .bord, 
+.cardContainer.class-5 .status div.second, 
+.cardContainer.class-5 .b-lt, 
+.cardContainer.class-5 .b-rt, 
+.cardContainer.class-5 .b-lb, 
+.cardContainer.class-5 .b-rb {
+    border-color: @c_blue!important;
 }
-.card.class-5, 
-.card.class-5 .need {
-    background-color: #358DB9!important;
+.cardContainer.class-5, 
+.cardContainer.class-5 .need {
+    background-color: @c_blue!important;
 }
 
 /* Ranger */
-.card.class-6 .status li em, 
-.card.class-6 .level-6, 
-.card.class-6 .level-6, 
-.card.class-6 .b-lt, 
-.card.class-6 .b-rt, 
-.card.class-6 .b-lb, 
-.card.class-6 .b-rb, 
-.card.class-6 .icon, 
-.card.class-6 .icon-top, 
-.card.class-6 .icon-bot, 
+.cardContainer.class-6 .status div em, 
+.cardContainer.class-6 .level-6, 
+.cardContainer.class-6 .level-6, 
+.cardContainer.class-6 .b-lt, 
+.cardContainer.class-6 .b-rt, 
+.cardContainer.class-6 .b-lb, 
+.cardContainer.class-6 .b-rb, 
+.cardContainer.class-6 .icon, 
+.cardContainer.class-6 .icon-top, 
+.cardContainer.class-6 .icon-bot, 
 .class-6 .body .b-lt:after, 
 .class-6 .body .b-rt:after, 
 .class-6 .body .b-lb:after, 
@@ -386,33 +373,33 @@
 .class-6 .body .b-rt:before, 
 .class-6 .body .b-lb:before, 
 .class-6 .body .b-rb:before {
-    color: #857056!important;
+    color: @c_green!important;
 }
-.card.class-6 .back .line, 
-.card.class-6 .lined, 
-.card.class-6 .status li.second, 
-.card.class-6 .b-lt, 
-.card.class-6 .b-rt, 
-.card.class-6 .b-lb, 
-.card.class-6 .b-rb {
-    border-color: #857056!important;
+.cardContainer.class-6 .back .line, 
+.cardContainer.class-6 .bord, 
+.cardContainer.class-6 .status div.second, 
+.cardContainer.class-6 .b-lt, 
+.cardContainer.class-6 .b-rt, 
+.cardContainer.class-6 .b-lb, 
+.cardContainer.class-6 .b-rb {
+    border-color: @c_green!important;
 }
-.card.class-6, 
-.card.class-6 .need {
-    background-color: #857056!important;
+.cardContainer.class-6, 
+.cardContainer.class-6 .need {
+    background-color: @c_green!important;
 }
 
 /* warloc */
-.card.class-7 .status li em, 
-.card.class-7 .level-7, 
-.card.class-7 .level-7, 
-.card.class-7 .b-lt, 
-.card.class-7 .b-rt, 
-.card.class-7 .b-lb, 
-.card.class-7 .b-rb, 
-.card.class-7 .icon, 
-.card.class-7 .icon-top, 
-.card.class-7 .icon-bot, 
+.cardContainer.class-7 .status div em, 
+.cardContainer.class-7 .level-7, 
+.cardContainer.class-7 .level-7, 
+.cardContainer.class-7 .b-lt, 
+.cardContainer.class-7 .b-rt, 
+.cardContainer.class-7 .b-lb, 
+.cardContainer.class-7 .b-rb, 
+.cardContainer.class-7 .icon, 
+.cardContainer.class-7 .icon-top, 
+.cardContainer.class-7 .icon-bot, 
 .class-7 .body .b-lt:after, 
 .class-7 .body .b-rt:after, 
 .class-7 .body .b-lb:after, 
@@ -421,33 +408,33 @@
 .class-7 .body .b-rt:before, 
 .class-7 .body .b-lb:before, 
 .class-7 .body .b-rb:before {
-    color: #8c5385!important;
+    color: @c_purple!important;
 }
-.card.class-7 .back .line, 
-.card.class-7 .lined, 
-.card.class-7 .status li.second, 
-.card.class-7 .b-lt, 
-.card.class-7 .b-rt, 
-.card.class-7 .b-lb, 
-.card.class-7 .b-rb {
-    border-color: #8c5385!important;
+.cardContainer.class-7 .back .line, 
+.cardContainer.class-7 .bord, 
+.cardContainer.class-7 .status div.second, 
+.cardContainer.class-7 .b-lt, 
+.cardContainer.class-7 .b-rt, 
+.cardContainer.class-7 .b-lb, 
+.cardContainer.class-7 .b-rb {
+    border-color: @c_purple!important;
 }
-.card.class-7, 
-.card.class-7 .need {
-    background-color: #8c5385!important;
+.cardContainer.class-7, 
+.cardContainer.class-7 .need {
+    background-color: @c_purple!important;
 }
 
 /* sorcerer */
-.card.class-8 .status li em, 
-.card.class-8 .level-1, 
-.card.class-8 .level-2, 
-.card.class-8 .b-lt, 
-.card.class-8 .b-rt, 
-.card.class-8 .b-lb, 
-.card.class-8 .b-rb, 
-.card.class-8 .icon, 
-.card.class-8 .icon-top, 
-.card.class-8 .icon-bot, 
+.cardContainer.class-8 .status div em, 
+.cardContainer.class-8 .level-1, 
+.cardContainer.class-8 .level-2, 
+.cardContainer.class-8 .b-lt, 
+.cardContainer.class-8 .b-rt, 
+.cardContainer.class-8 .b-lb, 
+.cardContainer.class-8 .b-rb, 
+.cardContainer.class-8 .icon, 
+.cardContainer.class-8 .icon-top, 
+.cardContainer.class-8 .icon-bot, 
 .class-8 .body .b-lt:after, 
 .class-8 .body .b-rt:after, 
 .class-8 .body .b-lb:after, 
@@ -456,18 +443,18 @@
 .class-8 .body .b-rt:before, 
 .class-8 .body .b-lb:before, 
 .class-8 .body .b-rb:before {
-    color: rgb(248, 58, 34)!important;
+    color: @c_purple!important;
 }
-.card.class-8 .back .line, 
-.card.class-8 .lined, 
-.card.class-8 .status li.second, 
-.card.class-8 .b-lt, 
-.card.class-8 .b-rt, 
-.card.class-8 .b-lb, 
-.card.class-8 .b-rb {
-    border-color: rgb(248, 58, 34)!important;
+.cardContainer.class-8 .back .line, 
+.cardContainer.class-8 .bord, 
+.cardContainer.class-8 .status div.second, 
+.cardContainer.class-8 .b-lt, 
+.cardContainer.class-8 .b-rt, 
+.cardContainer.class-8 .b-lb, 
+.cardContainer.class-8 .b-rb {
+    border-color: @c_purple!important;
 }
-.card.class-8, 
-.card.class-8 .need {
-    background-color: rgb(248, 58, 34)!important;
+.cardContainer.class-8, 
+.cardContainer.class-8 .need {
+    background-color: @c_purple!important;
 }
