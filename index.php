@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="description" content="Заклинания ДнД 5"> 
-  <link href="https://youknowwho.ru/source/fonts/FortAwesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../_fonts/FortAwesome/css/font-awesome.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" />
   <script type='text/javascript' src='js/jquery-m.js'></script><!-- jQuery -->
   <script type='text/javascript' src='js/magic.js'></script><!-- your script -->
@@ -22,20 +22,18 @@
 	</div>
 </div>
 
-
-<!-- Yandex.Metrika counter -->
+ <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {
-                w.yaCounter32640745 = new Ya.Metrika({
-                    id:32640745,
+                w.yaCounter42911239 = new Ya.Metrika({
+                    id:42911239,
                     clickmap:true,
                     trackLinks:true,
                     accurateTrackBounce:true,
                     webvisor:true,
-                    trackHash:true,
-                    ut:"noindex"
+                    trackHash:true
                 });
             } catch(e) { }
         });
@@ -52,7 +50,7 @@
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div style='display: none;'><img src="https://mc.yandex.ru/watch/32640745?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/42911239" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </body>
 </html>

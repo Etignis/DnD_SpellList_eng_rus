@@ -1,6 +1,6 @@
 <div class='s_block'>
-	<a href="http://youknowwho.ru/dnd" class="bt"><i class="fa fa-home"></i></a>
-	<a href="http://www.youknowwho.ru/message/?theme=dndspells" class="bt" target='_blanc'>Написать отзыв или предложение</a>
+	<a href="/" class="bt"><i class="fa fa-home"></i></a>
+	<a href="/message/?theme=dndspells" class="bt" target='_blanc'>Написать отзыв или предложение</a>
 	<a href="#" class="bt" id='info'><i class="fa fa-question-circle"></i></a>
 </div>
 
