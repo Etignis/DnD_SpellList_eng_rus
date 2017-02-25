@@ -10,6 +10,10 @@
   <link rel="shortcut icon" href="favicon.ico" />
   <script type='text/javascript' src='js/jquery-m.js'></script><!-- jQuery -->
   <script type='text/javascript' src='js/magic.js'></script><!-- your script -->
+  
+  <meta property="og:image" content="img/og.jpg" />
+  <meta property="og:title" content="Список заклинаний D&D5" />
+  <meta property="og:description" content="Карточки заклинаний на русском и английском языках" />
 </head>
 </body> 
 
