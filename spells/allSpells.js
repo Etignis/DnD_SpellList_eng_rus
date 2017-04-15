@@ -1,4 +1,4 @@
-[
+var allSpells = [
   {
     "en": {
       "name": "Acid Splash",
