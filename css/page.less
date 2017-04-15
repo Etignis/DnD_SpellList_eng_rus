@@ -86,6 +86,26 @@ button, .bt{
     z-index: 88;
     background: rgba(0,0,0,.7);
 }
+.filterLabel{
+    width: 100%;
+    padding: .2em 0.1em 0;
+    font-weight: bold;
+    &:after{
+        content: ":";
+    }
+}
+
+.input{
+    .fr-concave;
+    cursor: text;
+    background: @white;
+    padding: .4em;
+    display: block;
+    width: 100%;
+    margin: 0;
+    color: @d-gray;
+    font-seight: 400;
+}
 
 @media screen and (min-width: @m_w_1) {
     .page{

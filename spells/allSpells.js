@@ -625,7 +625,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Alarm (Ritual)",
+      "name": "Alarm",
+	  "ritual": true,
       "level": "1",
       "text": "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is mental or audible. A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping. An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.",
       "school": "Abjuration",
@@ -641,7 +642,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Тревога (Ритуал)",
+      "name": "Тревога",
+	  "ritual": true,
       "level": "1",
       "text": "Вы устанавливаете сигнализацию, которая предупреждает о нежеланном вторжении. Выберите дверь, окно или область, которая умещается в куб со стороной 20 футов. До тех пор, пока действует заклинание, сигнализация срабатывает всякий раз, когда существо Крошечного размера или крупнее, касается или входит в зону действия заклинания. Произнося заклинание, вы можете определить существ, которые не будут активировать сигнал тревоги. Вы также можете определить тип сигнала: ментальный или звуковой.   Ментальный сигнал раздается в вашей голове, если вы находитесь в пределах 1 мили от зоны действия заклинания. Сигнал будит вас, если вы спите.   Звуковой сигнал представляет собой звук колокольчика, который раздается в радиусе 60 футов в течение 10 секунд.",
       "school": "ограждение",
@@ -804,7 +806,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Comprehend Languages (Ritual)",
+      "name": "Comprehend Languages",
+	  "ritual": true,
       "level": "1",
       "text": "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface of which the words are written. It takes about 1 minute to read one page of text.  This spell doesn't decode secret messages in a text or glyph, such as an arcane sigil, that isn't part of a written language.",
       "school": "Divination",
@@ -822,7 +825,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Понимание языков (Ритуал)",
+      "name": "Понимание языков",
+	  "ritual": true,
       "level": "1",
       "text": "Пока действует заклинание, вы понимаете буквальное значение любого разговорного языка, который слышите. Вы также понимаете любую письменность, но для этого должны касаться поверхности, на которой написаны слова. На прочтение одной страницы текста уходит около 1 минуты.   Это заклинание не позволяет расшифровывать секретные послания или магические знаки в текстах, поскольку они не являются частью письменного языка.",
       "school": "прорицание",
@@ -842,7 +846,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Detect Magic (Ritual)",
+      "name": "Detect Magic",
+	  "ritual": true,
       "level": "1",
       "text": "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any. The spell can penetrate most barriers, but is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
       "school": "Divination",
@@ -863,7 +868,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Обнаружение магии (Ритуал)",
+      "name": "Обнаружение магии",
+	  "ritual": true,
       "level": "1",
       "text": "Ритуал: Пока действует заклинание, вы чувствуете наличие магии в 30 футах вокруг вас. Если вы чувствуете магию таким образом, то в качестве действия вы можете увидеть ауры всех существ и предметов в области, наделенных магией, вы также узнаете школу магии, если она есть. Заклинание проходит через большинство препятствий, но его останавливает камень толщиной 1 фут, металл толщиной 1 дюйм, тонкий слой свинца, дерево или земля толщиной 3 фута.",
       "school": "прорицание",
@@ -1029,7 +1035,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Find Familiar (Ritual)",
+      "name": "Find Familiar",
+	  "ritual": true,
       "level": "1",
       "text": "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk. lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey or fiend (your choice) instead of a beast. Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal. When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again. While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses. As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits you summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you. You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature. Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll.",
       "school": "Conjuration",
@@ -1044,7 +1051,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Призыв фамильяра (Ритуал)",
+      "name": "Призыв фамильяра",
+	  "ritual": true,
       "level": "1",
       "text": "Вы получаете себе в услужение фамильяра, духа, который принимает форму выбранного вами животного: летучей мыши, кота, краба, лягушки (жабы), ястреба, ящерицы, совы, осьминога, ядовитоый змени, рыбы, крысы, ворона, ласки, паука или морского конька. Он появляется в незанятом месте в пределах дальности заклинания. Параметры фамильяра зависят от выбранной формы, однако он принадлежит к божественным существам, феям или демонам (на ваш выбор).   Ваш фамильяр действует независимо от вас, однако он всегда слушается ваших приказов. В бою он действует отдельно и требует отдельного броска инициативы. Фамильяр не может атаковать, но может совершать другие действия как обычно.   Когда фамильяр находится в пределах 100 футов от вас, вы можете общаться с ним телепатически. Кроме того, в качестве действия вы можете видеть глазам фамильяра и слышать его ушами до начала вашего следующего хода, получая все особые чувства, которыми обладает фамильяр. В течение этого времени вы не слепы и глухи по отношению к вашему собственному окружению.   В качестве действия вы можете временно отозвать вашего фамильяра. Он исчезает в подпространстве где ожидает, пока вы его призовете. Вы также можете отпустить его навсегда. Пока фамильяр отозван, вы можете в качестве действия призвать его в любом незанятом месте в пределах 30 футов от вас.   Вы не можете иметь более одного фамильяра за раз. Если вы произносите это заклинание, когда уже имеете одного фамильяра, вы можете придать ему новую форму. Выберите одну из вышеперечисленных и ваш фамильяр превратится в новое существо.   Наконец, вы можете произнести касательное заклинание и ваш фамильяр доставит его цели, словно он сам произнес его. Ваш фамильяр должен быть в пределах 100 футов от вас и должен совершить реакцию, чтобы доставить заклинание, когда вы произносите его. Если заклинание требует броска атаки, вы используете ваш модификатор для броска.",
       "school": "призыв",
@@ -1132,7 +1140,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Identify (Ritual)",
+      "name": "Identify",
+	  "ritual": true,
       "level": "1",
       "text": "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it. If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it.",
       "school": "Divination",
@@ -1149,7 +1158,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Оценка (Ритуал)",
+      "name": "Оценка",
+	  "ritual": true,
       "level": "1",
       "text": "Вы выбираете один объект, которого вы должны касаться, пока произносите заклинание. Если это магический предмет или другой объект, наделенный магией, то вы узнааете свойства этого предмета и способ его использования, требования и количество зарядов, если они есть. Вы узнаете, какие заклинания действуют на предмет. Если сам предмет был создан заклинанием, то вы узнаете каким. Если вместо этого вы прикоснетесь к существу, то вы узнаете, какие заклинания действуют на него в этот момент.",
       "school": "прорицание",
@@ -1166,7 +1176,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Illusory Script (Ritual)",
+      "name": "Illusory Script",
+	  "ritual": true,
       "level": "1",
       "text": "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know. Should the spell be dispelled, the original script and the illusion both disappear. A creature with truesight can read the hidden message.",
       "school": "Illusion",
@@ -1183,7 +1194,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Невидимое письмо (Ритуал)",
+      "name": "Невидимое письмо",
+	  "ritual": true,
       "level": "1",
       "text": "Вы пишете на пергаменте, бумаге или другом подходящем материале и создаете на нем иллюзию, которая длится до тех пор, пока действует заклинание.   Для вас и существ, которых вы выбрали при произнесении заклинания, текст выглядит обычным, написанным вашей рукой. Для всех остальных текст написан на неизвестном и непонятном языке. Альтернативно, вы можете сделать так, чтобы текст выглядел как абсолютно другое сообщение, написанное другой рукой и на другом языке, но вы должны знать этот язык.   Если заклинание развеяно, то исчезает как оригинальный текст, так и иллюзия.   Существо с истинным зрением может прочитать скрытое сообщение.",
       "school": "иллюзия",
@@ -1557,7 +1569,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Tenser's Floating Disk (Ritual)",
+      "name": "Tenser's Floating Disk",
+	  "ritual": true,
       "level": "1",
       "text": "This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the duration, and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground. The disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. It can more across uneven terrain, up or down stairs, slopes and the like, but it can't cross an elevation change of 10 feet or more. For example, the disk can't move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom. If you move more than 100 feet from the disk (typically because it can't move around an obstacle to follow you), the spell ends.",
       "school": "Conjuration",
@@ -1566,11 +1579,20 @@ var allSpells = [
       "materials": "a drop of mercury",
       "components": "V, S, M",
       "duration": "1 hour",
-      "source": "PHB",
-      "class": [
-        "Wizard"
-      ]
-    }
+      "source": "PHB"
+    },
+	"ru": {
+	  "name": "Тензеров парящий диск",
+      "level": "1",
+      "text": "Это заклинание создаёт круглый горизонтальный диск из силового поля диаметром 3 фута и толщиной 1 дюйм (2,5 сантиметра), парящий в 3 футах над полом в свободном пространстве на ваш выбор, видимом в пределах дистанции. Диск существует, пока заклинание активно, и может вынести на себе 500 фунтов. Если на него поместить больший вес, заклинание окончится, и всё, что было на диске, падает на пол.<br>Диск неподвижен, пока вы находитесь в пределах 20 футов от него. Если вы переместитесь от него на расстояние, превышающее 20 футов, диск следует за вами, оставаясь в пределах 20 футов. Он может перелетать по неровной поверхности, перемещаться по лестницам, склонам и подобным препятствиям, но не может пересекать перепады по высоте в 10 футов и более. Например, диск не сможет перелететь над 10-футовой ямой, и не сможет из неё выбраться, если будет создан на её дне.<br>Если вы переместитесь более чем на 100 футов от диска (например, если он из-за препятствия не сможет последовать за вами), заклинание оканчивается.",
+      "school": "призыв",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "materials": "капля ртути",
+      "components": "В, С, М",
+      "duration": "1 час",
+      "source": "PHB"
+	}
   },
   {
     "en": {
@@ -1613,7 +1635,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Unseen Servant (Ritual)",
+      "name": "Unseen Servant",
+	  "ritual": true,
       "level": "1",
       "text": "This spell creates an invisible, mindless, shapeless force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can't attack. If it drops to 0 hit points, the spell ends. Once on each of your turns as a bonus action, you can mentally command the servant to move up to 15 feet and inteact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once yougive the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command. If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.",
       "school": "Conjuration",
@@ -1630,7 +1653,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Невидимый слуга (Ритуал)",
+      "name": "Невидимый слуга",
+	  "ritual": true,
       "level": "1",
       "text": "Заклинание создает незримую, неразумную и бесформенную силу, которая выполняет простые задачи по вашей команде до тех пор, пока не кончится заклинание. Слуга возникает в любом незанятом месте в пределах дальности заклинания. Он имеет 10 КБ, 1 ОЗ, 2 Силы и не может атаковать. Если его ОЗ падают до 0, заклинание заканчивается.   Каждый ход в качестве дополнительного действия вы можете телепатически отдать слуге приказ двигаться на расстояние до 15 футов и взаимодействовать с объектом. Слуга может выполнять простые задачи, на которые способен простой слуга-человек, например принести вещь, постирать одежду, починить предмет, зажечь огонь, подать пищу или налить вино. Каждый раз, когда вы отдаете приказ, слуга выполняет его по мере своих возможностей, пока не выполнит, а затем ждет следующего приказа.   Если вы отдадите приказ, который заставит слугу удалиться от вас более чем на 60 футов, то заклинание закончится.",
       "school": "призыв",
@@ -2082,7 +2106,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Gentle Repose (Ritual)",
+      "name": "Gentle Repose",
+	  "ritual": true,
       "level": "2",
       "text": "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead. The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead.",
       "school": "Necromancy",
@@ -2098,7 +2123,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Нетленные останки (Ритуал)",
+      "name": "Нетленные останки",
+	  "ritual": true,
       "level": "2",
       "text": "Вы касаетесь трупа или других останков. Пока действует заклинание, цель защищена от разложения и не может стать нежитью.  Заклинание также эффективно увеличивает ограничение по времени на воскрешение цели, поскольку время, проведенное под воздействием этого заклинания, не учитывается временным ограничением таких заклинаний, как поднять мертвого.",
       "school": "некромантия",
@@ -2347,7 +2373,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Magic Mouth (Ritual)",
+      "name": "Magic Mouth",
+	  "ritual": true,
       "level": "2",
       "text": "You implant a message within an object in range, a message that is uttered when a trigger condition is met. Choose an object that you can see and that isn't being worn or carried by another creature. THen speak the message, which must be 25 words or less, though it can be delevered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver your message.   When that circumstance occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the object you chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there so that words appear to come from the object's mouth. WHen you cast this spell, you can have the spell end after it delivers its message, or it can remain and repeats its message whenever the trigger occurs.   The triggering circumstance can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the object. For example, you could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it.",
       "school": "Illusion",
@@ -2363,7 +2390,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Волшебные уста (Ритуал)",
+      "name": "Волшебные уста",
+	  "ritual": true,
       "level": "2",
       "text": "Вы встраиваете сообщение в объект в пределах дальности заклинания. Выберите объект, который вы можете видеть, и который не находится во владении другого существа. Затем произнесите сообщение не более 25 слов и не дольше 10 минут. Наконец, определите событие, в которых заклинание будет произносить ваше сообщение.   Когда это событие происходит, то на объекте появляются волшебные уста и произносят сообщение вашим голосом и с той же громкостью, с которой вы его произносили. Если объект, который вы выбрали, имеет рот или что-либо похожее на рот (например рот у статуи), то уста появляются там, чтобы казалось, будто слова исходят изо рта. Когда вы произносите заклинание, вы решаете, закончится ли оно, произнеся сообщение в первый раз, или будет повторять его всякий раз, когда произойдет ключевое событие.   Ключевое событие может быть настолько обобщенным, насколько вы хотите, но оно должно основываться на звуковых или визуальных явлениях в пределах 30 футов от объекта. Например, уста могут говорить всякий раз, когда в пределах 30 футов от объекта пройдет существо, или когда в пределах 30 футов от него зазвонит серебряный колокольчик.",
       "school": "иллюзия",
@@ -3074,7 +3102,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Feign Death (Ritual)",
+      "name": "Feign Death",
+	  "ritual": true,
       "level": "3",
       "text": "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death. For the spell's duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target's status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell's effect, the disease and poison have no effect until the spell ends.",
       "school": "Necromancy",
@@ -3092,7 +3121,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Симуляция смерти (Ритуал)",
+      "name": "Симуляция смерти",
+	  "ritual": true,
       "level": "3",
       "text": "Вы касаетесь согласного существа и помещаете его в каталептическое состояние, которое невозможно отличить от смерти. Пока заклинание действует, или пока вы не коснетесь цели в качестве действия и отмените заклинание, цель кажется мертвой для любого внешнего обследования или заклинаний, которые определяют состояние цели. Цель ослеплена и небоеспособна, а ее скорость снижается до 0. Цель получает сопротивление ко всем типам урона кроме физического. Если цель находится под воздействием яда или болезни в момент произнесения заклинания, или подвергается такому воздействию во время его действия, то яд или болезнь не действует до тех пор, пока действует заклинание.",
       "school": "некромантия",
@@ -3329,7 +3359,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Leomund's Tiny Hut (Ritual)",
+      "name": "Leomund's Tiny Hut",
+	  "ritual": true,
       "level": "3",
       "text": "A 10-foot-radius immobile dome of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area. Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can't extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside. Until the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside.",
       "school": "Evocation",
@@ -3345,7 +3376,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Хижина Леомунда (Ритуал)",
+      "name": "Хижина Леомунда",
+	  "ritual": true,
       "level": "3",
       "text": "Неподвижный купол радиусом 10 футов появляется вокруг вас и остается на время действия заклинания. Он исчезает, если вы покидаете эту область.   Девять существ Среднего или меньшего размера могут поместиться под куполом вместе с вами. Заклинание не срабатывает, если под куполом оказываются более крупные существа или более девяти существ. Существа, которые оказались под куполом в момент произнесения заклинания, могут свободно проходить сквозь него. Остальные существа  не могут пройти сквозь него. Заклинания и другие магические эффекты не распространяются внутри купола и не проходят сквозь него. Внутри купола сухая и уютная атмосфера, независимо от погоды снаружи.   Пока действует заклинание, вы можете включать тусклое освещение внутри купола. Купол непрозрачен снаружи и имеет любой цвет на ваш выбор, однако прозрачен изнутри.",
       "school": "проявление",
@@ -3510,7 +3542,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Phantom Steed (Ritual)",
+      "name": "Phantom Steed",
+	  "ritual": true,
       "level": "3",
       "text": "A Large quasi-real, horselike creature appears on the ground in an unoccupied space of your choice within range. You decide the creature's appearance, but it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed. For the duration, you or a creature you choose can ride the steed. The creature uses the statistics for a riding horse, except it has a speed of 100 feet and can travel 10 miles in an hour, or 13 miles at a fast pace. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends if you use an action to dismiss it or if the steed takes any damage.",
       "school": "Illusion",
@@ -3525,7 +3558,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Призрачный скакун (Ритуал)",
+      "name": "Призрачный скакун",
+	  "ritual": true,
       "level": "3",
       "text": "Большое полуреальное существо, похожее на лошадь, появляется на земле в незанятом месте в пределах дальности заклинания. Вы можете определить внешний вид существа, но оно имеет седло, удила и уздечку. Любое снаряжение, созданное заклинанием, <br>мгновенно исчезает в облачке дыма, если его унести более чем на 10 футов от скакуна. Пока действует заклинание, вы или выбранное вами существо можете ездить верхом на скакуне. Он обладает характеристиками ездовой лошади, однако его скорость равна 100 футам. Скакун может преодолеть 10 миль за 1 час или 13 миль при быстром темпе. По окончанию заклинания скакун медленно исчезает, давая всаднику 1 минуту, чтобы спешиться. Заклинание заканчивается, если вы отменяете его в качестве действия, или скакун получает любой урон.",
       "school": "иллюзия",
@@ -3842,7 +3876,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Water Breathing (Ritual)",
+      "name": "Water Breathing",
+	  "ritual": true,
       "level": "3",
       "text": "This spell grants up to ten willing creatures you can see within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration.",
       "school": "Transmutation",
@@ -3860,7 +3895,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Подводное дыхание (Ритуал)",
+      "name": "Подводное дыхание",
+	  "ritual": true,
       "level": "3",
       "text": "Благодаря этому заклинанию до десяти согласных существ, которых вы можете видеть в пределах дальности заклинания, получают способность дышать под водой до тех пор, пока действует заклинание. Существа сохраняют свой обычный способ дыхания.",
       "school": "преобразование",
@@ -4883,7 +4919,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Contact Other Plane (Ritual)",
+      "name": "Contact Other Plane",
+	  "ritual": true,
       "level": "5",
       "text": "You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind. When you cast this spell, make a DC 15 Intelligence saving throw. On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you can't take actions, can't understand what other creatures say, can't read, and speak only in gibberish. A greater restoration spell cast on you ends this effect. On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The DM answers each question with one word, such as yes, no, maybe, never, irrelevant, or unclear (if the entity doesn't know the answer to the question). If a one-word answer w ould be misleading, the DM might instead offer a short phrase as an answer.",
       "school": "Divination",
@@ -4899,7 +4936,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Связь с иным планом (Ритуал)",
+      "name": "Связь с иным планом",
+	  "ritual": true,
       "level": "5",
       "text": "Вы связываетесь с полубогом, духом давно умершего мудреца или с какой-либо другой таинственной сущностью с другого плана. Связь с экстрапланарным разумом оказывает серьезную нагрузку на ваш разум и может даже повредить его. Произнося это заклинание сделайет спасбросок по Интеллекту с КС 15. В случае провала вы получаете 6d6 психического урона и сходите с ума до тех пор, пока не отдохнете полностью. Будучи безумным, вы не можете совершать действия, не понимаете речь других существ, не можете читать и говорите бессвязную чушь. Улучшенное восстановление может снять этот эффект.   При успешном спасброске, вы можете задать сущности до пяти вопросов. Вы должны задать их до тех пор, пока действует заклинание. МП отвечает на вопросы одним словом, такими какда,нет,возможно,никогда,неуместно илинеясно  (если сущность не знает ответа на вопрос). Если однословный ответ может привести к недопониманию, то МП может использовать короткую фразу.",
       "school": "прорицание",
@@ -5283,7 +5321,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Rary's Telepathic Bond (Ritual)",
+      "name": "Rary's Telepathic Bond",
+	  "ritual": true,
       "level": "5",
       "text": "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures with Intelligence scores of 2 or less aren't affected by this spell. Until the spell ends, the targets can communicated telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it can't extend to other planes of existence.",
       "school": "Divination",
@@ -5298,7 +5337,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Телепатическая связь Рэри (Ритуал)",
+      "name": "Телепатическая связь Рэри",
+	  "ritual": true,
       "level": "5",
       "text": "Вы создаете телепатическую связь между восемью согласными существами в пределах дальности заклинания, психически соединяя каждое существо с остальными. Связь существует до тех пор, пока действует заклинание. Существа, чей Интеллект равен 2 или ниже, не восприимчивы к этому заклинанию.   Пока заклинание действует, существа могут телепатически общаться, используя эту связь, даже если они не знают общего языка. Связь действует на любом расстоянии в пределах одного плана существования.",
       "school": "прорицание",
@@ -5740,7 +5780,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Drawmij's Instant Summon (Ritual)",
+      "name": "Drawmij's Instant Summon",
+	  "ritual": true,
       "level": "6",
       "text": "You touch an object weighing 10 pounds or less w hose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire. At any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends. If another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment. Dispel magic or a similar effect successfully applied to the sapphire ends this spell's effect.",
       "school": "Conjuration",
@@ -5755,7 +5796,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Мгновенный призыв Дромиджа (Ритуал)",
+      "name": "Мгновенный призыв Дромиджа",
+	  "ritual": true,
       "level": "6",
       "text": "Вы касаетесь объекта весом не более 10 фунтов и размером не более 6 футов с любой из сторон. Заклинание оставляет невидимую отметку на его поверхности, а также наносит невидимое название объекта на сапфир, который вы использовали в качестве материального компонента. Каждый раз, когда вы произносите это заклинание, вы должны использовать другой сапфир.   В любой момент после этого, в качестве действия вы можете сказать название объекта и сломать сапфир. Названный объект <br>мгновенно появляется в вашей руке независимо от его физической или планарной дальности, а заклинание заканчивается.   Если другое существо держит его в руках, то разрушение сапфира не перемещает объект к вам, но вы узнаете, кто им владеет, и приблизительное местонахождение этого существа в данный момент.   Заклинание развеять магию или другой подобный эффект, примененные на сапфир, развеивают это заклинание.",
       "school": "призыв",
@@ -7840,7 +7882,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Speak with Animals (Ritual)",
+      "name": "Speak with Animals",
+	  "ritual": true,
       "level": "1",
       "text": "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion.",
       "school": "Divination",
@@ -7859,7 +7902,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Общение с животными (Ритуал)",
+      "name": "Общение с животными",
+	  "ritual": true,
       "level": "1",
       "text": "Пока действует заклинание, вы получаете способность понимать и вербально общаться с животными. Разум и сознание большинства животных ограничивается их Интеллектом, но как минимум, они могут сообщить вам информацию о близлежащих областях и монстрах, а также то, что они видели в течение последнего дня. По усмотрению МП вы можете убедить животное выполнить для вас небольшое поручение.",
       "school": "прорицание",
@@ -7877,7 +7921,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Animal Messenger (Ritual)",
+      "name": "Animal Messenger",
+	  "ritual": true,
       "level": "2",
       "text": "By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue ray, or a bad. You specify a location, which you must have visited, and a recipient who matches a general description, such as a man or woman dressed in the uniform of the town guard or a red-haired dwarf wearing a pointed hat. You also speak a message of up to twenty-five words. The target beast travels fo rhte duration of the spell towards the specified location, covering about 50 miles per 24 hours for a flying messenger or 25 miles for other animals. When the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn't reach its destination before the spell ends, the message is lost, and the beast makes it way back to where you cast this spell. At Higher Levels. If you cast this spell using a spell slot of 3rd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd.",
       "school": "Enchantment",
@@ -7894,7 +7939,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Животное-посланник (Ритуал)",
+      "name": "Животное-посланник",
+	  "ritual": true,
       "level": "2",
       "text": "Благодаря этому заклинанию вы можете использовать животное, чтобы доставить послание. Выберите крошечное животное, которое видите в пределах дальности заклинания, например белку, сойку или летучую мышь. Укажите место назначения, в котором вы должны были побывать, и получателя, который походит под общее описание, например: мужчина или женщина в униформе городской стражи или рыжий дворф в остроконечной шляпе. Затем скажите послание, которое не превышает 25 слов. Пока действует заклинание, животное будет  двигаться в назаченное место. Летающие животные пролетают пример 50 миль за 24 часа, а наземные пробегают 25 миль.   Когда посланник прибывает на место, он передает послание назначенному существу, воспроизводя ваш голос. Посланник сообщит послание только тому существу, чье описание вы дали ему. Если посланник не успевает добраться до назначенного места за время действия заклинания, то сообщение теряется, а животное пытается вернуться туда, где вы произнесли заклинание.   На более высоких кругах. Если вы произносите заклинание, используя ячейку 3 круга или выше, то длительность заклинания увеличивается на 48 часов за каждый круг выше второго.",
       "school": "очарование",
@@ -7984,7 +8030,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Locate Animals or Plants (Ritual)",
+      "name": "Locate Animals or Plants",
+	  "ritual": true,
       "level": "2",
       "text": "Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present.",
       "school": "Divination",
@@ -8001,7 +8048,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Обнаружение животных и растений (Ритуал)",
+      "name": "Обнаружение животных и растений",
+	  "ritual": true,
       "level": "2",
       "text": "Опишите или назовите определенный вид животного или растения. Концентрируясь на звуках природы вокруг вас, вы узнаете направление и расстояние ближайшего животного или растения этого вида в пределах 5 миль, если таковое имеется.",
       "school": "прорицание",
@@ -8019,7 +8067,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Silence (Ritual)",
+      "name": "Silence",
+	  "ritual": true,
       "level": "2",
       "text": "For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there.",
       "school": "Illusion",
@@ -8037,7 +8086,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Тишина (Ритуал)",
+      "name": "Тишина",
+	  "ritual": true,
       "level": "2",
       "text": "В выбранной вами точке в пределах дальности заклинания возникает сфера абсолютной тишины радиусом 20 футов. Внутри нее невозможно издавать звуки или слышать звуки извне. Сфера существует до тех пор, пока действует заклинание. Существа и объекты, полностью находящиеся внутри сферы, имунны к звуковому урону, а существа также глухи. Внутри сферы невозможно произнесение заклинаний, имеющих вербальный компонент.",
       "school": "иллюзия",
@@ -8606,7 +8656,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Purify Food and Drink (Ritual)",
+      "name": "Purify Food and Drink",
+	  "ritual": true,
       "level": "1",
       "text": "All nonmagical food and drink withi na 5-foot-radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.",
       "school": "Transmutation",
@@ -8623,7 +8674,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Очищение пищи и воды (Ритуал)",
+      "name": "Очищение пищи и воды",
+	  "ritual": true,
       "level": "1",
       "text": "Вся немагическая пища и напитки в сфере радиусом 5 футов вокруг указанной вами точки в пределах дальности очищается от ядов и болезней.",
       "school": "преобразование",
@@ -8709,7 +8761,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Augury (Ritual)",
+      "name": "Augury",
+	  "ritual": true,
       "level": "2",
       "text": "By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The DM chooses from the following possible omens: • Weal, for good results • Woe, for bad results • Weal and woe, for both good and bad results • Nothing, for results that aren’t especially good or bad    The spell doesn’t take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.    If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
       "school": "Divination",
@@ -8724,7 +8777,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Гадание (Ритуал)",
+      "name": "Гадание",
+	  "ritual": true,
       "level": "2",
       "text": "Бросая палочки, инкрустированные камнями, катая драконьи косточки, раскладывая изысканые карты или используя другие предметы для гадания, вы получаете знак от таинственной сущности, который сообщает вам об исходе определенного действия, которое вы планируете совершить в ближайшие 30 минут. МП выбирает один из следующих знаков. Благо: исход будет хорошим Несчастье: исход будет плохим Благо и Несчастье: исход будет неоднозначным Ничего: исход не будет ни хорошим, ни плохим Заклинание не учитывает любые возможные обстоятельства, которые могут изменить исход, например произношение дополнительных заклинание, потеря или получение союзника. Если вы произнесете это заклинание два или более раз, не отдохнув полностью, то каждая попытка после первой увеличивает шанс случайного результата на 25%. МП делает этот бросок в тайне.",
       "school": "прорицание",
@@ -8948,7 +9002,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Meld into Stone (Ritual)",
+      "name": "Meld into Stone",
+	  "ritual": true,
       "level": "3",
       "text": "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses. While merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move. Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered.",
       "school": "Transmutation",
@@ -8964,7 +9019,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Слиться с камнем (Ритуал)",
+      "name": "Слиться с камнем",
+	  "ritual": true,
       "level": "3",
       "text": "Вы входите в каменнный объект или поверхность достаточно большого размера, чтобы вместить ваше тело. Вы и все ваше снаряжение полностью сливается с камнем, пока действует заклинание. Ваше присутствие внутри камня нельзя увидеть или иначе обнаружить немагическими способами. Находясь в камне, вы не можете видеть то, что происходит снаружи, и получаете помеху на проверки по Мудрости (Восприятие), чтобы услышать, что происходит снаружи. Вы  осознаете течение времени и можете применять на себя заклинания. В качестве передвижения вы можете выйти из камня, тем самым закончив заклинание. Вы не способны двигаться иным образом. Мелкие повреждения камня не наносят вам вреда, однако если он частично уничтожается или меняет свою форму (так, что вы более не помещаетесь в нем), то вы оказываетесь снаружи и получаете 6d6 дробящего урона. Если камень полностью уничтожен (или преобразован в другое вещество), то вы оказываетесь снаружи и получаете 50 дробящего урона. Оказываясь снаружи, вы падаете на землю в ближайшем незанятом месте к тому, где вы вошли в камень.",
       "school": "преобразование",
@@ -9048,7 +9104,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Water Walk (Ritual)",
+      "name": "Water Walk",
+	  "ritual": true,
       "level": "3",
       "text": "This spell grants the ability to move across any liquid surface - such as water, acid, mud, snow, quicksand, or lava - as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration. If you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round.",
       "school": "Transmutation",
@@ -9066,7 +9123,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Хождение по воде (Ритуал)",
+      "name": "Хождение по воде",
+	  "ritual": true,
       "level": "3",
       "text": "Заклинание дарует способность двигаться по любой жидкой поверхности, например по воде, кислоте, грязи, снегу, зыбкому песку или лаве, словно это безвредная твердая поверхность (существа, двигающиеся по жидкой лаве, будут получать урон от жара). Вы можете выбрать до десяти согласных существ, которых видите в пределах дальности заклинания. Если цель заклинания находится под водой, то она начинает подниматься на поверхность со скоростью 60 футов за раунд.",
       "school": "преобразование",
@@ -9086,7 +9144,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Divination (Ritual)",
+      "name": "Divination",
+	  "ritual": true,
       "level": "4",
       "text": "Your magic and an offering put you in contact with a god or a god's servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen. The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion. If you cast this spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
       "school": "Divination",
@@ -9102,7 +9161,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Предсказание (Ритуал)",
+      "name": "Предсказание",
+	  "ritual": true,
       "level": "4",
       "text": "Ваша магия и приношение позволяют вам связаться с богом или его слугами. Вы задаете один вопрос, который касается определенной цели, события или действия, которое случится в ближайшие 7 дней. МП дает правдивый ответ. Ответ может быть дан в форме короткой фразы, загадочной рифмы или знамения. Заклинание не принимает в расчет любые возможные обстоятельства, которые могут повлиять на исход, например произнесение дополнительных заклинаний, потеря или встреча компаньона.    Если вы произнесете это заклинание два или более раз, не отдохнув полностью, то каждая попытка после первой увеличивает шанс случайного результата на 25%. МП делает этот бросок в тайне.",
       "school": "прорицание",
@@ -9152,7 +9212,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Commune (Ritual)",
+      "name": "Commune",
+	  "ritual": true,
       "level": "5",
       "text": "You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.  Divine beings aren’t necessarily omniscient, so you might receive “unclear” as an answer if a question pertains to information that lies beyond the deity’s knowledge. In a case where a one-word answer could be misleading or contrary to the deity’s interests, the DM might offer a short phrase as an answer instead.  If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret.",
       "school": "Divination",
@@ -9168,7 +9229,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Озарение (Ритуал)",
+      "name": "Озарение",
+	  "ritual": true,
       "level": "5",
       "text": "Вы связываетесь с вашим богом или божественным представителем и задаете до трех вопросов, на которые тот может ответить да или нет. Вы должны задать вопросы до того, как закончится заклинание. Вы получаете верный ответ на каждый вопрос. Божественные существа не всегда всезнающи, поэтому вы можете получить ответ неясно, если вопрос лежит за пределами знаний божества. В случае, если однословный ответ может привести недопониманию или противоречию, МП может использовать короткую фразу.   Если вы произнесете это заклинание два или более раз, не отдохнув полностью, то каждая попытка после первой увеличивает шанс случайного результата на 25%. МП делает этот бросок в тайне.",
       "school": "прорицание",
@@ -9286,7 +9348,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Forbiddance (Ritual)",
+      "name": "Forbiddance",
+	  "ritual": true,
       "level": "6",
       "text": "You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can't teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the plane shift spell. In addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: celestials, elementals, fey, fiends, and undead. When a chosen creature enters the spell's area for the first time on a turn or starts its turn there, the creature takes 5d10 radiant or necrotic damage (your choice when you cast this spell). When you cast this spell, you can designate a password. A creature that speaks the password as it enters the area takes no damage from the spell. The spell's area can't overlap with the area of another forbiddance spell. If you cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting.",
       "school": "Abjuration",
@@ -9301,7 +9364,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Запрет (Ритуал)",
+      "name": "Запрет",
+	  "ritual": true,
       "level": "6",
       "text": "Вы создаете область, которая запрещает магическое перемещение, площадью до 40000 квадратных футов и высотой до 30 футов. Пока действует заклинание, существа не могут телепортироваться в эту область используя порталы, например заклинанием врата. Заклинание защищает область от любых межпланарных перемещений, поэтому в нее нельзя попасть с Астрального Плана, Эфирного Плана, Царства Фей, Царства Теней или при помощи заклинания перемещение между планами. Кроме того, заклинание наносит урон определенным типам существ, которых вы указали в момент произнесения. Выберите один или несколько типов из следующих: божественные существа, элементали, феи, демоны и нежить.) Когда существа выбранного типа впервые входят в область действия заклинания или начинают свой ход в ней, они получают 5d10 светового или некротического урона (вы выбираете в момент произнесения заклинания). Когда вы произносите заклинание, вы можете задать пароль. Если существо произносит пароль, заходя в область действия заклинания, то оно не получает урона от него. Область действия заклинания не может совпадать с другим заклинанием запрет. Если вы произносите запрет каждый день в течение 30 дней в одном и том же месте, заклинание становится перманентным до тех пор, пока его не развеят. При этом материальные компоненты тратятся при последнем произношении.",
       "school": "ограждение",
@@ -10090,7 +10154,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Beast Sense (Ritual)",
+      "name": "Beast Sense",
+	  "ritual": true,
       "level": "2",
       "text": "You touch a willing beast. For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses.",
       "school": "Divination",
@@ -10106,7 +10171,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Звериные чувства (Ритуал)",
+      "name": "Звериные чувства",
+	  "ritual": true,
       "level": "2",
       "text": "Вы касаетесь согласного животного. В качестве действия вы можете видеть глазами животного и слышать его ушами. Вы можете продолжать это делать, пока не вернетесь к своим нормальным чувствам в качестве действия, или пока время заклинания не истечет.   Воспринимая мир через чувства животного, вы получаете все преимущества от его особых способностей связанных с чувствами, но слепы и глухи к вашему собственному окружению.",
       "school": "прорицание",
@@ -10257,7 +10323,8 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Commune with Nature (Ritual)",
+      "name": "Commune with Nature",
+	  "ritual": true,
       "level": "5",
       "text": "You briefly become one with nature and gain knowledge of the surrounding territory. In the outdoors, the spell gives you knowledge of the land within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn't function where nature has been replaced by construction, such as in dungeons and towns. You instantly gain knowledge of up to three facts of your choice about any of the following subjects as they relate to the area: ?  terrain and bodies of water ?  prevalent plants, minerals, animals, or peoples ?  powerful celestials, fey, fiends, elementals, or undead ?  influence from other planes of existence ?  buildings For example, you could determine the location of powerful undead in the area, the location of major sources of safe drinking water, and the location of any nearby towns.",
       "school": "Divination",
@@ -10274,7 +10341,8 @@ var allSpells = [
       ]
     },
     "ru": {
-      "name": "Общение с природой (Ритуал)",
+      "name": "Общение с природой",
+	  "ritual": true,
       "level": "5",
       "text": "На мгновение вы становитесь едины с природой и получаете информацию об окружающей местности. На открытом воздухе это заклинание дает вам информацию о территории в пределах 3 миль вокруг вас. В пещерах и других природных подземных условиях радиус ограничен 300 футами. Оно не действует там, где природа была заменена постройками, то есть в подземельях и городах.   Вы мгновенно получаете информацию о трех аспектах на ваш выбор из перечисленных ниже: • тип местности и водоемы• преобладающие растения, минералы, животные и народы• могущественные феи, демоны, божественные существа, элементали или нежить• влияние других планов существования• строения Например, вы можете определить местоположениемогущественной нежити в области, местонахождение запасов чистой питьевой воды или ближайших городов.",
       "school": "прорицание",

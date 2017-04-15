@@ -366,7 +366,7 @@ var classSpells = {
 			  "Scrying"
 			]
 		  }
-		}
+		},
 		NatureDomain: {
 		  title: {
 			en: "Nature Domain",
@@ -972,6 +972,10 @@ var classSpells = {
 	  ]
 	},
 	Ranger: {
+	  title: {
+		en: "Ranger",
+		ru: "Рейнджер"
+	  },
 	  spells: {
 		1:[
 		  "Alarm",
@@ -1032,6 +1036,10 @@ var classSpells = {
 	  }
 	},
 	Sorcerer: {
+	  title: {
+		en: "Sorcerer",
+		ru: "Чародей"
+	  },
 	  spells: {
 		0:[
 		  "Acid Splash",
@@ -1184,6 +1192,10 @@ var classSpells = {
 	  }
 	},
 	Warlock: {
+	  title: {
+		en: "Warlock",
+		ru: "Колдун"
+	  },
 	  spells: {
 		0:[
 		  "Blade Ward",
@@ -1369,6 +1381,10 @@ var classSpells = {
 	  ]
 	},
 	Wizard: {
+	  title: {
+		en: "Wizard",
+		ru: "Волшебник"
+	  },
 	  spells: {
 		0:[
 		  "Acid Splash",

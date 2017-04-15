@@ -18,10 +18,12 @@
 			],
 			"sources": [
 				"card.less",
+				"combobox.less",
 				"frame.less",
 				"loader.less",
 				"page.less",
 				"print.less",
+				"select.less",
 				"side.less",
 				"start.less",
 				"usefull.less",

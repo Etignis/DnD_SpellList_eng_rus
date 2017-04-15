@@ -7,7 +7,7 @@
 .clear{
     float: none!important;
     clear: both!important;  
-    display: block!important;
+    display: table!important;
     width: 0!important;
     height: 0!important;
     margin:0!important;
@@ -61,4 +61,26 @@
     
     
     display: none;
+}
+
+.scrollbars(@size, @foreground-color, @background-color) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+      width:  @size;
+      height: @size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background: @foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+      background: @background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: @foreground-color;
+    scrollbar-track-color: @background-color;
+  }
 }
