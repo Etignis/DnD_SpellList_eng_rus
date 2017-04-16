@@ -42,7 +42,7 @@
     font-size: 14px;
     padding-left: 1em;
 }
-button, .bt{
+.bt{
     .fr-convex;
     background: @m-gray;
     padding: .2em;
@@ -85,6 +85,7 @@ button, .bt{
     margin: 0;
     z-index: 88;
     background: rgba(0,0,0,.7);
+    display: none;
 }
 .filterLabel{
     width: 100%;
@@ -105,6 +106,10 @@ button, .bt{
     margin: 0;
     color: @d-gray;
     font-seight: 400;
+    
+    &:focus{
+        box-shadow: 0 0 5px 0 @color;
+    }
 }
 
 @media screen and (min-width: @m_w_1) {

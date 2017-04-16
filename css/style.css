@@ -409,10 +409,6 @@ p {
   padding: 0.4em 0.2em;
 }
 .customSelect {
-  display: block;
-  position: relative;
-}
-.customSelect .label {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -445,9 +441,20 @@ p {
   user-select: none;
   background: #777;
   padding: .2em;
-  display: inline-block;
+  display: block;
   cursor: pointer;
   text-align: center;
+  margin: 0;
+  position: relative;
+  font-size: 100%;
+}
+.customSelect:hover {
+  background: #888888;
+}
+.customSelect:active {
+  background: #666666;
+}
+.customSelect .label {
   padding-right: 2.2em !important;
   position: relative;
   margin: 0;
@@ -463,18 +470,9 @@ p {
   content: "";
   position: absolute;
   right: 1.7em;
-  top: .4em;
+  top: .1em;
   height: 1em;
   border-left: 2px ridge #999999;
-}
-.customSelect .label:hover {
-  background: #888888;
-}
-.customSelect .label:hover:before {
-  transform: scale(1.1, 1.1);
-}
-.customSelect .label:active {
-  background: #666666;
 }
 .customSelect .list {
   display: none;
@@ -488,7 +486,7 @@ p {
   margin: 0 .2em;
   padding: .2em 0;
   box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.3);
-  margin-top: -0.2em;
+  margin-top: .25em;
 }
 .customSelect .option {
   color: #222;
@@ -496,6 +494,8 @@ p {
   padding: .3em .2em;
   list-style: none;
   margin: 0;
+  text-align: left;
+  font-weight: 400;
   transition: color .3s, background .3s;
 }
 .customSelect .option:hover {
@@ -539,7 +539,6 @@ p {
   font-size: 14px;
   padding-left: 1em;
 }
-button,
 .bt {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -578,11 +577,9 @@ button,
   text-align: center;
   font-size: 100%;
 }
-button:hover,
 .bt:hover {
   background: #888888;
 }
-button:active,
 .bt:active {
   background: #666666;
 }
@@ -640,6 +637,7 @@ button:active,
   margin: 0;
   z-index: 88;
   background: rgba(0, 0, 0, 0.7);
+  display: none;
 }
 .filterLabel {
   width: 100%;
@@ -688,6 +686,9 @@ button:active,
   margin: 0;
   color: #222;
   font-seight: 400;
+}
+.input:focus {
+  box-shadow: 0 0 5px 0 #777;
 }
 @media screen and (min-width: 65em) {
   .page {

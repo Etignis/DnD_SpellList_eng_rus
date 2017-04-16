@@ -1,13 +1,29 @@
 .customSelect{    
+    .fr-convex;
+    background: @m-gray;
+    padding: .2em;
     display: block;
+    cursor: pointer;
+    text-align: center; 
+    margin: 0;    
     position: relative;
+    font-size: 100%;   
+    &:hover{
+        background: @m-gray + #111;    
+        &:before{
+           // transform: scale(1.1, 1.1);
+        }
+    }
+    
+    &:active{
+        background:  @m-gray - #111;    
+    }
+    &:focus{
+        .label{
+            //box-shadow: 0 0 5px 0 @color;
+        }
+    }
     .label{
-       .fr-convex;
-        background: @m-gray;
-        padding: .2em;
-        display: inline-block;
-        cursor: pointer;
-        text-align: center; 
         padding-right: 2.2em !important;
         position: relative;
         margin: 0;
@@ -23,19 +39,9 @@
             content: "";
             position: absolute;
             right: 1.7em;
-            top: .4em;
+            top: .1em;
             height: 1em;
             border-left: 2px ridge @m-gray + #222;
-        }
-        
-        &:hover{
-            background: @m-gray + #111;    
-            &:before{
-                transform: scale(1.1, 1.1);
-            }
-        }
-        &:active{
-            background:  @m-gray - #111;    
         }
     }
     .list{
@@ -51,7 +57,7 @@
         margin: 0 .2em;
         padding: .2em 0;
         box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.3);
-        margin-top: -.2em;        
+        margin-top: .25em;        
     }
     .option{
         color: @d-gray;
@@ -59,6 +65,8 @@
         padding: .3em .2em;
         list-style: none;
         margin: 0;
+        text-align: left;
+        font-weight: 400;
         
         transition: color .3s, background .3s;
         &:hover{
