@@ -65,63 +65,17 @@ $(window).load(function(){
 		}		
 	}
 	
-	function createCard0(o) {
-		var s_name = "<span data-lang='en' style='display: none'>" + o.en.name + "</span>"+"<span data-lang='ru'>" + o.ru.name + "</span>";
-		var s_ritual = o.en.ritual?"<span data-lang='en' style='display: none'> (Ritual)</span>"+"<span data-lang='ru'> (Ритуал)</span>": "";
-		var s_castingTime = "<span data-lang='en' style='display: none'>" + o.en.castingTime + "</span>"+"<span data-lang='ru'>" + o.ru.castingTime + "</span>";
-		var s_range = "<span data-lang='en' style='display: none'>" + o.en.range + "</span>"+"<span data-lang='ru'>" + o.ru.range + "</span>";
-		var s_components = "<span data-lang='en' style='display: none'>" + o.en.components + "</span>"+"<span data-lang='ru'>" + o.ru.components + "</span>";
-		var s_duration = "<span data-lang='en' style='display: none'>" + o.en.duration + "</span>"+"<span data-lang='ru'>" + o.ru.duration + "</span>";
-		var s_materials = "<span data-lang='en' style='display: none'>" + o.en.materials + "</span>"+"<span data-lang='ru'>" + o.ru.materials + "</span>";
-		var s_text = "<span data-lang='en' style='display: none'>" + o.en.text + "</span>"+"<span data-lang='ru'>" + o.ru.text + "</span>";
-		var s_level = "<span data-lang='en' style='display: none'>" + ((o.en.level == 0)? "Cantrip" : o.en.level + " level") + "</span>"+"<span data-lang='ru'>" + ((o.ru.level == 0)? "Трюк" : o.ru.level + " уровень") + "</span>";
-		var s_school = "<span data-lang='en' style='display: none'>" + o.en.school + "</span>"+"<span data-lang='ru'>" + o.ru.school + "</span>";
-		var s_source = "<span data-lang='en' style='display: none'>" + o.en.source + "</span>"+"<span data-lang='ru'>" + o.ru.source + "</span>";
-		
-		ret = '<div class="cardContainer" data-level="' + o.en.level + '" data-school="' + o.en.school + '">'+
-			'<div class="spellCard">'+
-				'<div class="content">'+
-					'<h1>' + s_name + s_ritual + '</h1>'+
-					'<div class="row">'+
-						'<div class="cell castingTime">'+
-							'<b><span data-lang="en" style="display: none">CASTING TIME</span><span data-lang="ru">Время накладывания</span></b>'+
-							'<span>' + s_castingTime + '</span>'+
-						'</div>'+
-						'<div class="cell range">'+
-							'<b><span data-lang="en" style="display: none">RANGE</span><span data-lang="ru">Дистанция</span></b>'+
-							'<span>' + s_range + '</span>'+
-						'</div>'+
-					'</div>'+
-					'<div class="row">'+
-						'<div class="cell components">'+
-							'<b><span data-lang="en" style="display: none">COMPONENTS</span><span data-lang="ru">Компоненты</span></b>'+
-							'<span>' + s_components + '</span>'+
-						'</div>'+
-						'<div class="cell duration">'+
-							'<b><span data-lang="en" style="display: none">DURATION</span><span data-lang="ru">Длительность</span></b>'+
-							'<span>' + s_duration + '</span>'+
-						'</div>'+
-					'</div>'+
-					'<div class="materials">' + s_materials + '</div>'+
-					'<div class="text">' + s_text + '</div>	'+	
-					'<b class="school">' + s_level + ", " + s_school + '</b>'+
-				'</div>'+
-			'</div>'+
-		'</div>';
-		
-		return ret;
-	}
 	function createCard(spell, lang) {
-		for (var i in spell) {
-			var o = spell[i];
-			var s_name = o[lang].name;
-			var s_ritual = o[lang].ritual? o[lang].ritual : "";
-			var s_castingTime = o[lang].castingTime;
-			var s_range = o[lang].range;
-			var s_components = o[lang].components;
-			var s_duration = o[lang].duration;
-			var s_materials = o[lang].materials;
-			var s_text = o[lang].text;
+		if (spell[lang]) {
+			var o = spell[lang];
+			var s_name = o.name;
+			var s_ritual = o.ritual? o.ritual : "";
+			var s_castingTime = o.castingTime;
+			var s_range = o.range;
+			var s_components = o.components;
+			var s_duration = o.duration;
+			var s_materials = o.materials;
+			var s_text = o.text;
 			var s_level, st_castingTime, st_range, st_components, st_duration;
 			switch (lang){		
 				case "ru": 
@@ -138,10 +92,10 @@ $(window).load(function(){
 					st_components = "COMPONENTS";
 					st_duration = "DURATION";	
 			}
-			var s_school = o[lang].school;
-			var s_source = o[lang].source;
+			var s_school = o.school;
+			var s_source = o.source;
 			
-			ret = '<div class="cardContainer" data-level="' + o.en.level + '" data-school="' + o.en.school + '">'+
+			ret = '<div class="cardContainer" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
 						'<h1>' + s_name + s_ritual + '</h1>'+
@@ -173,6 +127,9 @@ $(window).load(function(){
 			'</div>';
 			
 			return ret;
+		} else {
+			console.log("not found: ");
+			console.dir(spell);
 		}
 	}
 	
@@ -189,18 +146,90 @@ $(window).load(function(){
 	function showFiltered(sName, sClass, nLevelStart, nLevelEnd, aSchools, sLang) {
 		$(".spellContainer").empty();
 		var spells = "";
-		var filteredSpells = allSpells;
+		var filteredSpells = {};
+		//class
+		if(sClass) {
+			// class & level
+			if(nLevelStart && nLevelEnd) {
+				// if class exist
+				if(classSpells[sClass]) {
+					for (var i = nLevelStart; i<=nLevelEnd; i++) {
+						classSpells[sClass].spells[i].forEach(function(item) {
+							filteredSpells[item] = (allSpells[item]);
+						});						
+					}
+				} else {
+					//all classes
+					for (var k in classSpells) {
+						for (var i = nLevelStart; i<=nLevelEnd; i++) {
+							classSpells[k].spells[i].forEach(function(item) {
+								filteredSpells[i] = (allSpells[item]);
+							});						
+						}
+					}
+				}
+			} else {
+				// only class
+				if(classSpells[sClass]) {
+					for (var i in classSpells[sClass].spells) {
+						classSpells[sClass].spells[i].forEach(function(item) {
+							filteredSpells[i] = (allSpells[item]);
+						});						
+					}
+				}
+			}
+		} else {
+			// only level			
+			if(nLevelStart && nLevelEnd) {
+				for (var k in classSpells) {
+					for (var i = nLevelStart; i<=nLevelEnd; i++) {
+						classSpells[k].spells[i].forEach(function(item) {
+							filteredSpells[i] = (allSpells[item]);
+						});						
+					}
+				}
+			}
+		}
+		
+		if(!(nLevelStart && nLevelEnd && sClass)) {
+			filteredSpells = allSpells;
+		}
+		
+		//school
 		/*/
 		filteredSpells.forEach(function(item, i) {
 			spells += createCard(item, sLang);
 		});
 		/**/
+		/*/
 		for (var i=0; i < filteredSpells.length; i++) {
 			spells += createCard(filteredSpells[i], sLang);
 		};
+		/**/
+		console.log("Spell not found: ");
+		for (var i in filteredSpells) {
+			if(filteredSpells[i]) {
+				spells += createCard(filteredSpells[i], sLang);
+			} else {
+				console.log(i);
+			}
+		}
+		console.log("---");
 		$(".spellContainer").html(spells);
 		$("#before_spells").hide();
 		$("#info_text").hide();
+	}
+	
+	function filterSpells(){
+		var sName = "";
+		var sClass = $("#ClassSelect .label").attr("data-selected-key");
+		var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
+		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
+		var aSchools = $("#SchoolCombobox .label").attr("data-val");
+			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
+		var sLang = $("#LangSelect .label").attr("data-selected-key");
+		
+		showFiltered(sName, sClass, nLevelStart, nLevelEnd, aSchools, sLang);
 	}
 	
 	function createLabel(text) {
@@ -234,18 +263,18 @@ $(window).load(function(){
 				}
 			);
 		}
-		var s1 = createSelect(src, {selected_key: 0, width: "100%"});
-		var s2 = createSelect(src, {selected_key: 9, width: "100%"});
+		var s1 = createSelect(src, {id: "LevelStart", selected_key: 0, width: "100%"});
+		var s2 = createSelect(src, {id: "LevelEnd", selected_key: 9, width: "100%"});
 		var str = "<div class='row'><div class='cell'>"+s1+"</div><div class='cell'>"+s2+"</div></div>";
 		var label = createLabel("Уровень с/по");
 		$(".p_side").append(label+str);	
 	}
 	function createSchoolCombobox() {		
-		var s1=createComboBox(schoolList, {id: "schoolCombobox", title: "Школа", checkAll: true});
+		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школа", checkAll: true});
 		$(".p_side").append(s1);
 	}
 	function createNameFilter() {
-		var ret=createInput({id: "nameInput"});
+		var ret=createInput({id: "NameInput"});
 		var label = createLabel("Название");
 		$(".p_side").append(label +ret);		
 	}
@@ -390,12 +419,13 @@ $(window).load(function(){
 		// обычный пункт
 		if(d_parent==undefined && d_root==undefined)
 			{
-			txt = $(this).next("label").text();
+			txt = $(this).next("label").html().replace("<br>", " | ");
 			title_value = $(".combo_box_title").attr("data-val");
 			value = $(this).attr('value');
 			dp = $(this).attr('data-parent');
 			value = make_val(title_value, value, dp);
 			//$(".combo_box_title").append(txt).attr("data-val", value);
+			$(".combo_box_title").attr("data-val", value);
 			}
 		// если root
 		if(d_root!=undefined)
@@ -459,24 +489,13 @@ $(window).load(function(){
 	
 	// lang select
 	$("body").on('focusout', "#LangSelect", function(){
-		//alert(1);
-		showDBG();
-		var lang = $(this).find(".label").attr("data-selected-key");
-		setTimeout(function(){
-			showFiltered(null, null, null, null, null, lang); 
-			hideDBG();
-		}, 50);
+		filterSpells();
 	});
 	// class select
 	$("body").on('focusout', "#ClassSelect", function(){
-		//alert(1);
-		showDBG();
-		var s_class = $(this).find(".label").attr("data-selected-key");
-		setTimeout(function(){
-			showFiltered(null, s_class, null, null, null, null); 
-			hideDBG();
-		}, 50);
+		filterSpells();
 	});
+	
 	
 	//createSpellsIndex();
 	showFiltered(null, null, null, null, null, "ru");

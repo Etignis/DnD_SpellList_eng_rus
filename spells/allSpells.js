@@ -1,5 +1,4 @@
-var allSpells = [
-  {
+var allSpells = {
     "Acid Splash": {
       "en": {
         "name": "Acid Splash",
@@ -33,9 +32,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Blade Ward": {
       "en": {
         "name": "Blade Ward",
@@ -73,9 +70,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Chill Touch": {
       "en": {
         "name": "Chill Touch",
@@ -111,9 +106,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Dancing Lights": {
       "en": {
         "name": "Dancing Lights",
@@ -149,9 +142,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Fire Bolt": {
       "en": {
         "name": "Fire Bolt",
@@ -185,9 +176,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Friends": {
       "en": {
         "name": "Friends",
@@ -225,9 +214,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Light": {
       "en": {
         "name": "Light",
@@ -265,9 +252,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Mage Hand": {
       "en": {
         "name": "Mage Hand",
@@ -305,9 +290,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Mending": {
       "en": {
         "name": "Mending",
@@ -347,9 +330,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Message": {
       "en": {
         "name": "Message",
@@ -385,9 +366,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Minor Illusion": {
       "en": {
         "name": "Minor Illusion",
@@ -425,9 +404,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Poison Spray": {
       "en": {
         "name": "Poison Spray",
@@ -465,9 +442,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Prestidigitation": {
       "en": {
         "name": "Prestidigitation",
@@ -505,9 +480,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Ray of Frost": {
       "en": {
         "name": "Ray of Frost",
@@ -541,9 +514,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Shocking Grasp": {
       "en": {
         "name": "Shocking Grasp",
@@ -577,9 +548,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "True Strike": {
       "en": {
         "name": "True Strike",
@@ -617,9 +586,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Thunderclap": {
       "en": {
         "name": "Thunderclap",
@@ -655,9 +622,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Alarm": {
       "en": {
         "name": "Alarm",
@@ -693,9 +658,7 @@ var allSpells = [
           "Следопыт"
         ]
       }
-    }
-  },
-  {
+    },
     "Burning Hands": {
       "en": {
         "name": "Burning Hands",
@@ -731,9 +694,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Charm Person": {
       "en": {
         "name": "Charm Person",
@@ -774,9 +735,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Chromatic Orb": {
       "en": {
         "name": "Chromatic Orb",
@@ -810,9 +769,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Color Spray": {
       "en": {
         "name": "Color Spray",
@@ -846,9 +803,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Comprehend Languages": {
       "en": {
         "name": "Comprehend Languages",
@@ -888,9 +843,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Detect Magic": {
       "en": {
         "name": "Detect Magic",
@@ -935,9 +888,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Disguise Self": {
       "en": {
         "name": "Disguise Self",
@@ -974,9 +925,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Expeditious Retreat": {
       "en": {
         "name": "Expeditious Retreat",
@@ -1012,9 +961,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "False Life": {
       "en": {
         "name": "False Life",
@@ -1049,9 +996,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Feather Fall": {
       "en": {
         "name": "Feather Fall",
@@ -1087,9 +1032,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Find Familiar": {
       "en": {
         "name": "Find Familiar",
@@ -1123,9 +1066,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Fog Cloud": {
       "en": {
         "name": "Fog Cloud",
@@ -1164,9 +1105,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Grease": {
       "en": {
         "name": "Grease",
@@ -1198,9 +1137,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Identify": {
       "en": {
         "name": "Identify",
@@ -1236,9 +1173,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Illusory Script": {
       "en": {
         "name": "Illusory Script",
@@ -1274,9 +1209,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Jump": {
       "en": {
         "name": "Jump",
@@ -1314,9 +1247,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Longstrider": {
       "en": {
         "name": "Longstrider",
@@ -1354,9 +1285,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Mage Armor": {
       "en": {
         "name": "Mage Armor",
@@ -1390,9 +1319,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Magic Missile": {
       "en": {
         "name": "Magic Missile",
@@ -1426,9 +1353,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Protection from Evil and Good": {
       "en": {
         "name": "Protection from Evil and Good",
@@ -1466,9 +1391,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Ray of Sickness": {
       "en": {
         "name": "Ray of Sickness",
@@ -1503,9 +1426,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Shield": {
       "en": {
         "name": "Shield",
@@ -1539,9 +1460,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Silent Image": {
       "en": {
         "name": "Silent Image",
@@ -1577,9 +1496,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Sleep": {
       "en": {
         "name": "Sleep",
@@ -1616,9 +1533,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Tasha's Hideous Laughter": {
       "en": {
         "name": "Tasha's Hideous Laughter",
@@ -1651,9 +1566,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Tenser's Floating Disk": {
       "en": {
         "name": "Tenser's Floating Disk",
@@ -1680,9 +1593,7 @@ var allSpells = [
         "duration": "1 час",
         "source": "PHB"
       }
-    }
-  },
-  {
+    },
     "Thunderwave": {
       "en": {
         "name": "Thunderwave",
@@ -1721,9 +1632,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Unseen Servant": {
       "en": {
         "name": "Unseen Servant",
@@ -1759,9 +1668,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Witch Bolt": {
       "en": {
         "name": "Witch Bolt",
@@ -1797,9 +1704,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Arcane Lock": {
       "en": {
         "name": "Arcane Lock",
@@ -1831,9 +1736,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Blindness/Deafness": {
       "en": {
         "name": "Blindness/Deafness",
@@ -1872,9 +1775,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Blur": {
       "en": {
         "name": "Blur",
@@ -1909,9 +1810,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Cloud of Daggers": {
       "en": {
         "name": "Cloud of Daggers",
@@ -1949,9 +1848,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Continual Flame": {
       "en": {
         "name": "Continual Flame",
@@ -1985,9 +1882,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Crown of Madness": {
       "en": {
         "name": "Crown of Madness",
@@ -2026,9 +1921,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Darkness": {
       "en": {
         "name": "Darkness",
@@ -2066,9 +1959,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Darkvision": {
       "en": {
         "name": "Darkvision",
@@ -2106,9 +1997,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Detect Thoughts": {
       "en": {
         "name": "Detect Thoughts",
@@ -2145,9 +2034,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Enlarge/Reduce": {
       "en": {
         "name": "Enlarge/Reduce",
@@ -2181,9 +2068,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Flaming Sphere": {
       "en": {
         "name": "Flaming Sphere",
@@ -2218,9 +2103,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Gentle Repose": {
       "en": {
         "name": "Gentle Repose",
@@ -2256,9 +2139,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Gust of Wind": {
       "en": {
         "name": "Gust of Wind",
@@ -2295,9 +2176,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Hold Person": {
       "en": {
         "name": "Hold Person",
@@ -2340,9 +2219,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Invisibility": {
       "en": {
         "name": "Invisibility",
@@ -2381,9 +2258,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Knock": {
       "en": {
         "name": "Knock",
@@ -2419,9 +2294,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Levitate": {
       "en": {
         "name": "Levitate",
@@ -2455,9 +2328,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Locate Object": {
       "en": {
         "name": "Locate Object",
@@ -2499,9 +2370,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Magic Mouth": {
       "en": {
         "name": "Magic Mouth",
@@ -2536,9 +2405,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Magic Weapon": {
       "en": {
         "name": "Magic Weapon",
@@ -2573,9 +2440,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Melf's Acid Arrow": {
       "en": {
         "name": "Melf's Acid Arrow",
@@ -2608,9 +2473,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Mirror Image": {
       "en": {
         "name": "Mirror Image",
@@ -2648,9 +2511,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Misty Step": {
       "en": {
         "name": "Misty Step",
@@ -2688,9 +2549,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Nystul's Magic Aura": {
       "en": {
         "name": "Nystul's Magic Aura",
@@ -2722,9 +2581,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Phantasmal Force": {
       "en": {
         "name": "Phantasmal Force",
@@ -2761,9 +2618,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Ray of Enfeeblement": {
       "en": {
         "name": "Ray of Enfeeblement",
@@ -2798,9 +2653,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Rope Trick": {
       "en": {
         "name": "Rope Trick",
@@ -2832,9 +2685,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Scorching Ray": {
       "en": {
         "name": "Scorching Ray",
@@ -2870,12 +2721,10 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
-    "See invisibility": {
+    },
+    "See Invisibility": {
       "en": {
-        "name": "See invisibility",
+        "name": "See Invisibility",
         "level": "2",
         "text": "For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent.",
         "school": "Divination",
@@ -2908,9 +2757,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Shatter": {
       "en": {
         "name": "Shatter",
@@ -2949,9 +2796,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Spider Climb": {
       "en": {
         "name": "Spider Climb",
@@ -2988,9 +2833,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Suggestion": {
       "en": {
         "name": "Suggestion",
@@ -3029,9 +2872,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Web": {
       "en": {
         "name": "Web",
@@ -3066,9 +2907,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Blink": {
       "en": {
         "name": "Blink",
@@ -3104,9 +2943,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Clairvoyance": {
       "en": {
         "name": "Clairvoyance",
@@ -3145,9 +2982,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Counterspell": {
       "en": {
         "name": "Counterspell",
@@ -3182,9 +3017,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Dispel Magic": {
       "en": {
         "name": "Dispel Magic",
@@ -3228,9 +3061,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Fear": {
       "en": {
         "name": "Fear",
@@ -3268,9 +3099,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Feign Death": {
       "en": {
         "name": "Feign Death",
@@ -3308,9 +3137,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Fireball": {
       "en": {
         "name": "Fireball",
@@ -3346,9 +3173,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Fly": {
       "en": {
         "name": "Fly",
@@ -3384,9 +3209,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Gaseous Form": {
       "en": {
         "name": "Gaseous Form",
@@ -3423,9 +3246,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Glyph of Warding": {
       "en": {
         "name": "Glyph of Warding",
@@ -3461,9 +3282,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Haste": {
       "en": {
         "name": "Haste",
@@ -3499,9 +3318,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Hypnotic Pattern": {
       "en": {
         "name": "Hypnotic Pattern",
@@ -3539,9 +3356,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Leomund's Tiny Hut": {
       "en": {
         "name": "Leomund's Tiny Hut",
@@ -3576,9 +3391,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Lightning Bolt": {
       "en": {
         "name": "Lightning Bolt",
@@ -3613,9 +3426,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Magic Circle": {
       "en": {
         "name": "Magic Circle",
@@ -3653,9 +3464,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Major Image": {
       "en": {
         "name": "Major Image",
@@ -3693,9 +3502,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Nondetection": {
       "en": {
         "name": "Nondetection",
@@ -3732,9 +3539,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Phantom Steed": {
       "en": {
         "name": "Phantom Steed",
@@ -3768,9 +3573,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Protection from Energy": {
       "en": {
         "name": "Protection from Energy",
@@ -3811,9 +3614,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Remove Curse": {
       "en": {
         "name": "Remove Curse",
@@ -3851,9 +3652,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Sending": {
       "en": {
         "name": "Sending",
@@ -3889,9 +3688,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Sleet Storm": {
       "en": {
         "name": "Sleet Storm",
@@ -3928,9 +3725,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Slow": {
       "en": {
         "name": "Slow",
@@ -3965,9 +3760,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Stinking Cloud": {
       "en": {
         "name": "Stinking Cloud",
@@ -4005,9 +3798,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Tongues": {
       "en": {
         "name": "Tongues",
@@ -4047,9 +3838,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Vampiric Touch": {
       "en": {
         "name": "Vampiric Touch",
@@ -4084,9 +3873,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Water Breathing": {
       "en": {
         "name": "Water Breathing",
@@ -4126,9 +3913,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Arcane Eye": {
       "en": {
         "name": "Arcane Eye",
@@ -4161,9 +3946,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Banishment": {
       "en": {
         "name": "Banishment",
@@ -4203,9 +3986,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Blight": {
       "en": {
         "name": "Blight",
@@ -4245,9 +4026,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Confusion": {
       "en": {
         "name": "Confusion",
@@ -4287,9 +4066,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Conjure Minor Elementals": {
       "en": {
         "name": "Conjure Minor Elementals",
@@ -4323,9 +4100,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Control Water": {
       "en": {
         "name": "Control Water",
@@ -4361,9 +4136,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Dimension Door": {
       "en": {
         "name": "Dimension Door",
@@ -4403,9 +4176,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Evard's Black Tentacles": {
       "en": {
         "name": "Evard's Black Tentacles",
@@ -4438,9 +4209,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Fabricate": {
       "en": {
         "name": "Fabricate",
@@ -4472,9 +4241,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Fire Shield": {
       "en": {
         "name": "Fire Shield",
@@ -4507,9 +4274,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Greater Invisibility": {
       "en": {
         "name": "Greater Invisibility",
@@ -4547,9 +4312,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Hallucinatory Terrain": {
       "en": {
         "name": "Hallucinatory Terrain",
@@ -4587,9 +4350,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Ice Storm": {
       "en": {
         "name": "Ice Storm",
@@ -4627,9 +4388,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Leomund's Secret Chest": {
       "en": {
         "name": "Leomund's Secret Chest",
@@ -4661,9 +4420,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Locate Creature": {
       "en": {
         "name": "Locate Creature",
@@ -4705,9 +4462,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Mordenkainen's Faithful Hound": {
       "en": {
         "name": "Mordenkainen's Faithful Hound",
@@ -4739,9 +4494,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Mordenkainen's Private Sanctum": {
       "en": {
         "name": "Mordenkainen's Private Sanctum",
@@ -4773,9 +4526,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Otiluke's Resilient Sphere": {
       "en": {
         "name": "Otiluke's Resilient Sphere",
@@ -4807,9 +4558,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Phantasmal Killer": {
       "en": {
         "name": "Phantasmal Killer",
@@ -4841,9 +4590,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Polymorph": {
       "en": {
         "name": "Polymorph",
@@ -4882,9 +4629,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Stone Shape": {
       "en": {
         "name": "Stone Shape",
@@ -4920,9 +4665,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Stoneskin": {
       "en": {
         "name": "Stoneskin",
@@ -4962,9 +4705,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Wall of Fire": {
       "en": {
         "name": "Wall of Fire",
@@ -5002,9 +4743,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Animate Objects": {
       "en": {
         "name": "Animate Objects",
@@ -5040,9 +4779,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Bigby's Hand": {
       "en": {
         "name": "Bigby's Hand",
@@ -5074,9 +4811,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Cloudkill": {
       "en": {
         "name": "Cloudkill",
@@ -5112,9 +4847,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Cone of Cold": {
       "en": {
         "name": "Cone of Cold",
@@ -5149,9 +4882,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Conjure Elemental": {
       "en": {
         "name": "Conjure Elemental",
@@ -5185,9 +4916,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Contact Other Plane": {
       "en": {
         "name": "Contact Other Plane",
@@ -5223,9 +4952,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Creation": {
       "en": {
         "name": "Creation",
@@ -5259,9 +4986,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Dominate Person": {
       "en": {
         "name": "Dominate Person",
@@ -5300,9 +5025,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Dream": {
       "en": {
         "name": "Dream",
@@ -5339,9 +5062,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Geas": {
       "en": {
         "name": "Geas",
@@ -5381,9 +5102,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Hold Monster": {
       "en": {
         "name": "Hold Monster",
@@ -5423,9 +5142,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Legend Lore": {
       "en": {
         "name": "Legend Lore",
@@ -5461,9 +5178,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Mislead": {
       "en": {
         "name": "Mislead",
@@ -5497,9 +5212,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Modify Memory": {
       "en": {
         "name": "Modify Memory",
@@ -5534,9 +5247,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Passwall": {
       "en": {
         "name": "Passwall",
@@ -5569,9 +5280,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Planar Binding": {
       "en": {
         "name": "Planar Binding",
@@ -5609,9 +5318,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Rary's Telepathic Bond": {
       "en": {
         "name": "Rary's Telepathic Bond",
@@ -5645,9 +5352,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Scrying": {
       "en": {
         "name": "Scrying",
@@ -5688,9 +5393,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Seeming": {
       "en": {
         "name": "Seeming",
@@ -5727,9 +5430,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Telekinesis": {
       "en": {
         "name": "Telekinesis",
@@ -5764,9 +5465,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Teleportation Circle": {
       "en": {
         "name": "Teleportation Circle",
@@ -5802,9 +5501,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Wall of Force": {
       "en": {
         "name": "Wall of Force",
@@ -5836,9 +5533,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Wall of Stone": {
       "en": {
         "name": "Wall of Stone",
@@ -5874,9 +5569,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Arcane Gate": {
       "en": {
         "name": "Arcane Gate",
@@ -5912,9 +5605,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Chain Lightning": {
       "en": {
         "name": "Chain Lightning",
@@ -5948,9 +5639,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Circle of Death": {
       "en": {
         "name": "Circle of Death",
@@ -5986,9 +5675,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Contingency": {
       "en": {
         "name": "Contingency",
@@ -6020,9 +5707,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Create Undead": {
       "en": {
         "name": "Create Undead",
@@ -6058,9 +5743,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Disintegrate": {
       "en": {
         "name": "Disintegrate",
@@ -6094,9 +5777,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Drawmij's Instant Summon": {
       "en": {
         "name": "Drawmij's Instant Summon",
@@ -6130,9 +5811,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Eyebite": {
       "en": {
         "name": "Eyebite",
@@ -6170,9 +5849,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Flesh to Stone": {
       "en": {
         "name": "Flesh to Stone",
@@ -6206,9 +5883,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Globe of Invulnerability": {
       "en": {
         "name": "Globe of Invulnerability",
@@ -6242,9 +5917,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Guards and Wards": {
       "en": {
         "name": "Guards and Wards",
@@ -6278,9 +5951,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Magic Jar": {
       "en": {
         "name": "Magic Jar",
@@ -6312,9 +5983,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Mass Suggestion": {
       "en": {
         "name": "Mass Suggestion",
@@ -6352,9 +6021,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Move Earth": {
       "en": {
         "name": "Move Earth",
@@ -6390,9 +6057,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Otiluke's Freezing Sphere": {
       "en": {
         "name": "Otiluke's Freezing Sphere",
@@ -6424,9 +6089,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Otto's Irresistible Dance": {
       "en": {
         "name": "Otto's Irresistible Dance",
@@ -6460,9 +6123,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Programmed Illusion": {
       "en": {
         "name": "Programmed Illusion",
@@ -6496,9 +6157,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Sunbeam": {
       "en": {
         "name": "Sunbeam",
@@ -6534,9 +6193,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "True Seeing": {
       "en": {
         "name": "True Seeing",
@@ -6576,9 +6233,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Wall of Ice": {
       "en": {
         "name": "Wall of Ice",
@@ -6610,9 +6265,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Delayed Blast Fireball": {
       "en": {
         "name": "Delayed Blast Fireball",
@@ -6646,9 +6299,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Etherealness": {
       "en": {
         "name": "Etherealness",
@@ -6688,9 +6339,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Finger of Death": {
       "en": {
         "name": "Finger of Death",
@@ -6726,9 +6375,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Forcecage": {
       "en": {
         "name": "Forcecage",
@@ -6764,9 +6411,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Mirage Arcane": {
       "en": {
         "name": "Mirage Arcane",
@@ -6802,9 +6447,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Mordenkainen's Magnificent Mansion": {
       "en": {
         "name": "Mordenkainen's Magnificent Mansion",
@@ -6838,9 +6481,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Mordenkainen's Sword": {
       "en": {
         "name": "Mordenkainen's Sword",
@@ -6874,9 +6515,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Plane Shift": {
       "en": {
         "name": "Plane Shift",
@@ -6916,9 +6555,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Prismatic Spray": {
       "en": {
         "name": "Prismatic Spray",
@@ -6952,9 +6589,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Project Image": {
       "en": {
         "name": "Project Image",
@@ -6988,9 +6623,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Reverse Gravity": {
       "en": {
         "name": "Reverse Gravity",
@@ -7026,9 +6659,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Sequester": {
       "en": {
         "name": "Sequester",
@@ -7060,9 +6691,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Simulacrum": {
       "en": {
         "name": "Simulacrum",
@@ -7094,9 +6723,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Symbol": {
       "en": {
         "name": "Symbol",
@@ -7132,9 +6759,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Teleport": {
       "en": {
         "name": "Teleport",
@@ -7170,9 +6795,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Antimagic Field": {
       "en": {
         "name": "Antimagic Field",
@@ -7206,9 +6829,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Antipathy/Sympathy": {
       "en": {
         "name": "Antipathy/Sympathy",
@@ -7242,9 +6863,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Clone": {
       "en": {
         "name": "Clone",
@@ -7276,9 +6895,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Control Weather": {
       "en": {
         "name": "Control Weather",
@@ -7314,9 +6931,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Demiplane": {
       "en": {
         "name": "Demiplane",
@@ -7350,9 +6965,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Dominate Monster": {
       "en": {
         "name": "Dominate Monster",
@@ -7390,9 +7003,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Feeblemind": {
       "en": {
         "name": "Feeblemind",
@@ -7430,9 +7041,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Incendiary Cloud": {
       "en": {
         "name": "Incendiary Cloud",
@@ -7466,9 +7075,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Maze": {
       "en": {
         "name": "Maze",
@@ -7500,9 +7107,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Mind Blank": {
       "en": {
         "name": "Mind Blank",
@@ -7536,9 +7141,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Power Word Stun": {
       "en": {
         "name": "Power Word Stun",
@@ -7576,9 +7179,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Sunburst": {
       "en": {
         "name": "Sunburst",
@@ -7614,9 +7215,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Telepathy": {
       "en": {
         "name": "Telepathy",
@@ -7648,9 +7247,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Astral Projection": {
       "en": {
         "name": "Astral Projection",
@@ -7686,9 +7283,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Foresight": {
       "en": {
         "name": "Foresight",
@@ -7726,9 +7321,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Gate": {
       "en": {
         "name": "Gate",
@@ -7764,9 +7357,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Imprisonment": {
       "en": {
         "name": "Imprisonment",
@@ -7800,9 +7391,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Meteor Swarm": {
       "en": {
         "name": "Meteor Swarm",
@@ -7836,9 +7425,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Power Word Kill": {
       "en": {
         "name": "Power Word Kill",
@@ -7876,9 +7463,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Prismatic Wall": {
       "en": {
         "name": "Prismatic Wall",
@@ -7910,9 +7495,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Shapechange": {
       "en": {
         "name": "Shapechange",
@@ -7946,9 +7529,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Time Stop": {
       "en": {
         "name": "Time Stop",
@@ -7982,9 +7563,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "True Polymorph": {
       "en": {
         "name": "True Polymorph",
@@ -8020,9 +7599,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Weird": {
       "en": {
         "name": "Weird",
@@ -8054,9 +7631,7 @@ var allSpells = [
           "Волшебник"
         ]
       }
-    }
-  },
-  {
+    },
     "Wish": {
       "en": {
         "name": "Wish",
@@ -8090,9 +7665,7 @@ var allSpells = [
           "Чародей"
         ]
       }
-    }
-  },
-  {
+    },
     "Vicious Mockery": {
       "en": {
         "name": "Vicious Mockery",
@@ -8124,9 +7697,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Animal Friendship": {
       "en": {
         "name": "Animal Friendship",
@@ -8163,9 +7734,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Cure Wounds": {
       "en": {
         "name": "Cure Wounds",
@@ -8205,9 +7774,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Dissonant Whispers": {
       "en": {
         "name": "Dissonant Whispers",
@@ -8240,9 +7807,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Faerie Fire": {
       "en": {
         "name": "Faerie Fire",
@@ -8278,9 +7843,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Healing Word": {
       "en": {
         "name": "Healing Word",
@@ -8316,9 +7879,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Speak with Animals": {
       "en": {
         "name": "Speak with Animals",
@@ -8357,9 +7918,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Animal Messenger": {
       "en": {
         "name": "Animal Messenger",
@@ -8396,9 +7955,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Enhance Ability": {
       "en": {
         "name": "Enhance Ability",
@@ -8436,9 +7993,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Heat Metal": {
       "en": {
         "name": "Heat Metal",
@@ -8472,9 +8027,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Locate Animals or Plants": {
       "en": {
         "name": "Locate Animals or Plants",
@@ -8511,9 +8064,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Silence": {
       "en": {
         "name": "Silence",
@@ -8552,9 +8103,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Zone of Truth": {
       "en": {
         "name": "Zone of Truth",
@@ -8590,9 +8139,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Speak with Dead": {
       "en": {
         "name": "Speak with Dead",
@@ -8626,9 +8173,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Speak with Plants": {
       "en": {
         "name": "Speak with Plants",
@@ -8664,9 +8209,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Mass Cure Wounds": {
       "en": {
         "name": "Mass Cure Wounds",
@@ -8702,9 +8245,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Raise Dead": {
       "en": {
         "name": "Raise Dead",
@@ -8740,9 +8281,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Regenerate": {
       "en": {
         "name": "Regenerate",
@@ -8778,9 +8317,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Resurrection": {
       "en": {
         "name": "Resurrection",
@@ -8814,9 +8351,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Power Word Heal": {
       "en": {
         "name": "Power Word Heal",
@@ -8848,9 +8383,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Sacred Flame": {
       "en": {
         "name": "Sacred Flame",
@@ -8882,9 +8415,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Spare the Dying": {
       "en": {
         "name": "Spare the Dying",
@@ -8916,9 +8447,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Bless": {
       "en": {
         "name": "Bless",
@@ -8952,9 +8481,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Command": {
       "en": {
         "name": "Command",
@@ -8989,9 +8516,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Create or Destroy Water": {
       "en": {
         "name": "Create or Destroy Water",
@@ -9025,9 +8550,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Detect Poison and Disease": {
       "en": {
         "name": "Detect Poison and Disease",
@@ -9065,9 +8588,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Guiding Bolt": {
       "en": {
         "name": "Guiding Bolt",
@@ -9099,9 +8620,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Inflict Wounds": {
       "en": {
         "name": "Inflict Wounds",
@@ -9134,9 +8653,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Purify Food and Drink": {
       "en": {
         "name": "Purify Food and Drink",
@@ -9174,9 +8691,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Sanctuary": {
       "en": {
         "name": "Sanctuary",
@@ -9209,9 +8724,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Shield of Faith": {
       "en": {
         "name": "Shield of Faith",
@@ -9245,9 +8758,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Augury": {
       "en": {
         "name": "Augury",
@@ -9281,9 +8792,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Find Traps": {
       "en": {
         "name": "Find Traps",
@@ -9319,9 +8828,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Prayer of Healing": {
       "en": {
         "name": "Prayer of Healing",
@@ -9353,9 +8860,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Spiritual Weapon": {
       "en": {
         "name": "Spiritual Weapon",
@@ -9387,9 +8892,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Create Food and Water": {
       "en": {
         "name": "Create Food and Water",
@@ -9424,9 +8927,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Daylight": {
       "en": {
         "name": "Daylight",
@@ -9466,9 +8967,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Mass Healing Word": {
       "en": {
         "name": "Mass Healing Word",
@@ -9500,9 +8999,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Meld into Stone": {
       "en": {
         "name": "Meld into Stone",
@@ -9538,9 +9035,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Revivify": {
       "en": {
         "name": "Revivify",
@@ -9574,9 +9069,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Spirit Guardians": {
       "en": {
         "name": "Spirit Guardians",
@@ -9608,9 +9101,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Water Walk": {
       "en": {
         "name": "Water Walk",
@@ -9650,9 +9141,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Divination": {
       "en": {
         "name": "Divination",
@@ -9687,9 +9176,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Guardian of Faith": {
       "en": {
         "name": "Guardian of Faith",
@@ -9722,9 +9209,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Commune": {
       "en": {
         "name": "Commune",
@@ -9759,9 +9244,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Contagion": {
       "en": {
         "name": "Contagion",
@@ -9796,9 +9279,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Flame Strike": {
       "en": {
         "name": "Flame Strike",
@@ -9832,9 +9313,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Blade Barrier": {
       "en": {
         "name": "Blade Barrier",
@@ -9866,9 +9345,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Forbiddance": {
       "en": {
         "name": "Forbiddance",
@@ -9902,9 +9379,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Harm": {
       "en": {
         "name": "Harm",
@@ -9936,9 +9411,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Planar Ally": {
       "en": {
         "name": "Planar Ally",
@@ -9970,9 +9443,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Word of Recall": {
       "en": {
         "name": "Word of Recall",
@@ -10004,9 +9475,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Conjure Celestial": {
       "en": {
         "name": "Conjure Celestial",
@@ -10038,9 +9507,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Divine Word": {
       "en": {
         "name": "Divine Word",
@@ -10072,9 +9539,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Fire Storm": {
       "en": {
         "name": "Fire Storm",
@@ -10110,9 +9575,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Earthquake": {
       "en": {
         "name": "Earthquake",
@@ -10148,9 +9611,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Holy Aura": {
       "en": {
         "name": "Holy Aura",
@@ -10182,9 +9643,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Mass Heal": {
       "en": {
         "name": "Mass Heal",
@@ -10216,9 +9675,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "True Resurrection": {
       "en": {
         "name": "True Resurrection",
@@ -10252,9 +9709,7 @@ var allSpells = [
           "Жрец"
         ]
       }
-    }
-  },
-  {
+    },
     "Plant Growth": {
       "en": {
         "name": "Plant Growth",
@@ -10292,9 +9747,7 @@ var allSpells = [
           "Бард"
         ]
       }
-    }
-  },
-  {
+    },
     "Wind Wall": {
       "en": {
         "name": "Wind Wall",
@@ -10329,9 +9782,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Dominate Beast": {
       "en": {
         "name": "Dominate Beast",
@@ -10367,9 +9818,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Grasping Vine": {
       "en": {
         "name": "Grasping Vine",
@@ -10404,9 +9853,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Tree Stride": {
       "en": {
         "name": "Tree Stride",
@@ -10442,9 +9889,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Pass Without Trace": {
       "en": {
         "name": "Pass Without Trace",
@@ -10479,9 +9924,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Crusader's Mantle": {
       "en": {
         "name": "Crusader's Mantle",
@@ -10514,9 +9957,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Druidcraft": {
       "en": {
         "name": "Druidcraft",
@@ -10548,9 +9989,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Produce Flame": {
       "en": {
         "name": "Produce Flame",
@@ -10582,9 +10021,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Shillelagh": {
       "en": {
         "name": "Shillelagh",
@@ -10616,9 +10053,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Thorn Whip": {
       "en": {
         "name": "Thorn Whip",
@@ -10650,9 +10085,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Entangle": {
       "en": {
         "name": "Entangle",
@@ -10684,9 +10117,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Goodberry": {
       "en": {
         "name": "Goodberry",
@@ -10720,9 +10151,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Beast Sense": {
       "en": {
         "name": "Beast Sense",
@@ -10758,9 +10187,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Flame Blade": {
       "en": {
         "name": "Flame Blade",
@@ -10792,9 +10219,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Moonbeam": {
       "en": {
         "name": "Moonbeam",
@@ -10827,9 +10252,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Conjure Animals": {
       "en": {
         "name": "Conjure Animals",
@@ -10863,9 +10286,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Conjure Woodland Beings": {
       "en": {
         "name": "Conjure Woodland Beings",
@@ -10899,9 +10320,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Commune with Nature": {
       "en": {
         "name": "Commune with Nature",
@@ -10938,9 +10357,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Transport via Plants": {
       "en": {
         "name": "Transport via Plants",
@@ -10972,9 +10389,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Wall of Thorns": {
       "en": {
         "name": "Wall of Thorns",
@@ -11006,9 +10421,7 @@ var allSpells = [
           "Друид"
         ]
       }
-    }
-  },
-  {
+    },
     "Wrathful Smite": {
       "en": {
         "name": "Wrathful Smite",
@@ -11040,9 +10453,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Branding Smite": {
       "en": {
         "name": "Branding Smite",
@@ -11074,9 +10485,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Find Steed": {
       "en": {
         "name": "Find Steed",
@@ -11108,9 +10517,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Aura of Vitality": {
       "en": {
         "name": "Aura of Vitality",
@@ -11142,9 +10549,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Blinding Smite": {
       "en": {
         "name": "Blinding Smite",
@@ -11176,9 +10581,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Elemental Weapon": {
       "en": {
         "name": "Elemental Weapon",
@@ -11210,9 +10613,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Aura of Life": {
       "en": {
         "name": "Aura of Life",
@@ -11244,9 +10645,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Aura of Purity": {
       "en": {
         "name": "Aura of Purity",
@@ -11278,9 +10677,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Staggering Smite": {
       "en": {
         "name": "Staggering Smite",
@@ -11312,9 +10709,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Banishing Smite": {
       "en": {
         "name": "Banishing Smite",
@@ -11346,9 +10741,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Circle of Power": {
       "en": {
         "name": "Circle of Power",
@@ -11380,9 +10773,7 @@ var allSpells = [
           "Паладин"
         ]
       }
-    }
-  },
-  {
+    },
     "Hellish Rebuke": {
       "en": {
         "name": "Hellish Rebuke",
@@ -11415,9 +10806,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Hunter's Mark": {
       "en": {
         "name": "Hunter's Mark",
@@ -11450,9 +10839,7 @@ var allSpells = [
           "Следопыт"
         ]
       }
-    }
-  },
-  {
+    },
     "Hail of Thorns": {
       "en": {
         "name": "Hail of Thorns",
@@ -11484,9 +10871,7 @@ var allSpells = [
           "Следопыт"
         ]
       }
-    }
-  },
-  {
+    },
     "Lightning Arrow": {
       "en": {
         "name": "Lightning Arrow",
@@ -11518,9 +10903,7 @@ var allSpells = [
           "Следопыт"
         ]
       }
-    }
-  },
-  {
+    },
     "Conjure Volley": {
       "en": {
         "name": "Conjure Volley",
@@ -11552,9 +10935,7 @@ var allSpells = [
           "Следопыт"
         ]
       }
-    }
-  },
-  {
+    },
     "Swift Quiver": {
       "en": {
         "name": "Swift Quiver",
@@ -11586,9 +10967,7 @@ var allSpells = [
           "Следопыт"
         ]
       }
-    }
-  },
-  {
+    },
     "Eldritch Blast": {
       "en": {
         "name": "Eldritch Blast",
@@ -11620,9 +10999,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Armor of Agathya": {
       "en": {
         "name": "Armor of Agathya",
@@ -11654,9 +11031,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Arms of Hadar": {
       "en": {
         "name": "Arms of Hadar",
@@ -11688,9 +11063,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Hex": {
       "en": {
         "name": "Hex",
@@ -11722,9 +11095,7 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  },
-  {
+    },
     "Hunger of Hadar": {
       "en": {
         "name": "Hunger of Hadar",
@@ -11756,6 +11127,398 @@ var allSpells = [
           "Колдун"
         ]
       }
-    }
-  }
-]
+    },
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	"Bane" : {
+		"en": {
+			"name": "Bane",
+			"level": "1",
+			"text": "Up to three creatures of your choice that you can seewithin range must make Charisma saving throws.Whenever a target that fails this saving throw makesan attack roll or a saving throw before the spell ends,the target must roll a d4 and subtract the number rolledfrom the attack roll or saving throw.<br>At Higher LeveIs. When you cast this spell usinga spell slot of 2nd levei or higher, you can target oneadditional creature for each slot leveI above 1st.",
+			"school": "Enchantment",
+			"castingTime": "1 action",
+			"range": "30 feet",
+			"materials": "a drop of blood",
+			"components": "V, S, M",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},
+	"Heroism" : {
+		"en": {
+			"name": "Heroism",
+			"level": "1",
+			"text": "A willing creature you touch is imbued with bravery.Until the spell ends, the creature is immune to beingfrightened and gains temporary hit points equal toyour spellcasting ability modifier at the start o f eacho f its turns. When the spell ends, the target loses anyremaining temporary hit points from this spell.<br>At Higher Levels. When you cast this spell usinga spell slot o f 2nd level or higher, you can target oneadditional creature for each slot level above 1st.",
+			"school": "Enchantment",
+			"castingTime": "1 action",
+			"range": "Touch",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},
+	"Calm Emotions" : {
+		"en": {
+			"name": "Calm Emotions",
+			"level": "2",
+			"text": "You attempt to suppress strong emotions in a group o f people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it w ishes. If a creature fails its saving throw, choose one o f the following two effects.<br> You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.<br> Alternatively, you can make a target indifferent about creatures o f your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it w itnesses any o f its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise.",
+			"school": "Enchantment",
+			"castingTime": "1 action",
+			"range": "60 feet",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},
+	"Enthrall" : {
+		"en": {
+			"name": "Enthrall",
+			"level": "1",
+			"text": "Grasping w eeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain.<br> A creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.<br>When the spell ends, the conjured plants wilt away.",
+			"school": "Conjuration",
+			"castingTime": "1 action",
+			"range": "90 feet",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},
+	"Lesser Restoration" : {
+		"en": {
+			"name": "Lesser Restoration",
+			"level": "1",
+			"text": "You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned.",
+			"school": "Conjuration",
+			"castingTime": "1 action",
+			"range": "Touch",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Instantaneous",
+			"source": "PHB"
+		  }
+	},
+	"Bestow Curse" : {
+		"en": {
+			"name": "Bestow Curse",
+			"level": "3",
+			"text": "You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:<br> • Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.<br> • While cursed, the target has disadvantage on attack rolls against you.<br> • While cursed, the target must make a W isdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.<br> • While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.<br> A remove curse spell ends this effect. At the DM’s option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse’s effect.<br> At Higher Levels. If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn’t require concentration.",
+			"school": "Necromancy",
+			"castingTime": "1 action",
+			"range": "Touch",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},
+	"Compulsion" : {
+		"en": {
+			"name": "Compulsion",
+			"level": "4",
+			"text": "Creatures o f your choice that you can see within range and that can hear you must make a W isdom saving throw. A target automatically succeeds on this saving throw if it can’t be charmed. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each o f your turns to designate a direction that is horizontal to you. Each affected target must u se as much o f its movement as possible to move in that direction on its next turn. It can take its action before it moves. After moving in this way, it can make another Wisdom saving to try to end the effect. <br> A target isn’t compelled to move into an obviously deadly hazard, such as a fire or pit, but it w ill provoke opportunity attacks to move in the designated direction.",
+			"school": "Enchantment",
+			"castingTime": "1 action",
+			"range": "30 feet",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},
+	"Freedom of Movement" : {
+		"en": {
+			"name": "Freedom of Movement",
+			"level": "4",
+			"text": "You touch a willing creature. For the duration, the target’s movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target’s speed nor cause the target to be paralyzed or restrained. <br> The target can also spend 5 feet o f movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target's movement or attacks.",
+			"school": "Abjuration",
+			"castingTime": "1 action",
+			"range": "Touch",
+			"materials": "a leather strap, bound around the arm or a similar appendage",
+			"components": "V, S, M",
+			"duration": "1 hour",
+			"source": "PHB"
+		  }
+	},
+	"Awaken" : {
+		"en": {
+			"name": "Awaken",
+			"level": "5",
+			"text": "After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence o f 3 or less. The target gains an Intelligence o f 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. Your DM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree.<br> The awakened beast or plant is charmed by you for 30 days or until you or your companions do anything harmful to it. When the charmed condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it w as charmed.",
+			"school": "Transmutation",
+			"castingTime": "8 hours",
+			"range": "Touch",
+			"materials": "an agate worth at least 1,000 gp, which the spell consumes",
+			"components": "V, S, M",
+			"duration": "Instantaneous",
+			"source": "PHB"
+		  }
+	},  
+	"Greater Restoration" : {
+		"en": {
+			"name": "Greater Restoration",
+			"level": "5",
+			"text": "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target’s exhaustion level by one, or end one o f the following effects on the target:<br> • One effect that charmed or petrified the target<br> • One curse, including the target’s attunement to a cursed magic item<br> • Any reduction to one o f the target’s ability scores<br> • One effect reducing the target’s hit point maximum",
+			"school": "Abjuration",
+			"castingTime": "1 action",
+			"range": "Touch",
+			"materials": "diamond dust worth at least 100 gp, which the spell consumes",
+			"components": "V, S, M",
+			"duration": "Instantaneous",
+			"source": "PHB"
+		  }
+	},  
+	"Find the Path" : {
+		"en": {
+			"name": "Find the Path",
+			"level": "6",
+			"text": "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane o f existence. If you name a destination on another plane o f existence, a destination that moves (such as a mobile fortress), or a destination that isn’t specific (such as “a green dragon’s lair”), the spell fails.<br> For the duration, as long as you are on the same plane o f existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.",
+			"school": "Divination",
+			"castingTime": "1 action",
+			"range": "Self",
+			"materials": "a set of divinatory tools — such as bones, ivory sticks, cards, teeth, or carved runes — worth 100 gp and an object from the location you wish to find",
+			"components": "V, S, M",
+			"duration": "Concentration, up to 1 day",
+			"source": "PHB"
+		  }
+	},  
+	"Glibness" : {
+		"en": {
+			"name": "Glibness",
+			"level": "8",
+			"text": "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful.",
+			"school": "Transmutation",
+			"castingTime": "1 action",
+			"range": "Self",
+			"materials": "",
+			"components": "V",
+			"duration": "1 hour",
+			"source": "PHB"
+		  }
+	},  
+	"Thaumaturgy" : {
+		"en": {
+			"name": "Thaumaturgy",
+			"level": "0",
+			"text": "You manifest a minor wonder, a sign o f supernatural power, within range. You create one o f the following magical effects within range:<br> • Your voice booms up to three times as loud as normal for 1 minute.<br> • You cause flames to flicker, brighten, dim, or change color for 1 minute.<br> • You cause harmless tremors in the ground for 1 minute.<br> • You create an instantaneous sound that originates from a point o f your choice within range, such as a rumble o f thunder, the cry o f a raven, or ominous whispers.<br> • You instantaneously cause an unlocked door or window to fly open or slam shut.<br> • You alter the appearance o f your eyes for 1 minute. <br> If you cast this spell multiple times, you can have up to three o f its 1-minute effects active at a time, and you can dismiss such an effect as an action.",
+			"school": "Transmutation",
+			"castingTime": "1 action",
+			"range": "30 feet",
+			"materials": "",
+			"components": "V",
+			"duration": "Up to 1 minute",
+			"source": "PHB"
+		  }
+	},  
+	"Guidance" : {
+		"en": {
+			"name": "Guidance",
+			"level": "0",
+			"text": "You touch one w illing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check o f its choice. It can roll the die before or after making the ability check. The spell then ends.",
+			"school": "Divination",
+			"castingTime": "1 action",
+			"range": "30 feet",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},  
+	"Resistance" : {
+		"en": {
+			"name": "Resistance",
+			"level": "0",
+			"text": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw o f its choice. It can roll the die before or after m aking the saving throw. The spell then ends.",
+			"school": "Abjuration",
+			"castingTime": "1 action",
+			"range": "30 feet",
+			"materials": "a miniature cloak",
+			"components": "V, S, M",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},  
+	"Detect Evil and Good" : {
+		"en": {
+			"name": "Detect Evil and Good",
+			"level": "1",
+			"text": "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet o f you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet o f you that has been magically consecrated or desecrated.<br>The spell can penetrate most barriers, but it is blocked by 1 foot o f stone, 1 inch o f common metal, a thin sheet o f lead, or 3 feet o f wood or dirt.",
+			"school": "Divination",
+			"castingTime": "1 action",
+			"range": "Self",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Concentration, up to 10 minutes",
+			"source": "PHB"
+		  }
+	},  
+	"Aid" : {
+		"en": {
+			"name": "Aid",
+			"level": "2",
+			"text": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration.<br> At Higher Levels. When you cast this spell using a spell slot o f 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd.",
+			"school": "Divination",
+			"castingTime": "1 action",
+			"range": "30 feet",
+			"materials": "a tiny strip o f white cloth",
+			"components": "V, S, M",
+			"duration": "8 hours",
+			"source": "PHB"
+		  }
+	},  
+	"Protection from Poison" : {
+		"en": {
+			"name": "Protection from Poison",
+			"level": "2",
+			"text": "You touch a creature. If it is poisoned, you neutralize the poison. If more than one poison afflicts the target, you neutralize one poison that you know is present, or you neutralize one at random.<br> For the duration, the target has advantage on saving throws against being poisoned, and it has resistance to poison damage.",
+			"school": "Abjuration",
+			"castingTime": "1 action",
+			"range": "Touch",
+			"materials": "",
+			"components": "V, S",
+			"duration": "1 hour",
+			"source": "PHB"
+		  }
+	},  
+	"Warding Bond" : {
+		"en": {
+			"name": "Warding Bond",
+			"level": "2",
+			"text": "This spell wards a willing creature you touch and creates a mystic connection between you and the target until the spell ends. While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has resistance to all damage. Also, each time it takes damage, you take the same amount o f damage.<br>The spell ends if you drop to 0 hit points or if you and the target become separated by more than 60 feet. It also ends if the spell is cast again on either o f the connected creatures. You can also dismiss the spell as an action.",
+			"school": "Abjuration",
+			"castingTime": "1 action",
+			"range": "Touch",
+			"materials": "a pair o f platinum rings worth at least 50 gp each, which you and the target must wear for the duration",
+			"components": "V, S, M",
+			"duration": "1 hour",
+			"source": "PHB"
+		  }
+	},  
+	"Animate Dead" : {
+		"en": {
+			"name": "Animate Dead",
+			"level": "3",
+			"text": "This spell creates an undead servant. Choose a pile o f bones or a corpse o f a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry o f life, raising it as an undead creature. The target becomes a skeleton if you chose bones or a zombie if you chose a corpse (the DM has the creature’s game statistics).<br> On each o f your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet o f you (if you control multiple creatures, you can command any or all o f them at the same time, issuing the same command to each one). You decide what action the creature will take and where it w ill move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.<br> The creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control o f the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use o f the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one. <br> At Higher Levels. When you cast this spell using a spell slot o f 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each o f the creatures must come from a different corpse or pile o f bones.",
+			"school": "Necromancy",
+			"castingTime": "1 minute",
+			"range": "10 feet",
+			"materials": "a drop of blood, a piece o f flesh, and a pinch of bone dust",
+			"components": "V, S, M",
+			"duration": "Instantaneous",
+			"source": "PHB"
+		  }
+	},  
+	"Beacon of Hope" : {
+		"en": {
+			"name": "Beacon of Hope",
+			"level": "3",
+			"text": "This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on W isdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.",
+			"school": "Abjuration",
+			"castingTime": "1 action",
+			"range": "30 feet",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},  
+	"Death Ward" : {
+		"en": {
+			"name": "Death Ward",
+			"level": "4",
+			"text": "You touch a creature and grant it a measure of protection from death. <br> The first time the target w ould drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends. <br>If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.",
+			"school": "Abjuration",
+			"castingTime": "1 action",
+			"range": "Touch",
+			"materials": "",
+			"components": "V, S",
+			"duration": "8 hours",
+			"source": "PHB"
+		  }
+	},  
+	"Dispel Evil and Good" : {
+		"en": {
+			"name": "Dispel Evil and Good",
+			"level": "5",
+			"text": "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from beyond the Material Plane. For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you. <br> You can end the spell early by using either of the following special functions. <br> Break Enchantment. As your action, you touch a creature you can reach that is charmed, frightened, or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer charmed, frightened, or possessed by such creatures. <br> Dismissal. As your action, make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, you attempt to drive the creature back to its home plane. The creature must succeed on a Charisma saving throw or be sent back to its home plane (if it isn't there already). If they aren’t on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild.",
+			"school": "Abjuration",
+			"castingTime": "1 action",
+			"range": "Self",
+			"materials": "holy water or powdered silver and iron",
+			"components": "V, S, M",
+			"duration": "Concentration, up to 1 minute",
+			"source": "PHB"
+		  }
+	},  
+	"Hallow" : {
+		"en": {
+			"name": "Hallow",
+			"level": "5",
+			"text": "You touch a point and infuse an area around it with holy (or unholy) power. The area can have a radius up to 60 feet, and the spell fails if the radius includes an area already under the effect a hallow spell. The affected area is subject to the following effects. <br> First, celestials, elementals, fey, fiends, and undead can’t enter the area, nor can such creatures charm, frighten, or p os sess creatures within it. Any creature charmed, frightened, or pos sessed by such a creature is no longer charmed, frightened, or possessed upon entering the area. You can exclude one or more of those types o f creatures from this effect. <br> Second, you can bind an extra effect to the area. Choose the effect from the following list, or choose an effect offered by the DM. Some o f these effects apply to creatures in the area; you can designate whether the effect applies to all creatures, creatures that follow a specific deity or leader, or creatures o f a specific sort, such as ores or trolls. When a creature that would be affected enters the spell’s area for the first time on a turn or starts its turn there, it can make a Charisma saving throw. On a success, the creature ignores the extra effect until it leaves the area. <br> Courage. Affected creatures can’t be frightened while in the area. <br> Darkness. Darkness fills the area. Normal light, as well as magical light created by spells o f a lower level than the slot you used to cast this spell, can’t illuminate the area. <br> Daylight. Bright light fills the area. Magical darkness created by spells o f a lower level than the slot you used to cast this spell can’t extinguish the light. <br> Energy Protection. Affected creatures in the area have resistance to one damage type o f your choice, except for bludgeoning, piercing, or slashing. <br> Energy Vulnerability. Affected creatures in the area have vulnerability to one damage type of your choice, except for bludgeoning, piercing, or slashing. Everlasting Rest. Dead bodies interred in the area can’t be turned into undead. <br> Extradimensional Interference. Affected creatures can’t move or travel using teleportation or by extradimensional or interplanar means. <br> Fear. Affected creatures are frightened while in the area. <br> Silence. No sound can emanate from within the area, and no sound can reach into it. <br> Tongues. Affected creatures can communicate with any other creature in the area, even if they don’t share a common language.",
+			"school": "Evocation",
+			"castingTime": "24 hours",
+			"range": "Touch",
+			"materials": "herbs, oils, and incense worth at least 1,000 gp, which the spell consumes",
+			"components": "V, S, M",
+			"duration": "Until dispelled",
+			"source": "PHB"
+		  }
+	},  
+	"Insect Plague" : {
+		"en": {
+			"name": "Insect Plague",
+			"level": "5",
+			"text": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere’s area is difficult terrain. <br> When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4 d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell’s area for the first time on a turn or ends its turn there. <br>  At Higher Levels. When you cast this spell using a spell slot o f 6th level or higher, the damage increases by 1d10 for each slot level above 5th.",
+			"school": "Conjuration",
+			"castingTime": "1 action",
+			"range": "300 feet",
+			"materials": "a few grains o f sugar, some kernels o f grain, and a smear o f fat",
+			"components": "V, S, M",
+			"duration": "Concentration, up to 10 minutes",
+			"source": "PHB"
+		  }
+	},  
+	"Heal" : {
+		"en": {
+			"name": "Heal",
+			"level": "6",
+			"text": "Choose a creature that you can see within range. A surge o f positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead. <br> At Higher Levels. When you cast this spell using a spell slot o f 7th level or higher, the amount o f healing increases by 10 for each slot level above 6th.",
+			"school": "Evocation",
+			"castingTime": "1 action",
+			"range": "60 feet",
+			"materials": "",
+			"components": "V, S",
+			"duration": "Instantaneous",
+			"source": "PHB"
+		  }
+	},  
+	"Heroes' Feast" : {
+		"en": {
+			"name": "Heroes' Feast",
+			"level": "6",
+			"text": "You bring forth a great feast, including magnificent food and drink. The feast takes 1 hour to consume and disappears at the end o f that time, and the beneficial effects don’t set in until this hour is over. Up to twelve other creatures can partake o f the feast. <br> A creature that partakes o f the feast gains several benefits. The creature is cured o f all diseases and poison, becomes immune to poison and being frightened, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 2d10, and it gains the same number o f hit points. These benefits last for 24 hours.",
+			"school": "Conjuration",
+			"castingTime": "10 minutes",
+			"range": "30 feet", 
+			"materials": "gem-encrusted bowl worth at least 1,000 gp, which the spell consumes",
+			"components": "V, S, M",
+			"duration": "Instantaneous",
+			"source": "PHB"
+		  }
+	}
+  
+}
