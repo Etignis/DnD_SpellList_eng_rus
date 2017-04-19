@@ -7258,7 +7258,7 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Pass Without Trace",
+      "name": "Pass without Trace",
       "level": "2",
       "text": "A veil of shadows and silence radiates from you, masking you and your companions from detection. For the duration, each creature you choose within 30 feet of you (including you) has a +10 bonus to Dexterity (Stealth) checks and can’t be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage.",
       "school": "Abjuration",
@@ -8248,6 +8248,18 @@ var allSpells = [
       "source": "PHB"
     }
   },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   {
     "en": {
       "name": "Bane",
@@ -8623,6 +8635,357 @@ var allSpells = [
       "materials": "gem-encrusted bowl worth at least 1,000 gp, which the spell consumes",
       "components": "V, S, M",
       "duration": "Instantaneous",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Barkskin",
+      "level": "2",
+      "text": "You touch a willing creature. Until the spellends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "Touch",
+      "materials": "a handful of oak bark",
+      "components": "V, S, M",
+      "duration": "Concentration, up to 1 hour",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Spike Growth",
+      "level": "2",
+      "text": "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels. The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is case must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "150 feet",
+      "materials": "seven sharp thorns or seven small twigs, each sharpened to a point",
+      "components": "V, S, M",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Spike Growth",
+      "level": "2",
+      "text": "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels. The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is case must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "150 feet",
+      "materials": "seven sharp thorns or seven small twigs, each sharpened to a point",
+      "components": "V, S, M",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Spike Growth",
+      "level": "2",
+      "text": "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels. The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is case must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "150 feet",
+      "materials": "seven sharp thorns or seven small twigs, each sharpened to a point",
+      "components": "V, S, M",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Call Lightning",
+      "level": "3",
+      "text": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud). When you cast the spell, choose a point you can see within range. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one. If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10. At Higher Levels. When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd.",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "120 feet",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Call Lightning",
+      "level": "3",
+      "text": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud). When you cast the spell, choose a point you can see within range. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one. If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10. At Higher Levels. When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd.",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "120 feet",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Giant Insect",
+      "level": "4",
+      "text": "You transform up to ten centipedes, three spiders, five wasps, or one scorpion within range into giant versions of their natural forms for the duration. A centipede becomes a giant centipede, a spider becaomes a giant spider, a wasp becomes a giant wasp, and a scorpion becomes a giant scorpion. Each creature obeys your verbal commands, and in combat, they act on your turn each round. The DM has the statistics for these creatures and resolves their actions and movement. A creature remains in its giant size for the duration, until it drops to 0 hit points, or until you use an action to dismiss the effect on it. The DM might allow you to choose different targets. For example, if you transform a bee, its giant version might have the same statistics as a giant wasp.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Antilife Shell",
+      "level": "5",
+      "text": "A shimmering barrier extends out from you in a 10-foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs. The barrier lasts for the duration. The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier. If you move so that an affect creature is forced to pass through the barrier, the spell ends.",
+      "school": "Abjuration",
+      "castingTime": "1 action",
+      "range": "Self (10-foot radius)",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 1 hour",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Reincarnate",
+      "level": "5",
+      "text": "You touch a dead humanoid or a piece of a dead humanoid. Provided that the creature has been dead no longer than 10 days, the spell forms a new adult body for it and then calls the soul to enter that body. If the target's soul isn't free or willing to do so, the spell fails. The magic fashions a new body for the creature to inhabit, which likely causes the creature's race to change. The DM rolls a d 100 and consults the following table to determine what form the creature takes when restored to life, or the DM chooses a form. d100 Race 01-04 Dragonborn 05-13 Dwarf, hill 14-21 Dwarf, mountain 22-25 Elf, dark 26-34 Elf, high 35-42 Elf, wood 43-46 Gnome, forest 47-52 Gnome, rock 53-56  Half-elf 57-60 Half-orc 61-68 Halfling, lightfoot 69-76 Halfling, stout 77-96 Human 97-00 Tiefling The reincarnated creature recalls its former life and experiences. It retains the capabilities it had in its original form, except it exchanges its original race for the new one and changes its racial traits accordingly.",
+      "school": "Transmutation",
+      "castingTime": "1 hour",
+      "range": "Touch",
+      "materials": "rare oils and unguents worth at least 1,000 gp, which the spell consumes",
+      "components": "V, S, M",
+      "duration": "Instantaneous",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Conjure Fey",
+      "level": "6",
+      "text": "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends. The fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions. If your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can't be dismissed by you, and it disappears 1 hour after you summoned it. The DM has the fey creature's statistics. At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th.",
+      "school": "Conjuration",
+      "castingTime": "1 minute",
+      "range": "90 feet",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 1 hour",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Wind Walk",
+      "level": "6",
+      "text": "You and up to ten willing creatures you can see within range assume a gaseous form for the duration, appearing as wisps of cloud. While in this cloud form, a creature has a flying speed of 300 feet and has resistance to damage from nonmagical weapons. The only actions a creature can take in this form are the Dash action or to revert to its normal form. Reverting takes 1 minute, during which time a creature is incapacitated and can't move. Until the spell ends, a creature can revert to cloud form, which also requires the 1-minute transformation. If a creature is in cloud form and flying when the effect ends, the creature descends 60 feet per round for 1 minute until it lands, which it does safely. If it can't land after 1 minute, the creature falls the remaining distance.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "materials": "fire and holy water",
+      "components": "V, S, M",
+      "duration": "8 hours",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Animal Shapes",
+      "level": "8",
+      "text": "Your magic turns others into beasts. Choose any number of willing creatures that you can see within range. You transform each target into the form of a large or smaller beast with a challenge rating of 4 or lower. On subsequent turns, you can use your actions to transform affected creatures into new forms.   The transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies. You can choose a different form for each target. A target's game statistics are replaced by the statistics of the chosen beast, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores. THe target assumes the hit points of its new form, and when it reverts to its normal form, it returns to the number of hit point it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconcious. The creature is limited in th eactions it can perform by the nature of its new form, and it can't speak or cast spells.   The target's gear melds into the new form. The target can't activate, wield, or otherwise benefit from any of its equipment.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 24 hours",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Tsunami",
+      "level": "8",
+      "text": "A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration. When the wall appears, each creature within its area must make a Strength saving throw. On a failed save, a creature takes 6d10 bludgeoning damage, or half as much damage on a successful save. At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a Strength saving throw or take 5d10 bludgeoning damage. A creature can take this damageonly once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends. A creature caught in the wall can move by sqimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground.",
+      "school": "Conjuration",
+      "castingTime": "1 minute",
+      "range": "Sight",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 6 rounds",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Storm of Vengeance",
+      "level": "9",
+      "text": "A churning storm cloud forms, centered on a point you can see and spreading to a radius o f 360 feet. Lightning flashes in the area, thunder booms, and strong winds roar. Each creature under the cloud (no more than 5,000 feet beneath the cloud) when it appears must make a Constitution saving throw. On a failed save, a creature takes 2d6 thunder damage and becomes deafened for 5 minutes.<br> Each round you maintain concentration on this spell, the storm produces additional effects on your turn.<br> Round 2. Acidic rain falls from the cloud. Each creature and object under the cloud takes 1d6 acid damage.<br> Round 3. You call six bolts o f lightning from the cloud to strike six creatures or objects o f your choice beneath the cloud. A given creature or object can’t be struck by m ore than one bolt. A struck creature must make a Dexterity saving throw. The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one.<br> Round 4. Hailstones rain down from the cloud. Each creature under the cloud takes 2d6 bludgeoning damage.<br> Round 5-10. Gusts and freezing rain assail the area under the cloud. The area becomes difficult terrain and is heavily obscured. Each creature there takes 1d6 cold damage. Ranged w eapon attacks in the area are impossible. The w ind and rain count as a severe distraction for the purposes o f maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical.",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "Sight",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 6 rounds",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Compelled Duel",
+      "level": "1",
+      "text": "You attempt to compel a creature into a duel. One creature that you can see within range must make a Wisdom saving throw. On a failed save, the creature is drawn to you, compelled by your divine demand. For the duration, it has disadvantage on attack rolls against creatures other than you, and must make a Wisdom saving throw each time it attempts to move to a space that is more than 30 feet away from you,  if it succeeds on this saving throw, this spell doesn't restrict the target's movement for that turn. The spell ends if you attack any other creature, if you cast a spell that targets a hostile creature other than the target, if a creature friendly to you damages the target or casts a harmful spell on it, or if you end your turn more than 30 feet away from the target.",
+      "school": "Enchantment",
+      "castingTime": "1 bonus action",
+      "range": "30 feet",
+      "materials": "",
+      "components": "V",
+      "duration": "Concentration, up to 1 minute",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Divine Favor",
+      "level": "1",
+      "text": "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal and extra 1d4 radiant damage on a hit.",
+      "school": "Evocation",
+      "castingTime": "1 bonus action",
+      "range": "Self",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 1 minute",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Searing Smite",
+      "level": "1",
+      "text": "The next time you hit a creature with a melee weapon attack during the spell's duration, your weapon flares with white-hot intensitity, and the attack deals an extra 1d6 fire damage to the target and causes the target to ignite in flames. At the start of each of its turns until the spell ends, the target must make a Constitution saving throw. On a failed save, it takes 1d6 fire damage. On a successful save, the spells ends. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the initial extra damage dealt by the attack increases by 1d6 for each slot level above 1st.",
+      "school": "Evocation",
+      "castingTime": "1 bonus action",
+      "range": "Self",
+      "materials": "",
+      "components": "V",
+      "duration": "Concentration, up to 1 minute",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Thunderous Smite",
+      "level": "1",
+      "text": "The first time you hit with a melee weapon attack during this spell's duration, your weapon rings with thunder that is audible within 300 feet of you, and the attack deals an extra 2d6 thunder damage to the target. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and knocked prone.",
+      "school": "Evocation",
+      "castingTime": "1 bonus action",
+      "range": "Self",
+      "materials": "",
+      "components": "V",
+      "duration": "Concentration, up to 1 minute",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Destructive Wave",
+      "level": "5",
+      "text": "You strike the ground, creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet of you must succeed on a Constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone.",
+      "school": "Evocation",
+      "castingTime": "1 action",
+      "range": "Self (30-foot radius)",
+      "materials": "",
+      "components": "V",
+      "duration": "Instantaneous",
+      "source": "PHB"
+	}
+  },
+   {
+    "en": {
+      "name": "Ensnaring Strike",
+      "level": "1",
+      "text": "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away. While restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch the creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed. At Higher Levels. If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
+      "school": "Conjuration",
+      "castingTime": "1 bonus action",
+      "range": "Self",
+      "materials": "",
+      "components": "V",
+      "duration": "Concentration, up to 1 minute",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Cordon of Arrows",
+      "level": "2",
+      "text": "You plant four pieces of nonmagical ammunition - arrows or crossbow bolts - in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 1d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains. When you cast this spell, you can designate any creatures you choose, and the spell ignores them. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the amount of ammunition that can be affected increases by two for each slot level above 2nd",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "5 feet",
+      "materials": "four or more arrows or bolts",
+      "components": "V, S, M",
+      "duration": "8 hours",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Conjure Barrage",
+      "level": "3",
+      "text": "You throw a nonmagical weapon or fire a piece of nonmagical ammunition into the air to create a cone of identical weapons that shoot forward and then disappear. Each creature in a 60-foot cone must succeed on a Dexterity saving throw. A creature takes 3d8 damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the weapon or ammunition used as a component.",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "Self (60-foot cone)",
+      "materials": "one piece of ammunition or a thrown weapon",
+      "components": "V, S, M",
+      "duration": "Instantaneous",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Alter Self",
+      "level": "2",
+      "text": "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one. Aquatic Adaptation. You adapt your body to an aquatic environment, sprouting gills, and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed. Change Appearance. You transform your appearnce. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also don't appear as a creature of a different size than you, and your basic shape stays the same,  if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearnce in this way again. Natural Weapons. You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with you unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the attack and damage rolls you make using it.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "Self",
+      "materials": "",
+      "components": "V, S",
+      "duration": "Concentration, up to 1 hour",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Armor of Agathys",
+      "level": "1",
+      "text": "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage. <br> At Higher Levels. When you cast this spell using a spell slot o f 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot level above 1st.",
+      "school": "Abjuration",
+      "castingTime": "1 action",
+      "range": "Self",
+      "materials": "a cup o f water",
+      "components": "V, S, M",
+      "duration": "Concentration, up to 1 hour",
+      "source": "PHB"
+    }
+  },
+  {
+    "en": {
+      "name": "Drawmij's Instant Summons",
+      "level": "6",
+	  "ritual": "ritual",
+      "text": "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name o f the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.<br> At any time thereafter, you can use your action to speak the item’s name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.<br> If another creature is holding or carrying the item, crushing the sapphire doesn’t transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment. <br> Dispel magic or a similar effect successfully applied to the sapphire ends this spell’s effect.",
+      "school": "Conjuration",
+      "castingTime": "1 minute",
+      "range": "Touch",
+      "materials": "a sapphire w orth 1,000 gp",
+      "components": "V, S, M",
+      "duration": "Until dispelled",
       "source": "PHB"
     }
   }

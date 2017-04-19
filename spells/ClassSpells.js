@@ -873,7 +873,7 @@ var classSpells = {
 		
 		  "Banishing Smite",
 		  "Circle of Power",
-		  "Destructive Smite",
+		  "Destructive Wave",
 		  "Dispel Evil and Good",
 		  "Geas",
 		  "Raise Dead"
@@ -1520,7 +1520,7 @@ var classSpells = {
 		
 		  "Animate Objects",
 		  "Bigby's Hand",
-		  "CloudkilI",
+		  "Cloudkill",
 		  "Cone of Cold",
 		  "Conjure Elemental",
 		  "Contact Other Plane",
@@ -1549,8 +1549,7 @@ var classSpells = {
 		  "Contingency",
 		  "Create Undead",
 		  "Disintegrate",
-		  "Drawmij's Instant",
-		  "Summons",
+		  "Drawmij's Instant Summons",
 		  "Eyebite",
 		  "Flesh to Stone",
 		  "Globe of Invulnerability",
@@ -1596,7 +1595,6 @@ var classSpells = {
 		  "Power Word Stun",
 		  "Sunburst",
 		  "Telepathy",
-		  "Trap the Soul",
 		
 		
 		  "Astral Projection",

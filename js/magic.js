@@ -1,4 +1,8 @@
 window.onload = function(){
+	var oConfig = {}; // global app config data
+	var oTimer; // for TimeOut (filtering)
+	var nTimerSeconds = 200;
+	
 	function createSelect(src, params) {
 		var options = "";
 		var selected_key = params.selected_key;
@@ -37,13 +41,21 @@ window.onload = function(){
 		var id =  param.id? "id='"+param.id+"'": "";
 		var title = param.title? param.title: "Выберите";
 		var checked = param.checkAll? "checked": "";
-		var arrow="<div class='combo_box_arrow'><span class='arr_down' style='display:none'>"+ARR_DOWN+"</span><span class='arr_up'>"+ARR_UP+"</span></div>"; 
+		var isOpen = (param.isOpen!=undefined) ? param.isOpen : true;
+		var arrow, display = "", content_open=true;
+		if(isOpen && isOpen != "false"){
+			arrow="<div class='combo_box_arrow'><span class='arr_down' style='display:none'>"+ARR_DOWN+"</span><span class='arr_up'>"+ARR_UP+"</span></div>";
+		} else {
+			arrow="<div class='combo_box_arrow'><span class='arr_down'>"+ARR_DOWN+"</span><span class='arr_up' style='display:none'>"+ARR_UP+"</span></div>";
+			display = " style='display:none' ";
+			content_open = false;
+		}			
 		for (var i =0; i < src.length; i++) {
 			var type = src[i];
 			ret+="<input "+checked+" type='checkbox' value='"+type.en+"' id='ch_"+type.en+"'><label for='ch_"+type.en+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
 			
 		}
-		ret = "<div "+id+" class='combo_box' data-text='"+title+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content'>"+ret+"</div>"+arrow+"</div>";
+		ret = "<div "+id+" class='combo_box' data-text='"+title+"' data-content-open='"+content_open+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content' "+display+" >"+ret+"</div>"+arrow+"</div>";
 		return ret;
 	}
 	
@@ -63,6 +75,21 @@ window.onload = function(){
 		if($("#dbg")){
 			$("#dbg").fadeOut();		
 		}		
+	}
+	
+	function setConfig(prop, val) {
+		if(prop && val != undefined) {
+			oConfig[prop] = val;
+		}
+		localStorage.setItem("config", JSON.stringify(oConfig));
+	}
+	function getConfig(prop) {
+		/**/
+		if(prop!=undefined) {
+			return localStorage.getItem("config")? JSON.parse(localStorage.getItem("config"))[prop] : null;
+		}
+		return JSON.parse(localStorage.getItem("config"));
+		/**/
 	}
 	
 	function createCard(spell, lang, sClass) {
@@ -147,17 +174,23 @@ window.onload = function(){
 		$(".spellContainer").empty();
 		var spells = "";
 		var filteredSpells = [];
-		
+		//console.log("#");
+		//console.log("# Start filtering");
 		
 		//class
 		if(sClass) {
 			if(classSpells[sClass]) {
 				classSpells[sClass].spells.forEach(function(spellName){
+					var fFind = false;
 					for (var i = 0; i<allSpells.length; i++){	
 						if(allSpells[i].en.name == spellName) {
 							filteredSpells.push(allSpells[i]);
+							fFind = true;
 							break;
 						}
+					}
+					if(!fFind){
+						//console.log(spellName);
 					}
 				})
 			}	else {
@@ -208,17 +241,15 @@ window.onload = function(){
 			return 0
 		});
 		
-		console.log("Spell not found: ");
+
 		for (var i in filteredSpells) {
 			if(filteredSpells[i]) {
 				var tmp = createCard(filteredSpells[i], sLang)
 				if (tmp)
 					spells += tmp;
-			} else {
-				console.log(i);
-			}
+			} 
 		}
-		console.log("---");
+
 		$(".spellContainer").html(spells);
 		$("#before_spells").hide();
 		$("#info_text").hide();
@@ -233,6 +264,8 @@ window.onload = function(){
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
 		
+		setConfig("language", sLang);
+		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
 		showFiltered(sName, sClass, nLevelStart, nLevelEnd, aSchools, sLang);
 	}
 	
@@ -273,8 +306,10 @@ window.onload = function(){
 		var label = createLabel("Уровень с/по");
 		$(".p_side").append(label+str);	
 	}
-	function createSchoolCombobox() {		
-		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школа", checkAll: true});
+	function createSchoolCombobox(isOpen) {	
+		if(isOpen == undefined)
+			isOpen = true;
+		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школа", checkAll: true, isOpen: isOpen});
 		$(".p_side").append(s1);
 	}
 	function createNameFilter() {
@@ -282,7 +317,7 @@ window.onload = function(){
 		var label = createLabel("Название");
 		$(".p_side").append(label +ret);		
 	}
-	function createLangSelect() {
+	function createLangSelect(lang) {
 		var src = [
 			{
 				name: "en",
@@ -293,17 +328,21 @@ window.onload = function(){
 				title: "Русский"
 			}
 		];
-		var classSelect = createSelect(src, {id: "LangSelect", selected_key: "en", width: "100%"});
+		if(!lang)
+			lang = "ru";
+		var classSelect = createSelect(src, {id: "LangSelect", selected_key: lang, width: "100%"});
 		var label = createLabel("Язык");
 		$(".p_side").append(label+classSelect);	
 	}
 	
 	function createSidebar() {
+		var lang = getConfig("language");
+		var schoolOpen = getConfig("schoolOpen");
 		createNameFilter();
 		createClassSelect();
 		createLevelSelect();
-		createSchoolCombobox();
-		createLangSelect();
+		createSchoolCombobox(schoolOpen);
+		createLangSelect(lang);
 		
 		$(".p_side").fadeIn();	
 	}
@@ -342,12 +381,14 @@ window.onload = function(){
 			el.slideUp();
 			el.next(".combo_box_arrow").find(".arr_down").show();
 			el.next(".combo_box_arrow").find(".arr_up").hide();
+			el.parent().attr("data-content-open", false);
 		}
 		else
 		{
 			el.slideDown();
 			el.next(".combo_box_arrow").find(".arr_down").hide();
 			el.next(".combo_box_arrow").find(".arr_up").show();
+			el.parent().attr("data-content-open", true);
 		}
 	});// get item
 	function onSelectItemPress(src) {
@@ -498,8 +539,6 @@ window.onload = function(){
 	});
 	
 	// filters
-	var oTimer;
-	var nTimerSeconds = 200;
 	
 	// name select
 	$("body").on('focusout', "#NameInput", function(){
@@ -541,6 +580,9 @@ window.onload = function(){
 			filterSpells();
 		}, nTimerSeconds);		
 	});
+	$("body").on('click', "#SchoolCombobox .combo_box_title, #SchoolCombobox .combo_box_arrow", function(){
+		setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));	
+	});
 	
 	// lang select
 	$("body").on('focusout', "#LangSelect", function(){
@@ -554,6 +596,6 @@ window.onload = function(){
 	//createSpellsIndex();	
 	
 	$.when(createSidebar()).done(
-	//filterSpells()
+		filterSpells()
 	);
 }; 
