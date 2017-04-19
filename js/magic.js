@@ -91,7 +91,7 @@ window.onload = function(){
 		return JSON.parse(localStorage.getItem("config"));
 		/**/
 	}
-	
+		
 	function createCard(spell, lang, sClass) {
 		if (spell[lang] || (lang="en", spell[lang])) {
 			var o = spell[lang];
@@ -123,7 +123,9 @@ window.onload = function(){
 			var s_school = o.school;
 			var s_source = o.source;
 			
-			ret = '<div class="cardContainer" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '">'+
+			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;;
+			
+			ret = '<div class="cardContainer '+sClass+'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
 						'<h1>' + s_name + s_ritual + '</h1>'+
@@ -149,6 +151,7 @@ window.onload = function(){
 						'</div>'+
 						'<div class="materials">' + s_materials + '</div>'+
 						'<div class="text">' + s_text + '</div>	'+	
+						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
 						'<b class="school">' + s_level + ", " + s_school + '</b>'+
 					'</div>'+
 				'</div>'+
@@ -244,7 +247,7 @@ window.onload = function(){
 
 		for (var i in filteredSpells) {
 			if(filteredSpells[i]) {
-				var tmp = createCard(filteredSpells[i], sLang)
+				var tmp = createCard(filteredSpells[i], sLang, sClass)
 				if (tmp)
 					spells += tmp;
 			} 
@@ -266,7 +269,11 @@ window.onload = function(){
 		
 		setConfig("language", sLang);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
-		showFiltered(sName, sClass, nLevelStart, nLevelEnd, aSchools, sLang);
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			showFiltered(sName, sClass, nLevelStart, nLevelEnd, aSchools, sLang);
+		}, nTimerSeconds/2);		
+		
 	}
 	
 	function createLabel(text) {

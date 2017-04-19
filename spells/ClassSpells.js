@@ -152,6 +152,7 @@ var classSpells = {
 		en: "Cleric",
 		ru: "Жрец"
 	  },
+	  color: "",
 	  spells: [
 		
 		  "Guidance",

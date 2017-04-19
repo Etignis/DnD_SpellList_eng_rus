@@ -756,7 +756,7 @@ p {
   float: left;
 }
 .cardContainer .row {
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #e01a10;
   display: flex;
   flex-direction: row;
   align-content: stretch;
@@ -767,10 +767,10 @@ p {
   font-size: 65%;
 }
 .cardContainer .row .cell:first-of-type {
-  border-right: 1px solid red;
+  border-right: 1px solid #e01a10;
 }
 .cardContainer .row .cell:last-of-type {
-  border-left: 1px solid red;
+  border-left: 1px solid #e01a10;
 }
 .cardContainer .row .cell span,
 .cardContainer .row .cell b {
@@ -783,8 +783,8 @@ p {
 }
 .spellCard {
   height: 3.5in;
-  background: red;
-  border: 9px solid red;
+  background: #e01a10;
+  border: 9px solid #e01a10;
   border-bottom-width: 25px;
   position: relative;
   color: #666666;
@@ -808,11 +808,11 @@ p {
   padding: 0;
   text-align: center;
   text-transform: uppercase;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #e01a10;
 }
 .spellCard .materials {
   color: #fff;
-  background: red !important;
+  background: #e01a10 !important;
   font-size: 75%;
   padding: 0 2px;
   font-style: oblique;
@@ -837,12 +837,171 @@ p {
   scrollbar-face-color: #777;
   scrollbar-track-color: #ddd;
 }
+.spellCard .class {
+  position: absolute;
+  left: 1px;
+  bottom: -20px;
+  font-size: 70%;
+  color: #fff;
+}
 .spellCard .school {
   position: absolute;
   right: 1px;
   bottom: -20px;
   font-size: 70%;
   color: #fff;
+}
+.Bard .spellCard {
+  background-color: #e91e63;
+  border-color: #e91e63;
+}
+.Bard .spellCard h1 {
+  border-bottom-color: #e91e63;
+}
+.Bard .spellCard .materials {
+  background: #e91e63 !important;
+}
+.Bard .spellCard .row {
+  border-bottom-color: #e91e63;
+}
+.Bard .spellCard .row .cell:first-of-type {
+  border-right-color: #e91e63;
+}
+.Bard .spellCard .row .cell:last-of-type {
+  border-left-color: #e91e63;
+}
+.Cleric .spellCard {
+  background-color: #FDD835;
+  border-color: #FDD835;
+}
+.Cleric .spellCard h1 {
+  border-bottom-color: #FDD835;
+}
+.Cleric .spellCard .materials {
+  background: #FDD835 !important;
+}
+.Cleric .spellCard .row {
+  border-bottom-color: #FDD835;
+}
+.Cleric .spellCard .row .cell:first-of-type {
+  border-right-color: #FDD835;
+}
+.Cleric .spellCard .row .cell:last-of-type {
+  border-left-color: #FDD835;
+}
+.Druid .spellCard {
+  background-color: #795548;
+  border-color: #795548;
+}
+.Druid .spellCard h1 {
+  border-bottom-color: #795548;
+}
+.Druid .spellCard .materials {
+  background: #795548 !important;
+}
+.Druid .spellCard .row {
+  border-bottom-color: #795548;
+}
+.Druid .spellCard .row .cell:first-of-type {
+  border-right-color: #795548;
+}
+.Druid .spellCard .row .cell:last-of-type {
+  border-left-color: #795548;
+}
+.Paladin .spellCard {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+.Paladin .spellCard h1 {
+  border-bottom-color: #2196f3;
+}
+.Paladin .spellCard .materials {
+  background: #2196f3 !important;
+}
+.Paladin .spellCard .row {
+  border-bottom-color: #2196f3;
+}
+.Paladin .spellCard .row .cell:first-of-type {
+  border-right-color: #2196f3;
+}
+.Paladin .spellCard .row .cell:last-of-type {
+  border-left-color: #2196f3;
+}
+.Ranger .spellCard {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+.Ranger .spellCard h1 {
+  border-bottom-color: #4caf50;
+}
+.Ranger .spellCard .materials {
+  background: #4caf50 !important;
+}
+.Ranger .spellCard .row {
+  border-bottom-color: #4caf50;
+}
+.Ranger .spellCard .row .cell:first-of-type {
+  border-right-color: #4caf50;
+}
+.Ranger .spellCard .row .cell:last-of-type {
+  border-left-color: #4caf50;
+}
+.Sorcerer .spellCard {
+  background-color: #ff9800;
+  border-color: #ff9800;
+}
+.Sorcerer .spellCard h1 {
+  border-bottom-color: #ff9800;
+}
+.Sorcerer .spellCard .materials {
+  background: #ff9800 !important;
+}
+.Sorcerer .spellCard .row {
+  border-bottom-color: #ff9800;
+}
+.Sorcerer .spellCard .row .cell:first-of-type {
+  border-right-color: #ff9800;
+}
+.Sorcerer .spellCard .row .cell:last-of-type {
+  border-left-color: #ff9800;
+}
+.Warlock .spellCard {
+  background-color: #673ab7;
+  border-color: #673ab7;
+}
+.Warlock .spellCard h1 {
+  border-bottom-color: #673ab7;
+}
+.Warlock .spellCard .materials {
+  background: #673ab7 !important;
+}
+.Warlock .spellCard .row {
+  border-bottom-color: #673ab7;
+}
+.Warlock .spellCard .row .cell:first-of-type {
+  border-right-color: #673ab7;
+}
+.Warlock .spellCard .row .cell:last-of-type {
+  border-left-color: #673ab7;
+}
+.Wizard .spellCard {
+  background-color: #f44336;
+  border-color: #f44336;
+}
+.Wizard .spellCard h1 {
+  border-bottom-color: #f44336;
+}
+.Wizard .spellCard .materials {
+  background: #f44336 !important;
+}
+.Wizard .spellCard .row {
+  border-bottom-color: #f44336;
+}
+.Wizard .spellCard .row .cell:first-of-type {
+  border-right-color: #f44336;
+}
+.Wizard .spellCard .row .cell:last-of-type {
+  border-left-color: #f44336;
 }
 .p_side {
   background: rgba(0, 0, 0, 0.4);
