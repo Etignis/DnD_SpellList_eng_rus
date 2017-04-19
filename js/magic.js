@@ -49,7 +49,7 @@ $(window).load(function(){
 	
 	function createInput(params){
 		var id = params.id? "id='"+params.id+"'" : "";
-		return "<input "+id+" class='input' type='text'>"
+		return "<div "+id+" class='input'><input type='text'><span class='cross'></span></div>";
 	}
 	
 	function showDBG() {
@@ -65,28 +65,29 @@ $(window).load(function(){
 		}		
 	}
 	
-	function createCard(spell, lang) {
-		if (spell[lang]) {
+	function createCard(spell, lang, sClass) {
+		if (spell[lang] || (lang="en" && spell[lang])) {
 			var o = spell[lang];
 			var s_name = o.name;
-			var s_ritual = o.ritual? o.ritual : "";
+			var s_ritual = o.ritual? " ("+o.ritual+")" : "";
 			var s_castingTime = o.castingTime;
 			var s_range = o.range;
 			var s_components = o.components;
 			var s_duration = o.duration;
 			var s_materials = o.materials;
 			var s_text = o.text;
-			var s_level, st_castingTime, st_range, st_components, st_duration;
+			var s_level = o.level;
+			var st_castingTime, st_range, st_components, st_duration;
 			switch (lang){		
 				case "ru": 
-					s_level = "Трюк"; 
+					s_level = s_level>0? s_level + " круг" : "Трюк"; 
 					st_castingTime = "Время накладывания";
 					st_range = "Дистанция";
 					st_components = "Компоненты";
 					st_duration = "Длительность";
 					break;	
 				default: 
-					s_level = "Cantrip";
+					s_level = s_level>0? s_level + " lvl" : "Cantrip";
 					st_castingTime = "CASTING TIME";
 					st_range = "RANGE";
 					st_components = "COMPONENTS";
@@ -125,7 +126,6 @@ $(window).load(function(){
 					'</div>'+
 				'</div>'+
 			'</div>';
-			
 			return ret;
 		} else {
 			console.log("not found: ");
@@ -146,70 +146,74 @@ $(window).load(function(){
 	function showFiltered(sName, sClass, nLevelStart, nLevelEnd, aSchools, sLang) {
 		$(".spellContainer").empty();
 		var spells = "";
-		var filteredSpells = {};
+		var filteredSpells = [];
+		
+		
 		//class
 		if(sClass) {
-			// class & level
-			if(nLevelStart && nLevelEnd) {
-				// if class exist
-				if(classSpells[sClass]) {
-					for (var i = nLevelStart; i<=nLevelEnd; i++) {
-						classSpells[sClass].spells[i].forEach(function(item) {
-							filteredSpells[item] = (allSpells[item]);
-						});						
-					}
-				} else {
-					//all classes
-					for (var k in classSpells) {
-						for (var i = nLevelStart; i<=nLevelEnd; i++) {
-							classSpells[k].spells[i].forEach(function(item) {
-								filteredSpells[i] = (allSpells[item]);
-							});						
+			if(classSpells[sClass]) {
+				classSpells[sClass].spells.forEach(function(spellName){
+					for (var i = 0; i<allSpells.length; i++){	
+						if(allSpells[i].en.name == spellName) {
+							filteredSpells.push(allSpells[i]);
+							break;
 						}
 					}
-				}
-			} else {
-				// only class
-				if(classSpells[sClass]) {
-					for (var i in classSpells[sClass].spells) {
-						classSpells[sClass].spells[i].forEach(function(item) {
-							filteredSpells[i] = (allSpells[item]);
-						});						
-					}
-				}
-			}
+				})
+			}	else {
+				filteredSpells = allSpells;
+			} 
 		} else {
-			// only level			
-			if(nLevelStart && nLevelEnd) {
-				for (var k in classSpells) {
-					for (var i = nLevelStart; i<=nLevelEnd; i++) {
-						classSpells[k].spells[i].forEach(function(item) {
-							filteredSpells[i] = (allSpells[item]);
-						});						
-					}
-				}
-			}
-		}
-		
-		if(!(nLevelStart && nLevelEnd && sClass)) {
 			filteredSpells = allSpells;
 		}
 		
-		//school
-		/*/
-		filteredSpells.forEach(function(item, i) {
-			spells += createCard(item, sLang);
+		// level
+		/**/
+		if(nLevelStart && nLevelEnd) {
+			filteredSpells = filteredSpells.filter(function(spell){
+				return !(spell.en.level < nLevelStart || spell.en.level > nLevelEnd);
+			});
+		}
+		/**/
+		
+		
+		//school		
+		if(aSchools && aSchools.length>0 && aSchools.length<9) {
+			filteredSpells = filteredSpells.filter(function(spell){
+				for(var i = 0; i < aSchools.length; i++) {
+					if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
+						return true;
+					}
+				}
+				return false;
+			});
+		}
+			
+		// name
+		if (sName) {
+			sName = sName.toLowerCase().trim();
+			filteredSpells = filteredSpells.filter(function(spell){
+				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
+			});
+		}
+			
+		// sort
+		filteredSpells.sort(function(a, b) {
+			if(a[sLang] && b[sLang]) {
+				if (a[sLang].level+a[sLang].name.toLowerCase().trim() < b[sLang].level+b[sLang].name.toLowerCase().trim() )
+					return -1;
+				if (a[sLang].level+a[sLang].name.toLowerCase().trim() > b[sLang].level+b[sLang].name.toLowerCase().trim() )
+					return 1;
+			}
+			return 0
 		});
-		/**/
-		/*/
-		for (var i=0; i < filteredSpells.length; i++) {
-			spells += createCard(filteredSpells[i], sLang);
-		};
-		/**/
+		
 		console.log("Spell not found: ");
 		for (var i in filteredSpells) {
 			if(filteredSpells[i]) {
-				spells += createCard(filteredSpells[i], sLang);
+				var tmp = createCard(filteredSpells[i], sLang)
+				if (tmp)
+					spells += tmp;
 			} else {
 				console.log(i);
 			}
@@ -221,11 +225,11 @@ $(window).load(function(){
 	}
 	
 	function filterSpells(){
-		var sName = "";
+		var sName = $("#NameInput").val();
 		var sClass = $("#ClassSelect .label").attr("data-selected-key");
 		var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
 		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
-		var aSchools = $("#SchoolCombobox .label").attr("data-val");
+		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
 		
@@ -289,7 +293,7 @@ $(window).load(function(){
 				title: "Русский"
 			}
 		];
-		var classSelect = createSelect(src, {id: "LangSelect", selected_key: "ru", width: "100%"});
+		var classSelect = createSelect(src, {id: "LangSelect", selected_key: "en", width: "100%"});
 		var label = createLabel("Язык");
 		$(".p_side").append(label+classSelect);	
 	}

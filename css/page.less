@@ -97,15 +97,44 @@
 }
 
 .input{
-    .fr-concave;
-    cursor: text;
-    background: @white;
-    padding: .4em;
     display: block;
     width: 100%;
     margin: 0;
-    color: @d-gray;
-    font-seight: 400;
+    padding: 0;
+    position: relative;
+    input[type=text]{
+        .fr-concave;
+        cursor: text;
+        background: @white;
+        padding: .4em;
+        padding-right: 1.2em;
+        display: block;
+        width: 100%;
+        margin: 0;
+        color: @d-gray;
+        font-weight: 400;
+    }
+    .cross{
+        position: absolute;
+        top: .12em;
+        right: .2em;
+        color: @l-gray;
+        cursor: pointer;
+        margin: .1em;
+        transition: color .3s;
+        &:before{
+            content: "✖";
+        }
+        &:hover{
+            color: @color;
+            opacity: .9;
+        }
+        &:active{
+            color: @color - #222;
+            text-shadow: 0 0 3px 3px @d-gray;
+            opacity: 1;
+        }
+    }
     
     &:focus{
         box-shadow: 0 0 5px 0 @color;
