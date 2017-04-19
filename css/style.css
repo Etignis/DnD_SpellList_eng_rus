@@ -647,14 +647,14 @@ p {
 .filterLabel:after {
   content: ":";
 }
-.input {
+.customInput {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
   position: relative;
 }
-.input input[type=text] {
+.customInput input[type=text] {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -695,7 +695,7 @@ p {
   color: #222;
   font-weight: 400;
 }
-.input .cross {
+.customInput .cross {
   position: absolute;
   top: .12em;
   right: .2em;
@@ -704,19 +704,19 @@ p {
   margin: .1em;
   transition: color .3s;
 }
-.input .cross:before {
+.customInput .cross:before {
   content: "✖";
 }
-.input .cross:hover {
+.customInput .cross:hover {
   color: #487EC5;
   opacity: .9;
 }
-.input .cross:active {
+.customInput .cross:active {
   color: #265ca3;
   text-shadow: 0 0 3px 3px #222;
   opacity: 1;
 }
-.input:focus {
+.customInput:focus {
   box-shadow: 0 0 5px 0 #487EC5;
 }
 @media screen and (min-width: 65em) {

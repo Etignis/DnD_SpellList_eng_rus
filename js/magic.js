@@ -1,4 +1,4 @@
-$(window).load(function(){
+window.onload = function(){
 	function createSelect(src, params) {
 		var options = "";
 		var selected_key = params.selected_key;
@@ -49,7 +49,7 @@ $(window).load(function(){
 	
 	function createInput(params){
 		var id = params.id? "id='"+params.id+"'" : "";
-		return "<div "+id+" class='input'><input type='text'><span class='cross'></span></div>";
+		return "<div "+id+" class='customInput'><input type='text'><span class='cross'></span></div>";
 	}
 	
 	function showDBG() {
@@ -66,7 +66,7 @@ $(window).load(function(){
 	}
 	
 	function createCard(spell, lang, sClass) {
-		if (spell[lang] || (lang="en" && spell[lang])) {
+		if (spell[lang] || (lang="en", spell[lang])) {
 			var o = spell[lang];
 			var s_name = o.name;
 			var s_ritual = o.ritual? " ("+o.ritual+")" : "";
@@ -225,7 +225,7 @@ $(window).load(function(){
 	}
 	
 	function filterSpells(){
-		var sName = $("#NameInput").val();
+		var sName = $("#NameInput input").val();
 		var sClass = $("#ClassSelect .label").attr("data-selected-key");
 		var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
 		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
@@ -491,17 +491,69 @@ $(window).load(function(){
 		return false;
 	});
 	
-	// lang select
-	$("body").on('focusout', "#LangSelect", function(){
-		filterSpells();
+	// custom Input
+	$("body").on('click', ".customInput .cross", function(){
+		$(this).parent().find("input").val("");
+		$(this).parent().focusout();
+	});
+	
+	// filters
+	var oTimer;
+	var nTimerSeconds = 200;
+	
+	// name select
+	$("body").on('focusout', "#NameInput", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
+	});
+	$("body").on('keyup', "#NameInput input", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds*3);		
 	});
 	// class select
 	$("body").on('focusout', "#ClassSelect", function(){
-		filterSpells();
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
+	});
+	// level select
+	$("body").on('focusout', "#LevelStart", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
+	});
+	$("body").on('focusout', "#LevelEnd", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
+	});
+	// school combobox
+	$("body").on('click', "#SchoolCombobox label", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
+	});
+	
+	// lang select
+	$("body").on('focusout', "#LangSelect", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
 	});
 	
 	
-	//createSpellsIndex();
-	showFiltered(null, null, null, null, null, "ru");
-	createSidebar();
-}); 
+	//createSpellsIndex();	
+	
+	$.when(createSidebar()).done(
+	//filterSpells()
+	);
+}; 
