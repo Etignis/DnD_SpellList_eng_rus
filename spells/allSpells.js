@@ -2394,7 +2394,7 @@ var allSpells = [
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "120 feet",
-      "materials": "a glowing stick o f incense or a crystal vial filled with phosphorescent material",
+      "materials": "a glowing stick of incense or a crystal vial filled with phosphorescent material",
       "components": "S, M",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
@@ -3254,7 +3254,7 @@ var allSpells = [
     "en": {
       "name": "Otiluke's Resilient Sphere",
       "level": "4",
-      "text": "A sphere of shimmering force encloses a creature or object o f Large size or smaller within range. An unwilling creature must make a Dexterity saving throw. On a failed save, the creature is enclosed for the duration. Nothing not physical objects, energy, or other spell effects can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it. The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls and thus roll the sphere at up to half the creature's speed. Similarly, the globe can be picked up and moved by other creatures. A disintegrate spell targeting the globe destroys it without harming anything inside it.",
+      "text": "A sphere of shimmering force encloses a creature or object of Large size or smaller within range. An unwilling creature must make a Dexterity saving throw. On a failed save, the creature is enclosed for the duration. Nothing not physical objects, energy, or other spell effects can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it. The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls and thus roll the sphere at up to half the creature's speed. Similarly, the globe can be picked up and moved by other creatures. A disintegrate spell targeting the globe destroys it without harming anything inside it.",
       "school": "Evocation",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -3750,7 +3750,7 @@ var allSpells = [
     "en": {
       "name": "Modify Memory",
       "level": "5",
-      "text": "You attempt to reshape another creature's memories. One creature that you can see must make a Wisdom saving throw. If you are fighting the creature, it has advantage on the saving throw. On a failed save, the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none o f the target's m emories are modified. While this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory o f the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.  You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends. A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory o f how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner. A remove curse or greater restoration spell cast on the target restores the creature's true memory.  At Higher Levels. If you cast this spell using a spell slot o f 6th level or higher, you can alter the target's memories o f an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level).",
+      "text": "You attempt to reshape another creature's memories. One creature that you can see must make a Wisdom saving throw. If you are fighting the creature, it has advantage on the saving throw. On a failed save, the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's m emories are modified. While this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.  You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends. A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner. A remove curse or greater restoration spell cast on the target restores the creature's true memory.  At Higher Levels. If you cast this spell using a spell slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level).",
       "school": "Enchantment",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -4404,7 +4404,7 @@ var allSpells = [
     "en": {
       "name": "Otto's Irresistible Dance",
       "level": "6",
-      "text": "Choose one creature that you can see within range. The target begins a comic dance in place: shuffling, tapping its feet, and capering for the duration. Creatures that can't be charmed are immune to this spell. A dancing creature must use all its movement to dance without leaving its space and has disadvantage on Dexterity saving throws and attack rolls. While the target is affected by this spell, other creatures have advantage on attack rolls against it. As an action, a dancing creature makes a Wisdom saving throw to regain control o f itself. On a successful save, the spell ends.",
+      "text": "Choose one creature that you can see within range. The target begins a comic dance in place: shuffling, tapping its feet, and capering for the duration. Creatures that can't be charmed are immune to this spell. A dancing creature must use all its movement to dance without leaving its space and has disadvantage on Dexterity saving throws and attack rolls. While the target is affected by this spell, other creatures have advantage on attack rolls against it. As an action, a dancing creature makes a Wisdom saving throw to regain control of itself. On a successful save, the spell ends.",
       "school": "Enchantment",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -8272,13 +8272,24 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Порча",
+		"castingTime": "1 действие",
+		"range": "30 футов",
+		"components": "В, С, М",
+		"duration": "Концентрация, до 1 минуты",
+		"materials": "капля крови",
+		"text": "До трех существ на ваш выбор из тех, что вы можете видеть в пределах дальности заклинания, должны сделать спасбросок по Харизме. Пока дейстевует заклинание, каждый раз, когда существо, провалившее этот спасбросок, делает бросок атаки ли спасбросок, оно должно бросить d4 и вычесть результат из результата своего броска атаки или спасброска.   На более высоких кругах. Если вы произносите заклинание, используя ячейку 2 круга или выше, то можете использовать это заклинание на одно дополнительное существо за каждый круг выше первого.",
+		"school": "очарование",
+		"level": "1"
+	}
   },
   {
     "en": {
       "name": "Heroism",
       "level": "1",
-      "text": "A willing creature you touch is imbued with bravery.Until the spell ends, the creature is immune to beingfrightened and gains temporary hit points equal toyour spellcasting ability modifier at the start o f eacho f its turns. When the spell ends, the target loses anyremaining temporary hit points from this spell.<br>At Higher Levels. When you cast this spell usinga spell slot o f 2nd level or higher, you can target oneadditional creature for each slot level above 1st.",
+      "text": "A willing creature you touch is imbued with bravery.Until the spell ends, the creature is immune to beingfrightened and gains temporary hit points equal toyour spellcasting ability modifier at the start of eacho f its turns. When the spell ends, the target loses anyremaining temporary hit points from this spell.<br>At Higher Levels. When you cast this spell usinga spell slot of 2nd level or higher, you can target oneadditional creature for each slot level above 1st.",
       "school": "Enchantment",
       "castingTime": "1 action",
       "range": "Touch",
@@ -8286,13 +8297,24 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Героизм",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С",
+		"duration": "Концентрация, до 1 минуты",
+		"materials": "",
+		"text": "Касанием вы наделяете желающее существо отвагой. До тех пор, пока действует заклинание, существо имунно к страху и получает временные ОЗ, равные вашему модификатору параметра заклинаний, в начале каждого своего хода. Когда заклинание заканчивается, цель теряет все временные ОЗ, которые остались у неё от этого заклинания.   На более высоких кругах. Когда вы произносите это заклинание, используя ячейку 2 круга или выше, вы можете выбрать одно дополнительное существо за каждый круг выше первого.",
+		"school": "очарование",
+		"level": "1"
+	}
   },
   {
     "en": {
       "name": "Calm Emotions",
       "level": "2",
-      "text": "You attempt to suppress strong emotions in a group o f people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it w ishes. If a creature fails its saving throw, choose one o f the following two effects.<br> You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.<br> Alternatively, you can make a target indifferent about creatures o f your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it w itnesses any o f its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise.",
+      "text": "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it w ishes. If a creature fails its saving throw, choose one of the following two effects.<br> You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.<br> Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it w itnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise.",
       "school": "Enchantment",
       "castingTime": "1 action",
       "range": "60 feet",
@@ -8300,13 +8322,24 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Умиротворение",
+		"castingTime": "1 действие",
+		"range": "60 футов",
+		"components": "В, С",
+		"duration": "Концентрация, до 1 минуты",
+		"materials": "",
+		"text": "Вы пытаетесь подавить сильные эмоции у группы существ. Каждый гуманоид в сфере радиусом 20 футов вокруг выбранной вами точки должен сделать спасбросок по Харизме<br>Вы пытаетесь подавить сильные эмоции у группы существ. Все гуманоиды в сфере с радиусом 20 футов с центром в точке, выбранной в пределах дистанции, должны совершить спасбросок Харизмы; существо может добровольно провалить этот спасбросок, если пожелает. Если существо проваливает спасбросок, выберите один из двух описанных ниже эффектов:<br>Вы можете подавить все эффекты, делающие цель очарованной или испуганной. Когда это заклинание оканчивается, все подавленные эффекты восстанавливаются, при условии, что за это время их действие не окончилось.<br>В качестве альтернативы, вы можете сделать цель безразличной к выбранным вами существам, к которым она относилась враждебно. Это безразличие оканчивается, если цель атакована или ей причинён вред заклинанием, или если она станет свидетелем того, как причиняют вред её друзьям. Когда заклинание оканчивается, существо становится вновь враждебным, если Мастер не решит по-другому.",
+		"school": "очарование",
+		"level": "2"
+	}
   },
   {
     "en": {
       "name": "Enthrall",
       "level": "1",
-      "text": "Grasping w eeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain.<br> A creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.<br>When the spell ends, the conjured plants wilt away.",
+      "text": "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain.<br> A creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.<br>When the spell ends, the conjured plants wilt away.",
       "school": "Conjuration",
       "castingTime": "1 action",
       "range": "90 feet",
@@ -8314,12 +8347,23 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Опутывание",
+		"castingTime": "1 действие",
+		"range": "90 футов",
+		"components": "В, С",
+		"duration": "Конц-я, до 1 мин",
+		"materials": "",
+		"text": "Цепкие лозы и сорняки вырастают из земли в квадрате со стороной 20 футов вокруг указанной вами точки в пределах дальности заклинания. Пока оно действует, эти растения делают область труднопроходимой.   Существо в области действия заклинания должно сделать успешный спасбросок по Силе или будет обездвижено обвившими его растениями до конца заклинания. Опутанное существо может попытаться высвободиться, совершив в качестве действия проверку по Силе против вашего КС заклинаний. При успехе оно совобождается.   Когда заклинание заканчивается, призванные растения вянут.",
+		"school": "призыв",
+		"level": "1"
+	}
   },
   {
     "en": {
       "name": "Lesser Restoration",
-      "level": "1",
+      "level": "2",
       "text": "You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned.",
       "school": "Conjuration",
       "castingTime": "1 action",
@@ -8328,7 +8372,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Instantaneous",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Малое восстановление",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С",
+		"duration": "Мгновенно",
+		"materials": "",
+		"text": "Вы касаетесь существа и можете снять одну болезнь или другое состояние, которое воздействует на него. Это может быть слепота, глухота, паралич или яд.",
+		"school": "ограждение",
+		"level": "2"
+	}
   },
   {
     "en": {
@@ -8342,13 +8397,24 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Проклятие",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С",
+		"duration": "Концентрация, до 1 минуты",
+		"materials": "",
+		"text": "Вы касаетесь существа, и оно должно сделать спасбросок по Мудрости, или будет проклято до тех пор, пока действует заклинание. Произнося его, вы выбираете вид проклятия из следующих вариантов: Выберите один из параметров. Цель получает помеху на спасброски и проверки этого параметра, пока проклято. Пока цель проклята, она получает помеху на броски атаки против вас. Пока цель проклята, она должна делать спасбросок по Мудрости в начале каждого своего хода. При провале оно тратит свое действие, не делая ничего. Пока цель проклята, ваши атаки и заклинания наносят ей дополнительные 1d8 некротического урона. Снятие проклятия развеивает этот эффект. По усмотрению МП, вы можете выбирать другие варианты проклятий, но они не должны быть сильнее, чем перечисленные здесь. На более высоких кругах. Если вы произносите заклинание, используя ячейку 4 круга, то максимальная длительность концентрации увеличивается до 10 минут. Если вы используете ячейку 5 круга или выше, то заклинание более не требует концентрации, а длительность увеличивается до 8 часов за ячейку 5 круга и до 24 часов за ячейку 7 круга. Если вы используете ячейку 9 круга, то проклятие остается до тех пор, пока не будет развеяно.",
+		"school": "некромантия",
+		"level": "3"
+	}
   },
   {
     "en": {
       "name": "Compulsion",
       "level": "4",
-      "text": "Creatures o f your choice that you can see within range and that can hear you must make a W isdom saving throw. A target automatically succeeds on this saving throw if it can’t be charmed. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each o f your turns to designate a direction that is horizontal to you. Each affected target must u se as much o f its movement as possible to move in that direction on its next turn. It can take its action before it moves. After moving in this way, it can make another Wisdom saving to try to end the effect. <br> A target isn’t compelled to move into an obviously deadly hazard, such as a fire or pit, but it w ill provoke opportunity attacks to move in the designated direction.",
+      "text": "Creatures of your choice that you can see within range and that can hear you must make a W isdom saving throw. A target automatically succeeds on this saving throw if it can’t be charmed. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you. Each affected target must u se as much of its movement as possible to move in that direction on its next turn. It can take its action before it moves. After moving in this way, it can make another Wisdom saving to try to end the effect. <br> A target isn’t compelled to move into an obviously deadly hazard, such as a fire or pit, but it w ill provoke opportunity attacks to move in the designated direction.",
       "school": "Enchantment",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -8356,13 +8422,25 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
+    },
+    "ru": {
+      "name": "Принуждение",
+      "level": "4",
+      "text": "Выбранные вами существа, которых вы видите в пределах дистанции, и которые слышат вас, должны совершить спасбросок Мудрости. Цель автоматически преуспевает, если не может быть очарована. При провале спасброска цель попадает под действие этого заклинания. Пока заклинание активно, вы можете в каждом своём ходу бонусным действием указать направление, горизонтальное для вас. Все попавшие под действие цели должны в свой следующий ход максимально возможно перемещаться в том направлении. Перед перемещением они могут совершить свои действия. После перемещения из-за заклинания они могут совершить ещё один спасбросок Мудрости, чтобы окончить этот эффект.<br>Цель не обязана перемещаться в очевидно опасное место, такое как огонь или костёр, но она провоцирует атаки, когда идёт в указанном направлении.",
+      "school": "очарование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "materials": "",
+      "components": "В, С",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "PHB"
     }
   },
   {
     "en": {
       "name": "Freedom of Movement",
       "level": "4",
-      "text": "You touch a willing creature. For the duration, the target’s movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target’s speed nor cause the target to be paralyzed or restrained. <br> The target can also spend 5 feet o f movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target's movement or attacks.",
+      "text": "You touch a willing creature. For the duration, the target’s movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target’s speed nor cause the target to be paralyzed or restrained. <br> The target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target's movement or attacks.",
       "school": "Abjuration",
       "castingTime": "1 action",
       "range": "Touch",
@@ -8370,13 +8448,25 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "1 hour",
       "source": "PHB"
-    }
+    }, 
+	"ru": {
+		"name": "Свобода передвижения",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С, M",
+		"duration": "1 час",
+		"materials": "полоска кожи, обернутая вокруг руки, или другой похожий аксессуар",
+		"text": "Вы касаетесь согласного существа. Пока это заклинание действует, труднопроходимая местность не замедляет его передвижение, а заклинания и другие магические эффекты не могут снизить его скорость, парализовать или обездвижить. Цель также может потратить 5 футов передвижения, чтобы автоматически освободиться от любых немагических оков (например наручников) или захватов. Наконец, вы не получаете штрафов к передвижению и атакам, находясь под водой.",
+		"school": "ограждение",
+		"level": "4",
+        "source": "PHB"
+	}
   },
   {
     "en": {
       "name": "Awaken",
       "level": "5",
-      "text": "After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence o f 3 or less. The target gains an Intelligence o f 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. Your DM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree.<br> The awakened beast or plant is charmed by you for 30 days or until you or your companions do anything harmful to it. When the charmed condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it w as charmed.",
+      "text": "After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence of 3 or less. The target gains an Intelligence of 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. Your DM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree.<br> The awakened beast or plant is charmed by you for 30 days or until you or your companions do anything harmful to it. When the charmed condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it w as charmed.",
       "school": "Transmutation",
       "castingTime": "8 hours",
       "range": "Touch",
@@ -8384,13 +8474,25 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Instantaneous",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Пробуждение",
+		"castingTime": "8 часов",
+		"range": "Касание",
+		"components": "В, С, М",
+		"duration": "Мгновенно",
+		"materials": "агат стоимостью 1000 зм, который расходуется при произнесении",
+		"text": "Завершив произнесение заклинания, вычерчивая магические пути внутри драгоценного камня, вы касаетесь животного или растения Большого или меньшего размера. Параметр Интеллекта у цели должен либо отсутствовать, либо не превышать 3. Интеллект цели становится равным 10. Она также получает способность говорить на одном известном вам языке. Если цель - растение, оно получает способность двигать своими ветвями, корнями и прочими конечностями, и получает чувства, подобные человеческим. МП выбирает подходящие характеристики для пробудившегося растения.   Пробудившееся животное или растение очаровано вами на 30 дней, или пока вы или ваши компаньоны не причините ему вред. Когда очарование заканчивается, существо может остаться дружелюбным, если вы хорошо к нему относились.",
+		"school": "преобразование",
+		"level": "5",
+        "source": "PHB"
+	}
   },
   {
     "en": {
       "name": "Greater Restoration",
       "level": "5",
-      "text": "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target’s exhaustion level by one, or end one o f the following effects on the target:<br> • One effect that charmed or petrified the target<br> • One curse, including the target’s attunement to a cursed magic item<br> • Any reduction to one o f the target’s ability scores<br> • One effect reducing the target’s hit point maximum",
+      "text": "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target’s exhaustion level by one, or end one of the following effects on the target:<br> • One effect that charmed or petrified the target<br> • One curse, including the target’s attunement to a cursed magic item<br> • Any reduction to one of the target’s ability scores<br> • One effect reducing the target’s hit point maximum",
       "school": "Abjuration",
       "castingTime": "1 action",
       "range": "Touch",
@@ -8398,13 +8500,25 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Instantaneous",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Улучшенное восстановление",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С, M",
+		"duration": "Мгновенно",
+		"materials": "алмазный порошок стоимостью не менее 100 зм, который расходуется при произнесении",
+		"text": "Вы наделяете существо положительной энергией, способной излечить ослабляющий эффект. Вы можете снять один уровень истощения или один из следующих эффектов: Один эффект очарования или окаменения Одно проклятие, включая связь с проклятым оружием Снижение одного из параметров Один эффект, снижающий максимальное количество ОЗ",
+		"school": "ограждение",
+		"level": "5",
+        "source": "PHB"
+	}
   },
   {
     "en": {
       "name": "Find the Path",
       "level": "6",
-      "text": "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane o f existence. If you name a destination on another plane o f existence, a destination that moves (such as a mobile fortress), or a destination that isn’t specific (such as “a green dragon’s lair”), the spell fails.<br> For the duration, as long as you are on the same plane o f existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.",
+      "text": "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plane of existence, a destination that moves (such as a mobile fortress), or a destination that isn’t specific (such as “a green dragon’s lair”), the spell fails.<br> For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.",
       "school": "Divination",
       "castingTime": "1 action",
       "range": "Self",
@@ -8412,7 +8526,19 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Concentration, up to 1 day",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Поиск пути",
+		"castingTime": "1 минута",
+		"range": "Вы",
+		"components": "В, С, M",
+		"duration": "Конц-я, до 1 дня",
+		"materials": "набор инструментов для прорицания: косточки, палочки из слоновой кости, карты, зубы или резные руны стоимостью 100 зм, а также объект из того места, куда вы хотите найти путь",
+		"text": "Это заклинание позволяет вам найти кратчайший и наиболее прямой физический путь к определенному месту, которое вы знаете и которое находится на этом плане существования. Если вы назовете место на другом плане, место, которое передвигается (например двигающаяся крепость) или обобщенное место (например логово зеленого дракона), то заклинание не сработает. Пока действует заклинание, и пока вы находитесь на одном плане с местом назначения, вы знаете на каком расстоянии и в каком направлении находится цель. Если во время путешествия вам приходится выбирать путь, то вы сразу определяете кратчайший путь до цели (но это не значит, что он самый безопасный).",
+		"school": "прорицание",
+		"level": "6",
+        "source": "PHB"
+	}
   },
   {
     "en": {
@@ -8426,13 +8552,25 @@ var allSpells = [
       "components": "V",
       "duration": "1 hour",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Находчивость",
+		"castingTime": "1 действие",
+		"range": "Вы",
+		"components": "В",
+		"duration": "1 час",
+		"materials": "",
+		"text": "Пока действует заклинание, всякий раз, когда вы делаете проверку по Харизме, вы можете заменить результат броска на 15. Кроме того, независимо от того, что вы говорите, магия, которая определяет правдивость ваших слов, всегда считает, что вы говорите правду.",
+		"school": "преобразование",
+		"level": "8",
+        "source": "PHB"
+	}
   },
   {
     "en": {
       "name": "Thaumaturgy",
       "level": "0",
-      "text": "You manifest a minor wonder, a sign o f supernatural power, within range. You create one o f the following magical effects within range:<br> • Your voice booms up to three times as loud as normal for 1 minute.<br> • You cause flames to flicker, brighten, dim, or change color for 1 minute.<br> • You cause harmless tremors in the ground for 1 minute.<br> • You create an instantaneous sound that originates from a point o f your choice within range, such as a rumble o f thunder, the cry o f a raven, or ominous whispers.<br> • You instantaneously cause an unlocked door or window to fly open or slam shut.<br> • You alter the appearance o f your eyes for 1 minute. <br> If you cast this spell multiple times, you can have up to three o f its 1-minute effects active at a time, and you can dismiss such an effect as an action.",
+      "text": "You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:<br> • Your voice booms up to three times as loud as normal for 1 minute.<br> • You cause flames to flicker, brighten, dim, or change color for 1 minute.<br> • You cause harmless tremors in the ground for 1 minute.<br> • You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.<br> • You instantaneously cause an unlocked door or window to fly open or slam shut.<br> • You alter the appearance of your eyes for 1 minute. <br> If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.",
       "school": "Transmutation",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -8440,19 +8578,43 @@ var allSpells = [
       "components": "V",
       "duration": "Up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Волшебство",
+		"castingTime": "1 действие",
+		"range": "30 футов",
+		"components": "В",
+		"duration": "До 1 минуты",
+		"materials": "",
+		"text": "Вы демонстрируете небольшое чудо, являющееся знаком вашей сверхъестественной силы. Вы создаете один из следующих эффектов в пределах дальности заклинания:• Ваш голос звучит  в три раза громче, чем обычно в течение 1 минуты• Вы заставляете пламя трепетать, изменить цвет или стать ярче/слабее на 1 минуту.• Вы заставляете землю безвредно дрожать в течение 1 минуты.• Вы создаете мгновенный звук, исходящий из любой точки в пределах дальности заклинания. Это могут быть раскатыгрома, карканье ворона или зловещий шепот.• Вы резко открываете или громко захлопываете незакрытую дверь или окно.• Вы изменяете свое обличье для чужого взора на 1 минуту.сли вы произносите это заклинание несколько раз, то можете получить до трех активных одноминутных эффектов за раз. Вы можете отменить такой эффект, потратив действие.",
+		"school": "преобразование",
+		"level": "0",
+        "source": "PHB"
+	}
   },
   {
     "en": {
       "name": "Guidance",
       "level": "0",
-      "text": "You touch one w illing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check o f its choice. It can roll the die before or after making the ability check. The spell then ends.",
+      "text": "You touch one w illing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.",
       "school": "Divination",
       "castingTime": "1 action",
       "range": "30 feet",
       "materials": "",
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
+      "source": "PHB"
+    },
+	"en": {
+      "name": "Указание",
+      "level": "0",
+      "text": "Вы касаетесь одного согласного существа. Один раз, пока заклинание активно, цель может бросить к4 и добавить выпавшее число к одной проверке характеристики на свой выбор. Эту кость можно бросить до или после совершения проверки. После этого заклинание оканчивается.",
+      "school": "прорицание",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "materials": "",
+      "components": "В, С",
+      "duration": "Концентрация, вплоть до 1 минуты",
       "source": "PHB"
     }
   },
@@ -8460,7 +8622,7 @@ var allSpells = [
     "en": {
       "name": "Resistance",
       "level": "0",
-      "text": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw o f its choice. It can roll the die before or after m aking the saving throw. The spell then ends.",
+      "text": "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after m aking the saving throw. The spell then ends.",
       "school": "Abjuration",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -8468,13 +8630,25 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Сопротивление",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С, М",
+		"duration": "Концентрация, до 1 минуты",
+		"materials": "миниатюрный плащ",
+		"text": "Вы касаетесь одного существа. Один раз, пока действует это заклинание, цель может бросить d4 и добавить результат к одному спасброску на свой выбор. Оно может бросить кубик до или после совершения спасброска. После этого заклинание заканчивается.",
+		"school": "ограждение",
+		"level": "0",
+        "source": "PHB"
+	}
   },
   {
     "en": {
       "name": "Detect Evil and Good",
       "level": "1",
-      "text": "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet o f you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet o f you that has been magically consecrated or desecrated.<br>The spell can penetrate most barriers, but it is blocked by 1 foot o f stone, 1 inch o f common metal, a thin sheet o f lead, or 3 feet o f wood or dirt.",
+      "text": "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.<br>The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
       "school": "Divination",
       "castingTime": "1 action",
       "range": "Self",
@@ -8482,21 +8656,45 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 10 minutes",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Обнаружение Зла и Добра",
+		"casting time": "1 действие",
+		"range": "заклинатель",
+		"components": "В, С",
+		"duration": "Концентрация, до 10 минут",
+		"conditions": "",
+		"text": "Пока действует заклинание, вы узнаете, когда в пределах 30 футов от вас появляется аберрация, божественное существо, элементаль, фея, демон или нежить, а также местоположение этих существ. Аналогично, вы узнаете, если в пределах этого радиуса есть предметы, которые были освящены или прокляты. Заклинание проходит через большинство препятствий, но его останавливает камень толщиной 1 фут, металл толщиной 1 дюйм, тонкий слой свинца, дерево или земля толщиной 3 фута.",
+		"school": "прорицание",
+		"level": "1",
+        "source": "PHB"
+	}
   },
   {
     "en": {
       "name": "Aid",
       "level": "2",
-      "text": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration.<br> At Higher Levels. When you cast this spell using a spell slot o f 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd.",
+      "text": "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration.<br> At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd.",
       "school": "Divination",
       "castingTime": "1 action",
       "range": "30 feet",
-      "materials": "a tiny strip o f white cloth",
+      "materials": "a tiny strip of white cloth",
       "components": "V, S, M",
       "duration": "8 hours",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Подмога",
+		"casting time": "1 действие",
+		"range": "30 футов",
+		"components": "В, С, M",
+		"duration": "8 часов",
+		"conditions": "маленькая полоска белой ткани",
+		"text": "Заклинание наделяет ваших союзников стойкостью и решимостью. Выберите до 3 существ в пределах дальности заклинания. Их максимальное и текущее количество ОЗ увеличивается на 5 до тех пор, пока действует заклинание. На более высоких кругах. Если вы произносите заклинание, используя ячейку 3 круга или выше, то дополнительные ОЗ увеличиваются на 5 за каждый круг выше второго.",
+		"school": "ограждение",
+		"level": "2",
+        "source": "PHB"
+	}
   },
   {
     "en": {
@@ -8510,35 +8708,72 @@ var allSpells = [
       "components": "V, S",
       "duration": "1 hour",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Защита от яда",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С",
+		"duration": "1 час",
+		"materials": "",
+		"text": "Вы касаетесь существа. Если оно отравлено, то вы неитрализуете яд. Если цель находится под воздействием нескольких ядов, то вы неитрализуете один яд, о котором знаете, либо один случайный. Пока действует заклинание, цель получает преимущество при спасбросках против отравления и сопротивление к урону ядом.",
+		"school": "ограждение",
+		"level": "2",
+        "source": "PHB"
+	}
   },
   {
     "en": {
       "name": "Warding Bond",
       "level": "2",
-      "text": "This spell wards a willing creature you touch and creates a mystic connection between you and the target until the spell ends. While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has resistance to all damage. Also, each time it takes damage, you take the same amount o f damage.<br>The spell ends if you drop to 0 hit points or if you and the target become separated by more than 60 feet. It also ends if the spell is cast again on either o f the connected creatures. You can also dismiss the spell as an action.",
+      "text": "This spell wards a willing creature you touch and creates a mystic connection between you and the target until the spell ends. While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has resistance to all damage. Also, each time it takes damage, you take the same amount of damage.<br>The spell ends if you drop to 0 hit points or if you and the target become separated by more than 60 feet. It also ends if the spell is cast again on either of the connected creatures. You can also dismiss the spell as an action.",
       "school": "Abjuration",
       "castingTime": "1 action",
       "range": "Touch",
-      "materials": "a pair o f platinum rings worth at least 50 gp each, which you and the target must wear for the duration",
+      "materials": "a pair of platinum rings worth at least 50 gp each, which you and the target must wear for the duration",
       "components": "V, S, M",
       "duration": "1 hour",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Защитные узы",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С, M",
+		"duration": "1 час",
+		"materials": "пара платиновых колец стоимостью не менее 50 зм каждое, которое вы и цель должны носить, пока действует заклинание",
+		"text": "Вы касаетесь существа, даруя ему защиту, а также создаете таинственную связь между вами и целью до конца действия заклинания. Пока цель находится в пределах 60 футов от вас, она получает бонус +1 к КБ и спасброска, а также получает сопротивление ко всем видам урона. Кроме того, каждый раз, когда она получает урон, вы получаете такое же количество урона. Заклинание заканчивается, если ваши ОЗ опускаются до 0, или если цель удаляется от вас более чем на 60 футов. Оно также заканчивается, если это заклинание повторно использовано на одного из соединенных существ. Вы можете отменить это заклинание в качестве действия.",
+		"school": "ограждение",
+		"level": "2"",
+        "source": "PHB"
+	}
   },
   {
     "en": {
       "name": "Animate Dead",
       "level": "3",
-      "text": "This spell creates an undead servant. Choose a pile o f bones or a corpse o f a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry o f life, raising it as an undead creature. The target becomes a skeleton if you chose bones or a zombie if you chose a corpse (the DM has the creature’s game statistics).<br> On each o f your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet o f you (if you control multiple creatures, you can command any or all o f them at the same time, issuing the same command to each one). You decide what action the creature will take and where it w ill move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.<br> The creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control o f the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use o f the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one. <br> At Higher Levels. When you cast this spell using a spell slot o f 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each o f the creatures must come from a different corpse or pile o f bones.",
+      "text": "This spell creates an undead servant. Choose a pile of bones or a corpse of a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry of life, raising it as an undead creature. The target becomes a skeleton if you chose bones or a zombie if you chose a corpse (the DM has the creature’s game statistics).<br> On each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it w ill move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.<br> The creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one. <br> At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones.",
       "school": "Necromancy",
       "castingTime": "1 minute",
       "range": "10 feet",
-      "materials": "a drop of blood, a piece o f flesh, and a pinch of bone dust",
+      "materials": "a drop of blood, a piece of flesh, and a pinch of bone dust",
       "components": "V, S, M",
       "duration": "Instantaneous",
       "source": "PHB"
-    }
+    },
+	
+	"ru": {
+		"name": "Восставший труп",
+		"castingTime": "1 минута",
+		"range": "10 футов",
+		"components": "В, С, M",
+		"duration": "<br>мгновенно",
+		"materials": "капля крови, кусочек плоти и щепотка костяной муки",
+		"text": "Выберите кучку костей или труп гуманоида Среднего или Маленького размера. Каждый ваш ход в качестве дополнительного действия вы можете отдавать приказ любому из существ. Вы решаете, какое действие совершит существо и куда оно пойдет в следующий ход. Получив приказ, существо следует ему, пока задача не будет выполнена. Существо находится под вашим контролем в течение 24 часов, после чего оно перестает вас слушаться. Чтобы сохранить контроль над существом еще на 24 часа, вы должны снова использовать на нем это заклинание до того, как истекут 24 часа. Это использование заклинания обновляет контроль над четырьмя восставшими существами вместо того, чтобы создать новое. <br><b>На более высоких кругах.</b> Когда вы произносите заклинание, используя ячейку 4 круга или выше, вы можете поднять или восстановить контроль над двумя дополнительными существами за каждый круг выше 3. Для каждого существа требуется отдельная куча костей или труп.",
+		"school": "некромантия",
+		"level": "3",
+        "source": "PHB"
+	}
   },
   {
     "en": {
@@ -8551,6 +8786,18 @@ var allSpells = [
       "materials": "",
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
+      "source": "PHB"
+    },
+	"ru": {
+      "name": "Маяк надежды",
+      "level": "3",
+      "text": "Это заклинание дарует надежду и живучесть. Выберите любое количество существ в пределах дистанции. Пока заклинание активно, все цели совершают спасброски Мудрости и спасброски от смерти с преимуществом, а также восстанавливают от любого лечения максимально возможное количество хитов.",
+      "school": "ограждение",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "materials": "",
+      "components": "футов",
+      "duration": "Концентрация, вплоть до 1 минуты",
       "source": "PHB"
     }
   },
@@ -8566,7 +8813,19 @@ var allSpells = [
       "components": "V, S",
       "duration": "8 hours",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Защита от смерти",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С",
+		"duration": "8 часов",
+		"materials": "",
+		"text": "Вы касаетесь существа и даруете ему защиту от смерти. Первый раз, когда ОЗ цели должны упасть до 0 в результате получения урона, ее ОЗ вместо этого падают до 1, а заклинание заканчивается. Если заклинание все еще действует, когда цель подвергается эффекту, который бы убил ее на месте без нанесения урона, то этот эффект не срабатывает, а заклинание заканчивается.",
+		"school": "ограждение",
+		"level": "4",
+        "source": "PHB"
+	}
   },
   {
     "en": {
@@ -8586,7 +8845,7 @@ var allSpells = [
     "en": {
       "name": "Hallow",
       "level": "5",
-      "text": "You touch a point and infuse an area around it with holy (or unholy) power. The area can have a radius up to 60 feet, and the spell fails if the radius includes an area already under the effect a hallow spell. The affected area is subject to the following effects. <br> First, celestials, elementals, fey, fiends, and undead can’t enter the area, nor can such creatures charm, frighten, or p os sess creatures within it. Any creature charmed, frightened, or pos sessed by such a creature is no longer charmed, frightened, or possessed upon entering the area. You can exclude one or more of those types o f creatures from this effect. <br> Second, you can bind an extra effect to the area. Choose the effect from the following list, or choose an effect offered by the DM. Some o f these effects apply to creatures in the area; you can designate whether the effect applies to all creatures, creatures that follow a specific deity or leader, or creatures o f a specific sort, such as ores or trolls. When a creature that would be affected enters the spell’s area for the first time on a turn or starts its turn there, it can make a Charisma saving throw. On a success, the creature ignores the extra effect until it leaves the area. <br> Courage. Affected creatures can’t be frightened while in the area. <br> Darkness. Darkness fills the area. Normal light, as well as magical light created by spells o f a lower level than the slot you used to cast this spell, can’t illuminate the area. <br> Daylight. Bright light fills the area. Magical darkness created by spells o f a lower level than the slot you used to cast this spell can’t extinguish the light. <br> Energy Protection. Affected creatures in the area have resistance to one damage type o f your choice, except for bludgeoning, piercing, or slashing. <br> Energy Vulnerability. Affected creatures in the area have vulnerability to one damage type of your choice, except for bludgeoning, piercing, or slashing. Everlasting Rest. Dead bodies interred in the area can’t be turned into undead. <br> Extradimensional Interference. Affected creatures can’t move or travel using teleportation or by extradimensional or interplanar means. <br> Fear. Affected creatures are frightened while in the area. <br> Silence. No sound can emanate from within the area, and no sound can reach into it. <br> Tongues. Affected creatures can communicate with any other creature in the area, even if they don’t share a common language.",
+      "text": "You touch a point and infuse an area around it with holy (or unholy) power. The area can have a radius up to 60 feet, and the spell fails if the radius includes an area already under the effect a hallow spell. The affected area is subject to the following effects. <br> First, celestials, elementals, fey, fiends, and undead can’t enter the area, nor can such creatures charm, frighten, or p os sess creatures within it. Any creature charmed, frightened, or pos sessed by such a creature is no longer charmed, frightened, or possessed upon entering the area. You can exclude one or more of those types of creatures from this effect. <br> Second, you can bind an extra effect to the area. Choose the effect from the following list, or choose an effect offered by the DM. Some of these effects apply to creatures in the area; you can designate whether the effect applies to all creatures, creatures that follow a specific deity or leader, or creatures of a specific sort, such as ores or trolls. When a creature that would be affected enters the spell’s area for the first time on a turn or starts its turn there, it can make a Charisma saving throw. On a success, the creature ignores the extra effect until it leaves the area. <br> Courage. Affected creatures can’t be frightened while in the area. <br> Darkness. Darkness fills the area. Normal light, as well as magical light created by spells of a lower level than the slot you used to cast this spell, can’t illuminate the area. <br> Daylight. Bright light fills the area. Magical darkness created by spells of a lower level than the slot you used to cast this spell can’t extinguish the light. <br> Energy Protection. Affected creatures in the area have resistance to one damage type of your choice, except for bludgeoning, piercing, or slashing. <br> Energy Vulnerability. Affected creatures in the area have vulnerability to one damage type of your choice, except for bludgeoning, piercing, or slashing. Everlasting Rest. Dead bodies interred in the area can’t be turned into undead. <br> Extradimensional Interference. Affected creatures can’t move or travel using teleportation or by extradimensional or interplanar means. <br> Fear. Affected creatures are frightened while in the area. <br> Silence. No sound can emanate from within the area, and no sound can reach into it. <br> Tongues. Affected creatures can communicate with any other creature in the area, even if they don’t share a common language.",
       "school": "Evocation",
       "castingTime": "24 hours",
       "range": "Touch",
@@ -8600,11 +8859,11 @@ var allSpells = [
     "en": {
       "name": "Insect Plague",
       "level": "5",
-      "text": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere’s area is difficult terrain. <br> When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4 d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell’s area for the first time on a turn or ends its turn there. <br>  At Higher Levels. When you cast this spell using a spell slot o f 6th level or higher, the damage increases by 1d10 for each slot level above 5th.",
+      "text": "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere’s area is difficult terrain. <br> When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4 d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell’s area for the first time on a turn or ends its turn there. <br>  At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th.",
       "school": "Conjuration",
       "castingTime": "1 action",
       "range": "300 feet",
-      "materials": "a few grains o f sugar, some kernels o f grain, and a smear o f fat",
+      "materials": "a few grains of sugar, some kernels of grain, and a smear of fat",
       "components": "V, S, M",
       "duration": "Concentration, up to 10 minutes",
       "source": "PHB"
@@ -8614,7 +8873,7 @@ var allSpells = [
     "en": {
       "name": "Heal",
       "level": "6",
-      "text": "Choose a creature that you can see within range. A surge o f positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead. <br> At Higher Levels. When you cast this spell using a spell slot o f 7th level or higher, the amount o f healing increases by 10 for each slot level above 6th.",
+      "text": "Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead. <br> At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th.",
       "school": "Evocation",
       "castingTime": "1 action",
       "range": "60 feet",
@@ -8628,7 +8887,7 @@ var allSpells = [
     "en": {
       "name": "Heroes' Feast",
       "level": "6",
-      "text": "You bring forth a great feast, including magnificent food and drink. The feast takes 1 hour to consume and disappears at the end o f that time, and the beneficial effects don’t set in until this hour is over. Up to twelve other creatures can partake o f the feast. <br> A creature that partakes o f the feast gains several benefits. The creature is cured o f all diseases and poison, becomes immune to poison and being frightened, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 2d10, and it gains the same number o f hit points. These benefits last for 24 hours.",
+      "text": "You bring forth a great feast, including magnificent food and drink. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don’t set in until this hour is over. Up to twelve other creatures can partake of the feast. <br> A creature that partakes of the feast gains several benefits. The creature is cured of all diseases and poison, becomes immune to poison and being frightened, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 2d10, and it gains the same number of hit points. These benefits last for 24 hours.",
       "school": "Conjuration",
       "castingTime": "10 minutes",
       "range": "30 feet",
@@ -8824,7 +9083,7 @@ var allSpells = [
     "en": {
       "name": "Storm of Vengeance",
       "level": "9",
-      "text": "A churning storm cloud forms, centered on a point you can see and spreading to a radius o f 360 feet. Lightning flashes in the area, thunder booms, and strong winds roar. Each creature under the cloud (no more than 5,000 feet beneath the cloud) when it appears must make a Constitution saving throw. On a failed save, a creature takes 2d6 thunder damage and becomes deafened for 5 minutes.<br> Each round you maintain concentration on this spell, the storm produces additional effects on your turn.<br> Round 2. Acidic rain falls from the cloud. Each creature and object under the cloud takes 1d6 acid damage.<br> Round 3. You call six bolts o f lightning from the cloud to strike six creatures or objects o f your choice beneath the cloud. A given creature or object can’t be struck by m ore than one bolt. A struck creature must make a Dexterity saving throw. The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one.<br> Round 4. Hailstones rain down from the cloud. Each creature under the cloud takes 2d6 bludgeoning damage.<br> Round 5-10. Gusts and freezing rain assail the area under the cloud. The area becomes difficult terrain and is heavily obscured. Each creature there takes 1d6 cold damage. Ranged w eapon attacks in the area are impossible. The w ind and rain count as a severe distraction for the purposes o f maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical.",
+      "text": "A churning storm cloud forms, centered on a point you can see and spreading to a radius of 360 feet. Lightning flashes in the area, thunder booms, and strong winds roar. Each creature under the cloud (no more than 5,000 feet beneath the cloud) when it appears must make a Constitution saving throw. On a failed save, a creature takes 2d6 thunder damage and becomes deafened for 5 minutes.<br> Each round you maintain concentration on this spell, the storm produces additional effects on your turn.<br> Round 2. Acidic rain falls from the cloud. Each creature and object under the cloud takes 1d6 acid damage.<br> Round 3. You call six bolts of lightning from the cloud to strike six creatures or objects of your choice beneath the cloud. A given creature or object can’t be struck by m ore than one bolt. A struck creature must make a Dexterity saving throw. The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one.<br> Round 4. Hailstones rain down from the cloud. Each creature under the cloud takes 2d6 bludgeoning damage.<br> Round 5-10. Gusts and freezing rain assail the area under the cloud. The area becomes difficult terrain and is heavily obscured. Each creature there takes 1d6 cold damage. Ranged w eapon attacks in the area are impossible. The w ind and rain count as a severe distraction for the purposes of maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical.",
       "school": "Conjuration",
       "castingTime": "1 action",
       "range": "Sight",
@@ -8964,11 +9223,11 @@ var allSpells = [
     "en": {
       "name": "Armor of Agathys",
       "level": "1",
-      "text": "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage. <br> At Higher Levels. When you cast this spell using a spell slot o f 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot level above 1st.",
+      "text": "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage. <br> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot level above 1st.",
       "school": "Abjuration",
       "castingTime": "1 action",
       "range": "Self",
-      "materials": "a cup o f water",
+      "materials": "a cup of water",
       "components": "V, S, M",
       "duration": "Concentration, up to 1 hour",
       "source": "PHB"
@@ -8979,7 +9238,7 @@ var allSpells = [
       "name": "Drawmij's Instant Summons",
       "level": "6",
 	  "ritual": "ritual",
-      "text": "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name o f the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.<br> At any time thereafter, you can use your action to speak the item’s name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.<br> If another creature is holding or carrying the item, crushing the sapphire doesn’t transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment. <br> Dispel magic or a similar effect successfully applied to the sapphire ends this spell’s effect.",
+      "text": "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.<br> At any time thereafter, you can use your action to speak the item’s name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.<br> If another creature is holding or carrying the item, crushing the sapphire doesn’t transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment. <br> Dispel magic or a similar effect successfully applied to the sapphire ends this spell’s effect.",
       "school": "Conjuration",
       "castingTime": "1 minute",
       "range": "Touch",
