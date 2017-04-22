@@ -621,11 +621,11 @@ var classSpells = {
 			en: "Circle of the Land",
 			ru: "Круг Земли"
 		  },
-		  subclasses: [
-			{
+		  subclasses: {
+			Arctic: {
 			  title: {
 				en: "Arctic",
-				ru: ""
+				ru: "Арктика"
 			  },
 			  spells: [
 				
@@ -646,10 +646,10 @@ var classSpells = {
 				]
 			  
 			},
-			{
+			Coast: {
 			  title: {
 				en: "Coast",
-				ru: ""
+				ru: "Побережье"
 			  },
 			  spells: [
 				
@@ -670,10 +670,10 @@ var classSpells = {
 				]
 			  
 			},
-			{
+			Desert: {
 			  title: {
 				en: "Desert",
-				ru: ""
+				ru: "Пустыня"
 			  },
 			  spells: [
 				
@@ -694,10 +694,10 @@ var classSpells = {
 				]
 			  
 			},
-			{
+			Forest: {
 			  title: {
 				en: "Forest",
-				ru: ""
+				ru: "Лес"
 			  },
 			  spells: [
 				
@@ -718,10 +718,10 @@ var classSpells = {
 				]
 			  
 			},
-			{
+			Grassland: {
 			  title: {
 				en: "Grassland",
-				ru: ""
+				ru: "Равнина"
 			  },
 			  spells: [
 				
@@ -742,10 +742,10 @@ var classSpells = {
 				]
 			  
 			},
-			{
+			Mountain: {
 			  title: {
 				en: "Mountain",
-				ru: ""
+				ru: "Горы"
 			  },
 			  spells: [
 				
@@ -766,10 +766,10 @@ var classSpells = {
 				]
 			  
 			},
-			{
+			Swamp: {
 			  title: {
 				en: "Swamp",
-				ru: ""
+				ru: "Болота"
 			  },
 			  spells: [
 				
@@ -790,10 +790,10 @@ var classSpells = {
 				]
 			  
 			},
-			{
+			Underdark: {
 			  title: {
 				en: "Underdark",
-				ru: ""
+				ru: "Подземье"
 			  },
 			  spells: [
 				
@@ -814,7 +814,7 @@ var classSpells = {
 				]
 			  
 			}
-		  ]
+		  }
 		}
 	  }
 	},
@@ -883,7 +883,7 @@ var classSpells = {
 		{
 		  title: {
 			en: "Oath of Devotion",
-			ru: ""
+			ru: "Клятва Преданности"
 			},
 			spells: [
 			  
@@ -911,7 +911,7 @@ var classSpells = {
 		{
 		  title: {
 			en: "Oath of  Ancients",
-			ru: ""
+			ru: "Клятва Древних"
 			},
 			spells: [
 			  
@@ -939,7 +939,7 @@ var classSpells = {
 		{
 		  title: {
 			en: "Oath of  Vengeance",
-			ru: ""
+			ru: "Клятва Мести"
 			},
 			spells: [
 			  

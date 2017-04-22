@@ -437,7 +437,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -2680,7 +2680,7 @@ var allSpells = [
     "en": {
       "name": "Slow",
       "level": "3",
-      "text": "You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration. An affected target's speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn. If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted. A creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.",
+      "text": "You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration. An affected target's speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn. If the creature attempts to cast a spell with a castingTime of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted. A creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.",
       "school": "Transmutation",
       "castingTime": "1 action",
       "range": "120 feet",
@@ -4090,7 +4090,7 @@ var allSpells = [
     "en": {
       "name": "Contingency",
       "level": "6",
-      "text": "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell called the contingent spell's part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid. The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to. and then contingency ends. The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
+      "text": "Choose a spell of 5th level or lower that you can cast, that has a castingTime of 1 action, and that can target you. You cast that spell called the contingent spell's part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid. The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to. and then contingency ends. The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
       "school": "Evocation",
       "castingTime": "10 minutes",
       "range": "Self",
@@ -4846,7 +4846,7 @@ var allSpells = [
     "en": {
       "name": "Simulacrum",
       "level": "7",
-      "text": "You shape an illusory duplicate of one beast or humanoid that is within range for the entire casting time of the spell. The duplicate is a creature, partiallyreal and formed from ice or snow, and it can take actions and otherwise be affected as a normal creature. It appears to be the same as the original, but it has half the creature's hit point maximum and is formed without any equipment. Otherwise, the illusion uses all the statistics of the creature it duplicates. The simulacrum is friendly to you and creatures you designate. It obeys your spoken commands, moving and acting in accordance with your wishes and acting on your turn in combat. The simulacrum lacks the ability to learn or become more powerful, so it never increases its level or other abilities, nor can it regain expended spell slots. If the simulacrum is damaged, you can repair it in an alchemical laboratory, using rare herbs and minerals worth 100 gp per hit point it regains. The simulacrum lasts until it drops to 0 hit points, at which point it reverts to snow and melts instantly. If you cast this spell again, any currently active duplicates you created with this spell are instantly destroyed.",
+      "text": "You shape an illusory duplicate of one beast or humanoid that is within range for the entire castingTime of the spell. The duplicate is a creature, partiallyreal and formed from ice or snow, and it can take actions and otherwise be affected as a normal creature. It appears to be the same as the original, but it has half the creature's hit point maximum and is formed without any equipment. Otherwise, the illusion uses all the statistics of the creature it duplicates. The simulacrum is friendly to you and creatures you designate. It obeys your spoken commands, moving and acting in accordance with your wishes and acting on your turn in combat. The simulacrum lacks the ability to learn or become more powerful, so it never increases its level or other abilities, nor can it regain expended spell slots. If the simulacrum is damaged, you can repair it in an alchemical laboratory, using rare herbs and minerals worth 100 gp per hit point it regains. The simulacrum lasts until it drops to 0 hit points, at which point it reverts to snow and melts instantly. If you cast this spell again, any currently active duplicates you created with this spell are instantly destroyed.",
       "school": "Illusion",
       "castingTime": "12 hours",
       "range": "Touch",
@@ -5886,7 +5886,7 @@ var allSpells = [
       "range": "120 футов",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, до 10 минут",
+      "duration": "К-ция, до 10 минут",
       "source": "PHB"
     }
   },
@@ -6172,7 +6172,7 @@ var allSpells = [
       "range": "30 футов",
       "materials": "немного святой воды",
       "components": "В, С, М",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -6250,7 +6250,7 @@ var allSpells = [
       "range": "заклинатель",
       "materials": "лист тиса",
       "components": "В, С, M",
-      "duration": "Концентрация, до 10 минут",
+      "duration": "К-ция, до 10 минут",
       "source": "PHB"
     }
   },
@@ -6348,7 +6348,7 @@ var allSpells = [
       "source": "PHB"
     },
     "ru": {
-      "name": "Святилище",
+      "name": "Убежище",
       "level": "1",
       "text": "Вы защищаете существо в пределах дальности заклинания от атаки. Пока заклинание действует, любое существо, которое атакует защищенную цель или использует на нее вредоносное заклинание, должно сделать спасбросок по Мудрости. При провале существо должно выбрать другую цель или потерять эту атаку или заклинание. Заклинание не защищает цель от эффектов, действующих на область, например от взрыва огненного шара. Если защищенная цель атакует или произносит заклинание, которое воздействует на враждебное существо, то заклинание заканчивается.",
       "school": "ограждение",
@@ -6382,7 +6382,7 @@ var allSpells = [
       "range": "60 футов",
       "materials": "кусочек пергамента с начертанным на нем священным писанием",
       "components": "В, С, M",
-      "duration": "Концентрация, до 10 минут",
+      "duration": "К-ция, до 10 минут",
       "source": "PHB"
     }
   },
@@ -6646,7 +6646,7 @@ var allSpells = [
       "range": "заклинатель (15-футовый-радиус)",
       "materials": "священный символ",
       "components": "В, С, M",
-      "duration": "Концентрация, до 10 минут",
+      "duration": "К-ция, до 10 минут",
       "source": "PHB"
     }
   },
@@ -6834,7 +6834,7 @@ var allSpells = [
       "range": "90 футов",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, до 10 минут",
+      "duration": "К-ция, до 10 минут",
       "source": "PHB"
     }
   },
@@ -6966,7 +6966,7 @@ var allSpells = [
       "range": "90 футов",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, до 1 часа",
+      "duration": "К-ция, до 1 часа",
       "source": "PHB"
     }
   },
@@ -7070,7 +7070,7 @@ var allSpells = [
       "range": "заклинатель",
       "materials": "Маленький реликварий, стоимостью не менее 1000 зм со священной реликвией, например лоскут одежды святого или кусочек пергамента с религиозным писанием",
       "components": "В, С, M",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7174,7 +7174,7 @@ var allSpells = [
       "range": "120 футов",
       "materials": "маленький веер и экзотическое перо",
       "components": "В, С, M",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7226,7 +7226,7 @@ var allSpells = [
       "range": "30 футов",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7252,7 +7252,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7278,7 +7278,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "пепел от сожженного листа омелы и веточка ели",
       "components": "В, С, M",
-      "duration": "Концентрация, до 1 часа",
+      "duration": "К-ция, до 1 часа",
       "source": "PHB"
     }
   },
@@ -7304,7 +7304,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7488,7 +7488,7 @@ var allSpells = [
       "range": "Касание",
       "materials": "",
       "components": "С",
-      "duration": "Концентрация, до 1 часа",
+      "duration": "К-ция, до 1 часа",
       "source": "PHB"
     }
   },
@@ -7566,7 +7566,7 @@ var allSpells = [
       "range": "60 футов",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, до 1 часа",
+      "duration": "К-ция, до 1 часа",
       "source": "PHB"
     }
   },
@@ -7592,7 +7592,7 @@ var allSpells = [
       "range": "60 футов",
       "materials": "одна ягода падуба за каждое призванное существо",
       "components": "В, С, M",
-      "duration": "Концентрация, до 1 часа",
+      "duration": "К-ция, до 1 часа",
       "source": "PHB"
     }
   },
@@ -7698,7 +7698,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7724,7 +7724,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7776,7 +7776,7 @@ var allSpells = [
       "range": "Заклинатель (радиус 30 футов)",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7802,7 +7802,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7828,7 +7828,7 @@ var allSpells = [
       "range": "Касание",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, до 1 часа",
+      "duration": "К-ция, до 1 часа",
       "source": "PHB"
     }
   },
@@ -7854,7 +7854,7 @@ var allSpells = [
       "range": "Заклинатель (радиус 30 футов)",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 10 минут",
+      "duration": "К-ция, до 10 минут",
       "source": "PHB"
     }
   },
@@ -7880,7 +7880,7 @@ var allSpells = [
       "range": "Заклинатель (радиус 30 футов)",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 10 минут",
+      "duration": "К-ция, до 10 минут",
       "source": "PHB"
     }
   },
@@ -7906,7 +7906,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7932,7 +7932,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -7958,7 +7958,7 @@ var allSpells = [
       "range": "Заклинатель (радиус 30 футов)",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 10 минут",
+      "duration": "К-ция, до 10 минут",
       "source": "PHB"
     }
   },
@@ -8010,7 +8010,7 @@ var allSpells = [
       "range": "90 футов",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 часа",
+      "duration": "К-ция, до 1 часа",
       "source": "PHB"
     }
   },
@@ -8036,7 +8036,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -8062,7 +8062,7 @@ var allSpells = [
       "range": "Заклинатель",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -8114,7 +8114,7 @@ var allSpells = [
       "range": "Касание",
       "materials": "колчан с как минимум одним боеприпасом",
       "components": "В, С, М",
-      "duration": "Концентрация, до 1 минуты",
+      "duration": "К-ция, до 1 минуты",
       "source": "PHB"
     }
   },
@@ -8278,7 +8278,7 @@ var allSpells = [
 		"castingTime": "1 действие",
 		"range": "30 футов",
 		"components": "В, С, М",
-		"duration": "Концентрация, до 1 минуты",
+		"duration": "К-ция, до 1 минуты",
 		"materials": "капля крови",
 		"text": "До трех существ на ваш выбор из тех, что вы можете видеть в пределах дальности заклинания, должны сделать спасбросок по Харизме. Пока дейстевует заклинание, каждый раз, когда существо, провалившее этот спасбросок, делает бросок атаки ли спасбросок, оно должно бросить d4 и вычесть результат из результата своего броска атаки или спасброска.   На более высоких кругах. Если вы произносите заклинание, используя ячейку 2 круга или выше, то можете использовать это заклинание на одно дополнительное существо за каждый круг выше первого.",
 		"school": "очарование",
@@ -8303,7 +8303,7 @@ var allSpells = [
 		"castingTime": "1 действие",
 		"range": "Касание",
 		"components": "В, С",
-		"duration": "Концентрация, до 1 минуты",
+		"duration": "К-ция, до 1 минуты",
 		"materials": "",
 		"text": "Касанием вы наделяете желающее существо отвагой. До тех пор, пока действует заклинание, существо имунно к страху и получает временные ОЗ, равные вашему модификатору параметра заклинаний, в начале каждого своего хода. Когда заклинание заканчивается, цель теряет все временные ОЗ, которые остались у неё от этого заклинания.   На более высоких кругах. Когда вы произносите это заклинание, используя ячейку 2 круга или выше, вы можете выбрать одно дополнительное существо за каждый круг выше первого.",
 		"school": "очарование",
@@ -8328,7 +8328,7 @@ var allSpells = [
 		"castingTime": "1 действие",
 		"range": "60 футов",
 		"components": "В, С",
-		"duration": "Концентрация, до 1 минуты",
+		"duration": "К-ция, до 1 минуты",
 		"materials": "",
 		"text": "Вы пытаетесь подавить сильные эмоции у группы существ. Каждый гуманоид в сфере радиусом 20 футов вокруг выбранной вами точки должен сделать спасбросок по Харизме<br>Вы пытаетесь подавить сильные эмоции у группы существ. Все гуманоиды в сфере с радиусом 20 футов с центром в точке, выбранной в пределах дистанции, должны совершить спасбросок Харизмы; существо может добровольно провалить этот спасбросок, если пожелает. Если существо проваливает спасбросок, выберите один из двух описанных ниже эффектов:<br>Вы можете подавить все эффекты, делающие цель очарованной или испуганной. Когда это заклинание оканчивается, все подавленные эффекты восстанавливаются, при условии, что за это время их действие не окончилось.<br>В качестве альтернативы, вы можете сделать цель безразличной к выбранным вами существам, к которым она относилась враждебно. Это безразличие оканчивается, если цель атакована или ей причинён вред заклинанием, или если она станет свидетелем того, как причиняют вред её друзьям. Когда заклинание оканчивается, существо становится вновь враждебным, если Мастер не решит по-другому.",
 		"school": "очарование",
@@ -8403,7 +8403,7 @@ var allSpells = [
 		"castingTime": "1 действие",
 		"range": "Касание",
 		"components": "В, С",
-		"duration": "Концентрация, до 1 минуты",
+		"duration": "К-ция, до 1 минуты",
 		"materials": "",
 		"text": "Вы касаетесь существа, и оно должно сделать спасбросок по Мудрости, или будет проклято до тех пор, пока действует заклинание. Произнося его, вы выбираете вид проклятия из следующих вариантов: Выберите один из параметров. Цель получает помеху на спасброски и проверки этого параметра, пока проклято. Пока цель проклята, она получает помеху на броски атаки против вас. Пока цель проклята, она должна делать спасбросок по Мудрости в начале каждого своего хода. При провале оно тратит свое действие, не делая ничего. Пока цель проклята, ваши атаки и заклинания наносят ей дополнительные 1d8 некротического урона. Снятие проклятия развеивает этот эффект. По усмотрению МП, вы можете выбирать другие варианты проклятий, но они не должны быть сильнее, чем перечисленные здесь. На более высоких кругах. Если вы произносите заклинание, используя ячейку 4 круга, то максимальная длительность концентрации увеличивается до 10 минут. Если вы используете ячейку 5 круга или выше, то заклинание более не требует концентрации, а длительность увеличивается до 8 часов за ячейку 5 круга и до 24 часов за ячейку 7 круга. Если вы используете ячейку 9 круга, то проклятие остается до тех пор, пока не будет развеяно.",
 		"school": "некромантия",
@@ -8432,7 +8432,7 @@ var allSpells = [
       "range": "30 футов",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, вплоть до 1 минуты",
+      "duration": "К-ция, вплоть до 1 минуты",
       "source": "PHB"
     }
   },
@@ -8466,7 +8466,7 @@ var allSpells = [
     "en": {
       "name": "Awaken",
       "level": "5",
-      "text": "After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence of 3 or less. The target gains an Intelligence of 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. Your DM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree.<br> The awakened beast or plant is charmed by you for 30 days or until you or your companions do anything harmful to it. When the charmed condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it w as charmed.",
+      "text": "After spending the castingTime tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence of 3 or less. The target gains an Intelligence of 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. Your DM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree.<br> The awakened beast or plant is charmed by you for 30 days or until you or your companions do anything harmful to it. When the charmed condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it w as charmed.",
       "school": "Transmutation",
       "castingTime": "8 hours",
       "range": "Touch",
@@ -8614,7 +8614,7 @@ var allSpells = [
       "range": "30 футов",
       "materials": "",
       "components": "В, С",
-      "duration": "Концентрация, вплоть до 1 минуты",
+      "duration": "К-ция, вплоть до 1 минуты",
       "source": "PHB"
     }
   },
@@ -8636,7 +8636,7 @@ var allSpells = [
 		"castingTime": "1 действие",
 		"range": "Касание",
 		"components": "В, С, М",
-		"duration": "Концентрация, до 1 минуты",
+		"duration": "К-ция, до 1 минуты",
 		"materials": "миниатюрный плащ",
 		"text": "Вы касаетесь одного существа. Один раз, пока действует это заклинание, цель может бросить d4 и добавить результат к одному спасброску на свой выбор. Оно может бросить кубик до или после совершения спасброска. После этого заклинание заканчивается.",
 		"school": "ограждение",
@@ -8659,10 +8659,10 @@ var allSpells = [
     },
 	"ru": {
 		"name": "Обнаружение Зла и Добра",
-		"casting time": "1 действие",
+		"castingTime": "1 действие",
 		"range": "заклинатель",
 		"components": "В, С",
-		"duration": "Концентрация, до 10 минут",
+		"duration": "К-ция, до 10 минут",
 		"conditions": "",
 		"text": "Пока действует заклинание, вы узнаете, когда в пределах 30 футов от вас появляется аберрация, божественное существо, элементаль, фея, демон или нежить, а также местоположение этих существ. Аналогично, вы узнаете, если в пределах этого радиуса есть предметы, которые были освящены или прокляты. Заклинание проходит через большинство препятствий, но его останавливает камень толщиной 1 фут, металл толщиной 1 дюйм, тонкий слой свинца, дерево или земля толщиной 3 фута.",
 		"school": "прорицание",
@@ -8685,7 +8685,7 @@ var allSpells = [
     },
 	"ru": {
 		"name": "Подмога",
-		"casting time": "1 действие",
+		"castingTime": "1 действие",
 		"range": "30 футов",
 		"components": "В, С, M",
 		"duration": "8 часов",
@@ -8797,7 +8797,7 @@ var allSpells = [
       "range": "30 футов",
       "materials": "",
       "components": "футов",
-      "duration": "Концентрация, вплоть до 1 минуты",
+      "duration": "К-ция, вплоть до 1 минуты",
       "source": "PHB"
     }
   },
@@ -8839,6 +8839,18 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
+    }, 
+	"en": {
+      "name": "Dispel Evil and Good",
+      "level": "5",
+      "text": "Вас окружает мерцающая энергия, защищающая от фей, нежити и существ, происходящих не с Материального Плана. Пока заклинание активно, исчадия, небожители, нежить, феи и элементали совершают по вам броски атаки с помехой.<br>Вы можете закончить заклинание преждевременно, выбрав один из представленных ниже вариантов:<br>Изгнание. Вы совершаете действием рукопашную атаку заклинанием по исчадию, небожителю, нежити, фее или элементалю в пределах досягаемости. При попадании вы пытаетесь изгнать существо на его родной план. Существо должно преуспеть в спасброске Харизмы, иначе оно будет отправлено на свой родной план (если только оно уже не находится там). Нежить отправляется в Царство Теней, а феи в Страну Фей.<br>Поломка чар. Вы касаетесь действием существа, до которого можете дотянуться, и которое очаровано, испугано или одержимо исчадием, небожителем, нежитью, феей или элементалем. Это существо перестаёт быть очарованным, испуганным или одержимым такими существами.",
+      "school": "ограждение",
+      "castingTime": "1 действие",
+      "range": "1 действие",
+      "materials": "святая вода или порошок серебра и железа",
+      "components": "В, С, М",
+      "duration": "К-ция, вплоть до 1 минуты",
+      "source": "PHB"
     }
   },
   {
@@ -8852,6 +8864,18 @@ var allSpells = [
       "materials": "herbs, oils, and incense worth at least 1,000 gp, which the spell consumes",
       "components": "V, S, M",
       "duration": "Until dispelled",
+      "source": "PHB"
+    },
+    "en": {
+      "name": "Святилище",
+      "level": "5",
+      "text": "Вы касаетесь точки и наполняете область вокруг неё святой (или нечестивой) силой. Радиус области может быть с радиусом до 60 футов, и заклинание проваливается, если в этот радиус попадает область, уже находящаяся под действием заклинания святилище. Наполненная область подвергается следующим эффектам:<br> Во-первых, исчадия, небожители, нежить, феи и элементали не могут войти в эту область, и не могут делать существ, находящихся внутри, очарованными, испуганными и одержимыми. Все существа, очарованные, испуганные или одержимые такими существами, перестают быть очарованными, испуганными и одержимыми, входя в эту область. Вы можете исключить из эффекта один или несколько видов существ.<br> Во-вторых, вы можете привязать к области дополнительный эффект. Выберите один эффект из прилагающегося списка, или выберите эффект, предложенный Мастером. Некоторые из этих эффектов применяются к существам, находящимся в области; вы можете указать, будет ли он применяться ко всем существам, существам, служащим определённому божеству или лидеру, или существам определённого вида, например, оркам и троллям. Когда существо, попадающее под действие эффекта, входит в область заклинания впервые за ход или начинает там ход, оно может совершить спасбросок Харизмы. В случае успеха существо игнорирует дополнительный эффект, пока не покинет эту область.<br> Вечный покой. Мёртвые тела, похороненные в области, не могут стать нежитью.<br> Вмешательство в путешествия между измерениями. Затронутые существа не могут перемещаться и путешествовать, используя телепортацию или перемещение между измерениями и планами.<br> Дневной свет. Область освещается ярким светом. Магическая тьма, созданная заклинаниями с уровнем меньше уровня ячейки, использованной вами для накладывания этого заклинания, не может затмить свет.<br> Защита от энергии. Затронутые существа в области получают сопротивление к одному виду урона на ваш выбор кроме дробящего, колющего и рубящего.<br> Страх. Затронутые существа испуганы, пока находятся в области.<br> Темнота. Область заполняется темнотой. Обычный свет, а также магический свет, созданный заклинаниями, с уровнем меньше уровня ячейки, использованной вами для накладывания этого заклинания, не могут осветить область.<br> Тишина. Звуки не покидают границы области, и не проникают снаружи внутрь.<br> Уязвимость энергии. Затронутые существа в области получают уязвимость к одному виду урона на ваш выбор кроме дробящего, колющего и рубящего.<br> Храбрость. Затронутые существа не могут быть испуганы, пока находятся в области. <br> Языки. Затронутые существа могут общаться с любыми другими существами, находящимися в области, даже если у них нет общего языка.",
+      "school": "воплощение",
+      "castingTime": "24 часа",
+      "range": "Касание",
+      "materials": "травы, масла и благовония, стоящие как минимум 1 000 зм, расходуемые заклинанием",
+      "components": "В, С, М ",
+      "duration": "Пока не рассеется",
       "source": "PHB"
     }
   },
@@ -8867,7 +8891,18 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Concentration, up to 10 minutes",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Нашествие насекомых",
+		"castingTime": "1 действие",
+		"range": "300 футов",
+		"components": "В, С, M",
+		"duration": "К-ция, до 10 минут",
+		"materials": "несколько песчинок сахара, зерен и мазок жира",
+		"text": "Рой саранчи заполняет сферу радиусом 20 футов вокруг выбранной вами точки в пределах дальности заклинания. Сфера огибает углы. Она остается до тех пор, пока действует заклинание. Область действия считается слегка затемненной и труднопроходимой. В момент появления сферы, каждое существо внутри должно сделать спасбросок по Телосложению. При провале оно получает 4d10 колющего урона, а при успехе - половину этого урона. Существо также должно сделать аналогичный спасбросок, если первый раз за ход оказывается в области действия заклинания или заканчивает свой ход в ней.  На более высоких кругах. Если вы произносите заклинание, используя ячейку 6 круга или выше, урон увеличивается на 1d10 за каждый круг выше пятого.",
+		"school": "призыв",
+		"level": "5"
+	}
   },
   {
     "en": {
@@ -8881,7 +8916,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Instantaneous",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Лечение",
+		"castingTime": "1 действие",
+		"range": "60 футов",
+		"components": "В, С",
+		"duration": "Мгновенно",
+		"materials": "",
+		"text": "Выберите существо, которое вы можете видеть в пределах дальности заклинания. Волна положительной энергии проходит сквозь это существо и восстанавливает ему 70 ОЗ. Заклинание также излечивает слепоту, глухоту и любые болезни. Оно не действует на нежить или големов. На более высоких кругах. Если вы произносите заклинание, используя ячейку 7 круга или выше, то объем исцеления увеличивается на 10 за каждый круг выше шестого.",
+		"school": "проявление",
+		"level": "6"
+	}
   },
   {
     "en": {
@@ -8895,7 +8941,18 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Instantaneous",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Пир Героев",
+		"castingTime": "10 минут",
+		"range": "30 футов",
+		"components": "В, С, M",
+		"duration": "Мгновенно",
+		"materials": "чаша, инкрустированная драгоценными камнями, стоимостью не менее 1000 зм, которая расходуется при произнесении",
+		"text": "Вы призываете роскошный пир, состоящий из восхитительных блюд и напитков. Необходим 1 час, чтобы насытиться ним и получить даруемые им эффекты. В пире могут принимать участие до 12 существ. После участия в пире, существо получает ряд эффектов. Оно исцеляется от всех ядов и болезней, становится имунно к ядам и страху и получает преимущество на всех спасброски по Мудрости. Его максимальные ОЗ увеличивается на 2d10 и оно получает это количество ОЗ. Эти эффекты действуют в течение 24 часов.",
+		"school": "призыв",
+		"level": "6"
+	}
   },
   {
     "en": {
@@ -8909,7 +8966,18 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Concentration, up to 1 hour",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Дубовая кожа",
+		"castingTime": "1 действие",
+		"range": "Касание",
+		"components": "В, С, M",
+		"duration": "Конц-я, до 1 часа",
+		"materials": "горсть дубовой коры",
+		"text": "Вы касаетесь согласного существа. Пока заклинание не закончится, кожа цели становится грубой и похожей на кору. КБ существа не может опуститься ниже 16, независимо от одетых на нем доспехов.",
+		"school": "преобразование",
+		"level": "2"
+	}
   },
   {
     "en": {
@@ -8923,36 +8991,19 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Concentration, up to 10 minutes",
       "source": "PHB"
-    }
-  },
-  {
-    "en": {
-      "name": "Spike Growth",
-      "level": "2",
-      "text": "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels. The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is case must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it.",
-      "school": "Transmutation",
-      "castingTime": "1 action",
-      "range": "150 feet",
-      "materials": "seven sharp thorns or seven small twigs, each sharpened to a point",
-      "components": "V, S, M",
-      "duration": "Concentration, up to 10 minutes",
-      "source": "PHB"
-    }
-  },
-  {
-    "en": {
-      "name": "Spike Growth",
-      "level": "2",
-      "text": "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels. The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is case must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it.",
-      "school": "Transmutation",
-      "castingTime": "1 action",
-      "range": "150 feet",
-      "materials": "seven sharp thorns or seven small twigs, each sharpened to a point",
-      "components": "V, S, M",
-      "duration": "Concentration, up to 10 minutes",
-      "source": "PHB"
-    }
-  },
+    },
+	"ru": {
+		"name": "Рост шипов",
+		"castingTime": "1 действие",
+		"range": "150 футов",
+		"components": "В, С, M",
+		"duration": "Конц-я, до 10 мин",
+		"materials": "семь шипов или маленьких веточек, заостренных с одного конца",
+		"text": "Из земли в радиусе 20 футов вокруг выбранной вами точки в пределах дальности заклинания вырастают твердые шипы. Область становится труднопроходимой на время действия заклинания. Каждое существо, которое заходит в область, получает 2d4 колющего урона через каждые 5 футов.   Это преобразование замаскировано так, чтобы казаться естественным. Любое существо, которое не видело область в момент произнесения заклинания, должно сделать проверку по Мудрости (Восприятие) против вашего КС заклинаний, чтобы определить, что эта область опасна.",
+		"school": "преобразование",
+		"level": "2"
+	}
+  },  
   {
     "en": {
       "name": "Call Lightning",
@@ -8965,22 +9016,19 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 10 minutes",
       "source": "PHB"
-    }
-  },
-  {
-    "en": {
-      "name": "Call Lightning",
-      "level": "3",
-      "text": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud). When you cast the spell, choose a point you can see within range. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one. If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10. At Higher Levels. When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd.",
-      "school": "Conjuration",
-      "castingTime": "1 action",
-      "range": "120 feet",
-      "materials": "",
-      "components": "V, S",
-      "duration": "Concentration, up to 10 minutes",
-      "source": "PHB"
-    }
-  },
+    },
+	"ru": {
+		"name": "Призыв молнии",
+		"castingTime": "1 действие",
+		"range": "120 футов",
+		"components": "В, С",
+		"duration": "Конц-я, до 10 мин",
+		"materials": "",
+		"text": "Вы указываете на точку, которую можете видеть в 100 футах над вами. Там возникает грозовое облако размером с цилиндр высотой 10 футов и радиусом 60 футов. Заклинание не срабатывает, если вы не можете видеть точку, где могло бы возникнуть облако (например, вы находитесь в комнате, которая не может вместить его).   После произнесения заклинания, выберите точку, которую можете видеть в пределах дальности заклинания. В это место ударяет разряд молнии. Каждое существо в пределах 5 футов от этого места, должно сделать спасбросок по Ловкости. При провале оно получает 3d10 урона молнией, а при успехе - половину этого урона. Пока заклинание не закончилось, вы можете призывать молнию подобным образом каждый ход в качестве действия, выбирая ту же точку или другую.   Если вы находитесь на открытом воздухе при грозовой походе, то произнеся это заклинание, вы получаете контроль над уже имеющимся грозовым облаком вместо создания нового. В этом случае <br>Урон заклинания увеличивается на 1d10.   <br><b>На более высоких кругах.</b> Если вы произносите заклинание, используя ячейку 4 круга или выше, то урон увеличивается на 1d10 за каждый круг выше третьего.",
+		"school": "призыв",
+		"level": "3"
+	}
+  },  
   {
     "en": {
       "name": "Giant Insect",
@@ -8993,7 +9041,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 10 minutes",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Гигантское насекомое",
+		"castingTime": "1 действие",
+		"range": "30 футов",
+		"components": "В, С",
+		"duration": "Конц-я, до 10 мин",
+		"materials": "",
+		"text": "Вы превращаете до десяти многоножек, трех пауков, пяти ос или одного скорпиона в пределах дальности заклинания в их гигантские версии. Многоножка становится гигантской многоножкой, паук становится гигантским пауком, оса становится гигантской осой, а скорпион - гигантским скорпионом.   Каждое существо подчиняется вашим голосовым командам и действуют в бою каждый ваш ход. МП знает параметры эти существ и выполняет за них действия и передвижения.   Существо остается в гигантской форме до тех пор, пока заклинание не закончится, его ОЗ упадут до 0 или вы отмените эффект в качестве действия.   МП может позволить вам выбирать другие цели. Например, если вы превратите пчелу, то ее гигантская версия будет иметь те же параметры, что и гигантская оса.",
+		"school": "преобразование",
+		"level": "4"
+	}
   },
   {
     "en": {
@@ -9007,7 +9066,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 1 hour",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Преграда жизни",
+		"castingTime": "1 действие",
+		"range": "Вы (радиус 10 футов)",
+		"components": "В, С",
+		"duration": "Конц-я, до 1 часа",
+		"materials": "",
+		"text": "Мерцающий барьер возникает в 10 футах вокруг вас и передвигается вместе с вами, отторгая всех существ, кроме нежити и големов. Барьер остается до тех пор, пока действует заклинание.   Барьер не дает существам пройти сквозь него, но они могут произносить заклинания или совершать атаки оружием дальнего боя и длинным оружием сквозь барьер.   Если вы двигаетесь так, что существо вынуждено пройти через барьер, то заклинание заканчивается.",
+		"school": "ограждение",
+		"level": "5"
+	}
   },
   {
     "en": {
@@ -9021,7 +9091,18 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Instantaneous",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Реинкарнация",
+		"castingTime": "1 час",
+		"range": "Касание",
+		"components": "В, С, M",
+		"duration": "Мгновенно",
+		"materials": "редкие масла и мази стоимостью не менее 1000 зм, которые расходуются при произнесении",
+		"text": "Вы касаетесь мертвого гуманоида или его части. Если это существо умерло в пределах 10 дней, то заклинание создает новое зрелое тело для него, а затем призывает его душу. Если душа не свободна или не желает вернуться, то заклинание не срабатывает.   Заклинание случайным образом определяет новое тело для существа, что чаще всего влечет за собой смену расы. МП бросает d100 и определяет по таблице новую расу существа, либо он может выбрать её сам. Возрожденное существо помнит свою прошлую жизнь. Оно сохраняет все способности, которыми обладала прошлая форма, за исключением расовых черт, которые меняются на новые.",
+		"school": "преобразование",
+		"level": "5"
+	}
   },
   {
     "en": {
@@ -9035,7 +9116,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 1 hour",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Призыв фей",
+		"castingTime": "1 минута",
+		"range": "90 футов",
+		"components": "В, С",
+		"duration": "Конц-я, до 1 часа",
+		"materials": "",
+		"text": "Вы призываете фей с уровнем опасности 6 или ниже, или волшебного духа, который принимает форму животного с уровнем опасности 6 или ниже. Существо появляется в любом незанятом месте, которое вы можете видеть в пределах дальности заклинания. Оно исчезает если его ОЗ падают до 0, или когда заклинание заканчивается.  Существо дружественно по отношению к вам и вашим компаньонам. Оно ходит отдельно, поэтому требует отдельного броска инициативы в бою. Существо подчиняется вашим вербальным приказам (действия не требуется), если они не противоречат его мировоззрению. Если вы не отдаете  никаких приказов, то существо только защищает себя от враждебных существ, но не совершает других действий.   Если ваша Конц-я нарушена, то существо не исчезает, вместо этого вы теряете свой контроль над ним, оно становится враждебным по отношению к вам и вашим компаньонам и может атаковать. Неконтролируемое существо нельзя отозвать и оно исчезает через час после призыва.   МП знает параметры этих существ.   <br><b>На более высоких кругах.</b> Если вы произносите заклинание, используя ячейку 7 круга или выше, то уровень опасности увеличивается на 1 за каждый круг выше шестого.",
+		"school": "призыв",
+		"level": "6"
+	}
   },
   {
     "en": {
@@ -9049,7 +9141,18 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "8 hours",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Хождение по ветру",
+		"castingTime": "1 действие",
+		"range": "30 футов",
+		"components": "В, С, M",
+		"duration": "8 часов",
+		"materials": "огонь и святая вода",
+		"text": "Вы и до десяти согласных существ, которых вы можете видеть в пределах дальности заклинания, принимаете газообразную форму на время действия заклинания и выглядите словно маленькое облако. Находясь в этой форме, существо имеет летающую скорость 300 футов и получает сопротивление ко атакам немагическим оружием. В качестве действия существо может совершать только Рывок или вернуться в свою обычную форму. Обратное превращение занимает 1 минуту, в течение которой существо небоеспособно и не может двигаться. Пока заклинание действует, существо может вернуться в форму облака, снова потратив 1 минуту на превращение.   Если существо находится в форме облака и летит в момент, когда заклинание заканчивается, то оно плавно опускается со скоростью 60 футов за раунд в течение минуты. Если существо не приземляется через 1 минуту, то оно падает оставшееся расстояние.",
+		"school": "преобразование",
+		"level": "6"
+	}
   },
   {
     "en": {
@@ -9063,7 +9166,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 24 hours",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Превращение в животных",
+		"castingTime": "1 действие",
+		"range": "30 футов",
+		"components": "В, С",
+		"duration": "Конц-я, до 24 часов",
+		"materials": "",
+		"text": "Ваша магия превращает других в животных. Выберите любое количество согласных существ, которых вы можете видеть в пределах дальности заклинания. Вы превращаете каждого в существо Большого или меньшего размера с уровнем опасности 4 или ниже. Каждый последующий ход, в качестве действия вы можете превратить этих существ в другие формы.   Превращение длится, пока заклинание не закончится, пока ОЗ цели не упадут до 0 или пока она не умрет. Вы можете выбрать разную форму для каждой цели. Характеристики цели заменяются на характеристики животного, но цель сохраняет мировоззрение, а также параметры Интеллекта, Мудрости и Харизмы. Цель получает ОЗ новой формы, а возвращаясь в нормальную форму, получает ОЗ, которые были у нее до превращения. Если цель возвращается в свою нормальную форму из-за того, что ее ОЗ упали до 0, то весь остаточный урон переносится на нормальную форму. Если остаточный урон не опустил ОЗ нормальной формы до 0, то существо остается в сознании. Возможности существа ограничены возможностями новой формы, и оно не может говорить и произносить заклинания.   Снаряжение цели сливается с новой формой, Она не может активировать, использовать или получать преимущества от какого-либо снаряжения.",
+		"school": "преобразование",
+		"level": "8"
+	}
   },
   {
     "en": {
@@ -9077,7 +9191,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 6 rounds",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Цунами",
+		"castingTime": "1 минута",
+		"range": "Видимость",
+		"components": "В, С",
+		"duration": "Конц-я, до 6 раундов",
+		"materials": "",
+		"text": "Стена воды появляется в указанном вами месте в пределах дальности заклинания. Стена может быть до 300 футов длиной, до 300 футов высотой и до 50 футов толщиной и существует до тех пор, пока действует заклинание.   Когда стена появляется, каждое существо в этой области должно сделать спасбросок по Силе. При провале существо получает 6d10 дробящего урона, а при успехе - половину этого урона.   В начале каждого вашего хода после появления стены, она двигается в противположную от вас сторону со скоростью 50 футов, унося всех существ внутри вместе с собой. Любое существо Огромного или меньшего размера, находящееся внутри стены или оказавшееся на ее пути, должно сделать успешный спасбросок по Силе или получит 5d10 дробящего урона. Существо может получить этот урон лишь раз за раунд. В конце хода высота стены уменьшается на 50 футов, а урон, наносимый ей в последующих раундах уменьшается на 1d10. Когда высота волны снижается до 0, заклинание кончается.   Существо, пойманное волной, может передвигаться вплавь. Для этого ему нужно сделать успешную проверку по Силе (Атлетика) против вашего КС заклинаний. В случае провала оно не может двигаться. Существо, которому удалось выплыть из волны, падает на землю.",
+		"school": "призыв",
+		"level": "8"
+	}
   },
   {
     "en": {
@@ -9091,7 +9216,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 6 rounds",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Буря Возмездия",
+		"castingTime": "1 действие",
+		"range": "Видимость",
+		"components": "В, С",
+		"duration": "Конц-я, до 1 мин",
+		"materials": "",
+		"text": "В указанном вами месте возникает вихревое грозовое облако с радиусом 360 футов. В этой области бьют молнии, раздаются раскаты грома и ревет сильный ветер. Каждое существо под облаком (не более 5000 футов ниже облака) должно сделать спасбросок по Телосложению в момент появления облака. В случае неудачи существо получает 2d6 урона звуком и глохнет на 5 минут.   Каждый раунд пока вы поддерживаете концентрацию на заклинании, буря порождает дополнительные эффекты в ваш ход.   Раунд 2. Из облака начинает падать кислотный дождь. Каждое существо и объект под облаком получают 1d6 урона кислотой.   Раунд 3. Вы призываете шесть разрядов молнии, которые ударяют в шесть существ или объектов под облаком. Одно существо или объект не могут получить более одного разряда. Существо получает 10d6 урона молнией при неудачном спасброске или половину при удачном.   Раунд 4. Из облака начинает падать крупный град. Каждое существо под облаком получает 2d6 дробящего урона.   Раунд 5-10. Начинается дождь со снегом, сопровождающийся шквалом ветра. Область становится труднопроходимой и с сильным затемнением. Каждое существо получает 1d6 урона холодом. Атаки дальнего боя невозможнны. Ветер и дождь считаются серьезной помехой для сохранения концентрации на заклинаниях. Наконец, сильный шквал ветра (от 20 до 50 миль в час) автоматически разгоняет любой туман, дымку или другие подобные явления в области, будь они естественного или магического происхождения.",
+		"school": "призыв",
+		"level": "9"
+	}
   },
   {
     "en": {
@@ -9105,7 +9241,18 @@ var allSpells = [
       "components": "V",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Вынужденная дуэль",
+		"castingTime": "1 бонусное действие",
+		"range": "30 футов",
+		"components": "В",
+		"duration": "К-ция, до 1 минуты",
+		"conditions": "",
+		"text": "Вы пытаетесь вызвать существо на дуэль. Выберите любое существо, которое вы можете видеть в пределах дальности заклинания. Оно должно сделать спасбросок по Мудрости. При провале ваш божественный приказ вынуждает существо атаковать вас. Пока заклинание действует, существо получает помеху на броски атаки против других существ кроме вас. Оно также должно сделать спасбросок по Мудрости, если пытается отойти на расстояние более 30 футов от вас",
+		"school": "очарование",
+		"level": "1"
+	}
   },
   {
     "en": {
@@ -9119,7 +9266,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Божественное благоволение",
+		"castingTime": "1 бонусное действие",
+		"range": "Заклинатель",
+		"components": "В, С",
+		"duration": "К-ция, до 1 минуты",
+		"conditions": "",
+		"text": "Ваша молитва наделяет вас божественным сиянием. До конца заклинания ваши атаки оружием наносят дополнительные 1d4 урона светом.",
+		"school": "проявление",
+		"level": "1"
+	}
   },
   {
     "en": {
@@ -9133,7 +9291,18 @@ var allSpells = [
       "components": "V",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Обжигающий удар",
+		"castingTime": "1 бонусное действие",
+		"range": "Заклинатель",
+		"components": "В",
+		"duration": "К-ция, до 1 минуты",
+		"conditions": "",
+		"text": "Пока действует это заклинание, при следующем попадании атакой ближнего боя, ваше оружие раскаляется добела и наносит дополнительные 1d6 урона огнем, поджигая цель. В начале каждого своего хода, пока действует заклинание, цель должна делать спасбросок по Телосложени. При провале она получает 1d6 урона огнем. При успехе заклинание кончается. Если цель или другое существо в 5 футах от нее используют действие, чтобы потушить огонь, или какой-то другой эффект потушит его (например цель окажется в воде) то заклинание заканчивается.",
+		"school": "проявление",
+		"level": "1"
+	}
   },
   {
     "en": {
@@ -9147,7 +9316,18 @@ var allSpells = [
       "components": "V",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Громовой удар",
+		"castingTime": "1 бонусное действие",
+		"range": "Заклинатель",
+		"components": "В",
+		"duration": "К-ция, до 1 минуты",
+		"conditions": "",
+		"text": "Пока действует это заклинание, первый удар, который вы нанесете оружием ближнего боя, издает оглушительный раскат грома, который слышно на расстоянии 300 футов. Вы также наносите дополнительные 2d6 урона звуком. Кроме того, если целью удара было существо, то оно должно сделать успешный спасбросок по Силе или его оттолкнет на 10 футов от вас и собъет с ног.",
+		"school": "проявление",
+		"level": "1"
+	}
   },
   {
     "en": {
@@ -9161,6 +9341,17 @@ var allSpells = [
       "components": "V",
       "duration": "Instantaneous",
       "source": "PHB"
+	},
+	"ru": {
+		"name": "Сокрушительная волна",
+		"castingTime": "1 действие",
+		"range": "Заклинатель (радиус 30 футов)",
+		"components": "В",
+		"duration": "Мгновенно",
+		"conditions": "",
+		"text": "Вы ударяете землю, создавая всплеск божественной энергии, который волной расходится вокруг вас. Каждое из выбранных вами существ в пределах 30 футов вокруг вас должно сделать успешный спасбросок по Телосложению или получит 5d6 звукового урона, а также 5d6 некротического или светового урона (на ваш выбор) и будет сбито с ног. При успешном спасброске существо получает половину этого урона и остается на ногах.",
+		"school": "проявление",
+		"level": "5"
 	}
   },
    {
@@ -9174,6 +9365,18 @@ var allSpells = [
       "materials": "",
       "components": "V",
       "duration": "Concentration, up to 1 minute",
+      "source": "PHB"
+    },
+	"ru": {
+      "name": "ОПУТЫВАЮЩИЙ УДАР",
+      "level": "1",
+      "text": "Когда вы в следующий раз попадёте по существу атакой рукопашным оружием, пока заклинание активно, в точке удара появляется извивающаяся масса растений с шипами, и цель должна преуспеть в спасброске Силы, иначе она станет опутана магическими плетьми, пока заклинание активно. Существа с размером Большое и ещё больше совершают этот спасбросок с преимуществом. Если цель преуспевает в спасброске, плети усыхают.<br>Будучи опутанной этим заклинанием, цель получает колющий урон 1к6 в начале каждого своего хода. Опутанное существо или существо, способное коснуться его, может действием совершить проверку Силы против Сл ваших заклинаний. При успехе цель освобождается.<br>На больших уровнях: Если вы накладываете это заклинание, используя ячейку 2 уровня или выше, урон увеличивается на 1к6 за каждый уровень ячейки выше первого.",
+      "school": "вызов",
+      "castingTime": "1 бонусное действие",
+      "range": "На себя",
+      "materials": "",
+      "components": "В",
+      "duration": "К-ция, вплоть до 1 минуты",
       "source": "PHB"
     }
   },
@@ -9189,6 +9392,18 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "8 hours",
       "source": "PHB"
+    },
+	"ru": {
+      "name": "ЗАВЕСА СТРЕЛ",
+      "level": "2",
+      "text": "Вы втыкаете четыре немагических боеприпаса — стрелы или арбалетные болты — в землю в пределах дистанции и накладываете на них заклинание, защищающее область. Пока заклинание активно, каждый раз, когда другое существо кроме вас впервые за ход оказывается в пределах 30 футов от боеприпасов или оканчивает там ход, один боеприпас вылетает и атакует его. Существо должно преуспеть в спасброске Ловкости, иначе оно получит колющий урон 1к6. Боеприпас при этом уничтожается. Заклинание заканчивается, когда кончаются боеприпасы.<br>Накладывая это заклинание, вы можете указать любых существ, которых это заклинание будет игнорировать.<br>На больших уровнях: Если вы накладываете это заклинание, используя ячейку 3 уровня или выше, количество боеприпасов увеличивается на два за каждый уровень ячейки выше второго.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "5 футов",
+      "materials": "как минимум четыре стрелы или арбалетных болта",
+      "components": "В, С, М",
+      "duration": "8 часов",
+      "source": "PHB"
     }
   },
   {
@@ -9202,6 +9417,18 @@ var allSpells = [
       "materials": "one piece of ammunition or a thrown weapon",
       "components": "V, S, M",
       "duration": "Instantaneous",
+      "source": "PHB"
+    },
+	"ru": {
+      "name": "ПРИЗЫВ ЗАГРАЖДЕНИЯ",
+      "level": "3",
+      "text": "Вы метаете немагическое оружие или выстреливаете немагический боеприпас в воздух, создавая конус одинакового оружия, летящего вперёд и потом исчезающего. Все существа в 60-футовом конусе должны преуспеть в спасброске Ловкости. При провале существо получает урон 3к8, а при успехе половину этого урона. Вид урона такой же, как у оружия или боеприпаса, использованного в качестве компонента.",
+      "school": "вызов",
+      "castingTime": "1 действие",
+      "range": "На себя (60-футовый конус)",
+      "materials": "метательное оружие или один боеприпас",
+      "components": "В, С, М",
+      "duration": "Мгновенная",
       "source": "PHB"
     }
   },
@@ -9217,7 +9444,18 @@ var allSpells = [
       "components": "V, S",
       "duration": "Concentration, up to 1 hour",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Смена обличья",
+		"castingTime": "1 действие",
+		"range": "Вы",
+		"components": "В, С",
+		"duration": "<br>конц-я, до 1 часа",
+		"materials": "",
+		"text": "Вы принимаете другую форму. Выберите один из следующих вариантов, который вступит в действие. Вы можете отменить выбранный вариант в качестве действия и выбрать новый.<br><b>Водная форма.</b> Вы можете принять форму, подходящую для подводных условий, получая жабры и перепонки между пальцами. Вы можете дышать под водой и получаете водную скорость, которая равна вашей наземной скорости.<br><b>Изменение внешности.</b> Вы изменяете свой внешний вид, выбирая свой рост, вес, черты лица, голос, длину и цвет волос, а также отличительные характеристики. Пока заклинание действует, вы можете изменить свою внешность в качестве действия.<br><b>Природное оружие.</b> У вас появляются когти, клыки, шипы, рога или другое природное оружие на ваш выбор. Ваши безоружные атаки наносят 1d6 дробящего, режущего или колющего урона в зависимости от выбранного природного оружия и вы получаете владение безоружным боем. Кроме того, природное оружие считается магическим и имеет бонус +1 к броскам атаки и урона.",
+		"school": "преобразование",
+		"level": "2"
+	}
   },
   {
     "en": {
@@ -9230,6 +9468,18 @@ var allSpells = [
       "materials": "a cup of water",
       "components": "V, S, M",
       "duration": "Concentration, up to 1 hour",
+      "source": "PHB"
+    },
+	"ru": {
+      "name": "ДОСПЕХ АГАТИСА",
+      "level": "1",
+      "text": "Вас окружает защитное магическое поле, проявляющееся в виде призрачной изморози, покрывшей вас и ваше снаряжение. Вы получаете 5 временных хитов на период действия заклинания. Если существо попадает по вам рукопашной атакой, пока у вас есть эти хиты, оно получает урон холодом 5.<br>На больших уровнях: Если вы накладываете это заклинание, используя ячейку 2 уровня или выше, и временные хиты и урон холодом увеличиваются на 5 за каждый уровень ячейки выше первого.",
+      "school": "ограждение",
+      "castingTime": "1 action",
+      "range": "На себя",
+      "materials": "чашка воды",
+      "components": "В, С, М",
+      "duration": "1 час",
       "source": "PHB"
     }
   },
@@ -9246,6 +9496,18 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Until dispelled",
       "source": "PHB"
-    }
+    },
+	"ru": {
+		"name": "Мгновенный призыв Дромиджа",
+		"castingTime": "1 минута",
+		"range": "Касание",
+		"components": "В, С, М",
+		"duration": "До рассеивания",
+	    "ritual": "ритуал",
+		"materials": "сапфир стоимостью 1000 зм",
+		"text": "Вы касаетесь объекта весом не более 10 фунтов и размером не более 6 футов с любой из сторон. Заклинание оставляет невидимую отметку на его поверхности, а также наносит невидимое название объекта на сапфир, который вы использовали в качестве материального компонента. Каждый раз, когда вы произносите это заклинание, вы должны использовать другой сапфир.   В любой момент после этого, в качестве действия вы можете сказать название объекта и сломать сапфир. Названный объект <br>мгновенно появляется в вашей руке независимо от его физической или планарной дальности, а заклинание заканчивается.   Если другое существо держит его в руках, то разрушение сапфира не перемещает объект к вам, но вы узнаете, кто им владеет, и приблизительное местонахождение этого существа в данный момент.   Заклинание развеять магию или другой подобный эффект, примененные на сапфир, развеивают это заклинание.",
+		"school": "призыв",
+		"level": "6"
+	}
   }
 ]

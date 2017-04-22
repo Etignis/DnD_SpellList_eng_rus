@@ -457,7 +457,8 @@ p {
 .customSelect .label {
   padding-right: 2.2em !important;
   position: relative;
-  margin: .3em .2em;
+  padding: .5em .2em;
+  margin: 0em 0em;
 }
 .customSelect .label:before {
   content: "▼";
@@ -470,8 +471,8 @@ p {
   content: "";
   position: absolute;
   right: 1.7em;
-  top: .1em;
-  height: 1em;
+  top: .2em;
+  bottom: .2em;
   border-left: 2px ridge #999999;
 }
 .customSelect .list {
@@ -583,6 +584,29 @@ p {
 .bt:active {
   background: #666666;
 }
+.button {
+  -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-bottom-width: 2px;
+  border-top-width: 1px;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  padding: .9em 1.6em;
+  margin: .5em .5em 0em;
+  background: #fdfdfd;
+  text-decoration: none;
+  color: #487EC5;
+  transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+}
+.button:hover {
+  background: #f9f9f9;
+  color: #376db4;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
 .mod_win {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -687,8 +711,8 @@ p {
   user-select: none;
   cursor: text;
   background: #fff;
-  padding: .4em;
-  padding-right: 1.2em;
+  padding: .6em;
+  padding-right: 1.4em;
   display: block;
   width: 100%;
   margin: 0;
@@ -701,7 +725,7 @@ p {
   right: .2em;
   color: #ddd;
   cursor: pointer;
-  margin: .1em;
+  margin: .3em;
   transition: color .3s;
 }
 .customInput .cross:before {
@@ -718,6 +742,12 @@ p {
 }
 .customInput:focus {
   box-shadow: 0 0 5px 0 #487EC5;
+}
+#info_text {
+  padding: .3em;
+  background: rgba(255, 255, 255, 0.6);
+  color: #222;
+  font-weight: 600;
 }
 @media screen and (min-width: 65em) {
   .page {
@@ -801,6 +831,9 @@ p {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: stretch;
+}
+.spellCard .cell span {
+  font-size: 109%;
 }
 .spellCard h1 {
   font-size: 95%;
@@ -1008,7 +1041,11 @@ p {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: .1em;
-  display: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
   z-index: 9;
   color: #fff;
   border-radius: 0 0 3px 0;
@@ -1141,11 +1178,16 @@ p {
   max-width: 100%;
   width: auto;
 }
+.mediaWidth {
+  margin: .2em;
+  flex-grow: 1;
+}
 @media screen and (min-width: 65em) {
   .p_side {
     width: 15em;
     margin-right: 1em;
     float: left;
+    flex-direction: column;
     position: absolute;
   }
   .p_side .s_block {

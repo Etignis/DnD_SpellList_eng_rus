@@ -3,7 +3,11 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin: 0;
     padding: .1em;
-    display: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
     z-index: 9;
    // overflow: auto;
     color: @white;
@@ -83,15 +87,22 @@
         width: auto;
     }
 }
-
+.mediaWidth{
+    //width: 49%;
+    //display: inline-block;
+    margin: .2em;
+    flex-grow: 1;
+}
 @media screen and (min-width: @m_w_1) {
     .p_side{
         width: 15em;
         margin-right: 1em;
         float: left;
+        //display: block;
+        flex-direction: column;
         position: absolute;
         .s_block{
             width: 98%;
         }
-    }    
+    }   
 }

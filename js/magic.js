@@ -2,15 +2,56 @@ window.onload = function(){
 	var oConfig = {}; // global app config data
 	var oTimer; // for TimeOut (filtering)
 	var nTimerSeconds = 200;
+	function getViewPortSize(mod) {
+		var viewportwidth;
+		var viewportheight;
+
+		//Standards compliant browsers (mozilla/netscape/opera/IE7)
+		if (typeof window.innerWidth != 'undefined')
+		{
+			viewportwidth = window.innerWidth,
+			viewportheight = window.innerHeight
+		}
+
+		// IE6
+		else if (typeof document.documentElement != 'undefined'
+		&& typeof document.documentElement.clientWidth !=
+		'undefined' && document.documentElement.clientWidth != 0)
+		{
+			viewportwidth = document.documentElement.clientWidth,
+			viewportheight = document.documentElement.clientHeight
+		}
+
+		//Older IE
+		else
+		{
+			viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+			viewportheight = document.getElementsByTagName('body')[0].clientHeight
+		}
+
+		if(mod=="width")
+			return viewportwidth;
+		
+		return viewportwidth + "~" + viewportheight;
+	}
 	
 	function createSelect(src, params) {
 		var options = "";
 		var selected_key = params.selected_key;
 		var id = params.id? "id='"+params.id+"'" : "";
+		var sClass = params.controlClass? params.controlClass : "";
 		var atr_class = params.class? params.class : "";
 		var width = params.width? "; width: "+ params.width: "";
 		var lableText;
 		var min_width = 0;
+		var oParams = params.params;
+		var aParams = [], sParams="";
+		if(oParams) {
+			oParams.forEach(function(item) {
+				aParams.push(item.name+"='"+item.value+"'");
+			});
+			sParams = aParams.join(" ");
+		}
 		src.forEach(function(item){
 			var key = item.name;
 			var text = item.title;
@@ -23,13 +64,13 @@ window.onload = function(){
 		});
 		min_width = min_width>20? 20: min_width;
 		min_width = min_width<5? 5: min_width;
-		min_width = ~~(min_width*0.9);
+		min_width = ~~(min_width*0.85);
 
 		var list = "<ul class='list'>" + options + "</ul>";
 
 		var selectedKey = selected_key; 
 		var label="<div class='label "+atr_class+"' data-selected-key='" + selectedKey + "' style='min-width:"+min_width+"em "+width+"'>" + lableText + "</div>";
-		var select = "<button " + id + " class='customSelect' style='min-width:"+min_width+"em "+width+"'>" + label + list + "</button>"
+		var select = "<button " + id + " " + sParams + " class='customSelect "+sClass+"' style='min-width:"+min_width+"em "+width+"'>" + label + list + "</button>"
 
 		return select;
 	}	
@@ -43,6 +84,7 @@ window.onload = function(){
 		var checked = param.checkAll? "checked": "";
 		var isOpen = (param.isOpen!=undefined) ? param.isOpen : true;
 		var arrow, display = "", content_open=true;
+		var min_width = 0;
 		if(isOpen && isOpen != "false"){
 			arrow="<div class='combo_box_arrow'><span class='arr_down' style='display:none'>"+ARR_DOWN+"</span><span class='arr_up'>"+ARR_UP+"</span></div>";
 		} else {
@@ -52,10 +94,17 @@ window.onload = function(){
 		}			
 		for (var i =0; i < src.length; i++) {
 			var type = src[i];
+			var max = Math.max(type.en.length, type.ru.length)/2;
+			if (max > min_width) {
+				min_width = max;
+			}
 			ret+="<input "+checked+" type='checkbox' value='"+type.en+"' id='ch_"+type.en+"'><label for='ch_"+type.en+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
 			
 		}
-		ret = "<div "+id+" class='combo_box' data-text='"+title+"' data-content-open='"+content_open+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content' "+display+" >"+ret+"</div>"+arrow+"</div>";
+		min_width = min_width>20? 20: min_width;
+		min_width = min_width<5? 5: min_width;
+		min_width = ~~(min_width*0.9)+2;
+		ret = "<div "+id+" class='combo_box' style='min-width:"+min_width+"em' data-text='"+title+"' data-content-open='"+content_open+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content' "+display+" >"+ret+"</div>"+arrow+"</div>";
 		return ret;
 	}
 	
@@ -173,7 +222,16 @@ window.onload = function(){
 		$("#before_spells").hide();
 		$("#info_text").hide();
 	}
-	function showFiltered(sName, sClass, nLevelStart, nLevelEnd, aSchools, sLang) {
+	function showFiltered(oParams) {
+		var sName = oParams.sName;
+		var sClass = oParams.sClass;
+		var sSubClass = oParams.sSubClass;
+		var sSubSubClass = oParams.sSubSubClass;
+		var nLevelStart = oParams.nLevelStart;
+		var nLevelEnd = oParams.nLevelEnd;
+		var aSchools = oParams.aSchools;
+		var sLang = oParams.sLang;
+		
 		$(".spellContainer").empty();
 		var spells = "";
 		var filteredSpells = [];
@@ -181,9 +239,17 @@ window.onload = function(){
 		//console.log("# Start filtering");
 		
 		//class
+		var aSpells = [];
 		if(sClass) {
 			if(classSpells[sClass]) {
-				classSpells[sClass].spells.forEach(function(spellName){
+				aSpells = aSpells.concat(classSpells[sClass].spells);
+				if(classSpells[sClass].subclasses[sSubClass]) {
+					aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].spells);
+					if(classSpells[sClass].subclasses[sSubClass].subclasses && classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
+						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
+					}
+				}
+				aSpells.forEach(function(spellName){
 					var fFind = false;
 					for (var i = 0; i<allSpells.length; i++){	
 						if(allSpells[i].en.name == spellName) {
@@ -261,6 +327,8 @@ window.onload = function(){
 	function filterSpells(){
 		var sName = $("#NameInput input").val();
 		var sClass = $("#ClassSelect .label").attr("data-selected-key");
+		var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
+		var sSubSubClass = $("#SubSubClassSelect .label").attr("data-selected-key");
 		var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
 		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
 		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
@@ -271,7 +339,16 @@ window.onload = function(){
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
-			showFiltered(sName, sClass, nLevelStart, nLevelEnd, aSchools, sLang);
+			showFiltered({
+				sName: sName, 
+				sClass: sClass, 
+				sSubClass: sSubClass, 
+				sSubSubClass: sSubSubClass, 
+				nLevelStart: nLevelStart, 
+				nLevelEnd: nLevelEnd, 
+				aSchools: aSchools, 
+				sLang: sLang
+				});
 		}, nTimerSeconds/2);		
 		
 	}
@@ -295,7 +372,68 @@ window.onload = function(){
 		var classSelect = createSelect(src, {id: "ClassSelect", selected_key: "[ALL]", width: "100%"});
 		var label = createLabel("Класс");
 		
-		$(".p_side").append(label + classSelect);		
+		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");		
+	}
+	function createSubClassSelect(sClass) {
+		$("#SubSubClassSelect").remove();
+		var src = [{
+			name: "[NONE]",
+		    title: "[ПОДКЛАСС]"
+		}];
+		for (var i in classSpells[sClass].subclasses){
+			src.push(
+			{
+				name: i,
+				title: classSpells[sClass].subclasses[i].title.en+"<br>"+classSpells[sClass].subclasses[i].title.ru
+			}
+			);
+		}
+		var classSelect = createSelect(src, {id: "SubClassSelect", selected_key: "[NONE]", width: "100%"});
+		var label = createLabel("Класс");
+		
+		var index = 1;
+		if($("#SubClassSelect").length>0) {
+			index = $("button").index($("#SubClassSelect"));
+			$("#SubClassSelect").remove();
+		}
+		
+		if(src.length>1) {
+			$("#ClassSelect").parent().find("button").eq(index-1).after(classSelect);
+			//$("#ClassSelect").parent().append(classSelect);
+		}
+		
+		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
+	}
+	function createSubSubClassSelect(sClass, sSubClass) {
+		var src = [{
+			name: "[NONE]",
+		    title: "[ПОДПОДКЛАСС]"
+		}];
+		for (var i in classSpells[sClass].subclasses[sSubClass].subclasses){
+			src.push(
+			{
+				name: i,
+				title: classSpells[sClass].subclasses[sSubClass].subclasses[i].title.en+"<br>"+classSpells[sClass].subclasses[sSubClass].subclasses[i].title.ru
+			}
+			);
+		}
+		var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%"});
+		var label = createLabel("Класс");
+		//src[0].title= "[Полкласс]";
+		
+		var index = 1;
+		if($("#SubSubClassSelect").length>0) {
+			index = $("button").index($("#SubSubClassSelect"));
+			$("#SubSubClassSelect").remove();
+		} else {
+			index = $("button").index($("#SubClassSelect"));
+		}
+		
+		if(src.length>1) {
+			$("#SubClassSelect").after(classSelect);
+			//$("#ClassSelect").parent().append(classSelect);
+		}
+		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
 	}
 	function createLevelSelect() {
 		var src = [];
@@ -311,18 +449,18 @@ window.onload = function(){
 		var s2 = createSelect(src, {id: "LevelEnd", selected_key: 9, width: "100%"});
 		var str = "<div class='row'><div class='cell'>"+s1+"</div><div class='cell'>"+s2+"</div></div>";
 		var label = createLabel("Уровень с/по");
-		$(".p_side").append(label+str);	
+		$(".p_side").append("<div class='mediaWidth'>" + label + str + "</div>");	
 	}
 	function createSchoolCombobox(isOpen) {	
 		if(isOpen == undefined)
 			isOpen = true;
 		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школа", checkAll: true, isOpen: isOpen});
-		$(".p_side").append(s1);
+		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 	}
 	function createNameFilter() {
 		var ret=createInput({id: "NameInput"});
 		var label = createLabel("Название");
-		$(".p_side").append(label +ret);		
+		$(".p_side").append("<div class='mediaWidth'>" + label + ret + "</div>");		
 	}
 	function createLangSelect(lang) {
 		var src = [
@@ -339,7 +477,7 @@ window.onload = function(){
 			lang = "ru";
 		var classSelect = createSelect(src, {id: "LangSelect", selected_key: lang, width: "100%"});
 		var label = createLabel("Язык");
-		$(".p_side").append(label+classSelect);	
+		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");	
 	}
 	
 	function createSidebar() {
@@ -378,6 +516,8 @@ window.onload = function(){
 	  $(this).closest(".customSelect").find(".label").attr("data-selected-key", key).text(text);
 	  $(this).parent("ul").fadeOut();
 	  $(this).closest(".customSelect").focusout();
+	  $(this).closest(".customSelect").blur();
+	  //$("#toFocus").focus();	  
 	});
 	
 	// custom Combobox
@@ -565,8 +705,30 @@ window.onload = function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			filterSpells();
+			var sClass = $("#ClassSelect .label").attr("data-selected-key");
+			createSubClassSelect(sClass);
 		}, nTimerSeconds);		
 	});
+	// sub class select
+	$("body").on('focusout', "#SubClassSelect", function(){
+		clearTimeout(oTimer);
+		
+		oTimer = setTimeout(function(){
+			filterSpells();
+			var sClass = $("#ClassSelect .label").attr("data-selected-key");
+			var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
+			createSubSubClassSelect(sClass, sSubClass);
+		}, nTimerSeconds);		
+	});
+	// sub sub class select
+	$("body").on('focusout', "#SubSubClassSelect", function(){
+		clearTimeout(oTimer);
+		
+		oTimer = setTimeout(function(){
+			filterSpells();			
+		}, nTimerSeconds);		
+	});
+	
 	// level select
 	$("body").on('focusout', "#LevelStart", function(){
 		clearTimeout(oTimer);
@@ -599,10 +761,19 @@ window.onload = function(){
 		}, nTimerSeconds);		
 	});
 	
+	// show all spells
+	$("body").on('click', "#showAllSpells", function(){
+		filterSpells();	
+		return false;
+	});
+	
 	
 	//createSpellsIndex();	
 	
 	$.when(createSidebar()).done(
-		filterSpells()
+		function(){
+			if(getViewPortSize("width") > 600)
+				filterSpells()
+		}
 	);
 }; 
