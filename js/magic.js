@@ -64,7 +64,7 @@ window.onload = function(){
 		});
 		min_width = min_width>20? 20: min_width;
 		min_width = min_width<5? 5: min_width;
-		min_width = ~~(min_width*0.85);
+		min_width = ~~(min_width*0.75);
 
 		var list = "<ul class='list'>" + options + "</ul>";
 
@@ -113,6 +113,18 @@ window.onload = function(){
 		return "<div "+id+" class='customInput'><input type='text'><span class='cross'></span></div>";
 	}
 	
+	function showInfoWin(sText) {
+		if(!$(".mod_win").length){
+			$("body").append("<div class='mod_win'>"+sText+"</div>");
+		}
+		$(".mod_win").fadeIn();
+	}
+	function hideInfoWin() {
+		if($(".mod_win").length){
+			$(".mod_win").fadeOut();
+		}
+
+	}
 	function showDBG() {
 		if(!$("#dbg").length){
 			$("body").append("<div id='dbg'></div>");
@@ -243,7 +255,7 @@ window.onload = function(){
 		if(sClass) {
 			if(classSpells[sClass]) {
 				aSpells = aSpells.concat(classSpells[sClass].spells);
-				if(classSpells[sClass].subclasses[sSubClass]) {
+				if(classSpells[sClass].subclasses && classSpells[sClass].subclasses[sSubClass]) {
 					aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].spells);
 					if(classSpells[sClass].subclasses[sSubClass].subclasses && classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
 						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
@@ -353,6 +365,12 @@ window.onload = function(){
 		
 	}
 	
+	function createButtons() {
+		var bHome = "<a href='/' class='bt'><i class='fa fa-home'></i></a>";
+		var bInfo = "<a href='/' class='bt' id='bInfo'><i class='fa fa-question-circle'></i></a>";
+		$(".p_side").append("<div class='mediaWidth'>" + bHome + bInfo + "</div>");		
+	}
+	
 	function createLabel(text) {
 		return "<div class='filterLabel'>"+text+"</div>";
 	}
@@ -453,8 +471,8 @@ window.onload = function(){
 	}
 	function createSchoolCombobox(isOpen) {	
 		if(isOpen == undefined)
-			isOpen = true;
-		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школа", checkAll: true, isOpen: isOpen});
+			isOpen = false;
+		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 	}
 	function createNameFilter() {
@@ -483,6 +501,7 @@ window.onload = function(){
 	function createSidebar() {
 		var lang = getConfig("language");
 		var schoolOpen = getConfig("schoolOpen");
+		createButtons();
 		createNameFilter();
 		createClassSelect();
 		createLevelSelect();
@@ -498,6 +517,7 @@ window.onload = function(){
 	// hide DBG
 	$("body").on("click", "#dbg", function() {
 		$(this).fadeOut();
+		hideInfoWin();
 	});
 	
 	//custom Select
@@ -764,9 +784,18 @@ window.onload = function(){
 	// show all spells
 	$("body").on('click', "#showAllSpells", function(){
 		filterSpells();	
+		hideInfoWin();
+		hideDBG();
 		return false;
 	});
 	
+	//info_textbInfo
+	$("body").on('click', "#bInfo", function(){
+		var sInfo = $("#info_text").html();
+		showDBG();
+		showInfoWin(sInfo);
+		return false;
+	});
 	
 	//createSpellsIndex();	
 	
