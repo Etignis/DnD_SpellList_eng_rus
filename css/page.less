@@ -42,7 +42,7 @@
     font-size: 14px;
     padding-left: 1em;
 }
-button, .bt{
+.bt{
     .fr-convex;
     background: @m-gray;
     padding: .2em;
@@ -56,6 +56,24 @@ button, .bt{
     }
     &:active{
         background:  @m-gray - #111;    
+    }
+}
+
+.button {
+    .frame(1px, 2px, 1px);
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    padding: .9em 1.6em;
+    margin: .5em .5em 0em;
+    background: #fdfdfd;
+    text-decoration: none;
+    color: @color;
+    transition: box-shadow .3s, background .3s, color .3s;
+    
+    &:hover{
+        background: #f9f9f9;
+        color: @color - #111;
+        box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -85,7 +103,80 @@ button, .bt{
     margin: 0;
     z-index: 88;
     background: rgba(0,0,0,.7);
+    display: none;
 }
+.filterLabel{
+    width: 100%;
+    padding: .2em 0.1em 0;
+    font-weight: bold;
+    &:after{
+        content: ":";
+    }
+}
+
+.customInput{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    input[type=text]{
+        .fr-concave;
+        cursor: text;
+        background: @white;
+        padding: .6em;
+        padding-right: 1.4em;
+        display: block;
+        width: 100%;
+        margin: 0;
+        color: @d-gray;
+        font-weight: 400;
+    }
+    .cross{
+        position: absolute;
+        top: .12em;
+        right: .2em;
+        color: @l-gray;
+        cursor: pointer;
+        margin: .3em;
+        transition: color .3s;
+        &:before{
+            content: "✖";
+        }
+        &:hover{
+            color: @color;
+            opacity: .9;
+        }
+        &:active{
+            color: @color - #222;
+            text-shadow: 0 0 3px 3px @d-gray;
+            opacity: 1;
+        }
+    }
+    
+    &:focus{
+        box-shadow: 0 0 5px 0 @color;
+    }
+}
+
+#info_text{
+    padding: .3em;
+    background: rgba(255,255,255,.6);
+    color: @d-gray;
+    font-weight: 600;
+}
+// *{
+//     &:focus{
+//         outline: 1px solid orange;
+//     }
+// }
+// #toFocus{
+//     wisth: 0;
+//     height: 0;
+//     padding: 0;
+//     margin: 0;
+//     border: 0;
+// }
 
 @media screen and (min-width: @m_w_1) {
     .page{

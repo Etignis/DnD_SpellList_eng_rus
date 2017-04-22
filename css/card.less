@@ -1,460 +1,308 @@
-.cardContainer {
-   
-    h1{
-        
+@mainColor: #e01a10;
+@radius: 5px;
+.row{
+    float: none;
+    clear: both;
+    &:before, &:after{
+        content:"";
+        .clear();
     }
-.transit(width, .3s, ease-out,0s);
-    display: inline-block;
+    
+    .cell{
+        float: left;
+        width: 50%;  
+    }
+}
+
+.cardContainer{
+    page-break-inside: avoid;
     width: 2.5in;
-    min-width: 2.5in;
+    margin-right: 1px;
+    margin-top: 1px;
+    float: left;
+    
+    .row{
+        border-bottom: 2px solid @mainColor; 
+        display: flex;
+        flex-direction: row;
+        align-content: stretch;
+        .cell{  
+            float: none;
+            text-align: center;
+            font-size: 65%;      
+            
+            &:first-of-type{
+                border-right: 1px solid @mainColor;      
+            }
+            &:last-of-type{
+                border-left: 1px solid @mainColor;      
+            }
+            span, b{
+                display: block;
+            }
+            b{
+                text-transform: uppercase;
+                font-size: 90%;
+                padding: 2px 0 0;
+            }
+        }
+    }
+}
+
+.spellCard{
     height: 3.5in;
-    background: @c_standart!important;
-    padding: 0;
-    font-size: 10px;
+    background: @mainColor;
+    border: 9px solid @mainColor;
+    border-bottom-width: 25px;
+    //overflow: hidden;
     position: relative;
-    margin: 0px;
-    vertical-align: top;
-    text-align: left;
-    z-index: 1;
-    margin: 0 1px 1px 0;
-    
-    
-     .front, .back {
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-       
-     }
-     .panel {
-       
-        height: 100%;
-        width: 100%;
-        padding: 10px 10px 25px;
-     
+    color: @m-gray - #111;
+    .content{
+        border-radius: @radius;
+        background: @white;
         position: absolute;
         top: 0;
+        bottom: 0;
         left: 0;
+        right: 0;
         
-        .cont {
-            background-color: #fff!important;
-            border-radius: 5px;
-            height: 100%;
-            overflow: hidden;
-            position: relative;
-            
-            .font_sizer{
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                opacity: .3;
-                    
-                &:hover{
-                   opacity: 1;
-                }
-                    
-                .f_min, .f_max{
-                    display: inline-block;
-                    padding: .2em .4em;
-                    color: #777;
-                    font-size: 14px;
-                    cursor: pointer;
-                    
-                    &:hover{
-                        color: #111;
-                    }
-                }
-            }
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    .cell{
+        span{
+            font-size: 109%;
         }
-     }
-    .name {
-        font-size: 14px;
-        line-height: 20px;
-        padding: 2px 5px;
+    }
+    h1{
+        font-size: 95%;
         margin: 0;
-        text-transform: uppercase;
-        text-align: center;
-        min-height: 20px;
-        position: relative;
-        
-        .hide_spell{
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: .2em .4em;
-            cursor: pointer;
-            .transit(background, .3s);
-            &:hover{
-                background: rgba(0,0,0,.4);
-                color: @white;
-                padding: .4em .6em;
-                top: -.2em;
-                right: -.2em;
-            }
-        }
-    }
-    .bord {
-        border-bottom: 2px solid maroon;
-    }
-     .status {
-        list-style: none;
-        text-align: center;
         padding: 0;
-        margin: 0;
-        overflow: auto;
-        &:before, &:after{
-            content:"";
-            clear: both;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 2px solid @mainColor;
+    }
+    .materials{
+        color: @white;
+        background: @mainColor !important;
+        font-size: 75%;
+        padding: 0 2px;
+        font-style: oblique;
+    }
+    .text{
+        font-size: 75%;
+        padding: 2px;
+        overflow-y: auto;
+        flex-shrink: 99;
+        .scrollbars(5px, @m-gray, @l-gray);
+    }
+    .class{
+        position: absolute;
+        left: 1px;
+        bottom: -20px;
+        font-size: 70%;
+        color: @white;
+    }
+    .school{
+        position: absolute;
+        right: 1px;
+        bottom: -20px;
+        font-size: 70%;
+        color: @white;
+    }
+}
+
+.Bard{
+    .spellCard{
+        @mainColor: #e91e63;
+        background-color: @mainColor;
+        border-color: @mainColor;
+        h1{
+            border-bottom-color: @mainColor;
         }
-        
-        .w50 {
-            display: inline-block;
-            padding: 2px 4px;
-            float: left;
-            vertical-align: top;
-            font-size: 9px;
-            line-height: 9px;
-            min-height: 25px;
-            width: 50%;
-            margin: 0;
-          /*  box-sizing: border-box;
-            -moz-box-sizing: border-box;*/
-            
-            b {
-                font-style: normal;
-                text-transform: uppercase;
-                display: block;
-                color: @c_standart!important;
-                font-weight: bold;
-                padding-bottom: 2px;
+        .materials{
+            background: @mainColor !important;
+        }
+        .row{
+            border-bottom-color: @mainColor; 
+            .cell{ 
+                &:first-of-type{
+                    border-right-color: @mainColor;      
+                }
+                &:last-of-type{
+                    border-left-color: @mainColor;      
+                }                
             }
         }
-        .w50.second {
-            border-left: 2px solid @c_standart;
+    }
+}
+.Cleric{
+    .spellCard{
+        @mainColor: #FDD835;
+        background-color: @mainColor;
+        border-color: @mainColor;
+        h1{
+            border-bottom-color: @mainColor;
+        }
+        .materials{
+            background: @mainColor !important;
+        }
+        .row{
+            border-bottom-color: @mainColor; 
+            .cell{ 
+                &:first-of-type{
+                    border-right-color: @mainColor;      
+                }
+                &:last-of-type{
+                    border-left-color: @mainColor;      
+                }                
+            }
         }
     }
-    .need {
-        color: #fff!important;
-        background-color: @c_standart!important;
-        display: block;
-        padding: 2px 4px 4px;
-        font-weight: normal;
-        font-style: italic;
-        line-height: 100%;
-    }
-    .text {
-        padding: 2px 4px;
-        font-size: 10px;
-        line-height: 9px;
-        margin: 0;
-    }
-    .class {
-        position: absolute;
-        bottom: 8px;
-        color: #fff!important;
-        left: 10px;
-        font-size: 9px;
-        font-weight: normal;
-    }
-    .type {
-        position: absolute;
-        bottom: 8px;
-        color: #fff!important;
-        right: 10px;
-        font-size: 10px;
-        font-weight: normal;
+}
+.Druid{
+    .spellCard{
+        @mainColor: #795548;
+        background-color: @mainColor;
+        border-color: @mainColor;
+        h1{
+            border-bottom-color: @mainColor;
+        }
+        .materials{
+            background: @mainColor !important;
+        }
+        .row{
+            border-bottom-color: @mainColor; 
+            .cell{ 
+                &:first-of-type{
+                    border-right-color: @mainColor;      
+                }
+                &:last-of-type{
+                    border-left-color: @mainColor;      
+                }                
+            }
+        }
     }
 }
-
-.cardContainer * {
-    font-size: 10px;
-    color: #676a6c;//!important;
+.Paladin{
+    .spellCard{
+        @mainColor: #2196f3;
+        background-color: @mainColor;
+        border-color: @mainColor;
+        h1{
+            border-bottom-color: @mainColor;
+        }
+        .materials{
+            background: @mainColor !important;
+        }
+        .row{
+            border-bottom-color: @mainColor; 
+            .cell{ 
+                &:first-of-type{
+                    border-right-color: @mainColor;      
+                }
+                &:last-of-type{
+                    border-left-color: @mainColor;      
+                }                
+            }
+        }
+    }
 }
-
-@c_red: #B71C1C;
-@c_yellow: #FBC02D;
-@c_green: #43A047;
-@c_blue: #1E88E5;
-@c_brown: #6D4C41;
-@c_purple: #7B1FA2;
-@c_standart: #546E7A;
-
-/* wisard */
-.cardContainer.class-1 .status div em, 
-.cardContainer.class-1 .level-1, 
-.cardContainer.class-1 .level-2, 
-.cardContainer.class-1 .b-lt, 
-.cardContainer.class-1 .b-rt, 
-.cardContainer.class-1 .b-lb, 
-.cardContainer.class-1 .b-rb, 
-.cardContainer.class-1 .icon, 
-.cardContainer.class-1 .icon-top, 
-.cardContainer.class-1 .icon-bot, 
-.class-1 .body .b-lt:after, 
-.class-1 .body .b-rt:after, 
-.class-1 .body .b-lb:after, 
-.class-1 .body .b-rb:after, 
-.class-1 .body .b-lt:before, 
-.class-1 .body .b-rt:before, 
-.class-1 .body .b-lb:before, 
-.class-1 .body .b-rb:before {
-	color: @c_red!important;
+.Ranger{
+    .spellCard{
+        @mainColor: #4caf50;
+        background-color: @mainColor;
+        border-color: @mainColor;
+        h1{
+            border-bottom-color: @mainColor;
+        }
+        .materials{
+            background: @mainColor !important;
+        }
+        .row{
+            border-bottom-color: @mainColor; 
+            .cell{ 
+                &:first-of-type{
+                    border-right-color: @mainColor;      
+                }
+                &:last-of-type{
+                    border-left-color: @mainColor;      
+                }                
+            }
+        }
+    }
 }
-.cardContainer.class-1 .back .line, 
-.cardContainer.class-1 .bord, 
-.cardContainer.class-1 .status div.second, 
-.cardContainer.class-1 .b-lt, 
-.cardContainer.class-1 .b-rt, 
-.cardContainer.class-1 .b-lb, 
-.cardContainer.class-1 .b-rb {
-      border-color: @c_red!important;
+.Sorcerer{
+    .spellCard{
+        @mainColor: #ff9800;
+        background-color: @mainColor;
+        border-color: @mainColor;
+        h1{
+            border-bottom-color: @mainColor;
+        }
+        .materials{
+            background: @mainColor !important;
+        }
+        .row{
+            border-bottom-color: @mainColor; 
+            .cell{ 
+                &:first-of-type{
+                    border-right-color: @mainColor;      
+                }
+                &:last-of-type{
+                    border-left-color: @mainColor;      
+                }                
+            }
+        }
+    }
 }
-.cardContainer.class-1, 
-.cardContainer.class-1 .need {
-    background-color: @c_red!important;
+.Warlock{
+    .spellCard{
+        @mainColor: #673ab7;
+        background-color: @mainColor;
+        border-color: @mainColor;
+        h1{
+            border-bottom-color: @mainColor;
+        }
+        .materials{
+            background: @mainColor !important;
+        }
+        .row{
+            border-bottom-color: @mainColor; 
+            .cell{ 
+                &:first-of-type{
+                    border-right-color: @mainColor;      
+                }
+                &:last-of-type{
+                    border-left-color: @mainColor;      
+                }                
+            }
+        }
+    }
 }
-
-/* bard */
-.cardContainer.class-2 .status div em, 
-.cardContainer.class-2 .level-2, 
-.cardContainer.class-2 .level-2, 
-.cardContainer.class-2 .b-lt, 
-.cardContainer.class-2 .b-rt, 
-.cardContainer.class-2 .b-lb, 
-.cardContainer.class-2 .b-rb, 
-.cardContainer.class-2 .icon, 
-.cardContainer.class-2 .icon-top, 
-.cardContainer.class-2 .icon-bot, 
-.class-2 .body .b-lt:after, 
-.class-2 .body .b-rt:after, 
-.class-2 .body .b-lb:after, 
-.class-2 .body .b-rb:after, 
-.class-2 .body .b-lt:before, 
-.class-2 .body .b-rt:before, 
-.class-2 .body .b-lb:before, 
-.class-2 .body .b-rb:before {
-    color: @c_purple!important;
-}
-.cardContainer.class-2 .back .line, 
-.cardContainer.class-2 .bord, 
-.cardContainer.class-2 .status div.second, 
-.cardContainer.class-2 .b-lt, 
-.cardContainer.class-2 .b-rt, 
-.cardContainer.class-2 .b-lb, 
-.cardContainer.class-2 .b-rb {
-    border-color: @c_purple!important;
-}
-.cardContainer.class-2, 
-.cardContainer.class-2 .need {
-    background-color: @c_purple!important;
-}
-
-/* cleric */
-.cardContainer.class-3 .status div em, 
-.cardContainer.class-3 .level-3, 
-.cardContainer.class-3 .level-3, 
-.cardContainer.class-3 .b-lt, 
-.cardContainer.class-3 .b-rt, 
-.cardContainer.class-3 .b-lb, 
-.cardContainer.class-3 .b-rb, 
-.cardContainer.class-3 .icon, 
-.cardContainer.class-3 .icon-top, 
-.cardContainer.class-3 .icon-bot, 
-.class-3 .body .b-lt:after, 
-.class-3 .body .b-rt:after, 
-.class-3 .body .b-lb:after, 
-.class-3 .body .b-rb:after, 
-.class-3 .body .b-lt:before, 
-.class-3 .body .b-rt:before, 
-.class-3 .body .b-lb:before, 
-.class-3 .body .b-rb:before {
-    color: @c_yellow!important;
-}
-.cardContainer.class-3 .back .line, 
-.cardContainer.class-3 .bord, 
-.cardContainer.class-3 .status div.second, 
-.cardContainer.class-3 .b-lt, 
-.cardContainer.class-3 .b-rt, 
-.cardContainer.class-3 .b-lb, 
-.cardContainer.class-3 .b-rb {
-    border-color: @c_yellow!important;
-}
-.cardContainer.class-3, 
-.cardContainer.class-3 .need {
-    background-color: @c_yellow!important;
-}
-
-/* druid */
-.cardContainer.class-4 .status div em, 
-.cardContainer.class-4 .level-4, 
-.cardContainer.class-4 .level-4, 
-.cardContainer.class-4 .b-lt, 
-.cardContainer.class-4 .b-rt, 
-.cardContainer.class-4 .b-lb, 
-.cardContainer.class-4 .b-rb, 
-.cardContainer.class-4 .icon, 
-.cardContainer.class-4 .icon-top, 
-.cardContainer.class-4 .icon-bot, 
-.class-4 .body .b-lt:after, 
-.class-4 .body .b-rt:after, 
-.class-4 .body .b-lb:after, 
-.class-4 .body .b-rb:after, 
-.class-4 .body .b-lt:before, 
-.class-4 .body .b-rt:before, 
-.class-4 .body .b-lb:before, 
-.class-4 .body .b-rb:before {
-    color: @c_brown!important;
-}
-.cardContainer.class-4 .back .line, 
-.cardContainer.class-4 .bord, 
-.cardContainer.class-4 .status div.second, 
-.cardContainer.class-4 .b-lt, 
-.cardContainer.class-4 .b-rt, 
-.cardContainer.class-4 .b-lb, 
-.cardContainer.class-4 .b-rb {
-    border-color: @c_brown!important;
-}
-.cardContainer.class-4, 
-.cardContainer.class-4 .need {
-    background-color: @c_brown!important;
-}
-
-/* paladin */
-.cardContainer.class-5 .status div em, 
-.cardContainer.class-5 .level-1, 
-.cardContainer.class-5 .level-2, 
-.cardContainer.class-5 .b-lt, 
-.cardContainer.class-5 .b-rt, 
-.cardContainer.class-5 .b-lb, 
-.cardContainer.class-5 .b-rb, 
-.cardContainer.class-5 .icon, 
-.cardContainer.class-5 .icon-top, 
-.cardContainer.class-5 .icon-bot, 
-.class-5 .body .b-lt:after, 
-.class-5 .body .b-rt:after, 
-.class-5 .body .b-lb:after, 
-.class-5 .body .b-rb:after, 
-.class-5 .body .b-lt:before, 
-.class-5 .body .b-rt:before, 
-.class-5 .body .b-lb:before, 
-.class-5 .body .b-rb:before {
-    color: @c_blue!important;
-}
-.cardContainer.class-5 .back .line, 
-.cardContainer.class-5 .bord, 
-.cardContainer.class-5 .status div.second, 
-.cardContainer.class-5 .b-lt, 
-.cardContainer.class-5 .b-rt, 
-.cardContainer.class-5 .b-lb, 
-.cardContainer.class-5 .b-rb {
-    border-color: @c_blue!important;
-}
-.cardContainer.class-5, 
-.cardContainer.class-5 .need {
-    background-color: @c_blue!important;
-}
-
-/* Ranger */
-.cardContainer.class-6 .status div em, 
-.cardContainer.class-6 .level-6, 
-.cardContainer.class-6 .level-6, 
-.cardContainer.class-6 .b-lt, 
-.cardContainer.class-6 .b-rt, 
-.cardContainer.class-6 .b-lb, 
-.cardContainer.class-6 .b-rb, 
-.cardContainer.class-6 .icon, 
-.cardContainer.class-6 .icon-top, 
-.cardContainer.class-6 .icon-bot, 
-.class-6 .body .b-lt:after, 
-.class-6 .body .b-rt:after, 
-.class-6 .body .b-lb:after, 
-.class-6 .body .b-rb:after, 
-.class-6 .body .b-lt:before, 
-.class-6 .body .b-rt:before, 
-.class-6 .body .b-lb:before, 
-.class-6 .body .b-rb:before {
-    color: @c_green!important;
-}
-.cardContainer.class-6 .back .line, 
-.cardContainer.class-6 .bord, 
-.cardContainer.class-6 .status div.second, 
-.cardContainer.class-6 .b-lt, 
-.cardContainer.class-6 .b-rt, 
-.cardContainer.class-6 .b-lb, 
-.cardContainer.class-6 .b-rb {
-    border-color: @c_green!important;
-}
-.cardContainer.class-6, 
-.cardContainer.class-6 .need {
-    background-color: @c_green!important;
-}
-
-/* warloc */
-.cardContainer.class-7 .status div em, 
-.cardContainer.class-7 .level-7, 
-.cardContainer.class-7 .level-7, 
-.cardContainer.class-7 .b-lt, 
-.cardContainer.class-7 .b-rt, 
-.cardContainer.class-7 .b-lb, 
-.cardContainer.class-7 .b-rb, 
-.cardContainer.class-7 .icon, 
-.cardContainer.class-7 .icon-top, 
-.cardContainer.class-7 .icon-bot, 
-.class-7 .body .b-lt:after, 
-.class-7 .body .b-rt:after, 
-.class-7 .body .b-lb:after, 
-.class-7 .body .b-rb:after, 
-.class-7 .body .b-lt:before, 
-.class-7 .body .b-rt:before, 
-.class-7 .body .b-lb:before, 
-.class-7 .body .b-rb:before {
-    color: @c_purple!important;
-}
-.cardContainer.class-7 .back .line, 
-.cardContainer.class-7 .bord, 
-.cardContainer.class-7 .status div.second, 
-.cardContainer.class-7 .b-lt, 
-.cardContainer.class-7 .b-rt, 
-.cardContainer.class-7 .b-lb, 
-.cardContainer.class-7 .b-rb {
-    border-color: @c_purple!important;
-}
-.cardContainer.class-7, 
-.cardContainer.class-7 .need {
-    background-color: @c_purple!important;
-}
-
-/* sorcerer */
-.cardContainer.class-8 .status div em, 
-.cardContainer.class-8 .level-1, 
-.cardContainer.class-8 .level-2, 
-.cardContainer.class-8 .b-lt, 
-.cardContainer.class-8 .b-rt, 
-.cardContainer.class-8 .b-lb, 
-.cardContainer.class-8 .b-rb, 
-.cardContainer.class-8 .icon, 
-.cardContainer.class-8 .icon-top, 
-.cardContainer.class-8 .icon-bot, 
-.class-8 .body .b-lt:after, 
-.class-8 .body .b-rt:after, 
-.class-8 .body .b-lb:after, 
-.class-8 .body .b-rb:after, 
-.class-8 .body .b-lt:before, 
-.class-8 .body .b-rt:before, 
-.class-8 .body .b-lb:before, 
-.class-8 .body .b-rb:before {
-    color: @c_purple!important;
-}
-.cardContainer.class-8 .back .line, 
-.cardContainer.class-8 .bord, 
-.cardContainer.class-8 .status div.second, 
-.cardContainer.class-8 .b-lt, 
-.cardContainer.class-8 .b-rt, 
-.cardContainer.class-8 .b-lb, 
-.cardContainer.class-8 .b-rb {
-    border-color: @c_purple!important;
-}
-.cardContainer.class-8, 
-.cardContainer.class-8 .need {
-    background-color: @c_purple!important;
+.Wizard{
+    .spellCard{
+        @mainColor: #f44336;
+        background-color: @mainColor;
+        border-color: @mainColor;
+        h1{
+            border-bottom-color: @mainColor;
+        }
+        .materials{
+            background: @mainColor !important;
+        }
+        .row{
+            border-bottom-color: @mainColor; 
+            .cell{ 
+                &:first-of-type{
+                    border-right-color: @mainColor;      
+                }
+                &:last-of-type{
+                    border-left-color: @mainColor;      
+                }                
+            }
+        }
+    }
 }

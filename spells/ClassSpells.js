@@ -4,8 +4,8 @@ var classSpells = {
 		en: "Bard",
 		ru: "Бард"
 	  },
-	  spells: {
-		0:[
+	  spells: [
+		
 		  "Blade Ward",
 		  "Dancing Lights",
 		  "Friends",
@@ -16,9 +16,9 @@ var classSpells = {
 		  "Minor Illusion",
 		  "Prestidigitation",
 		  "True Strike",
-		  "Vicious Mockery"
-		],
-		1:[
+		  "Vicious Mockery",
+		
+		
 		  "Animal Friendship",
 		  "Bane",
 		  "Charm Person",
@@ -39,9 +39,9 @@ var classSpells = {
 		  "Speak with Animals",
 		  "Tasha's Hideous Laughter",
 		  "Thunderwave",
-		  "Unseen Servant"
-		],
-		2:[
+		  "Unseen Servant",
+		
+		
 		  "Animal Messenger",
 		  "Blindness/Deafness",
 		  "Calm Emotions",
@@ -63,15 +63,15 @@ var classSpells = {
 		  "Shatter",
 		  "Silence",
 		  "Suggestion",
-		  "Zone of Truth"
-		],
-		3:[
+		  "Zone of Truth",
+		
+		
 		  "Bestow Curse",
 		  "Clairvoyance",
 		  "Dispel Magic",
 		  "Fear",
 		  "Feign Death",
-		  "Glyph o f Warding",
+		  "Glyph of Warding",
 		  "Hypnotic Pattern",
 		  "Leomund's Tiny Hut",
 		  "Major Image",
@@ -81,9 +81,9 @@ var classSpells = {
 		  "Speak with Dead",
 		  "Speak with Plants",
 		  "Stinking Cloud",
-		  "Tongues"
-		],
-		4:[
+		  "Tongues",
+		
+		
 		  "Compulsion",
 		  "Confusion",
 		  "Dimension Door",
@@ -91,9 +91,9 @@ var classSpells = {
 		  "Greater Invisibility",
 		  "Hallucinatory Terrain",
 		  "Locate Creature",
-		  "Polymorph"
-		],
-		5:[
+		  "Polymorph",
+		
+		
 		  "Animate Objects",
 		  "Awaken",
 		  "Dominate Person",
@@ -109,61 +109,61 @@ var classSpells = {
 		  "Raise Dead",
 		  "Scrying",
 		  "Seeming",
-		  "Teleportation Circle"
-		],
-		6:[
+		  "Teleportation Circle",
+		
+		
 		  "Eyebite",
 		  "Find the Path",
 		  "Guards and Wards",
 		  "Mass Suggestion",
 		  "Otto's Irresistible Dance",
 		  "Programmed Illusion",
-		  "True Seeing"
-		],
-		7:[
+		  "True Seeing",
+		
+		
 		  "Etherealness",
 		  "Forcecage",
 		  "Mirage Arcane",
-		  "Mordenkainen's",
-		  "Magnificent Mansion",
+		  "Mordenkainen's Magnificent Mansion",
 		  "Mordenkainen's Sword",
 		  "Project Image",
 		  "Regenerate",
 		  "Resurrection",
 		  "Symbol",
-		  "Teleport"
-		],
-		8:[
+		  "Teleport",
+		
+		
 		  "Dominate Monster",
 		  "Feeblemind",
 		  "Glibness",
 		  "Mind Blank",
-		  "Power Word Stun"
-		],
-		9:[
+		  "Power Word Stun",
+		
+		
 		  "Foresight",
 		  "Power Word Heal",
 		  "Power Word Kill",
 		  "True Polymorph"
 		]
-	  }
+	  
 	},
 	Cleric: {
 	  title: {
 		en: "Cleric",
 		ru: "Жрец"
 	  },
-	  spells: {
-		0:[
+	  color: "",
+	  spells: [
+		
 		  "Guidance",
 		  "Light",
 		  "Mending",
 		  "Resistance",
 		  "Sacred Flame",
 		  "Spare the Dying",
-		  "Thaumaturgy"
-		],
-		1:[
+		  "Thaumaturgy",
+		
+		
 		  "Bane",
 		  "Bless",
 		  "Command",
@@ -175,13 +175,12 @@ var classSpells = {
 		  "Guiding Bolt",
 		  "Healing Word",
 		  "Inflict Wounds",
-		  "Protection from",
-		  "Evil and Good",
+		  "Protection from Evil and Good",
 		  "Purify Food and Drink",
 		  "Sanctuary",
-		  "Shield of Faith"
-		],
-		2:[
+		  "Shield of Faith",
+		
+		
 		  "Aid",
 		  "Augury",
 		  "Blindness/Deafness",
@@ -198,9 +197,9 @@ var classSpells = {
 		  "Silence",
 		  "Spiritual Weapon",
 		  "Warding Bond",
-		  "Zone o f Truth"
-		],
-		3:[
+		  "Zone of Truth",
+		
+		
 		  "Animate Dead",
 		  "Beacon of Hope",
 		  "Bestow Curse",
@@ -209,7 +208,7 @@ var classSpells = {
 		  "Daylight",
 		  "Dispel Magic",
 		  "Feign Death",
-		  "Glyph o f Warding",
+		  "Glyph of Warding",
 		  "Magic Circle",
 		  "Mass Healing Word",
 		  "Meld into Stone",
@@ -220,9 +219,9 @@ var classSpells = {
 		  "Speak with Dead",
 		  "Spirit Guardians",
 		  "Tongues",
-		  "Water Walk"
-		],
-		4:[
+		  "Water Walk",
+		
+		
 		  "Banishment",
 		  "Control Water",
 		  "Death Ward",
@@ -230,9 +229,9 @@ var classSpells = {
 		  "Freedom of Movement",
 		  "Guardian of Faith",
 		  "Locate Creature",
-		  "Stone Shape"
-		],
-		5:[
+		  "Stone Shape",
+		
+		
 		  "Commune",
 		  "Contagion",
 		  "Dispel Evil and Good",
@@ -245,9 +244,9 @@ var classSpells = {
 		  "Mass Cure Wounds",
 		  "Planar Binding",
 		  "Raise Dead",
-		  "Scrying"
-		],
-		6:[
+		  "Scrying",
+		
+		
 		  "Blade Barrier",
 		  "Create Undead",
 		  "Find the Path",
@@ -257,9 +256,9 @@ var classSpells = {
 		  "Heroes' Feast",
 		  "Planar Ally",
 		  "True Seeing",
-		  "Word of Recall"
-		],
-		7:[
+		  "Word of Recall",
+		
+		
 		  "Conjure Celestial",
 		  "Divine Word",
 		  "Etherealness",
@@ -267,217 +266,216 @@ var classSpells = {
 		  "Plane Shift",
 		  "Regenerate",
 		  "Resurrection",
-		  "Symbol"
-		],
-		8:[
+		  "Symbol",
+		
+		
 		  "Antimagic Field",
 		  "Control Weather",
 		  "Earthquake",
-		  "Holy Aura"
-		],
-		9:[
+		  "Holy Aura",
+		
+		
 		  "Astral Projection",
 		  "Gate",
 		  "Mass Heal",
 		  "True Resurrection"
-		]
-	  },
+		],
 	  subclasses: {
 		KnowlegeDomain: {
 		  title: {
 			en: "Knowlege Domain",
 			ru: "Домен Знаний"
 		  },
-		  spells: {
-			1: [
+		  spells: [
+			
 			  "Command",
-			  "Identify"
-			],
-			2: [
+			  "Identify",
+			
+			
 			  "Augury",
-			  "Suggestion"
-			],
-			3: [
+			  "Suggestion",
+			
+			
 			  "Nondetection",
-			  "Speak with Dead"
-			],
-			4: [
+			  "Speak with Dead",
+			
+			
 			  "Arcane Eye",
-			  "Confusion"
-			],
-			5: [
+			  "Confusion",
+			
+			
 			  "Legend Lore",
 			  "Scrying"
 			]
-		  }
+		  
 		},
 		LifeDomain: {
 		  title: {
 			en: "Life Domain",
 			ru: "Домен Жизни"
 		  },
-		  spells: {
-			1: [
+		  spells: [
+			
 			  "Bless",
-			  "Cure Wounds"
-			],
-			2: [
+			  "Cure Wounds",
+			
+			
 			  "Lesser Restoration",
-			  "Spiritual Weapon"
-			],
-			3: [
+			  "Spiritual Weapon",
+			
+			
 			  "Beacon of Hope",
-			  "Revivify"
-			],
-			4: [
+			  "Revivify",
+			
+			
 			  "Death Ward",
-			  "Guardian of Faith"
-			],
-			5: [
+			  "Guardian of Faith",
+			
+			
 			  "Mass Cure Wounds",
 			  "Raise Dead"
 			]
-		  }
+		  
 		},
 		LightDomain: {
 		  title: {
 			en: "Lite Domain",
 			ru: "Домен Света"
 		  },
-		  spells: {
-			1: [
+		  spells: [
+			
 			  "Burning Hands",
-			  "Faerie Fire"
-			],
-			2: [
+			  "Faerie Fire",
+			
+			
 			  "Flaming Sphere",
-			  "Scorching Ray"
-			],
-			3: [
+			  "Scorching Ray",
+			
+			
 			  "Daylight",
-			  "Fireball"
-			],
-			4: [
+			  "Fireball",
+			
+			
 			  "Guardian of Faith",
-			  "Wall of Fire"
-			],
-			5: [
+			  "Wall of Fire",
+			
+			
 			  "Flame Strike",
 			  "Scrying"
 			]
-		  }
-		}
+		  
+		},
 		NatureDomain: {
 		  title: {
 			en: "Nature Domain",
 			ru: "Домен Природы"
 		  },
-		  spells: {
-			1: [
+		  spells: [
+			
 			  "Animal Friendship",
-			  "Speak with Animals"
-			],
-			2: [
+			  "Speak with Animals",
+			
+			
 			  "Barkskin",
-			  "Spike Growth"
-			],
-			3: [
+			  "Spike Growth",
+			
+			
 			  "Plant Growth",
-			  "Wind Wall"
-			],
-			4: [
+			  "Wind Wall",
+			
+			
 			  "Dominate Beast",
-			  "Grasping Vine"
-			],
-			5: [
+			  "Grasping Vine",
+			
+			
 			  "Insect Plague",
 			  "Tree Stride"
-			],
-		  }
+			
+		  ]
 		},
 		TempestDomain: {
 		  title: {
 			en: "Tempest Domain",
 			ru: "Домен Бури"
 		  },
-		  spells: {
-			1: [
+		  spells: [
+			
 			  "Fog Cloud",
-			  "Thunderwave"
-			],
-			2: [
+			  "Thunderwave",
+			
+			
 			  "Gust of Wind",
-			  "Shatter"
-			],
-			3: [
+			  "Shatter",
+			
+			
 			  "Call Lightning",
-			  "Sleet Storm"
-			],
-			4: [
+			  "Sleet Storm",
+			
+			
 			  "Control Water",
-			  "Ice Storm"
-			],
-			5: [
+			  "Ice Storm",
+			
+			
 			  "Destructive Wave",
 			  "Insect Plague"
-			],
-		  }
+			
+		  ]
 		},
 		TrickeryDomain: {
 		  title: {
 			en: "Trickery Domain",
 			ru: "Домен Обмана"
 		  },
-		  spells: {
-			1: [
+		  spells: [
+			
 			  "Charm Person",
-			  "Disguise Self"
-			],
-			2: [
+			  "Disguise Self",
+			
+			
 			  "Mirror Image",
-			  "Pass without Trace"
-			],
-			3: [
+			  "Pass without Trace",
+			
+			
 			  "Blink",
-			  "Dispel Magic"
-			],
-			4: [
+			  "Dispel Magic",
+			
+			
 			  "Dimension Door",
-			  "Polymorph"
-			],
-			5: [
+			  "Polymorph",
+			
+			
 			  "Dominate Person",
 			  "Modify Memory"
-			],
-		  }
+			
+		  ]
 		},
 		WarDomain: {
 		  title: {
 			en: "War Domain",
 			ru: "Домен Войны"
 		  },
-		  spells: {
-			1: [
+		  spells: [
+			
 			  "Divine Favor",
-			  "Shield of Faith"
-			],
-			2: [
+			  "Shield of Faith",
+			
+			
 			  "Magic Weapon",
-			  "Spiritual Weapon"
-			],
-			3: [
+			  "Spiritual Weapon",
+			
+			
 			  "Crusader's Mantle",
-			  "Spirit Guardians"
-			],
-			4: [
+			  "Spirit Guardians",
+			
+			
 			  "Freedom of Movement",
-			  "Stoneskin"
-			],
-			5: [
+			  "Stoneskin",
+			
+			
 			  "Flame Strike",
 			  "Hold Monster"
 			]
-		  }
+		  
 		}
 	  }
 	},
@@ -486,8 +484,8 @@ var classSpells = {
 		en: "Druid",
 		ru: "Друид"
 	  },
-	  spells: {
-		0:[
+	  spells: [
+		
 		  "Druidcraft",
 		  "Guidance",
 		  "Mending",
@@ -495,9 +493,9 @@ var classSpells = {
 		  "Produce Flame",
 		  "Resistance",
 		  "Shillelagh",
-		  "Thorn Whip"
-		],
-		1:[
+		  "Thorn Whip",
+		
+		
 		  "Animal Friendship",
 		  "Charm Person",
 		  "Create or Destroy Water",
@@ -513,9 +511,9 @@ var classSpells = {
 		  "Longstrider",
 		  "Purify Food and Drink",
 		  "Speak with Animals",
-		  "Thunderwave"
-		],
-		2:[
+		  "Thunderwave",
+		
+		
 		  "Animal Messenger",
 		  "Barkskin",
 		  "Beast Sense",
@@ -533,9 +531,9 @@ var classSpells = {
 		  "Moonbeam",
 		  "Pass without Trace",
 		  "Protection from Poison",
-		  "Spike Growth"
-		],
-		3:[
+		  "Spike Growth",
+		
+		
 		  "Call Lightning",
 		  "Conjure Animals",
 		  "Daylight",
@@ -548,9 +546,9 @@ var classSpells = {
 		  "Speak with Plants",
 		  "Water Breathing",
 		  "Water Walk",
-		  "Wind Wall"
-		],
-		4:[
+		  "Wind Wall",
+		
+		
 		  "Blight",
 		  "Confusion",
 		  "Conjure Minor Elementals",
@@ -566,9 +564,9 @@ var classSpells = {
 		  "Polymorph",
 		  "Stone Shape",
 		  "Stoneskin",
-		  "Wall of Fire"
-		],
-		5:[
+		  "Wall of Fire",
+		
+		
 		  "Antilife Shell",
 		  "Awaken",
 		  "Commune with Nature",
@@ -582,9 +580,9 @@ var classSpells = {
 		  "Reincarnate",
 		  "Scrying",
 		  "Tree Stride",
-		  "Wall of Stone"
-		],
-		6:[
+		  "Wall of Stone",
+		
+		
 		  "Conjure Fey",
 		  "Find the Path",
 		  "Heal",
@@ -592,232 +590,231 @@ var classSpells = {
 		  "Move Earth",
 		  "Sunbeam",
 		  "Transport via Plants",
-		  "Wall o f Thorns",
-		  "Wind Walk"
-		],
-		7:[
+		  "Wall of Thorns",
+		  "Wind Walk",
+		
+		
 		  "Fire Storm",
 		  "Mirage Arcane",
 		  "Plane Shift",
 		  "Regenerate",
-		  "Reverse Gravity"
-		],
-		8:[
+		  "Reverse Gravity",
+		
+		
 		  "Animal Shapes",
 		  "Antipathy/Sympathy",
 		  "Control Weather",
 		  "Earthquake",
 		  "Feeblemind",
 		  "Sunburst",
-		  "Tsunami"
-		],
-		9:[
+		  "Tsunami",
+		
+		
 		  "Foresight",
 		  "Shapechange",
-		  "Storm o f Vengeance",
+		  "Storm of Vengeance",
 		  "True Resurrection"
-		]
-	  },
+		],
 	  subclasses: {
 		Land: {
 		  title: {
 			en: "Circle of the Land",
 			ru: "Круг Земли"
 		  },
-		  subclasses: [
-			{
+		  subclasses: {
+			Arctic: {
 			  title: {
 				en: "Arctic",
-				ru: ""
+				ru: "Арктика"
 			  },
-			  spells: {
-				2: [
+			  spells: [
+				
 				  "Hold Person",
-				  "Spike Growth"
-				],
-				3: [
+				  "Spike Growth",
+				
+				
 				  "Sleet Storm",
-				  "Slow"
-				],
-				4: [
+				  "Slow",
+				
+				
 				  "Freedom of Movement",
-				  "Ice Storm"
-				],
-				5: [
+				  "Ice Storm",
+				
+				
 				  "Commune with Nature",
 				  "Cone of Cold"
 				]
-			  }
+			  
 			},
-			{
+			Coast: {
 			  title: {
 				en: "Coast",
-				ru: ""
+				ru: "Побережье"
 			  },
-			  spells: {
-				2: [
+			  spells: [
+				
 				  "Mirror Image",
-				  "Misty Step"
-				],
-				3: [
+				  "Misty Step",
+				
+				
 				  "Water Breathing",
-				  "Water Walk"
-				],
-				4: [
+				  "Water Walk",
+				
+				
 				  "Control Water",
-				  "Freedom of Movement"
-				],
-				5: [
+				  "Freedom of Movement",
+				
+				
 				  "Conjure Elemental",
 				  "Scrying"
 				]
-			  }
+			  
 			},
-			{
+			Desert: {
 			  title: {
 				en: "Desert",
-				ru: ""
+				ru: "Пустыня"
 			  },
-			  spells: {
-				2: [
+			  spells: [
+				
 				  "Blur",
-				  "Silence"
-				],
-				3: [
+				  "Silence",
+				
+				
 				  "Create Food and Water",
-				  "Protection from Energy"
-				],
-				4: [
+				  "Protection from Energy",
+				
+				
 				  "Daylight",
-				  "Hallucinatory Terrain"
-				],
-				5: [
+				  "Hallucinatory Terrain",
+				
+				
 				  "Insect Plague",
 				  "Wall of Stone"
 				]
-			  }
+			  
 			},
-			{
+			Forest: {
 			  title: {
 				en: "Forest",
-				ru: ""
+				ru: "Лес"
 			  },
-			  spells: {
-				2: [
+			  spells: [
+				
 				  "Barkskin",
-				  "Spider Climb"
-				],
-				3: [
+				  "Spider Climb",
+				
+				
 				  "Call Lightning",
-				  "Plant Growth"
-				],
-				4: [
+				  "Plant Growth",
+				
+				
 				  "Divination",
-				  "Freedom of Movement"
-				],
-				5: [
+				  "Freedom of Movement",
+				
+				
 				  "Commune with Nature",
 				  "Tree Stride"
 				]
-			  }
+			  
 			},
-			{
+			Grassland: {
 			  title: {
 				en: "Grassland",
-				ru: ""
+				ru: "Равнина"
 			  },
-			  spells: {
-				2: [
+			  spells: [
+				
 				  "Invisibility",
-				  "Pass without Trace"
-				],
-				3: [
+				  "Pass without Trace",
+				
+				
 				  "Daylight",
-				  "Haste"
-				],
-				4: [
+				  "Haste",
+				
+				
 				  "Divination",
-				  "Freedom of Movement"
-				],
-				5: [
+				  "Freedom of Movement",
+				
+				
 				  "Dream",
 				  "Insect Plague"
 				]
-			  }
+			  
 			},
-			{
+			Mountain: {
 			  title: {
 				en: "Mountain",
-				ru: ""
+				ru: "Горы"
 			  },
-			  spells: {
-				2: [
+			  spells: [
+				
 				  "Spider Climb",
-				  "Spike Growth"
-				],
-				3: [
+				  "Spike Growth",
+				
+				
 				  "Lightning Bolt",
-				  "Meld into Stone"
-				],
-				4: [
+				  "Meld into Stone",
+				
+				
 				  "Stone Shape",
-				  "Stoneskin"
-				],
-				5: [
+				  "Stoneskin",
+				
+				
 				  "Passwall",
 				  "Wall of Stone"
 				]
-			  }
+			  
 			},
-			{
+			Swamp: {
 			  title: {
 				en: "Swamp",
-				ru: ""
+				ru: "Болота"
 			  },
-			  spells: {
-				2: [
+			  spells: [
+				
 				  "Darkness",
 				  "Melf's Acid Arrow",
-				],
-				3: [
+				
+				
 				  "Water Walk",
-				  "Stinking Cloud"
-				],
-				4: [
+				  "Stinking Cloud",
+				
+				
 				  "Freedom of Movement",
-				  "Locate Creature"
-				],
-				5: [
+				  "Locate Creature",
+				
+				
 				  "Insect Plague",
 				  "Scrying"
 				]
-			  }
+			  
 			},
-			{
+			Underdark: {
 			  title: {
 				en: "Underdark",
-				ru: ""
+				ru: "Подземье"
 			  },
-			  spells: {
-				2: [
+			  spells: [
+				
 				  "Spider Climb",
-				  "Web"
-				],
-				3: [
+				  "Web",
+				
+				
 				  "Gaseous Form",
-				  "Stinking Cloud"
-				],
-				4: [
+				  "Stinking Cloud",
+				
+				
 				  "Greater Invisibility",
-				  "Stone Shape"
-				],
-				5: [
+				  "Stone Shape",
+				
+				
 				  "Cloudkill",
 				  "Insect Plague"
 				]
-			  }
+			  
 			}
-		  ]
+		  }
 		}
 	  }
 	},
@@ -826,8 +823,8 @@ var classSpells = {
 		en: "Paladin",
 		ru: "Паладин"
 	  },
-	  spells: {
-		1:[
+	  spells: [
+		
 		  "Bless",
 		  "Command",
 		  "Compelled Duel",
@@ -837,15 +834,14 @@ var classSpells = {
 		  "Detect Poison and Disease",
 		  "Divine Favor",
 		  "Heroism",
-		  "Protection from",
-		  "Evil and Good",
+		  "Protection from Evil and Good",
 		  "Purify Food and Drink",
 		  "Searing Smite",
 		  "Shield of Faith",
 		  "Thunderous Smite",
-		  "Wrathful Smite"
-		],
-		2:[
+		  "Wrathful Smite",
+		
+		
 		  "Aid",
 		  "Branding Smite",
 		  "Find Steed",
@@ -853,9 +849,9 @@ var classSpells = {
 		  "Locate Object",
 		  "Magic Weapon",
 		  "Protection from Poison",
-		  "Zone o f Truth"
-		],
-		3:[
+		  "Zone of Truth",
+		
+		
 		  "Aura of Vitality",
 		  "Blinding Smite",
 		  "Create Food and Water",
@@ -865,115 +861,118 @@ var classSpells = {
 		  "Elemental Weapon",
 		  "Magic Circle",
 		  "Remove Curse",
-		  "Revivify"
-		],
-		4:[
+		  "Revivify",
+		
+		
 		  "Aura of Life",
 		  "Aura of Purity",
 		  "Banishment",
 		  "Death Ward",
 		  "Locate Creature",
-		  "Staggering Smite"
-		],
-		5:[
+		  "Staggering Smite",
+		
+		
 		  "Banishing Smite",
 		  "Circle of Power",
-		  "Destructive Smite",
+		  "Destructive Wave",
 		  "Dispel Evil and Good",
 		  "Geas",
 		  "Raise Dead"
-		]
-	  },
+		],
 	  subclasses: [
 		{
 		  title: {
 			en: "Oath of Devotion",
-			ru: ""
+			ru: "Клятва Преданности"
 			},
-			spells: {
-			  1: [
+			spells: [
+			  
 				"Protection from Evil and Good",
-				"Sanctuary"
-			  ],
-			  2: [
+				"Sanctuary",
+			  
+			  
 				"Lesser Restoration",
-				"Zone of Truth"
-			  ],
-			  3: [
+				"Zone of Truth",
+			  
+			  
 				"Beacon of Hope",
-				"Dispel Magic"
-			  ],
-			  4: [
+				"Dispel Magic",
+			  
+			  
 				"Freedom of Movement",
-				"Guardian of Faith"
-			  ],
-			  5: [
+				"Guardian of Faith",
+			  
+			  
 				"Commune",
 				"Flame Strike"
 			  ]
-			}
+			
 		},
 		{
 		  title: {
 			en: "Oath of  Ancients",
-			ru: ""
+			ru: "Клятва Древних"
 			},
-			spells: {
-			  1: [
+			spells: [
+			  
 				"Ensnaring Strike",
-				"Speak with Animals"
-			  ],
-			  2: [
+				"Speak with Animals",
+			  
+			  
 				"Moonbeam",
-				"Misty Step"
-			  ],
-			  3: [
+				"Misty Step",
+			  
+			  
 				"Plant Growth",
-				"Protection from Energy"
-			  ],
-			  4: [
+				"Protection from Energy",
+			  
+			  
 				"Ice Storm",
-				"Stoneskin"
-			  ],
-			  5: [
+				"Stoneskin",
+			  
+			  
 				"Commune with Nature",
 				"Tree Stride"
 			  ]
-			}
+			
 		},
 		{
 		  title: {
 			en: "Oath of  Vengeance",
-			ru: ""
+			ru: "Клятва Мести"
 			},
-			spells: {
-			  1: [
+			spells: [
+			  
 				"Bane",
-				"Hunter's Mark"
-			  ],
-			  2: [
+				"Hunter's Mark",
+			  
+			  
 				"Hold Person",
-				"Misty Step"
-			  ],
-			  3: [
+				"Misty Step",
+			  
+			  
 				"Haste",
-				"Protection from Energy"
-			  ],
-			  4: [
+				"Protection from Energy",
+			  
+			  
 				"Banishment",
-				"Dimension Door"
-			  ],
-			  5: [
+				"Dimension Door",
+			  
+			  
 				"Hold Monster",
 				"Scrying"
 			  ]
-			}
+			
 		}
 	  ]
 	},
 	Ranger: {
-	  spells: {
-		1:[
+	  title: {
+		en: "Ranger",
+		ru: "Рейнджер"
+	  },
+	  spells: [
+		
 		  "Alarm",
 		  "Animal Friendship",
 		  "Cure Wounds",
@@ -982,13 +981,13 @@ var classSpells = {
 		  "Ensnaring Strike",
 		  "Fog Cloud",
 		  "Goodberry",
-		  "Hail o f Thorns",
+		  "Hail of Thorns",
 		  "Hunter's Mark",
 		  "Jump",
 		  "Longstrider",
-		  "Speak with Animals"
-		],
-		2:[
+		  "Speak with Animals",
+		
+		
 		  "Animal Messenger",
 		  "Barkskin",
 		  "Beast Sense",
@@ -1001,9 +1000,9 @@ var classSpells = {
 		  "Pass without Trace",
 		  "Protection from Poison",
 		  "Silence",
-		  "Spike Growth"
-		],
-		3:[
+		  "Spike Growth",
+		
+		
 		  "Conjure Animals",
 		  "Conjure Barrage",
 		  "Daylight",
@@ -1014,26 +1013,29 @@ var classSpells = {
 		  "Speak with Plants",
 		  "Water Breathing",
 		  "Water Walk",
-		  "Wind Wall"
-		],
-		4:[
+		  "Wind Wall",
+		
+		
 		  "Conjure Woodland Beings",
 		  "Freedom of Movement",
 		  "Grasping Vine",
 		  "Locate Creature",
-		  "Stoneskin"
-		],
-		5:[
+		  "Stoneskin",
+		
+		
 		  "Commune with Nature",
 		  "Conjure Volley",
 		  "Swift Quiver",
 		  "Tree Stride"
 		]
-	  }
 	},
 	Sorcerer: {
-	  spells: {
-		0:[
+	  title: {
+		en: "Sorcerer",
+		ru: "Чародей"
+	  },
+	  spells: [
+		
 		  "Acid Splash",
 		  "Blade Ward",
 		  "Chill Touch",
@@ -1049,9 +1051,9 @@ var classSpells = {
 		  "Prestidigitation",
 		  "Ray of Frost",
 		  "Shocking Grasp",
-		  "True Strike"
-		],
-		1:[
+		  "True Strike",
+		
+		
 		  "Burning Hands",
 		  "Charm Person",
 		  "Chromatic Orb",
@@ -1071,9 +1073,9 @@ var classSpells = {
 		  "Silent Image",
 		  "Sleep",
 		  "Thunderwave",
-		  "Witch Bolt"
-		],
-		2:[
+		  "Witch Bolt",
+		
+		
 		  "Alter Self",
 		  "Blindness/Deafness",
 		  "Blur",
@@ -1097,9 +1099,9 @@ var classSpells = {
 		  "Shatter",
 		  "Spider Climb",
 		  "Suggestion",
-		  "Web"
-		],
-		3:[
+		  "Web",
+		
+		
 		  "Blink",
 		  "Clairvoyance",
 		  "Counterspell",
@@ -1119,9 +1121,9 @@ var classSpells = {
 		  "Stinking Cloud",
 		  "Tongues",
 		  "Water Breathing",
-		  "Water Walk"
-		],
-		4:[
+		  "Water Walk",
+		
+		
 		  "Banishment",
 		  "Blight",
 		  "Confusion",
@@ -1131,9 +1133,9 @@ var classSpells = {
 		  "Ice Storm",
 		  "Polymorph",
 		  "Stoneskin",
-		  "Wall of Fire"
-		],
-		5:[
+		  "Wall of Fire",
+		
+		
 		  "Animate Objects",
 		  "Cloudkill",
 		  "Cone of Cold",
@@ -1144,9 +1146,9 @@ var classSpells = {
 		  "Seeming",
 		  "Telekinesis",
 		  "Teleportation Circle",
-		  "Wall of Stone"
-		],
-		6:[
+		  "Wall of Stone",
+		
+		
 		  "Arcane Gate",
 		  "Chain Lightning",
 		  "Circle of Death",
@@ -1156,9 +1158,9 @@ var classSpells = {
 		  "Mass Suggestion",
 		  "Move Earth",
 		  "Sunbeam",
-		  "True Seeing"
-		],
-		7:[
+		  "True Seeing",
+		
+		
 		  "Delayed Blast Fireball",
 		  "Etherealness",
 		  "Finger of Death",
@@ -1166,26 +1168,29 @@ var classSpells = {
 		  "Plane Shift",
 		  "Prismatic Spray",
 		  "Reverse Gravity",
-		  "Teleport"
-		],
-		8:[
+		  "Teleport",
+		
+		
 		  "Dominate Monster",
 		  "Earthquake",
 		  "Incendiary Cloud",
 		  "Power Word Stun",
-		  "Sunburst"
-		],
-		9:[
+		  "Sunburst",
+		
+		
 		  "Meteor Swarm",
 		  "Power Word Kill",
 		  "Time Stop",
 		  "Wish"
 		]
-	  }
 	},
 	Warlock: {
-	  spells: {
-		0:[
+	  title: {
+		en: "Warlock",
+		ru: "Колдун"
+	  },
+	  spells: [
+		
 		  "Blade Ward",
 		  "Chill Touch",
 		  "Eldritch Blast",
@@ -1194,9 +1199,9 @@ var classSpells = {
 		  "Minor Illusion",
 		  "Poison Spray",
 		  "Prestidigitation",
-		  "True Strike"
-		],
-		1:[
+		  "True Strike",
+		
+		
 		  "Armor of Agathys",
 		  "Arms of Hadar",
 		  "Charm Person",
@@ -1205,12 +1210,11 @@ var classSpells = {
 		  "Hellish Rebuke",
 		  "Hex",
 		  "Illusory Script",
-		  "Protection from",
-		  "Evil and Good",
+		  "Protection from Evil and Good",
 		  "Unseen Servant",
-		  "Witch Bolt"
-		],
-		2:[
+		  "Witch Bolt",
+		
+		
 		  "Cloud of Daggers",
 		  "Crown of Madness",
 		  "Darkness",
@@ -1222,9 +1226,9 @@ var classSpells = {
 		  "Ray of Enfeeblement",
 		  "Shatter",
 		  "Spider Climb",
-		  "Suggestion"
-		],
-		3:[
+		  "Suggestion",
+		
+		
 		  "Counterspell",
 		  "Dispel Magic",
 		  "Fear",
@@ -1236,21 +1240,21 @@ var classSpells = {
 		  "Major Image",
 		  "Remove Curse",
 		  "Tongues",
-		  "Vampiric Touch"
-		],
-		4:[
+		  "Vampiric Touch",
+		
+		
 		  "Banishment",
 		  "Blight",
 		  "Dimension Door",
-		  "Hallucinatory Terrain"
-		],
-		5:[
+		  "Hallucinatory Terrain",
+		
+		
 		  "Contact Other Plane",
 		  "Dream",
 		  "Hold Monster",
-		  "Scrying"
-		],
-		6:[
+		  "Scrying",
+		
+		
 		  "Arcane Gate",
 		  "Circle of Death",
 		  "Conjure Fey",
@@ -1258,119 +1262,121 @@ var classSpells = {
 		  "Eyebite",
 		  "Flesh to Stone",
 		  "Mass Suggestion",
-		  "True Seeing"
-		],
-		7:[
+		  "True Seeing",
+		
+		
 		  "Etherealness",
 		  "Finger of Death",
 		  "Forcecage",
-		  "Plane Shift"
-		],
-		8:[
+		  "Plane Shift",
+		
+		
 		  "Demiplane",
 		  "Dominate Monster",
 		  "Feeblemind",
 		  "Glibness",
-		  "Power Word Stun"
-		],
-		9:[
+		  "Power Word Stun",
+		
+		
 		  "Astral Projection",
 		  "Foresight",
 		  "Imprisonment",
 		  "Power Word Kill",
 		  "True Polymorph"
-		]
-	  },
+		],
 	  subclasses: [
 		{
 		  title: {
 			en: "Archfey",
 			ru: ""
 			},
-			spells: {
-			  1: [
+			spells: [
+			  
 				"Faerie Fire",
-				"Sleep"
-			  ],
-			  2: [
+				"Sleep",
+			  
+			  
 				"Calm Emotions",
-				"Phantasmal Force"
-			  ],
-			  3: [
+				"Phantasmal Force",
+			  
+			  
 				"Blink",
-				"Plant Growth"
-			  ],
-			  4: [
+				"Plant Growth",
+			  
+			  
 				"Dominate Beast",
-				"Greater Invisibility"
-			  ],
-			  5: [
+				"Greater Invisibility",
+			  
+			  
 				"Dominate Person",
 				"Seeming"
 			  ]
-			}
 		},
 		{
 		  title: {
 			en: "Fiend",
 			ru: ""
 			},
-			spells: {
-			  1: [
+			spells: [
+			  
 				"Burning Hands",
-				"Command"
-			  ],
-			  2: [
+				"Command",
+			  
+			  
 				"Blindness/Deafness",
-				"Scorching Ray"
-			  ],
-			  3: [
+				"Scorching Ray",
+			  
+			  
 				"Fireball",
-				"Stinking Cloud"
-			  ],
-			  4: [
+				"Stinking Cloud",
+			  
+			  
 				"Fire Shield",
-				"Wall of Fire"
-			  ],
-			  5: [
+				"Wall of Fire",
+			  
+			  
 				"Flame Strike",
 				"Hallow"
 			  ]
-			}
+			
 		},
 		{
 		  title: {
 			en: "The Great Old One",
 			ru: ""
 			},
-			spells: {
-			  1: [
+			spells: [
+			  
 				"Dissonant Whispers",
-				"Tasha's Hideous Laughter"
-			  ],
-			  2: [
+				"Tasha's Hideous Laughter",
+			  
+			  
 				"Detect Thoughts",
-				"Phantasmal Force"
-			  ],
-			  3: [
+				"Phantasmal Force",
+			  
+			  
 				"Clairvoyance",
-				"Mending"
-			  ],
-			  4: [
+				"Mending",
+			  
+			  
 				"Dominate Beast",
-				"Evard's Black Tentacles"
-			  ],
-			  5: [
+				"Evard's Black Tentacles",
+			  
+			  
 				"Dominate Person",
 				"Telekinesis"
 			  ]
-			}
+			
 		}
 	  ]
 	},
 	Wizard: {
-	  spells: {
-		0:[
+	  title: {
+		en: "Wizard",
+		ru: "Волшебник"
+	  },
+	  spells: [
+		
 		  "Acid Splash",
 		  "Blade Ward",
 		  "Chill Touch",
@@ -1386,9 +1392,9 @@ var classSpells = {
 		  "Prestidigitation",
 		  "Ray of Frost",
 		  "Shocking Grasp",
-		  "True Strike"
-		],
-		1:[
+		  "True Strike",
+		
+		
 		  "Alarm",
 		  "Burning Hands",
 		  "Charm Person",
@@ -1409,8 +1415,7 @@ var classSpells = {
 		  "Longstrider",
 		  "Mage Armor",
 		  "Magic Missile",
-		  "Protection from",
-		  "Evil and Good",
+		  "Protection from Evil and Good",
 		  "Ray of Sickness",
 		  "Shield",
 		  "Silent Image",
@@ -1419,9 +1424,9 @@ var classSpells = {
 		  "Tenser's Floating Disk",
 		  "Thunderwave",
 		  "Unseen Servant",
-		  "Witch Bolt"
-		],
-		2:[
+		  "Witch Bolt",
+		
+		
 		  "Alter Self",
 		  "Arcane Lock",
 		  "Blindness/Deafness",
@@ -1455,9 +1460,9 @@ var classSpells = {
 		  "Shatter",
 		  "Spider Climb",
 		  "Suggestion",
-		  "Web"
-		],
-		3:[
+		  "Web",
+		
+		
 		  "Animate Dead",
 		  "Bestow Curse",
 		  "Blink",
@@ -1469,7 +1474,7 @@ var classSpells = {
 		  "Fireball",
 		  "Fly",
 		  "Gaseous Form",
-		  "Glyph o f Warding",
+		  "Glyph of Warding",
 		  "Haste",
 		  "Hypnotic Pattern",
 		  "Leomund's Tiny Hut",
@@ -1486,9 +1491,9 @@ var classSpells = {
 		  "Stinking Cloud",
 		  "Tongues",
 		  "Vampiric Touch",
-		  "Water Breathing"
-		],
-		4:[
+		  "Water Breathing",
+		
+		
 		  "Arcane Eye",
 		  "Banishment",
 		  "Blight",
@@ -1504,21 +1509,19 @@ var classSpells = {
 		  "Ice Storm",
 		  "Leomund's Secret Chest",
 		  "Locate Creature",
-		  "Mordenkainen's",
-		  "Faithful Hound",
-		  "Mordenkainen's",
-		  "Private Sanctum",
+		  "Mordenkainen's Faithful Hound",
+		  "Mordenkainen's Private Sanctum",
 		  "Otiluke's Resilient Sphere",
 		  "Phantasmal Killer",
 		  "Polymorph",
 		  "Stone Shape",
 		  "Stoneskin",
-		  "Wall of Fire"
-		],
-		5:[
+		  "Wall of Fire",
+		
+		
 		  "Animate Objects",
 		  "Bigby's Hand",
-		  "CloudkilI",
+		  "Cloudkill",
 		  "Cone of Cold",
 		  "Conjure Elemental",
 		  "Contact Other Plane",
@@ -1538,17 +1541,16 @@ var classSpells = {
 		  "Telekinesis",
 		  "Teleportation Circle",
 		  "Wall of Force",
-		  "Wall of Stone"
-		],
-		6:[
+		  "Wall of Stone",
+		
+		
 		  "Arcane Gate",
 		  "Chain Lightning",
 		  "Circle of Death",
 		  "Contingency",
 		  "Create Undead",
 		  "Disintegrate",
-		  "Drawmij's Instant",
-		  "Summons",
+		  "Drawmij's Instant Summons",
 		  "Eyebite",
 		  "Flesh to Stone",
 		  "Globe of Invulnerability",
@@ -1561,16 +1563,15 @@ var classSpells = {
 		  "Programmed Illusion",
 		  "Sunbeam",
 		  "True Seeing",
-		  "Wall of Ice"
-		],
-		7:[
+		  "Wall of Ice",
+		
+		
 		  "Delayed Blast Fireball",
 		  "Etherealness",
 		  "Finger of Death",
 		  "Forcecage",
 		  "Mirage Arcane",
-		  "Mordenkainen's",
-		  "Magnificent Mansion",
+		  "Mordenkainen's Magnificent Mansion",
 		  "Mordenkainen's Sword",
 		  "Plane Shift",
 		  "Prismatic Spray",
@@ -1579,9 +1580,9 @@ var classSpells = {
 		  "Sequester",
 		  "Simulacrum",
 		  "Symbol",
-		  "Teleport"
-		],
-		8:[
+		  "Teleport",
+		
+		
 		  "Antimagic Field",
 		  "Antipathy/Sympathy",
 		  "Clone",
@@ -1595,9 +1596,8 @@ var classSpells = {
 		  "Power Word Stun",
 		  "Sunburst",
 		  "Telepathy",
-		  "Trap the Soul"
-		],
-		9:[
+		
+		
 		  "Astral Projection",
 		  "Foresight",
 		  "Gate",
@@ -1611,6 +1611,6 @@ var classSpells = {
 		  "Weird",
 		  "Wish"
 		]
-	  }
+	  
 	}
 }

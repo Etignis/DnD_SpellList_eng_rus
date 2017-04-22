@@ -1,365 +1,779 @@
-$(window).load(function(){
-	f_dbg=0;
-	//console.log("/"+$(".cardContainer[data-class*='wiz']").eq(0).attr('data-level')+"/");
-	//$(".p_side").hide();
-	// фильтр спеллов
-	function spell_filter(cl, nm, lv, sc, s_cl, s_l1, s_l2, lang){
-		tmp1=0, tmp2=0;
-		if(s_cl==1)
-			{tmp1="wizard"; tmp2="волшебник"; console.log("1");}
-		if(s_cl==2)
-			{tmp1="bard"; tmp2="бард"; console.log("2");}
-		if(s_cl==3)
-			{tmp1="cleric"; tmp2="жрец"; console.log("3");}
-		if(s_cl==4)
-			{tmp1="druid"; tmp2="друид"; console.log("4");}
-		if(s_cl==5)
-			{tmp1="paladin"; tmp2="паладин"; console.log("5");}
-		if(s_cl==6)
-			{tmp1="ranger"; tmp2="следопыт"; console.log("6");}
-		if(s_cl==7)
-			{tmp1="warloc"; tmp2="колдун";  console.log("7");}
-		if(s_cl==8)
-			{tmp1="sorcerer"; tmp2="чародей"; console.log("8");}
-		//console.log("tmp1: "+tmp1);
-		$(".cardContainer").hide();
-		var atr="";
-		var atr2='';
-		var f_atr2=0;
-		if(cl!=undefined && cl!='')
-			atr+= "[data-class*='"+cl+"']";
+window.onload = function(){
+	var oConfig = {}; // global app config data
+	var oTimer; // for TimeOut (filtering)
+	var nTimerSeconds = 200;
+	function getViewPortSize(mod) {
+		var viewportwidth;
+		var viewportheight;
+
+		//Standards compliant browsers (mozilla/netscape/opera/IE7)
+		if (typeof window.innerWidth != 'undefined')
+		{
+			viewportwidth = window.innerWidth,
+			viewportheight = window.innerHeight
+		}
+
+		// IE6
+		else if (typeof document.documentElement != 'undefined'
+		&& typeof document.documentElement.clientWidth !=
+		'undefined' && document.documentElement.clientWidth != 0)
+		{
+			viewportwidth = document.documentElement.clientWidth,
+			viewportheight = document.documentElement.clientHeight
+		}
+
+		//Older IE
 		else
+		{
+			viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+			viewportheight = document.getElementsByTagName('body')[0].clientHeight
+		}
+
+		if(mod=="width")
+			return viewportwidth;
+		
+		return viewportwidth + "~" + viewportheight;
+	}
+	
+	function createSelect(src, params) {
+		var options = "";
+		var selected_key = params.selected_key;
+		var id = params.id? "id='"+params.id+"'" : "";
+		var sClass = params.controlClass? params.controlClass : "";
+		var atr_class = params.class? params.class : "";
+		var width = params.width? "; width: "+ params.width: "";
+		var lableText;
+		var min_width = 0;
+		var oParams = params.params;
+		var aParams = [], sParams="";
+		if(oParams) {
+			oParams.forEach(function(item) {
+				aParams.push(item.name+"='"+item.value+"'");
+			});
+			sParams = aParams.join(" ");
+		}
+		src.forEach(function(item){
+			var key = item.name;
+			var text = item.title;
+			if(text.length > min_width)
+				min_width = text.length/2;
+			options += "<li class='option' data-key='"+key+"'>"+text+"</li>"; 
+			if(key == selected_key){
+				lableText = text
+			}
+		});
+		min_width = min_width>20? 20: min_width;
+		min_width = min_width<5? 5: min_width;
+		min_width = ~~(min_width*0.85);
+
+		var list = "<ul class='list'>" + options + "</ul>";
+
+		var selectedKey = selected_key; 
+		var label="<div class='label "+atr_class+"' data-selected-key='" + selectedKey + "' style='min-width:"+min_width+"em "+width+"'>" + lableText + "</div>";
+		var select = "<button " + id + " " + sParams + " class='customSelect "+sClass+"' style='min-width:"+min_width+"em "+width+"'>" + label + list + "</button>"
+
+		return select;
+	}	
+	
+	function createComboBox(src, param) {
+		var ARR_DOWN = '<i class="fa fa-arrow-down"></i>';
+		var ARR_UP = '<i class="fa fa-arrow-up"></i>';
+		var ret = '';
+		var id =  param.id? "id='"+param.id+"'": "";
+		var title = param.title? param.title: "Выберите";
+		var checked = param.checkAll? "checked": "";
+		var isOpen = (param.isOpen!=undefined) ? param.isOpen : true;
+		var arrow, display = "", content_open=true;
+		var min_width = 0;
+		if(isOpen && isOpen != "false"){
+			arrow="<div class='combo_box_arrow'><span class='arr_down' style='display:none'>"+ARR_DOWN+"</span><span class='arr_up'>"+ARR_UP+"</span></div>";
+		} else {
+			arrow="<div class='combo_box_arrow'><span class='arr_down'>"+ARR_DOWN+"</span><span class='arr_up' style='display:none'>"+ARR_UP+"</span></div>";
+			display = " style='display:none' ";
+			content_open = false;
+		}			
+		for (var i =0; i < src.length; i++) {
+			var type = src[i];
+			var max = Math.max(type.en.length, type.ru.length)/2;
+			if (max > min_width) {
+				min_width = max;
+			}
+			ret+="<input "+checked+" type='checkbox' value='"+type.en+"' id='ch_"+type.en+"'><label for='ch_"+type.en+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
+			
+		}
+		min_width = min_width>20? 20: min_width;
+		min_width = min_width<5? 5: min_width;
+		min_width = ~~(min_width*0.9)+2;
+		ret = "<div "+id+" class='combo_box' style='min-width:"+min_width+"em' data-text='"+title+"' data-content-open='"+content_open+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content' "+display+" >"+ret+"</div>"+arrow+"</div>";
+		return ret;
+	}
+	
+	function createInput(params){
+		var id = params.id? "id='"+params.id+"'" : "";
+		return "<div "+id+" class='customInput'><input type='text'><span class='cross'></span></div>";
+	}
+	
+	function showDBG() {
+		if(!$("#dbg").length){
+			$("body").append("<div id='dbg'></div>");
+		}
+		$("#dbg").fadeIn();
+		$("body").height();
+	}
+	function hideDBG() {
+		if($("#dbg")){
+			$("#dbg").fadeOut();		
+		}		
+	}
+	
+	function setConfig(prop, val) {
+		if(prop && val != undefined) {
+			oConfig[prop] = val;
+		}
+		localStorage.setItem("config", JSON.stringify(oConfig));
+	}
+	function getConfig(prop) {
+		/**/
+		if(prop!=undefined) {
+			return localStorage.getItem("config")? JSON.parse(localStorage.getItem("config"))[prop] : null;
+		}
+		return JSON.parse(localStorage.getItem("config"));
+		/**/
+	}
+		
+	function createCard(spell, lang, sClass) {
+		if (spell[lang] || (lang="en", spell[lang])) {
+			var o = spell[lang];
+			var s_name = o.name;
+			var s_ritual = o.ritual? " ("+o.ritual+")" : "";
+			var s_castingTime = o.castingTime;
+			var s_range = o.range;
+			var s_components = o.components;
+			var s_duration = o.duration;
+			var s_materials = o.materials;
+			var s_text = o.text;
+			var s_level = o.level;
+			var st_castingTime, st_range, st_components, st_duration;
+			switch (lang){		
+				case "ru": 
+					s_level = s_level>0? s_level + " круг" : "Трюк"; 
+					st_castingTime = "Время накладывания";
+					st_range = "Дистанция";
+					st_components = "Компоненты";
+					st_duration = "Длительность";
+					break;	
+				default: 
+					s_level = s_level>0? s_level + " lvl" : "Cantrip";
+					st_castingTime = "CASTING TIME";
+					st_range = "RANGE";
+					st_components = "COMPONENTS";
+					st_duration = "DURATION";	
+			}
+			var s_school = o.school;
+			var s_source = o.source;
+			
+			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;;
+			
+			ret = '<div class="cardContainer '+sClass+'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '">'+
+				'<div class="spellCard">'+
+					'<div class="content">'+
+						'<h1>' + s_name + s_ritual + '</h1>'+
+						'<div class="row">'+
+							'<div class="cell castingTime">'+
+								'<b>'+st_castingTime+'</b>'+
+								'<span>' + s_castingTime + '</span>'+
+							'</div>'+
+							'<div class="cell range">'+
+								'<b>'+st_range+'</b>'+
+								'<span>' + s_range + '</span>'+
+							'</div>'+
+						'</div>'+
+						'<div class="row">'+
+							'<div class="cell components">'+
+								'<b>'+st_components+'</b>'+
+								'<span>' + s_components + '</span>'+
+							'</div>'+
+							'<div class="cell duration">'+
+								'<b>'+st_duration+'</b>'+
+								'<span>' + s_duration + '</span>'+
+							'</div>'+
+						'</div>'+
+						'<div class="materials">' + s_materials + '</div>'+
+						'<div class="text">' + s_text + '</div>	'+	
+						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
+						'<b class="school">' + s_level + ", " + s_school + '</b>'+
+					'</div>'+
+				'</div>'+
+			'</div>';
+			return ret;
+		} else {
+			console.log("not found: ");
+			console.dir(spell);
+		}
+	}
+	
+	
+	function createSpellsIndex() {
+		var spells = "";
+		allSpells.forEach(function(item) {
+			spells += createCard(item);
+		});
+		$(".spellContainer").html(spells);
+		$("#before_spells").hide();
+		$("#info_text").hide();
+	}
+	function showFiltered(oParams) {
+		var sName = oParams.sName;
+		var sClass = oParams.sClass;
+		var sSubClass = oParams.sSubClass;
+		var sSubSubClass = oParams.sSubSubClass;
+		var nLevelStart = oParams.nLevelStart;
+		var nLevelEnd = oParams.nLevelEnd;
+		var aSchools = oParams.aSchools;
+		var sLang = oParams.sLang;
+		
+		$(".spellContainer").empty();
+		var spells = "";
+		var filteredSpells = [];
+		//console.log("#");
+		//console.log("# Start filtering");
+		
+		//class
+		var aSpells = [];
+		if(sClass) {
+			if(classSpells[sClass]) {
+				aSpells = aSpells.concat(classSpells[sClass].spells);
+				if(classSpells[sClass].subclasses[sSubClass]) {
+					aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].spells);
+					if(classSpells[sClass].subclasses[sSubClass].subclasses && classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
+						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
+					}
+				}
+				aSpells.forEach(function(spellName){
+					var fFind = false;
+					for (var i = 0; i<allSpells.length; i++){	
+						if(allSpells[i].en.name == spellName) {
+							filteredSpells.push(allSpells[i]);
+							fFind = true;
+							break;
+						}
+					}
+					if(!fFind){
+						//console.log(spellName);
+					}
+				})
+			}	else {
+				filteredSpells = allSpells;
+			} 
+		} else {
+			filteredSpells = allSpells;
+		}
+		
+		// level
+		/**/
+		if(nLevelStart && nLevelEnd) {
+			filteredSpells = filteredSpells.filter(function(spell){
+				return !(spell.en.level < nLevelStart || spell.en.level > nLevelEnd);
+			});
+		}
+		/**/
+		
+		
+		//school		
+		if(aSchools && aSchools.length>0 && aSchools.length<9) {
+			filteredSpells = filteredSpells.filter(function(spell){
+				for(var i = 0; i < aSchools.length; i++) {
+					if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
+						return true;
+					}
+				}
+				return false;
+			});
+		}
+			
+		// name
+		if (sName) {
+			sName = sName.toLowerCase().trim();
+			filteredSpells = filteredSpells.filter(function(spell){
+				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
+			});
+		}
+			
+		// sort
+		filteredSpells.sort(function(a, b) {
+			if(a[sLang] && b[sLang]) {
+				if (a[sLang].level+a[sLang].name.toLowerCase().trim() < b[sLang].level+b[sLang].name.toLowerCase().trim() )
+					return -1;
+				if (a[sLang].level+a[sLang].name.toLowerCase().trim() > b[sLang].level+b[sLang].name.toLowerCase().trim() )
+					return 1;
+			}
+			return 0
+		});
+		
+
+		for (var i in filteredSpells) {
+			if(filteredSpells[i]) {
+				var tmp = createCard(filteredSpells[i], sLang, sClass)
+				if (tmp)
+					spells += tmp;
+			} 
+		}
+
+		$(".spellContainer").html(spells);
+		$("#before_spells").hide();
+		$("#info_text").hide();
+	}
+	
+	function filterSpells(){
+		var sName = $("#NameInput input").val();
+		var sClass = $("#ClassSelect .label").attr("data-selected-key");
+		var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
+		var sSubSubClass = $("#SubSubClassSelect .label").attr("data-selected-key");
+		var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
+		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
+		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
+			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
+		var sLang = $("#LangSelect .label").attr("data-selected-key");
+		
+		setConfig("language", sLang);
+		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			showFiltered({
+				sName: sName, 
+				sClass: sClass, 
+				sSubClass: sSubClass, 
+				sSubSubClass: sSubSubClass, 
+				nLevelStart: nLevelStart, 
+				nLevelEnd: nLevelEnd, 
+				aSchools: aSchools, 
+				sLang: sLang
+				});
+		}, nTimerSeconds/2);		
+		
+	}
+	
+	function createLabel(text) {
+		return "<div class='filterLabel'>"+text+"</div>";
+	}
+	function createClassSelect() {
+		var src = [{
+			name: "[ALL]",
+			title: "[ВСЕ]"
+		}];
+		for (var i in classSpells){
+			src.push(
 			{
-			cl=0;	
-			if(tmp1!=0)
+				name: classSpells[i].title.en,
+				title: classSpells[i].title.en+"<br>"+classSpells[i].title.ru
+			}
+			);
+		}
+		var classSelect = createSelect(src, {id: "ClassSelect", selected_key: "[ALL]", width: "100%"});
+		var label = createLabel("Класс");
+		
+		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");		
+	}
+	function createSubClassSelect(sClass) {
+		$("#SubSubClassSelect").remove();
+		var src = [{
+			name: "[NONE]",
+		    title: "[ПОДКЛАСС]"
+		}];
+		for (var i in classSpells[sClass].subclasses){
+			src.push(
+			{
+				name: i,
+				title: classSpells[sClass].subclasses[i].title.en+"<br>"+classSpells[sClass].subclasses[i].title.ru
+			}
+			);
+		}
+		var classSelect = createSelect(src, {id: "SubClassSelect", selected_key: "[NONE]", width: "100%"});
+		var label = createLabel("Класс");
+		
+		var index = 1;
+		if($("#SubClassSelect").length>0) {
+			index = $("button").index($("#SubClassSelect"));
+			$("#SubClassSelect").remove();
+		}
+		
+		if(src.length>1) {
+			$("#ClassSelect").parent().find("button").eq(index-1).after(classSelect);
+			//$("#ClassSelect").parent().append(classSelect);
+		}
+		
+		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
+	}
+	function createSubSubClassSelect(sClass, sSubClass) {
+		var src = [{
+			name: "[NONE]",
+		    title: "[ПОДПОДКЛАСС]"
+		}];
+		for (var i in classSpells[sClass].subclasses[sSubClass].subclasses){
+			src.push(
+			{
+				name: i,
+				title: classSpells[sClass].subclasses[sSubClass].subclasses[i].title.en+"<br>"+classSpells[sClass].subclasses[sSubClass].subclasses[i].title.ru
+			}
+			);
+		}
+		var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%"});
+		var label = createLabel("Класс");
+		//src[0].title= "[Полкласс]";
+		
+		var index = 1;
+		if($("#SubSubClassSelect").length>0) {
+			index = $("button").index($("#SubSubClassSelect"));
+			$("#SubSubClassSelect").remove();
+		} else {
+			index = $("button").index($("#SubClassSelect"));
+		}
+		
+		if(src.length>1) {
+			$("#SubClassSelect").after(classSelect);
+			//$("#ClassSelect").parent().append(classSelect);
+		}
+		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
+	}
+	function createLevelSelect() {
+		var src = [];
+		for (var i=0; i<10; i++) {
+			src.push(
 				{
-				atr+= "[data-class*='"+tmp1+"']";
-				atr2+= "[data-class*='"+tmp2+"']";
-				f_atr2=1;
+					name: i,
+					title: i
+				}
+			);
+		}
+		var s1 = createSelect(src, {id: "LevelStart", selected_key: 0, width: "100%"});
+		var s2 = createSelect(src, {id: "LevelEnd", selected_key: 9, width: "100%"});
+		var str = "<div class='row'><div class='cell'>"+s1+"</div><div class='cell'>"+s2+"</div></div>";
+		var label = createLabel("Уровень с/по");
+		$(".p_side").append("<div class='mediaWidth'>" + label + str + "</div>");	
+	}
+	function createSchoolCombobox(isOpen) {	
+		if(isOpen == undefined)
+			isOpen = true;
+		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школа", checkAll: true, isOpen: isOpen});
+		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
+	}
+	function createNameFilter() {
+		var ret=createInput({id: "NameInput"});
+		var label = createLabel("Название");
+		$(".p_side").append("<div class='mediaWidth'>" + label + ret + "</div>");		
+	}
+	function createLangSelect(lang) {
+		var src = [
+			{
+				name: "en",
+				title: "English"
+			},
+			{
+				name: "ru",
+				title: "Русский"
+			}
+		];
+		if(!lang)
+			lang = "ru";
+		var classSelect = createSelect(src, {id: "LangSelect", selected_key: lang, width: "100%"});
+		var label = createLabel("Язык");
+		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");	
+	}
+	
+	function createSidebar() {
+		var lang = getConfig("language");
+		var schoolOpen = getConfig("schoolOpen");
+		createNameFilter();
+		createClassSelect();
+		createLevelSelect();
+		createSchoolCombobox(schoolOpen);
+		createLangSelect(lang);
+		
+		$(".p_side").fadeIn();	
+	}
+	
+
+	/// handlers
+	
+	// hide DBG
+	$("body").on("click", "#dbg", function() {
+		$(this).fadeOut();
+	});
+	
+	//custom Select
+	$("body").on("click", ".customSelect .label", function() {
+	  if($(this).next(".list").css('display') == 'none') {
+		$(this).parent().focus();		
+	  }
+	  $(this).next(".list").fadeToggle();
+	});
+	$("body").on("focusout", ".customSelect", function() {	  
+	  $(this).find(".list").fadeOut();
+	});
+	$("body").on("click", ".customSelect .option", function() {
+	  var key = $(this).attr("data-key");
+	  var text = $(this).html().replace("<br>", " | ");
+	  $(this).closest(".customSelect").find(".label").attr("data-selected-key", key).text(text);
+	  $(this).parent("ul").fadeOut();
+	  $(this).closest(".customSelect").focusout();
+	  $(this).closest(".customSelect").blur();
+	  //$("#toFocus").focus();	  
+	});
+	
+	// custom Combobox
+	$("body").on('click', ".combo_box_title, .combo_box_arrow", function(){
+		var el = $(this).closest(".combo_box").find(".combo_box_content");
+		if(el.is(":visible"))
+		{
+			el.slideUp();
+			el.next(".combo_box_arrow").find(".arr_down").show();
+			el.next(".combo_box_arrow").find(".arr_up").hide();
+			el.parent().attr("data-content-open", false);
+		}
+		else
+		{
+			el.slideDown();
+			el.next(".combo_box_arrow").find(".arr_down").hide();
+			el.next(".combo_box_arrow").find(".arr_up").show();
+			el.parent().attr("data-content-open", true);
+		}
+	});// get item
+	function onSelectItemPress(src) {
+	var d_root='', d_parent='', trig=true;
+	
+	var attrFor = src.attr("for"); // $("input#"+attrFor)
+	d_root = $("input#"+attrFor).attr("data-root");
+	d_parent = $("input#"+attrFor).attr("data-parent");
+	if($("input#"+attrFor).prop("checked"))
+		{
+		trig=false;
+		}
+	$("input#"+attrFor).prop("checked", trig);
+	/**/
+	if(d_root!='' && d_root!=undefined)
+	{
+		$("input[type=checkbox][data-parent="+d_root+"]").each(function(){
+			$(this).prop( "checked", trig );
+		});
+	}
+	/**/
+	if(d_parent!='' && d_parent!=undefined && trig==false)
+	{
+		$("input[type=checkbox][data-root="+d_parent+"]").prop( "checked", trig);
+
+	}
+	/**/
+	/**/
+	if($("input[type=checkbox]:checked").length<1)
+		{
+		$("#go").attr("disabled", "disabled");
+		}
+	else
+		{
+		$("#go").removeAttr("disabled");
+		}
+	/**/
+
+	function make_val(ex, ad, dp){
+		var ret = '';
+		if(dp!=undefined) {
+			ad = dp + " " + ad;
+		}
+		if(ex!=undefined && ex!=""){
+			ret = ex+", "+ad;
+		} else {
+			ret = ad;
+		}
+		return ret;
+	}
+
+	/**/
+	var d_root='';
+	var before_root='';
+	var d_parent='';
+	var txt='';
+	var value='';
+	var title=''
+	$(".combo_box_title").html("");
+	$(".combo_box_title").attr('data-val',"");
+	$("input[type=checkbox]:checked").each(function(){
+		d_root='';
+		d_parent='';
+		d_parent=$(this).attr("data-parent");
+		d_root=$(this).attr("data-root");
+
+		title=$(".combo_box_title").html();
+		value=$(".combo_box_title").attr('data-val');
+
+		if(title!="" && title.charAt(title.length-1)!="(") {
+			$(".combo_box_title").append(", ");
+		}
+		// обычный пункт
+		if(d_parent==undefined && d_root==undefined)
+			{
+			txt = $(this).next("label").html().replace("<br>", " | ");
+			title_value = $(".combo_box_title").attr("data-val");
+			value = $(this).attr('value');
+			dp = $(this).attr('data-parent');
+			value = make_val(title_value, value, dp);
+			//$(".combo_box_title").append(txt).attr("data-val", value);
+			$(".combo_box_title").attr("data-val", value);
+			}
+		// если root
+		if(d_root!=undefined)
+			{
+				// если есть отмеченные потомки
+			if($("input[type=checkbox][data-parent="+d_root+"]:checked").length>0)
+				{
+				txt=$(this).next("label").text()+" (";
+				//$(".combo_box_title").append(txt);
+
+				before_root=d_root;
 				}
 			}
-		if(nm!=undefined && nm!='')
-		{
-			atr+= "[data-name*='"+nm+"']";
-			atr2+= "[data-name*='"+nm+"']";
-		}
-		if(lv!=undefined && lv!='')
-		{
-			atr+= "[data-level*='"+lv+"']";
-			atr2+= "[data-level*='"+lv+"']";
-		}
-		else
-			lv=0;
-		if(sc!=undefined && sc!='')
-		{
-			atr+= "[data-school*='"+sc+"']";
-			atr2+= "[data-school*='"+sc+"']";
-		}
-		if(lang=="en" || lang=='ru')
-		{
-			atr+= "[data-language*='"+lang+"']";
-			atr2+= "[data-language*='"+lang+"']";
-		}
-		//console.log(atr);
-		//console.log("s_cl: "+s_cl);
-		
-		//console.log("class: "+cl+" name: "+nm+" level: "+lv+" school: "+sc);
-		console.log("atr: "+atr);
-		console.log("atr2: "+atr2);
-		$(".cardContainer"+atr).show();
-		if(f_atr2==1)
-			$(".cardContainer"+atr2).show();
-			$(".cardContainer").each(function(){
-				lvl = $(this).attr("data-level");
-				if(lvl<s_l1)
-					$(this).hide();
-				if(lvl>s_l2)
-					$(this).hide();
-			});
-	}
-	function get_filter(){
-		var cl=$(".f_class").val().toLowerCase();
-		var nm=$(".f_name").val().toLowerCase();
-		var lv=$(".f_level").val().toLowerCase();
-		var sc=$(".f_school").val().toLowerCase();
-		var s_cl=$(".s_sp").val().toLowerCase();
-		var s_l1=$(".s_levfrom").val().toLowerCase();
-		var s_l2=$(".s_levto").val().toLowerCase();
-		var lang=$('.flt input[name=r_lang]:checked').attr("data-val");
-		//console.log(s_cl+" "+s_l1+" "+s_l2)
-		console.log("lang: "+lang);
-		if(cl!='' || nm!='' || lv!='' || sc!='' || s_cl!=0 || s_l1!=0 || s_l2!=9 || lang!='r_all')
-			spell_filter(cl, nm, lv, sc, s_cl, s_l1, s_l2, lang);
-		else
-			$(".cardContainer").show();
-	}
-	
-	function make_spell_list(){
-		var s_class='', s_name='', s_lang='', result='';
-		if($('.a_h_spell').length<1)
+		// если parent
+		if(d_parent!=undefined)
 			{
-			$(".cardContainer").each(function(){
-				s_class=$(this).attr("data-class");
-				s_name=$(this).attr("data-name");
-				//s_lang=$(this).attr("data-language");
-				//result+="<a href='#' class='a_h_spell' data-class='"+s_class+"' data-name='"+s_name+"' data-lang='"+s_lang+"'>"+s_name+"</a>";
-				result+="<a href='#' class='a_h_spell' data-class='"+s_class+"' data-name='"+s_name+"'>"+s_name+"</a>";
-			});	
-			$(".hidden_spells").append(result);
-			console.log("duble num: "+$(".a_h_spell[data-class=cleric][data-name=guidance][data-lang=en]").length);
+
+				txt=$(this).next("label").text();
+				title_value = $(".combo_box_title").attr("data-val");
+				value = $(this).attr('value');
+				dp = $(this).attr('data-parent');
+				value = make_val(title_value, value, dp);
+				var ind = $("input[type=checkbox][data-parent="+d_parent+"").index(this);
+				if(ind==$("input[type=checkbox][data-parent="+d_parent+"").length-1 && d_parent==before_root){
+					txt+=")";
+				}
+
+				$(".combo_box_title").append(txt).attr("data-val", value);
 			}
+		});
+
+		if($(".combo_box_title").html()=='')
+			$(".combo_box_title").html(src.closest(".combo_box").attr('data-text'));
+
+
+	var bg = $("#selector").find("input:checked + label[data-bg] ").attr("data-bg");
+	var leng = $("#selector").find("input:checked + label[data-bg] ").length;
+	$("#selector").find("input:checked + label[data-bg] ").each(function(){
+		if ($(this).attr("data-bg") != bg){
+			leng = 0;
+		}
+	});
+	if(bg && leng>0) {
+		$("body").attr("class", bg);
+	} else {
+		$("body").attr("class", "");
 	}
-	
-	// ввод в фильтр
-	$(".flt input").live('keyup', function(){
-		console.log('keyup');
-		if($(this).val().length==1)
-			{
-			setTimeout(function(){get_filter();}, 500);
-			}
-		else
-			get_filter();
 		
+	// bg /
+	return false;
+}
+
+	$("body").on('click', ".combo_box input", function(event){
+		return false;
 	});
-	$(".s_sp, .s_levfrom, .s_levto").live("change", function(){
-		console.log("select changed");
-		get_filter();
-	});
-	$("input[name=r_lang]").live("click", function(){
-		console.log("radio changed");
-		//alert($(this).attr("id"));
-		get_filter();
-	});
-	
-	// скрыть / показать спеллы
-	$(".hide_spell").live("click", function(){
-		var s_name= $(this).closest(".cardContainer").attr("data-name");
-		var s_class= $(this).closest(".cardContainer").attr("data-class");
-		//var s_lang= $(this).closest(".cardContainer").attr("data-language");
-		
-		$(this).closest(".cardContainer").hide();
-		//$(".a_h_spell[data-class="+s_class+"][data-name="+s_name+"][data-lang="+s_lang+"]").css('display', 'inline-block');
-		$(".a_h_spell[data-class='"+s_class+"'][data-name='"+s_name+"']").eq(0).css('display', 'inline-block');
-	});
-	$(".a_h_spell").live("click", function(){
-		var s_name= $(this).attr("data-name");
-		var s_class= $(this).attr("data-class");
-		//var s_lang= $(this).attr("data-lang");
-		
-		$(this).hide();
-		//$(".cardContainer[data-class="+s_class+"][data-name="+s_name+"][data-language="+s_lang+"]").show();
-		$(".cardContainer[data-class='"+s_class+"'][data-name='"+s_name+"']").eq(0).show();
-		
+
+	$("body").on('click', ".combo_box label", function(){
+		onSelectItemPress($(this));
 		return false;
 	});
 	
-	$(".f_hide_all").live("click", function(){
-		$('#dbg').fadeIn('fast', function() {
-			$(".cardContainer:visible").each(function(){
-				$(this).find(".hide_spell").click();
-			});
-
-			$(this).hide('fast'); // имейте в виду, не будет задержки после появления сразу начнет исчезать
-			f_dbg=0;
-		});		
-		
-	});
-	$(".f_show_all").live("click", function(){
-		/*$(".a_h_spell:visible").each(function(){
-			$(this).click();
-		});*/
-		
-		
-		$('#dbg').fadeIn('fast', function() {
-			$(".a_h_spell:visible").each(function(){
-				$(this).click();
-			});
-
-			$(this).hide('fast'); // имейте в виду, не будет задержки после появления сразу начнет исчезать
-			f_dbg=0;
-		});
+	// custom Input
+	$("body").on('click', ".customInput .cross", function(){
+		$(this).parent().find("input").val("");
+		$(this).parent().focusout();
 	});
 	
-	// размер текста
-	$(".f_min").live("click", function(){
-		var f_s=$(this).closest(".cont").find(".text").css("font-size");
-		f_s=f_s.substring(0, f_s.length - 1);
-		f_s=f_s.substring(0, f_s.length - 1);
-		//console.log(f_s);
-
-		if(f_s>6)
-		 f_s--;
-		console.log(f_s);
-	    $(this).closest(".cont").find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
-		
+	// filters
+	
+	// name select
+	$("body").on('focusout', "#NameInput", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
 	});
-	$(".f_max").live("click", function(){
-		var f_s=$(this).closest(".cont").find(".text").css("font-size");
-		f_s=f_s.substring(0, f_s.length - 1);
-		f_s=f_s.substring(0, f_s.length - 1);
-		if(f_s<20)
-		 f_s++;
-		console.log(f_s);
-	    $(this).closest(".cont").find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+	$("body").on('keyup', "#NameInput input", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds*3);		
+	});
+	// class select
+	$("body").on('focusout', "#ClassSelect", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+			var sClass = $("#ClassSelect .label").attr("data-selected-key");
+			createSubClassSelect(sClass);
+		}, nTimerSeconds);		
+	});
+	// sub class select
+	$("body").on('focusout', "#SubClassSelect", function(){
+		clearTimeout(oTimer);
 		
+		oTimer = setTimeout(function(){
+			filterSpells();
+			var sClass = $("#ClassSelect .label").attr("data-selected-key");
+			var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
+			createSubSubClassSelect(sClass, sSubClass);
+		}, nTimerSeconds);		
+	});
+	// sub sub class select
+	$("body").on('focusout', "#SubSubClassSelect", function(){
+		clearTimeout(oTimer);
+		
+		oTimer = setTimeout(function(){
+			filterSpells();			
+		}, nTimerSeconds);		
 	});
 	
-	// ширина карточек
-	
-	$(".f_card_thin").live("click", function(){
-		var width = $(".cardContainer").eq(0).width();
-		f_dbg=1;
-		//$("#dbg").show();
-		//$.when($(".cardContainer").width(width-20+"px")).then(function(){$("#dbg").hide();f_dbg=0});
-		
-		
-		$('#dbg').fadeIn('fast', function() {
-			$('.cardContainer').width(width-20+"px");
-
-			$(this).hide('fast'); // имейте в виду, не будет задержки после появления сразу начнет исчезать
-			f_dbg=0;
-		});
-		
+	// level select
+	$("body").on('focusout', "#LevelStart", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
 	});
-	$(".f_card_wide").live("click", function(){
-		$("#dbg").show();
-		var width = $(".cardContainer").eq(0).width();
-		f_dbg=1;
-		//$("#dbg").show();
-		//f_dbg=1;
-		//$.when($("#dbg").show()).then(function(){ $.when().then(function(){ $.when($(".cardContainer").width(width+20+"px")).then(function(){$("#dbg").hide();f_dbg=0}) }); });
-		//$(".cardContainer").width(width+20+"px");
-		//$.when($(".cardContainer").each(function(){ $(this).width(width+20+"px"); })).then(function(){$("#dbg").hide(); f_dbg=0});
-		
-		$('#dbg').fadeIn('fast', function() {
-			//$.when($('.cardContainer').width(width+20+"px")).then(function(){(this).hide('fast');});
-			//$('.cardContainer').width(width+20+"px");
-			$(".cardContainer").each(function(){ $(this).width(width+20+"px"); })
-			$(this).hide('fast'); // имейте в виду, не будет задержки после появления сразу начнет исчезать
-			f_dbg=0;
-		});
+	$("body").on('focusout', "#LevelEnd", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
 	});
-	$(".f_card_norm").live("click", function(){
-		f_dbg=1;
-		//$("#dbg").show();
-		//var width = $(".cardContainer").eq(0).width();
-		//$(".cardContainer").width("2.5in");
-		//$.when($(".cardContainer").width("2.5in")).then(function(){$("#dbg").hide();f_dbg=0});
-		
-		$('#dbg').fadeIn('fast', function() {
-			$('.cardContainer').width("2.5in");
-
-			$(this).hide('fast'); // имейте в виду, не будет задержки после появления сразу начнет исчезать
-			f_dbg=0;
-		});
-		
+	// school combobox
+	$("body").on('click', "#SchoolCombobox label", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
 	});
-
-	
-	// запрос списка файлов
-	var spell_dir = "php/class_list.php";
-	data = "get_list";
-	//console.log("start ajax");
-	
-   $.ajax(
-    {
-    type: "POST",
-    url: spell_dir,
-    data: data,
-    success: function(html){
-		//$(".p_cont").html(html);
-		class_list = JSON.parse(html);
-		// зааяксить данные из файлов.
-		show_spells(class_list);
-      }
-    }); 
-	
-	function show_spells(class_list){
-		// из каждого файла извлекаем спеллы
-		var num1 = 0;
-		var num2 = 0;
-		class_list.forEach(function(item, i, arr){
-				num1++;
-				get_spells(item);
-			});
-			/*
-		$.when().then(
-			function(){console.log(ajaxes done!!!);}
-		);
-		*/
-		//var timer1 = setInterval(make_spell_list, 4000);
-		//var timer2 = setInterval(function(){if($(".a_h_spell").length>0){clearInterval(timer1);clearInterval(timer2);};},5000);
-		make_spell_list();
-		$("#before_spells").hide();	
-		$(".p_side").show();
-	}
-	function get_spells(file){
-		data="file="+file;
-		$.ajax(
-		{
-		type: "POST",
-		url: "php/get_spells.php",
-		data: data,
-		async: false,
-		success: function(html){
-			$(".p_cont").append(html);	
-			console.log("OK!");
-			//$(".p_side").show();
-		  }
-		});
-	}
-	// zero
-	$(".n_zero").live("click", function(){
-		$(this).next("input").val("");
-		get_filter();
-	});
-	$(".s_zero").live("click", function(){
-		$(this).parent().find("select").val("0");
-		get_filter();
-	});
-	$(".level_zero").live("click", function(){
-			$(".s_levfrom").val(0);
-			$(".s_levto").val(9);
-		get_filter();
+	$("body").on('click', "#SchoolCombobox .combo_box_title, #SchoolCombobox .combo_box_arrow", function(){
+		setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));	
 	});
 	
-	// при нажатии кнопки с вопросом
-	$("#info").live("click", function(){
-		if($("#dbg").length<1)
-		{
-			$("body").append("<div id='dbg'></div>");
+	// lang select
+	$("body").on('focusout', "#LangSelect", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
+	});
+	
+	// show all spells
+	$("body").on('click', "#showAllSpells", function(){
+		filterSpells();	
+		return false;
+	});
+	
+	
+	//createSpellsIndex();	
+	
+	$.when(createSidebar()).done(
+		function(){
+			if(getViewPortSize("width") > 600)
+				filterSpells()
 		}
-		$("#dbg").show();
-		if($(".mod_win").length<1)
-		{
-			$("body").append("<div class='mod_win'></div>");
-		}
-		$(".mod_win").show();
-		
-		var info="<div class='m_head'>Справка</div>"+
-		"<p> По умолчанию открыты все заклинания. Для всех классов на двух языках (английский и русский).</p>"+
-		"<p> Первое поле 'Класс' позволяет выбрать из списка класс, чьи заклинания будт отображаться. По умолчанию на двух языках.</p>"+
-		"<p> Второе поле 'Уровень' позволяет задать диапазон отображаемых заклинаний. От первого значения (включая его), до второго (включая его тоже). </p>"+
-		"<p> Остальные поля работают как фильтры. Например, если требуется найти все заклинания школы некромантии, достаточно в поле 'Школа' ввести начало названия: 'некр'. Так как заклинания этой школы есть у разных классов, то и отобразятся все заклинания этой школы независимо от класса. Если нужны заклинания определенного класа, нужно выбрать и класс. Либо в выпадающем списке, либо набрав его название в строке-фильтре.</p>"+
-		"<br>"+
-		"<p>Версия 0.2.1 [03.04.2016]<br>"+
-		"Исправлены описания некотрых заклинаний<br>"+
-		"Добавлена возможность изменять ширину карточек";
-		
-		$(".mod_win").html(info);
-	});
-	
-	// убираем затемнение при нажатии на него
-	$("#dbg").live("click", function(){
-		if(f_dbg==0){
-			$("#dbg").hide();
-			$(".mod_win").hide();
-		}
-	});
-	
-	
-	if($("#dbg").length<1)
-	{
-		$("body").append("<div id='dbg' style='display: none'></div>")
-	}
-}); 
+	);
+}; 
