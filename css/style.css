@@ -909,6 +909,10 @@ p {
   font-size: 70%;
   color: #fff;
 }
+.lockedSpell .bLockSpell {
+  color: #000;
+  text-shadow: 0 0 2px #487EC5;
+}
 .Bard .spellCard {
   background-color: #e91e63;
   border-color: #e91e63;

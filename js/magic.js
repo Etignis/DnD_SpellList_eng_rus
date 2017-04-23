@@ -16,6 +16,19 @@ window.onload = function(){
 		);
 	}
 	
+	function removeFromArr(arr, el) {
+		var index;
+		
+		for (var i=0; i<arr.length; i++) {
+			if(arr[i] == el) {
+				index = i;
+				break;
+			}
+		}
+		arr.splice(i, 1);
+		return arr
+	}
+	
 	function getViewPortSize(mod) {
 		var viewportwidth;
 		var viewportheight;
@@ -167,7 +180,7 @@ window.onload = function(){
 		/**/
 	}
 		
-	function createCard(spell, lang, sClass) {
+	function createCard(spell, lang, sClass, sLockedSpell) {
 		if (spell[lang] || (lang="en", spell[lang])) {
 			var o = spell[lang];
 			var s_name = o.name;
@@ -202,16 +215,18 @@ window.onload = function(){
 			var bHideSpell = '<span class="bHideSpell" title="Скрыть заклинание (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';			
 			var bLockSpell = '<span class="bLockSpell" title="Закорепить заклинане (не будут действовать фильтры)"><i class="fa fa-lock" aria-hidden="true"></i></span>';			
 			
+			sLockedSpell = sLockedSpell? " lockedSpell " : "";
+			
 			try{
 				spell.ru.name.length;
 			} catch (err) {
 				console.log("!: "+spell.en.name);
 			}
 			
-			ret = '<div class="cardContainer '+sClass+'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + spell.ru.name + '">'+
+			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + spell.ru.name + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
-						bLockSpell +
+					
 						bHideSpell +
 						'<h1>' + s_name + s_ritual + '</h1>'+
 						'<div class="row">'+
@@ -269,6 +284,7 @@ window.onload = function(){
 		var sLang = oParams.sLang;
 		
 		var fHiddenSpells = (aHiddenSpells.length>0)? true: false;
+		var fLockedSpells = (aLockedSpells.length>0)? true: false;
 		
 		$(".spellContainer").empty();
 		var spells = "";
@@ -276,87 +292,98 @@ window.onload = function(){
 
 		filteredSpells = []; //arrDiff(filteredSpells, aHiddenSpells);
 		
-		//if(!fHiddenSpells){
 		
-			//class
-			var aSpells = [];
-			if(sClass) {
-				if(classSpells[sClass]) {
-					aSpells = aSpells.concat(classSpells[sClass].spells);
-					if(classSpells[sClass].subclasses && classSpells[sClass].subclasses[sSubClass]) {
+		//class
+		var aSpells = [];
+		if(sClass) {
+			if(classSpells[sClass]) {
+				aSpells = aSpells.concat(classSpells[sClass].spells);
+				if(classSpells[sClass].subclasses && classSpells[sClass].subclasses[sSubClass]) {
+					if(classSpells[sClass].subclasses[sSubClass].spells)
 						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].spells);
-						if(classSpells[sClass].subclasses[sSubClass].subclasses && classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
-							aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
-						}
+					if(classSpells[sClass].subclasses[sSubClass].subclasses && classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
+						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
 					}
-					aSpells.forEach(function(spellName){
-						var fFind = false;
-						for (var i = 0; i<allSpells.length; i++){	
-							if(allSpells[i].en.name == spellName) {
-								filteredSpells.push(allSpells[i]);
-								fFind = true;
-								break;
-							}
-						}
-						if(!fFind){
-							//console.log(spellName);
-						}
-					})
-				}	else {
-					filteredSpells = allSpells;
-				} 
-			} else {
-				filteredSpells = allSpells;
-			}
-			
-			// level
-			/**/
-			if(nLevelStart && nLevelEnd) {
-				filteredSpells = filteredSpells.filter(function(spell){
-					return !(spell.en.level < nLevelStart || spell.en.level > nLevelEnd);
-				});
-			}
-			/**/
-			
-			
-			//school		
-			if(aSchools && aSchools.length>0 && aSchools.length<9) {
-				filteredSpells = filteredSpells.filter(function(spell){
-					for(var i = 0; i < aSchools.length; i++) {
-						if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
-							return true;
-						}
-					}
-					return false;
-				});
-			}
-				
-			// name
-			if (sName) {
-				sName = sName.toLowerCase().trim();
-				filteredSpells = filteredSpells.filter(function(spell){
-					return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
-				});
-			}
-				
-			// sort
-			filteredSpells.sort(function(a, b) {
-				if(a[sLang] && b[sLang]) {
-					if (a[sLang].level+a[sLang].name.toLowerCase().trim() < b[sLang].level+b[sLang].name.toLowerCase().trim() )
-						return -1;
-					if (a[sLang].level+a[sLang].name.toLowerCase().trim() > b[sLang].level+b[sLang].name.toLowerCase().trim() )
-						return 1;
 				}
-				return 0
-			});
+				aSpells.forEach(function(spellName){
+					var fFind = false;
+					for (var i = 0; i<allSpells.length; i++){	
+						if(allSpells[i].en.name == spellName) {
+							filteredSpells.push(allSpells[i]);
+							fFind = true;
+							break;
+						}
+					}
+					if(!fFind){
+						//console.log(spellName);
+					}
+				})
+			}	else {
+				filteredSpells = allSpells;
+			} 
+		} else {
+			filteredSpells = allSpells;
+		}
 		
-		//}
-
-		filteredSpells = fHiddenSpells? arrDiff(filteredSpells, aHiddenSpells) : filteredSpells;
+		// level
+		/**/
+		if(nLevelStart && nLevelEnd) {
+			filteredSpells = filteredSpells.filter(function(spell){
+				return !(spell.en.level < nLevelStart || spell.en.level > nLevelEnd);
+			});
+		}
+		/**/
+		
+		
+		//school		
+		if(aSchools && aSchools.length>0 && aSchools.length<9) {
+			filteredSpells = filteredSpells.filter(function(spell){
+				for(var i = 0; i < aSchools.length; i++) {
+					if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
+						return true;
+					}
+				}
+				return false;
+			});
+		}
 			
+		// name
+		if (sName) {
+			sName = sName.toLowerCase().trim();
+			filteredSpells = filteredSpells.filter(function(spell){
+				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
+			});
+		}
+		
+		
+		filteredSpells = fHiddenSpells? arrDiff(filteredSpells, aHiddenSpells) : filteredSpells;
+		//filteredSpells = fLockedSpells? filteredSpells.concat(aLockedSpells) : filteredSpells;
+		if (fLockedSpells) {
+			for (var i = 0; i<allSpells.length; i++){	
+				for (var j=0; j<aLockedSpells.length; j++){
+					if(allSpells[i].en.name == aLockedSpells[j].en) {
+						filteredSpells.push(allSpells[i]);
+						break;
+					}
+				}
+			}
+		}
+			
+		// sort
+		filteredSpells.sort(function(a, b) {
+			if(a[sLang] && b[sLang]) {
+				if (a[sLang].level+a[sLang].name.toLowerCase().trim() < b[sLang].level+b[sLang].name.toLowerCase().trim() )
+					return -1;
+				if (a[sLang].level+a[sLang].name.toLowerCase().trim() > b[sLang].level+b[sLang].name.toLowerCase().trim() )
+					return 1;
+			}
+			return 0
+		});
+					
 		for (var i in filteredSpells) {
 			if(filteredSpells[i]) {
-				var tmp = createCard(filteredSpells[i], sLang, sClass)
+				var fLocked = filteredSpells[i].locked? true: false;
+				var tmp = createCard(filteredSpells[i], sLang, sClass, fLocked)
 				if (tmp)
 					spells += tmp;
 			} 
@@ -872,6 +899,27 @@ window.onload = function(){
 		// show spells without hidden
 		filterSpells({fHidden: true});
 	})
+
+	//lock spells
+	$("body").on('click', ".bLockSpell", function(){
+		var sName = $(this).closest(".cardContainer").attr("data-name")
+		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru")
+		
+		// lock toggle
+		if($(this).closest(".cardContainer").hasClass("lockedSpell")) {
+			// unlock
+			$(this).closest(".cardContainer").removeClass("lockedSpell");
+			aLockedSpells = removeFromArr(aLockedSpells, {en: sName, ru: sNameRu, locked: true});
+		} else {
+			// lock
+			$(this).closest(".cardContainer").addClass("lockedSpell");			
+			aLockedSpells.push({en: sName, ru: sNameRu, locked: true}); 
+		}
+		
+		// show spells without hidden
+		filterSpells();
+	})
+
 	
 	$.when(createSidebar()).done(
 		function(){
