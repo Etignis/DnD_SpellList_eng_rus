@@ -4988,11 +4988,11 @@ var allSpells = [
     "ru": {
       "name": "Двойник",
       "level": "8",
-      "text": "This spell grows an inert duplicate of a living creature as a safeguard against death. This clone forms inside as a sealed vessel and grows to full size and maturity after 120 days",
-      "school": "8 круг Necromancy",
+      "text": "Это заклинание выращивает инертную копию живого существа, которое станет гарантией бессмертия. Этот клон формируется в запечатанном сосуде и вырастает до полного размера за 120 дней; вы можете сделать так, что двойник будет более молодой версией этого существа. Он остаётся инертным и будет оставаться таким сколько угодно, пока сосуд остаётся целым.<br>В любое время после того, как двойник будет готов, когда настоящее существо умирает, его душа переносится в двойника, при условии, что она свободна и хочет вернуться. Двойник физически идентичен оригиналу и обладает той же индивидуальностью, воспоминаниями и умениями, но у него нет снаряжения оригинала. Тело исходного существа, если оно ещё существует, остаётся инертным, и его впоследствии нельзя оживить, так как душа обитает в другом месте.",
+      "school": "некромантия",
       "castingTime": "1 час",
       "range": "Касание",
-      "materials": "a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
+      "materials": "алмаз(1 000 зм), 1 кубический дюйм плоти существа (расходуемый), сосуд (2 000 зм)  с соленой водой для среднего существа",
       "components": "В, С, М",
       "duration": "мгновенно",
       "source": "PHB"
