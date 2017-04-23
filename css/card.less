@@ -57,6 +57,26 @@
     //overflow: hidden;
     position: relative;
     color: @m-gray - #111;
+    .bHideSpell, .bLockSpell{
+        position: absolute;
+        top: -.1em;
+        color: @l-gray;
+        cursor: pointer;
+        transition: color .3s;
+        
+        &:hover{
+            color: @color + #222;    
+        }
+        &:active{
+            color: @color;    
+        }
+    }
+    .bHideSpell{
+       right: .1em; 
+    }
+    .bLockSpell{
+       left: .1em; 
+    }
     .content{
         border-radius: @radius;
         background: @white;
@@ -80,6 +100,8 @@
         font-size: 95%;
         margin: 0;
         padding: 0;
+        padding-left: .3em;
+        padding-right: .3em;
         text-align: center;
         text-transform: uppercase;
         border-bottom: 2px solid @mainColor;

@@ -2,6 +2,20 @@ window.onload = function(){
 	var oConfig = {}; // global app config data
 	var oTimer; // for TimeOut (filtering)
 	var nTimerSeconds = 200;
+	
+	var aHiddenSpells = [];
+	var aLockedSpells = [];
+	var filteredSpells = [];
+	
+	function arrDiff(arr1, arr2) {
+		var arr3 = arr2.map(function(item){return item.en});
+		return arr1.filter(
+			function(item){ 
+				return (arr3.indexOf(item.en.name)>=0)? false: true;
+			}
+		);
+	}
+	
 	function getViewPortSize(mod) {
 		var viewportwidth;
 		var viewportheight;
@@ -184,11 +198,21 @@ window.onload = function(){
 			var s_school = o.school;
 			var s_source = o.source;
 			
-			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;;
+			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;
+			var bHideSpell = '<span class="bHideSpell" title="Скрыть заклинание (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';			
+			var bLockSpell = '<span class="bLockSpell" title="Закорепить заклинане (не будут действовать фильтры)"><i class="fa fa-lock" aria-hidden="true"></i></span>';			
 			
-			ret = '<div class="cardContainer '+sClass+'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '">'+
+			try{
+				spell.ru.name.length;
+			} catch (err) {
+				console.log("!: "+spell.en.name);
+			}
+			
+			ret = '<div class="cardContainer '+sClass+'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + spell.ru.name + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
+						bLockSpell +
+						bHideSpell +
 						'<h1>' + s_name + s_ritual + '</h1>'+
 						'<div class="row">'+
 							'<div class="cell castingTime">'+
@@ -244,85 +268,92 @@ window.onload = function(){
 		var aSchools = oParams.aSchools;
 		var sLang = oParams.sLang;
 		
+		var fHiddenSpells = (aHiddenSpells.length>0)? true: false;
+		
 		$(".spellContainer").empty();
 		var spells = "";
-		var filteredSpells = [];
-		//console.log("#");
-		//console.log("# Start filtering");
-		
-		//class
-		var aSpells = [];
-		if(sClass) {
-			if(classSpells[sClass]) {
-				aSpells = aSpells.concat(classSpells[sClass].spells);
-				if(classSpells[sClass].subclasses && classSpells[sClass].subclasses[sSubClass]) {
-					aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].spells);
-					if(classSpells[sClass].subclasses[sSubClass].subclasses && classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
-						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
-					}
-				}
-				aSpells.forEach(function(spellName){
-					var fFind = false;
-					for (var i = 0; i<allSpells.length; i++){	
-						if(allSpells[i].en.name == spellName) {
-							filteredSpells.push(allSpells[i]);
-							fFind = true;
-							break;
-						}
-					}
-					if(!fFind){
-						//console.log(spellName);
-					}
-				})
-			}	else {
-				filteredSpells = allSpells;
-			} 
-		} else {
-			filteredSpells = allSpells;
-		}
-		
-		// level
-		/**/
-		if(nLevelStart && nLevelEnd) {
-			filteredSpells = filteredSpells.filter(function(spell){
-				return !(spell.en.level < nLevelStart || spell.en.level > nLevelEnd);
-			});
-		}
-		/**/
-		
-		
-		//school		
-		if(aSchools && aSchools.length>0 && aSchools.length<9) {
-			filteredSpells = filteredSpells.filter(function(spell){
-				for(var i = 0; i < aSchools.length; i++) {
-					if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
-						return true;
-					}
-				}
-				return false;
-			});
-		}
-			
-		// name
-		if (sName) {
-			sName = sName.toLowerCase().trim();
-			filteredSpells = filteredSpells.filter(function(spell){
-				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
-			});
-		}
-			
-		// sort
-		filteredSpells.sort(function(a, b) {
-			if(a[sLang] && b[sLang]) {
-				if (a[sLang].level+a[sLang].name.toLowerCase().trim() < b[sLang].level+b[sLang].name.toLowerCase().trim() )
-					return -1;
-				if (a[sLang].level+a[sLang].name.toLowerCase().trim() > b[sLang].level+b[sLang].name.toLowerCase().trim() )
-					return 1;
-			}
-			return 0
-		});
 		
 
+		filteredSpells = []; //arrDiff(filteredSpells, aHiddenSpells);
+		
+		//if(!fHiddenSpells){
+		
+			//class
+			var aSpells = [];
+			if(sClass) {
+				if(classSpells[sClass]) {
+					aSpells = aSpells.concat(classSpells[sClass].spells);
+					if(classSpells[sClass].subclasses && classSpells[sClass].subclasses[sSubClass]) {
+						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].spells);
+						if(classSpells[sClass].subclasses[sSubClass].subclasses && classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
+							aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
+						}
+					}
+					aSpells.forEach(function(spellName){
+						var fFind = false;
+						for (var i = 0; i<allSpells.length; i++){	
+							if(allSpells[i].en.name == spellName) {
+								filteredSpells.push(allSpells[i]);
+								fFind = true;
+								break;
+							}
+						}
+						if(!fFind){
+							//console.log(spellName);
+						}
+					})
+				}	else {
+					filteredSpells = allSpells;
+				} 
+			} else {
+				filteredSpells = allSpells;
+			}
+			
+			// level
+			/**/
+			if(nLevelStart && nLevelEnd) {
+				filteredSpells = filteredSpells.filter(function(spell){
+					return !(spell.en.level < nLevelStart || spell.en.level > nLevelEnd);
+				});
+			}
+			/**/
+			
+			
+			//school		
+			if(aSchools && aSchools.length>0 && aSchools.length<9) {
+				filteredSpells = filteredSpells.filter(function(spell){
+					for(var i = 0; i < aSchools.length; i++) {
+						if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
+							return true;
+						}
+					}
+					return false;
+				});
+			}
+				
+			// name
+			if (sName) {
+				sName = sName.toLowerCase().trim();
+				filteredSpells = filteredSpells.filter(function(spell){
+					return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
+				});
+			}
+				
+			// sort
+			filteredSpells.sort(function(a, b) {
+				if(a[sLang] && b[sLang]) {
+					if (a[sLang].level+a[sLang].name.toLowerCase().trim() < b[sLang].level+b[sLang].name.toLowerCase().trim() )
+						return -1;
+					if (a[sLang].level+a[sLang].name.toLowerCase().trim() > b[sLang].level+b[sLang].name.toLowerCase().trim() )
+						return 1;
+				}
+				return 0
+			});
+		
+		//}
+
+		filteredSpells = fHiddenSpells? arrDiff(filteredSpells, aHiddenSpells) : filteredSpells;
+			
 		for (var i in filteredSpells) {
 			if(filteredSpells[i]) {
 				var tmp = createCard(filteredSpells[i], sLang, sClass)
@@ -336,7 +367,7 @@ window.onload = function(){
 		$("#info_text").hide();
 	}
 	
-	function filterSpells(){
+	function filterSpells(oParams){
 		var sName = $("#NameInput input").val();
 		var sClass = $("#ClassSelect .label").attr("data-selected-key");
 		var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
@@ -346,6 +377,8 @@ window.onload = function(){
 		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
+		
+		var fHidden = (aHiddenSpells.length>0)? true: false;
 		
 		setConfig("language", sLang);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
@@ -359,7 +392,8 @@ window.onload = function(){
 				nLevelStart: nLevelStart, 
 				nLevelEnd: nLevelEnd, 
 				aSchools: aSchools, 
-				sLang: sLang
+				sLang: sLang,
+				fHidden: fHidden
 				});
 		}, nTimerSeconds/2);		
 		
@@ -496,6 +530,21 @@ window.onload = function(){
 		var classSelect = createSelect(src, {id: "LangSelect", selected_key: lang, width: "100%"});
 		var label = createLabel("Язык");
 		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");	
+	}
+	
+	function createHiddenSpellsList(){
+		if(aHiddenSpells.length < 1){
+			$("#HiddenSpells").parent().remove();
+			return;
+		}
+		if(!$("#HiddenSpells").length>0){
+			var label = createLabel("Скрытые заклинания");
+			$("#LangSelect").parent().after("<div class='mediaWidth'>" + label + "<div id='HiddenSpells'></div></div>");
+		}
+		var listHiddenSpells = aHiddenSpells.map(function(item){
+			return "<a href='#' title='Вернуть на место' class='bUnhideSpell' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
+			}).join(" ");
+		$("#HiddenSpells").html(listHiddenSpells);			
 	}
 	
 	function createSidebar() {
@@ -797,7 +846,32 @@ window.onload = function(){
 		return false;
 	});
 	
-	//createSpellsIndex();	
+
+	//hide spells
+	$("body").on('click', ".bHideSpell", function(){
+		var sName = $(this).closest(".cardContainer").attr("data-name")
+		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru")
+		// update hidden spells array
+		aHiddenSpells.push({en: sName, ru: sNameRu}); 
+		
+		// show list of hidden spells
+		createHiddenSpellsList();
+		
+		// show spells without hidden
+		filterSpells({fHidden: true});
+	})
+	// unhide spells
+	$("body").on('click', ".bUnhideSpell", function(){
+		var sName = $(this).attr("data-name")
+		// update hidden spells array
+		aHiddenSpells.splice(aHiddenSpells.indexOf(sName), 1); 
+		
+		// show list of hidden spells
+		createHiddenSpellsList();
+		
+		// show spells without hidden
+		filterSpells({fHidden: true});
+	})
 	
 	$.when(createSidebar()).done(
 		function(){
