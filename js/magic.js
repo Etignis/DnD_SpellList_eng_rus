@@ -801,6 +801,7 @@ window.onload = function(){
 	
 	$.when(createSidebar()).done(
 		function(){
+			$("#showAllSpells").slideDown();
 			if(getViewPortSize("width") > 600)
 				filterSpells()
 		}
