@@ -876,8 +876,10 @@ window.onload = function(){
 
 	//hide spells
 	$("body").on('click', ".bHideSpell", function(){
-		var sName = $(this).closest(".cardContainer").attr("data-name")
-		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru")
+		var sName = $(this).closest(".cardContainer").attr("data-name");
+		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+		
+		$(this).hide();
 		// update hidden spells array
 		aHiddenSpells.push({en: sName, ru: sNameRu}); 
 		
@@ -891,7 +893,7 @@ window.onload = function(){
 	$("body").on('click', ".bUnhideSpell", function(){
 		var sName = $(this).attr("data-name")
 		// update hidden spells array
-		aHiddenSpells.splice(aHiddenSpells.indexOf(sName), 1); 
+		aHiddenSpells.splice(aHiddenSpells.map(function(el){return el.en}).indexOf(sName), 1); 
 		
 		// show list of hidden spells
 		createHiddenSpellsList();
