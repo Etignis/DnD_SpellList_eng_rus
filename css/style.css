@@ -148,7 +148,7 @@ body {
   height: auto;
   font-size: 12px;
   background-color: #222;
-  background: url('../img/bg2.jpg') center center;
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
   background-attachment: fixed;
   background-size: cover;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -307,7 +307,7 @@ p {
   text-align: center;
 }
 .combo_box_arrow:hover {
-  background: #555555;
+  background: #888888;
 }
 .combo_box_arrow:active {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -381,7 +381,7 @@ p {
   text-align: center;
 }
 .combo_box_title:hover {
-  background: #555555;
+  background: #888888;
 }
 .combo_box_title:active {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -607,13 +607,13 @@ p {
   cursor: pointer;
   padding: .9em 1.6em;
   margin: .5em .5em 0em;
-  background: #fdfdfd;
+  background: #f9f9f9;
   text-decoration: none;
   color: #487EC5;
   transition: box-shadow 0.3s, background 0.3s, color 0.3s;
 }
 .button:hover {
-  background: #f9f9f9;
+  background: #fefefe;
   color: #376db4;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
@@ -768,6 +768,11 @@ p {
   font-weight: 600;
 }
 @media screen and (min-width: 65em) {
+  body {
+    background: url('../img/bg2.jpg') center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
   .page {
     padding-top: 5px;
   }

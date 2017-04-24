@@ -65,13 +65,13 @@
     cursor: pointer;
     padding: .9em 1.6em;
     margin: .5em .5em 0em;
-    background: #fdfdfd;
+    background: #f9f9f9;
     text-decoration: none;
     color: @color;
     transition: box-shadow .3s, background .3s, color .3s;
     
     &:hover{
-        background: #f9f9f9;
+        background: #fefefe;
         color: @color - #111;
         box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
     }
@@ -189,6 +189,11 @@
 // }
 
 @media screen and (min-width: @m_w_1) {
+    body{        
+	    background: url('../img/bg2.jpg') center center no-repeat;
+	    background-attachment: fixed;
+	    background-size: cover;
+    }
     .page{
         //margin-left: 21em;
         //width: 100%;
