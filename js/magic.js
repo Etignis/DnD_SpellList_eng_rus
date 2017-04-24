@@ -173,10 +173,11 @@ window.onload = function(){
 	}
 	function getConfig(prop) {
 		/**/
+		oConfig = JSON.parse(localStorage.getItem("config"));
 		if(prop!=undefined) {
-			return localStorage.getItem("config")? JSON.parse(localStorage.getItem("config"))[prop] : null;
+			return localStorage.getItem("config")? oConfig[prop] : null;
 		}
-		return JSON.parse(localStorage.getItem("config"));
+		return oConfig;
 		/**/
 	}
 		
@@ -859,6 +860,7 @@ window.onload = function(){
 	
 	// show all spells
 	$("body").on('click', "#showAllSpells", function(){
+		setConfig("infiIsShown", true);
 		filterSpells();	
 		hideInfoWin();
 		hideDBG();
@@ -926,8 +928,11 @@ window.onload = function(){
 	$.when(createSidebar()).done(
 		function(){
 			$("#showAllSpells").slideDown();
-			if(getViewPortSize("width") > 600)
-				filterSpells()
+			if(getViewPortSize("width") > 600){
+				if(getConfig("infiIsShown")==true)
+					filterSpells();
+
+			}
 		}
 	);
 }; 
