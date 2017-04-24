@@ -428,8 +428,8 @@ window.onload = function(){
 	}
 	
 	function createButtons() {
-		var bHome = "<a href='/' class='bt'><i class='fa fa-home'></i></a>";
-		var bInfo = "<a href='/' class='bt' id='bInfo'><i class='fa fa-question-circle'></i></a>";
+		var bHome = "<a href='/' class='bt' title='На главную страницу'><i class='fa fa-home'></i></a>";
+		var bInfo = "<a href='#' class='bt' id='bInfo' title='Справка'><i class='fa fa-question-circle'></i></a>";
 		$(".p_side").append("<div class='mediaWidth'>" + bHome + bInfo + "</div>");		
 	}
 	
@@ -460,6 +460,7 @@ window.onload = function(){
 			name: "[NONE]",
 		    title: "[ПОДКЛАСС]"
 		}];
+		if(classSpells[sClass] && classSpells[sClass].subclasses)
 		for (var i in classSpells[sClass].subclasses){
 			src.push(
 			{
@@ -480,6 +481,8 @@ window.onload = function(){
 		if(src.length>1) {
 			$("#ClassSelect").parent().find("button").eq(index-1).after(classSelect);
 			//$("#ClassSelect").parent().append(classSelect);
+		} else {
+			$("#SubClassSelect").remove();
 		}
 		
 		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
@@ -489,6 +492,10 @@ window.onload = function(){
 			name: "[NONE]",
 		    title: "[ПОДПОДКЛАСС]"
 		}];
+		if(classSpells[sClass] && 
+			classSpells[sClass].subclasses && 
+			classSpells[sClass].subclasses[sSubClass] && 
+			classSpells[sClass].subclasses[sSubClass].subclasses)
 		for (var i in classSpells[sClass].subclasses[sSubClass].subclasses){
 			src.push(
 			{
@@ -512,6 +519,8 @@ window.onload = function(){
 		if(src.length>1) {
 			$("#SubClassSelect").after(classSelect);
 			//$("#ClassSelect").parent().append(classSelect);
+		} else {
+			$("#SubSubClassSelect").remove();
 		}
 		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
 	}
