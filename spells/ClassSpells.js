@@ -1288,7 +1288,7 @@ var classSpells = {
 		{
 		  title: {
 			en: "Archfey",
-			ru: ""
+			ru: "Архифея"
 			},
 			spells: [
 			  
@@ -1315,7 +1315,7 @@ var classSpells = {
 		{
 		  title: {
 			en: "Fiend",
-			ru: ""
+			ru: "Исчадие"
 			},
 			spells: [
 			  
@@ -1343,7 +1343,7 @@ var classSpells = {
 		{
 		  title: {
 			en: "The Great Old One",
-			ru: ""
+			ru: "Великий Древний"
 			},
 			spells: [
 			  

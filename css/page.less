@@ -65,18 +65,24 @@
     cursor: pointer;
     padding: .9em 1.6em;
     margin: .5em .5em 0em;
-    background: #fdfdfd;
+    background: #f9f9f9;
     text-decoration: none;
     color: @color;
     transition: box-shadow .3s, background .3s, color .3s;
     
     &:hover{
-        background: #f9f9f9;
+        background: #fefefe;
         color: @color - #111;
         box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
     }
 }
 
+.mod_win_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 .mod_win{
     .fr-concave;
     display: block;
@@ -87,7 +93,7 @@
     top: 1em;
     //margin: 0 auto;
     z-index: 999;
-    background: @white;
+    background: @white - #111;
     color: @d-gray;
     cursor: default;
     font-weight: normal;
@@ -104,6 +110,10 @@
     z-index: 88;
     background: rgba(0,0,0,.7);
     display: none;
+    cursor: pointer;
+}
+#infoWin{
+    
 }
 .filterLabel{
     width: 100%;
@@ -179,6 +189,11 @@
 // }
 
 @media screen and (min-width: @m_w_1) {
+    body{        
+	    background: url('../img/bg2.jpg') center center no-repeat;
+	    background-attachment: fixed;
+	    background-size: cover;
+    }
     .page{
         //margin-left: 21em;
         //width: 100%;

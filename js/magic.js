@@ -2,6 +2,33 @@ window.onload = function(){
 	var oConfig = {}; // global app config data
 	var oTimer; // for TimeOut (filtering)
 	var nTimerSeconds = 200;
+	
+	var aHiddenSpells = [];
+	var aLockedSpells = {};
+	var filteredSpells = [];
+	
+	function arrDiff(arr1, arr2) {
+		var arr3 = arr2.map(function(item){return item.en});
+		return arr1.filter(
+			function(item){ 
+				return (arr3.indexOf(item.en.name)>=0)? false: true;
+			}
+		);
+	}
+	
+	function removeFromArr(arr, el) {
+		var index;
+		
+		for (var i=0; i<arr.length; i++) {
+			if(arr[i] == el) {
+				index = i;
+				break;
+			}
+		}
+		arr.splice(i, 1);
+		return arr
+	}
+	
 	function getViewPortSize(mod) {
 		var viewportwidth;
 		var viewportheight;
@@ -64,7 +91,7 @@ window.onload = function(){
 		});
 		min_width = min_width>20? 20: min_width;
 		min_width = min_width<5? 5: min_width;
-		min_width = ~~(min_width*0.85);
+		min_width = ~~(min_width*0.75);
 
 		var list = "<ul class='list'>" + options + "</ul>";
 
@@ -113,6 +140,17 @@ window.onload = function(){
 		return "<div "+id+" class='customInput'><input type='text'><span class='cross'></span></div>";
 	}
 	
+	function showInfoWin(sText) {
+		if(!$(".mod_win_wrapper").length){
+			$("body").append("<div class='mod_win_wrapper'><div class='mod_win'>"+sText+"</div></div>");
+		}
+		$(".mod_win_wrapper").fadeIn();
+	}
+	function hideInfoWin() {
+		if($(".mod_win_wrapper").length){
+			$(".mod_win_wrapper").fadeOut();
+		}
+	}
 	function showDBG() {
 		if(!$("#dbg").length){
 			$("body").append("<div id='dbg'></div>");
@@ -134,14 +172,16 @@ window.onload = function(){
 	}
 	function getConfig(prop) {
 		/**/
+		oConfig = JSON.parse(localStorage.getItem("config"));
 		if(prop!=undefined) {
-			return localStorage.getItem("config")? JSON.parse(localStorage.getItem("config"))[prop] : null;
+			return localStorage.getItem("config")? oConfig[prop] : null;
 		}
-		return JSON.parse(localStorage.getItem("config"));
+		return oConfig;
 		/**/
 	}
 		
-	function createCard(spell, lang, sClass) {
+		
+	function createCard(spell, lang, sClass, sLockedSpell) {
 		if (spell[lang] || (lang="en", spell[lang])) {
 			var o = spell[lang];
 			var s_name = o.name;
@@ -172,11 +212,23 @@ window.onload = function(){
 			var s_school = o.school;
 			var s_source = o.source;
 			
-			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;;
+			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;
+			var bHideSpell = '<span class="bHideSpell" title="Скрыть заклинание (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';			
+			var bLockSpell = sLockedSpell? '<span class="bUnlockSpell" title="Открепить обратно"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>' : '<span class="bLockSpell" title="Закорепить заклинане (не будут действовать фильтры)"><i class="fa fa-lock" aria-hidden="true"></i></span>';			
 			
-			ret = '<div class="cardContainer '+sClass+'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '">'+
+			sLockedSpell = sLockedSpell? " lockedSpell " : "";
+			
+			try{
+				spell.ru.name.length;
+			} catch (err) {
+				console.log("!: "+spell.en.name);
+			}
+			
+			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + spell.ru.name + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
+						bLockSpell +
+						bHideSpell +
 						'<h1>' + s_name + s_ritual + '</h1>'+
 						'<div class="row">'+
 							'<div class="cell castingTime">'+
@@ -232,19 +284,24 @@ window.onload = function(){
 		var aSchools = oParams.aSchools;
 		var sLang = oParams.sLang;
 		
+		var fHiddenSpells = (aHiddenSpells.length>0)? true: false;
+		var fLockedSpells = (aLockedSpells.length>0)? true: false;
+		
 		$(".spellContainer").empty();
 		var spells = "";
-		var filteredSpells = [];
-		//console.log("#");
-		//console.log("# Start filtering");
+		
+
+		filteredSpells = []; //arrDiff(filteredSpells, aHiddenSpells);
+		
 		
 		//class
 		var aSpells = [];
 		if(sClass) {
 			if(classSpells[sClass]) {
 				aSpells = aSpells.concat(classSpells[sClass].spells);
-				if(classSpells[sClass].subclasses[sSubClass]) {
-					aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].spells);
+				if(classSpells[sClass].subclasses && classSpells[sClass].subclasses[sSubClass]) {
+					if(classSpells[sClass].subclasses[sSubClass].spells)
+						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].spells);
 					if(classSpells[sClass].subclasses[sSubClass].subclasses && classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
 						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
 					}
@@ -298,6 +355,20 @@ window.onload = function(){
 				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
 			});
 		}
+		
+		
+		filteredSpells = fHiddenSpells? arrDiff(filteredSpells, aHiddenSpells) : filteredSpells;
+		//filteredSpells = fLockedSpells? filteredSpells.concat(aLockedSpells) : filteredSpells;
+		if (fLockedSpells) {
+			for (var i = 0; i<allSpells.length; i++){	
+				for (var j=0; j<aLockedSpells.length; j++){
+					if(allSpells[i].en.name == aLockedSpells[j].en) {
+						filteredSpells.push(allSpells[i]);
+						break;
+					}
+				}
+			}
+		}
 			
 		// sort
 		filteredSpells.sort(function(a, b) {
@@ -309,11 +380,11 @@ window.onload = function(){
 			}
 			return 0
 		});
-		
-
+					
 		for (var i in filteredSpells) {
 			if(filteredSpells[i]) {
-				var tmp = createCard(filteredSpells[i], sLang, sClass)
+				var fLocked = filteredSpells[i].locked? true: false;
+				var tmp = createCard(filteredSpells[i], sLang, sClass, fLocked)
 				if (tmp)
 					spells += tmp;
 			} 
@@ -324,7 +395,7 @@ window.onload = function(){
 		$("#info_text").hide();
 	}
 	
-	function filterSpells(){
+	function filterSpells(oParams){
 		var sName = $("#NameInput input").val();
 		var sClass = $("#ClassSelect .label").attr("data-selected-key");
 		var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
@@ -334,6 +405,8 @@ window.onload = function(){
 		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
+		
+		var fHidden = (aHiddenSpells.length>0)? true: false;
 		
 		setConfig("language", sLang);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
@@ -347,10 +420,17 @@ window.onload = function(){
 				nLevelStart: nLevelStart, 
 				nLevelEnd: nLevelEnd, 
 				aSchools: aSchools, 
-				sLang: sLang
+				sLang: sLang,
+				fHidden: fHidden
 				});
-		}, nTimerSeconds/2);		
+		}, nTimerSeconds/4);		
 		
+	}
+	
+	function createButtons() {
+		var bHome = "<a href='/' class='bt flexChild' title='На главную страницу'><i class='fa fa-home'></i></a>";
+		var bInfo = "<a href='#' class='bt flexChild' id='bInfo' title='Справка'><i class='fa fa-question-circle'></i></a>";
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + bHome + bInfo + "</div>");		
 	}
 	
 	function createLabel(text) {
@@ -380,6 +460,7 @@ window.onload = function(){
 			name: "[NONE]",
 		    title: "[ПОДКЛАСС]"
 		}];
+		if(classSpells[sClass] && classSpells[sClass].subclasses)
 		for (var i in classSpells[sClass].subclasses){
 			src.push(
 			{
@@ -400,6 +481,8 @@ window.onload = function(){
 		if(src.length>1) {
 			$("#ClassSelect").parent().find("button").eq(index-1).after(classSelect);
 			//$("#ClassSelect").parent().append(classSelect);
+		} else {
+			$("#SubClassSelect").remove();
 		}
 		
 		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
@@ -409,6 +492,10 @@ window.onload = function(){
 			name: "[NONE]",
 		    title: "[ПОДПОДКЛАСС]"
 		}];
+		if(classSpells[sClass] && 
+			classSpells[sClass].subclasses && 
+			classSpells[sClass].subclasses[sSubClass] && 
+			classSpells[sClass].subclasses[sSubClass].subclasses)
 		for (var i in classSpells[sClass].subclasses[sSubClass].subclasses){
 			src.push(
 			{
@@ -432,6 +519,8 @@ window.onload = function(){
 		if(src.length>1) {
 			$("#SubClassSelect").after(classSelect);
 			//$("#ClassSelect").parent().append(classSelect);
+		} else {
+			$("#SubSubClassSelect").remove();
 		}
 		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
 	}
@@ -453,8 +542,8 @@ window.onload = function(){
 	}
 	function createSchoolCombobox(isOpen) {	
 		if(isOpen == undefined)
-			isOpen = true;
-		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школа", checkAll: true, isOpen: isOpen});
+			isOpen = false;
+		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 	}
 	function createNameFilter() {
@@ -480,9 +569,66 @@ window.onload = function(){
 		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");	
 	}
 	
+	function createHiddenSpellsList(){
+		if(aHiddenSpells.length < 1){
+			$("#HiddenSpells").parent().remove();
+			return;
+		}
+		if(!$("#HiddenSpells").length>0){
+			var label = createLabel("Скрытые заклинания");
+			$("#LangSelect").parent().after("<div class='mediaWidth'>" + label + "<div id='HiddenSpells'></div></div>");
+		}
+		var listHiddenSpells = aHiddenSpells.map(function(item){
+			return "<a href='#' title='Вернуть на место' class='bUnhideSpell' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
+			}).join(" ");
+		$("#HiddenSpells").html(listHiddenSpells);			
+	}
+	
+	function createLockedSpellsArea(){
+		var aLocked = [];
+		for (var i in aLockedSpells){
+			aLocked.push(i);
+		}
+		var aResult = [];
+		var l = aLocked.length;
+		if(l>0){
+			for (var i=0; i<allSpells.length; i++) {
+				for (var j=0; j< l; j++) {
+					if(allSpells[i].en.name == aLocked[j]) {
+						aResult.push(allSpells[i]);
+						aResult[aResult.length-1].lang = aLockedSpells[aLocked[j]].lang;
+						aResult[aResult.length-1].class = aLockedSpells[aLocked[j]].class;
+					}
+				}
+			}
+			
+			if($("#lockedSpellsArea").length<1){
+				$(".p_cont").prepend("<div id='lockedSpellsArea'><span class='topHeader'></span><div class='content row'></div><span class='bottomHeader'></span></div>");
+
+			}
+			$("#lockedSpellsArea .content").html(aResult.sort(function(a, b) {
+				if(a.lang && b.lang) {
+					if (a[a.lang].level+a[a.lang].name.toLowerCase().trim() < b[b.lang].level+b[b.lang].name.toLowerCase().trim() )
+						return -1;
+					if (a[a.lang].level+a[a.lang].name.toLowerCase().trim() > b[b.lang].level+b[b.lang].name.toLowerCase().trim() )
+						return 1;
+				}
+				return 0
+			}).map(function(el){return createCard(el, el.lang, el.class, true)}));	
+			
+			//COUNTER
+			$("#lockedSpellsArea .topHeader").html("("+l+")");
+			$(".spellContainer").addClass("noprint");
+		} else {
+			$("#lockedSpellsArea").remove();
+			$(".spellContainer").removeClass("noprint");
+		}
+	}
+	
 	function createSidebar() {
 		var lang = getConfig("language");
 		var schoolOpen = getConfig("schoolOpen");
+		createButtons();
 		createNameFilter();
 		createClassSelect();
 		createLevelSelect();
@@ -498,6 +644,7 @@ window.onload = function(){
 	// hide DBG
 	$("body").on("click", "#dbg", function() {
 		$(this).fadeOut();
+		hideInfoWin();
 	});
 	
 	//custom Select
@@ -763,17 +910,92 @@ window.onload = function(){
 	
 	// show all spells
 	$("body").on('click', "#showAllSpells", function(){
+		setConfig("infiIsShown", true);
 		filterSpells();	
+		hideInfoWin();
+		hideDBG();
 		return false;
 	});
 	
+	//info_textbInfo
+	$("body").on('click', "#bInfo", function(){
+		var sInfo = $("#info_text").html();
+		showDBG();
+		showInfoWin(sInfo);
+		return false;
+	});
 	
-	//createSpellsIndex();	
+
+	//hide spells
+	$("body").on('click', ".bHideSpell", function(){
+		var sName = $(this).closest(".cardContainer").attr("data-name");
+		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+		
+		$(this).hide();
+		// update hidden spells array
+		aHiddenSpells.push({en: sName, ru: sNameRu}); 
+		
+		// show list of hidden spells
+		createHiddenSpellsList();
+		
+		// show spells without hidden
+		filterSpells({fHidden: true});
+	})
+	// unhide spells
+	$("body").on('click', ".bUnhideSpell", function(){
+		var sName = $(this).attr("data-name")
+		// update hidden spells array
+		aHiddenSpells.splice(aHiddenSpells.map(function(el){return el.en}).indexOf(sName), 1); 
+		
+		// show list of hidden spells
+		createHiddenSpellsList();
+		
+		// show spells without hidden
+		filterSpells({fHidden: true});
+		
+		return false;
+	})
+
+	// lock spells
+	$("body").on('click', ".bLockSpell", function(){
+		var sName = $(this).closest(".cardContainer").attr("data-name");
+		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+		var sLang = $(this).closest(".cardContainer").attr("data-lang");
+		var sClass= $(this).closest(".cardContainer").attr("data-class");
+		
+		
+		aLockedSpells[sName] = {
+			ru: sNameRu,
+			lang: sLang,
+			class: sClass
+			};
+		
+		// show locked
+		createLockedSpellsArea();
+	})
+	// unlock spells
+	$("body").on('click', ".bUnlockSpell", function(){
+		var sName = $(this).closest(".cardContainer").attr("data-name");
+		
+		delete aLockedSpells[sName];
+		
+		// show locked
+		createLockedSpellsArea();
+	})
+	$("body").on('click', "#lockedSpellsArea .topHeader", function(){
+		$(this).next(".content").slideToggle();
+		$(this).next(".content").next(".bottomHeader").fadeToggle();
+	});
+		
 	
 	$.when(createSidebar()).done(
 		function(){
-			if(getViewPortSize("width") > 600)
-				filterSpells()
+			$("#showAllSpells").slideDown();
+			if(getViewPortSize("width") > 600){
+				if(getConfig("infiIsShown")==true)
+					filterSpells();
+
+			}
 		}
 	);
 }; 

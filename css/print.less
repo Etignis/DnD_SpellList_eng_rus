@@ -1,4 +1,7 @@
 @media print{
+    .noprint{
+        display: none !important;
+    }
     #wrap{
         overflow-x: hidden;
     }
@@ -8,7 +11,7 @@
         margin: 0;
         padding: 0;
     }
-    .p_side, #helper{
+    .bHideSpell, .bLockSpell, .p_side, #helper{
         display: none !important;
     }
     .p_cont{
@@ -73,8 +76,13 @@
             }
         }
     }
+    #lockedSpellsArea{
+        .topHeader, .bottomHeader{
+            display: none;
+        }
+    }
 }
 
 @page{
-    margin: 0;//0.5cm;
+    margin: .9cm;//0.5cm;
 }

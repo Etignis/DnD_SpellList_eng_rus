@@ -24,6 +24,16 @@
   background: rgba(0, 0, 0, 0.6);
   display: none;
 }
+.flexParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.flexChild {
+  flex-grow: 1;
+}
 .frame {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -138,7 +148,7 @@ body {
   height: auto;
   font-size: 12px;
   background-color: #222;
-  background: url('../img/bg2.jpg') center center;
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
   background-attachment: fixed;
   background-size: cover;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -297,7 +307,7 @@ p {
   text-align: center;
 }
 .combo_box_arrow:hover {
-  background: #555555;
+  background: #888888;
 }
 .combo_box_arrow:active {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -371,7 +381,7 @@ p {
   text-align: center;
 }
 .combo_box_title:hover {
-  background: #555555;
+  background: #888888;
 }
 .combo_box_title:active {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -597,21 +607,28 @@ p {
   cursor: pointer;
   padding: .9em 1.6em;
   margin: .5em .5em 0em;
-  background: #fdfdfd;
+  background: #f9f9f9;
   text-decoration: none;
   color: #487EC5;
   transition: box-shadow 0.3s, background 0.3s, color 0.3s;
 }
 .button:hover {
-  background: #f9f9f9;
+  background: #fefefe;
   color: #376db4;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.mod_win_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .mod_win {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   overflow: visible;
+  background: #fff;
   border: 0px solid #d8d8d8;
   border-top-width: 0px;
   /*display: inline-block;*/
@@ -645,7 +662,7 @@ p {
   min-height: 15em;
   top: 1em;
   z-index: 999;
-  background: #fff;
+  background: #eeeeee;
   color: #222;
   cursor: default;
   font-weight: normal;
@@ -662,6 +679,7 @@ p {
   z-index: 88;
   background: rgba(0, 0, 0, 0.7);
   display: none;
+  cursor: pointer;
 }
 .filterLabel {
   width: 100%;
@@ -750,6 +768,11 @@ p {
   font-weight: 600;
 }
 @media screen and (min-width: 65em) {
+  body {
+    background: url('../img/bg2.jpg') center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
   .page {
     padding-top: 5px;
   }
@@ -777,6 +800,33 @@ p {
 .row .cell {
   float: left;
   width: 50%;
+}
+#lockedSpellsArea {
+  margin-bottom: .3em;
+}
+#lockedSpellsArea .topHeader,
+#lockedSpellsArea .bottomHeader {
+  font-weight: 600;
+  padding: .2em;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.5);
+  color: #222;
+  border-radius: .1em;
+}
+#lockedSpellsArea .topHeader {
+  cursor: pointer;
+}
+#lockedSpellsArea .topHeader:before {
+  content: "Закрепленные заклинания ";
+}
+#lockedSpellsArea .bottomHeader:before {
+  content: "Каталог заклинаний ";
+}
+#lockedSpellsArea .content {
+  margin-bottom: .3em;
+}
+#lockedSpellsArea .bHideSpell {
+  display: none;
 }
 .cardContainer {
   page-break-inside: avoid;
@@ -819,6 +869,32 @@ p {
   position: relative;
   color: #666666;
 }
+.spellCard .bHideSpell,
+.spellCard .bLockSpell,
+.spellCard .bUnlockSpell {
+  position: absolute;
+  top: -0.1em;
+  color: #ddd;
+  cursor: pointer;
+  transition: color .3s;
+}
+.spellCard .bHideSpell:hover,
+.spellCard .bLockSpell:hover,
+.spellCard .bUnlockSpell:hover {
+  color: #6aa0e7;
+}
+.spellCard .bHideSpell:active,
+.spellCard .bLockSpell:active,
+.spellCard .bUnlockSpell:active {
+  color: #487EC5;
+}
+.spellCard .bHideSpell {
+  right: .1em;
+}
+.spellCard .bLockSpell,
+.spellCard .bUnlockSpell {
+  left: .1em;
+}
 .spellCard .content {
   border-radius: 5px;
   background: #fff;
@@ -839,6 +915,8 @@ p {
   font-size: 95%;
   margin: 0;
   padding: 0;
+  padding-left: .3em;
+  padding-right: .3em;
   text-align: center;
   text-transform: uppercase;
   border-bottom: 2px solid #e01a10;
@@ -883,6 +961,10 @@ p {
   bottom: -20px;
   font-size: 70%;
   color: #fff;
+}
+.lockedSpell .bLockSpell {
+  color: #000;
+  text-shadow: 0 0 2px #487EC5;
 }
 .Bard .spellCard {
   background-color: #e91e63;
@@ -1045,7 +1127,7 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: flex-end;
   z-index: 9;
   color: #fff;
   border-radius: 0 0 3px 0;
@@ -1178,9 +1260,21 @@ p {
   max-width: 100%;
   width: auto;
 }
+#HiddenSpells a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color .3s;
+}
+#HiddenSpells a:hover {
+  color: #6aa0e7;
+}
+#HiddenSpells a:active {
+  color: #487EC5;
+}
 .mediaWidth {
   margin: .2em;
   flex-grow: 1;
+  flex-shrink: 0;
 }
 @media screen and (min-width: 65em) {
   .p_side {
@@ -1188,6 +1282,7 @@ p {
     margin-right: 1em;
     float: left;
     flex-direction: column;
+    align-items: stretch;
     position: absolute;
   }
   .p_side .s_block {
@@ -1244,6 +1339,9 @@ p {
   }
 }
 @media print {
+  .noprint {
+    display: none !important;
+  }
   #wrap {
     overflow-x: hidden;
   }
@@ -1253,6 +1351,8 @@ p {
     margin: 0;
     padding: 0;
   }
+  .bHideSpell,
+  .bLockSpell,
   .p_side,
   #helper {
     display: none !important;
@@ -1304,9 +1404,13 @@ p {
   .spellCard .content .text {
     overflow-y: hidden;
   }
+  #lockedSpellsArea .topHeader,
+  #lockedSpellsArea .bottomHeader {
+    display: none;
+  }
 }
 @page {
-  margin: 0;
+  margin: .9cm;
 }
 
 /*# sourceMappingURL=style.css.map */
