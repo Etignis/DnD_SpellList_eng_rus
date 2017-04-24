@@ -141,16 +141,15 @@ window.onload = function(){
 	}
 	
 	function showInfoWin(sText) {
-		if(!$(".mod_win").length){
-			$("body").append("<div class='mod_win'>"+sText+"</div>");
+		if(!$(".mod_win_wrapper").length){
+			$("body").append("<div class='mod_win_wrapper'><div class='mod_win'>"+sText+"</div></div>");
 		}
-		$(".mod_win").fadeIn();
+		$(".mod_win_wrapper").fadeIn();
 	}
 	function hideInfoWin() {
-		if($(".mod_win").length){
-			$(".mod_win").fadeOut();
+		if($(".mod_win_wrapper").length){
+			$(".mod_win_wrapper").fadeOut();
 		}
-
 	}
 	function showDBG() {
 		if(!$("#dbg").length){
@@ -429,9 +428,9 @@ window.onload = function(){
 	}
 	
 	function createButtons() {
-		var bHome = "<a href='/' class='bt' title='На главную страницу'><i class='fa fa-home'></i></a>";
-		var bInfo = "<a href='#' class='bt' id='bInfo' title='Справка'><i class='fa fa-question-circle'></i></a>";
-		$(".p_side").append("<div class='mediaWidth'>" + bHome + bInfo + "</div>");		
+		var bHome = "<a href='/' class='bt flexChild' title='На главную страницу'><i class='fa fa-home'></i></a>";
+		var bInfo = "<a href='#' class='bt flexChild' id='bInfo' title='Справка'><i class='fa fa-question-circle'></i></a>";
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + bHome + bInfo + "</div>");		
 	}
 	
 	function createLabel(text) {
@@ -619,8 +618,10 @@ window.onload = function(){
 			
 			//COUNTER
 			$("#lockedSpellsArea .topHeader").html("("+l+")");
+			$(".spellContainer").addClass("noprint");
 		} else {
 			$("#lockedSpellsArea").remove();
+			$(".spellContainer").removeClass("noprint");
 		}
 	}
 	
@@ -985,8 +986,7 @@ window.onload = function(){
 		$(this).next(".content").slideToggle();
 		$(this).next(".content").next(".bottomHeader").fadeToggle();
 	});
-	
-	
+		
 	
 	$.when(createSidebar()).done(
 		function(){

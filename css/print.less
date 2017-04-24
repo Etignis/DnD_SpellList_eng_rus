@@ -1,4 +1,7 @@
 @media print{
+    .noprint{
+        display: none !important;
+    }
     #wrap{
         overflow-x: hidden;
     }
@@ -71,6 +74,11 @@
             .text{
                 overflow-y: hidden;
             }
+        }
+    }
+    #lockedSpellsArea{
+        .topHeader, .bottomHeader{
+            display: none;
         }
     }
 }

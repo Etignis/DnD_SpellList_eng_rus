@@ -24,6 +24,16 @@
   background: rgba(0, 0, 0, 0.6);
   display: none;
 }
+.flexParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.flexChild {
+  flex-grow: 1;
+}
 .frame {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -607,6 +617,12 @@ p {
   color: #376db4;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
+.mod_win_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 .mod_win {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -663,6 +679,7 @@ p {
   z-index: 88;
   background: rgba(0, 0, 0, 0.7);
   display: none;
+  cursor: pointer;
 }
 .filterLabel {
   width: 100%;
@@ -778,6 +795,9 @@ p {
 .row .cell {
   float: left;
   width: 50%;
+}
+#lockedSpellsArea {
+  margin-bottom: .3em;
 }
 #lockedSpellsArea .topHeader,
 #lockedSpellsArea .bottomHeader {
@@ -1314,6 +1334,9 @@ p {
   }
 }
 @media print {
+  .noprint {
+    display: none !important;
+  }
   #wrap {
     overflow-x: hidden;
   }
@@ -1375,6 +1398,10 @@ p {
   }
   .spellCard .content .text {
     overflow-y: hidden;
+  }
+  #lockedSpellsArea .topHeader,
+  #lockedSpellsArea .bottomHeader {
+    display: none;
   }
 }
 @page {
