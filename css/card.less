@@ -13,7 +13,37 @@
         width: 50%;  
     }
 }
-
+#lockedSpellsArea{
+    //margin-bottom: .3em;
+    .topHeader, .bottomHeader{
+        font-weight: 600;
+       // display: block;
+        padding: .2em;
+        text-shadow: 0 0 4px rgba(255,255,255,.9);
+        background: rgba(255,255,255,.5);
+        color: @d-gray;
+        border-radius: .1em;
+    }
+    .topHeader{
+        cursor: pointer;
+        &:before{
+            content: "Закрепленные заклинания "
+        }
+        
+    }
+    .bottomHeader{
+        &:before{
+            content: "Каталог заклинаний "
+        }
+        
+    }
+    .content{
+        margin-bottom: .3em;
+    }
+    .bHideSpell{
+        display: none;
+    }
+}
 .cardContainer{
     page-break-inside: avoid;
     width: 2.5in;
@@ -57,7 +87,7 @@
     //overflow: hidden;
     position: relative;
     color: @m-gray - #111;
-    .bHideSpell, .bLockSpell{
+    .bHideSpell, .bLockSpell, .bUnlockSpell{
         position: absolute;
         top: -.1em;
         color: @l-gray;
@@ -74,7 +104,7 @@
     .bHideSpell{
        right: .1em; 
     }
-    .bLockSpell{
+    .bLockSpell, .bUnlockSpell{
        left: .1em; 
     }
     .content{

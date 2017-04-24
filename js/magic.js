@@ -4,7 +4,7 @@ window.onload = function(){
 	var nTimerSeconds = 200;
 	
 	var aHiddenSpells = [];
-	var aLockedSpells = [];
+	var aLockedSpells = {};
 	var filteredSpells = [];
 	
 	function arrDiff(arr1, arr2) {
@@ -181,6 +181,7 @@ window.onload = function(){
 		/**/
 	}
 		
+		
 	function createCard(spell, lang, sClass, sLockedSpell) {
 		if (spell[lang] || (lang="en", spell[lang])) {
 			var o = spell[lang];
@@ -214,7 +215,7 @@ window.onload = function(){
 			
 			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;
 			var bHideSpell = '<span class="bHideSpell" title="Скрыть заклинание (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';			
-			var bLockSpell = '<span class="bLockSpell" title="Закорепить заклинане (не будут действовать фильтры)"><i class="fa fa-lock" aria-hidden="true"></i></span>';			
+			var bLockSpell = sLockedSpell? '<span class="bUnlockSpell" title="Открепить обратно"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>' : '<span class="bLockSpell" title="Закорепить заклинане (не будут действовать фильтры)"><i class="fa fa-lock" aria-hidden="true"></i></span>';			
 			
 			sLockedSpell = sLockedSpell? " lockedSpell " : "";
 			
@@ -224,10 +225,10 @@ window.onload = function(){
 				console.log("!: "+spell.en.name);
 			}
 			
-			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + spell.ru.name + '">'+
+			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + spell.ru.name + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
-					
+						bLockSpell +
 						bHideSpell +
 						'<h1>' + s_name + s_ritual + '</h1>'+
 						'<div class="row">'+
@@ -423,7 +424,7 @@ window.onload = function(){
 				sLang: sLang,
 				fHidden: fHidden
 				});
-		}, nTimerSeconds/2);		
+		}, nTimerSeconds/4);		
 		
 	}
 	
@@ -582,6 +583,45 @@ window.onload = function(){
 			return "<a href='#' title='Вернуть на место' class='bUnhideSpell' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
 			}).join(" ");
 		$("#HiddenSpells").html(listHiddenSpells);			
+	}
+	
+	function createLockedSpellsArea(){
+		var aLocked = [];
+		for (var i in aLockedSpells){
+			aLocked.push(i);
+		}
+		var aResult = [];
+		var l = aLocked.length;
+		if(l>0){
+			for (var i=0; i<allSpells.length; i++) {
+				for (var j=0; j< l; j++) {
+					if(allSpells[i].en.name == aLocked[j]) {
+						aResult.push(allSpells[i]);
+						aResult[aResult.length-1].lang = aLockedSpells[aLocked[j]].lang;
+						aResult[aResult.length-1].class = aLockedSpells[aLocked[j]].class;
+					}
+				}
+			}
+			
+			if($("#lockedSpellsArea").length<1){
+				$(".p_cont").prepend("<div id='lockedSpellsArea'><span class='topHeader'></span><div class='content row'></div><span class='bottomHeader'></span></div>");
+
+			}
+			$("#lockedSpellsArea .content").html(aResult.sort(function(a, b) {
+				if(a.lang && b.lang) {
+					if (a[a.lang].level+a[a.lang].name.toLowerCase().trim() < b[b.lang].level+b[b.lang].name.toLowerCase().trim() )
+						return -1;
+					if (a[a.lang].level+a[a.lang].name.toLowerCase().trim() > b[b.lang].level+b[b.lang].name.toLowerCase().trim() )
+						return 1;
+				}
+				return 0
+			}).map(function(el){return createCard(el, el.lang, el.class, true)}));	
+			
+			//COUNTER
+			$("#lockedSpellsArea .topHeader").html("("+l+")");
+		} else {
+			$("#lockedSpellsArea").remove();
+		}
 	}
 	
 	function createSidebar() {
@@ -911,28 +951,42 @@ window.onload = function(){
 		
 		// show spells without hidden
 		filterSpells({fHidden: true});
+		
+		return false;
 	})
 
-	//lock spells
+	// lock spells
 	$("body").on('click', ".bLockSpell", function(){
-		var sName = $(this).closest(".cardContainer").attr("data-name")
-		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru")
+		var sName = $(this).closest(".cardContainer").attr("data-name");
+		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+		var sLang = $(this).closest(".cardContainer").attr("data-lang");
+		var sClass= $(this).closest(".cardContainer").attr("data-class");
 		
-		// lock toggle
-		if($(this).closest(".cardContainer").hasClass("lockedSpell")) {
-			// unlock
-			$(this).closest(".cardContainer").removeClass("lockedSpell");
-			aLockedSpells = removeFromArr(aLockedSpells, {en: sName, ru: sNameRu, locked: true});
-		} else {
-			// lock
-			$(this).closest(".cardContainer").addClass("lockedSpell");			
-			aLockedSpells.push({en: sName, ru: sNameRu, locked: true}); 
-		}
 		
-		// show spells without hidden
-		filterSpells();
+		aLockedSpells[sName] = {
+			ru: sNameRu,
+			lang: sLang,
+			class: sClass
+			};
+		
+		// show locked
+		createLockedSpellsArea();
 	})
-
+	// unlock spells
+	$("body").on('click', ".bUnlockSpell", function(){
+		var sName = $(this).closest(".cardContainer").attr("data-name");
+		
+		delete aLockedSpells[sName];
+		
+		// show locked
+		createLockedSpellsArea();
+	})
+	$("body").on('click', "#lockedSpellsArea .topHeader", function(){
+		$(this).next(".content").slideToggle();
+		$(this).next(".content").next(".bottomHeader").fadeToggle();
+	});
+	
+	
 	
 	$.when(createSidebar()).done(
 		function(){

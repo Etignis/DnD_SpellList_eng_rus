@@ -779,6 +779,30 @@ p {
   float: left;
   width: 50%;
 }
+#lockedSpellsArea .topHeader,
+#lockedSpellsArea .bottomHeader {
+  font-weight: 600;
+  padding: .2em;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.5);
+  color: #222;
+  border-radius: .1em;
+}
+#lockedSpellsArea .topHeader {
+  cursor: pointer;
+}
+#lockedSpellsArea .topHeader:before {
+  content: "Закрепленные заклинания ";
+}
+#lockedSpellsArea .bottomHeader:before {
+  content: "Каталог заклинаний ";
+}
+#lockedSpellsArea .content {
+  margin-bottom: .3em;
+}
+#lockedSpellsArea .bHideSpell {
+  display: none;
+}
 .cardContainer {
   page-break-inside: avoid;
   width: 2.5in;
@@ -821,7 +845,8 @@ p {
   color: #666666;
 }
 .spellCard .bHideSpell,
-.spellCard .bLockSpell {
+.spellCard .bLockSpell,
+.spellCard .bUnlockSpell {
   position: absolute;
   top: -0.1em;
   color: #ddd;
@@ -829,17 +854,20 @@ p {
   transition: color .3s;
 }
 .spellCard .bHideSpell:hover,
-.spellCard .bLockSpell:hover {
+.spellCard .bLockSpell:hover,
+.spellCard .bUnlockSpell:hover {
   color: #6aa0e7;
 }
 .spellCard .bHideSpell:active,
-.spellCard .bLockSpell:active {
+.spellCard .bLockSpell:active,
+.spellCard .bUnlockSpell:active {
   color: #487EC5;
 }
 .spellCard .bHideSpell {
   right: .1em;
 }
-.spellCard .bLockSpell {
+.spellCard .bLockSpell,
+.spellCard .bUnlockSpell {
   left: .1em;
 }
 .spellCard .content {
