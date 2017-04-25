@@ -172,7 +172,7 @@ window.onload = function(){
 	}
 	function getConfig(prop) {
 		/**/
-		oConfig = JSON.parse(localStorage.getItem("config"));
+		oConfig = JSON.parse(localStorage.getItem("config")) || {};
 		if(prop!=undefined) {
 			return localStorage.getItem("config")? oConfig[prop] : null;
 		}
