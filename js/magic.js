@@ -165,10 +165,10 @@ window.onload = function(){
 	}
 	
 	function setConfig(prop, val) {
-		if(prop && val != undefined) {
+		if(prop && val != undefined && oConfig) {
 			oConfig[prop] = val;
+			localStorage.setItem("config", JSON.stringify(oConfig));
 		}
-		localStorage.setItem("config", JSON.stringify(oConfig));
 	}
 	function getConfig(prop) {
 		/**/
