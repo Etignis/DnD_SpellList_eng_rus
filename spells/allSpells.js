@@ -1711,7 +1711,7 @@ var allSpells = [
       "name": "Magic Mouth",
       "ritual": "ritual",
       "level": "2",
-      "text": "You implant a message within an object in range, a message that is uttered when a trigger condition is met. Choose an object that you can see and that isn't being worn or carried by another creature. THen speak the message, which must be 25 words or less, though it can be delevered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver your message.   When that circumstance occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the object you chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there so that words appear to come from the object's mouth. WHen you cast this spell, you can have the spell end after it delivers its message, or it can remain and repeats its message whenever the trigger occurs.   The triggering circumstance can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the object. For example, you could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it.",
+      "text": "You implant a message within an object in range, a message that is uttered when a trigger condition is met. Choose an object that you can see and that isn't being worn or carried by another creature. THen speak the message, which must be 25 words or less, though it can be delevered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver your message.   When that circumstance occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the object you chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there so that words appear to come from the object's mouth. WHen you cast this spell, you can have the spell end after it delivers its message, or it can remain and repeats its message whenever the trigger occurs.   The triggering circumstance can be as general or as detailed as you like, though it must be based on visual or audible materials that occur within 30 feet of the object. For example, you could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it.",
       "school": "Illusion",
       "castingTime": "1 minute",
       "range": "30 feet",
@@ -2050,7 +2050,7 @@ var allSpells = [
     "en": {
       "name": "Suggestion",
       "level": "2",
-      "text": "You suggest a course of activity (limited to a sentence or two) and magically influence a creature you can see within range that can hear and understand you. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act ends the spell. The target must make a Wisdom saving throw. On a failed save, it purses the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do. You can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a knight five her warhorse to the first beggar she meets. If the condition isn't met before the spell expires, the activity isn't preformed. If you or any of your companions damage the target, the spell ends.",
+      "text": "You suggest a course of activity (limited to a sentence or two) and magically influence a creature you can see within range that can hear and understand you. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act ends the spell. The target must make a Wisdom saving throw. On a failed save, it purses the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do. You can also specify materials that will trigger a special activity during the duration. For example, you might suggest that a knight five her warhorse to the first beggar she meets. If the condition isn't met before the spell expires, the activity isn't preformed. If you or any of your companions damage the target, the spell ends.",
       "school": "Enchantment",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -2338,7 +2338,7 @@ var allSpells = [
     "en": {
       "name": "Glyph of Warding",
       "level": "3",
-      "text": "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If you choose an object, that object must remain in its place,  if the object is moved more than 10 feet from where you cast this spell, the glyph is broken and the spell ends without being triggered. The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found. You decide what triggers the glyph when yo ucast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on teh glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or mainpulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends. You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (sugh as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password. When you inscribe the glyph, choose explosive runes or a spell glyph. Explosive Runes. When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the aura must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one. Spell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding.",
+      "text": "When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If you choose an object, that object must remain in its place,  if the object is moved more than 10 feet from where you cast this spell, the glyph is broken and the spell ends without being triggered. The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found. You decide what triggers the glyph when yo ucast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on teh glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or mainpulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends. You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (sugh as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set materials for creatures that don't trigger the glyph, such as those who say a certain password. When you inscribe the glyph, choose explosive runes or a spell glyph. Explosive Runes. When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the aura must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one. Spell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding.",
       "school": "Abjuration",
       "castingTime": "1 hour",
       "range": "Touch",
@@ -2942,7 +2942,7 @@ var allSpells = [
     "en": {
       "name": "Control Water",
       "level": "4",
-      "text": "Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one. Flood. You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land. If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing. The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts. Part Water. You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored. Redirect Flow. You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain conditions. The water continues to move in the direction you chose until the spell ends or you choose a different effect. Whirlpool. This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC. When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes 2d8 bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so. The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage,  this damage occurs each round it remains in the vortex.",
+      "text": "Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one. Flood. You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land. If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing. The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts. Part Water. You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored. Redirect Flow. You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain materials. The water continues to move in the direction you chose until the spell ends or you choose a different effect. Whirlpool. This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC. When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes 2d8 bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so. The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage,  this damage occurs each round it remains in the vortex.",
       "school": "Transmutation",
       "castingTime": "1 action",
       "range": "300 feet",
@@ -4326,7 +4326,7 @@ var allSpells = [
     "en": {
       "name": "Mass Suggestion",
       "level": "6",
-      "text": "You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell.    Each target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends w hen the subject finishes what it w as asked to do.    You can also specify conditions that w ill trigger a special activity during the duration. For example, you might suggest that a group of soldiers give all their money to the first beggar they meet. If the condition isn't met before the spell ends, the activity isn't performed.    If you or any of your companions damage a creature affected by this spell, the spell ends for that creature. At Higher Levels. When you cast this spell using a 7th-level spell slot, the duration is 10 days. When you use an 8th-level spell slot, the duration is 30 days. When you use a 9th-level spell slot, the duration is a year and a day.",
+      "text": "You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you. Creatures that can't be charmed are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell.    Each target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends w hen the subject finishes what it w as asked to do.    You can also specify materials that w ill trigger a special activity during the duration. For example, you might suggest that a group of soldiers give all their money to the first beggar they meet. If the condition isn't met before the spell ends, the activity isn't performed.    If you or any of your companions damage a creature affected by this spell, the spell ends for that creature. At Higher Levels. When you cast this spell using a 7th-level spell slot, the duration is 10 days. When you use an 8th-level spell slot, the duration is 30 days. When you use a 9th-level spell slot, the duration is a year and a day.",
       "school": "Enchantment",
       "castingTime": "1 action",
       "range": "60 feet",
@@ -4430,7 +4430,7 @@ var allSpells = [
     "en": {
       "name": "Programmed Illusion",
       "level": "6",
-      "text": "V, S You create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific condition occurs. The illusion is imperceptible until then. It must be no larger than a 30-foot cube, and you decide when you cast the spell how the illusion behaves and what sounds it makes. This scripted performance can last up to 5 minutes. When the condition you specify occurs, the illusion springs into existence and performs in the manner you described. Once the illusion finishes performing, it disappears and remains dormant for 10 minutes. After this time, the illusion can be activated again. The triggering condition can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the area. For example, you could create an illusion of yourself to appear and warn off others who attempt to open a trapped door, or you could set the illusion to trigger only when a creature says the correct word or phrase. Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature.",
+      "text": "V, S You create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific condition occurs. The illusion is imperceptible until then. It must be no larger than a 30-foot cube, and you decide when you cast the spell how the illusion behaves and what sounds it makes. This scripted performance can last up to 5 minutes. When the condition you specify occurs, the illusion springs into existence and performs in the manner you described. Once the illusion finishes performing, it disappears and remains dormant for 10 minutes. After this time, the illusion can be activated again. The triggering condition can be as general or as detailed as you like, though it must be based on visual or audible materials that occur within 30 feet of the area. For example, you could create an illusion of yourself to appear and warn off others who attempt to open a trapped door, or you could set the illusion to trigger only when a creature says the correct word or phrase. Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "120 feet",
@@ -5002,7 +5002,7 @@ var allSpells = [
     "en": {
       "name": "Control Weather",
       "level": "8",
-      "text": "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early. When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal. When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction. Precipitation Stage 1 - Clear, Stage 2 - Light clouds, Stage 3 - Overcast or ground fog, Stage 4 - Rain, hail or snow, Stage 5 - Torrential rain, driving hail or blizzard Temperature Stage 1 - Unbearable heat, Stage 2 - Hot, Stage 3 - Warm, Stage 4 - Cool, Stage 5 - Cold, Stage 6 - Arctic cold Wind Stage 1 - Calm, Stage 2 - Moderate wind, Stage 3 - Strong wind, Stage 4 - Gale, Stage 5 - Storm",
+      "text": "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early. When you cast the spell, you change the current weather materials, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new materials to take effect. Once they do so, you can change the materials again. When the spell ends, the weather gradually returns to normal. When you change the weather materials, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction. Precipitation Stage 1 - Clear, Stage 2 - Light clouds, Stage 3 - Overcast or ground fog, Stage 4 - Rain, hail or snow, Stage 5 - Torrential rain, driving hail or blizzard Temperature Stage 1 - Unbearable heat, Stage 2 - Hot, Stage 3 - Warm, Stage 4 - Cool, Stage 5 - Cold, Stage 6 - Arctic cold Wind Stage 1 - Calm, Stage 2 - Moderate wind, Stage 3 - Strong wind, Stage 4 - Gale, Stage 5 - Storm",
       "school": "Transmutation",
       "castingTime": "10 minutes",
       "range": "Self (5-mile radius)",
@@ -5340,7 +5340,7 @@ var allSpells = [
     "en": {
       "name": "Imprisonment",
       "level": "9",
-      "text": "You create a magical restraint to hold a creature that you can see within range. The target must succeed on a Wisdom saving throw or be bound by the spell, if it succeeds, it is immune to this spell if you cast it again. While affected by this spell, the creature doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the target. When you cast the spell, you choose one of the following forms of imprisonment. Burial. The target is entombed far beneath the earth in a sphere of magical force that is just large enough to contain the target. Nothing can pass through the sphere, nor can any creature teleport or use planar travel to get into or out of it. The special component for this version of the spell is a small mithral orb. Chaining. Heavy chains, firmly rooted in the ground, hold the target in place. The target is restrained until the spell ends, and it can't move or be moved by any means until then.  The special component for this version of the spell is a fine chain of precious metal. Hedged Prison. The spell transports the target into a tiny demiplane that is warded against teleportation and planar travel. The demiplane can be a labyrinth, a cage, a tower, or any similar confined structure or area of your choice. The special component for this version of the spell is a miniature representation of the prison made from jade. Minimus Containment. The target shrinks to a height of 1 inch and is imprisoned inside a gemstone or similar object. Light can pass through the gemstone normally (allowing the target to see out and other creatures to see in), but nothing else can pass through, even by means of teleportation or planar travel. The gemstone can't be cut or broken while the spell remains in effect. The special component for this version of the spell is a large, transparent gemstone, such as a corundum, diamond, or ruby. Slumber. The target falls asleep and can't be awoken. The special component for this version of the spell consists of rare soporific herbs. Ending the Spell. During the casting of the spell, in any of its versions, you can specify a condition that will cause the spell to end and release the target. The condition can be as specific or as elaborate as you choose, but the DM must agree that the condition is reasonable and has a likelihood of coming to pass. The conditions can be based on a creature's name, identity, or deity but otherwise must be based on observable actions or qualities and not based on intangibles such as level, class, or hit points. A dispel magic spell can end the spell only if it is cast as a 9th-level spell, targeting either the prison or the special component used to create it. You can use a particular special component to create only one prison at a time. If you cast the spell again using the same component, the target of the first casting is immediately freed from its binding.",
+      "text": "You create a magical restraint to hold a creature that you can see within range. The target must succeed on a Wisdom saving throw or be bound by the spell, if it succeeds, it is immune to this spell if you cast it again. While affected by this spell, the creature doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the target. When you cast the spell, you choose one of the following forms of imprisonment. Burial. The target is entombed far beneath the earth in a sphere of magical force that is just large enough to contain the target. Nothing can pass through the sphere, nor can any creature teleport or use planar travel to get into or out of it. The special component for this version of the spell is a small mithral orb. Chaining. Heavy chains, firmly rooted in the ground, hold the target in place. The target is restrained until the spell ends, and it can't move or be moved by any means until then.  The special component for this version of the spell is a fine chain of precious metal. Hedged Prison. The spell transports the target into a tiny demiplane that is warded against teleportation and planar travel. The demiplane can be a labyrinth, a cage, a tower, or any similar confined structure or area of your choice. The special component for this version of the spell is a miniature representation of the prison made from jade. Minimus Containment. The target shrinks to a height of 1 inch and is imprisoned inside a gemstone or similar object. Light can pass through the gemstone normally (allowing the target to see out and other creatures to see in), but nothing else can pass through, even by means of teleportation or planar travel. The gemstone can't be cut or broken while the spell remains in effect. The special component for this version of the spell is a large, transparent gemstone, such as a corundum, diamond, or ruby. Slumber. The target falls asleep and can't be awoken. The special component for this version of the spell consists of rare soporific herbs. Ending the Spell. During the casting of the spell, in any of its versions, you can specify a condition that will cause the spell to end and release the target. The condition can be as specific or as elaborate as you choose, but the DM must agree that the condition is reasonable and has a likelihood of coming to pass. The materials can be based on a creature's name, identity, or deity but otherwise must be based on observable actions or qualities and not based on intangibles such as level, class, or hit points. A dispel magic spell can end the spell only if it is cast as a 9th-level spell, targeting either the prison or the special component used to create it. You can use a particular special component to create only one prison at a time. If you cast the spell again using the same component, the target of the first casting is immediately freed from its binding.",
       "school": "Abjuration",
       "castingTime": "1 minute",
       "range": "30 feet",
@@ -7862,7 +7862,7 @@ var allSpells = [
     "en": {
       "name": "Aura of Purity",
       "level": "4",
-      "text": "Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) can't become diseased, has resistance to poison damage, and has advantage on saving throws against effects that cause any of the following conditions: blnded, charmed, deafended, frightened, paralyzed, poisoned, and stunned.",
+      "text": "Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) can't become diseased, has resistance to poison damage, and has advantage on saving throws against effects that cause any of the following materials: blnded, charmed, deafended, frightened, paralyzed, poisoned, and stunned.",
       "school": "Abjuration",
       "castingTime": "1 action",
       "range": "Self (30-foot radius)",
@@ -8663,7 +8663,7 @@ var allSpells = [
 		"range": "заклинатель",
 		"components": "В, С",
 		"duration": "К-ция, до 10 минут",
-		"conditions": "",
+		"materials": "",
 		"text": "Пока действует заклинание, вы узнаете, когда в пределах 30 футов от вас появляется аберрация, божественное существо, элементаль, фея, демон или нежить, а также местоположение этих существ. Аналогично, вы узнаете, если в пределах этого радиуса есть предметы, которые были освящены или прокляты. Заклинание проходит через большинство препятствий, но его останавливает камень толщиной 1 фут, металл толщиной 1 дюйм, тонкий слой свинца, дерево или земля толщиной 3 фута.",
 		"school": "прорицание",
 		"level": "1",
@@ -8689,7 +8689,7 @@ var allSpells = [
 		"range": "30 футов",
 		"components": "В, С, M",
 		"duration": "8 часов",
-		"conditions": "маленькая полоска белой ткани",
+		"materials": "маленькая полоска белой ткани",
 		"text": "Заклинание наделяет ваших союзников стойкостью и решимостью. Выберите до 3 существ в пределах дальности заклинания. Их максимальное и текущее количество ОЗ увеличивается на 5 до тех пор, пока действует заклинание. На более высоких кругах. Если вы произносите заклинание, используя ячейку 3 круга или выше, то дополнительные ОЗ увеличиваются на 5 за каждый круг выше второго.",
 		"school": "ограждение",
 		"level": "2",
@@ -9008,7 +9008,7 @@ var allSpells = [
     "en": {
       "name": "Call Lightning",
       "level": "3",
-      "text": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud). When you cast the spell, choose a point you can see within range. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one. If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10. At Higher Levels. When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd.",
+      "text": "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see 100 feet directly above you. The spell fails if you can't see a point in the air where the storm cloud could appear (for example, if you are in a room that can't accommodate the cloud). When you cast the spell, choose a point you can see within range. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one. If you are outdoors in stormy materials when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such materials, the spell's damage increases by 1d10. At Higher Levels. When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd.",
       "school": "Conjuration",
       "castingTime": "1 action",
       "range": "120 feet",
@@ -9248,7 +9248,7 @@ var allSpells = [
 		"range": "30 футов",
 		"components": "В",
 		"duration": "К-ция, до 1 минуты",
-		"conditions": "",
+		"materials": "",
 		"text": "Вы пытаетесь вызвать существо на дуэль. Выберите любое существо, которое вы можете видеть в пределах дальности заклинания. Оно должно сделать спасбросок по Мудрости. При провале ваш божественный приказ вынуждает существо атаковать вас. Пока заклинание действует, существо получает помеху на броски атаки против других существ кроме вас. Оно также должно сделать спасбросок по Мудрости, если пытается отойти на расстояние более 30 футов от вас",
 		"school": "очарование",
 		"level": "1"
@@ -9273,7 +9273,7 @@ var allSpells = [
 		"range": "Заклинатель",
 		"components": "В, С",
 		"duration": "К-ция, до 1 минуты",
-		"conditions": "",
+		"materials": "",
 		"text": "Ваша молитва наделяет вас божественным сиянием. До конца заклинания ваши атаки оружием наносят дополнительные 1d4 урона светом.",
 		"school": "проявление",
 		"level": "1"
@@ -9298,7 +9298,7 @@ var allSpells = [
 		"range": "Заклинатель",
 		"components": "В",
 		"duration": "К-ция, до 1 минуты",
-		"conditions": "",
+		"materials": "",
 		"text": "Пока действует это заклинание, при следующем попадании атакой ближнего боя, ваше оружие раскаляется добела и наносит дополнительные 1d6 урона огнем, поджигая цель. В начале каждого своего хода, пока действует заклинание, цель должна делать спасбросок по Телосложени. При провале она получает 1d6 урона огнем. При успехе заклинание кончается. Если цель или другое существо в 5 футах от нее используют действие, чтобы потушить огонь, или какой-то другой эффект потушит его (например цель окажется в воде) то заклинание заканчивается.",
 		"school": "проявление",
 		"level": "1"
@@ -9323,7 +9323,7 @@ var allSpells = [
 		"range": "Заклинатель",
 		"components": "В",
 		"duration": "К-ция, до 1 минуты",
-		"conditions": "",
+		"materials": "",
 		"text": "Пока действует это заклинание, первый удар, который вы нанесете оружием ближнего боя, издает оглушительный раскат грома, который слышно на расстоянии 300 футов. Вы также наносите дополнительные 2d6 урона звуком. Кроме того, если целью удара было существо, то оно должно сделать успешный спасбросок по Силе или его оттолкнет на 10 футов от вас и собъет с ног.",
 		"school": "проявление",
 		"level": "1"
@@ -9348,7 +9348,7 @@ var allSpells = [
 		"range": "Заклинатель (радиус 30 футов)",
 		"components": "В",
 		"duration": "Мгновенно",
-		"conditions": "",
+		"materials": "",
 		"text": "Вы ударяете землю, создавая всплеск божественной энергии, который волной расходится вокруг вас. Каждое из выбранных вами существ в пределах 30 футов вокруг вас должно сделать успешный спасбросок по Телосложению или получит 5d6 звукового урона, а также 5d6 некротического или светового урона (на ваш выбор) и будет сбито с ног. При успешном спасброске существо получает половину этого урона и остается на ногах.",
 		"school": "проявление",
 		"level": "5"
@@ -9509,5 +9509,1114 @@ var allSpells = [
 		"school": "призыв",
 		"level": "6"
 	}
+  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  {
+    "en": {
+      "name": "Abi-Dalzim’s Horrid Wilting",
+      "level": "8",
+      "text": "You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren’t affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 10d8 necrotic damage on a failed save, or half as much damage on a successful one.",
+      "school": "Necromancy",
+      "castingTime": "1 action",
+      "range": "150 feet",
+      "components": "V, S, M",
+      "materials": "a bit of sponge",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Жуткое увядание Аби-Дальцима",
+      "level": "8",
+      "text": "Заклинание испаряет жидкость из тела каждого существа в пределах куба со стороно 30 футов с центром в указанной вами точке. Каждое существо (кроме конструктов и нежити) в области должно сдлелать спасбросок по Телосложению. Растения и водяные жлементали получают помеху на спсбросок. Урон - 10d8 (при успешномспасброске - половина)",
+      "school": "Некромантия",
+      "castingTime": "1 действие",
+      "range": "150 футов",
+      "components": "В, С, М",
+      "materials": "кусочек губки",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Absorb Elements",
+      "level": "1",
+      "text": "(when you take acid, cold, fire, lightning, or thunder damage) The spell captures some of the incoming energy, lessening its effect on you and storing it for your next melee attack. You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 damage of the triggering type, and the spell ends.<br> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st.",
+      "school": "abjuration",
+      "castingTime": "1 reaction",
+      "range": "Self",
+      "components": "S",
+      "materials": "",
+      "duration": "1 round",
+      "source": "TOEE"
+    },
+	"ru": {
+      "name": "Впитать элементы",
+      "level": "1",
+      "text": "(при получении урона кислотой, холодом, огнем, молнией, громом) Заклинание захватывает часть входящей энергии, уменьшает ее влияние на вас и сохраняет ее для следующей атаки в ближнем бою. У вас есть сопротивление полученному типу урона до начала следующего раунда. Кроме того, в первый раз, когда вы примените атаку ближнего боя на вашем следующем ходу, цель получает дополнительный 1d6 урона от полученного типа урона, и заклинание заканчивается.<br> На высших уровнях. Когда вы произносите это заклинание, используя слот заклинания 2-го уровня или выше, дополнительный урон увеличивается на 1d6 для каждого уровня слота выше 1-го.",
+      "school": "Ограждение",
+      "castingTime": "1 реакция",
+      "range": "На себя",
+      "components": "С",
+      "materials": "",
+      "duration": "1 раунд",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Aganazzar’s Scorcher",
+      "level": "2",
+      "text": "A line of roaring flame 30 feet long and 5 feet wide emanates from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 3d8 fire damage on a failed save, or half as much damage on a successful one. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "V, S, M",
+      "materials": "a red dragon’s scale",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Зной Аганаззара",
+      "level": "2",
+      "text": "Линия ревущего пламени длиной 30 футов и шириной 5 футов исходит от вас в том направлении, которое вы выберете. Каждое существо на линии должно сделать спасбросок по Ловкости. Существо получает урон от огня 3d8 при неудачном броске, или вдвое меньше при удачном.<br>На высших уровнях. Когда вы используете это заклинание, используя заклинание 3-го уровня или выше, урон увеличивается на 1d8 за каждый уровень слота выше 2-го.",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В, С, М",
+      "materials": "чешуя красного дракона",
+      "duration": "мгновенное",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Beast Bond",
+      "level": "1",
+      "text": "You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beast’s Intelligence is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.",
+      "school": "divination",
+      "castingTime": "1 action",
+      "range": "Touch",
+      "components": "V, S, M",
+      "materials": "a bit of fur wrapped in a cloth",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Свясь со Зверем",
+      "level": "1",
+      "text": "Вы устанавливаете телепатический контакт с одним зверем, которого вы касаетесь, который вам нравится или очарован вами. Заклинание не срабатывает, если Интеллект Зверя равен 4 или выше. Связь активна до конца заклинания, если вы и зверь в пределах прямой видимости. Посредством связи зверь может понять ваши телепатические сообщения, и может телепатически передать простые эмоции и концепции обратно вам. Пока связь активна, зверь получает преимущество в бросках атаки против любого существа в пределах 5 футов от вас, которое вы можете видеть.",
+      "school": "Прорицание",
+      "castingTime": "1 действие",
+      "range": "Касание",
+      "components": "В, С, М",
+      "materials": "кусочен меха, завернутый в ткань",
+      "duration": "Концентрация до 10 минут",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Bones of the Earth",
+      "level": "6",
+      "text": "You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of difficult terrain with a 10-foot radius. The rubble lasts until cleared. If a pillar is created under a creature, that creature must succeed on a Dexterity saving throw or be lifted by the pillar. A creature can choose to fail the save. If a pillar is prevented from reaching its full height because of a ceiling or other obstacle, a creature on the pillar takes 6d6 bludgeoning damage and is restrained, pinched between the pillar and the obstacle. The restrained creature can use an action to make a Strength or Dexterity check (the creature’s choice) against the spell’s saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it. At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, you can create two additional pillars for each slot level above 6th.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "120 feet",
+      "components": "V, S",
+      "materials": "t",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Кости земли",
+      "level": "6",
+      "text": "До шести каменных колонн вырастают из земли в пределах дистанции и прямой видимости. Каждая колонна - цилиндр высотой до 30 футов, диаметром - 5. Место, где должна появиться колонна, должно быть достаточно велико по площади, чтобы вместить ее. Можно сотворить колонну под созданием, чей размер Средний и меньше. У каждой колонны АС = 5 и по 30 хитов. При снижении хитов до 0, колонна рушиться в мелкий щебень, что делает территорию труднопроходимой в радиусе 10 футов. Если колонна создана под созданием, оно должно преуспеть в спасброске ловкости, иначе будет поднято колонной. Если что-то типа потолка мешает колонне достичь полной высоты, существо на ней получает 6d6 дробящего урона и остается зажатым между колонной и потолком, пока не преуспет в спасброске по Силе или Ловкости по своему выбору (сложность спасброска определяется характеристиками заклинателя). При успехе, существо сдвигает колонну, или падает с нее.<br> На более высоких уровнях. Если используется ячейка 7го уровня или выше, можно создвать по две дополнительные колонны за уровень выше 6го.",
+      "school": "Изенение",
+      "castingTime": "1 действие",
+      "range": "120 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Catapult",
+      "level": "1",
+      "text": "Choose one object weighing 1 to 5 pounds within range that isn’t being worn or carried. The object flies in a straight line up to 90 feet in a direction you choose before falling to the ground, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw. On a failed save, the object strikes the target and stops moving. In either case, both the object and the creature or solid surface take 3d8 bludgeoning damage. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of objects that you can target with this spell increases by 5 pounds, and the damage increases by 1d8, for each slot level above 1st.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "150 feet",
+      "components": "S",
+      "materials": "",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+	"ru": {
+      "name": "Катапульта",
+      "level": "1",
+      "text": "Выберите один предмет весом от 1 до 5 фунтов в пределах диапазона, который не надет и не носят. Объект пролетает до 90 футов по прямой в выбранном вами направлении, прежде чем упасть на землю, и останавливается раньше, если ударится о твердую поверхность. Если объект поразил существо, это существо должно сделать спасбросок по Ловкости. При неудаче объект ударяет по цели и останавливается. В любом случае, и объект, и существо, или твердая поверхность получают 3d8 дробящего урона. На более высоких уровнях. Когда вы используете это заклинание, используя ячейку 2-го уровня или выше, максимальный вес предметов, которые вы можете использовать с этим заклинанием, увеличивается на 5 фунтов, а урон увеличивается на 1d8, для каждого уровня слота выше 1-го.",
+      "school": "Превращение",
+      "castingTime": "1 действие",
+      "range": "150 футов",
+      "components": "С",
+      "materials": "",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Control Flames",
+      "level": "0",
+      "text": "You choose nonmagical flame that you can see within range and that fits within a 5-foot cube. You affect it in one of the following ways: <br> - You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location. <br> - You instantaneously extinguish the flames within the cube. <br> - You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour. <br> - You cause simple shapes—such as the vague form of a creature, an inanimate object, or a location—to appear within the flames and animate as you like. The shapes last for 1 hour. If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "S",
+      "materials": "",
+      "duration": "Instantaneous or 1 hour (see below)",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Управление пламенем",
+      "level": "0",
+      "text": "Вы выбираете немагическое пламя, которое вы можете видеть в пределах досягаемости и которое вмещается в 5-футовый куб. Вы влияете на это одним из следующих способов: <br> - Вы мгновенно расширяете пламя на 5 футов в одном направлении, при условии, что дерево или другое топливо присутствует в новом месте. <br> - Вы мгновенно гасите огонь в кубе. <br> - Вы в два раза увеличиваете или уменьшаете области яркого света и тусклого света, отбрасываемого пламенем, изменяя его цвет, или обоих. Изменение длится 1 час. <br> - Вы вызываете простые формы - такие как смутная форма существа, неодушевленный предмет или местность - они появляются внутри пламени и вы ими упарвляете, как вам нравится. Формы существуют 1 час. Если вы произвели это заклинание несколько раз, вы можете одновременно иметь до трех его мгновенных эффектов, и вы можете отменить такой эффект в качестве действия.",
+      "school": "Превращение",
+      "castingTime": "1 дейстие",
+      "range": "60 футов",
+      "components": "С",
+      "materials": "",
+      "duration": "Мгновенно или 1 час",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Control Winds",
+      "level": "5",
+      "text": "You take control of the air in a 100-foot cube that you can see within range. Choose one of the following effects when you cast the spell. The effect lasts for the spell’s duration, unless you use your action on a later turn to switch to a different effect. You can also use your action to temporarily halt the effect or to restart one you’ve halted. Gusts. A wind picks up within the cube, continually blowing in a horizontal direction that you choose. You choose the intensity of the wind: calm, moderate, or strong. If the wind is moderate or strong, ranged weapon attacks that pass through it or that are made against targets within the cube have disadvantage on their attack rolls. If the wind is strong, any creature moving against the wind must spend 1 extra foot of movement for each foot moved. Downdraft. You cause a sustained blast of strong wind to blow downward from the top of the cube. Ranged weapon attacks that pass through the cube or that are made against targets within it have disadvantage on their attack rolls. A creature must make a Strength saving throw if it flies into the cube for the first time on a turn or starts its turn there flying. On a failed save, the creature is knocked prone. Updraft. You cause a sustained updraft within the cube, rising upward from the cube’s bottom edge. Creatures that end a fall within the cube take only half damage from the fall. When a creature in the cube makes a vertical jump, the creature can jump up to 10 feet higher than normal.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "300 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 hour",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Управление ветром",
+      "level": "5",
+      "text": "Вы берете под контроль воздух в 100-футовом кубе, который вы можете видеть в радиусе действия. Когда вы произносите заклинание, выберите один из следующих эффектов. Эффект длится в течение времени заклинания, если вы не используете свое действие на более позднем этапе, чтобы переключиться на другой эффект. Вы также можете использовать свое действие, чтобы временно остановить эффект или перезапустить тот, который вы остановили.<br>Порывы. Ветер поднимается в кубе, непрерывно дует в горизонтальном направлении, которое вы выбираете. Вы выбираете интенсивность ветра: спокойный, умеренный или сильный. Если ветер умеренный или сильный, атаки с дистанционным оружием, которые проходят через него или которые сделаны против целей внутри куба, имеют помеху при бросках атаки. Если ветер сильный, любое существо, движущееся против ветра, должно потратить в два раза больше футов движения.<br>Понижение давления. Вы вызываете устойчивый поток сильного ветра, который дует вниз от верхней грани куба. Атаки дальнего оружия, которые проходят через куб или которые сделаны против целей внутри него, имеют помеху при бросках атаки. Существо должно сделать спасбросок по Силе, когда оно впервые влетит в куб или начнет там свой полет. При неудачном спасброске существо сбивается с ног.<br>Восходящий поток. Вы вызываете устойчивый восходящий поток в кубе, поднимаясь вверх от нижнего края куба. Существа, которые заканчивают падение внутри куба, получают только половину урона от падения. Когда существо в кубе делает вертикальный прыжок, существо может прыгать на 10 футов выше обычного.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "300 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до 1 часа",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Create Bonfire",
+      "level": "0",
+      "text": "reate a bonfire on ground that you can see within range. Until the spells ends, the bonfire fills a 5-foot cube. Any creature in the bonfire’s space when you cast the spell must succeed on a Dexterity saving throw or take 1d8 fire damage. A creature must also make the saving throw when it enters the bonfire’s space for the first time on a turn or ends its turn there. The spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+      "school": "Conjuration ",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S",
+      "materials": "2d8",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Создать костер",
+      "level": "0",
+      "text": "Вы создаёте костер на земле в пределах радиуса заклинания и поля зрения. До конца действия заклинания костер заполняет 5-футовый куб. Любое существо в пространстве костра, когда вы произносите заклинание, должно преуспеть в спасброске Ловкости или получить урон от огня 1d8. Существо также должно сделать спасбросок, когда он впервые входит на костер в свой ход или заканчивает свой ход там. Урон заклинания увеличивается на 1d8, когда вы достигаете 5-го уровня (2d8), 11-го уровня (3d8) и 17-го уровня (4d8).",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Dust Devil",
+      "level": "2",
+      "text": "Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force that resembles a dust devil appears in the cube and lasts for the spell’s duration. Any creature that ends its turn within 5 feet of the dust devil must make a Strength saving throw. On a failed save, the creature takes 1d8 bludgeoning damage and is pushed 10 feet away. On a successful save, the creature takes half as much damage and isn’t pushed. As a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10-foot-radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
+      "school": "conjuration",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S, M",
+      "materials": "a pinch of dust",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Пылевой дьявол",
+      "level": "2",
+      "text": "Выберите незанятый 5-футовый куб воздуха, который вы можете видеть в радиусе действия. Элементальная сила, напоминающая пылевого дьявола, появляется в кубе и длится на период заклинания. Любое существо, которое заканчивает свой ход в пределах 5 футов от пылевого дьявола, должно сделать спасбросок по Силе. При неудачном спасброске существо получает 1d8 дробящего урона и отталкивается на расстояние 10 футов. При успешном спасброске существо получает в два раза меньше урона и не отталкивается. В качестве бонусного действия вы можете перемещать пылевого дьявола на расстояние до 30 футов в любом направлении. Если ылевой дьявол перемещается над песком, пылью, рыхлой грязью или мелким гравием, он всасывает материал и образует облако обломков с радиусом 10 футов вокруг себя, и это длится до начала вашего следующего хода. Облако сильно затеняет пространство.<br> На высших уровнях. Когда вы используете это заклинание, используя заклинание 3-го уровня или выше, урон увеличивается на 1d8 за каждый уровень слота выше 2-го.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В, С, М",
+      "materials": "щепотка пыли",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Earth Tremor",
+      "level": "1",
+      "text": " You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 1d6 bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "Self (10-foot radius)",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Дрожь земли",
+      "level": "1",
+      "text": "Вы вызываете дрожь земли в радиусе 10 футов. Каждое существо кроме вас в этой области должно сделать спасбросок по Ловкости. При неудачном спасброске существо получает 1d6 дробящего урона и сбивается с ног. Если земля в этой области является рыхлой землей или камнем, она становится труднопроходимой местностью, пока не будет очищена.<br>На высших уровнях. Когда вы произносите это заклинание, используя слот заклинания 2-го уровня или выше, урон увеличивается на 1d6 для каждого уровня слота выше 1-го.",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "На себя (радиус 10 футов)",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Earthbind",
+      "level": "2",
+      "text": "Choose one one creature you can see within range. Yellow strips of magical energy loop around the creature. The target must succeed on a Strength saving throw or its flying speed (if any) is reduced to 0 feet for the spell’s duration. An airborne creature affected by this spell descends at 60 feet per round until it reaches the ground or the spell ends.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "300 feet",
+      "components": "V",
+      "materials": "if any",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Приземление",
+      "level": "2",
+      "text": "Выберите одно существо, которое вы можете видеть в радиусе действия заклинания. Желтые полоски магической энергии закручиваются вокруг существа. Цель должна преуспеть в спасброске Силы или его скорость полета (если таковая имеется) уменьшается до 0 футов до конца действия заклинания. Создание воздуха, затронутое этим заклинанием, опускается на 60 футов за раунд, пока не достигнет земли или пока не завершится заклинание.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "300 футов",
+      "components": "В",
+      "materials": "",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Elemental Bane",
+      "level": "4",
+      "text": " Choose one creature you can see within range, and choose one of the following damage types: acid, cold, fire, lightning, or thunder. The target must succeed on a Constitution saving throw or be affected by the spell for its duration. The first time each turn the affected target takes damage of the chosen type, the target takes an extra 2d6 damage of that type. Moreover, the target loses any resistance to that damage type until the spell ends. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "90 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Стихийная кара",
+      "level": "4",
+      "text": "Выберите одно существо, которое вы можете видеть в радиусе действия, и выберите один из следующих типов урона: кислота, холод, огонь, молния или гром. Цель должна преуспеть в спасброске Телосложения или быть подвергнуто эффекту заклинания до его окончания. При получении урона првый раз за ход, цель получает дополнительно 2d6 урона выбранного типа. Более того, цель теряет всякое сопротивление этому типу повреждения до тех пор, пока заклинание не закончится.<br>На высших уровнях. Когда вы произносите это заклинание, используя слот для заклинаний 5-го уровня или выше, вы можете выбрать одно дополнительное существо для каждого уровня слота выше 4-го. Когда вы нацеливаетесь на них, существа должны находиться в пределах 30 футов друг от друга.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "90 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Erupting Earth",
+      "level": "3",
+      "text": "Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a Dexterity saving throw. A creature takes 3d12 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared away. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d12 for each slot level above 2nd.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "120 feet",
+      "components": "V, S, M",
+      "materials": "a piece of obsidian",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Извержение земли",
+      "level": "3",
+      "text": "Выберите точку, которую вы можете видеть на земле в радиусе действия. Фонтан земли и камня извергается в 20-футовом кубе, с центром в выбранной точке. Каждое существо в этой области должно сделать спасбросок по Ловкости. Существо получает 3d12 дробящего урона при неудачном спасброске, или вдвое меньше урона при успешном. Кроме того, земля в этом районе становится труднопроходимой местностью, пока не будет очищена. Каждому 5-футовому квадарату требуется по меньшей мере 1 минута для очистки вручную.<br>На высших уровнях. Когда вы произносите это заклинание, используя заклинание 3-го уровня или выше, урон увеличивается на 1d12 для каждого уровня слота выше 2-го.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "120 В, С, М",
+      "materials": "кусочек обсидиана",
+      "duration": "Мгновенное",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Flame Arrows",
+      "level": "3",
+      "text": " You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell’s magic ends on the piece of ammunition when it hits or misses, and the spell ends when twelve pieces of ammunition have been drawn from the quiver. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "Touch",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 hour",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Пламенные стрелы",
+      "level": "3",
+      "text": "Вы касаетесь колчана со стрелами или болтами. Когда цель поражена атакой с дальнобойным оружием, с использованием боеприпаса, извлеченного из колчана, цель получает дополнительный 1d6 урона от огня. Снаряд теряет магические ссвойства при попадении или промахе, и заклинание заканчивается, когда из колчана вытащили двенадцать боеприпасов.<br>На высших уровнях. Когда вы используете это заклинание, используя заклинание 4-го уровня или выше, количество единиц боеприпасов, которые вы можете затронуть этим заклинанием, увеличивается на два для каждого уровня слота выше третьего.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "Касание",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до часа",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Frostbite",
+      "level": "0",
+      "text": "You cause numbing frost to form on one creature that you can see within range. The target must make a Constitution saving throw. On a failed save, the target takes 1d6 cold damage, and it has disadvantage on the next weapon attack roll it makes before the end of its next turn. The spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+      "school": "Evocation ",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S",
+      "materials": "2d6",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Обморожение",
+      "level": "0",
+      "text": "Вы вызываете обморожение на одном существе, которое вы можете видеть в радиусе действия. Цель должна сделать спасбросок по Телосложению. При неудачном спасброске цель получает 1d6 урона холодом, и у нее есть помеха при следующем броске на атаку оружием, который она делает до конца следующего хода. Урон заклинания увеличивается на 1d6, когда вы достигаете 5-го уровня (2d6), 11-го уровня (3d6) и 17-го уровня (4d6).",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Gust",
+      "level": "0",
+      "text": "You seize the air and compel it to create one of the following effects at a point you can see within range: <br> - One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you. <br> - You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn’t pushed with enough force to cause damage. <br> - You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters shut, or your clothing to ripple in a breeze.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Порыв ветра",
+      "level": "0",
+      "text": "Вы заставляете воздух создать один из следующих эффектов в точке, которую вы можете видеть в пределах досягаемости: <br> - одно из средних или более мелких существ, которое вы выберете, должно преуспеть в спасброске по Силе или быть отброшено на расстоянии до 5 футов от вас. <br> - Вы создаете небольшой воздушный поток, способный перемещать один объект, который не одет и не переносится, и который весит не более 5 фунтов. Объект выталкивается на расстоянии до 10 футов от вас. Он не толкается с достаточной силой, чтобы вызвать повреждение. <br> - Вы создаете безвредный сенсорный эффект, используя воздух, например, заставляя листья шелестеть, наматывать на штопки захлопывания или одежду, чтобы рябь на ветру.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Ice Knife",
+      "level": "1",
+      "text": "You create a shard of ice and fling it at one creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 piercing damage. Hit or miss, the shard then explodes. The target and each creature within 5 feet of the point where the ice exploded must succeed on a Dexterity saving throw or take 2d6 cold damage. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the cold damage increases by 1d6 for each slot level above 1st.",
+      "school": "conjuration",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "S, M",
+      "materials": "a drop of water or piece of ice",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Ледяной нож",
+      "level": "1",
+      "text": "Вы создаете осколок льда и бросаете его в одного существа в радиусе действия. Сделайте атаку дальнего заклинания против цели. При попадании цель получает 1d10 колющего урона. При попадании или промахе осколок взрывается. Цель и каждое существо в пределах 5 футов от точки, где лед взорвался, должны преуспеть в спасброске Ловкости или получить 2d6 урона холодом.<br>На высших уровнях. Когда вы произносите это заклинание, используя паз для заклинаний 2-го уровня или выше, урон холода увеличивается на 1d6 для каждого уровня слота выше 1-го.",
+      "school": "призыв",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "С, М",
+      "materials": "капля воды или льдинка",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Immolation",
+      "level": "5",
+      "text": " Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 7d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell’s duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 3d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can’t be extinguished through nonmagical means. If damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "90 feet",
+      "components": "V",
+      "materials": "",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Поджигание",
+      "level": "5",
+      "text": "Языки пламени охватывают одно существо, которое вы можете видеть в радиусе действия. Цель должна сделать спасбросок по Ловкости. При неудачном цель получает 7d6 урона огнем, или вдвое меньше урона при успешном. При неудачном броске цель также горит все время заклинания. Горящая цель проливает яркий свет в радиусе 30 футов и тусклый свет для дополнительных 30 футов. В конце каждого из своих ходов цель повторяет спасбросок. При неудачном спасброске цель получает урон 3d6, заклинание заканчивается при успешном. Эти магические языки не могут быть уничтожены с помощью немагических средств. Если урон от этого заклинания уменьшает цель до 0 очков здоровья, цель превращается в пепел.",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "90 футов",
+      "components": "В",
+      "materials": "",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Investiture of Flame",
+      "level": "6",
+      "text": " Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell’s duration. The flames don’t harm you. Until the spell ends, you gain the following benefits: <br> - You are immune to fire damage and have resistance to cold damage. <br> - Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes 1d10 fire damage. <br> - You can use your action to create a line of fire 15 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "Self",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Покров пламени",
+      "level": "6",
+      "text": "Пламя распространяется по вашему телу, пролив яркий свет в радиусе 30 футов и тусклый свет на дополнительные 30 футов до завершения заклинания. Пламя не причиняет вам вреда. До тех пор, пока заклинание не закончится, вы получите следующие преимущества: <br> - У вас иммунитет к урону от огня и сопротивление холоду. <br> - Любое существо, которое движется в пределах 5 футов от вас в первый раз в ход или заканчивает ход там получает 1d10 урона от огня. <br> - Вы можете использовать свое действие для создания линии огня длиной 15 футов и шириной 5 футов, простирающейся от вас в направлении, которое вы выбираете. Каждое существо в линии должно сделать спасбросок по Ловкости. Существо получает 4d8 урона от огня при неудаче, или вдвое меньше урона при успехе.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "На себя",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Конц-я до 10 минут",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Investiture of Ice",
+      "level": "6",
+      "text": " Until the spell ends, ice rimes your body, and you gain the following benefits: <br> - You are immune to cold damage and have resistance to fire damage. <br> - You can move across difficult terrain created by ice or snow without spending extra movement. <br> - The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you. <br> - You can use your action to create a 15-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 4d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "Self",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Покров льда",
+      "level": "6",
+      "text": "До конца действия заклинания, лед покрывает ваше тело, и вы получите следующие преимущества: <br> - Вы невосприимчивы к урону от холода и имеете сопротивление огню. <br> - Вы можете перемещаться по сложной местности, созданной льдом или снегом, не тратя лишнего движения. <br> - Земля в радиусе 10 футов вокруг вас является ледяной и труднодоступной местностью для существ, кроме вас. Радиус перемещается вместе с вами. <br> - Вы можете использовать свое действие для создания 15-футового конуса ледяного ветра, простирающегося от вашей вытянутой руки в выбранном вами направлении. Каждое существо в конусе должно сделать спасбросок по Телосложению. Существо получает 4d6 урона холодом при неудачном броске, или вдвое меньше урона при успешном. Существо провалившее спасбросок, снидает свою скорость вдвое до начала вашего следующего хода",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "На себя",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация, до 10 минут",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Investiture of Stone",
+      "level": "6",
+      "text": " Until the spell ends, bits of rock spread across your body, and you gain the following benefits: <br> - You have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons. <br> - You can use your action to create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a Dexterity saving throw or be knocked prone. <br> - You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can’t end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are stunned until the end of your next turn.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "Self",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Покров камня",
+      "level": "6",
+      "text": "До конца действия заклинание ваше тело покрыто камнями и вы получаете следующие преимущества: <br> - У вас есть сопротивление дробящему, колющему ,рубящемуурону от немагического оружия. <br> - Вы можете использовать свое действие, чтобы создать небольшое землетрясение на земле в радиусе 15 футов, центрированном на вас. Другие существа на этом основании должны преуспеть в спасброске по Ловкости или быть сбитым с ног. <br> - Вы можете перемещаться по сложной местности из земли или камня, не тратя дополнительного движения. Вы можете двигаться сквозь твердую землю или камень, как если бы это был воздух и не дестабилизировать его, но вы не можете прекратить свое движение там. Если вы это сделаете, вас вытолкнет в ближайшее незанятое пространство, заклинание заканчится, и вы будете оглушены до конца вашего следующего хода.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "На себя",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до 10 минут",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Investiture of Wind",
+      "level": "6",
+      "text": " Until the spell ends, wind whirls around you, and you gain the following benefits: <br> - Ranged weapon attacks made against you have disadvantage on the attack roll. <br> - You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it. <br> - You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Constitution saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "Self",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Покров ветра",
+      "level": "6",
+      "text": "До конца действия заклинания вас окружает ветер и вы получаете следующие преимущества: <br> - Атаки дальнобойным оружем совершаются по вам с помехой. <br> - Вы получаете скорость полета 60 футов. Если вы все еще летите, когда заклинание заканчивается, вы падаете, если только вы не можете каким-то образом предотвратить его. <br> - Вы можете использовать свое действие для создания 15-футового куба ветра, с центром на точке, которую вы можете видеть в пределах 60 футов от вас. Каждое существо в этой области должно сделать спасбросок по Телосложению. Существо получает 2d10 дробящего урона при неудачном броске, или вдвое меньше при успешном. При провале существо Большого размера или меньше также сдвигается на 10 футов от центра куба.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "На себя",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до 10 инут",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Maelstrom",
+      "level": "5",
+      "text": "A mass of 5-foot-deep water appears and swirls in a 30-foot radius centered on a point you can see within range. The point must be on ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take 6d6 bludgeoning damage and be pulled 10 feet toward the center.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "120 feet",
+      "components": "V, S, M",
+      "materials": "paper or leaf in the shape of a funnel",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Водоворот",
+      "level": "5",
+      "text": "Масса воды глубиной 5 футов появляется и вертится в радиусе 30 футов с центром в точке, которую вы можете видеть в радиусе действия. Точка должна быть на земле или в водоеме. До конца действия заклинания, эта область будет труднопроходимой, и любое существо, которое начинает свой ход там, должно преуспеть в спасброске по Силе или получить 6d6 дробящего урона, и притянуться на 10 футов к центру.",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "120 футов",
+      "components": "В, С, М",
+      "materials": "Бумага или лист в форме воронки",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Magic Stone",
+      "level": "0",
+      "text": " You touch one to three pebbles and imbue them with magic. You or someone else can make a ranged spell attack with one of the pebbles by throwing it or hurling it with a sling. If thrown, it has a range of 60 feet. If someone else attacks with the pebble, that attacker adds your spellcasting ability modifier, not the attacker’s, to the attack roll. On a hit, the target takes bludgeoning damage equal to 1d6 + your spellcasting ability modifier. Hit or miss, the spell then ends on the stone. If you cast this spell again, the spell ends early on any pebbles still affected by it.",
+      "school": "Transmutation ",
+      "castingTime": "1 bonus action",
+      "range": "Touch",
+      "components": "V, S",
+      "materials": "",
+      "duration": "1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Волшебный камень",
+      "level": "0",
+      "text": "Вы касаетесь от одного до трех камешков и наполняете их магией. Вы или кто-то другой можете совершить дальнюю атаку заклинанием с одним из камней. Дальность броска 60 футов. При атаке таким камнем к броску атаки прибавляется модификатор способности заклинаний, а не модификатор атаки. При попадании цель получает урон, равный 1d6 + ваш модификатор способности колдовства. При попадании или промахе магия на камне рассеивается. При повторном применении заклинания, ранее заарованные камни теряют магию.",
+      "school": "преобразование",
+      "castingTime": "1 бонусное действие",
+      "range": "Касание",
+      "components": "В, С",
+      "materials": "",
+      "duration": "1 минута",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Maximilian’s Earthen Grasp",
+      "level": "2",
+      "text": "You choose a 5-foot-square unoccupied space on the ground that you can see within range. A Medium hand made from compacted soil rises there and reaches for one creature you can see within 5 feet of it. The target must make a Strength saving throw. On a failed save, the target takes 2d6 bludgeoning damage and is restrained for the spell’s duration. As an action, you can cause the hand to crush the restrained target, who must make a Strength saving throw. It takes 2d6 bludgeoning damage on a failed save, or half as much damage on a successful one. To break out, the restrained target can make a Strength check against your spell save DC. On a success, the target escapes and is no longer restrained by the hand. As an action, you can cause the hand to reach for a different creature or to move to a different unoccupied space within range. The hand releases a restrained target if you do either.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "V, S, M",
+      "materials": "a miniature hand sculpted from clay",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Земляной захват Максимилиана",
+      "level": "2",
+      "text": "Вы выбираете на земле незанятый квадрат со стороной 5 футов, который вы можете видеть в радиусе действия заклинания. Рука Среднего размера, состоящая из уплотненной почвы поднимается оттуда и достигает одного существа, которое вы можете видеть в пределах 5 футов от нее. Цель должна сделать спасбросок по Силе. При неудаче цель получает 2d6 дробящего урона и остается в захвате на время заклинания. В качестве действия вы можете заставить руку сокрушить захваченную цель, которая должна сделать спасбросок по Силе. При неудаче цель получает 2d6 дробящего урона, или вдвое меньший урон при успехе.. Чтобы вырваться, сдерживаемая цель может сделать проверку Силы против ващей сложности заклинания. В случае успеха цель выывается и больше не удерживается рукой. В качестве действия вы можете заставить руку достичь другого существа или переместиться в другое свободное пространство в пределах досягаемости. В таком случае рука отпускает цель.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В, С, М",
+      "materials": "маленькая рука из глины",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Melf’s Minute Meteors",
+      "level": "3",
+      "text": "You create six tiny meteors in your space. They float in the air and orbit you for the spell’s duration. When you cast the spell—and as a bonus action on each of your turns thereafter—you can expend one or two of the meteors, sending them streaking toward a point or points you choose within 120 feet of you. Once a meteor reaches its destination or impacts against a solid surface, the meteor explodes. Each creature within 5 feet of the point where the meteor explodes must make a Dexterity saving throw. A creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the number of meteors created increases by two for each slot level above 3rd.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "Self",
+      "components": "V, S, M",
+      "materials": "niter, sulfur, and pine tar formed into a bead",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Мелкие метеоры Мелфа",
+      "level": "3",
+      "text": "Вы создаете шесть крошечных метеоров в своем пространстве. Они плавают в воздухе и вращаются вокруг вас на время заклинания. Когда вы произносите заклинание - и в качестве бонуса на каждом из ваших ходов в дальнейшем - вы можете потратить один или два метеора, отправляя их в направлении точки или точек, которые вы выбираете в радиусе 120 футов от вас. Как только метеор достигает своего места назначения или ударяет о твердую поверхность, метеорит взрывается. Каждое существо в пределах 5 футов от точки, где взрывается метеор, должно сделать бросок на спасение Ловкости. Существо получает 2d6 урона от огня при неудачном спасении, или вдвое меньше урона на успешном. На высших уровнях. Когда вы используете это заклинание, используя заклинание 4-го уровня или выше, количество созданных метеоров увеличивается на два для каждого уровня слота выше третьего.",
+      "school": "Проявление",
+      "castingTime": "1 действие",
+      "range": "На себя",
+      "components": "В, С, М",
+      "materials": "шарик из селитры, серы и сосновая смолы",
+      "duration": "Концентрация до 10 минут",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Mold Earth",
+      "level": "0",
+      "text": " You choose a portion of dirt or stone that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways: <br> - If you target an area of loose earth, you can instantaneously excavate it, move it along the ground, and deposit it up to 5 feet away. This movement doesn’t have enough force to cause damage. <br> - You cause shapes, colors, or both to appear on the dirt or stone, spelling out words, creating images, or shaping patterns. The changes last for 1 hour. <br> - If the dirt or stone you target is on the ground, you cause it to become difficult terrain. Alternatively, you can cause the ground to become normal terrain if it is already difficult terrain. This change lasts for 1 hour. If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "S",
+      "materials": "",
+      "duration": "Instantaneous or 1 hour (see below)",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Измнить землю",
+      "level": "0",
+      "text": "Вы выбираете область земли или камня, которую вы можете видеть в радиусе действия и которая соответствует 5-футовому кубу. Вы управляете этим одним из следующих способов: <br> - Если это земля, вы можете мгновенно выкапывать ее, перемещать по земле и откладывать на расстоянии до 5 футов. Это движение не имеет достаточной силы, чтобы вызвать повреждение. <br> - Вы вызываете формы, цвета или и то и другое, которые появятся на земле или камне, произнося слова, создавая образы или формируя узоры. Эффекты длятся 1 час. <br> - Если вы выбираете поверхность земли или камня, вона становится труднопроходимой. Кроме того, вы можете заставить землю стать нормальной, если она уже труднопроходимая. Это изменение длится 1 час. Если вы произвели это заклинание несколько раз, вы можете одновременно использовать не более двух его мгновенных эффектов, и вы можете отменить такой эффект действием.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "С",
+      "materials": "",
+      "duration": "Мгновенно или 1 час",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Primordial Ward",
+      "level": "6",
+      "text": " You have resistance to acid, cold, fire, lightning, and thunder damage for the spell’s duration. When you take damage of one of those types, you can use your reaction to gain immunity to that type of damage, including against the triggering damage. If you do so, the resistances end, and you have the immunity until the end of your next turn, at which time the spell ends.",
+      "school": "abjuration",
+      "castingTime": "1 action",
+      "range": "Self",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Изначальная защита",
+      "level": "6",
+      "text": "У вас есть сопротивление кислоте, холоду, огню, молнии и грому на время действия заклинания. Когда вы получаете урон одного из этих типов, вы можете использовать свою реакцию, чтобы получить иммунитет к этому типу урона, в том числе от только что пришежшего урона. Если вы это делаете, сопротивление заканчивается, и у вас есть иммунитет до конца вашего следующего хода, после чего заклинание заканчивается.",
+      "school": "ограждение",
+      "castingTime": "1 действие",
+      "range": "На себя",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE",
+	  "needHelp": true 
+    }
+  },
+  {
+    "en": {
+      "name": "Pyrotechnics",
+      "level": "2",
+      "text": " Choose an area of flame that you can see and that can fit within a 5-foot cube within range. You can extinguish the fire in that area, and you create either fireworks or smoke. Fireworks. The target explodes with a dazzling display of colors. Each creature within 10 feet of the target must succeed on a Constitution saving throw or become blinded until the end of your next turn. Smoke. Thick black smoke spreads out from the target in a 20-foot radius, moving around corners. The area of the smoke is heavily obscured. The smoke persists for 1 minute or until a strong wind disperses it.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Пиротехника",
+      "level": "2",
+      "text": "Выберите область пламени, которую вы можете видеть, и которая может поместиться внутри 5-футового куба в радиусе действия. Вы можете потушить огонь в этой области, и вы создадите фейерверк или дым.<br>Фейерверк. Цель взрывается ослепительным отображением цветов. Каждое существо в радиусе 10 футов от цели должно преуспеть в спасброске по Телосложению или ослепнуть до конца вашего следующего хода.<br>Дым. Густой черный дым рассеивается от цели в радиусе 20 футов, двигаясь вокруг углов. Простарнство дыма сильно затенено. Дым клубится 1 минуту или пока сильный ветер не рассеет его.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Shape Water",
+      "level": "0",
+      "text": " You choose an area of water that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways: <br> - You instantaneously move or otherwise change the flow of the water as you direct, up to 5 feet in any direction. This movement doesn’t have enough force to cause damage. <br> - You cause the water to form into simple shapes and animate at your direction. This change lasts for 1 hour. <br> - You change the water’s color or opacity. The water must be changed in the same way throughout. This change lasts for 1 hour. <br> - You freeze the water, provided that there are no creatures in it. The water unfreezes in 1 hour. If you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.",
+      "school": "Transmutation ",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "S",
+      "materials": "",
+      "duration": "Instantaneous or 1 hour (see below)",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Манипулирование водой",
+      "level": "0",
+      "text": "Вы выбираете область воды, которую вы можете видеть в пределах досягаемости, и которая соответствует 5-футовому кубу. Вы манипулируете им одним из следующих способов: <br> - Вы мгновенно перемещаете или иным образом меняете поток воды до 5 футов в любом измерении. Это движение не имеет достаточной силы, чтобы вызвать повреждение. <br> - Вы заставляете воду формироваться в простые формы и оживлять. Этот эффект длится 1 час. <br> - Вы изменяете цвет воды или непрозрачность. Воду нужно менять одинаково во всем. Это изменение длится 1 час. <br> - Вы замерзаете воду, при условии, что в ней нет существ. Вода размораживается через 1 час. Если вы произвели это заклинание несколько раз, вы можете одновременно использовать не более двух его мгновенных эффектов, и вы можете отменмть такой эффект действием.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "С",
+      "materials": "",
+      "duration": "мгновенно или 1 час",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Skywrite",
+      "level": "2",
+      "text": " You cause up to ten words to form in a part of the sky you can see. The words appear to be made of cloud and remain in place for the spell’s duration. The words dissipate when the spell ends. A strong wind can disperse the clouds and end the spell early.",
+      "school": "transmutation ",
+      "castingTime": "1 action",
+      "range": "Sight",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 hour",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Небесное письмо",
+      "level": "2",
+      "text": "Вы выбираете до 10 слов и они появляются на видимой вам части небв. Слова кажутся сделанными из облаков и остаются на месте до окончания действия заклинания. Эти слова рассеиваются, когда заклинание заканчивается. Сильный ветер может рассеять облака и прервать заклинание.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "Прямая видимость",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до 1 часа",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Snilloc’s Snowball Swarm",
+      "level": "2",
+      "text": "A flurry of magic snowballs erupts from a point you choose within range. Each creature in a 5-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes 3d6 cold damage on a failed save, or half as much damage on a successful one. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "90 feet",
+      "components": "V, S, M",
+      "materials": "a piece of ice or a small white rock chip",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Рой снежков Сниллока",
+      "level": "2",
+      "text": "Волна волшебных снежков извергается из точки, которую вы выбираете в радиусе действия. Каждое существо в сфере с радиусом 5 футов с центром в этой точке, должно сделать спасбросок по Ловкости. Существо получает 3d6 урона холодом при неудаче, или вдвое меньше урона при успехе.<br>На высших уровнях. Когда вы произносите это заклинание, используя слот заклинания 3-го уровня или выше, урон увеличивается на 1d6 для каждого уровня слота выше 2-го.",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "90 футов",
+      "materials": "льдинка или белый камешек",
+      "components": "В, С, М",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Storm Sphere",
+      "level": "4",
+      "text": "A 20-foot-radius sphere of whirling air springs into existence centered on a point you choose within range. The sphere remains for the spell’s duration. Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take 2d6 bludgeoning damage. The sphere’s space is difficult terrain. Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage. Creatures within 30 feet of the sphere have disadvantage on Wisdom (Perception) checks made to listen. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases for each of its effects by 1d6 for each slot level above 4th.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "150 feet",
+      "components": "V, S",
+      "materials": "Perception",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Сфера Шторма",
+      "level": "4",
+      "text": "Ураган бушует в сфере радиусом 20 футов с центром в выбранной вами точке в радиусе действия до окончания действия заклинания. Каждое существо в сфере, появляющееся в сфере или заканчивающее там ход, должно преуспеть в спасброске по Силе или получить 2d6 дробящего урона. Пространство сферы - сложный ландшафт. Пока заклинание не закончится, вы можете использовать бонусное действие в каждый свой ход, чтобы заставить молнию прыгнуть от центра сферы к одному существу, которое вы выберете в пределах 60 футов от центра. Совершите атаку заклинаний дальнего боя. У вас есть преимущество в броске атаки, если цель находится в сфере. При попадании цель получает урон молнией 4d6. Существа в пределах 30 футов от сферы имеют помеху в проверках Мудрости (Восприятия), сделанных для прослушивания.<br>На высших уровнях. Когда вы используете это заклинание, используя слот для заклинаний 5-го уровня или выше, урон увеличивается для каждого из его эффектов на 1d6 для каждого уровня слота выше 4-го.",
+      "school": "проявлние",
+      "castingTime": "1 действие",
+      "range": "150 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Thunderclap",
+      "level": "0",
+      "text": "You create  a burst of thunderous sound, which can be heard 100 feet away. Each creature other than you within 5 feet of you must make a Constitution saving throw. On a failed save, the creature takes 1d6 thunder damage. The spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+      "school": "Evocation ",
+      "castingTime": "1 action",
+      "range": "Self (5-foot radius)",
+      "components": "S",
+      "materials": "2d6",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Удар грома",
+      "level": "0",
+      "text": "Вы вызываете удар грома, который можно услышать в пределах 100 футов. Каждое существо, кроме вас, в пределах 5 футов от вас, должно сделать спасбросок по Телосложению. При неудаче получает  1d6 урона громом. Урон заклинания увеличивается на 1d6, когда вы достигаете 5-го уровня (2d6), 11-го уровня (3d6) и 17-го уровня (4d6).",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "на Себя",
+      "components": "С",
+      "materials": "",
+      "duration": "мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Tidal Wave",
+      "level": "3",
+      "text": "You conjure up a wave of water that crashes down on an area within range. The area can be up to 30 feet long, up to 10 feet wide, and up to 10 feet tall. Each creature in that area must make a Dexterity saving throw. On a failure, a creature takes 4d8 bludgeoning damage and is knocked prone. On a success, a creature takes half as much damage and isn’t knocked prone. The water then spreads out across the ground in all directions, extinguishing unprotected flames in its area and within 30 feet of it.",
+      "school": "conjuration",
+      "castingTime": "1 action",
+      "range": "120 feet",
+      "components": "V, S, M",
+      "materials": "a drop of water",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Приливная волна",
+      "level": "3",
+      "text": "Вы вызываете волну воды, которая падает на область в пределах досягаемости. Площадь может достигать 30 футов в длину, до 10 футов в ширину и до 10 футов в высоту. Каждое существо в этой области должно сделать спасбросок по Ловкости. В случае неудачи, существо получает 4d8 дробящего урона и сбивается с ног. В случае успеха существо получает в два раза меньше урона и не сбивается с ног. Вода затем распространяется по земле во всех направлениях, гася незащищенные источники огня в ее области и в пределах 30 футов от нее.",
+      "school": "призыв",
+      "castingTime": "1 действие",
+      "range": "120 футов",
+      "components": "В, С, С",
+      "materials": "капля воды",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Transmute Rock",
+      "level": "5",
+      "text": "You choose an area of stone or mud that you can see that fits within a 40-foot cube and that is within range, and choose one of the following effects. Transmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell’s duration. If you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud. If you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one. Transmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell’s duration. Any creature in the mud when it transforms must make a Dexterity saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space.",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "120 feet",
+      "components": "V, S, M",
+      "materials": "clay and water",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Преобразовать скалу",
+      "level": "5",
+      "text": "Вы выбираете область камня или грязи, которую вы видите, которая помещается в 40-футовый куб и находится в пределах досягаемости, и выберите один из следующих эффектов.<br>Преобразуйте камень в грязь. Немагическая скала любого вида в этом районе становится равным объемом густой и текучей грязи, которая остается на время заклинания. Если вы произносите заклинание на участке земли, он становится достаточно топким, чтобы существа могли погрузиться в него. Каждый фут движения через грязь, стоит 4 фута движения, и любое существо на земле, когда вы произносите заклинание, должно сделать спасбросок по Силе. Существо также должно сделать этот бросок в первый раз, когда оно входит в область в свой ход или заканчивает свой ход там. В случае провала существо погружается в грязь и оказывается в состоянии захвата, хотя оно может использовать действие для прекращения состояния захвата, освобождая себя от грязи. Если вы наложите заклинание на потолок, грязь упадет. Любое существо под грязью, когда оно падает, должно сделать спасбросок по Ловкости. Существо получает 4d8 дробящего урона при неудачном броске, или вдвое меньше урона при успешном.<br>Преобразуйте грязь в камень. Нематериальная грязь или зыбучий песок в области глубиной не более 10 футов превращается в мягкий камень до окончания действия заклинания. Любое существо в грязи при его трансформации должно сделать спасбросок по Ловкости. В случае провала, существо сдерживается скалой. Сдерживаемое существо может использовать действие, чтобы попытаться освободиться, пройдя проверку Силы (DC 20) или нанеся 25 повреждений камню вокруг него. При успешном спасброске существо выбирается на поверхность в незанятое пространство.",
+      "school": "преобразование",
+      "castingTime": "1 действие",
+      "range": "120 футов",
+      "components": "В, С, М",
+      "materials": "глина и вода",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Vitriolic Sphere",
+      "level": "4",
+      "text": "You point at a place within range, and a glowing 1-foot ball of emerald acid streaks there and explodes in a 20-foot radius. Each creature in that area must make a Dexterity saving throw. On a failed save, a creature takes 10d4 acid damage and 5d4 acid damage at the end of its next turn. On a successful save, a creature takes half the initial damage and no damage at the end of its next turn. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by 2d4 for each slot level above 4th.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "150 feet",
+      "components": "V, S, M",
+      "materials": "a drop of giant slug bile",
+      "duration": "Instantaneous",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Едкая сфера",
+      "level": "4",
+      "text": "Вы указываете на место в пределах досягаемости, и светящийся 1-футовый изумрудный шар кислоты проносится туда и взрывается в 20-футовом радиусе. Каждое существо в этой области должно сделать спасбросок по Ловкости. При провале существо получает 10d4 урона кислотой и 5d4 урона кислотой в конце следующего хода. При успехе существо получает половину первоначального урона и никакого повреждения в конце следующего хода.<br>На высших уровнях. Когда вы используете это заклинание, используя слот заклинания 5-го уровня или выше, начальный урон увеличивается на 2d4 для каждого уровня слота выше 4-го.",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "150 футов",
+      "components": "В, С, М",
+      "materials": "капля желчи гигантского слизняка",
+      "duration": "Мгновенно",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Tsunami",
+      "level": "8",
+      "text": "A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration. When the wall appears, each creature within its area must make a Strength saving throw. On a failed save, a creature takes 6d10 bludgeoning damage, or half as much damage on a successful save. At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a Strength saving throw or take 5d10 bludgeoning damage. A creature can take this damageonly once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends. A creature caught in the wall can move by sqimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground.",
+      "school": "Conjuration",
+      "castingTime": "1 minute",
+      "range": "Sight",
+      "components": "V, S",
+      "materials": "Athletics",
+      "duration": "Concentration, up to 6 rounds",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Цунами",
+      "level": "8",
+      "text": "Стена воды возникает в точке, которую вы выбираете в радиусе действия. Вы можете сделать стену длиной до 300 футов, высотой 300 футов и толщиной 50 футов. Стена остается в течение всего времени действия заклинания. Когда стена появляется, каждое существо в этой области должно сделать спасбросок по Силе. При провале существо получает 6d10 дробящего урона, или вдвое меньший урон при успехе. В начале каждого из ваших ходов после того, как стена появляется, стена, вместе с любыми существами в ней, перемещается на расстоянии 50 футов от вас. Любое Огромное или меньшее существо внутри стены или пространство, в которое входит стена, когда оно движется, должно преуспеть в спасброске по Силе или получить 5d10 дробящего урона. Существо может получить это повреждение только один раз за раунд. В конце хода высота стены уменьшается на 50 футов, а урон, получаемый существами в следующих раундах, уменьшаются на 1d10. Когда стена достигает 0 футов в высоту, заклинание заканчивается. Существо, пойманное на стене, может плыть. Из-за силы волны, однако, существо должно сделать успешную проверку Силы (Атлетика) против сложности вашего заклинания, чтобы вообще двигаться. Если провалена, оно не может двигаться. Существо, которое выходит за пределы области, падает на землю.",
+      "school": "призыв",
+      "castingTime": "1 минута",
+      "range": "прямая видимость",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация до 6 раундов",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Warding Wind",
+      "level": "2",
+      "text": "A strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the spell’s duration. The wind has the following effects: <br> - It deafens you and other creatures in its area. <br> - It extinguishes unprotected flames in its area that are torch-sized or smaller. <br> - The area is difficult terrain for creatures other than you. <br> - The attack rolls of ranged weapon attacks have disadvantage if they pass in or out of the wind. <br> - It hedges out vapor, gas, and fog that can be dispersed by strong wind.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "Self",
+      "components": "V",
+      "materials": "20 miles per hour",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Защитный ветер",
+      "level": "2",
+      "text": "Сильный ветер (20 миль в час) дует вокруг вас в радиусе 10 футов и перемещается вместе с вами. Ветер длится в течение периода действия заклинания. Ветер имеет следующие эффекты: <br> - Вы и другие существа в области ничего не слышите. <br> - Он гасит незащищенные языки пламени в его области размером с факел или меньше. <br> - Область является труднопроходимым ландшафтом для существ, кроме вас. <br> - Помеха на атаки дальнобойным оружием, если они проходят в ветре или выходят из него. <br> - Он изолируте пары, газ и туман, которые могут рассеяться сильным ветром.",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "На себя",
+      "components": "В",
+      "materials": "",
+      "duration": "Концентрация до 10 минут",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Watery Sphere",
+      "level": "4",
+      "text": "You conjure up a sphere of water with a 10-foot radius on a point you can see within range. The sphere can hover in the air, but no more than 10 feet off the ground. The sphere remains for the spell’s duration. Any creature in the sphere’s space must make a Strength saving throw. On a successful save, a creature is ejected from that space to the nearest unoccupied space outside it. A Huge or larger creature succeeds on the saving throw automatically. On a failed save, a creature is restrained by the sphere and is engulfed by the water. At the end of each of its turns, a restrained target can repeat the saving throw. The sphere can restrain a maximum of four Medium or smaller creatures or one Large creature. If the sphere restrains a creature in excess of these numbers, a random creature that was already restrained by the sphere falls out of it and lands prone in a space within 5 feet of it. As an action, you can move the sphere up to 30 feet in a straight line. If it moves over a pit, cliff, or other drop, it safely descends until it is hovering 10 feet over ground. Any creature restrained by the sphere moves with it. You can ram the sphere into creatures, forcing them to make the saving throw, but no more than once per turn. When the spell ends, the sphere falls to the ground and extinguishes all normal flames within 30 feet of it. Any creature restrained by the sphere is knocked prone in the space where it falls.",
+      "school": "conjuration",
+      "castingTime": "1 action",
+      "range": "90 feet",
+      "components": "V, S, M",
+      "materials": "a droplet of water",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Сфера Воды",
+      "level": "4",
+      "text": "Вы вызываете сферу воды с радиусом 10 футов в точке, которую вы можете видеть в радиусе действия. Сфера может парить в воздухе, но не более чем на 10 футов от земли. Сфера остается до конца действия заклинания. Любое существо в пространстве сферы должно сделать спасбросок по Силе. При успехе существо выбрасывается из этого пространства в ближайшее незанятое пространство вне его. Огромное или более крупное существо автоматически получает успех на спасбросок. При провале существо сдерживается сферой и поглощено водой. В конце каждого из своих ходов сдерживаемая цель может повторять спасбросок. Сфера может сдерживать максимум четыре средних или более мелких существ или одно крупное существо. Если сфера удерживает существо сверх этих чисел, случайное существо, которое уже сдерживается сферой, выпадает из него в незанятое пространство в пределах 5 футов от него. В качестве действия вы можете перемещать сферу до 30 футов по прямой линии. Если она перемещается по яме, скале или другому перепаду высот, она благополучно спускается, пока не опустится на 10 футов над землей. Любое существо, ограниченное сферой, движется вместе с ним. Вы можете таранить  существ, заставляя их делать спасбросок, но не более одного раза за ход. Когда заклинание заканчивается, сфера падает на землю и гасит все нормальные языки пламени в пределах 30 футов от него. Любое существо, ограниченное сферой, сбивается с ног, когда падает.",
+      "school": "призыв",
+      "castingTime": "1 действие",
+      "range": "90 футов",
+      "components": "В, С, М",
+      "materials": "капля воды",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "Whirlwind",
+      "level": "7",
+      "text": "A whirlwind howls down to a point on the ground you specify. The whirlwind is a 10-foot-radius, 30-foot-high cylinder centered on that point. Until the spell ends, you can use your action to move the whirlwind up to 30 feet in any direction along the ground. The whirlwind sucks up any Medium or smaller objects that aren’t secured to anything and that aren’t worn or carried by anyone. A creature must make a Dexterity saving throw the first time on a turn that it enters the whirlwind or that the whirlwind enters its space, including when the whirlwind first appears. A creature takes 10d6 bludgeoning damage on a failed save, or half as much damage on a successful one. In addition, a Large or smaller creature that fails the save must succeed on a Strength saving throw or become restrained in the whirlwind until the spell ends. When a creature starts its turn restrained by the whirlwind, the creature is pulled 5 feet higher inside it, unless the creature is at the top. A restrained creature moves with the whirlwind and falls when the spell ends, unless the creature has some means to stay aloft. A restrained creature can use an action to make a Strength or Dexterity check against your spell save DC. If successful, the creature is no longer restrained by the whirlwind and is hurled 3d6 ? 10 feet away from it in a random direction.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "300 feet",
+      "components": "V, M",
+      "materials": "a piece of straw",
+      "duration": "Concentration, up to 1 minute",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Вихрь",
+      "level": "7",
+      "text": "Вы создает вихрь (цилиндр высотой 30 футов и диаметром 10 футов) с центром в выбранной точке. Пока заклинание не закончится, вы можете использовать свое действие для перемещения вихря на расстояние до 30 футов в любом направлении вдоль земли. Вихрь всасывает любые средние или мелкие предметы, которые не защищены ни от чего, и которые не носятся и не переносятся никем. Когда существо оказывается в пространстве вихря, оно должно сделать спасбросок по Ловкости. Существо получает 10d6 дробящего урона при провале, или половину урона при успехе. Кроме того, большое или меньшее существо, которое провалило бросок, должно сделать спасбросок по Силе или оказаться захваченным вихрем до тех пор, пока заклинание не закончится. Когда захваченное существо начинает свой ход оно, поднимается на 5 футов вверх внутри вихря, если существо не находится наверху. Сдерживаемое существо движется с вихрем и падает, когда заклинание заканчивается, если у существа нет средств оставаться в воздухе. Сдержанное существо может использовать действие, чтобы сделать проверку Силы или Ловкости против всложности вашего заклинания. В случае успеха, существо больше не удерживается вихрем и швыряется на 3d6 10 футов от него в случайном направлении.",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "300 футов",
+      "components": "В, М",
+      "materials": "пучек соломы",
+      "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
   }
+
 ]

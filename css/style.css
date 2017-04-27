@@ -954,6 +954,7 @@ p {
   bottom: -20px;
   font-size: 70%;
   color: #fff;
+  cursor: default;
 }
 .spellCard .school {
   position: absolute;
@@ -961,6 +962,7 @@ p {
   bottom: -20px;
   font-size: 70%;
   color: #fff;
+  cursor: default;
 }
 .lockedSpell .bLockSpell {
   color: #000;

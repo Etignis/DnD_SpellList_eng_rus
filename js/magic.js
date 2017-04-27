@@ -125,7 +125,10 @@ window.onload = function(){
 			if (max > min_width) {
 				min_width = max;
 			}
-			ret+="<input "+checked+" type='checkbox' value='"+type.en+"' id='ch_"+type.en+"'><label for='ch_"+type.en+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
+			
+			var sOptionValue = type.key? type.key : type.en;
+			
+			ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
 			
 		}
 		min_width = min_width>20? 20: min_width;
@@ -173,7 +176,7 @@ window.onload = function(){
 	function getConfig(prop) {
 		oConfig = JSON.parse(localStorage.getItem("config")) || {};
 		if(prop!=undefined) {
-			return localStorage.getItem("config")? oConfig[prop] : null;
+			return localStorage.getItem("config")? oConfig[prop] : {};
 		}
 		return oConfig;
 	}
@@ -187,10 +190,11 @@ window.onload = function(){
 			var s_castingTime = o.castingTime;
 			var s_range = o.range;
 			var s_components = o.components;
-			var s_duration = o.duration;
+			var s_duration = o.duration.replace(/концентрация/, "конц-я");
 			var s_materials = o.materials;
 			var s_text = o.text;
 			var s_level = o.level;
+			var s_source = o.source? o.source : spell.en.source? spell.en.source: "";
 			var st_castingTime, st_range, st_components, st_duration;
 			switch (lang){		
 				case "ru": 
@@ -208,7 +212,7 @@ window.onload = function(){
 					st_duration = "DURATION";	
 			}
 			var s_school = o.school;
-			var s_source = o.source;
+			var sNeedHelp = (spell.ru && spell.ru.needHelp)? "Как лучше перевести?" : "";
 			
 			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;
 			var bHideSpell = '<span class="bHideSpell" title="Скрыть заклинание (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';			
@@ -216,18 +220,26 @@ window.onload = function(){
 			
 			sLockedSpell = sLockedSpell? " lockedSpell " : "";
 			
+			var sNameRu;
 			try{
 				spell.ru.name.length;
+				sNameRu  = spell.ru.name;
 			} catch (err) {
 				console.log("!: "+spell.en.name);
+				sNameRu = spell.en.name;
 			}
 			
-			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + spell.ru.name + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
+			var title = spell.en.name;
+			if (lang=='en') {
+				title = (spell.ru && spell.ru.name)?spell.ru.name: spell.en.name;
+			}
+			
+			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
 						bLockSpell +
 						bHideSpell +
-						'<h1>' + s_name + s_ritual + '</h1>'+
+						'<h1 title="'+title+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' + s_name + s_ritual + '</h1>'+
 						'<div class="row">'+
 							'<div class="cell castingTime">'+
 								'<b>'+st_castingTime+'</b>'+
@@ -251,7 +263,7 @@ window.onload = function(){
 						'<div class="materials">' + s_materials + '</div>'+
 						'<div class="text">' + s_text + '</div>	'+	
 						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
-						'<b class="school">' + s_level + ", " + s_school + '</b>'+
+						'<b class="school">' + s_level + ", " + s_school + (s_source?" <span title='Источник'>("+s_source+")</span>":"")+'</b>'+
 					'</div>'+
 				'</div>'+
 			'</div>';
@@ -280,6 +292,7 @@ window.onload = function(){
 		var nLevelStart = oParams.nLevelStart;
 		var nLevelEnd = oParams.nLevelEnd;
 		var aSchools = oParams.aSchools;
+		var aSources = oParams.aSources;
 		var sLang = oParams.sLang;
 		
 		var fHiddenSpells = (aHiddenSpells.length>0)? true: false;
@@ -335,6 +348,18 @@ window.onload = function(){
 		
 		
 		//school		
+		if(aSources && aSources.length>0 && aSources.length<99) {
+			filteredSpells = filteredSpells.filter(function(spell){
+				for(var i = 0; i < aSources.length; i++) {
+					if(aSources[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
+						return true;
+					}
+				}
+				return false;
+			});
+		}
+		
+		//source		
 		if(aSchools && aSchools.length>0 && aSchools.length<9) {
 			filteredSpells = filteredSpells.filter(function(spell){
 				for(var i = 0; i < aSchools.length; i++) {
@@ -402,6 +427,8 @@ window.onload = function(){
 		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
 		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
+		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
+			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
 		
 		var fHidden = (aHiddenSpells.length>0)? true: false;
@@ -418,6 +445,7 @@ window.onload = function(){
 				nLevelStart: nLevelStart, 
 				nLevelEnd: nLevelEnd, 
 				aSchools: aSchools, 
+				aSources: aSources,
 				sLang: sLang,
 				fHidden: fHidden
 				});
@@ -541,7 +569,19 @@ window.onload = function(){
 	function createSchoolCombobox(isOpen) {	
 		if(isOpen == undefined)
 			isOpen = false;
-		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
+		var s1=createComboBox(schoolList.sort(function(a, b){
+			if(a.en < b.en)
+				return -1;
+			if(a.en > b.en)
+				return 1;
+			return 0;
+		}), {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
+		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
+	}	
+	function createSourceCombobox(isOpen) {	
+		if(isOpen == undefined)
+			isOpen = false;
+		var s1=createComboBox(sourceList, {id: "SourceCombobox", title: "Источники", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 	}
 	function createNameFilter() {
@@ -626,11 +666,13 @@ window.onload = function(){
 	function createSidebar() {
 		var lang = getConfig("language");
 		var schoolOpen = getConfig("schoolOpen");
+		var sourceOpen = getConfig("sourceOpen");
 		createButtons();
 		createNameFilter();
 		createClassSelect();
 		createLevelSelect();
 		createSchoolCombobox(schoolOpen);
+		createSourceCombobox(sourceOpen)
 		createLangSelect(lang);
 		
 		$(".p_side").fadeIn();	
@@ -683,137 +725,129 @@ window.onload = function(){
 			el.parent().attr("data-content-open", true);
 		}
 	});// get item
-	function onSelectItemPress(src) {
-	var d_root='', d_parent='', trig=true;
 	
-	var attrFor = src.attr("for"); // $("input#"+attrFor)
-	d_root = $("input#"+attrFor).attr("data-root");
-	d_parent = $("input#"+attrFor).attr("data-parent");
-	if($("input#"+attrFor).prop("checked"))
-		{
-		trig=false;
-		}
-	$("input#"+attrFor).prop("checked", trig);
-	/**/
-	if(d_root!='' && d_root!=undefined)
-	{
-		$("input[type=checkbox][data-parent="+d_root+"]").each(function(){
-			$(this).prop( "checked", trig );
-		});
-	}
-	/**/
-	if(d_parent!='' && d_parent!=undefined && trig==false)
-	{
-		$("input[type=checkbox][data-root="+d_parent+"]").prop( "checked", trig);
-
-	}
-	/**/
-	/**/
-	if($("input[type=checkbox]:checked").length<1)
-		{
-		$("#go").attr("disabled", "disabled");
-		}
-	else
-		{
-		$("#go").removeAttr("disabled");
-		}
-	/**/
-
-	function make_val(ex, ad, dp){
-		var ret = '';
-		if(dp!=undefined) {
-			ad = dp + " " + ad;
-		}
-		if(ex!=undefined && ex!=""){
-			ret = ex+", "+ad;
-		} else {
-			ret = ad;
-		}
-		return ret;
-	}
-
-	/**/
-	var d_root='';
-	var before_root='';
-	var d_parent='';
-	var txt='';
-	var value='';
-	var title=''
-	$(".combo_box_title").html("");
-	$(".combo_box_title").attr('data-val',"");
-	$("input[type=checkbox]:checked").each(function(){
-		d_root='';
-		d_parent='';
-		d_parent=$(this).attr("data-parent");
-		d_root=$(this).attr("data-root");
-
-		title=$(".combo_box_title").html();
-		value=$(".combo_box_title").attr('data-val');
-
-		if(title!="" && title.charAt(title.length-1)!="(") {
-			$(".combo_box_title").append(", ");
-		}
-		// обычный пункт
-		if(d_parent==undefined && d_root==undefined)
+	function onSelectItemPress(src) {
+		var d_root='', d_parent='', trig=true;
+		
+		var attrFor = src.attr("for"); // $("input#"+attrFor)
+		var oComboBox = src.closest(".combo_box");
+		var sComboBoxId = oComboBox.attr("id");
+		d_root = $("#"+sComboBoxId+" input#"+attrFor).attr("data-root");
+		d_parent = $("#"+sComboBoxId+" input#"+attrFor).attr("data-parent");
+		if($("#"+sComboBoxId+" input#"+attrFor).prop("checked"))
 			{
-			txt = $(this).next("label").html().replace("<br>", " | ");
-			title_value = $(".combo_box_title").attr("data-val");
-			value = $(this).attr('value');
-			dp = $(this).attr('data-parent');
-			value = make_val(title_value, value, dp);
-			//$(".combo_box_title").append(txt).attr("data-val", value);
-			$(".combo_box_title").attr("data-val", value);
+			trig=false;
 			}
-		// если root
-		if(d_root!=undefined)
-			{
-				// если есть отмеченные потомки
-			if($("input[type=checkbox][data-parent="+d_root+"]:checked").length>0)
+		$("#"+sComboBoxId+" input#"+attrFor).prop("checked", trig);
+		/**/
+		if(d_root!='' && d_root!=undefined) {
+			$("#"+sComboBoxId+" input[type=checkbox][data-parent="+d_root+"]").each(function(){
+				$(this).prop( "checked", trig );
+			});
+		}
+		/**/
+		if(d_parent!='' && d_parent!=undefined && trig==false) {
+			$("#"+sComboBoxId+" input[type=checkbox][data-root="+d_parent+"]").prop( "checked", trig);
+
+		}
+
+
+		function make_val(ex, ad, dp){
+			var ret = '';
+			if(dp!=undefined) {
+				ad = dp + " " + ad;
+			}
+			if(ex!=undefined && ex!=""){
+				ret = ex+", "+ad;
+			} else {
+				ret = ad;
+			}
+			return ret;
+		}
+
+		/**/
+		var d_root='';
+		var before_root='';
+		var d_parent='';
+		var txt='';
+		var value='';
+		var title=''
+		$("#"+sComboBoxId+" .combo_box_title").html("");
+		$("#"+sComboBoxId+" .combo_box_title").attr('data-val',"");
+		$("#"+sComboBoxId+" input[type=checkbox]:checked").each(function(){
+			d_root='';
+			d_parent='';
+			d_parent=$(this).attr("data-parent");
+			d_root=$(this).attr("data-root");
+
+			title=$("#"+sComboBoxId+" .combo_box_title").html();
+			value=$("#"+sComboBoxId+" .combo_box_title").attr('data-val');
+
+			if(title!="" && title.charAt(title.length-1)!="(") {
+				$("#"+sComboBoxId+" .combo_box_title").append(", ");
+			}
+			// обычный пункт
+			if(d_parent==undefined && d_root==undefined)
 				{
-				txt=$(this).next("label").text()+" (";
-				//$(".combo_box_title").append(txt);
-
-				before_root=d_root;
-				}
-			}
-		// если parent
-		if(d_parent!=undefined)
-			{
-
-				txt=$(this).next("label").text();
-				title_value = $(".combo_box_title").attr("data-val");
+				txt = $(this).next("label").html().replace("<br>", " | ");
+				title_value = $("#"+sComboBoxId+" .combo_box_title").attr("data-val");
 				value = $(this).attr('value');
 				dp = $(this).attr('data-parent');
 				value = make_val(title_value, value, dp);
-				var ind = $("input[type=checkbox][data-parent="+d_parent+"").index(this);
-				if(ind==$("input[type=checkbox][data-parent="+d_parent+"").length-1 && d_parent==before_root){
-					txt+=")";
+				//$(".combo_box_title").append(txt).attr("data-val", value);
+				$("#"+sComboBoxId+" .combo_box_title").attr("data-val", value);
 				}
+			// если root
+			if(d_root!=undefined)
+				{
+					// если есть отмеченные потомки
+				if($("#"+sComboBoxId+" input[type=checkbox][data-parent="+d_root+"]:checked").length>0)
+					{
+					txt=$(this).next("label").text()+" (";
+					//$(".combo_box_title").append(txt);
 
-				$(".combo_box_title").append(txt).attr("data-val", value);
+					before_root=d_root;
+					}
+				}
+			// если parent
+			if(d_parent!=undefined)
+				{
+
+					txt=$(this).next("label").text();
+					title_value = $("#"+sComboBoxId+" .combo_box_title").attr("data-val");
+					value = $(this).attr('value');
+					dp = $(this).attr('data-parent');
+					value = make_val(title_value, value, dp);
+					var ind = $("#"+sComboBoxId+" input[type=checkbox][data-parent="+d_parent+"").index(this);
+					if(ind==$("#"+sComboBoxId+" input[type=checkbox][data-parent="+d_parent+"").length-1 && d_parent==before_root){
+						txt+=")";
+					}
+
+					$("#"+sComboBoxId+" .combo_box_title").append(txt).attr("data-val", value);
+				}
+			});
+
+			if($("#"+sComboBoxId+" .combo_box_title").html()=='')
+				$("#"+sComboBoxId+" .combo_box_title").html(src.closest(".combo_box").attr('data-text'));
+
+		/*/
+		var bg = $("#selector").find("input:checked + label[data-bg] ").attr("data-bg");
+		var leng = $("#selector").find("input:checked + label[data-bg] ").length;
+		$("#selector").find("input:checked + label[data-bg] ").each(function(){
+			if ($(this).attr("data-bg") != bg){
+				leng = 0;
 			}
 		});
-
-		if($(".combo_box_title").html()=='')
-			$(".combo_box_title").html(src.closest(".combo_box").attr('data-text'));
-
-
-	var bg = $("#selector").find("input:checked + label[data-bg] ").attr("data-bg");
-	var leng = $("#selector").find("input:checked + label[data-bg] ").length;
-	$("#selector").find("input:checked + label[data-bg] ").each(function(){
-		if ($(this).attr("data-bg") != bg){
-			leng = 0;
+		if(bg && leng>0) {
+			$("body").attr("class", bg);
+		} else {
+			$("body").attr("class", "");
 		}
-	});
-	if(bg && leng>0) {
-		$("body").attr("class", bg);
-	} else {
-		$("body").attr("class", "");
+		/**/
+			
+		// bg /
+		return false;
 	}
-		
-	// bg /
-	return false;
-}
 
 	$("body").on('click', ".combo_box input", function(event){
 		return false;
@@ -896,6 +930,17 @@ window.onload = function(){
 	});
 	$("body").on('click', "#SchoolCombobox .combo_box_title, #SchoolCombobox .combo_box_arrow", function(){
 		setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));	
+	});
+	
+	// source combobox
+	$("body").on('click', "#SourceCombobox label", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
+	});
+	$("body").on('click', "#SourceCombobox .combo_box_title, #SourceCombobox .combo_box_arrow", function(){
+		setConfig("sourceOpen", $("#SourceCombobox").attr("data-content-open"));	
 	});
 	
 	// lang select
