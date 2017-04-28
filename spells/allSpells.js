@@ -426,7 +426,7 @@ var allSpells = [
       "materials": "",
       "components": "S",
       "duration": "Instantaneous",
-      "source": "(TOEE)"
+      "source": "TOEE"
     },
     "ru": {
       "name": "Громовой удар",
@@ -438,7 +438,7 @@ var allSpells = [
       "materials": "",
       "components": "В",
       "duration": "К-ция, до 1 минуты",
-      "source": "PHB"
+      "source": "TOEE"
     }
   },
   {
@@ -10615,6 +10615,32 @@ var allSpells = [
       "components": "В, М",
       "materials": "пучек соломы",
       "duration": "Концентрация до 1 минуты",
+      "source": "TOEE"
+    }
+  },
+  {
+    "en": {
+      "name": "WALL OF WATER",
+      "level": "3",
+      "text": "You conjure up a wall of water on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 1 foot thick, or you can make a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall vanishes when the spell ends. The wall's space is difficult terrain. Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause the area of the wall they pass through to freeze solid (at least a 5-foot square section is frozen). Each 5-foot-square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it. ",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S, M",
+      "materials": "a drop of water",
+      "duration": "Concentration, up to 10 minutes",
+      "source": "TOEE"
+    },
+    "ru": {
+      "name": "Стена воды",
+       "level": "3",
+      "text": "Вы вызываете стену воды на земле в точке, которую вы можете видеть в радиусе действия. Вы можете сделать стену длиной до 30 футов, высотой 10 футов и толщиной 1 фут, или вы можете сделать закольцованную стену диаметром до 20 футов, высотой 20 футов и толщиной 1 фут. Когда заклинание заканчивается, стена исчезает. Пространство стены - труднопроходимая местность. Любое оружие дальнего боя, попадающее в пространство стены, имеет помеху на бросок атаку, а урон от огня уменьшается вдвое, если огненный эффект проходит через стену, чтобы достигнуть цели. Заклинания, наносящие урон холодом, которые проходят сквозь стену, замораживают участок стены (по крайней мере 5-футовый квадратный участок заморожен). Каждая 5-футовая замороженная секция имеет AC 5 и 15 хитов. Снижение хитов до 0 уничтожает стену. Когда участок стены разрушен, вода  не заполняет его.",
+      "school": "проявление",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В, С, М",
+      "materials": "капля воды",
+      "duration": "Концентрация до 10 минут",
       "source": "TOEE"
     }
   }

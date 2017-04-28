@@ -587,6 +587,7 @@ p {
   cursor: pointer;
   text-align: center;
   font-size: 100%;
+  margin: .1em;
 }
 .bt:hover {
   background: #888888;
@@ -766,6 +767,41 @@ p {
   background: rgba(255, 255, 255, 0.6);
   color: #222;
   font-weight: 600;
+}
+#topMessage {
+  padding: .2em;
+  padding-bottom: .3em;
+  background: #487EC5;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+#topMessage a {
+  color: #fff;
+  text-decoration: none;
+}
+#topMessage .dDetails {
+  display: none;
+}
+#topMessage .bHide {
+  align-self: flex-end;
+  border: none;
+  cursor: pointer;
+  padding: .1em .3em;
+  margin: .1em .1em 0em;
+  background: transparent;
+  text-decoration: none;
+  color: #fff;
+  transition: background .3s, color .3s;
+  font-weight: 600;
+}
+#topMessage .bHide:hover {
+  background: #fefefe;
+  color: #376db4;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 65em) {
   body {
@@ -1277,6 +1313,7 @@ p {
   margin: .2em;
   flex-grow: 1;
   flex-shrink: 0;
+  flex-basis: 200px;
 }
 @media screen and (min-width: 65em) {
   .p_side {
@@ -1289,6 +1326,9 @@ p {
   }
   .p_side .s_block {
     width: 98%;
+  }
+  .mediaWidth {
+    flex-basis: auto;
   }
 }
 .loader {

@@ -1,6 +1,6 @@
 var sourceList = [
   {
-    en: "Playr's Handbook",
+    en: "Player's Handbook",
     ru: "Книга игрока",
 	key: "PHB"
   },

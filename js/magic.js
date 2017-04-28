@@ -1,11 +1,29 @@
+var TENTACULUS_APP_VERSION = "2.1.1";
+
+var oConfig = {}; // global app config data
+function setConfig(prop, val) {
+	if(prop && val != undefined && oConfig) {
+		oConfig[prop] = val;
+		localStorage.setItem("config", JSON.stringify(oConfig));
+	}
+}
+function getConfig(prop) {
+	oConfig = JSON.parse(localStorage.getItem("config")) || {};
+	if(prop!=undefined) {
+		return localStorage.getItem("config")? oConfig[prop] : {};
+	}
+	return oConfig;
+}
+
 window.onload = function(){
-	var oConfig = {}; // global app config data
 	var oTimer; // for TimeOut (filtering)
-	var nTimerSeconds = 200;
+	var nTimerSeconds = 100;
 	
 	var aHiddenSpells = [];
 	var aLockedSpells = {};
 	var filteredSpells = [];
+	
+	var oSource = {};
 	
 	function arrDiff(arr1, arr2) {
 		var arr3 = arr2.map(function(item){return item.en});
@@ -167,20 +185,7 @@ window.onload = function(){
 		}		
 	}
 	
-	function setConfig(prop, val) {
-		if(prop && val != undefined && oConfig) {
-			oConfig[prop] = val;
-			localStorage.setItem("config", JSON.stringify(oConfig));
-		}
-	}
-	function getConfig(prop) {
-		oConfig = JSON.parse(localStorage.getItem("config")) || {};
-		if(prop!=undefined) {
-			return localStorage.getItem("config")? oConfig[prop] : {};
-		}
-		return oConfig;
-	}
-		
+	
 		
 	function createCard(spell, lang, sClass, sLockedSpell) {
 		if (spell[lang] || (lang="en", spell[lang])) {
@@ -263,7 +268,7 @@ window.onload = function(){
 						'<div class="materials">' + s_materials + '</div>'+
 						'<div class="text">' + s_text + '</div>	'+	
 						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
-						'<b class="school">' + s_level + ", " + s_school + (s_source?" <span title='Источник'>("+s_source+")</span>":"")+'</b>'+
+						'<b class="school">' + s_level + ", " + s_school + (s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</b>'+
 					'</div>'+
 				'</div>'+
 			'</div>';
@@ -319,7 +324,8 @@ window.onload = function(){
 				}
 				aSpells.forEach(function(spellName){
 					var fFind = false;
-					for (var i = 0; i<allSpells.length; i++){	
+					for (var i = 0; i<allSpells.length; i++){
+
 						if(allSpells[i].en.name == spellName) {
 							filteredSpells.push(allSpells[i]);
 							fFind = true;
@@ -348,10 +354,10 @@ window.onload = function(){
 		
 		
 		//school		
-		if(aSources && aSources.length>0 && aSources.length<99) {
+		if(aSchools && aSchools.length>0 && aSchools.length<99) {
 			filteredSpells = filteredSpells.filter(function(spell){
-				for(var i = 0; i < aSources.length; i++) {
-					if(aSources[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
+				for(var i = 0; i < aSchools.length; i++) {
+					if(aSchools[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
 						return true;
 					}
 				}
@@ -360,10 +366,11 @@ window.onload = function(){
 		}
 		
 		//source		
-		if(aSchools && aSchools.length>0 && aSchools.length<9) {
+		if(aSources && aSources.length>0 && aSources.length<9) {
 			filteredSpells = filteredSpells.filter(function(spell){
-				for(var i = 0; i < aSchools.length; i++) {
-					if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
+				for(var i = 0; i < aSources.length; i++) {
+
+					if(aSources[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
 						return true;
 					}
 				}
@@ -583,6 +590,10 @@ window.onload = function(){
 			isOpen = false;
 		var s1=createComboBox(sourceList, {id: "SourceCombobox", title: "Источники", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
+		
+		sourceList.forEach(function(el) {			
+			oSource[el.key] = el.en;
+		});
 	}
 	function createNameFilter() {
 		var ret=createInput({id: "NameInput"});
