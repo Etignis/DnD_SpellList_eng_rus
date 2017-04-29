@@ -185,8 +185,6 @@ window.onload = function(){
 			$("#dbg").fadeOut();		
 		}		
 	}
-	
-	
 		
 	function createCard(spell, lang, sClass, sLockedSpell) {
 		if (spell[lang] || (lang="en", spell[lang])) {
