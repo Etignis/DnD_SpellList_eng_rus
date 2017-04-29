@@ -624,7 +624,7 @@ p {
   justify-content: space-around;
   align-items: center;
 }
-.mod_win {
+.mod_win_wrapper .mod_win {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -667,6 +667,18 @@ p {
   color: #222;
   cursor: default;
   font-weight: normal;
+}
+.mod_win_wrapper .bCloseInfoWin {
+  position: absolute;
+  top: -0.2em;
+  right: 0;
+  padding: .1em .2em;
+  font-size: 300%;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+}
+.mod_win_wrapper .bCloseInfoWin:hover {
+  color: rgba(0, 0, 0, 0.4);
 }
 #dbg {
   position: fixed;

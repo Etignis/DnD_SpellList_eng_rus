@@ -163,7 +163,8 @@ window.onload = function(){
 	
 	function showInfoWin(sText) {
 		if(!$(".mod_win_wrapper").length){
-			$("body").append("<div class='mod_win_wrapper'><div class='mod_win'>"+sText+"</div></div>");
+			var bCross = "<span class='bCloseInfoWin'>×</span>";
+			$("body").append("<div class='mod_win_wrapper'><div class='mod_win'>"+bCross+sText+"</div></div>");
 		}
 		$(".mod_win_wrapper").fadeIn();
 	}
@@ -695,6 +696,12 @@ window.onload = function(){
 
 	/// handlers
 	
+	// close Mod Win
+	$("body").on("click", ".bCloseInfoWin", function() {		
+		$("#dbg").fadeOut();
+		hideInfoWin();
+	});
+	
 	// hide DBG
 	$("body").on("click", "#dbg", function() {
 		$(this).fadeOut();
@@ -1039,6 +1046,7 @@ window.onload = function(){
 		// show locked
 		createLockedSpellsArea();
 	})
+	
 	// unlock spells
 	$("body").on('click', ".bUnlockSpell", function(){
 		var sName = $(this).closest(".cardContainer").attr("data-name");
