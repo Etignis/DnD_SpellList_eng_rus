@@ -463,7 +463,8 @@ window.onload = function(){
 	function createButtons() {
 		var bHome = "<a href='/' class='bt flexChild' title='На главную страницу'><i class='fa fa-home'></i></a>";
 		var bInfo = "<a href='#' class='bt flexChild' id='bInfo' title='Справка'><i class='fa fa-question-circle'></i></a>";
-		$(".p_side").append("<div class='mediaWidth flexParent'>" + bHome + bInfo + "</div>");		
+		var bPrint = "<a href='#' class='bt flexChild' id='bPrint' title='Распечатать'><i class='fa fa-print' aria-hidden='true'></i></a>";
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + bHome + bInfo + bPrint + "</div>");		
 	}
 	
 	function createLabel(text) {
@@ -1055,6 +1056,12 @@ window.onload = function(){
 		aLockedSpells = [];
 		// show locked
 		createLockedSpellsArea();
+	});
+	
+	$("body").on('click', "#bPrint", function(){
+		window.print();
+		
+		return false;
 	});
 		
 	
