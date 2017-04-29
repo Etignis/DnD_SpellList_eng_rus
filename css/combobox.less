@@ -20,7 +20,7 @@
             position: absolute;
             width: @w;
             height: @w;
-            top: 30%;
+            top: 1em;
             left: -1.1em;
             background: @l-gray;
             border: @b solid @m-gray+#555;
@@ -31,31 +31,23 @@
         
         &:hover+label::before,
         &:checked:hover+label::before{
-            //content: "\2714";
-            
             border-color: @m-gray+#333;
         }
         &:checked+label::before{
-            //content: "\2714";
-            //background: @color;
             border-color: @m-gray+#444;
         }
         &:checked+label::after{
             content: "\2714";
             position: absolute;
-            top: 9%;
+            top: .2em;
             left: -0.75em;
             color: @color;
             font-size: 150%;
-            //background: @color;
-            //border-color: @m-gray+#444;
         }
         /**/
     }
     label{
-        @ml: 1.4em;
-       //float: left;
-       
+       @ml: 1.4em;       
        display: block;
        padding: .2em;
        .noselect();

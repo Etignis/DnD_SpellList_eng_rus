@@ -8,5 +8,10 @@ var sourceList = [
     en: "Temple of Elemental Evil",
     ru: "Храм стихийного зла",
 	key: "TOEE"
+  },
+  {
+    en: "Sword Coast Adventurers Guide",
+    ru: "Путеводитель Приключенца по Побережью Мечей",
+	key: "SCAG"
   }
 ]

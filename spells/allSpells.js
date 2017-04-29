@@ -10643,6 +10643,122 @@ var allSpells = [
       "duration": "Концентрация до 10 минут",
       "source": "TOEE"
     }
+  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  {
+    "en": {
+      "name": "BOOMING BLADE",
+      "level": "0",
+      "text": "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and it becomes sheathed in booming energy until the start of your next turn. If the target willingly moves before then, it immediately takes 1d8 thunder damage, and the spell ends.<br> This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra 1d8 thunder damage to the target, and the damage the target takes for moving increases to 2d8. Both damage rolls increase by 1d8 at 11th level and 17th level.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "5 feet",
+      "components": "V, M",
+      "materials": "weapon",
+      "duration": "1 round",
+      "source": "SCAG"
+    },
+    "ru": {
+      "name": "Громовой Клинок",
+      "level": "0",
+      "text": "Как часть действия, используемого для произнесения этого заклинания, вы должны сделать рукопашную атаку оружием по одному из существ в радиусе действия заклинания или заклинание провалится. <br>При попадании, цель получает нормальный урон от атаки и оказывается окутанной громовой энергией до начала вашего следующего хода. Если существо по собственной воле передвинется до того момента, оно немедленно получает 1к8 урона звуком, и заклинание заканчивается. <br> Урон заклинания растёт с повышением вашего уровня. На 5м уровне рукопашная атака наносит дополнительно 1к8 урона звуком по цели и урон при передвижении возрастает до 2к8. Обе кости урона возрастают на 1к8 на 11м и на 17м уровнях.",
+      "school": "Воплощение",
+      "castingTime": "1 действие",
+      "range": "5 футов",
+      "components": "В, М",
+      "materials": "любое оружие",
+      "duration": "1 раунд",
+      "source": "SCAG"
+    }
+  }, 
+  {
+    "en": {
+      "name": "GREEN-FLAME BLADE",
+      "level": "0",
+      "text": "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and green fire leaps from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.<br> This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra 1d8 fire damage to the target, and the fire damage to the second creature increases to 1d8 +your spellcasting ability modifier. Both damage rolls increase by 1d8 at 11th level and 17th level.",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "5 feet",
+      "components": "V, M",
+      "materials": "weapon",
+      "duration": "Instantaneous",
+      "source": "SCAG"
+    },
+    "ru": {
+      "name": "Клинок Зеленого Пламени",
+      "level": "0",
+      "text": "Как часть действия, используемого для произнесения этого заклинания вы должны сделать рукопашную атаку оружием по одному из существ в радиусе действия заклинания или заклинание провалится.<br>При попадании, цель получает нормальный урон от атаки и зеленый огонь прыгает с цели на другое существо, по вашему выбору, которое вы можете видеть на расстоянии 5 футов от первого. Второе существо получает урон огнём, равный вашему модификатору базовой характеристики. <br> Урон заклинания растёт с повышением вашего уровня. На 5м уровне рукопашная атака наносит дополнительно 1к8 урона огнём по цели и урон по второму существу возрастает до 1к8 + модификатор базовой характеристики. Оба урона ещё возрастают на 1к8 на 11м и на 17м уровнях.",
+      "school": "Воплощение",
+      "castingTime": "1 действие",
+      "range": "5 футов",
+      "components": "В, М",
+      "materials": "любое оружие",
+      "duration": "Мгновенно",
+      "source": "SCAG"
+    }
+  }, 
+  {
+    "en": {
+      "name": "LIGHTNING LURE",
+      "level": "0",
+      "text": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within range. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d8 lightning damage if it is within 5 feet of you.<br> This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "15 feet",
+      "components": "V",
+      "materials": "",
+      "duration": "Instantaneous",
+      "source": "SCAG"
+    },
+    "ru": {
+      "name": "Лассо Молнии",
+      "level": "0",
+      "text": "Вы создаете хлыст молний, поражающий одно существо по вашему выбору в пределах дистанции, которое вы можете видеть. Цель должна сделать успешный спасбросок Силы или будет притянута на 10 футов по прямой линии к вам, а также получит 1к8 урона электричеством, если таким образом окажется в 5 футах от вас.<br>Урон заклинания возрастает на 1к8 на 5м уровне (2к8), 11м уровне (3к8) и на 17м уровне (4к8).",
+      "school": "Воплощение",
+      "castingTime": "1 действие",
+      "range": "15 футов",
+      "components": "В",
+      "materials": "",
+      "duration": "Мгновенно",
+      "source": "SCAG"
+    }
+  }, 
+  {
+    "en": {
+      "name": "SWORD BURST",
+      "level": "0",
+      "text": "You create a momentary circle of spectral blades that sweep around you. Each creature within range, other than you, must succeed on a Dexterity saving throw or take 1d6 force damage. <br>This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "5 feet",
+      "components": "V",
+      "materials": "",
+      "duration": "Instantaneous",
+      "source": "SCAG"
+    },
+    "ru": {
+      "name": "Вспышка Мечей",
+      "level": "0",
+      "text": "Вы на мгновение создаете круг призрачных мечей, вращающихся вокруг вас. Каждое существо, находящееся в зоне действия заклинания, кроме вас, должно сделать успешный спасбросок Ловкости или получит 1к6 урона силой. <br> Урон заклинания возрастает на 1к6 на 5м уровне (2к6), 11м уровне (3к6) и на 17м уровне (4к6).",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "5 футов",
+      "components": "В",
+      "materials": "",
+      "duration": "Мгновенно",
+      "source": "SCAG"
+    }
   }
-
 ]

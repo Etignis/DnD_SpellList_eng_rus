@@ -1075,6 +1075,12 @@ var classSpells = {
 		ru: "Чародей"
 	  },
 	  spells: [
+	  
+		"BOOMING BLADE",
+		"GREEN-FLAME BLADE",
+		"LIGHTNING LURE",
+		"SWORD BURST",
+	  
 	  "Create Bonfire",
     "Control Flames",
     "Frostbite",
@@ -1263,6 +1269,11 @@ var classSpells = {
 		ru: "Колдун"
 	  },
 	  spells: [
+	  	"BOOMING BLADE",
+		"GREEN-FLAME BLADE",
+		"LIGHTNING LURE",
+		"SWORD BURST",
+
 	   "Create Bonfire",
     "Frostbite",
     "Magic Stone",
@@ -1459,6 +1470,12 @@ var classSpells = {
 		ru: "Волшебник"
 	  },
 	  spells: [
+		"BOOMING BLADE",
+		"GREEN-FLAME BLADE",
+		"LIGHTNING LURE",
+		"SWORD BURST",
+	  
+	 
 	  "Create Bonfire",
     "Control Flames",
     "Frostbite",

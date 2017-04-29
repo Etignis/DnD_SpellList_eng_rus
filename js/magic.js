@@ -114,8 +114,8 @@ window.onload = function(){
 		var list = "<ul class='list'>" + options + "</ul>";
 
 		var selectedKey = selected_key; 
-		var label="<div class='label "+atr_class+"' data-selected-key='" + selectedKey + "' style='min-width:"+min_width+"em "+width+"'>" + lableText + "</div>";
-		var select = "<button " + id + " " + sParams + " class='customSelect "+sClass+"' style='min-width:"+min_width+"em "+width+"'>" + label + list + "</button>"
+		var label="<div class='label "+atr_class+"' data-selected-key='" + selectedKey + "' "+width+"'>" + lableText + "</div>";
+		var select = "<button " + id + " " + sParams + " class='customSelect "+sClass+"' "+width+"'>" + label + list + "</button>"
 
 		return select;
 	}	
@@ -152,7 +152,7 @@ window.onload = function(){
 		min_width = min_width>20? 20: min_width;
 		min_width = min_width<5? 5: min_width;
 		min_width = ~~(min_width*0.9)+2;
-		ret = "<div "+id+" class='combo_box' style='min-width:"+min_width+"em' data-text='"+title+"' data-content-open='"+content_open+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content' "+display+" >"+ret+"</div>"+arrow+"</div>";
+		ret = "<div "+id+" class='combo_box' data-text='"+title+"' data-content-open='"+content_open+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content' "+display+" >"+ret+"</div>"+arrow+"</div>";
 		return ret;
 	}
 	
@@ -185,6 +185,10 @@ window.onload = function(){
 			$("#dbg").fadeOut();		
 		}		
 	}
+	
+	function pretifyString(s) {
+		return s.substr(0,1).toUpperCase() + s.substr(1);
+	}
 		
 	function createCard(spell, lang, sClass, sLockedSpell) {
 		if (spell[lang] || (lang="en", spell[lang])) {
@@ -192,9 +196,9 @@ window.onload = function(){
 			var s_name = o.name;
 			var s_ritual = o.ritual? " ("+o.ritual+")" : "";
 			var s_castingTime = o.castingTime;
-			var s_range = o.range;
+			var s_range = pretifyString(o.range);
 			var s_components = o.components;
-			var s_duration = o.duration.replace(/концентрация/, "конц-я");
+			var s_duration = pretifyString(o.duration.replace(/концентрация/ig, "конц-я"));
 			var s_materials = o.materials;
 			var s_text = o.text;
 			var s_level = o.level;

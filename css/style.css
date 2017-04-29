@@ -221,7 +221,7 @@ p {
   position: absolute;
   width: 0.6em;
   height: 0.6em;
-  top: 30%;
+  top: 1em;
   left: -1.1em;
   background: #ddd;
   border: 0.2em solid #cccccc;
@@ -239,7 +239,7 @@ p {
 .combo_box input[type=checkbox]:checked + label::after {
   content: "\2714";
   position: absolute;
-  top: 9%;
+  top: .2em;
   left: -0.75em;
   color: #487EC5;
   font-size: 150%;
@@ -457,6 +457,7 @@ p {
   margin: 0;
   position: relative;
   font-size: 100%;
+  width: 100%;
 }
 .customSelect:hover {
   background: #888888;
