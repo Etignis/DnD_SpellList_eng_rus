@@ -839,9 +839,11 @@ p {
 }
 #lockedSpellsArea {
   margin-bottom: .3em;
+  position: relative;
 }
 #lockedSpellsArea .topHeader,
-#lockedSpellsArea .bottomHeader {
+#lockedSpellsArea .bottomHeader,
+#lockedSpellsArea .bUnlockAll {
   font-weight: 600;
   padding: .2em;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
@@ -849,8 +851,20 @@ p {
   color: #222;
   border-radius: .1em;
 }
+#lockedSpellsArea .bUnlockAll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+#lockedSpellsArea .bUnlockAll:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
 #lockedSpellsArea .topHeader {
   cursor: pointer;
+}
+#lockedSpellsArea .topHeader:hover {
+  background: rgba(255, 255, 255, 0.7);
 }
 #lockedSpellsArea .topHeader:before {
   content: "Закрепленные заклинания ";
@@ -1308,6 +1322,13 @@ p {
 }
 #HiddenSpells a:active {
   color: #487EC5;
+}
+#HiddenSpells .bReturnUnvisible {
+  display: inline-block;
+  padding: .1em .2em;
+  margin: .4em 0;
+  background: rgba(200, 200, 200, 0.2);
+  border-bottom: 1px dashed rgba(100, 100, 100, 0.6);
 }
 .mediaWidth {
   margin: .2em;

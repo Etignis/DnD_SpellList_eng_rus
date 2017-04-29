@@ -357,7 +357,7 @@ window.onload = function(){
 		if(aSchools && aSchools.length>0 && aSchools.length<99) {
 			filteredSpells = filteredSpells.filter(function(spell){
 				for(var i = 0; i < aSchools.length; i++) {
-					if(aSchools[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
+					if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
 						return true;
 					}
 				}
@@ -630,7 +630,9 @@ window.onload = function(){
 		var listHiddenSpells = aHiddenSpells.map(function(item){
 			return "<a href='#' title='Вернуть на место' class='bUnhideSpell' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
 			}).join(" ");
-		$("#HiddenSpells").html(listHiddenSpells);			
+			
+		var bReturnAll = "<a href='#' class='bReturnUnvisible'>Вернуть все обратно</a>";
+		$("#HiddenSpells").html(bReturnAll + listHiddenSpells);			
 	}
 	
 	function createLockedSpellsArea(){
@@ -652,7 +654,7 @@ window.onload = function(){
 			}
 			
 			if($("#lockedSpellsArea").length<1){
-				$(".p_cont").prepend("<div id='lockedSpellsArea'><span class='topHeader'></span><div class='content row'></div><span class='bottomHeader'></span></div>");
+				$(".p_cont").prepend("<div id='lockedSpellsArea'><span class='bUnlockAll'>Открепить все</span><span class='topHeader'></span><div class='content row'></div><span class='bottomHeader'></span></div>");
 
 			}
 			$("#lockedSpellsArea .content").html(aResult.sort(function(a, b) {
@@ -1009,7 +1011,16 @@ window.onload = function(){
 		
 		return false;
 	})
-
+	$("body").on("click", ".bReturnUnvisible", function() {
+		aHiddenSpells = [];// show list of hidden spells
+		createHiddenSpellsList();
+		
+		// show spells without hidden
+		filterSpells({fHidden: true});
+		
+		return false;
+	});
+	
 	// lock spells
 	$("body").on('click', ".bLockSpell", function(){
 		var sName = $(this).closest(".cardContainer").attr("data-name");
@@ -1039,6 +1050,11 @@ window.onload = function(){
 	$("body").on('click', "#lockedSpellsArea .topHeader", function(){
 		$(this).next(".content").slideToggle();
 		$(this).next(".content").next(".bottomHeader").fadeToggle();
+	});
+	$("body").on('click', ".bUnlockAll", function(){
+		aLockedSpells = [];
+		// show locked
+		createLockedSpellsArea();
 	});
 		
 	

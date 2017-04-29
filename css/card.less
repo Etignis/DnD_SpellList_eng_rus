@@ -15,7 +15,9 @@
 }
 #lockedSpellsArea{
     margin-bottom: .3em;
-    .topHeader, .bottomHeader{
+    position: relative;
+    
+    .topHeader, .bottomHeader, .bUnlockAll{
         font-weight: 600;
        // display: block;
         padding: .2em;
@@ -24,8 +26,21 @@
         color: @d-gray;
         border-radius: .1em;
     }
-    .topHeader{
+    .bUnlockAll{
+        position: absolute;
+        top: 0;
+        right: 0;
         cursor: pointer;
+        
+        &:hover{
+            background: rgba(255,255,255,.7);
+        }
+    }
+    .topHeader{
+        cursor: pointer;        
+        &:hover{
+            background: rgba(255,255,255,.7);
+        }
         &:before{
             content: "Закрепленные заклинания "
         }
