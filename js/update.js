@@ -1,10 +1,10 @@
 var oInfo = {
   title: "Новая версия",
   url: "www.tentaculus.ru/spells",
-  resume: "Добавленны заклинаия из Temple of Elemental Evil",
+  resume: "Можно менять размер текста описания заклинания и ширину карточек заклинаний",
   details: "",
-  date: "28.04.2017",
-  version: "2.1.1"
+  date: "14.06.2017",
+  version: "2.2"
 }
 
 function showMessage(oParams) {	
