@@ -15,7 +15,9 @@
 }
 #lockedSpellsArea{
     margin-bottom: .3em;
-    .topHeader, .bottomHeader{
+    position: relative;
+    
+    .topHeader, .bottomHeader, .bUnlockAll{
         font-weight: 600;
        // display: block;
         padding: .2em;
@@ -24,8 +26,21 @@
         color: @d-gray;
         border-radius: .1em;
     }
-    .topHeader{
+    .bUnlockAll{
+        position: absolute;
+        top: 0;
+        right: 0;
         cursor: pointer;
+        
+        &:hover{
+            background: rgba(255,255,255,.7);
+        }
+    }
+    .topHeader{
+        cursor: pointer;        
+        &:hover{
+            background: rgba(255,255,255,.7);
+        }
         &:before{
             content: "Закрепленные заклинания "
         }
@@ -130,8 +145,8 @@
         font-size: 95%;
         margin: 0;
         padding: 0;
-        padding-left: .3em;
-        padding-right: .3em;
+        padding-left: .9em;
+        padding-right: .9em;
         text-align: center;
         text-transform: uppercase;
         border-bottom: 2px solid @mainColor;
@@ -148,7 +163,30 @@
         padding: 2px;
         overflow-y: auto;
         flex-shrink: 99;
+        line-height: normal;
         .scrollbars(5px, @m-gray, @l-gray);
+    }
+    .sizeButtonsContainer{
+    	position: absolute;
+    	bottom: 0;
+    	left: .1em;
+    	right: .1em;
+    	display: flex;
+        flex-direction: row;
+        align-content: stretch;
+        justify-content: space-between;
+    	.textMin, .textMax{
+    		padding: 0 .5em;
+    		font-size: 120%;
+    		color: @d-gray;
+    		opacity: 0.3;
+    		font-weight: bold;
+    		text-decoration: none;
+    		transition: opacity 0.2s;
+    		&:hover{
+    			opacity: 1;
+    		}
+    	}
     }
     .class{
         position: absolute;
@@ -156,6 +194,7 @@
         bottom: -20px;
         font-size: 70%;
         color: @white;
+        cursor: default;
     }
     .school{
         position: absolute;
@@ -163,7 +202,9 @@
         bottom: -20px;
         font-size: 70%;
         color: @white;
+        cursor: default;
     }
+
 }
 
 .lockedSpell{

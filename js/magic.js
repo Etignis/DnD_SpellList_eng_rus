@@ -1,11 +1,29 @@
+var TENTACULUS_APP_VERSION = "2.2";
+
+var oConfig = {}; // global app config data
+function setConfig(prop, val) {
+	if(prop && val != undefined && oConfig) {
+		oConfig[prop] = val;
+		localStorage.setItem("config", JSON.stringify(oConfig));
+	}
+}
+function getConfig(prop) {
+	oConfig = JSON.parse(localStorage.getItem("config")) || {};
+	if(prop!=undefined) {
+		return localStorage.getItem("config")? oConfig[prop] : {};
+	}
+	return oConfig;
+}
+
 window.onload = function(){
-	var oConfig = {}; // global app config data
 	var oTimer; // for TimeOut (filtering)
-	var nTimerSeconds = 200;
+	var nTimerSeconds = 100;
 	
 	var aHiddenSpells = [];
 	var aLockedSpells = {};
 	var filteredSpells = [];
+	
+	var oSource = {};
 	
 	function arrDiff(arr1, arr2) {
 		var arr3 = arr2.map(function(item){return item.en});
@@ -96,8 +114,8 @@ window.onload = function(){
 		var list = "<ul class='list'>" + options + "</ul>";
 
 		var selectedKey = selected_key; 
-		var label="<div class='label "+atr_class+"' data-selected-key='" + selectedKey + "' style='min-width:"+min_width+"em "+width+"'>" + lableText + "</div>";
-		var select = "<button " + id + " " + sParams + " class='customSelect "+sClass+"' style='min-width:"+min_width+"em "+width+"'>" + label + list + "</button>"
+		var label="<div class='label "+atr_class+"' data-selected-key='" + selectedKey + "' "+width+"'>" + lableText + "</div>";
+		var select = "<button " + id + " " + sParams + " class='customSelect "+sClass+"' "+width+"'>" + label + list + "</button>"
 
 		return select;
 	}	
@@ -125,13 +143,16 @@ window.onload = function(){
 			if (max > min_width) {
 				min_width = max;
 			}
-			ret+="<input "+checked+" type='checkbox' value='"+type.en+"' id='ch_"+type.en+"'><label for='ch_"+type.en+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
+			
+			var sOptionValue = type.key? type.key : type.en;
+			
+			ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
 			
 		}
 		min_width = min_width>20? 20: min_width;
 		min_width = min_width<5? 5: min_width;
 		min_width = ~~(min_width*0.9)+2;
-		ret = "<div "+id+" class='combo_box' style='min-width:"+min_width+"em' data-text='"+title+"' data-content-open='"+content_open+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content' "+display+" >"+ret+"</div>"+arrow+"</div>";
+		ret = "<div "+id+" class='combo_box' data-text='"+title+"' data-content-open='"+content_open+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content' "+display+" >"+ret+"</div>"+arrow+"</div>";
 		return ret;
 	}
 	
@@ -142,7 +163,8 @@ window.onload = function(){
 	
 	function showInfoWin(sText) {
 		if(!$(".mod_win_wrapper").length){
-			$("body").append("<div class='mod_win_wrapper'><div class='mod_win'>"+sText+"</div></div>");
+			var bCross = "<span class='bCloseInfoWin'>×</span>";
+			$("body").append("<div class='mod_win_wrapper'><div class='mod_win'>"+bCross+sText+"</div></div>");
 		}
 		$(".mod_win_wrapper").fadeIn();
 	}
@@ -164,22 +186,9 @@ window.onload = function(){
 		}		
 	}
 	
-	function setConfig(prop, val) {
-		if(prop && val != undefined && oConfig) {
-			oConfig[prop] = val;
-			localStorage.setItem("config", JSON.stringify(oConfig));
-		}
+	function pretifyString(s) {
+		return s.substr(0,1).toUpperCase() + s.substr(1);
 	}
-	function getConfig(prop) {
-		/**/
-		oConfig = JSON.parse(localStorage.getItem("config")) || {};
-		if(prop!=undefined) {
-			return localStorage.getItem("config")? oConfig[prop] : null;
-		}
-		return oConfig;
-		/**/
-	}
-		
 		
 	function createCard(spell, lang, sClass, sLockedSpell) {
 		if (spell[lang] || (lang="en", spell[lang])) {
@@ -187,12 +196,13 @@ window.onload = function(){
 			var s_name = o.name;
 			var s_ritual = o.ritual? " ("+o.ritual+")" : "";
 			var s_castingTime = o.castingTime;
-			var s_range = o.range;
+			var s_range = pretifyString(o.range);
 			var s_components = o.components;
-			var s_duration = o.duration;
+			var s_duration = pretifyString(o.duration.replace(/концентрация/ig, "конц-я"));
 			var s_materials = o.materials;
 			var s_text = o.text;
 			var s_level = o.level;
+			var s_source = o.source? o.source : spell.en.source? spell.en.source: "";
 			var st_castingTime, st_range, st_components, st_duration;
 			switch (lang){		
 				case "ru": 
@@ -210,7 +220,7 @@ window.onload = function(){
 					st_duration = "DURATION";	
 			}
 			var s_school = o.school;
-			var s_source = o.source;
+			var sNeedHelp = (spell.ru && spell.ru.needHelp)? "Как лучше перевести?" : "";
 			
 			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;
 			var bHideSpell = '<span class="bHideSpell" title="Скрыть заклинание (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';			
@@ -218,18 +228,28 @@ window.onload = function(){
 			
 			sLockedSpell = sLockedSpell? " lockedSpell " : "";
 			
+			var sNameRu;
 			try{
 				spell.ru.name.length;
+				sNameRu  = spell.ru.name;
 			} catch (err) {
 				console.log("!: "+spell.en.name);
+				sNameRu = spell.en.name;
 			}
 			
-			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + spell.ru.name + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
+			var title = spell.en.name;
+			if (lang=='en') {
+				title = (spell.ru && spell.ru.name)?spell.ru.name: spell.en.name;
+			}
+			
+			var textSizeButtons = "<div class='sizeButtonsContainer noprint'><a href='#' class='textMin' title='Уменьшить размер текста'>–</a><a href='#' class='textMax' title='Увеличить размер текста'>+</a></div>";
+			
+			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
 						bLockSpell +
 						bHideSpell +
-						'<h1>' + s_name + s_ritual + '</h1>'+
+						'<h1 title="'+title+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' + s_name + s_ritual + '</h1>'+
 						'<div class="row">'+
 							'<div class="cell castingTime">'+
 								'<b>'+st_castingTime+'</b>'+
@@ -252,8 +272,9 @@ window.onload = function(){
 						'</div>'+
 						'<div class="materials">' + s_materials + '</div>'+
 						'<div class="text">' + s_text + '</div>	'+	
+						textSizeButtons +
 						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
-						'<b class="school">' + s_level + ", " + s_school + '</b>'+
+						'<b class="school">' + s_level + ", " + s_school + (s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</b>'+
 					'</div>'+
 				'</div>'+
 			'</div>';
@@ -282,6 +303,7 @@ window.onload = function(){
 		var nLevelStart = oParams.nLevelStart;
 		var nLevelEnd = oParams.nLevelEnd;
 		var aSchools = oParams.aSchools;
+		var aSources = oParams.aSources;
 		var sLang = oParams.sLang;
 		
 		var fHiddenSpells = (aHiddenSpells.length>0)? true: false;
@@ -308,7 +330,8 @@ window.onload = function(){
 				}
 				aSpells.forEach(function(spellName){
 					var fFind = false;
-					for (var i = 0; i<allSpells.length; i++){	
+					for (var i = 0; i<allSpells.length; i++){
+
 						if(allSpells[i].en.name == spellName) {
 							filteredSpells.push(allSpells[i]);
 							fFind = true;
@@ -337,10 +360,23 @@ window.onload = function(){
 		
 		
 		//school		
-		if(aSchools && aSchools.length>0 && aSchools.length<9) {
+		if(aSchools && aSchools.length>0 && aSchools.length<99) {
 			filteredSpells = filteredSpells.filter(function(spell){
 				for(var i = 0; i < aSchools.length; i++) {
 					if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
+						return true;
+					}
+				}
+				return false;
+			});
+		}
+		
+		//source		
+		if(aSources && aSources.length>0 && aSources.length<9) {
+			filteredSpells = filteredSpells.filter(function(spell){
+				for(var i = 0; i < aSources.length; i++) {
+
+					if(aSources[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
 						return true;
 					}
 				}
@@ -404,6 +440,8 @@ window.onload = function(){
 		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
 		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
+		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
+			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
 		
 		var fHidden = (aHiddenSpells.length>0)? true: false;
@@ -420,6 +458,7 @@ window.onload = function(){
 				nLevelStart: nLevelStart, 
 				nLevelEnd: nLevelEnd, 
 				aSchools: aSchools, 
+				aSources: aSources,
 				sLang: sLang,
 				fHidden: fHidden
 				});
@@ -430,7 +469,15 @@ window.onload = function(){
 	function createButtons() {
 		var bHome = "<a href='/' class='bt flexChild' title='На главную страницу'><i class='fa fa-home'></i></a>";
 		var bInfo = "<a href='#' class='bt flexChild' id='bInfo' title='Справка'><i class='fa fa-question-circle'></i></a>";
-		$(".p_side").append("<div class='mediaWidth flexParent'>" + bHome + bInfo + "</div>");		
+		var bPrint = "<a href='#' class='bt flexChild' id='bPrint' title='Распечатать'><i class='fa fa-print' aria-hidden='true'></i></a>";
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + bHome + bInfo + bPrint + "</div>");		
+	}	
+	function createCardWidthButtons() {
+		var label = createLabel("Ширина карточек");
+		var bHome = "<a href='#' class='bt flexChild cardWidthMin' title='Сделать уже'><i class='fa fa-caret-right' aria-hidden='true'></i> <i class='fa fa-caret-left' aria-hidden='true'></i></a>";
+		var bInfo = "<a href='#' class='bt flexChild cardWidthNorm' title='Сделать нормальными'><i class='fa fa-square-o' aria-hidden='true'></i></a>";
+		var bPrint = "<a href='#' class='bt flexChild cardWidthMax' title='Сделать шире'><i class='fa fa-caret-left' aria-hidden='true'></i> <i class='fa fa-caret-right' aria-hidden='true'></i></a>";
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bHome + bInfo + bPrint + "</div>");		
 	}
 	
 	function createLabel(text) {
@@ -543,8 +590,24 @@ window.onload = function(){
 	function createSchoolCombobox(isOpen) {	
 		if(isOpen == undefined)
 			isOpen = false;
-		var s1=createComboBox(schoolList, {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
+		var s1=createComboBox(schoolList.sort(function(a, b){
+			if(a.en < b.en)
+				return -1;
+			if(a.en > b.en)
+				return 1;
+			return 0;
+		}), {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
+	}	
+	function createSourceCombobox(isOpen) {	
+		if(isOpen == undefined)
+			isOpen = false;
+		var s1=createComboBox(sourceList, {id: "SourceCombobox", title: "Источники", checkAll: true, isOpen: isOpen});
+		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
+		
+		sourceList.forEach(function(el) {			
+			oSource[el.key] = el.en;
+		});
 	}
 	function createNameFilter() {
 		var ret=createInput({id: "NameInput"});
@@ -581,7 +644,9 @@ window.onload = function(){
 		var listHiddenSpells = aHiddenSpells.map(function(item){
 			return "<a href='#' title='Вернуть на место' class='bUnhideSpell' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
 			}).join(" ");
-		$("#HiddenSpells").html(listHiddenSpells);			
+			
+		var bReturnAll = "<a href='#' class='bReturnUnvisible'>Вернуть все обратно</a>";
+		$("#HiddenSpells").html(bReturnAll + listHiddenSpells);			
 	}
 	
 	function createLockedSpellsArea(){
@@ -603,7 +668,7 @@ window.onload = function(){
 			}
 			
 			if($("#lockedSpellsArea").length<1){
-				$(".p_cont").prepend("<div id='lockedSpellsArea'><span class='topHeader'></span><div class='content row'></div><span class='bottomHeader'></span></div>");
+				$(".p_cont").prepend("<div id='lockedSpellsArea'><span class='bUnlockAll'>Открепить все</span><span class='topHeader'></span><div class='content row'></div><span class='bottomHeader'></span></div>");
 
 			}
 			$("#lockedSpellsArea .content").html(aResult.sort(function(a, b) {
@@ -628,11 +693,14 @@ window.onload = function(){
 	function createSidebar() {
 		var lang = getConfig("language");
 		var schoolOpen = getConfig("schoolOpen");
+		var sourceOpen = getConfig("sourceOpen");
 		createButtons();
 		createNameFilter();
 		createClassSelect();
 		createLevelSelect();
 		createSchoolCombobox(schoolOpen);
+		createSourceCombobox(sourceOpen);
+		createCardWidthButtons();
 		createLangSelect(lang);
 		
 		$(".p_side").fadeIn();	
@@ -640,6 +708,12 @@ window.onload = function(){
 	
 
 	/// handlers
+	
+	// close Mod Win
+	$("body").on("click", ".bCloseInfoWin", function() {		
+		$("#dbg").fadeOut();
+		hideInfoWin();
+	});
 	
 	// hide DBG
 	$("body").on("click", "#dbg", function() {
@@ -685,137 +759,129 @@ window.onload = function(){
 			el.parent().attr("data-content-open", true);
 		}
 	});// get item
-	function onSelectItemPress(src) {
-	var d_root='', d_parent='', trig=true;
 	
-	var attrFor = src.attr("for"); // $("input#"+attrFor)
-	d_root = $("input#"+attrFor).attr("data-root");
-	d_parent = $("input#"+attrFor).attr("data-parent");
-	if($("input#"+attrFor).prop("checked"))
-		{
-		trig=false;
-		}
-	$("input#"+attrFor).prop("checked", trig);
-	/**/
-	if(d_root!='' && d_root!=undefined)
-	{
-		$("input[type=checkbox][data-parent="+d_root+"]").each(function(){
-			$(this).prop( "checked", trig );
-		});
-	}
-	/**/
-	if(d_parent!='' && d_parent!=undefined && trig==false)
-	{
-		$("input[type=checkbox][data-root="+d_parent+"]").prop( "checked", trig);
-
-	}
-	/**/
-	/**/
-	if($("input[type=checkbox]:checked").length<1)
-		{
-		$("#go").attr("disabled", "disabled");
-		}
-	else
-		{
-		$("#go").removeAttr("disabled");
-		}
-	/**/
-
-	function make_val(ex, ad, dp){
-		var ret = '';
-		if(dp!=undefined) {
-			ad = dp + " " + ad;
-		}
-		if(ex!=undefined && ex!=""){
-			ret = ex+", "+ad;
-		} else {
-			ret = ad;
-		}
-		return ret;
-	}
-
-	/**/
-	var d_root='';
-	var before_root='';
-	var d_parent='';
-	var txt='';
-	var value='';
-	var title=''
-	$(".combo_box_title").html("");
-	$(".combo_box_title").attr('data-val',"");
-	$("input[type=checkbox]:checked").each(function(){
-		d_root='';
-		d_parent='';
-		d_parent=$(this).attr("data-parent");
-		d_root=$(this).attr("data-root");
-
-		title=$(".combo_box_title").html();
-		value=$(".combo_box_title").attr('data-val');
-
-		if(title!="" && title.charAt(title.length-1)!="(") {
-			$(".combo_box_title").append(", ");
-		}
-		// обычный пункт
-		if(d_parent==undefined && d_root==undefined)
+	function onSelectItemPress(src) {
+		var d_root='', d_parent='', trig=true;
+		
+		var attrFor = src.attr("for"); // $("input#"+attrFor)
+		var oComboBox = src.closest(".combo_box");
+		var sComboBoxId = oComboBox.attr("id");
+		d_root = $("#"+sComboBoxId+" input#"+attrFor).attr("data-root");
+		d_parent = $("#"+sComboBoxId+" input#"+attrFor).attr("data-parent");
+		if($("#"+sComboBoxId+" input#"+attrFor).prop("checked"))
 			{
-			txt = $(this).next("label").html().replace("<br>", " | ");
-			title_value = $(".combo_box_title").attr("data-val");
-			value = $(this).attr('value');
-			dp = $(this).attr('data-parent');
-			value = make_val(title_value, value, dp);
-			//$(".combo_box_title").append(txt).attr("data-val", value);
-			$(".combo_box_title").attr("data-val", value);
+			trig=false;
 			}
-		// если root
-		if(d_root!=undefined)
-			{
-				// если есть отмеченные потомки
-			if($("input[type=checkbox][data-parent="+d_root+"]:checked").length>0)
+		$("#"+sComboBoxId+" input#"+attrFor).prop("checked", trig);
+		/**/
+		if(d_root!='' && d_root!=undefined) {
+			$("#"+sComboBoxId+" input[type=checkbox][data-parent="+d_root+"]").each(function(){
+				$(this).prop( "checked", trig );
+			});
+		}
+		/**/
+		if(d_parent!='' && d_parent!=undefined && trig==false) {
+			$("#"+sComboBoxId+" input[type=checkbox][data-root="+d_parent+"]").prop( "checked", trig);
+
+		}
+
+
+		function make_val(ex, ad, dp){
+			var ret = '';
+			if(dp!=undefined) {
+				ad = dp + " " + ad;
+			}
+			if(ex!=undefined && ex!=""){
+				ret = ex+", "+ad;
+			} else {
+				ret = ad;
+			}
+			return ret;
+		}
+
+		/**/
+		var d_root='';
+		var before_root='';
+		var d_parent='';
+		var txt='';
+		var value='';
+		var title=''
+		$("#"+sComboBoxId+" .combo_box_title").html("");
+		$("#"+sComboBoxId+" .combo_box_title").attr('data-val',"");
+		$("#"+sComboBoxId+" input[type=checkbox]:checked").each(function(){
+			d_root='';
+			d_parent='';
+			d_parent=$(this).attr("data-parent");
+			d_root=$(this).attr("data-root");
+
+			title=$("#"+sComboBoxId+" .combo_box_title").html();
+			value=$("#"+sComboBoxId+" .combo_box_title").attr('data-val');
+
+			if(title!="" && title.charAt(title.length-1)!="(") {
+				$("#"+sComboBoxId+" .combo_box_title").append(", ");
+			}
+			// обычный пункт
+			if(d_parent==undefined && d_root==undefined)
 				{
-				txt=$(this).next("label").text()+" (";
-				//$(".combo_box_title").append(txt);
-
-				before_root=d_root;
-				}
-			}
-		// если parent
-		if(d_parent!=undefined)
-			{
-
-				txt=$(this).next("label").text();
-				title_value = $(".combo_box_title").attr("data-val");
+				txt = $(this).next("label").html().replace("<br>", " | ");
+				title_value = $("#"+sComboBoxId+" .combo_box_title").attr("data-val");
 				value = $(this).attr('value');
 				dp = $(this).attr('data-parent');
 				value = make_val(title_value, value, dp);
-				var ind = $("input[type=checkbox][data-parent="+d_parent+"").index(this);
-				if(ind==$("input[type=checkbox][data-parent="+d_parent+"").length-1 && d_parent==before_root){
-					txt+=")";
+				//$(".combo_box_title").append(txt).attr("data-val", value);
+				$("#"+sComboBoxId+" .combo_box_title").attr("data-val", value);
 				}
+			// если root
+			if(d_root!=undefined)
+				{
+					// если есть отмеченные потомки
+				if($("#"+sComboBoxId+" input[type=checkbox][data-parent="+d_root+"]:checked").length>0)
+					{
+					txt=$(this).next("label").text()+" (";
+					//$(".combo_box_title").append(txt);
 
-				$(".combo_box_title").append(txt).attr("data-val", value);
+					before_root=d_root;
+					}
+				}
+			// если parent
+			if(d_parent!=undefined)
+				{
+
+					txt=$(this).next("label").text();
+					title_value = $("#"+sComboBoxId+" .combo_box_title").attr("data-val");
+					value = $(this).attr('value');
+					dp = $(this).attr('data-parent');
+					value = make_val(title_value, value, dp);
+					var ind = $("#"+sComboBoxId+" input[type=checkbox][data-parent="+d_parent+"").index(this);
+					if(ind==$("#"+sComboBoxId+" input[type=checkbox][data-parent="+d_parent+"").length-1 && d_parent==before_root){
+						txt+=")";
+					}
+
+					$("#"+sComboBoxId+" .combo_box_title").append(txt).attr("data-val", value);
+				}
+			});
+
+			if($("#"+sComboBoxId+" .combo_box_title").html()=='')
+				$("#"+sComboBoxId+" .combo_box_title").html(src.closest(".combo_box").attr('data-text'));
+
+		/*/
+		var bg = $("#selector").find("input:checked + label[data-bg] ").attr("data-bg");
+		var leng = $("#selector").find("input:checked + label[data-bg] ").length;
+		$("#selector").find("input:checked + label[data-bg] ").each(function(){
+			if ($(this).attr("data-bg") != bg){
+				leng = 0;
 			}
 		});
-
-		if($(".combo_box_title").html()=='')
-			$(".combo_box_title").html(src.closest(".combo_box").attr('data-text'));
-
-
-	var bg = $("#selector").find("input:checked + label[data-bg] ").attr("data-bg");
-	var leng = $("#selector").find("input:checked + label[data-bg] ").length;
-	$("#selector").find("input:checked + label[data-bg] ").each(function(){
-		if ($(this).attr("data-bg") != bg){
-			leng = 0;
+		if(bg && leng>0) {
+			$("body").attr("class", bg);
+		} else {
+			$("body").attr("class", "");
 		}
-	});
-	if(bg && leng>0) {
-		$("body").attr("class", bg);
-	} else {
-		$("body").attr("class", "");
+		/**/
+			
+		// bg /
+		return false;
 	}
-		
-	// bg /
-	return false;
-}
 
 	$("body").on('click', ".combo_box input", function(event){
 		return false;
@@ -900,6 +966,17 @@ window.onload = function(){
 		setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));	
 	});
 	
+	// source combobox
+	$("body").on('click', "#SourceCombobox label", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			filterSpells();
+		}, nTimerSeconds);		
+	});
+	$("body").on('click', "#SourceCombobox .combo_box_title, #SourceCombobox .combo_box_arrow", function(){
+		setConfig("sourceOpen", $("#SourceCombobox").attr("data-content-open"));	
+	});
+	
 	// lang select
 	$("body").on('focusout', "#LangSelect", function(){
 		clearTimeout(oTimer);
@@ -955,7 +1032,16 @@ window.onload = function(){
 		
 		return false;
 	})
-
+	$("body").on("click", ".bReturnUnvisible", function() {
+		aHiddenSpells = [];// show list of hidden spells
+		createHiddenSpellsList();
+		
+		// show spells without hidden
+		filterSpells({fHidden: true});
+		
+		return false;
+	});
+	
 	// lock spells
 	$("body").on('click', ".bLockSpell", function(){
 		var sName = $(this).closest(".cardContainer").attr("data-name");
@@ -973,6 +1059,7 @@ window.onload = function(){
 		// show locked
 		createLockedSpellsArea();
 	})
+	
 	// unlock spells
 	$("body").on('click', ".bUnlockSpell", function(){
 		var sName = $(this).closest(".cardContainer").attr("data-name");
@@ -986,7 +1073,55 @@ window.onload = function(){
 		$(this).next(".content").slideToggle();
 		$(this).next(".content").next(".bottomHeader").fadeToggle();
 	});
+	$("body").on('click', ".bUnlockAll", function(){
+		aLockedSpells = [];
+		// show locked
+		createLockedSpellsArea();
+	});
+	
+	$("body").on('click', "#bPrint", function(){
+		window.print();
 		
+		return false;
+	});
+		
+	// text size
+	$("body").on('click', ".textMin", function() {
+		var f_s=$(this).parent().parent().find(".text").css("font-size");
+		f_s=f_s.substring(0, f_s.length - 1);
+		f_s=f_s.substring(0, f_s.length - 1);
+		//console.log(f_s);
+
+		if(f_s>6)
+		 f_s--;
+		console.log(f_s);
+	    $(this).parent().parent().find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+		return false;
+	});
+	$("body").on('click', ".textMax", function() {
+		var f_s=$(this).parent().parent().find(".text").css("font-size");
+		f_s=f_s.substring(0, f_s.length - 1);
+		f_s=f_s.substring(0, f_s.length - 1);
+		if(f_s<20)
+		 f_s++;
+		console.log(f_s);
+	    $(this).parent().parent().find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+		return false;
+	});
+	
+	// card width
+	$("body").on("click", ".cardWidthMin", function() {
+		var width = $(".cardContainer").eq(0).width();
+		$('.cardContainer').width(width-20+"px");		
+	});
+	$("body").on("click", ".cardWidthMax", function() {
+		var width = $(".cardContainer").eq(0).width();
+		$('.cardContainer').width((width+20)+"px");
+	});
+	$("body").on("click", ".cardWidthNorm", function() {
+		var width = $(".cardContainer").eq(0).width();
+		$('.cardContainer').width("2.5in");		
+	});
 	
 	$.when(createSidebar()).done(
 		function(){

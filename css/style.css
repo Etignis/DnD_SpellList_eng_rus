@@ -221,7 +221,7 @@ p {
   position: absolute;
   width: 0.6em;
   height: 0.6em;
-  top: 30%;
+  top: 1em;
   left: -1.1em;
   background: #ddd;
   border: 0.2em solid #cccccc;
@@ -239,7 +239,7 @@ p {
 .combo_box input[type=checkbox]:checked + label::after {
   content: "\2714";
   position: absolute;
-  top: 9%;
+  top: .2em;
   left: -0.75em;
   color: #487EC5;
   font-size: 150%;
@@ -457,6 +457,7 @@ p {
   margin: 0;
   position: relative;
   font-size: 100%;
+  width: 100%;
 }
 .customSelect:hover {
   background: #888888;
@@ -587,6 +588,7 @@ p {
   cursor: pointer;
   text-align: center;
   font-size: 100%;
+  margin: .1em;
 }
 .bt:hover {
   background: #888888;
@@ -623,7 +625,7 @@ p {
   justify-content: space-around;
   align-items: center;
 }
-.mod_win {
+.mod_win_wrapper .mod_win {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
   border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -666,6 +668,18 @@ p {
   color: #222;
   cursor: default;
   font-weight: normal;
+}
+.mod_win_wrapper .bCloseInfoWin {
+  position: absolute;
+  top: -0.2em;
+  right: 0;
+  padding: .1em .2em;
+  font-size: 300%;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+}
+.mod_win_wrapper .bCloseInfoWin:hover {
+  color: rgba(0, 0, 0, 0.4);
 }
 #dbg {
   position: fixed;
@@ -767,6 +781,41 @@ p {
   color: #222;
   font-weight: 600;
 }
+#topMessage {
+  padding: .2em;
+  padding-bottom: .3em;
+  background: #487EC5;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+#topMessage a {
+  color: #fff;
+  text-decoration: none;
+}
+#topMessage .dDetails {
+  display: none;
+}
+#topMessage .bHide {
+  align-self: flex-end;
+  border: none;
+  cursor: pointer;
+  padding: .1em .3em;
+  margin: .1em .1em 0em;
+  background: transparent;
+  text-decoration: none;
+  color: #fff;
+  transition: background .3s, color .3s;
+  font-weight: 600;
+}
+#topMessage .bHide:hover {
+  background: #fefefe;
+  color: #376db4;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
 @media screen and (min-width: 65em) {
   body {
     background: url('../img/bg2.jpg') center center no-repeat;
@@ -803,9 +852,11 @@ p {
 }
 #lockedSpellsArea {
   margin-bottom: .3em;
+  position: relative;
 }
 #lockedSpellsArea .topHeader,
-#lockedSpellsArea .bottomHeader {
+#lockedSpellsArea .bottomHeader,
+#lockedSpellsArea .bUnlockAll {
   font-weight: 600;
   padding: .2em;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
@@ -813,8 +864,20 @@ p {
   color: #222;
   border-radius: .1em;
 }
+#lockedSpellsArea .bUnlockAll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+#lockedSpellsArea .bUnlockAll:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
 #lockedSpellsArea .topHeader {
   cursor: pointer;
+}
+#lockedSpellsArea .topHeader:hover {
+  background: rgba(255, 255, 255, 0.7);
 }
 #lockedSpellsArea .topHeader:before {
   content: "Закрепленные заклинания ";
@@ -915,8 +978,8 @@ p {
   font-size: 95%;
   margin: 0;
   padding: 0;
-  padding-left: .3em;
-  padding-right: .3em;
+  padding-left: .9em;
+  padding-right: .9em;
   text-align: center;
   text-transform: uppercase;
   border-bottom: 2px solid #e01a10;
@@ -933,6 +996,7 @@ p {
   padding: 2px;
   overflow-y: auto;
   flex-shrink: 99;
+  line-height: normal;
 }
 .spellCard .text::-webkit-scrollbar {
   width: 5px;
@@ -948,12 +1012,37 @@ p {
   scrollbar-face-color: #777;
   scrollbar-track-color: #ddd;
 }
+.spellCard .sizeButtonsContainer {
+  position: absolute;
+  bottom: 0;
+  left: .1em;
+  right: .1em;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-between;
+}
+.spellCard .sizeButtonsContainer .textMin,
+.spellCard .sizeButtonsContainer .textMax {
+  padding: 0 .5em;
+  font-size: 120%;
+  color: #222;
+  opacity: 0.3;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.spellCard .sizeButtonsContainer .textMin:hover,
+.spellCard .sizeButtonsContainer .textMax:hover {
+  opacity: 1;
+}
 .spellCard .class {
   position: absolute;
   left: 1px;
   bottom: -20px;
   font-size: 70%;
   color: #fff;
+  cursor: default;
 }
 .spellCard .school {
   position: absolute;
@@ -961,6 +1050,7 @@ p {
   bottom: -20px;
   font-size: 70%;
   color: #fff;
+  cursor: default;
 }
 .lockedSpell .bLockSpell {
   color: #000;
@@ -1271,10 +1361,18 @@ p {
 #HiddenSpells a:active {
   color: #487EC5;
 }
+#HiddenSpells .bReturnUnvisible {
+  display: inline-block;
+  padding: .1em .2em;
+  margin: .4em 0;
+  background: rgba(200, 200, 200, 0.2);
+  border-bottom: 1px dashed rgba(100, 100, 100, 0.6);
+}
 .mediaWidth {
   margin: .2em;
   flex-grow: 1;
   flex-shrink: 0;
+  flex-basis: 200px;
 }
 @media screen and (min-width: 65em) {
   .p_side {
@@ -1287,6 +1385,9 @@ p {
   }
   .p_side .s_block {
     width: 98%;
+  }
+  .mediaWidth {
+    flex-basis: auto;
   }
 }
 .loader {
@@ -1410,7 +1511,7 @@ p {
   }
 }
 @page {
-  margin: .9cm;
+  margin: 1.14cm .9cm .9cm;
 }
 
 /*# sourceMappingURL=style.css.map */
