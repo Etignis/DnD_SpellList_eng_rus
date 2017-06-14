@@ -242,6 +242,8 @@ window.onload = function(){
 				title = (spell.ru && spell.ru.name)?spell.ru.name: spell.en.name;
 			}
 			
+			var textSizeButtons = "<div class='sizeButtonsContainer noprint'><a href='#' class='textMin' title='Уменьшить размер текста'>–</a><a href='#' class='textMax' title='Увеличить размер текста'>+</a></div>";
+			
 			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
@@ -270,6 +272,7 @@ window.onload = function(){
 						'</div>'+
 						'<div class="materials">' + s_materials + '</div>'+
 						'<div class="text">' + s_text + '</div>	'+	
+						textSizeButtons +
 						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
 						'<b class="school">' + s_level + ", " + s_school + (s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</b>'+
 					'</div>'+
@@ -468,6 +471,13 @@ window.onload = function(){
 		var bInfo = "<a href='#' class='bt flexChild' id='bInfo' title='Справка'><i class='fa fa-question-circle'></i></a>";
 		var bPrint = "<a href='#' class='bt flexChild' id='bPrint' title='Распечатать'><i class='fa fa-print' aria-hidden='true'></i></a>";
 		$(".p_side").append("<div class='mediaWidth flexParent'>" + bHome + bInfo + bPrint + "</div>");		
+	}	
+	function createCardWidthButtons() {
+		var label = createLabel("Ширина карточек");
+		var bHome = "<a href='#' class='bt flexChild cardWidthMin' title='Сделать уже'><i class='fa fa-caret-right' aria-hidden='true'></i> <i class='fa fa-caret-left' aria-hidden='true'></i></a>";
+		var bInfo = "<a href='#' class='bt flexChild cardWidthNorm' title='Сделать нормальными'><i class='fa fa-square-o' aria-hidden='true'></i></a>";
+		var bPrint = "<a href='#' class='bt flexChild cardWidthMax' title='Сделать шире'><i class='fa fa-caret-left' aria-hidden='true'></i> <i class='fa fa-caret-right' aria-hidden='true'></i></a>";
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bHome + bInfo + bPrint + "</div>");		
 	}
 	
 	function createLabel(text) {
@@ -689,7 +699,8 @@ window.onload = function(){
 		createClassSelect();
 		createLevelSelect();
 		createSchoolCombobox(schoolOpen);
-		createSourceCombobox(sourceOpen)
+		createSourceCombobox(sourceOpen);
+		createCardWidthButtons();
 		createLangSelect(lang);
 		
 		$(".p_side").fadeIn();	
@@ -1074,6 +1085,43 @@ window.onload = function(){
 		return false;
 	});
 		
+	// text size
+	$("body").on('click', ".textMin", function() {
+		var f_s=$(this).parent().parent().find(".text").css("font-size");
+		f_s=f_s.substring(0, f_s.length - 1);
+		f_s=f_s.substring(0, f_s.length - 1);
+		//console.log(f_s);
+
+		if(f_s>6)
+		 f_s--;
+		console.log(f_s);
+	    $(this).parent().parent().find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+		return false;
+	});
+	$("body").on('click', ".textMax", function() {
+		var f_s=$(this).parent().parent().find(".text").css("font-size");
+		f_s=f_s.substring(0, f_s.length - 1);
+		f_s=f_s.substring(0, f_s.length - 1);
+		if(f_s<20)
+		 f_s++;
+		console.log(f_s);
+	    $(this).parent().parent().find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+		return false;
+	});
+	
+	// card width
+	$("body").on("click", ".cardWidthMin", function() {
+		var width = $(".cardContainer").eq(0).width();
+		$('.cardContainer').width(width-20+"px");		
+	});
+	$("body").on("click", ".cardWidthMax", function() {
+		var width = $(".cardContainer").eq(0).width();
+		$('.cardContainer').width((width+20)+"px");
+	});
+	$("body").on("click", ".cardWidthNorm", function() {
+		var width = $(".cardContainer").eq(0).width();
+		$('.cardContainer').width("2.5in");		
+	});
 	
 	$.when(createSidebar()).done(
 		function(){

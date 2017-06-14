@@ -163,7 +163,30 @@
         padding: 2px;
         overflow-y: auto;
         flex-shrink: 99;
+        line-height: normal;
         .scrollbars(5px, @m-gray, @l-gray);
+    }
+    .sizeButtonsContainer{
+    	position: absolute;
+    	bottom: 0;
+    	left: .1em;
+    	right: .1em;
+    	display: flex;
+        flex-direction: row;
+        align-content: stretch;
+        justify-content: space-between;
+    	.textMin, .textMax{
+    		padding: 0 .5em;
+    		font-size: 120%;
+    		color: @d-gray;
+    		opacity: 0.3;
+    		font-weight: bold;
+    		text-decoration: none;
+    		transition: opacity 0.2s;
+    		&:hover{
+    			opacity: 1;
+    		}
+    	}
     }
     .class{
         position: absolute;

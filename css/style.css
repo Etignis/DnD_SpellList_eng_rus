@@ -996,6 +996,7 @@ p {
   padding: 2px;
   overflow-y: auto;
   flex-shrink: 99;
+  line-height: normal;
 }
 .spellCard .text::-webkit-scrollbar {
   width: 5px;
@@ -1010,6 +1011,30 @@ p {
 .spellCard .text body {
   scrollbar-face-color: #777;
   scrollbar-track-color: #ddd;
+}
+.spellCard .sizeButtonsContainer {
+  position: absolute;
+  bottom: 0;
+  left: .1em;
+  right: .1em;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-between;
+}
+.spellCard .sizeButtonsContainer .textMin,
+.spellCard .sizeButtonsContainer .textMax {
+  padding: 0 .5em;
+  font-size: 120%;
+  color: #222;
+  opacity: 0.3;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.spellCard .sizeButtonsContainer .textMin:hover,
+.spellCard .sizeButtonsContainer .textMax:hover {
+  opacity: 1;
 }
 .spellCard .class {
   position: absolute;
