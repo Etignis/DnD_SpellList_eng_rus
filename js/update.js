@@ -1,10 +1,10 @@
 var oInfo = {
   title: "Новая версия",
   url: "www.tentaculus.ru/spells",
-  resume: "Можно менять размер текста описания заклинания и ширину карточек заклинаний",
+  resume: "Теперь карточки запоминают заданную ширину",
   details: "",
-  date: "14.06.2017",
-  version: "2.2"
+  date: "16.06.2017",
+  version: "2.2.1"
 }
 
 function showMessage(oParams) {	

@@ -1,4 +1,4 @@
-var TENTACULUS_APP_VERSION = "2.2";
+var TENTACULUS_APP_VERSION = "2.2.1";
 
 var oConfig = {}; // global app config data
 function setConfig(prop, val) {
@@ -10,7 +10,7 @@ function setConfig(prop, val) {
 function getConfig(prop) {
 	oConfig = JSON.parse(localStorage.getItem("config")) || {};
 	if(prop!=undefined) {
-		return localStorage.getItem("config")? oConfig[prop] : {};
+		return localStorage.getItem("config")? oConfig[prop] : null;
 	}
 	return oConfig;
 }
@@ -244,7 +244,13 @@ window.onload = function(){
 			
 			var textSizeButtons = "<div class='sizeButtonsContainer noprint'><a href='#' class='textMin' title='Уменьшить размер текста'>–</a><a href='#' class='textMax' title='Увеличить размер текста'>+</a></div>";
 			
-			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
+			var cardWidth = getConfig("cardWidth"); 
+			var style = "";
+			if(cardWidth) {
+				var style = " style='width: " + cardWidth + "' ";
+			}
+			
+			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" '+ style +' data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
 						bLockSpell +
@@ -1112,15 +1118,20 @@ window.onload = function(){
 	// card width
 	$("body").on("click", ".cardWidthMin", function() {
 		var width = $(".cardContainer").eq(0).width();
-		$('.cardContainer').width(width-20+"px");		
+		width = width-20+"px";
+		$('.cardContainer').width(width);   
+		setConfig("cardWidth", width);
 	});
 	$("body").on("click", ".cardWidthMax", function() {
 		var width = $(".cardContainer").eq(0).width();
-		$('.cardContainer').width((width+20)+"px");
+		width = (width+20)+"px";
+		$('.cardContainer').width(width);   
+		setConfig("cardWidth", width);
 	});
 	$("body").on("click", ".cardWidthNorm", function() {
-		var width = $(".cardContainer").eq(0).width();
-		$('.cardContainer').width("2.5in");		
+		width = "2.5in";
+		$('.cardContainer').width(width);     
+		setConfig("cardWidth", width); 
 	});
 	
 	$.when(createSidebar()).done(
