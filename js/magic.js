@@ -1102,8 +1102,15 @@ window.onload = function(){
 
 		if(f_s>6)
 		 f_s--;
-		console.log(f_s);
-	    $(this).parent().parent().find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+		//console.log(f_s);
+		var sFontSize = f_s+"px";
+		var sLineHeight = f_s-1+"px";
+	    $(this).parent().parent().find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+		
+		$(".spellCard.selected").each(function() {
+			$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+		});
+		
 		return false;
 	});
 	$("body").on('click', ".textMax", function() {
@@ -1112,8 +1119,14 @@ window.onload = function(){
 		f_s=f_s.substring(0, f_s.length - 1);
 		if(f_s<20)
 		 f_s++;
-		console.log(f_s);
-	    $(this).parent().parent().find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+		//console.log(f_s);
+		var sFontSize = f_s+"px";
+		var sLineHeight = f_s-1+"px";
+	    $(this).parent().parent().find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+				
+		$(".spellCard.selected").each(function() {
+			$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+		});
 		return false;
 	});
 	
@@ -1147,7 +1160,7 @@ window.onload = function(){
 		fCtrlisPressed = false;
 	});
 	
-	// card select
+	// card select/deselect
 	$("body").on("click", ".spellCard", function() {
 		if(fCtrlisPressed)
 			$(this).toggleClass("selected");
