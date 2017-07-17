@@ -1,4 +1,4 @@
-var TENTACULUS_APP_VERSION = "2.2.1";
+var TENTACULUS_APP_VERSION = "2.2.2";
 
 var oConfig = {}; // global app config data
 function setConfig(prop, val) {
@@ -16,7 +16,7 @@ function getConfig(prop) {
 }
 
 window.onload = function(){
-	var fCtrlisPressed = false;
+	var fCtrlIsPressed = false;
 	
 	var oTimer; // for TimeOut (filtering)
 	var nTimerSeconds = 100;
@@ -891,6 +891,9 @@ window.onload = function(){
 		return false;
 	}
 
+	function deselectAllCards() {
+		$(".spellCard").removeClass("selected");
+	}
 	$("body").on('click', ".combo_box input", function(event){
 		return false;
 	});
@@ -995,7 +998,7 @@ window.onload = function(){
 	
 	// show all spells
 	$("body").on('click', "#showAllSpells", function(){
-		setConfig("infiIsShown", true);
+		setConfig("infoIsShown", true);
 		filterSpells();	
 		hideInfoWin();
 		hideDBG();
@@ -1013,12 +1016,27 @@ window.onload = function(){
 
 	//hide spells
 	$("body").on('click', ".bHideSpell", function(){
-		var sName = $(this).closest(".cardContainer").attr("data-name");
-		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+		var sName, sNameRu;
 		
-		$(this).hide();
-		// update hidden spells array
-		aHiddenSpells.push({en: sName, ru: sNameRu}); 
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			var oButtonLock = $(this);
+			$(".spellCard.selected").each(function() {
+				sName = $(this).closest(".cardContainer").attr("data-name");
+				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+				
+				oButtonLock.hide();
+				// update hidden spells array
+				aHiddenSpells.push({en: sName, ru: sNameRu});
+			});
+		} else {
+			sName = $(this).closest(".cardContainer").attr("data-name");
+			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+			
+			$(this).hide();
+			// update hidden spells array
+			aHiddenSpells.push({en: sName, ru: sNameRu}); 			
+		}
 		
 		// show list of hidden spells
 		createHiddenSpellsList();
@@ -1052,30 +1070,59 @@ window.onload = function(){
 	
 	// lock spells
 	$("body").on('click', ".bLockSpell", function(){
-		var sName = $(this).closest(".cardContainer").attr("data-name");
-		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
-		var sLang = $(this).closest(".cardContainer").attr("data-lang");
-		var sClass= $(this).closest(".cardContainer").attr("data-class");
-		
-		
-		aLockedSpells[sName] = {
-			ru: sNameRu,
-			lang: sLang,
-			class: sClass
-			};
+		var sName, sNameRu, sLang, sClass;		
+			
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {
+				sName = $(this).closest(".cardContainer").attr("data-name");
+				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+				sLang = $(this).closest(".cardContainer").attr("data-lang");
+				sClass= $(this).closest(".cardContainer").attr("data-class");
+				
+				aLockedSpells[sName] = {
+					ru: sNameRu,
+					lang: sLang,
+					class: sClass
+					};
+			});
+		} else {
+			sName = $(this).closest(".cardContainer").attr("data-name");
+			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+			sLang = $(this).closest(".cardContainer").attr("data-lang");
+			sClass= $(this).closest(".cardContainer").attr("data-class");
+			
+			
+			aLockedSpells[sName] = {
+				ru: sNameRu,
+				lang: sLang,
+				class: sClass
+				};
+		}
 		
 		// show locked
 		createLockedSpellsArea();
+		deselectAllCards();
 	})
 	
 	// unlock spells
 	$("body").on('click', ".bUnlockSpell", function(){
-		var sName = $(this).closest(".cardContainer").attr("data-name");
+		var sName;		
 		
-		delete aLockedSpells[sName];
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {
+				sName = $(this).closest(".cardContainer").attr("data-name");
+				delete aLockedSpells[sName];
+			});
+		} else {
+			sName = $(this).closest(".cardContainer").attr("data-name");
+			delete aLockedSpells[sName];
+		}
 		
 		// show locked
 		createLockedSpellsArea();
+		deselectAllCards();
 	})
 	$("body").on('click', "#lockedSpellsArea .topHeader", function(){
 		$(this).next(".content").slideToggle();
@@ -1177,20 +1224,32 @@ window.onload = function(){
 		}
 	});
 	
-	// CTRL pressed
 	$(document).keydown(function(event){
+		// CTRL pressed
 		if(event.which=="17") {
-			fCtrlisPressed = true;
+			fCtrlIsPressed = true;
+		}
+		
+		// A pressed
+		if(event.which=="65" && fCtrlIsPressed) {
+			if($(".spellCard.selected").length == $(".spellCard").length) {
+				// deselect all
+				$(".spellCard").removeClass("selected");
+			} else {
+				// select all
+				$(".spellCard").addClass("selected");
+			}
+			return false;
 		}
 	});
 
 	$(document).keyup(function(){
-		fCtrlisPressed = false;
+		fCtrlIsPressed = false;
 	});
 	
 	// card select/deselect
 	$("body").on("click", ".spellCard", function() {
-		if(fCtrlisPressed)
+		if(fCtrlIsPressed)
 			$(this).toggleClass("selected");
 	});
 			
@@ -1198,7 +1257,7 @@ window.onload = function(){
 		function(){
 			$("#showAllSpells").slideDown();
 			if(getViewPortSize("width") > 600){
-				if(getConfig("infiIsShown")==true)
+				if(getConfig("infoIsShown")==true)
 					filterSpells();
 
 			}

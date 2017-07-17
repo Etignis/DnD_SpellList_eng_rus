@@ -934,7 +934,11 @@ p {
 }
 .spellCard.selected {
   transform: scale(0.94);
-  outline: 5px rgba(200, 200, 200, 0.8) solid;
+  outline: 5px rgba(250, 250, 250, 0.8) solid;
+  transition: outline .2s;
+}
+.spellCard.selected:hover {
+  outline-color: #487EC5;
 }
 .spellCard .bHideSpell,
 .spellCard .bLockSpell,
