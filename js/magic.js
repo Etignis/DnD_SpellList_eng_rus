@@ -1,4 +1,4 @@
-var TENTACULUS_APP_VERSION = "2.2";
+var TENTACULUS_APP_VERSION = "2.2.2";
 
 var oConfig = {}; // global app config data
 function setConfig(prop, val) {
@@ -10,12 +10,14 @@ function setConfig(prop, val) {
 function getConfig(prop) {
 	oConfig = JSON.parse(localStorage.getItem("config")) || {};
 	if(prop!=undefined) {
-		return localStorage.getItem("config")? oConfig[prop] : {};
+		return localStorage.getItem("config")? oConfig[prop] : null;
 	}
 	return oConfig;
 }
 
 window.onload = function(){
+	var fCtrlIsPressed = false;
+	
 	var oTimer; // for TimeOut (filtering)
 	var nTimerSeconds = 100;
 	
@@ -244,7 +246,13 @@ window.onload = function(){
 			
 			var textSizeButtons = "<div class='sizeButtonsContainer noprint'><a href='#' class='textMin' title='Уменьшить размер текста'>–</a><a href='#' class='textMax' title='Увеличить размер текста'>+</a></div>";
 			
-			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
+			var cardWidth = getConfig("cardWidth"); 
+			var style = "";
+			if(cardWidth) {
+				var style = " style='width: " + cardWidth + "' ";
+			}
+			
+			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" '+ style +' data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
 						bLockSpell +
@@ -883,6 +891,9 @@ window.onload = function(){
 		return false;
 	}
 
+	function deselectAllCards() {
+		$(".spellCard").removeClass("selected");
+	}
 	$("body").on('click', ".combo_box input", function(event){
 		return false;
 	});
@@ -987,7 +998,7 @@ window.onload = function(){
 	
 	// show all spells
 	$("body").on('click', "#showAllSpells", function(){
-		setConfig("infiIsShown", true);
+		setConfig("infoIsShown", true);
 		filterSpells();	
 		hideInfoWin();
 		hideDBG();
@@ -1005,12 +1016,27 @@ window.onload = function(){
 
 	//hide spells
 	$("body").on('click', ".bHideSpell", function(){
-		var sName = $(this).closest(".cardContainer").attr("data-name");
-		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+		var sName, sNameRu;
 		
-		$(this).hide();
-		// update hidden spells array
-		aHiddenSpells.push({en: sName, ru: sNameRu}); 
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			var oButtonLock = $(this);
+			$(".spellCard.selected").each(function() {
+				sName = $(this).closest(".cardContainer").attr("data-name");
+				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+				
+				oButtonLock.hide();
+				// update hidden spells array
+				aHiddenSpells.push({en: sName, ru: sNameRu});
+			});
+		} else {
+			sName = $(this).closest(".cardContainer").attr("data-name");
+			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+			
+			$(this).hide();
+			// update hidden spells array
+			aHiddenSpells.push({en: sName, ru: sNameRu}); 			
+		}
 		
 		// show list of hidden spells
 		createHiddenSpellsList();
@@ -1044,30 +1070,59 @@ window.onload = function(){
 	
 	// lock spells
 	$("body").on('click', ".bLockSpell", function(){
-		var sName = $(this).closest(".cardContainer").attr("data-name");
-		var sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
-		var sLang = $(this).closest(".cardContainer").attr("data-lang");
-		var sClass= $(this).closest(".cardContainer").attr("data-class");
-		
-		
-		aLockedSpells[sName] = {
-			ru: sNameRu,
-			lang: sLang,
-			class: sClass
-			};
+		var sName, sNameRu, sLang, sClass;		
+			
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {
+				sName = $(this).closest(".cardContainer").attr("data-name");
+				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+				sLang = $(this).closest(".cardContainer").attr("data-lang");
+				sClass= $(this).closest(".cardContainer").attr("data-class");
+				
+				aLockedSpells[sName] = {
+					ru: sNameRu,
+					lang: sLang,
+					class: sClass
+					};
+			});
+		} else {
+			sName = $(this).closest(".cardContainer").attr("data-name");
+			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+			sLang = $(this).closest(".cardContainer").attr("data-lang");
+			sClass= $(this).closest(".cardContainer").attr("data-class");
+			
+			
+			aLockedSpells[sName] = {
+				ru: sNameRu,
+				lang: sLang,
+				class: sClass
+				};
+		}
 		
 		// show locked
 		createLockedSpellsArea();
+		deselectAllCards();
 	})
 	
 	// unlock spells
 	$("body").on('click', ".bUnlockSpell", function(){
-		var sName = $(this).closest(".cardContainer").attr("data-name");
+		var sName;		
 		
-		delete aLockedSpells[sName];
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {
+				sName = $(this).closest(".cardContainer").attr("data-name");
+				delete aLockedSpells[sName];
+			});
+		} else {
+			sName = $(this).closest(".cardContainer").attr("data-name");
+			delete aLockedSpells[sName];
+		}
 		
 		// show locked
 		createLockedSpellsArea();
+		deselectAllCards();
 	})
 	$("body").on('click', "#lockedSpellsArea .topHeader", function(){
 		$(this).next(".content").slideToggle();
@@ -1094,8 +1149,15 @@ window.onload = function(){
 
 		if(f_s>6)
 		 f_s--;
-		console.log(f_s);
-	    $(this).parent().parent().find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+		//console.log(f_s);
+		var sFontSize = f_s+"px";
+		var sLineHeight = f_s-1+"px";
+	    $(this).parent().parent().find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+		
+		$(".spellCard.selected").each(function() {
+			$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+		});
+		
 		return false;
 	});
 	$("body").on('click', ".textMax", function() {
@@ -1104,30 +1166,98 @@ window.onload = function(){
 		f_s=f_s.substring(0, f_s.length - 1);
 		if(f_s<20)
 		 f_s++;
-		console.log(f_s);
-	    $(this).parent().parent().find(".text").css({"font-size": f_s+"px", "line-height": f_s-1+"px"});
+		//console.log(f_s);
+		var sFontSize = f_s+"px";
+		var sLineHeight = f_s-1+"px";
+	    $(this).parent().parent().find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+				
+		$(".spellCard.selected").each(function() {
+			$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+		});
 		return false;
 	});
 	
 	// card width
 	$("body").on("click", ".cardWidthMin", function() {
-		var width = $(".cardContainer").eq(0).width();
-		$('.cardContainer').width(width-20+"px");		
+		var width;
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {
+				width = $(this).parent().width();
+				width = width-20+"px";
+				$(this).parent().width(width);
+			});
+		} else{
+			width = $(".cardContainer").eq(0).width();
+			width = width-20+"px";
+			$('.cardContainer').width(width);   
+			setConfig("cardWidth", width);
+		}
+		
 	});
 	$("body").on("click", ".cardWidthMax", function() {
-		var width = $(".cardContainer").eq(0).width();
-		$('.cardContainer').width((width+20)+"px");
+		var width;
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {
+				width = $(this).parent().width();
+				width = (width+20)+"px";
+				$(this).parent().width(width);
+			});
+		} else {
+			width = $(".cardContainer").eq(0).width();
+			width = (width+20)+"px";
+			$('.cardContainer').width(width);   
+			setConfig("cardWidth", width);
+		}
 	});
 	$("body").on("click", ".cardWidthNorm", function() {
-		var width = $(".cardContainer").eq(0).width();
-		$('.cardContainer').width("2.5in");		
+		var width = "2.5in";
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {				
+				$(this).parent().width(width);
+			});
+		} else {
+			$('.cardContainer').width(width);     
+			setConfig("cardWidth", width); 
+		}
 	});
 	
+	$(document).keydown(function(event){
+		// CTRL pressed
+		if(event.which=="17") {
+			fCtrlIsPressed = true;
+		}
+		
+		// A pressed
+		if(event.which=="65" && fCtrlIsPressed) {
+			if($(".spellCard.selected").length == $(".spellCard").length) {
+				// deselect all
+				$(".spellCard").removeClass("selected");
+			} else {
+				// select all
+				$(".spellCard").addClass("selected");
+			}
+			return false;
+		}
+	});
+
+	$(document).keyup(function(){
+		fCtrlIsPressed = false;
+	});
+	
+	// card select/deselect
+	$("body").on("click", ".spellCard", function() {
+		if(fCtrlIsPressed)
+			$(this).toggleClass("selected");
+	});
+			
 	$.when(createSidebar()).done(
 		function(){
 			$("#showAllSpells").slideDown();
 			if(getViewPortSize("width") > 600){
-				if(getConfig("infiIsShown")==true)
+				if(getConfig("infoIsShown")==true)
 					filterSpells();
 
 			}

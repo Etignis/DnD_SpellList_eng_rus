@@ -1,10 +1,10 @@
 var oInfo = {
   title: "Новая версия",
   url: "www.tentaculus.ru/spells",
-  resume: "Можно менять размер текста описания заклинания и ширину карточек заклинаний",
+  resume: "Можно выделять карточки и творить с ними всякое",
   details: "",
-  date: "14.06.2017",
-  version: "2.2"
+  date: "17.07.2017",
+  version: "2.2.2"
 }
 
 function showMessage(oParams) {	
@@ -36,9 +36,9 @@ function hideMessage() {
 }
 
 $('body').on('click', "#topMessage .bHide", function(){
-  var dMessageHidded = hideMessage();
+  var fMessageHidded = hideMessage();
   try{
-    setConfig("dMessageHidded", dMessageHidded);
+    setConfig("fMessageHidded", fMessageHidded);
   } catch (err) {
     console.log("[ERROR] We can't save message hidding:");
     console.dir(err);
@@ -80,9 +80,9 @@ function checkForUpdate(sVersion, fMessage) {
 }
 
 setTimeout(function(){
-  var dMessageHidded = getConfig("dMessageHidded") || new Date();
-  var fMessage = (new Date() - dMessageHidded) > 20*60*60*1000;
+  var fMessageHidded = getConfig("fMessageHidded") || ((new Date().getTime()) - (23*60*60*1000));
+  var fMessage = (new Date().getTime() - fMessageHidded) > 20*60*60*1000;
   var sVersion = TENTACULUS_APP_VERSION;
 
   checkForUpdate(sVersion, fMessage);
-}, 3000);
+}, 5000);

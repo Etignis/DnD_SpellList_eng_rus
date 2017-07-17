@@ -932,6 +932,14 @@ p {
   position: relative;
   color: #666666;
 }
+.spellCard.selected {
+  transform: scale(0.94);
+  outline: 5px rgba(250, 250, 250, 0.8) solid;
+  transition: outline .2s;
+}
+.spellCard.selected:hover {
+  outline-color: #487EC5;
+}
 .spellCard .bHideSpell,
 .spellCard .bLockSpell,
 .spellCard .bUnlockSpell {
@@ -1026,15 +1034,14 @@ p {
 .spellCard .sizeButtonsContainer .textMax {
   padding: 0 .5em;
   font-size: 120%;
-  color: #222;
-  opacity: 0.3;
+  color: #cccccc;
   font-weight: bold;
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 }
 .spellCard .sizeButtonsContainer .textMin:hover,
 .spellCard .sizeButtonsContainer .textMax:hover {
-  opacity: 1;
+  color: #487EC5;
 }
 .spellCard .class {
   position: absolute;
