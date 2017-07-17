@@ -16,6 +16,8 @@ function getConfig(prop) {
 }
 
 window.onload = function(){
+	var fCtrlisPressed = false;
+	
 	var oTimer; // for TimeOut (filtering)
 	var nTimerSeconds = 100;
 	
@@ -1134,6 +1136,23 @@ window.onload = function(){
 		setConfig("cardWidth", width); 
 	});
 	
+	// CTRL pressed
+	$(document).keydown(function(event){
+		if(event.which=="17") {
+			fCtrlisPressed = true;
+		}
+	});
+
+	$(document).keyup(function(){
+		fCtrlisPressed = false;
+	});
+	
+	// card select
+	$("body").on("click", ".spellCard", function() {
+		if(fCtrlisPressed)
+			$(this).toggleClass("selected");
+	});
+			
 	$.when(createSidebar()).done(
 		function(){
 			$("#showAllSpells").slideDown();

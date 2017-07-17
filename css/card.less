@@ -64,8 +64,7 @@
     width: 2.5in;
     margin-right: 1px;
     margin-top: 1px;
-    float: left;
-    
+    float: left; 
     .row{
         border-bottom: 2px solid @mainColor; 
         display: flex;
@@ -102,6 +101,12 @@
     //overflow: hidden;
     position: relative;
     color: @m-gray - #111;
+    
+    &.selected{
+    	transform: scale(0.94);
+    	outline: 5px rgba(200,200,200,.8) solid;
+    }
+    
     .bHideSpell, .bLockSpell, .bUnlockSpell{
         position: absolute;
         top: -.1em;
@@ -178,13 +183,14 @@
     	.textMin, .textMax{
     		padding: 0 .5em;
     		font-size: 120%;
-    		color: @d-gray;
-    		opacity: 0.3;
+    		//color: @d-gray;
+    		//opacity: 0.3;
+    		color: @l-gray - #111;
     		font-weight: bold;
     		text-decoration: none;
-    		transition: opacity 0.2s;
+    		transition: color 0.2s;
     		&:hover{
-    			opacity: 1;
+    			color: @color;
     		}
     	}
     }
