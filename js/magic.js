@@ -1132,21 +1132,49 @@ window.onload = function(){
 	
 	// card width
 	$("body").on("click", ".cardWidthMin", function() {
-		var width = $(".cardContainer").eq(0).width();
-		width = width-20+"px";
-		$('.cardContainer').width(width);   
-		setConfig("cardWidth", width);
+		var width;
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {
+				width = $(this).parent().width();
+				width = width-20+"px";
+				$(this).parent().width(width);
+			});
+		} else{
+			width = $(".cardContainer").eq(0).width();
+			width = width-20+"px";
+			$('.cardContainer').width(width);   
+			setConfig("cardWidth", width);
+		}
+		
 	});
 	$("body").on("click", ".cardWidthMax", function() {
-		var width = $(".cardContainer").eq(0).width();
-		width = (width+20)+"px";
-		$('.cardContainer').width(width);   
-		setConfig("cardWidth", width);
+		var width;
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {
+				width = $(this).parent().width();
+				width = (width+20)+"px";
+				$(this).parent().width(width);
+			});
+		} else {
+			width = $(".cardContainer").eq(0).width();
+			width = (width+20)+"px";
+			$('.cardContainer').width(width);   
+			setConfig("cardWidth", width);
+		}
 	});
 	$("body").on("click", ".cardWidthNorm", function() {
-		width = "2.5in";
-		$('.cardContainer').width(width);     
-		setConfig("cardWidth", width); 
+		var width = "2.5in";
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {				
+				$(this).parent().width(width);
+			});
+		} else {
+			$('.cardContainer').width(width);     
+			setConfig("cardWidth", width); 
+		}
 	});
 	
 	// CTRL pressed
