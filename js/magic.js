@@ -48,6 +48,14 @@ window.onload = function(){
 		arr.splice(i, 1);
 		return arr
 	}
+	function clearSelection() {
+		if(document.selection && document.selection.empty) {
+			document.selection.empty();
+		} else if(window.getSelection) {
+			var sel = window.getSelection();
+			sel.removeAllRanges();
+		}
+	}
 	
 	function getViewPortSize(mod) {
 		var viewportwidth;
@@ -1251,6 +1259,14 @@ window.onload = function(){
 	$("body").on("click", ".spellCard", function() {
 		if(fCtrlIsPressed)
 			$(this).toggleClass("selected");
+	});
+	$("body").on("dblclick", ".spellCard", function() {
+		$(this).toggleClass("selected");
+		clearSelection();
+		return false;
+	});
+	$("body").on("taphold", ".spellCard", function() {
+		$(this).toggleClass("selected");
 	});
 			
 	$.when(createSidebar()).done(
