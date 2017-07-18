@@ -630,6 +630,11 @@ window.onload = function(){
 		var label = createLabel("Название");
 		$(".p_side").append("<div class='mediaWidth'>" + label + ret + "</div>");		
 	}
+	function createAutoSizeTextButton() {
+		var label = createLabel("Размер текста");
+		var bTextSize = "<a href='#' class='bt flexChild cardTestAutoSize' title='Автоподстройка размера текста заклинания'><i class='fa fa-text-height' aria-hidden='true'></i> Рассчитать </a>";
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bTextSize + "</div>");		
+	}
 	function createLangSelect(lang) {
 		var src = [
 			{
@@ -717,6 +722,7 @@ window.onload = function(){
 		createSchoolCombobox(schoolOpen);
 		createSourceCombobox(sourceOpen);
 		createCardWidthButtons();
+		createAutoSizeTextButton();
 		createLangSelect(lang);
 		
 		$(".p_side").fadeIn();	
@@ -1229,6 +1235,36 @@ window.onload = function(){
 		} else {
 			$('.cardContainer').width(width);     
 			setConfig("cardWidth", width); 
+		}
+	});
+	
+	// autoszie Text in the cards
+	$("body").on("click", ".cardTestAutoSize", function() {
+		var nSelectedCards = $(".spellCard.selected").length;
+		if(nSelectedCards > 0) {
+			$(".spellCard.selected").each(function() {
+				var f_s=$(this).find(".text").css("font-size");
+				f_s=f_s.substring(0, f_s.length - 2);
+				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {						
+					f_s-=0.3;
+					
+					var sFontSize = f_s+"px";
+					var sLineHeight = f_s-1+"px";			
+					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+				}
+			});
+		} else {
+			$(".spellCard").each(function() {
+				var f_s=$(this).find(".text").css("font-size");
+				f_s=f_s.substring(0, f_s.length - 2);
+				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {	
+					 f_s-=0.3;
+					//console.log(f_s);
+					var sFontSize = f_s+"px";
+					var sLineHeight = f_s-1+"px";			
+					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+				}
+			});
 		}
 	});
 	
