@@ -415,32 +415,7 @@ var allSpells = [
       "source": "PHB"
     }
   },
-  {
-    "en": {
-      "name": "Thunderclap",
-      "level": "0",
-      "text": "You create a burst of thunderous sound, which can be heard 100 feet away. Each creature other than you within 5 feet of you must make a Constitution saving throw. On a failed save, the creature takes 1d6 thunder damage. The spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
-      "school": "Evocation",
-      "castingTime": "1 action",
-      "range": "Self (5-foot radius)",
-      "materials": "",
-      "components": "S",
-      "duration": "Instantaneous",
-      "source": "TOEE"
-    },
-    "ru": {
-      "name": "Громовой удар",
-      "level": "1",
-      "text": "Пока действует это заклинание, первый удар, который вы нанесете оружием ближнего боя, издает оглушительный раскат грома, который слышно на расстоянии 300 футов. Вы также наносите дополнительные 2d6 урона звуком. Кроме того, если целью удара было существо, то оно должно сделать успешный спасбросок по Силе или его оттолкнет на 10 футов от вас и собъет с ног.",
-      "school": "проявление",
-      "castingTime": "1 бонусное действие",
-      "range": "Заклинатель",
-      "materials": "",
-      "components": "В",
-      "duration": "К-ция, до 1 минуты",
-      "source": "TOEE"
-    }
-  },
+ 
   {
     "en": {
       "name": "Alarm",

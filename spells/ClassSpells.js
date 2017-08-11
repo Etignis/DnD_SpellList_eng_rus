@@ -1450,7 +1450,7 @@ var classSpells = {
 			  
 			  
 				"Clairvoyance",
-				"Mending",
+				"Sending",
 			  
 			  
 				"Dominate Beast",
@@ -1459,6 +1459,34 @@ var classSpells = {
 			  
 				"Dominate Person",
 				"Telekinesis"
+			  ]
+			
+		},
+		{
+		  title: {
+			en: "The Undying (SCAG)",
+			ru: "Бессмертный (SCAG)"
+			},
+			spells: [
+			  
+				"False Life",
+				"Ray of Sickness",
+			  
+			  
+				"Blindness/Deafness",
+				"Silence",
+			  
+			  
+				"Feign Death",
+				"Speak with Dead",
+			  
+			  
+				"Aura of Life",
+				"Death Ward",
+			  
+			  
+				"Contagion",
+				"Legend Lore"
 			  ]
 			
 		}
