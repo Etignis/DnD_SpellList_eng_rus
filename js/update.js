@@ -1,10 +1,10 @@
 var oInfo = {
   title: "Новая версия",
   url: "www.tentaculus.ru/spells",
-  resume: "Можно выделять карточки и творить с ними всякое",
+  resume: "Добавлены Клятвы Паладина (Oathbreaker, Oath of the Crown), и домены Клерика (Death, Arcana)",
   details: "",
-  date: "17.07.2017",
-  version: "2.2.2"
+  date: "14.08.2017",
+  version: "2.2.4"
 }
 
 function showMessage(oParams) {	

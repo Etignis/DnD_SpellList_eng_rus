@@ -481,6 +481,62 @@ var classSpells = {
 			  "Hold Monster"
 			]
 		  
+		},		
+		DeathDomain: {
+		  title: {
+			en: "Deah Domain (DMG)",
+			ru: "Домен Смерти (DMG)"
+		  },
+		  spells: [
+			
+			  "False Life",
+			  "Ray of Sickness",
+			
+			
+			  "Blindness/Deafness",
+			  "Ray of Enfeeblement",
+			
+			
+			  "Animate Dead",
+			  "Vampiric Touch",
+			
+			
+			  "Blight",
+			  "Death Ward",
+			
+			
+			  "Antilife Shell",
+			  "Cloudkill"
+			]
+		  
+		},		
+		ArcanaDomain: {
+		  title: {
+			en: "Arcana Domain (SCAG)",
+			ru: "Домен Магии (SCAG)"
+		  },
+		  spells: [
+			
+			  "Detect Magic",
+			  "Magic Missile",
+			
+			
+			  "Magic Weapon",
+			  "Nystul's Magic Aura",
+			
+			
+			  "Dispel Magic",
+			  "Magic Circle",
+			
+			
+			  "Arcane Eye",
+			  "Leomund's Secret Chest",
+			
+			
+			  "Planar Binding",
+			  "Teleportation Circle"
+			]
+		  
 		}
 	  }
 	},
@@ -922,7 +978,7 @@ var classSpells = {
 			en: "Oath of Devotion",
 			ru: "Клятва Преданности"
 			},
-			spells: [
+		  spells: [
 			  
 				"Protection from Evil and Good",
 				"Sanctuary",
@@ -950,27 +1006,27 @@ var classSpells = {
 			en: "Oath of  Ancients",
 			ru: "Клятва Древних"
 			},
-			spells: [
-			  
-				"Ensnaring Strike",
-				"Speak with Animals",
-			  
-			  
-				"Moonbeam",
-				"Misty Step",
-			  
-			  
-				"Plant Growth",
-				"Protection from Energy",
-			  
-			  
-				"Ice Storm",
-				"Stoneskin",
-			  
-			  
-				"Commune with Nature",
-				"Tree Stride"
-			  ]
+		spells: [
+		  
+			"Ensnaring Strike",
+			"Speak with Animals",
+		  
+		  
+			"Moonbeam",
+			"Misty Step",
+		  
+		  
+			"Plant Growth",
+			"Protection from Energy",
+		  
+		  
+			"Ice Storm",
+			"Stoneskin",
+		  
+		  
+			"Commune with Nature",
+			"Tree Stride"
+		  ]
 			
 		},
 		{
@@ -978,26 +1034,82 @@ var classSpells = {
 			en: "Oath of  Vengeance",
 			ru: "Клятва Мести"
 			},
+		spells: [
+		  
+			"Bane",
+			"Hunter's Mark",
+		  
+		  
+			"Hold Person",
+			"Misty Step",
+		  
+		  
+			"Haste",
+			"Protection from Energy",
+		  
+		  
+			"Banishment",
+			"Dimension Door",
+		  
+		  
+			"Hold Monster",
+			"Scrying"
+		  ]
+			
+		},
+		{
+		  title: {
+			en: "Oathbreaker (DMG)",
+			ru: "Клятвопреступник (DMG)"
+			},
 			spells: [
 			  
-				"Bane",
-				"Hunter's Mark",
+				"Hellish Rebuke",
+				"Inflict Wounds",
 			  
 			  
-				"Hold Person",
-				"Misty Step",
+				"Crown of Madness",
+				"Darkness",
 			  
 			  
-				"Haste",
-				"Protection from Energy",
+				"Animate Dead",
+				"Bestow Curse",
+			  
+			  
+				"Blight",
+				"Confusion",
+			  
+			  
+				"Contagion",
+				"Dominate Person"
+			  ]
+			
+		},
+		{
+		  title: {
+			en: "Oath of the Crown (SCAG)",
+			ru: "Клятва Короны (SCAG)"
+			},
+			spells: [
+			  
+				"Command",
+				"Compelled Duel",
+			  
+			  
+				"Warding Bond",
+				"Zone of Truth",
+			  
+			  
+				"Aura of Vitality",
+				"Spirit Guardians",
 			  
 			  
 				"Banishment",
-				"Dimension Door",
+				"Guardian of Faith",
 			  
 			  
-				"Hold Monster",
-				"Scrying"
+				"Circle of Power",
+				"Geas"
 			  ]
 			
 		}
