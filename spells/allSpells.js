@@ -7976,7 +7976,7 @@ var allSpells = [
       "source": "(Oathbreaker)"
     },
     "ru": {
-      "name": "Демоническая кара",
+      "name": "Адское возмездие",
       "level": "1",
       "text": "1 реакция, которую вы совершаете, в ответ на урон, нанесенный существом, которое вы можете видеть в пределах 60 футов Вы указываете пальцем в существо, которое нанесло вам урон, и его немедленно окружает адское пламя. Существо должно сделать спасбросок по Ловкости. В случае провала оно получает 2d10 урона огнем, а при успешном - половину этого урона. <br>На более высоких кругах. Если вы произносите заклинание, используя ячейку 2 круга или выше, то урон увеличивается на 1d10 за каждый круг выше первого.",
       "school": "проявление",
@@ -8338,27 +8338,27 @@ var allSpells = [
   {
     "en": {
       "name": "Enthrall",
-      "level": "1",
-      "text": "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain.<br> A creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.<br>When the spell ends, the conjured plants wilt away.",
-      "school": "Conjuration",
+      "level": "2",
+      "text": "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw. Any creature that can't be charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you.The spell ends if you are incapacitated or can no longer speak.",
+      "school": "Enchantment",
       "castingTime": "1 action",
-      "range": "90 feet",
+      "range": "60 feet",
       "materials": "",
       "components": "V, S",
-      "duration": "Concentration, up to 1 minute",
+      "duration": "1 minute",
       "source": "PHB"
     },
-	"ru": {
-		"name": "Опутывание",
-		"castingTime": "1 действие",
-		"range": "90 футов",
-		"components": "В, С",
-		"duration": "Конц-я, до 1 мин",
-		"materials": "",
-		"text": "Цепкие лозы и сорняки вырастают из земли в квадрате со стороной 20 футов вокруг указанной вами точки в пределах дальности заклинания. Пока оно действует, эти растения делают область труднопроходимой.   Существо в области действия заклинания должно сделать успешный спасбросок по Силе или будет обездвижено обвившими его растениями до конца заклинания. Опутанное существо может попытаться высвободиться, совершив в качестве действия проверку по Силе против вашего КС заклинаний. При успехе оно совобождается.   Когда заклинание заканчивается, призванные растения вянут.",
-		"school": "призыв",
-		"level": "1"
-	}
+    "ru": {
+      "name": "Речь златоуста",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В, С",
+      "duration": "1 минута",
+      "materials": "",
+      "text": "Вы произносите отвлекающую речь, заставляя выбранных вами существ, которых вы видите в пределах дистанции, и которые при этом могут слышать вас, совершить спасбросок Мудрости. Существа, которые не могут быть очарованными, автоматически преуспевают в спасброске, и если вы или ваши спутники сражаетесь с существом, оно совершает спасбросок с преимуществом. При провале цель получает помеху к проверкам Мудрости (Внимательность), совершѐнным для обнаружения других существ кроме вас, пока заклинание активно или пока цель не перестанет вас слышать. Заклинание оканчивается, если вы становитесь недееспособны или теряете возможность говорить.",
+      "school": "очарование",
+      "level": "2"
+    }
   },
   {
     "en": {

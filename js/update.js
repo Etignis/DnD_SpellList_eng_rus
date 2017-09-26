@@ -1,10 +1,10 @@
 var oInfo = {
   title: "Новая версия",
   url: "www.tentaculus.ru/spells",
-  resume: "Можно выделять карточки и творить с ними всякое",
+  resume: "Исправлены заклинания 'Доспех агатиса', 'Опутывание', 'Адское возмездие'",
   details: "",
-  date: "17.07.2017",
-  version: "2.2.2"
+  date: "26.09.2017",
+  version: "2.2.3"
 }
 
 function showMessage(oParams) {	
