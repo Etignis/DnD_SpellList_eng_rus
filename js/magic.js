@@ -989,6 +989,7 @@ window.onload = function(){
 	$("body").on('click', "#SourceCombobox label", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 		}, nTimerSeconds);
 	});
@@ -1000,6 +1001,7 @@ window.onload = function(){
 	$("body").on('focusout', "#LangSelect", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 		}, nTimerSeconds);
 	});
@@ -1274,7 +1276,7 @@ window.onload = function(){
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
 		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
-		//var sLang = $("#LangSelect .label").attr("data-selected-key");
+		var sLang = $("#LangSelect .label").attr("data-selected-key");
 
 		//#q=spell_name&ls=0&le=9
 		var aFilters = [];
@@ -1299,6 +1301,12 @@ window.onload = function(){
 		if(aSchools && aSchools.length>0 && aSchools.length<8) {
 			aFilters.push("schools="+aSchools.join(","));
 		}
+		if(aSources && aSources.length>0 && $("#SourceCombobox .combo_box_content input").length > aSources.length) {
+			aFilters.push("sources="+aSources.join(","));
+		}
+		if(sLang && sLang.length > 0 && sLang != "ru") {
+			aFilters.push("lang="+sLang.replace(/\s+/g, "_"));
+		}
 
 		if(aFilters.length>0) {
 
@@ -1321,6 +1329,7 @@ window.onload = function(){
       var nLevelEnd = sHash.match(/\ble=([\d]+)/);
       var sLang = sHash.match(/\blang=([\w]+)/);
       var sSchools = sHash.match(/\bschools=([\w,]+)/);
+      var sSources = sHash.match(/\bsources=([\w,_]+)/);
 
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
@@ -1358,6 +1367,19 @@ window.onload = function(){
       		}
       	});
       	$("#SchoolCombobox .combo_box_title").attr("data-val", sSchools[1])
+
+      }
+      if(sSources && sSources[1]) {
+      	var aSources = sSources[1].split(",");
+
+      	$("#SourceCombobox .combo_box_content input[type='checkbox']").each(function(){
+      		if(aSources.indexOf($(this).val())>-1) {
+      			$(this).prop('checked', true);
+      		} else {
+      			$(this).prop('checked', false);
+      		}
+      	});
+      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1])
 
       }
     } else {
