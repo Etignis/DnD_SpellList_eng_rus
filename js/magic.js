@@ -1300,9 +1300,9 @@ window.onload = function(){
     $('html, body').animate({scrollTop:0}, 'fast');
 
     var sHash = window.location.hash.slice(1); // /archive#q=spell_name
-    if(sHash && !/[^А-Яа-яЁё\w\d\/&?|_=-]/.test(sHash)) {
+    if(sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|_=-]/.test(sHash)) {
       var sName = sHash.match(/q=([А-Яа-яЁё\/\w\d_]+)/);
-      var sClass = sHash.match(/class=([А-Яа-яЁё\/\w\d_]+)/);
+      var sClass = sHash.match(/class=([\[\]А-Яа-яЁё\/\w\d_]+)/);
       var nLevelStart = sHash.match(/ls=([\d]+)/);
       var nLevelEnd = sHash.match(/le=([\d]+)/);
 

@@ -8248,18 +8248,18 @@ var allSpells = [
       "source": "PHB"
     }
   },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
   {
     "en": {
       "name": "Bane",
@@ -8448,7 +8448,7 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "1 hour",
       "source": "PHB"
-    }, 
+    },
 	"ru": {
 		"name": "Свобода передвижения",
 		"castingTime": "1 действие",
@@ -8761,7 +8761,7 @@ var allSpells = [
       "duration": "Instantaneous",
       "source": "PHB"
     },
-	
+
 	"ru": {
 		"name": "Восставший труп",
 		"castingTime": "1 минута",
@@ -8839,7 +8839,7 @@ var allSpells = [
       "components": "V, S, M",
       "duration": "Concentration, up to 1 minute",
       "source": "PHB"
-    }, 
+    },
 	"ru": {
       "name": "Развеять Зло и Добро",
       "level": "5",
@@ -9003,7 +9003,7 @@ var allSpells = [
 		"school": "преобразование",
 		"level": "2"
 	}
-  },  
+  },
   {
     "en": {
       "name": "Call Lightning",
@@ -9028,7 +9028,7 @@ var allSpells = [
 		"school": "призыв",
 		"level": "3"
 	}
-  },  
+  },
   {
     "en": {
       "name": "Giant Insect",
@@ -9483,48 +9483,21 @@ var allSpells = [
       "source": "PHB"
     }
   },
-  {
-    "en": {
-      "name": "Drawmij's Instant Summons",
-      "level": "6",
-	  "ritual": "ritual",
-      "text": "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.<br> At any time thereafter, you can use your action to speak the item’s name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.<br> If another creature is holding or carrying the item, crushing the sapphire doesn’t transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment. <br> Dispel magic or a similar effect successfully applied to the sapphire ends this spell’s effect.",
-      "school": "Conjuration",
-      "castingTime": "1 minute",
-      "range": "Touch",
-      "materials": "a sapphire w orth 1,000 gp",
-      "components": "V, S, M",
-      "duration": "Until dispelled",
-      "source": "PHB"
-    },
-	"ru": {
-		"name": "Мгновенный призыв Дромиджа",
-		"castingTime": "1 минута",
-		"range": "Касание",
-		"components": "В, С, М",
-		"duration": "До рассеивания",
-	    "ritual": "ритуал",
-		"materials": "сапфир стоимостью 1000 зм",
-		"text": "Вы касаетесь объекта весом не более 10 фунтов и размером не более 6 футов с любой из сторон. Заклинание оставляет невидимую отметку на его поверхности, а также наносит невидимое название объекта на сапфир, который вы использовали в качестве материального компонента. Каждый раз, когда вы произносите это заклинание, вы должны использовать другой сапфир.   В любой момент после этого, в качестве действия вы можете сказать название объекта и сломать сапфир. Названный объект <br>мгновенно появляется в вашей руке независимо от его физической или планарной дальности, а заклинание заканчивается.   Если другое существо держит его в руках, то разрушение сапфира не перемещает объект к вам, но вы узнаете, кто им владеет, и приблизительное местонахождение этого существа в данный момент.   Заклинание развеять магию или другой подобный эффект, примененные на сапфир, развеивают это заклинание.",
-		"school": "призыв",
-		"level": "6"
-	}
-  },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   {
     "en": {
@@ -10277,7 +10250,7 @@ var allSpells = [
       "materials": "",
       "duration": "Концентрация до 1 минуты",
       "source": "TOEE",
-	  "needHelp": true 
+	  "needHelp": true
     }
   },
   {
@@ -10644,19 +10617,19 @@ var allSpells = [
       "source": "TOEE"
     }
   },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   {
     "en": {
       "name": "BOOMING BLADE",
@@ -10682,7 +10655,7 @@ var allSpells = [
       "duration": "1 раунд",
       "source": "SCAG"
     }
-  }, 
+  },
   {
     "en": {
       "name": "GREEN-FLAME BLADE",
@@ -10708,7 +10681,7 @@ var allSpells = [
       "duration": "Мгновенно",
       "source": "SCAG"
     }
-  }, 
+  },
   {
     "en": {
       "name": "LIGHTNING LURE",
@@ -10734,7 +10707,7 @@ var allSpells = [
       "duration": "Мгновенно",
       "source": "SCAG"
     }
-  }, 
+  },
   {
     "en": {
       "name": "SWORD BURST",
