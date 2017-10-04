@@ -17,28 +17,28 @@ function getConfig(prop) {
 
 window.onload = function(){
 	var fCtrlIsPressed = false;
-	
+
 	var oTimer; // for TimeOut (filtering)
 	var nTimerSeconds = 100;
-	
+
 	var aHiddenSpells = [];
 	var aLockedSpells = {};
 	var filteredSpells = [];
-	
+
 	var oSource = {};
-	
+
 	function arrDiff(arr1, arr2) {
 		var arr3 = arr2.map(function(item){return item.en});
 		return arr1.filter(
-			function(item){ 
+			function(item){
 				return (arr3.indexOf(item.en.name)>=0)? false: true;
 			}
 		);
 	}
-	
+
 	function removeFromArr(arr, el) {
 		var index;
-		
+
 		for (var i=0; i<arr.length; i++) {
 			if(arr[i] == el) {
 				index = i;
@@ -48,7 +48,7 @@ window.onload = function(){
 		arr.splice(i, 1);
 		return arr
 	}
-	
+
 	function getViewPortSize(mod) {
 		var viewportwidth;
 		var viewportheight;
@@ -78,10 +78,10 @@ window.onload = function(){
 
 		if(mod=="width")
 			return viewportwidth;
-		
+
 		return viewportwidth + "~" + viewportheight;
 	}
-	
+
 	function createSelect(src, params) {
 		var options = "";
 		var selected_key = params.selected_key;
@@ -104,7 +104,7 @@ window.onload = function(){
 			var text = item.title;
 			if(text.length > min_width)
 				min_width = text.length/2;
-			options += "<li class='option' data-key='"+key+"'>"+text+"</li>"; 
+			options += "<li class='option' data-key='"+key+"'>"+text+"</li>";
 			if(key == selected_key){
 				lableText = text
 			}
@@ -115,13 +115,13 @@ window.onload = function(){
 
 		var list = "<ul class='list'>" + options + "</ul>";
 
-		var selectedKey = selected_key; 
+		var selectedKey = selected_key;
 		var label="<div class='label "+atr_class+"' data-selected-key='" + selectedKey + "' "+width+"'>" + lableText + "</div>";
 		var select = "<button " + id + " " + sParams + " class='customSelect "+sClass+"' "+width+"'>" + label + list + "</button>"
 
 		return select;
-	}	
-	
+	}
+
 	function createComboBox(src, param) {
 		var ARR_DOWN = '<i class="fa fa-arrow-down"></i>';
 		var ARR_UP = '<i class="fa fa-arrow-up"></i>';
@@ -138,18 +138,18 @@ window.onload = function(){
 			arrow="<div class='combo_box_arrow'><span class='arr_down'>"+ARR_DOWN+"</span><span class='arr_up' style='display:none'>"+ARR_UP+"</span></div>";
 			display = " style='display:none' ";
 			content_open = false;
-		}			
+		}
 		for (var i =0; i < src.length; i++) {
 			var type = src[i];
 			var max = Math.max(type.en.length, type.ru.length)/2;
 			if (max > min_width) {
 				min_width = max;
 			}
-			
+
 			var sOptionValue = type.key? type.key : type.en;
-			
+
 			ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
-			
+
 		}
 		min_width = min_width>20? 20: min_width;
 		min_width = min_width<5? 5: min_width;
@@ -157,12 +157,12 @@ window.onload = function(){
 		ret = "<div "+id+" class='combo_box' data-text='"+title+"' data-content-open='"+content_open+"'><div class='combo_box_title'>"+title+"</div><div class='combo_box_content' "+display+" >"+ret+"</div>"+arrow+"</div>";
 		return ret;
 	}
-	
+
 	function createInput(params){
 		var id = params.id? "id='"+params.id+"'" : "";
 		return "<div "+id+" class='customInput'><input type='text'><span class='cross'></span></div>";
 	}
-	
+
 	function showInfoWin(sText) {
 		if(!$(".mod_win_wrapper").length){
 			var bCross = "<span class='bCloseInfoWin'>×</span>";
@@ -184,14 +184,14 @@ window.onload = function(){
 	}
 	function hideDBG() {
 		if($("#dbg")){
-			$("#dbg").fadeOut();		
-		}		
+			$("#dbg").fadeOut();
+		}
 	}
-	
+
 	function pretifyString(s) {
 		return s.substr(0,1).toUpperCase() + s.substr(1);
 	}
-		
+
 	function createCard(spell, lang, sClass, sLockedSpell) {
 		if (spell[lang] || (lang="en", spell[lang])) {
 			var o = spell[lang];
@@ -206,30 +206,30 @@ window.onload = function(){
 			var s_level = o.level;
 			var s_source = o.source? o.source : spell.en.source? spell.en.source: "";
 			var st_castingTime, st_range, st_components, st_duration;
-			switch (lang){		
-				case "ru": 
-					s_level = s_level>0? s_level + " круг" : "Трюк"; 
+			switch (lang){
+				case "ru":
+					s_level = s_level>0? s_level + " круг" : "Трюк";
 					st_castingTime = "Время накладывания";
 					st_range = "Дистанция";
 					st_components = "Компоненты";
 					st_duration = "Длительность";
-					break;	
-				default: 
+					break;
+				default:
 					s_level = s_level>0? s_level + " lvl" : "Cantrip";
 					st_castingTime = "CASTING TIME";
 					st_range = "RANGE";
 					st_components = "COMPONENTS";
-					st_duration = "DURATION";	
+					st_duration = "DURATION";
 			}
 			var s_school = o.school;
 			var sNeedHelp = (spell.ru && spell.ru.needHelp)? "Как лучше перевести?" : "";
-			
+
 			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;
-			var bHideSpell = '<span class="bHideSpell" title="Скрыть заклинание (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';			
-			var bLockSpell = sLockedSpell? '<span class="bUnlockSpell" title="Открепить обратно"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>' : '<span class="bLockSpell" title="Закорепить заклинане (не будут действовать фильтры)"><i class="fa fa-lock" aria-hidden="true"></i></span>';			
-			
+			var bHideSpell = '<span class="bHideSpell" title="Скрыть заклинание (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';
+			var bLockSpell = sLockedSpell? '<span class="bUnlockSpell" title="Открепить обратно"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>' : '<span class="bLockSpell" title="Закорепить заклинане (не будут действовать фильтры)"><i class="fa fa-lock" aria-hidden="true"></i></span>';
+
 			sLockedSpell = sLockedSpell? " lockedSpell " : "";
-			
+
 			var sNameRu;
 			try{
 				spell.ru.name.length;
@@ -238,20 +238,20 @@ window.onload = function(){
 				console.log("!: "+spell.en.name);
 				sNameRu = spell.en.name;
 			}
-			
+
 			var title = spell.en.name;
 			if (lang=='en') {
 				title = (spell.ru && spell.ru.name)?spell.ru.name: spell.en.name;
 			}
-			
+
 			var textSizeButtons = "<div class='sizeButtonsContainer noprint'><a href='#' class='textMin' title='Уменьшить размер текста'>–</a><a href='#' class='textMax' title='Увеличить размер текста'>+</a></div>";
-			
-			var cardWidth = getConfig("cardWidth"); 
+
+			var cardWidth = getConfig("cardWidth");
 			var style = "";
 			if(cardWidth) {
 				var style = " style='width: " + cardWidth + "' ";
 			}
-			
+
 			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" '+ style +' data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
@@ -279,7 +279,7 @@ window.onload = function(){
 							'</div>'+
 						'</div>'+
 						'<div class="materials">' + s_materials + '</div>'+
-						'<div class="text">' + s_text + '</div>	'+	
+						'<div class="text">' + s_text + '</div>	'+
 						textSizeButtons +
 						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
 						'<b class="school">' + s_level + ", " + s_school + (s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</b>'+
@@ -292,8 +292,8 @@ window.onload = function(){
 			console.dir(spell);
 		}
 	}
-	
-	
+
+
 	function createSpellsIndex() {
 		var spells = "";
 		allSpells.forEach(function(item) {
@@ -313,17 +313,17 @@ window.onload = function(){
 		var aSchools = oParams.aSchools;
 		var aSources = oParams.aSources;
 		var sLang = oParams.sLang;
-		
+
 		var fHiddenSpells = (aHiddenSpells.length>0)? true: false;
 		var fLockedSpells = (aLockedSpells.length>0)? true: false;
-		
+
 		$(".spellContainer").empty();
 		var spells = "";
-		
+
 
 		filteredSpells = []; //arrDiff(filteredSpells, aHiddenSpells);
-		
-		
+
+
 		//class
 		var aSpells = [];
 		if(sClass) {
@@ -352,11 +352,11 @@ window.onload = function(){
 				})
 			}	else {
 				filteredSpells = allSpells;
-			} 
+			}
 		} else {
 			filteredSpells = allSpells;
 		}
-		
+
 		// level
 		/**/
 		if(nLevelStart && nLevelEnd) {
@@ -365,9 +365,9 @@ window.onload = function(){
 			});
 		}
 		/**/
-		
-		
-		//school		
+
+
+		//school
 		if(aSchools && aSchools.length>0 && aSchools.length<99) {
 			filteredSpells = filteredSpells.filter(function(spell){
 				for(var i = 0; i < aSchools.length; i++) {
@@ -378,8 +378,8 @@ window.onload = function(){
 				return false;
 			});
 		}
-		
-		//source		
+
+		//source
 		if(aSources && aSources.length>0 && aSources.length<9) {
 			filteredSpells = filteredSpells.filter(function(spell){
 				for(var i = 0; i < aSources.length; i++) {
@@ -391,7 +391,7 @@ window.onload = function(){
 				return false;
 			});
 		}
-			
+
 		// name
 		if (sName) {
 			sName = sName.toLowerCase().trim();
@@ -399,12 +399,12 @@ window.onload = function(){
 				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
 			});
 		}
-		
-		
+
+
 		filteredSpells = fHiddenSpells? arrDiff(filteredSpells, aHiddenSpells) : filteredSpells;
 		//filteredSpells = fLockedSpells? filteredSpells.concat(aLockedSpells) : filteredSpells;
 		if (fLockedSpells) {
-			for (var i = 0; i<allSpells.length; i++){	
+			for (var i = 0; i<allSpells.length; i++){
 				for (var j=0; j<aLockedSpells.length; j++){
 					if(allSpells[i].en.name == aLockedSpells[j].en) {
 						filteredSpells.push(allSpells[i]);
@@ -413,7 +413,7 @@ window.onload = function(){
 				}
 			}
 		}
-			
+
 		// sort
 		filteredSpells.sort(function(a, b) {
 			if(a[sLang] && b[sLang]) {
@@ -424,21 +424,21 @@ window.onload = function(){
 			}
 			return 0
 		});
-					
+
 		for (var i in filteredSpells) {
 			if(filteredSpells[i]) {
 				var fLocked = filteredSpells[i].locked? true: false;
 				var tmp = createCard(filteredSpells[i], sLang, sClass, fLocked)
 				if (tmp)
 					spells += tmp;
-			} 
+			}
 		}
 
 		$(".spellContainer").html(spells);
 		$("#before_spells").hide();
 		$("#info_text").hide();
 	}
-	
+
 	function filterSpells(oParams){
 		var sName = $("#NameInput input").val();
 		var sClass = $("#ClassSelect .label").attr("data-selected-key");
@@ -451,43 +451,43 @@ window.onload = function(){
 		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
-		
+
 		var fHidden = (aHiddenSpells.length>0)? true: false;
-		
+
 		setConfig("language", sLang);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			showFiltered({
-				sName: sName, 
-				sClass: sClass, 
-				sSubClass: sSubClass, 
-				sSubSubClass: sSubSubClass, 
-				nLevelStart: nLevelStart, 
-				nLevelEnd: nLevelEnd, 
-				aSchools: aSchools, 
+				sName: sName,
+				sClass: sClass,
+				sSubClass: sSubClass,
+				sSubSubClass: sSubSubClass,
+				nLevelStart: nLevelStart,
+				nLevelEnd: nLevelEnd,
+				aSchools: aSchools,
 				aSources: aSources,
 				sLang: sLang,
 				fHidden: fHidden
 				});
-		}, nTimerSeconds/4);		
-		
+		}, nTimerSeconds/4);
+
 	}
-	
+
 	function createButtons() {
 		var bHome = "<a href='/' class='bt flexChild' title='На главную страницу'><i class='fa fa-home'></i></a>";
 		var bInfo = "<a href='#' class='bt flexChild' id='bInfo' title='Справка'><i class='fa fa-question-circle'></i></a>";
 		var bPrint = "<a href='#' class='bt flexChild' id='bPrint' title='Распечатать'><i class='fa fa-print' aria-hidden='true'></i></a>";
-		$(".p_side").append("<div class='mediaWidth flexParent'>" + bHome + bInfo + bPrint + "</div>");		
-	}	
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + bHome + bInfo + bPrint + "</div>");
+	}
 	function createCardWidthButtons() {
 		var label = createLabel("Ширина карточек");
 		var bHome = "<a href='#' class='bt flexChild cardWidthMin' title='Сделать уже'><i class='fa fa-caret-right' aria-hidden='true'></i> <i class='fa fa-caret-left' aria-hidden='true'></i></a>";
 		var bInfo = "<a href='#' class='bt flexChild cardWidthNorm' title='Сделать нормальными'><i class='fa fa-square-o' aria-hidden='true'></i></a>";
 		var bPrint = "<a href='#' class='bt flexChild cardWidthMax' title='Сделать шире'><i class='fa fa-caret-left' aria-hidden='true'></i> <i class='fa fa-caret-right' aria-hidden='true'></i></a>";
-		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bHome + bInfo + bPrint + "</div>");		
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bHome + bInfo + bPrint + "</div>");
 	}
-	
+
 	function createLabel(text) {
 		return "<div class='filterLabel'>"+text+"</div>";
 	}
@@ -506,8 +506,8 @@ window.onload = function(){
 		}
 		var classSelect = createSelect(src, {id: "ClassSelect", selected_key: "[ALL]", width: "100%"});
 		var label = createLabel("Класс");
-		
-		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");		
+
+		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
 	}
 	function createSubClassSelect(sClass) {
 		$("#SubSubClassSelect").remove();
@@ -526,30 +526,30 @@ window.onload = function(){
 		}
 		var classSelect = createSelect(src, {id: "SubClassSelect", selected_key: "[NONE]", width: "100%"});
 		var label = createLabel("Класс");
-		
+
 		var index = 1;
 		if($("#SubClassSelect").length>0) {
 			index = $("button").index($("#SubClassSelect"));
 			$("#SubClassSelect").remove();
 		}
-		
+
 		if(src.length>1) {
 			$("#ClassSelect").parent().find("button").eq(index-1).after(classSelect);
 			//$("#ClassSelect").parent().append(classSelect);
 		} else {
 			$("#SubClassSelect").remove();
 		}
-		
-		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
+
+		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");
 	}
 	function createSubSubClassSelect(sClass, sSubClass) {
 		var src = [{
 			name: "[NONE]",
 		    title: "[ПОДПОДКЛАСС]"
 		}];
-		if(classSpells[sClass] && 
-			classSpells[sClass].subclasses && 
-			classSpells[sClass].subclasses[sSubClass] && 
+		if(classSpells[sClass] &&
+			classSpells[sClass].subclasses &&
+			classSpells[sClass].subclasses[sSubClass] &&
 			classSpells[sClass].subclasses[sSubClass].subclasses)
 		for (var i in classSpells[sClass].subclasses[sSubClass].subclasses){
 			src.push(
@@ -562,7 +562,7 @@ window.onload = function(){
 		var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%"});
 		var label = createLabel("Класс");
 		//src[0].title= "[Полкласс]";
-		
+
 		var index = 1;
 		if($("#SubSubClassSelect").length>0) {
 			index = $("button").index($("#SubSubClassSelect"));
@@ -570,14 +570,14 @@ window.onload = function(){
 		} else {
 			index = $("button").index($("#SubClassSelect"));
 		}
-		
+
 		if(src.length>1) {
 			$("#SubClassSelect").after(classSelect);
 			//$("#ClassSelect").parent().append(classSelect);
 		} else {
 			$("#SubSubClassSelect").remove();
 		}
-		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");		
+		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");
 	}
 	function createLevelSelect() {
 		var src = [];
@@ -593,9 +593,9 @@ window.onload = function(){
 		var s2 = createSelect(src, {id: "LevelEnd", selected_key: 9, width: "100%"});
 		var str = "<div class='row'><div class='cell'>"+s1+"</div><div class='cell'>"+s2+"</div></div>";
 		var label = createLabel("Уровень с/по");
-		$(".p_side").append("<div class='mediaWidth'>" + label + str + "</div>");	
+		$(".p_side").append("<div class='mediaWidth'>" + label + str + "</div>");
 	}
-	function createSchoolCombobox(isOpen) {	
+	function createSchoolCombobox(isOpen) {
 		if(isOpen == undefined)
 			isOpen = false;
 		var s1=createComboBox(schoolList.sort(function(a, b){
@@ -606,21 +606,21 @@ window.onload = function(){
 			return 0;
 		}), {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
-	}	
-	function createSourceCombobox(isOpen) {	
+	}
+	function createSourceCombobox(isOpen) {
 		if(isOpen == undefined)
 			isOpen = false;
 		var s1=createComboBox(sourceList, {id: "SourceCombobox", title: "Источники", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
-		
-		sourceList.forEach(function(el) {			
+
+		sourceList.forEach(function(el) {
 			oSource[el.key] = el.en;
 		});
 	}
 	function createNameFilter() {
 		var ret=createInput({id: "NameInput"});
 		var label = createLabel("Название");
-		$(".p_side").append("<div class='mediaWidth'>" + label + ret + "</div>");		
+		$(".p_side").append("<div class='mediaWidth'>" + label + ret + "</div>");
 	}
 	function createLangSelect(lang) {
 		var src = [
@@ -637,9 +637,9 @@ window.onload = function(){
 			lang = "ru";
 		var classSelect = createSelect(src, {id: "LangSelect", selected_key: lang, width: "100%"});
 		var label = createLabel("Язык");
-		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");	
+		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
 	}
-	
+
 	function createHiddenSpellsList(){
 		if(aHiddenSpells.length < 1){
 			$("#HiddenSpells").parent().remove();
@@ -652,11 +652,11 @@ window.onload = function(){
 		var listHiddenSpells = aHiddenSpells.map(function(item){
 			return "<a href='#' title='Вернуть на место' class='bUnhideSpell' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
 			}).join(" ");
-			
+
 		var bReturnAll = "<a href='#' class='bReturnUnvisible'>Вернуть все обратно</a>";
-		$("#HiddenSpells").html(bReturnAll + listHiddenSpells);			
+		$("#HiddenSpells").html(bReturnAll + listHiddenSpells);
 	}
-	
+
 	function createLockedSpellsArea(){
 		var aLocked = [];
 		for (var i in aLockedSpells){
@@ -674,7 +674,7 @@ window.onload = function(){
 					}
 				}
 			}
-			
+
 			if($("#lockedSpellsArea").length<1){
 				$(".p_cont").prepend("<div id='lockedSpellsArea'><span class='bUnlockAll'>Открепить все</span><span class='topHeader'></span><div class='content row'></div><span class='bottomHeader'></span></div>");
 
@@ -687,8 +687,8 @@ window.onload = function(){
 						return 1;
 				}
 				return 0
-			}).map(function(el){return createCard(el, el.lang, el.class, true)}));	
-			
+			}).map(function(el){return createCard(el, el.lang, el.class, true)}));
+
 			//COUNTER
 			$("#lockedSpellsArea .topHeader").html("("+l+")");
 			$(".spellContainer").addClass("noprint");
@@ -697,7 +697,7 @@ window.onload = function(){
 			$(".spellContainer").removeClass("noprint");
 		}
 	}
-	
+
 	function createSidebar() {
 		var lang = getConfig("language");
 		var schoolOpen = getConfig("schoolOpen");
@@ -710,33 +710,33 @@ window.onload = function(){
 		createSourceCombobox(sourceOpen);
 		createCardWidthButtons();
 		createLangSelect(lang);
-		
-		$(".p_side").fadeIn();	
+
+		$(".p_side").fadeIn();
 	}
-	
+
 
 	/// handlers
-	
+
 	// close Mod Win
-	$("body").on("click", ".bCloseInfoWin", function() {		
+	$("body").on("click", ".bCloseInfoWin", function() {
 		$("#dbg").fadeOut();
 		hideInfoWin();
 	});
-	
+
 	// hide DBG
 	$("body").on("click", "#dbg", function() {
 		$(this).fadeOut();
 		hideInfoWin();
 	});
-	
+
 	//custom Select
 	$("body").on("click", ".customSelect .label", function() {
 	  if($(this).next(".list").css('display') == 'none') {
-		$(this).parent().focus();		
+		$(this).parent().focus();
 	  }
 	  $(this).next(".list").fadeToggle();
 	});
-	$("body").on("focusout", ".customSelect", function() {	  
+	$("body").on("focusout", ".customSelect", function() {
 	  $(this).find(".list").fadeOut();
 	});
 	$("body").on("click", ".customSelect .option", function() {
@@ -746,9 +746,9 @@ window.onload = function(){
 	  $(this).parent("ul").fadeOut();
 	  $(this).closest(".customSelect").focusout();
 	  $(this).closest(".customSelect").blur();
-	  //$("#toFocus").focus();	  
+	  //$("#toFocus").focus();
 	});
-	
+
 	// custom Combobox
 	$("body").on('click', ".combo_box_title, .combo_box_arrow", function(){
 		var el = $(this).closest(".combo_box").find(".combo_box_content");
@@ -767,10 +767,10 @@ window.onload = function(){
 			el.parent().attr("data-content-open", true);
 		}
 	});// get item
-	
+
 	function onSelectItemPress(src) {
 		var d_root='', d_parent='', trig=true;
-		
+
 		var attrFor = src.attr("for"); // $("input#"+attrFor)
 		var oComboBox = src.closest(".combo_box");
 		var sComboBoxId = oComboBox.attr("id");
@@ -886,7 +886,7 @@ window.onload = function(){
 			$("body").attr("class", "");
 		}
 		/**/
-			
+
 		// bg /
 		return false;
 	}
@@ -902,27 +902,27 @@ window.onload = function(){
 		onSelectItemPress($(this));
 		return false;
 	});
-	
+
 	// custom Input
 	$("body").on('click', ".customInput .cross", function(){
 		$(this).parent().find("input").val("");
 		$(this).parent().focusout();
 	});
-	
+
 	// filters
-	
+
 	// name select
 	$("body").on('focusout', "#NameInput", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			filterSpells();
-		}, nTimerSeconds);		
+		}, nTimerSeconds);
 	});
 	$("body").on('keyup', "#NameInput input", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			filterSpells();
-		}, nTimerSeconds*3);		
+		}, nTimerSeconds*3);
 	});
 	// class select
 	$("body").on('focusout', "#ClassSelect", function(){
@@ -931,80 +931,80 @@ window.onload = function(){
 			filterSpells();
 			var sClass = $("#ClassSelect .label").attr("data-selected-key");
 			createSubClassSelect(sClass);
-		}, nTimerSeconds);		
+		}, nTimerSeconds);
 	});
 	// sub class select
 	$("body").on('focusout', "#SubClassSelect", function(){
 		clearTimeout(oTimer);
-		
+
 		oTimer = setTimeout(function(){
 			filterSpells();
 			var sClass = $("#ClassSelect .label").attr("data-selected-key");
 			var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
 			createSubSubClassSelect(sClass, sSubClass);
-		}, nTimerSeconds);		
+		}, nTimerSeconds);
 	});
 	// sub sub class select
 	$("body").on('focusout', "#SubSubClassSelect", function(){
 		clearTimeout(oTimer);
-		
+
 		oTimer = setTimeout(function(){
-			filterSpells();			
-		}, nTimerSeconds);		
+			filterSpells();
+		}, nTimerSeconds);
 	});
-	
+
 	// level select
 	$("body").on('focusout', "#LevelStart", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			filterSpells();
-		}, nTimerSeconds);		
+		}, nTimerSeconds);
 	});
 	$("body").on('focusout', "#LevelEnd", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			filterSpells();
-		}, nTimerSeconds);		
+		}, nTimerSeconds);
 	});
 	// school combobox
 	$("body").on('click', "#SchoolCombobox label", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			filterSpells();
-		}, nTimerSeconds);		
+		}, nTimerSeconds);
 	});
 	$("body").on('click', "#SchoolCombobox .combo_box_title, #SchoolCombobox .combo_box_arrow", function(){
-		setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));	
+		setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
 	});
-	
+
 	// source combobox
 	$("body").on('click', "#SourceCombobox label", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			filterSpells();
-		}, nTimerSeconds);		
+		}, nTimerSeconds);
 	});
 	$("body").on('click', "#SourceCombobox .combo_box_title, #SourceCombobox .combo_box_arrow", function(){
-		setConfig("sourceOpen", $("#SourceCombobox").attr("data-content-open"));	
+		setConfig("sourceOpen", $("#SourceCombobox").attr("data-content-open"));
 	});
-	
+
 	// lang select
 	$("body").on('focusout', "#LangSelect", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			filterSpells();
-		}, nTimerSeconds);		
+		}, nTimerSeconds);
 	});
-	
+
 	// show all spells
 	$("body").on('click', "#showAllSpells", function(){
 		setConfig("infoIsShown", true);
-		filterSpells();	
+		filterSpells();
 		hideInfoWin();
 		hideDBG();
 		return false;
 	});
-	
+
 	//info_textbInfo
 	$("body").on('click', "#bInfo", function(){
 		var sInfo = $("#info_text").html();
@@ -1012,19 +1012,19 @@ window.onload = function(){
 		showInfoWin(sInfo);
 		return false;
 	});
-	
+
 
 	//hide spells
 	$("body").on('click', ".bHideSpell", function(){
 		var sName, sNameRu;
-		
+
 		var nSelectedCards = $(".spellCard.selected").length;
 		if(nSelectedCards > 0) {
 			var oButtonLock = $(this);
 			$(".spellCard.selected").each(function() {
 				sName = $(this).closest(".cardContainer").attr("data-name");
 				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
-				
+
 				oButtonLock.hide();
 				// update hidden spells array
 				aHiddenSpells.push({en: sName, ru: sNameRu});
@@ -1032,15 +1032,15 @@ window.onload = function(){
 		} else {
 			sName = $(this).closest(".cardContainer").attr("data-name");
 			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
-			
+
 			$(this).hide();
 			// update hidden spells array
-			aHiddenSpells.push({en: sName, ru: sNameRu}); 			
+			aHiddenSpells.push({en: sName, ru: sNameRu});
 		}
-		
+
 		// show list of hidden spells
 		createHiddenSpellsList();
-		
+
 		// show spells without hidden
 		filterSpells({fHidden: true});
 	})
@@ -1048,30 +1048,30 @@ window.onload = function(){
 	$("body").on('click', ".bUnhideSpell", function(){
 		var sName = $(this).attr("data-name")
 		// update hidden spells array
-		aHiddenSpells.splice(aHiddenSpells.map(function(el){return el.en}).indexOf(sName), 1); 
-		
+		aHiddenSpells.splice(aHiddenSpells.map(function(el){return el.en}).indexOf(sName), 1);
+
 		// show list of hidden spells
 		createHiddenSpellsList();
-		
+
 		// show spells without hidden
 		filterSpells({fHidden: true});
-		
+
 		return false;
 	})
 	$("body").on("click", ".bReturnUnvisible", function() {
 		aHiddenSpells = [];// show list of hidden spells
 		createHiddenSpellsList();
-		
+
 		// show spells without hidden
 		filterSpells({fHidden: true});
-		
+
 		return false;
 	});
-	
+
 	// lock spells
 	$("body").on('click', ".bLockSpell", function(){
-		var sName, sNameRu, sLang, sClass;		
-			
+		var sName, sNameRu, sLang, sClass;
+
 		var nSelectedCards = $(".spellCard.selected").length;
 		if(nSelectedCards > 0) {
 			$(".spellCard.selected").each(function() {
@@ -1079,7 +1079,7 @@ window.onload = function(){
 				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
 				sLang = $(this).closest(".cardContainer").attr("data-lang");
 				sClass= $(this).closest(".cardContainer").attr("data-class");
-				
+
 				aLockedSpells[sName] = {
 					ru: sNameRu,
 					lang: sLang,
@@ -1091,24 +1091,24 @@ window.onload = function(){
 			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
 			sLang = $(this).closest(".cardContainer").attr("data-lang");
 			sClass= $(this).closest(".cardContainer").attr("data-class");
-			
-			
+
+
 			aLockedSpells[sName] = {
 				ru: sNameRu,
 				lang: sLang,
 				class: sClass
 				};
 		}
-		
+
 		// show locked
 		createLockedSpellsArea();
 		deselectAllCards();
 	})
-	
+
 	// unlock spells
 	$("body").on('click', ".bUnlockSpell", function(){
-		var sName;		
-		
+		var sName;
+
 		var nSelectedCards = $(".spellCard.selected").length;
 		if(nSelectedCards > 0) {
 			$(".spellCard.selected").each(function() {
@@ -1119,7 +1119,7 @@ window.onload = function(){
 			sName = $(this).closest(".cardContainer").attr("data-name");
 			delete aLockedSpells[sName];
 		}
-		
+
 		// show locked
 		createLockedSpellsArea();
 		deselectAllCards();
@@ -1133,13 +1133,13 @@ window.onload = function(){
 		// show locked
 		createLockedSpellsArea();
 	});
-	
+
 	$("body").on('click', "#bPrint", function(){
 		window.print();
-		
+
 		return false;
 	});
-		
+
 	// text size
 	$("body").on('click', ".textMin", function() {
 		var f_s=$(this).parent().parent().find(".text").css("font-size");
@@ -1153,11 +1153,11 @@ window.onload = function(){
 		var sFontSize = f_s+"px";
 		var sLineHeight = f_s-1+"px";
 	    $(this).parent().parent().find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
-		
+
 		$(".spellCard.selected").each(function() {
 			$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 		});
-		
+
 		return false;
 	});
 	$("body").on('click', ".textMax", function() {
@@ -1170,13 +1170,13 @@ window.onload = function(){
 		var sFontSize = f_s+"px";
 		var sLineHeight = f_s-1+"px";
 	    $(this).parent().parent().find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
-				
+
 		$(".spellCard.selected").each(function() {
 			$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 		});
 		return false;
 	});
-	
+
 	// card width
 	$("body").on("click", ".cardWidthMin", function() {
 		var width;
@@ -1190,10 +1190,10 @@ window.onload = function(){
 		} else{
 			width = $(".cardContainer").eq(0).width();
 			width = width-20+"px";
-			$('.cardContainer').width(width);   
+			$('.cardContainer').width(width);
 			setConfig("cardWidth", width);
 		}
-		
+
 	});
 	$("body").on("click", ".cardWidthMax", function() {
 		var width;
@@ -1207,7 +1207,7 @@ window.onload = function(){
 		} else {
 			width = $(".cardContainer").eq(0).width();
 			width = (width+20)+"px";
-			$('.cardContainer').width(width);   
+			$('.cardContainer').width(width);
 			setConfig("cardWidth", width);
 		}
 	});
@@ -1215,21 +1215,21 @@ window.onload = function(){
 		var width = "2.5in";
 		var nSelectedCards = $(".spellCard.selected").length;
 		if(nSelectedCards > 0) {
-			$(".spellCard.selected").each(function() {				
+			$(".spellCard.selected").each(function() {
 				$(this).parent().width(width);
 			});
 		} else {
-			$('.cardContainer').width(width);     
-			setConfig("cardWidth", width); 
+			$('.cardContainer').width(width);
+			setConfig("cardWidth", width);
 		}
 	});
-	
+
 	$(document).keydown(function(event){
 		// CTRL pressed
 		if(event.which=="17") {
 			fCtrlIsPressed = true;
 		}
-		
+
 		// A pressed
 		if(event.which=="65" && fCtrlIsPressed) {
 			if($(".spellCard.selected").length == $(".spellCard").length) {
@@ -1246,21 +1246,55 @@ window.onload = function(){
 	$(document).keyup(function(){
 		fCtrlIsPressed = false;
 	});
-	
+
 	// card select/deselect
 	$("body").on("click", ".spellCard", function() {
 		if(fCtrlIsPressed)
 			$(this).toggleClass("selected");
 	});
-			
+
+
+// url filters
+  function getHash(){
+    $('html, body').animate({scrollTop:0}, 'fast');
+
+    var sHash = window.location.hash.slice(1); // /archive#q=spell_name
+    if(sHash && !/[^\w\d\/&?|_=-]/.test(sHash)) {
+      var sName = sHash.match(/q=([\w\d_]+)/);
+      if(sName && sName[1]) {
+      	$("#NameInput input").val(sName[1].replace(/_/g," "));
+      	//filterSpells();
+      } else {
+      	/*/
+        $('html, body').animate({
+          scrollTop: $("#"+sHash).offset().top
+        }, 200);
+        /**/
+      }
+    } else {
+      removeHash();
+      //hideClerFilter();
+    }
+    filterSpells();
+  }
+
+  function removeHash() {
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+    return false;
+  }
+  window.onhashchange = getHash;
+
+// /url filters
+
+
 	$.when(createSidebar()).done(
 		function(){
 			$("#showAllSpells").slideDown();
 			if(getViewPortSize("width") > 600){
 				if(getConfig("infoIsShown")==true)
-					filterSpells();
-
+					getHash();
+					//filterSpells();
 			}
 		}
 	);
-}; 
+};
