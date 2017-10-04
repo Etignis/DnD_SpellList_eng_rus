@@ -959,12 +959,14 @@ window.onload = function(){
 	$("body").on('focusout', "#LevelStart", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 		}, nTimerSeconds);
 	});
 	$("body").on('focusout', "#LevelEnd", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 		}, nTimerSeconds);
 	});
@@ -1270,9 +1272,20 @@ window.onload = function(){
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
 
-		//#q=spell_name
-		if(sName && sName.length>0) {
-			var sHash = "q="+sName.replace(/\s+/g, "_");
+		//#q=spell_name&ls=0&le=9
+		var aFilters = [];
+			if(sName && sName.length>0) {
+				aFilters.push("q="+sName.replace(/\s+/g, "_"));
+			}
+			if(nLevelStart && nLevelStart>=0 && nLevelStart<=9) {
+				aFilters.push("ls="+nLevelStart);
+			}
+			if(nLevelEnd && nLevelEnd>=0 && nLevelEnd<=9) {
+				aFilters.push("le="+nLevelEnd);
+			}
+		if(aFilters.length>0) {
+
+			var sHash = aFilters.join("&");
 			window.location.hash = sHash;
 		} else {
 			removeHash();
@@ -1284,15 +1297,17 @@ window.onload = function(){
     var sHash = window.location.hash.slice(1); // /archive#q=spell_name
     if(sHash && !/[^А-Яа-яЁё\w\d\/&?|_=-]/.test(sHash)) {
       var sName = sHash.match(/q=([А-Яа-яЁё\/\w\d_]+)/);
+      var nLevelStart = sHash.match(/ls=([\d]+)/);
+      var nLevelEnd = sHash.match(/le=([\d]+)/);
+
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
-      	//filterSpells();
-      } else {
-      	/*/
-        $('html, body').animate({
-          scrollTop: $("#"+sHash).offset().top
-        }, 200);
-        /**/
+      }
+      if(nLevelStart && nLevelStart[1]) {
+      	$("#LevelStart .label").attr("data-selected-key", nLevelStart[1]).text(nLevelStart[1]);
+      }
+      if(nLevelEnd && nLevelEnd[1]) {
+      	$("#LevelEnd .label").attr("data-selected-key", nLevelEnd[1]).text(nLevelEnd[1]);
       }
     } else {
       removeHash();
