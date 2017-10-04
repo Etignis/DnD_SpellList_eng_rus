@@ -1305,7 +1305,7 @@ window.onload = function(){
     history.pushState("", document.title, window.location.pathname + window.location.search);
     return false;
   }
-  window.onhashchange = getHash;
+  //window.onhashchange = getHash;
 
 // /url filters
 
