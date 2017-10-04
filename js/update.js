@@ -1,10 +1,10 @@
 var oInfo = {
   title: "Новая версия",
   url: "www.tentaculus.ru/spells",
-  resume: "Исправлены заклинания 'Доспех агатиса', 'Опутывание', 'Адское возмездие'",
+  resume: "Теперь значения фильтров фиксируются в URL",
   details: "",
   date: "26.09.2017",
-  version: "2.2.3"
+  version: "2.2.4"
 }
 
 function showMessage(oParams) {	
