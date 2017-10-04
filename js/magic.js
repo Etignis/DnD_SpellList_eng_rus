@@ -1278,13 +1278,13 @@ window.onload = function(){
 		if(sName && sName.length>0) {
 			aFilters.push("q="+sName.replace(/\s+/g, "_"));
 		}
-		if(nLevelStart && nLevelStart>=0 && nLevelStart<=9) {
+		if(nLevelStart && nLevelStart>0 && nLevelStart<=9) {
 			aFilters.push("ls="+nLevelStart);
 		}
-		if(nLevelEnd && nLevelEnd>=0 && nLevelEnd<=9) {
+		if(nLevelEnd && nLevelEnd>=0 && nLevelEnd<9) {
 			aFilters.push("le="+nLevelEnd);
 		}
-		if(sClass && sClass.length > 0) {
+		if(sClass && sClass.length > 0 && sClass != "[ALL]") {
 			aFilters.push("class="+sClass.replace(/\s+/g, "_"));
 		}
 
