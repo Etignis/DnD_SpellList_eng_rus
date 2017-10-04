@@ -915,12 +915,14 @@ window.onload = function(){
 	$("body").on('focusout', "#NameInput", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 		}, nTimerSeconds);
 	});
 	$("body").on('keyup', "#NameInput input", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 		}, nTimerSeconds*3);
 	});
@@ -1255,14 +1257,35 @@ window.onload = function(){
 
 
 // url filters
+	function updateHash() {
+		var sName = $("#NameInput input").val();
+		var sClass = $("#ClassSelect .label").attr("data-selected-key");
+		var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
+		var sSubSubClass = $("#SubSubClassSelect .label").attr("data-selected-key");
+		var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
+		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
+		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
+			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
+		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
+			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
+		var sLang = $("#LangSelect .label").attr("data-selected-key");
+
+		//#q=spell_name
+		if(sName && sName.length>0) {
+			var sHash = "q="+sName.trim().replace(/\s+/g, "_");
+			window.location.hash = sHash;
+		} else {
+			removeHash();
+		}
+	}
   function getHash(){
     $('html, body').animate({scrollTop:0}, 'fast');
 
     var sHash = window.location.hash.slice(1); // /archive#q=spell_name
-    if(sHash && !/[^\w\d\/&?|_=-]/.test(sHash)) {
-      var sName = sHash.match(/q=([\w\d_]+)/);
+    if(sHash && !/[^А-Яа-яЁё\w\d\/&?|_=-]/.test(sHash)) {
+      var sName = sHash.match(/q=([А-Яа-яЁё\w\d_]+)/);
       if(sName && sName[1]) {
-      	$("#NameInput input").val(sName[1].replace(/_/g," "));
+      	$("#NameInput input").val(sName[1].replace(/[_]+/g," ").trim());
       	//filterSpells();
       } else {
       	/*/
