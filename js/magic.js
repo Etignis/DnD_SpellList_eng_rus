@@ -930,10 +930,10 @@ window.onload = function(){
 	$("body").on('focusout', "#ClassSelect", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
-			updateHash();
 			filterSpells();
 			var sClass = $("#ClassSelect .label").attr("data-selected-key");
 			createSubClassSelect(sClass);
+			updateHash();
 		}, nTimerSeconds);
 	});
 	// sub class select
@@ -941,11 +941,11 @@ window.onload = function(){
 		clearTimeout(oTimer);
 
 		oTimer = setTimeout(function(){
-			updateHash();
 			filterSpells();
 			var sClass = $("#ClassSelect .label").attr("data-selected-key");
 			var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
 			createSubSubClassSelect(sClass, sSubClass);
+			updateHash();
 		}, nTimerSeconds);
 	});
 	// sub sub class select
