@@ -941,6 +941,7 @@ window.onload = function(){
 		clearTimeout(oTimer);
 
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 			var sClass = $("#ClassSelect .label").attr("data-selected-key");
 			var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
@@ -952,6 +953,7 @@ window.onload = function(){
 		clearTimeout(oTimer);
 
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 		}, nTimerSeconds);
 	});
@@ -1287,6 +1289,12 @@ window.onload = function(){
 		if(sClass && sClass.length > 0 && sClass != "[ALL]") {
 			aFilters.push("class="+sClass.replace(/\s+/g, "_"));
 		}
+		if(sSubClass && sSubClass.length > 0 && sSubClass != "[NONE]") {
+			aFilters.push("subclass="+sSubClass.replace(/\s+/g, "_"));
+		}
+		if(sSubSubClass && sSubSubClass.length > 0 && sSubSubClass != "[NONE]") {
+			aFilters.push("subsubclass="+sSubSubClass.replace(/\s+/g, "_"));
+		}
 
 		if(aFilters.length>0) {
 
@@ -1301,16 +1309,28 @@ window.onload = function(){
 
     var sHash = window.location.hash.slice(1); // /archive#q=spell_name
     if(sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|_=-]/.test(sHash)) {
-      var sName = sHash.match(/q=([А-Яа-яЁё\/\w\d_]+)/);
-      var sClass = sHash.match(/class=([\[\]А-Яа-яЁё\/\w\d_]+)/);
-      var nLevelStart = sHash.match(/ls=([\d]+)/);
-      var nLevelEnd = sHash.match(/le=([\d]+)/);
+      var sName = sHash.match(/\bq=([А-Яа-яЁё\/\w\d_]+)/);
+      var sClass = sHash.match(/\bclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
+      var sSubClass = sHash.match(/\bsubclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
+      var sSubSubClass = sHash.match(/\bsubsubclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
+      var nLevelStart = sHash.match(/\bls=([\d]+)/);
+      var nLevelEnd = sHash.match(/\ble=([\d]+)/);
 
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
       }
       if(sClass && sClass[1]) {
       	$("#ClassSelect .label").attr("data-selected-key", sClass[1]).html($("#ClassSelect li[data-key='"+sClass[1]+"']").html().replace("<br>", " | "));
+      	var sClass = $("#ClassSelect .label").attr("data-selected-key");
+				createSubClassSelect(sClass);
+      }
+      if(sSubClass && sSubClass[1]) {
+      	$("#SubClassSelect .label").attr("data-selected-key", sSubClass[1]).html($("#SubClassSelect li[data-key='"+sSubClass[1]+"']").html().replace("<br>", " | "));
+      	var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
+				createSubSubClassSelect(sClass, sSubClass);
+      }
+      if(sSubSubClass && sSubSubClass[1]) {
+      	$("#SubSubClassSelect .label").attr("data-selected-key", sSubSubClass[1]).html($("#SubSubClassSelect li[data-key='"+sSubSubClass[1]+"']").html().replace("<br>", " | "));
       }
       if(nLevelStart && nLevelStart[1]) {
       	$("#LevelStart .label").attr("data-selected-key", nLevelStart[1]).text(nLevelStart[1]);
