@@ -977,6 +977,7 @@ window.onload = function(){
 	$("body").on('click', "#SchoolCombobox label", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 		}, nTimerSeconds);
 	});
@@ -1273,7 +1274,7 @@ window.onload = function(){
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
 		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
-		var sLang = $("#LangSelect .label").attr("data-selected-key");
+		//var sLang = $("#LangSelect .label").attr("data-selected-key");
 
 		//#q=spell_name&ls=0&le=9
 		var aFilters = [];
@@ -1295,6 +1296,9 @@ window.onload = function(){
 		if(sSubSubClass && sSubSubClass.length > 0 && sSubSubClass != "[NONE]") {
 			aFilters.push("subsubclass="+sSubSubClass.replace(/\s+/g, "_"));
 		}
+		if(aSchools && aSchools.length>0 && aSchools.length<8) {
+			aFilters.push("schools="+aSchools.join(","));
+		}
 
 		if(aFilters.length>0) {
 
@@ -1308,13 +1312,15 @@ window.onload = function(){
     $('html, body').animate({scrollTop:0}, 'fast');
 
     var sHash = window.location.hash.slice(1); // /archive#q=spell_name
-    if(sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|_=-]/.test(sHash)) {
+    if(sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|,_=-]/.test(sHash)) {
       var sName = sHash.match(/\bq=([А-Яа-яЁё\/\w\d_]+)/);
       var sClass = sHash.match(/\bclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
       var sSubClass = sHash.match(/\bsubclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
       var sSubSubClass = sHash.match(/\bsubsubclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
       var nLevelStart = sHash.match(/\bls=([\d]+)/);
       var nLevelEnd = sHash.match(/\ble=([\d]+)/);
+      var sLang = sHash.match(/\blang=([\w]+)/);
+      var sSchools = sHash.match(/\bschools=([\w,]+)/);
 
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
@@ -1337,6 +1343,22 @@ window.onload = function(){
       }
       if(nLevelEnd && nLevelEnd[1]) {
       	$("#LevelEnd .label").attr("data-selected-key", nLevelEnd[1]).text(nLevelEnd[1]);
+      }
+      if(sLang && sLang[1]) {
+      	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']").html().replace("<br>", " | "));
+      }
+      if(sSchools && sSchools[1]) {
+      	var aSchools = sSchools[1].split(",");
+
+      	$("#SchoolCombobox .combo_box_content input[type='checkbox']").each(function(){
+      		if(aSchools.indexOf($(this).val())>-1) {
+      			$(this).prop('checked', true);
+      		} else {
+      			$(this).prop('checked', false);
+      		}
+      	});
+      	$("#SchoolCombobox .combo_box_title").attr("data-val", sSchools[1])
+
       }
     } else {
       removeHash();
