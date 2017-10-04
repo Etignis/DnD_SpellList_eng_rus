@@ -930,6 +930,7 @@ window.onload = function(){
 	$("body").on('focusout', "#ClassSelect", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
+			updateHash();
 			filterSpells();
 			var sClass = $("#ClassSelect .label").attr("data-selected-key");
 			createSubClassSelect(sClass);
@@ -1274,15 +1275,19 @@ window.onload = function(){
 
 		//#q=spell_name&ls=0&le=9
 		var aFilters = [];
-			if(sName && sName.length>0) {
-				aFilters.push("q="+sName.replace(/\s+/g, "_"));
-			}
-			if(nLevelStart && nLevelStart>=0 && nLevelStart<=9) {
-				aFilters.push("ls="+nLevelStart);
-			}
-			if(nLevelEnd && nLevelEnd>=0 && nLevelEnd<=9) {
-				aFilters.push("le="+nLevelEnd);
-			}
+		if(sName && sName.length>0) {
+			aFilters.push("q="+sName.replace(/\s+/g, "_"));
+		}
+		if(nLevelStart && nLevelStart>=0 && nLevelStart<=9) {
+			aFilters.push("ls="+nLevelStart);
+		}
+		if(nLevelEnd && nLevelEnd>=0 && nLevelEnd<=9) {
+			aFilters.push("le="+nLevelEnd);
+		}
+		if(sClass && sClass.length > 0) {
+			aFilters.push("class="+sClass.replace(/\s+/g, "_"));
+		}
+
 		if(aFilters.length>0) {
 
 			var sHash = aFilters.join("&");
@@ -1297,11 +1302,15 @@ window.onload = function(){
     var sHash = window.location.hash.slice(1); // /archive#q=spell_name
     if(sHash && !/[^А-Яа-яЁё\w\d\/&?|_=-]/.test(sHash)) {
       var sName = sHash.match(/q=([А-Яа-яЁё\/\w\d_]+)/);
+      var sClass = sHash.match(/class=([А-Яа-яЁё\/\w\d_]+)/);
       var nLevelStart = sHash.match(/ls=([\d]+)/);
       var nLevelEnd = sHash.match(/le=([\d]+)/);
 
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
+      }
+      if(sClass && sClass[1]) {
+      	$("#ClassSelect .label").attr("data-selected-key", sClass[1]).html($("#ClassSelect li[data-key='"+sClass[1]+"']").html().replace("<br>", " | "));
       }
       if(nLevelStart && nLevelStart[1]) {
       	$("#LevelStart .label").attr("data-selected-key", nLevelStart[1]).text(nLevelStart[1]);
