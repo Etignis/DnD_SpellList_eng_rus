@@ -1386,6 +1386,7 @@ window.onload = function(){
       removeHash();
       //hideClerFilter();
     }
+    //$("body").css("border-top", "1px solid red");
     filterSpells();
   }
 
@@ -1400,12 +1401,14 @@ window.onload = function(){
 
 	$.when(createSidebar()).done(
 		function(){
+      //$("body").css("border-top", "1px solid blue");
 			$("#showAllSpells").slideDown();
 			if(getViewPortSize("width") > 600){
 				if(getConfig("infoIsShown")==true)
 					getHash();
 					//filterSpells();
 			} else{
+        //setTimeout(getHash, 1000);
         getHash();
       }
 		}
