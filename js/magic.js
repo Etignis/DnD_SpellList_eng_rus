@@ -1405,7 +1405,9 @@ window.onload = function(){
 				if(getConfig("infoIsShown")==true)
 					getHash();
 					//filterSpells();
-			}
+			} else{
+        getHash();
+      }
 		}
 	);
 };
