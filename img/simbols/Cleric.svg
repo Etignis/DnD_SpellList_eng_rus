@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="250.000000pt"
+   height="250.000000pt"
+   viewBox="0 0 250.000000 250.000000"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg1475"
+   sodipodi:docname="Cleric.svg"
+   inkscape:version="0.92.1 r15371">
+  <defs
+     id="defs1479" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview1477"
+     showgrid="false"
+     inkscape:zoom="8.0101056"
+     inkscape:cx="181.13744"
+     inkscape:cy="167.51471"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1475" />
+  <metadata
+     id="metadata1467">
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <g
+     transform="translate(0.000000,250.000000) scale(0.100000,-0.100000)"
+     fill="#000000"
+     stroke="none"
+     id="g1473">
+    <path
+       d="M1270 2319 c0 -71 -35 -264 -57 -317 -31 -73 -64 -96 -170 -118 -53 -12 -68 -11 -104 1 -23 9 -44 13 -46 11 -2 -2 2 -31 10 -65 17 -72 6 -142 -32 -207 -31 -51 -127 -115 -195 -130 l-51 -10 42 -22 c23 -12 68 -46 100 -76 50 -46 65 -68 91 -136 26 -66 32 -95 32 -158 0 -43 -4 -93 -10 -111 -5 -19 -8 -36 -6 -39 2 -2 36 41 74 95 l70 97 -30 35 c-141 161 -118 455 47 599 69 61 110 76 227 80 98 4 111 2 162 -21 69 -32 144 -101 179 -165 81 -149 69 -349 -29 -477 -19 -25 -34 -48 -34 -51 0 -9 133 -195 136 -191 2 1 -1 20 -6 42 -20 84 -12 175 21 260 26 67 41 89 92 138 34 32 80 68 102 80 l40 21 -50 9 c-66 13 -159 76 -195 134 -36 56 -47 135 -30 210 6 30 10 57 7 59 -2 2 -23 -2 -46 -11 -36 -12 -51 -13 -104 -1 -34 7 -80 22 -102 34 -57 29 -88 107 -110 277 -14 114 -25 167 -25 124z"
+       id="path1469" />
+    <path
+       d="m 1271,1704 c -1,-17 -11,-24 -48,-33 -44,-12 -48,-11 -66,11 l -18,23 6,-31 c 5,-26 1,-37 -26,-63 -29,-29 -34,-31 -62,-22 -43,16 -45,14 -14,-12 26,-20 27,-26 21,-65 -4,-24 -13,-46 -20,-48 -46,-14 -49,-17 -20,-23 24,-5 32,-14 41,-46 11,-37 10,-42 -13,-67 l -25,-28 33,10 c 31,9 37,7 67,-22 25,-24 30,-35 23,-49 -18,-33 -9,-44 14,-16 36,44 56,28 56,-43 0,-33 5,-62 11,-66 18,-11 1,-746 -17,-790 -8,-18 -14,-55 -14,-82 0,-46 2,-49 40,-71 l 40,-22 35,21 c 33,20 35,25 35,75 0,29 -6,68 -14,86 -17,42 -32,774 -16,784 6,3 10,32 10,65 0,74 21,88 62,39 l 27,-32 -11,37 c -11,35 -10,39 18,66 26,27 33,29 63,20 l 34,-10 -26,28 c -19,20 -24,31 -17,42 5,8 10,25 10,36 0,23 17,34 51,34 11,0 17,5 14,10 -3,6 -17,10 -30,10 -24,0 -28,6 -40,67 -5,27 -2,34 20,49 32,21 27,27 -12,14 -28,-10 -33,-8 -63,22 -29,29 -32,35 -22,60 12,33 6,36 -17,7 -15,-19 -21,-20 -59,-9 -28,7 -46,19 -52,33 -2.4458,65.0706 -9,22 -9,1 z"
+       id="path1471"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccsccscccsccsccccccccsscscccsccccc" />
+  </g>
+</svg>
