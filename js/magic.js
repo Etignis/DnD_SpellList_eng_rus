@@ -1,4 +1,4 @@
-var TENTACULUS_APP_VERSION = "2.2.4";
+var TENTACULUS_APP_VERSION = "2.2.5";
 
 var oConfig = {}; // global app config data
 function setConfig(prop, val) {
