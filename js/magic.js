@@ -340,7 +340,7 @@ window.onload = function(){
 					var fFind = false;
 					for (var i = 0; i<allSpells.length; i++){
 
-						if(allSpells[i].en.name == spellName) {
+						if(allSpells[i].en.name.toLowerCase() == spellName.toLowerCase()) {
 							filteredSpells.push(allSpells[i]);
 							fFind = true;
 							break;
@@ -435,6 +435,7 @@ window.onload = function(){
 		}
 
 		$(".spellContainer").html(spells);
+    $(".spellContainer").attr("data-spellCount", filteredSpells.length);
 		$("#before_spells").hide();
 		$("#info_text").hide();
 	}
@@ -1423,7 +1424,7 @@ window.onload = function(){
       			$(this).prop('checked', false);
       		}
       	});
-      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1])
+      	$("#SourceCombobox .combo_box_title").attr("data-val", sSources[1])
 
       }
     } else {

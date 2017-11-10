@@ -10,6 +10,8 @@ var classSpells = {
 			"Pyrotechnics",
 			"Skywrite",
 			"Warding Wind",
+			"Bonding vine",
+			"Grasping sprout",      
 		
 		  "Blade Ward",
 		  "Dancing Lights",
@@ -22,6 +24,10 @@ var classSpells = {
 		  "Prestidigitation",
 		  "True Strike",
 		  "Vicious Mockery",
+		  "Bridge of branches",
+		  "Overgrowth",
+		  "Rapport spores",
+		  "Slicing leaves",
 		
 		
 		  "Animal Friendship",
@@ -45,6 +51,7 @@ var classSpells = {
 		  "Tasha's Hideous Laughter",
 		  "Thunderwave",
 		  "Unseen Servant",
+		  "Arm of the wild",
 		
 		
 		  "Animal Messenger",
@@ -69,6 +76,8 @@ var classSpells = {
 		  "Silence",
 		  "Suggestion",
 		  "Zone of Truth",
+		  "Engulfing thorns",
+		  "Spray of thorns",
 		
 		
 		  "Bestow Curse",
@@ -87,6 +96,7 @@ var classSpells = {
 		  "Speak with Plants",
 		  "Stinking Cloud",
 		  "Tongues",
+		  "Cloud of spores",
 		
 		
 		  "Compulsion",
@@ -97,6 +107,7 @@ var classSpells = {
 		  "Hallucinatory Terrain",
 		  "Locate Creature",
 		  "Polymorph",
+		  "Mind spore",
 		
 		
 		  "Animate Objects",
@@ -167,6 +178,8 @@ var classSpells = {
 		  "Sacred Flame",
 		  "Spare the Dying",
 		  "Thaumaturgy",
+		  "Bonding vine",
+		  "Thorn shield",
 		
 		
 		  "Bane",
@@ -184,6 +197,8 @@ var classSpells = {
 		  "Purify Food and Drink",
 		  "Sanctuary",
 		  "Shield of Faith",
+		  "Bridge of branches",
+		  "Rapport spores",
 		
 		
 		  "Aid",
@@ -203,6 +218,8 @@ var classSpells = {
 		  "Spiritual Weapon",
 		  "Warding Bond",
 		  "Zone of Truth",
+		  "Fell",
+		  "Spray of thorns",
 		
 		
 		  "Animate Dead",
@@ -225,6 +242,7 @@ var classSpells = {
 		  "Spirit Guardians",
 		  "Tongues",
 		  "Water Walk",
+		  "Mind spore",
 		
 		
 		  "Banishment",
@@ -522,6 +540,11 @@ var classSpells = {
 		"Investiture of Wind",
 		"Primordial Ward",
 		"Whirlwind",
+		"Bonding vine",
+		"Grasping sprout",
+		"Piercing thorn",
+		"Mold plant",
+		"Thorn shield",
 		
 		  "Druidcraft",
 		  "Guidance",
@@ -549,6 +572,11 @@ var classSpells = {
 		  "Purify Food and Drink",
 		  "Speak with Animals",
 		  "Thunderwave",
+		  "Bridge of branches",
+		  "Gaea’s hand",
+		  "Overgrowth",
+		  "Rapport spores",
+		  "Slicing leaves",
 		
 		
 		  "Animal Messenger",
@@ -569,6 +597,8 @@ var classSpells = {
 		  "Pass without Trace",
 		  "Protection from Poison",
 		  "Spike Growth",
+		  "Arm of the wild",
+		  "Explosive seed",
 		
 		
 		  "Call Lightning",
@@ -584,6 +614,9 @@ var classSpells = {
 		  "Water Breathing",
 		  "Water Walk",
 		  "Wind Wall",
+		  "Engulfing thorns",
+		  "Skewering branch",
+		  "Spray of thorns",
 		
 		
 		  "Blight",
@@ -602,6 +635,9 @@ var classSpells = {
 		  "Stone Shape",
 		  "Stoneskin",
 		  "Wall of Fire",
+		  "Cloud of spores",
+		  "Conjure minor plant creatures",
+		  "Tree strike",
 		
 		
 		  "Antilife Shell",
@@ -618,6 +654,8 @@ var classSpells = {
 		  "Scrying",
 		  "Tree Stride",
 		  "Wall of Stone",
+		  "Mind spore",
+		  "Conjure plant creature",
 		
 		
 		  "Conjure Fey",
@@ -629,6 +667,7 @@ var classSpells = {
 		  "Transport via Plants",
 		  "Wall of Thorns",
 		  "Wind Walk",
+		  "Dryad’s leap",
 		
 		
 		  "Fire Storm",
@@ -887,6 +926,7 @@ var classSpells = {
 		  "Magic Weapon",
 		  "Protection from Poison",
 		  "Zone of Truth",
+		  "Sporecaller’s smite",
 		
 		
 		  "Aura of Vitality",
@@ -1026,6 +1066,8 @@ var classSpells = {
 		  "Jump",
 		  "Longstrider",
 		  "Speak with Animals",
+		  "Gaea’s hand",
+		  "Slicing leaves",
 		
 		
 		  "Animal Messenger",
@@ -1041,6 +1083,7 @@ var classSpells = {
 		  "Protection from Poison",
 		  "Silence",
 		  "Spike Growth",
+		  "Arm of the wild",
 		
 		
 		  "Conjure Animals",
@@ -1053,7 +1096,11 @@ var classSpells = {
 		  "Speak with Plants",
 		  "Water Breathing",
 		  "Water Walk",
-		  "Wind Wall",
+		  "Wind Wall",		
+		  "Engulfing thorns",
+		  "Fell",
+		  "Skewering branch",
+		  "Spray of thorns",
 		
 		
 		  "Conjure Woodland Beings",
@@ -1061,12 +1108,15 @@ var classSpells = {
 		  "Grasping Vine",
 		  "Locate Creature",
 		  "Stoneskin",
+		  "Conjure minor plant creatures",
+		  "Tree strike",
 		
 		
 		  "Commune with Nature",
 		  "Conjure Volley",
 		  "Swift Quiver",
-		  "Tree Stride"
+		  "Tree Stride",
+		  "Conjure plant creature"
 		]
 	},
 	Sorcerer: {
@@ -1080,6 +1130,9 @@ var classSpells = {
 		"GREEN-FLAME BLADE",
 		"LIGHTNING LURE",
 		"SWORD BURST",
+		"Bonding vine",
+		"Piercing thorn",
+		"Mold plant",
 	  
 	  "Create Bonfire",
     "Control Flames",
@@ -1114,6 +1167,10 @@ var classSpells = {
     "Abi-Dalzim’s Horrid Wilting",
     "Absorb Elements",
     "Maelstrom",
+    "Bridge of branches",
+    "Overgrowth",
+    "Rapport spores",
+    "Slicing leaves",
 		
 		  "Acid Splash",
 		  "Blade Ward",
@@ -1153,6 +1210,8 @@ var classSpells = {
 		  "Sleep",
 		  "Thunderwave",
 		  "Witch Bolt",
+		  "Arm of the wild",
+		  "Explosive seed",
 		
 		
 		  "Alter Self",
@@ -1179,6 +1238,9 @@ var classSpells = {
 		  "Spider Climb",
 		  "Suggestion",
 		  "Web",
+		  "Engulfing thorns",
+		  "WeFellb",
+		  "Skewering branch",
 		
 		
 		  "Blink",
@@ -1201,6 +1263,8 @@ var classSpells = {
 		  "Tongues",
 		  "Water Breathing",
 		  "Water Walk",
+		  "Cloud of spores",
+		  "Tree strike",
 		
 		
 		  "Banishment",
@@ -1272,7 +1336,8 @@ var classSpells = {
 	  	"BOOMING BLADE",
 		"GREEN-FLAME BLADE",
 		"LIGHTNING LURE",
-		"SWORD BURST",
+		"Bonding vine",
+		"Piercing thorn",
 
 	   "Create Bonfire",
     "Frostbite",
@@ -1284,6 +1349,9 @@ var classSpells = {
     "Investiture of Ice",
     "Investiture of Stone",
     "Investiture of Wind",
+    "Gaea’s hand",
+    "Rapport spores",
+    "Slicing leaves",
 		
 		  "Blade Ward",
 		  "Chill Touch",
@@ -1294,6 +1362,7 @@ var classSpells = {
 		  "Poison Spray",
 		  "Prestidigitation",
 		  "True Strike",
+		  "Explosive seed",
 		
 		
 		  "Armor of Agathys",
@@ -1321,6 +1390,9 @@ var classSpells = {
 		  "Shatter",
 		  "Spider Climb",
 		  "Suggestion",
+		  "Fell",
+		  "Skewering branch",
+		  "Spray of thorns",
 		
 		
 		  "Counterspell",
@@ -1474,6 +1546,25 @@ var classSpells = {
 		"GREEN-FLAME BLADE",
 		"LIGHTNING LURE",
 		"SWORD BURST",
+		"Bonding vine",
+		"Grasping sprout",
+		"Piercing thorn",
+		"Mold plant",
+		"Bridge of branches",
+		"Gaea’s hand",
+		"Overgrowth",
+		"Rapport spores",
+		"Slicing leaves",
+		"Arm of the wild",
+		"Explosive seed",
+		"Engulfing thorns",
+		"Fell",
+		"Skewering branch",
+		"Spray of thorns",
+		"Cloud of spores",
+		"Conjure minor plant creatures",
+		"Mind spore",
+		"Conjure plant creature",
 	  
 	 
 	  "Create Bonfire",

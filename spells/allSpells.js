@@ -6575,7 +6575,7 @@ var allSpells = [
       "name": "Meld into Stone",
       "ritual": "ritual",
       "level": "3",
-      "text": "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses. While merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move. Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered.",
+      "text": "You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses. While merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move. Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 bludgeoning damage to you. The stone's complete destruction (or Transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered.",
       "school": "Transmutation",
       "castingTime": "1 action",
       "range": "Touch",
@@ -9608,7 +9608,7 @@ var allSpells = [
       "name": "Bones of the Earth",
       "level": "6",
       "text": "You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of difficult terrain with a 10-foot radius. The rubble lasts until cleared. If a pillar is created under a creature, that creature must succeed on a Dexterity saving throw or be lifted by the pillar. A creature can choose to fail the save. If a pillar is prevented from reaching its full height because of a ceiling or other obstacle, a creature on the pillar takes 6d6 bludgeoning damage and is restrained, pinched between the pillar and the obstacle. The restrained creature can use an action to make a Strength or Dexterity check (the creature’s choice) against the spell’s saving throw DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it. At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, you can create two additional pillars for each slot level above 6th.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "120 feet",
       "components": "V, S",
@@ -9634,7 +9634,7 @@ var allSpells = [
       "name": "Catapult",
       "level": "1",
       "text": "Choose one object weighing 1 to 5 pounds within range that isn’t being worn or carried. The object flies in a straight line up to 90 feet in a direction you choose before falling to the ground, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw. On a failed save, the object strikes the target and stops moving. In either case, both the object and the creature or solid surface take 3d8 bludgeoning damage. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of objects that you can target with this spell increases by 5 pounds, and the damage increases by 1d8, for each slot level above 1st.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "150 feet",
       "components": "S",
@@ -9686,7 +9686,7 @@ var allSpells = [
       "name": "Control Winds",
       "level": "5",
       "text": "You take control of the air in a 100-foot cube that you can see within range. Choose one of the following effects when you cast the spell. The effect lasts for the spell’s duration, unless you use your action on a later turn to switch to a different effect. You can also use your action to temporarily halt the effect or to restart one you’ve halted. Gusts. A wind picks up within the cube, continually blowing in a horizontal direction that you choose. You choose the intensity of the wind: calm, moderate, or strong. If the wind is moderate or strong, ranged weapon attacks that pass through it or that are made against targets within the cube have disadvantage on their attack rolls. If the wind is strong, any creature moving against the wind must spend 1 extra foot of movement for each foot moved. Downdraft. You cause a sustained blast of strong wind to blow downward from the top of the cube. Ranged weapon attacks that pass through the cube or that are made against targets within it have disadvantage on their attack rolls. A creature must make a Strength saving throw if it flies into the cube for the first time on a turn or starts its turn there flying. On a failed save, the creature is knocked prone. Updraft. You cause a sustained updraft within the cube, rising upward from the cube’s bottom edge. Creatures that end a fall within the cube take only half damage from the fall. When a creature in the cube makes a vertical jump, the creature can jump up to 10 feet higher than normal.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "300 feet",
       "components": "V, S",
@@ -9738,7 +9738,7 @@ var allSpells = [
       "name": "Dust Devil",
       "level": "2",
       "text": "Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force that resembles a dust devil appears in the cube and lasts for the spell’s duration. Any creature that ends its turn within 5 feet of the dust devil must make a Strength saving throw. On a failed save, the creature takes 1d8 bludgeoning damage and is pushed 10 feet away. On a successful save, the creature takes half as much damage and isn’t pushed. As a bonus action, you can move the dust devil up to 30 feet in any direction. If the dust devil moves over sand, dust, loose dirt, or small gravel, it sucks up the material and forms a 10-foot-radius cloud of debris around itself that lasts until the start of your next turn. The cloud heavily obscures its area. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
-      "school": "conjuration",
+      "school": "Conjuration",
       "castingTime": "1 action",
       "range": "60 feet",
       "components": "V, S, M",
@@ -9790,7 +9790,7 @@ var allSpells = [
       "name": "Earthbind",
       "level": "2",
       "text": "Choose one one creature you can see within range. Yellow strips of magical energy loop around the creature. The target must succeed on a Strength saving throw or its flying speed (if any) is reduced to 0 feet for the spell’s duration. An airborne creature affected by this spell descends at 60 feet per round until it reaches the ground or the spell ends.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "300 feet",
       "components": "V",
@@ -9816,7 +9816,7 @@ var allSpells = [
       "name": "Elemental Bane",
       "level": "4",
       "text": " Choose one creature you can see within range, and choose one of the following damage types: acid, cold, fire, lightning, or thunder. The target must succeed on a Constitution saving throw or be affected by the spell for its duration. The first time each turn the affected target takes damage of the chosen type, the target takes an extra 2d6 damage of that type. Moreover, the target loses any resistance to that damage type until the spell ends. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "90 feet",
       "components": "V, S",
@@ -9842,7 +9842,7 @@ var allSpells = [
       "name": "Erupting Earth",
       "level": "3",
       "text": "Choose a point you can see on the ground within range. A fountain of churned earth and stone erupts in a 20-foot cube centered on that point. Each creature in that area must make a Dexterity saving throw. A creature takes 3d12 bludgeoning damage on a failed save, or half as much damage on a successful one. Additionally, the ground in that area becomes difficult terrain until cleared away. Each 5-foot-square portion of the area requires at least 1 minute to clear by hand. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d12 for each slot level above 2nd.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "120 feet",
       "components": "V, S, M",
@@ -9867,7 +9867,7 @@ var allSpells = [
       "name": "Flame Arrows",
       "level": "3",
       "text": " You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra 1d6 fire damage. The spell’s magic ends on the piece of ammunition when it hits or misses, and the spell ends when twelve pieces of ammunition have been drawn from the quiver. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "Touch",
       "components": "V, S",
@@ -9945,7 +9945,7 @@ var allSpells = [
       "name": "Ice Knife",
       "level": "1",
       "text": "You create a shard of ice and fling it at one creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 piercing damage. Hit or miss, the shard then explodes. The target and each creature within 5 feet of the point where the ice exploded must succeed on a Dexterity saving throw or take 2d6 cold damage. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the cold damage increases by 1d6 for each slot level above 1st.",
-      "school": "conjuration",
+      "school": "Conjuration",
       "castingTime": "1 action",
       "range": "60 feet",
       "components": "S, M",
@@ -9997,7 +9997,7 @@ var allSpells = [
       "name": "Investiture of Flame",
       "level": "6",
       "text": " Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell’s duration. The flames don’t harm you. Until the spell ends, you gain the following benefits: <br> - You are immune to fire damage and have resistance to cold damage. <br> - Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes 1d10 fire damage. <br> - You can use your action to create a line of fire 15 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 4d8 fire damage on a failed save, or half as much damage on a successful one.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "Self",
       "components": "V, S",
@@ -10023,7 +10023,7 @@ var allSpells = [
       "name": "Investiture of Ice",
       "level": "6",
       "text": " Until the spell ends, ice rimes your body, and you gain the following benefits: <br> - You are immune to cold damage and have resistance to fire damage. <br> - You can move across difficult terrain created by ice or snow without spending extra movement. <br> - The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you. <br> - You can use your action to create a 15-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes 4d6 cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "Self",
       "components": "V, S",
@@ -10049,7 +10049,7 @@ var allSpells = [
       "name": "Investiture of Stone",
       "level": "6",
       "text": " Until the spell ends, bits of rock spread across your body, and you gain the following benefits: <br> - You have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons. <br> - You can use your action to create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a Dexterity saving throw or be knocked prone. <br> - You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can’t end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are stunned until the end of your next turn.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "Self",
       "components": "V, S",
@@ -10075,7 +10075,7 @@ var allSpells = [
       "name": "Investiture of Wind",
       "level": "6",
       "text": " Until the spell ends, wind whirls around you, and you gain the following benefits: <br> - Ranged weapon attacks made against you have disadvantage on the attack roll. <br> - You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it. <br> - You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Constitution saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "Self",
       "components": "V, S",
@@ -10153,7 +10153,7 @@ var allSpells = [
       "name": "Maximilian’s Earthen Grasp",
       "level": "2",
       "text": "You choose a 5-foot-square unoccupied space on the ground that you can see within range. A Medium hand made from compacted soil rises there and reaches for one creature you can see within 5 feet of it. The target must make a Strength saving throw. On a failed save, the target takes 2d6 bludgeoning damage and is restrained for the spell’s duration. As an action, you can cause the hand to crush the restrained target, who must make a Strength saving throw. It takes 2d6 bludgeoning damage on a failed save, or half as much damage on a successful one. To break out, the restrained target can make a Strength check against your spell save DC. On a success, the target escapes and is no longer restrained by the hand. As an action, you can cause the hand to reach for a different creature or to move to a different unoccupied space within range. The hand releases a restrained target if you do either.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "30 feet",
       "components": "V, S, M",
@@ -10258,7 +10258,7 @@ var allSpells = [
       "name": "Pyrotechnics",
       "level": "2",
       "text": " Choose an area of flame that you can see and that can fit within a 5-foot cube within range. You can extinguish the fire in that area, and you create either fireworks or smoke. Fireworks. The target explodes with a dazzling display of colors. Each creature within 10 feet of the target must succeed on a Constitution saving throw or become blinded until the end of your next turn. Smoke. Thick black smoke spreads out from the target in a 20-foot radius, moving around corners. The area of the smoke is heavily obscured. The smoke persists for 1 minute or until a strong wind disperses it.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "60 feet",
       "components": "V, S",
@@ -10310,7 +10310,7 @@ var allSpells = [
       "name": "Skywrite",
       "level": "2",
       "text": " You cause up to ten words to form in a part of the sky you can see. The words appear to be made of cloud and remain in place for the spell’s duration. The words dissipate when the spell ends. A strong wind can disperse the clouds and end the spell early.",
-      "school": "transmutation ",
+      "school": "Transmutation ",
       "castingTime": "1 action",
       "range": "Sight",
       "components": "V, S",
@@ -10414,7 +10414,7 @@ var allSpells = [
       "name": "Tidal Wave",
       "level": "3",
       "text": "You conjure up a wave of water that crashes down on an area within range. The area can be up to 30 feet long, up to 10 feet wide, and up to 10 feet tall. Each creature in that area must make a Dexterity saving throw. On a failure, a creature takes 4d8 bludgeoning damage and is knocked prone. On a success, a creature takes half as much damage and isn’t knocked prone. The water then spreads out across the ground in all directions, extinguishing unprotected flames in its area and within 30 feet of it.",
-      "school": "conjuration",
+      "school": "Conjuration",
       "castingTime": "1 action",
       "range": "120 feet",
       "components": "V, S, M",
@@ -10440,7 +10440,7 @@ var allSpells = [
       "name": "Transmute Rock",
       "level": "5",
       "text": "You choose an area of stone or mud that you can see that fits within a 40-foot cube and that is within range, and choose one of the following effects. Transmute Rock to Mud. Nonmagical rock of any sort in the area becomes an equal volume of thick and flowing mud that remains for the spell’s duration. If you cast the spell on an area of ground, it becomes muddy enough that creatures can sink into it. Each foot that a creature moves through the mud costs 4 feet of movement, and any creature on the ground when you cast the spell must make a Strength saving throw. A creature must also make this save the first time it enters the area on a turn or ends its turn there. On a failed save, a creature sinks into the mud and is restrained, though it can use an action to end the restrained condition on itself by pulling itself free of the mud. If you cast the spell on a ceiling, the mud falls. Any creature under the mud when it falls must make a Dexterity saving throw. A creature takes 4d8 bludgeoning damage on a failed save, or half as much damage on a successful one. Transmute Mud to Rock. Nonmagical mud or quicksand in the area no more than 10 feet deep transforms into soft stone for the spell’s duration. Any creature in the mud when it transforms must make a Dexterity saving throw. On a failed save, a creature becomes restrained by the rock. The restrained creature can use an action to try to break free by succeeding on a Strength check (DC 20) or by dealing 25 damage to the rock around it. On a successful save, a creature is shunted safely to the surface to an unoccupied space.",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 action",
       "range": "120 feet",
       "components": "V, S, M",
@@ -10544,7 +10544,7 @@ var allSpells = [
       "name": "Watery Sphere",
       "level": "4",
       "text": "You conjure up a sphere of water with a 10-foot radius on a point you can see within range. The sphere can hover in the air, but no more than 10 feet off the ground. The sphere remains for the spell’s duration. Any creature in the sphere’s space must make a Strength saving throw. On a successful save, a creature is ejected from that space to the nearest unoccupied space outside it. A Huge or larger creature succeeds on the saving throw automatically. On a failed save, a creature is restrained by the sphere and is engulfed by the water. At the end of each of its turns, a restrained target can repeat the saving throw. The sphere can restrain a maximum of four Medium or smaller creatures or one Large creature. If the sphere restrains a creature in excess of these numbers, a random creature that was already restrained by the sphere falls out of it and lands prone in a space within 5 feet of it. As an action, you can move the sphere up to 30 feet in a straight line. If it moves over a pit, cliff, or other drop, it safely descends until it is hovering 10 feet over ground. Any creature restrained by the sphere moves with it. You can ram the sphere into creatures, forcing them to make the saving throw, but no more than once per turn. When the spell ends, the sphere falls to the ground and extinguishes all normal flames within 30 feet of it. Any creature restrained by the sphere is knocked prone in the space where it falls.",
-      "school": "conjuration",
+      "school": "Conjuration",
       "castingTime": "1 action",
       "range": "90 feet",
       "components": "V, S, M",
@@ -10732,6 +10732,607 @@ var allSpells = [
       "materials": "",
       "duration": "Мгновенно",
       "source": "SCAG"
+    }
+  },
+  
+  
+  
+  {
+    "en": {
+      "name": "Arm of the Wild",
+      "level": "2",
+      "text": "You transform one of your arms into an extendable vine whose end sticks to any surface that it touches. The arm cannot be used to wield any objects or weapons. On every turn within the duration, including the turn that you cast the spell, you can make either of the following actions:<br> <b>Grab Creature.</b>As a bonus action, you extend your vine arm forward, attempting to pull one creature you choose within 20 feet of you. The target must succeed on a Dexterity saving throw or be pulled 10 feet directly towards you.<br> <b>Grab Surface.</b> As a bonus action, you extend your vine arm forward, pulling yourself to a hard surface such as a wall or ceiling within 20 feet of you. If this movement would cause you to be suspended off the ground, you remain so until you take an action or the concentration ends.",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "self",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 minute.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "Рука-лоза",
+      "level": "2",
+      "text": "Вы превращаете одну из ваших рук в удлиняющуюся лозу, чей конец прилипает к любой поверхности,к которой прикоснется. Вы не можете этой рукой использовать оружие, объекты или предметы, но можете совершать следующие действия:<br><b>Захват существа.</b> Бонусным действием вы выбрасываете свою лозу вперед, пытаясь захватить одну цель в пределах 20 футов от вас. Цель должна преуспеть в спасброске по Ловкости или будет подтянута на 10 футов к вам.<br><b>Прицепиться к поверхности.</b>Бонусным действием в ваш ход, или реакцией когда вы падаете, вы можете притянуться к стене или потолку,зацепившись за них своей рукой из лозы, в пределах 20 футов от вас. Вы можете оставаться подвешенным, пока не решите отцепиться или концентрация не закончится.",
+      "castingTime": "1 бонусное действие",
+      "range": "на себя",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация, до 1 минуты",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Bonding Vine",
+      "level": "0",
+      "text": "Choose one creature you can see within range. That creature must succeed on a Dexterity Saving throw or become connected to you with a magical vine. A Huge or smaller creature that you are connected with must make a Strength saving throw whenever they attempt to move to a point more than 20 feet away from you. A Huge creature makes this save with advantage. On a failed save, their speed is reduced to zero until the start of their next turn. On a successful save, the vine snaps, and they are freed.",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "20 feet",
+      "components": "V, S, M",
+      "materials": "(a small twig)",
+      "duration": "1 minute.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ОПЛЕТАЮЩАЯ ЛОЗА",
+      "level": "0",
+      "text": "Выберете видимое вами существо в пределах даль-ности заклинания. Это существо должно преуспетьв спасброске Ловкости или будет связано с вамисозданной вами лозой. Связанное существо должноделать проверку Силы против сложности вашихзаклинаний всякий раз, когда оно пытается пере-меститься на расстоянии более 20 футов от вас. Су-щества, превосходящие вас по размеру, совершаютэту проверку с преимуществом. В случае проваласущество не может более передвигаться в этот ход,а при успехе - лоза исчезает и заклинание заканчи-вается.",
+      "school": "Призыв",
+      "castingTime": "1 минута",
+      "range": "20 футов",
+      "components": "В, С, М",
+      "materials": "(маленькая веточка)",
+      "duration": "Мгновенно",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Bridge of Branches",
+      "level": "1",
+      "school": "Conjuration",
+      "ritual": "ritual",
+      "castingTime": "1 action",
+      "range": "10 feet",
+      "components": "V, S, M",
+      "materials": "(a small twig)",
+      "duration": "1 minute.",
+       "text": "You cause large branches to sprout from a surface, creating a makeshift bridge up to 20 feet in length. The bridge can hold up to 600 pounds at once. The bridge has AC 10 and 50 hit points. If the bridge is reduced to zero hit points, the entire bridge collapses and immediately withers away.<br> <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the bridge’s length increases by 10 feet, its weight limit increases by 100 pounds, and its hit points increase by 25 for each slot level above 1st.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ МОСТ",
+      "level": "1",
+      "text": "Вы призываете крупные ветви, которые прорастаютиз указанной вами точке на поверхности, создаваявременный мост длиной до 20 футов. Мост можетвыдержать нагрузку до 600 фунтов за один раз,имеет КД 10 и 50 ОЗ. Если прочность моста умень-шается до нуля, то он обрушивается и немедленноувядает.<br><b>а более высоких кругах.</b> Если вы наклады-ваете это заклинание, используя ячейку 2 круга иливыше, длина моста увеличивается на 10 футов,грузоподъемность на 100 фунтов, а его ОЗ - на 25за каждый круг выше второго.",
+      "school": "Призыв",
+      "ritual": "ритуал",
+      "castingTime": "1 действие",
+      "range": "10 футов",
+      "components": "В, С, М",
+      "materials": "(веточка дерева)",
+      "duration": "1 час",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Cloud of Spores",
+      "level": "4",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S, M",
+      "materials": "(a fungal spore)",
+      "duration": "Concentration, up to 1 minute",
+       "text": "You conjure a 10-foot radius cloud of hallucination spores centered on a point you can see within range. The cloud spreads around corners, and its area is lightly obscured. It lasts for the duration or until a strong wind disperses it, ending the spell.<br> When a creature enters the spell’s area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. On a failed save, the creature takes 2d8 poison damage and becomes poisoned until the start of their next turn. A poisoned target is incapacitated and its speed is reduced to 0 while it hallucinates. On a successful save, a creature instead takes half damage and suffers no other effect. Creatures are affected even if they hold their breath or don’t need to breathe.<br> <b>t Higher Levels.</b> When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ОБЛАКО СПОР",
+      "level": "4",
+      "text": "Облако галлюциногенных спор заполняет сферу ра-диусом 20 футов вокруг указанной точки в пределахдальности заклинания. Туман огибает углы и про-должается до тех пор, пока действует заклинание,или пока сильный ветер не развеет его. Областьдействия считается сильно затемненной. Когда су-щество впервые за ход входит в область действияили начинает свой ход в ней, оно должно сделатьспасбросок Телосложения. В случае провала оно по-лучает 2к8 урона ядом, а в случае успеха - полови-ну этого урона и не отравляется. Отравленная цельнедееспособна, и ее скорость снижается до 0, пока она галлюцинирует. Существа подвергаются воздей-ствию заклинания, даже если они задерживают ды-хание или вовсе не нуждаются в дыхании.<b>На более высоких кругах.</b> Если вы наклады-ваете заклинание, используя ячейку 5 круга или вы-ше, то урон увеличивается на 1к8 за каждый кругвыше четвертого.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В, С, М",
+      "materials": "(грибные споры)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Conjure Minor Plant Creatures",
+      "level": "4",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "90 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 hour",
+       "text": "You summon plant creatures that appear in unoccupied spaces that you can see within range. You choose one the following options for what appears:<br> • One plant creature of challenge rating 2 or lower<br> • Two plant creatures of challenge rating 1 or lower<br> • Four plant creatures of challenge rating 1/2 or lower<br> • Eight plant creatures of challenge rating 1/4 or lower.<br> A plant creature summoned by this spell disappears when it drops to 0 hit points or when the spell ends.<br> The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions. The DM has the creatures’ Statistics.<br> <b>At Higher Levels.</b> When you cast this spell using certain higher-level Spell Slots, you choose one of the summoning options above, and more creatures appear - twice as many with a 6th-level slot and three times as many with an 8th-level slot",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ПРИЗЫВ МАЛЫХ ДРЕВНЕЙ",
+      "level": "4",
+      "text": "Вы призываете древней, которые появляются в не-занятых местах, которые вы можете видеть в преде-лах дальности заклинания<br>• Один древень с показателем опасности 2 илиниже.<br>• Два древня с показателем опасности 1 или ни-же.<br>• Четыре древня с показателем опасности 1/2или ниже<br>• Восемь древней с показателем опасности 1/4или ниже.<br>Древни исчезают, когда их хиты опускаются до 0или когда заклинание оканчивается. Призванныесущества дружественны к вам и вашим спутникам.Они подчиняются отданным вами устно командам(действие не требуется). Если вы не отдаёте коман-ду, они защищаются от враждебных существ, нодействий не совершают.<br><b>На более высоких кругах.</b> Если вы произноси-те заклинание, используя ячейку 6 круга, то можетевызвать в два раза больше существ, за ячейку 8круга в три раза",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "90 футов",
+      "components": "В, C",
+      "materials": "",
+      "duration": "Концентрация, вплоть до 1 часа",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Conjure Plant Creature",
+      "level": "5",
+      "school": "Conjuration",
+      "castingTime": "1 minute",
+      "range": "90 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 hour",
+       "text": "You call forth a plant creature to serve you. Choose an area of plant life that fills a 10-foot cube within range. A plant creature of challenge rating 5 or lower appears in an unoccupied space within 10 feet of it. <br> The creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. lt obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the creature, it defends itself from hostile creatures but otherwise takes no actions. <br> If your concentration is broken, the plant creature doesn't disappear. Instead, you lose control of it, it becomes hostile toward you and your companions, and it might attack. An uncontrolled creature can't be dismissed by you, and it disappears 1 hour after you summoned it. <br> The DM has the creature's statistics.<br>  At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "Призыв Древня",
+      "level": "5",
+      "text": "Выберите область из живых растений в пределахдальности заклинания, которая заполняет куб состороной 10 футов. Взрослый древень с уровнемопасности 5 или ниже появляется в незанятом мес-те в пределах 10 футов. Он исчезает, когда его ОЗпадают до 0, или когда заклинание заканчивается.Древень дружественнен по отношению к вам и ва-шим союзникам. Он подчиняется вашим вербаль-ным приказам (действия не требуется), если они непротиворечат его мировоззрению. Если вы не отда-ете никаких приказов, то древень защищает себя отвраждебных существ, и не совершает других дейст-вий. Если ваша концентрация нарушена, то древеньстановится враждебным по отношению к вам и ва-шим союзникам и может атаковать. Неконтролиру-емого древня нельзя отозвать, и он исчезает черезчас после призыва.<br><b>На более высоких кругах.</b> Если вы наклады-ваете это заклинание, используя ячейку 6 круга иливыше, показатель опасности увеличивается на 1 закаждый круг выше пятого.",
+      "school": "Призыв",
+      "castingTime": "1 минута",
+      "range": "90 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация, вплоть до 1 часа",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Dryad’s Leap",
+      "level": "6",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "400 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 10 minutes",
+       "text": "You choose up to 10 Large or larger inanimate plants that you can see within range. For the duration, you and up to 10 other creatures of your choice within range can step into one of these plants and exit from any of the other plants targeted by this spell by using 5 feet of movement. Each creature may only use this ability once per round. <br> <b>At Higher Levels.</b> When you cast this spell using a spell slot of 7th level or higher, the range increases by 200 feet and the maximum number of plants and creatures chosen increases by 2 for each slot level above 6th.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ПУТИ ДРИАДЫ",
+      "level": "6",
+      "text": "Вы выбираете до 10 больших или огромных неоду-шевленных деревьев, которые можете видеть в пре-делах дальности заклинания. Пока заклинаниедействует, вы и до 10 других существ по вашемувыбору могут войти в одно из этих деревьев и вый-ти из любого, на которое нацелено это заклинание,используя 5 футов передвижения. Каждое существоможет использовать этот способ перемещения толь-ко раз за раунд.<br><b>На более высоких кругах.</b> Если вы накладыва-ете заклинание, используя ячейку 7 круга или выше,то дистанция увеличивается на 200 футов, а коли-чество деревьев на 2 за каждый круг выше шестого.",
+      "castingTime": "1 действие",
+      "range": "400 футов",
+      "components": "В,С",
+      "materials": "",
+      "duration": "Концентрация, вплоть до 10 минут",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Engulfing Thorns",
+      "level": "3",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "10 feet",
+      "components": "V, S, M",
+      "materials": "(a rose thorn)",
+      "duration": "Concentration, up to 1 minute",
+       "text": "You conjure thorny vines which grow along a line 5 feet wide and 10 feet long emanating from you in a direction you choose, engulfing everything they touch. At the start of each of your turns, the length of the line increases by 5 feet in the same direction. For the duration, these vines turn the ground in that area to difficult terrain.<br> When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 2d6 piercing damage and be restrained by the vines until the spell ends. A creature that starts its turn in the area and is already restrained by the vines takes 2d6 piercing damage and is pulled 5 feet in the direction that the vines are growing.<br> A creature restrained by the vines can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "Опутывающие тернии",
+      "level": "3",
+      "text": "Вы призываете шипастые лозы, которые растут вдоль линии 5 футоф шириной и 10 футов длиной от вас в выбранном вами направлении, опутывая все, чего коснутся. В начале каждого вашего хода, линия удлиняется на 5 футов в том же направлении. Пока заклинание действует, территория занятая лозами является труднопроходимой. <br>Когда существо входит в пространство лоз в первый раз или начинает там свой ход, ему следует сделать спасбросок оп Ловкости, при провале получает 2d6 колющего урона и будет опутак лозами пока длится заклинание. Существо, начинающее свой ход в этой области и уже опутанное, получает 2d6 колющего урона и отталкивается на 5 футов в направлении роста лоз. <br> Опутанное лозами создание может потратить действие на проверку Силы или Ловкости (на свой выбор) против сложности вашего заклинания и при успехе освободиться.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "10 футов",
+      "components": "В, С, М",
+      "materials": "(терновый шип)",
+      "duration": "Концентрация до 1 минуты",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Explosive Seed",
+      "level": "2",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Instantaneous",
+       "text": "You conjure an explosive seed and then throw it a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 4d4 fire damage. On both a hit or a miss, the seed drops to the ground and sizzles violently. At the start of your next turn, the seed explodes. Each creature in a 10-foot radius centered on the seed must make a Dexterity saving throw. A creature takes 3d4 fire damage on a failed save, or half as much damage on a successful one. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, the initial damage and the explosion damage each increase by 1d4 for each slot level above 2nd.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ВЗРЫВНОЕ ЗЕРНО",
+      "level": "2",
+      "text": "Вы призываете взрывающееся зерно, которое можете метнуть в цель пределах дальности заклинания.Совершите дальнобойную атаку заклинанием против цели. При попадании цель получает 4к4 огненного урона. Неважно попали вы или промахнулись,зерно падает на землю и издает сильный шипящий звук. В начале следующего вашего хода, зерно взрывается, и каждое существо в радиусе 10 футов отместа падения должно сделать спасбросок Ловкости. При провале оно получает 3к4 огненного урона,а при успехе - половину.<br><b>На более высоких кругах.</b> Если вы произносите заклинание, используя ячейку 3 круга или выше, то начальный урон и урон от взрыва возрастает на 1к4 за каждый круг выше второго.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Мгновенно",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Fell",
+      "level": "3",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "V, S, M",
+      "materials": "(piece of an axe blade)",
+      "duration": "Instantaneous",
+       "text": "You cause a non-magical tree to fall, damaging all creatures in its path. You choose the direction that the tree falls, and the area that it effects changes depending on the height of the tree. You cannot target a tree with a diameter greater than 5 feet. Each creature within the line of the trunk must succeed on a Dexterity saving throw or take 7d8 bludgeoning damage. The tree then remains on the ground, providing partial cover for those behind it.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ПАДЕНИЕ",
+      "level": "3",
+      "text": "Вы вызываете падение дерева, нанося ущерб всем существам на своем пути. Вы выбираете направление падения дерева, а область изменяется в зависимости от высоты дерева. Вы не можете накладывать это заклинание на дерево с диаметром более 5 футов. Каждое существо в пределах линии падения должно преуспеть в спасброске Ловкости или получит 6к8 дробящего урона. Упавшее дерево остается на земле, и может обеспечивать частичное укрытие.",
+      "school": "Проявление",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(лезвие топора)",
+      "duration": "Мгновенно",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Gaea’s Hand",
+      "level": "1",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 minute.",
+       "text": "You conjure a makeshift arm made of weeds and branches that sprouts out of a point you can see within range. When within 5 feet of the arm, you may give it a one-handed melee weapon to fight with (no action required). The weapon given to it must be a weapon of a size you could wield. <br> As a bonus action on your turn, you may command the arm to strike a foe within 5 feet of it. Make a melee spell attack. On a hit, the target takes 1d4+your spellcasting ability modifier bludgeoning damage. If a weapon was given to the arm, it instead uses that weapon’s damage die and damage type.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "РУКА ГАИ",
+      "level": "1",
+      "text": "На короткое время вы создаете руку из <span title='желудей и палок'>травы и ветвей</span>, которая прорастает в указанной видимой вами точке в пределах дальности заклинания. Когда вы произносите это заклинание, вы можете вооружить руку любым оружием ближнего боя, иначе она наносит 1к4 дробящего урона. В качестве бонусного действия вы можете заставить руку атаковать цель в пределах 10 футов от нее. Сделайте рукопашную атаку, и при попадании рука нанесет 1к4 + модификатор параметра заклинания дробящего урона. Если вы передали руке оружие, то тип повреждений и урон определяется этим оружием.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Grasping Sprout",
+      "level": "0",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "V, S, M",
+      "materials": "(a seedling)",
+      "duration": "1 minute",
+       "text": "You conjure a small vine with a reach of 5 feet. Whenever a creature enters its reach, you may use your reaction to have the sprout attempt to grasp at its heels, stopping its movement. The target must succeed on a Dexterity saving throw or have their speed reduced to zero until the start of their next turn.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "Цепкий росток",
+      "level": "0",
+      "text": "Вы призываете маленький росток с радиусом досягаемости в 5 футов, в указанной вами точке. Всякий раз, когда существо приближается к ростку, на расстояние 5 футов, вы можете использовать свою реакцию, чтобы схватить его за ноги, остановив его движение. Цель должна преуспеть в спасброске Ловкости или ее передвижение закончится до начала следующего хода.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В,С,М",
+      "materials": "(росток)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Mind Spore",
+      "level": "5",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Until dispelled",
+       "text": "You place a magical spore in someone’s brain. The creature mustsucceed on a Constitution saving throw or become affected by aMind Spore. On a successful save, the creature knows that it hasbeen targeted by a spell. On a failed save, it is completelyoblivious as the spore enters its brain. <br>Another creature can attempt to discover the spore by lookinginto the affected creature’s eyes. They must make an Intelligence(Investigation) check against your spell save DC. On a successfulcheck, they discover the spore, which causes yellowish greenspecks to appear in the creature’s eyes. Once discovered, it can beremoved with anything that removes a disease. <br>At first, the spore has no effect on the target. However, itslowly grows over time, infecting the target’s brain andeventually giving you control over them. The effects are listedbelow in the order they are given: <br><b>After 10 days.</b> You always know the general location of theinfected creature as long as you are on the same plane ofexistence, though you do not know any specific information aboutthat location. <br><b>After 30 days.</b> As a bonus action, you can read the infectedcreature’s surface thoughts (those foremost in its mind, reflectingits current emotions and what it is actively thinking about) as longas you are on the same plane of existence. If you perform a 1 hourritual, you instead gain access to any of that creature’s thoughtssince your initial casting of the spell. If the spell is dispelled atthis point, the creature takes 5d10 psychic damage, as the spore has partially melded with their brain. <br> <b>After 1 year.</b> You gain the ability to cast suggestion on the infected creature, without expending a spell slot or material components, as long as you are on the same plane of existence. The creature automatically fails the saving throw. If the spell is dispelled at this point, the creature takes 10d10 psychic damage, as the spore has near completely melded with their brain.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "Мозговая СПОРА",
+      "level": "5",
+      "text": "Вы призываете маленький росток с радиусом досягаемости в 5 футов, в указанной вами точке. Существо должно преуспеть в спасброске Телосложения или стать жертвой споры. При успехе существо знает, что оно было целью заклинания, а при провале спора незаметно входит в мозг. Другое существо может обнаружить спору, сделав проверку Внимательности против сложности вашего заклинания. При успехе спора может быть удалена как другая болезнь. Спора медленно растет со временем, заражая мозг существа, давая вам контроль над ним:<br><b>Через 10 дней.</b> Вы всегда знаете общее местоположение существа, если вы находитесь на одном плане с ним.<br><b>Через 30 дней.</b> Бонусным действием вы можете прочитать поверхностные мысли существа. Если вы выполняете это действие час, то получаете доступ ко всем мыслям существа. Рассеивание заклинания нанесет 5к8 психического урона существу.<br><b>Через 1 год.</b> Вы можете наложить Приказ на существо, не затрачивая ячейки и материальных компонентов. Рассеивание заклинания нанесет 10к8 психического урона существу.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В, С",
+      "materials": "",
+      "duration": "Пока не рассеют",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Mold Plant",
+      "level": "0",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "S",
+      "materials": "",
+      "duration": "1 hour",
+       "text": "You choose a non-magical plant that you can see within rangeand that fits within a 10-foot cube. You manipulate it in one ofthe following ways:<br>• Change the color of the plant for 1 hour<br> • Cause the plant to shape itself into a form you designate. Theplant’s branches and leaves may twist into words, createimages, or shape into patterns. The changes last for 1 hour. <br>• If the plant you target is on the ground, you cause it to becomedifficult terrain. Alternatively, you can cause the plant toBecome normal terrain if it is already difficult terrain. Thischange lasts for 1 hour. <br>If you cast this spell multiple times, you can have no more thantwo of its effects active at a time, and you can dismiss such aneffect as an action.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ИЗМЕНЕНИЕ РАСТЕНИЙ",
+      "level": "0",
+      "text": "Вы выбираете немагическое растение, занимающее 10-футовый куб, которое вы можете видеть в пределах дальности заклинания. Вы изменяете выбранное растение им одним из следующих способов:<br>• Вы меняете цвет растения на 1 час.<br>• Вы придаете растению новую форму. Его ветви и листья могут скручиваться в слова, создавать изображения или фигуры. Эти изменения остаются в течение 1 часа.<br>• Вы можете изменить ландшафт вокруг растения, на труднопроходимый или обычный ландшафт. Это изменение длится 1 час.<br> Если вы произносите это заклинание несколько раз, вы можете получить не более двух из его эффектов одновременно, и вы можете прекратить любой эффект потратив действие.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "С",
+      "materials": "",
+      "duration": "1 час",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Overgrowth",
+      "level": "1",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 hour",
+       "text": "You create a 10-foot-radius area of thick overgrowth centered ona point within range. The sphere spreads around corners, and itsarea is heavily obscured and difficult terrain. It lasts for theduration or until it is destroyed.<br>If the overgrowth is lit on fire, it burns away immediately. Eachcreature in the area must make a Dexterity saving throw. On afailed save, a creature takes 2d6 fire damage, or half damage on asuccessful one.<br><b>At Higher Levels.</b> When you cast this spell using a spell slot of2nd level or higher, the radius of the overgrowth increases by 10feet for each slot level above 1st.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "Заросли",
+      "level": "1",
+      "text": "Вы создаете зону с густой растительностью радиусом 10 футов с центром в указанной вами точке в пределах дальности заклинания. Растительность распространяется, огибая углы, делая местность сильно затемненной и труднопроходимой. Растительность существует, пока действует заклинание или до тех пор, пока не будет уничтожена. Если поджечь растительность, то она вспыхивает и тут же сгорает. Каждое существо в области должно сделать спасбросок Ловкости и при провале оно получает 2к6 огненного урона или половину при успехе. <br><b>На более высоких кругах.</b> Если вы накладываете это заклинание, используя ячейку 2 круга или выше, радиус увеличивается на 10 футов за каждый круг выше второго.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "60 футов",
+      "components": "В, C",
+      "materials": "",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Piercing Thorn",
+      "level": "0",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S, M",
+      "materials": "(a rose thorn)",
+      "duration": "Concentration, up to 1 minute",
+       "text": "You hurl a magical piercing thorn at a creature within range.Make a ranged spell attack against the target. On a hit, the targettakes 2d4 piercing damage, and the thorn lodges itself into thecreature for the duration or until the thorn explodes.<br>If the creature is hit by a spell of 1st level or higher, the thornabsorbs some of the spell’s magical power and explodes into arain of thorns, dealing 1d4 piercing damage to the creature. Allcreatures within a 5 ft radius of the creature must succeed on aDexterity saving throw or take 1d4 piercing damage as well.<br>This spell's initial damage and explosion damage increases by1d4 when you reach 5th level (3d4/2d4), 11th level (5d4/3d4),and 17th level (6d4/5d4).",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ПРОНЗАЮЩИЙ ШИП",
+      "level": "0",
+      "text": "Вы бросаете острый магический шип в существо в пределах дальности заклинания. Совершите дальнобойную атаку заклинанием. При попадании цель получает 2к4 колющего урона, а шип остается внутри существа на время действия заклинания или пока шип не взорвется. Если существо поражено заклинанием первого круга или выше, шип поглощает магическую силу заклинания и взрывается россыпью мелких шипов, нанося 1к4 колющего урона существу. Все существа в радиусе 5 футов должны преуспеть в спасброске Ловкости или получают 1к4 колющего урона.<br>Начальный урон и урон от взрыва увеличивается на 5 уровне (3к4\2к4), 11 уровне (5к4\3к4), 17 уровень (6к4\5к4).",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(терновый шип)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Rapport Spores",
+      "level": "1",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "Self (30-foot radius)",
+      "components": "V, S, M",
+      "materials": "(a fungal spore)",
+      "duration": "1 hour",
+       "text": "You conjure a 30-foot radius of spores extending from your position. These spores can go around corners and affect only creatures with an Intelligence of 2 or higher that aren't undead, constructs, or elementals. For the duration, affected creatures can communicate telepathically with one another while they are within 60 feet of each other.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "Сопры телепатии",
+      "level": "1",
+      "text": "Вы призываете маленький росток с радиусом досягаемости в 5 футов, в указанной вами точке. Всякий раз, когда существо приближается к ростку, на расстояние 5 футов, вы можете использовать свою реакцию, чтобы схватить его за ноги, остановив его движение. Цель должна преуспеть в спасброске Ловкости или ее передвижение закончится до начала следующего хода.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "на себя",
+      "components": "В,С,М",
+      "materials": "(грибные споры)",
+      "duration": "1 час",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Skewering Branch",
+      "level": "3",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 10 minutes",
+       "text": "You cause a thick branch to shoot out of the ground along a line 5feet wide and 30 feet long. Each creature in the line must succeedon a Dexterity saving throw or be pushed along the length of thebranch as it grows in a direction of your choice. If the branchimpacts a hard surface, such as a wall, it immediately stops andskewers all creatures that were pushed against that wall. Eachcreature takes 3d4 piercing damage and is restrained, skewered tothe surface. A restrained creature can use an action to make aStrength or Dexterity check (the creature’s choice) against thespell’s saving throw DC. On a failed save, a creature takes anadditional 2d4 piercing damage. On a success, the creature is nolonger restrained.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ПРОНЗАЮЩИЙ КОРЕНЬ",
+      "level": "3",
+      "text": "Вы призываете толстый корень, который мгновенно прорастает из земли в указанной вами точке. Каждое существо на линии шириной 5 футов и длинной 30 футов, начиная от указанной вами точки, должно преуспеть в спасброске Ловкости или будет отброшено на длину корня и по направлению его роста. Если корень упирается в твердую поверхность, например стену, то он немедленно останавливается и прижимает собой всех существ, сбитых на пути к этой поверхности. Каждое такое существо получает 3к4 колющего урона и удерживается прижатым к преграде. Удерживаемое существо может действием совершить проверку Силы или Ловкости на его выбор, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Призыв",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С",
+      "materials": "",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Slicing Leaves",
+      "level": "1",
+      "school": "Transmutation",
+      "castingTime": "1 bonus action",
+      "range": "Touch",
+      "components": "V, S",
+      "materials": "",
+      "duration": "Concentration, up to 1 hour",
+       "text": "You touch up to 6 leaves and imbue them with magic, hardeningthem and making their edges razor sharp. You or someone elsecan make a ranged spell attack with one of the leaves by throwingit with a range of 60 feet. If someone else attacks with a leaf, thatattacker adds your spellcasting ability modifier, not the attacker’s,to the attack roll. On a hit, the target takes slashing damagedamage equal to 2d4 + your spellcasting ability modifier.<br>Hit or miss, the spell then ends on the leaf.<br>At Higher Levels. When you cast this spell using a spell slot of2nd level or higher, the number of leaves you can effect with thisspell increases by 2 and their damage increases by 1d4 for eachslot level above 1st.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ОСТРЫЕ ЛИСТЬЯ",
+      "level": "1",
+      "text": "Вы касаетесь листьев, наполняя их магией, делая их твердыми, а края острыми. Вы можете зачаровать до 6 листьев таким способом, после чего вы или кто-то другой можете совершить дальнобойную атаку, метая лист на расстояние до 60 футов. Каждая такая атака совершается с преимуществом, но бонусом к атаке является ваш модификатор параметра заклинания, а не модификатор параметра броска. При попадании атака листом наносит 2к4 + модификатор параметра вашего заклинания рубящего урона. Промах или попадание заканчивает действие заклинания на листе.<br><b>На более высоких кругах.</b> Если вы накладываете это заклинание, используя ячейку 2 круга или выше, то количество листов увеличивается на 2, а урон на 1к4 за каждый круг выше первого.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "касание",
+      "components": "В,С",
+      "materials": "",
+      "duration": "Концентрация, до 1 часа",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Sporecaller’s Smite",
+      "level": "2",
+      "school": "evocation",
+      "castingTime": "1 bonus action",
+      "range": "Self",
+      "components": "S",
+      "materials": "",
+      "duration": "Concentration, up to 1 minute",
+       "text": "The next time you hit a creature with a melee weapon attackduring this spell's duration, your weapon is followed by a trail ofspores, and the attack deals an extra 2d6 poison damage damageto the target. Additionally, the target must succeed on aConstitution saving throw or be stunned until the start of yournext turn as pacifying spores enter their body.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ЗАРАЖАЮЩИЙ УДАР",
+      "level": "2",
+      "text": "Пока действует заклинание, ваша следующая рукопашная атака оружием сопровождается облаком спор. Удар наносит дополнительные 2к6 урона ядом и цель должна совершить спасбросок Телосложения или будет оглушена до конца своего следующего хода спорами, проникшими в ее тело.",
+      "school": "Преобразование",
+      "castingTime": "1 бонусное действие",
+      "range": "на себя",
+      "components": "В,С",
+      "materials": "",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Spray of Thorns",
+      "level": "3",
+      "school": "Conjuration",
+      "castingTime": "1 action",
+      "range": "20-foot cone",
+      "components": "V, S, M",
+      "materials": "(a rose thorn)",
+      "duration": "Concentration, up to 1 minute",
+       "text": "You shoot forth a burst of thorns from your hands which piercethrough your enemy’s defenses, making them vulnerable toattacks. Each creature in a 20-foot cone must make a Dexteritysaving throw. On a failed save, a creature takes 6d6 piercingdamage, and until the start of your next turn they take anadditional 1d6 piercing damage whenever they are hit by aweapon attack. On a successful save, a creature takes half damageand suffers no other effect.<br><b>At Higher Levels.</b> When you cast this spell using a spell slot of4th level or higher, the initial damage increases by 1d6 for each slot level above 3rd.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "Залп ШИПОВ",
+      "level": "3",
+      "text": "Из ваших рук вырывается поток шипов, который пронзает всех существ на своем пути. Каждое существо в области 15 футового конуса должно сделать спасбросок Ловкости и при провале получит 3к6 колющего урона, а также уязвимость к колющему, дробящему и рубящему урону. В случае успеха, существо получает половину урона и не получает уязвимости.",
+      "school": "Призыв",
+      "castingTime": "1 бонусное действие",
+      "range": "5 на себя",
+      "components": "В,С,М",
+      "materials": "(терновый шип)",
+      "duration": "Мгновенно",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Thorn Shield",
+      "level": "0",
+      "school": "Conjuration",
+      "castingTime": "1 bonus action",
+      "range": "self",
+      "components": "V, S",
+      "materials": "",
+      "duration": "1 minute",
+       "text": "You conjure a wooden shield covered in thorns in one of yourhands. This shield provides the same bonuses as a normal shield.Whenever you successfully shove a creature with your thornshield, that creature takes 1d8 piercing damage. If you let go ofthe shield, it wilts away to nothingness.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ШИПАСТЫЙ ЩИТ",
+      "level": "0",
+      "text": "Вы призываете деревянный щит, усеянный шипами, в свою свободную руку по вашему выбору. Этот щит обеспечивает ту же защиту, что и обычный щит. Всякий раз, когда вы успешно атакуете существо с помощью вашего шипастого щита, то оно получает 1к8 колющего урона. Если вы выпускаете щит из рук, то он исчезает.",
+      "school": "Призыв",
+      "castingTime": "1 бонусное действие",
+      "range": "на себя",
+      "components": "В,С",
+      "materials": "",
+      "duration": "1 минута",
+      "source": "SCPC"
+    }
+  },
+  {
+    "en": {
+      "name": "Tree Strike",
+      "level": "4",
+      "school": "Transmutation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "V, S, M",
+      "materials": "(a small twig)",
+      "duration": "Concentration, up to 1 minute",
+       "text": "You cause a tree to grasp at a creature within 10 feet of it with itsbranches, pulling and constricting that creature. The target mustsucceed on a Dexterity saving throw or take 6d8 bludgeoningdamage, be pulled to the tree, and become restrained. At the startof each of its turns, the restrained creature takes 2d8 bludgeoningdamage. A restrained creature can use an action to make aStrength or Dexterity check (the creature’s choice) against thespell’s saving throw DC. On a success, the creature is no longerrestrained.",
+      "source": "SCPC"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
+      "level": "4",
+      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(маленькая веточка)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "SCPC"
     }
   }
 ]

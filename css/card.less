@@ -59,6 +59,19 @@
         display: none;
     }
 }
+
+.spellContainer{
+  position: relative;
+  &:before{
+    content: attr(data-spellcount);
+    position: absolute;
+    padding: .1em;
+    top: 0;
+    right: 1.9em;
+    font-weight: bold;
+    background: rgba(255,255,255,0.3);
+  }
+}
 .cardContainer{
     page-break-inside: avoid;
     width: 2.5in;

@@ -2,16 +2,21 @@ var sourceList = [
   {
     en: "Player's Handbook",
     ru: "Книга игрока",
-	key: "PHB"
+    key: "PHB"
   },
   {
     en: "Temple of Elemental Evil",
     ru: "Храм стихийного зла",
-	key: "TOEE"
+    key: "TOEE"
   },
   {
     en: "Sword Coast Adventurers Guide",
     ru: "Путеводитель Приключенца по Побережью Мечей",
-	key: "SCAG"
+    key: "SCAG"
+  },
+  {
+    en: "Sprouting Chaos",
+    ru: "Прорастающий Хаос",
+    key: "SCPC"
   }
 ]
