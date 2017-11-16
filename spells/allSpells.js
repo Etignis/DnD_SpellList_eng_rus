@@ -3776,7 +3776,7 @@ var allSpells = [
     "en": {
       "name": "Passwall",
       "level": "5",
-      "text": "A passage appears at a point of your choice that you can see on a w ooden, plaster, or stone surface (such as a wall, a ceiling, or a floor) within range, and lasts for the duration. You choose the opening's dimensions: up to 5 feet wide, 8 feet tall, and 20 feet deep. The passage creates no instability in a structure surrounding it. When the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which you cast the spell.",
+      "text": "A passage appears at a point of your choice that you can see on a w  ooden, plaster, or stone surface (such as a wall, a ceiling, or a floor) within range, and lasts for the duration. You choose the opening's dimensions: up to 5 feet wide, 8 feet tall, and 20 feet deep. The passage creates no instability in a structure surrounding it. When the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which you cast the spell.",
       "school": "Transmutation",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -3786,13 +3786,13 @@ var allSpells = [
       "source": "PHB"
     },
     "ru": {
-      "name": "Passwall",
+      "name": "Создание прохода",
       "level": "5",
-      "text": "A passage appears at a point of your choice that you can see on a w ooden, plaster, or stone surface (such as a wall, a ceiling, or a floor) within range, and lasts for the duration. You choose the opening's dimensions: up to 5 футов wide, 8 футов tall, and 20 футов deep. The passage creates no instability in a structure surrounding it. When the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which you cast the spell.",
+      "text": "В точке, которую вы видите в пределах дистанции на деревянной, оштукатуренной или каменной поверхности (такой как стена, потолок или пол) появляется проход, существующий, пока активно заклинание. Вы сами определяете габариты прохода: до 5 футов в ширину, до 8 футов в высоту и до 20 футов в глубину. Этот проход не дестабилизирует само строение.<br>Когда проход исчезает, все существа и предметы, всё ещё находящиеся в нём, безопасно выталкиваются в свободное пространство, ближайшее к поверхности, на которой вы активировали это заклинание.s",
       "school": "преобразование",
       "castingTime": "1 действие",
       "range": "30 футов",
-      "materials": "a pinch of sesame seeds",
+      "materials": "щепотка семян кунжута",
       "components": "В, С, М",
       "duration": "1 час",
       "source": "PHB"
