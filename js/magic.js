@@ -1,4 +1,4 @@
-var TENTACULUS_APP_VERSION = "2.2.5";
+var TENTACULUS_APP_VERSION = "2.3.1";
 
 var oConfig = {}; // global app config data
 function setConfig(prop, val) {
@@ -128,7 +128,7 @@ window.onload = function(){
 		var ret = '';
 		var id =  param.id? "id='"+param.id+"'": "";
 		var title = param.title? param.title: "Выберите";
-		var checked = param.checkAll? "checked": "";
+		var checked = "";//param.checkAll? "checked": "";
 		var isOpen = (param.isOpen!=undefined) ? param.isOpen : true;
 		var arrow, display = "", content_open=true;
 		var min_width = 0;
@@ -192,7 +192,7 @@ window.onload = function(){
 		return s.substr(0,1).toUpperCase() + s.substr(1);
 	}
 
-	function createCard(spell, lang, sClass, sLockedSpell) {
+	function createCard(spell, lang, sClass, sLockedSpell, fText) {
 		if (spell[lang] || (lang="en", spell[lang])) {
 			var o = spell[lang];
 			var s_name = o.name;
@@ -248,11 +248,55 @@ window.onload = function(){
 
 			var cardWidth = getConfig("cardWidth");
 			var style = "";
-			if(cardWidth) {
+			if(cardWidth && !fText) {
 				var style = " style='width: " + cardWidth + "' ";
 			}
 
-			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" '+ style +' data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
+      if (fText) {
+        // ret = '<div class="textContainer" >'+
+          // '<h1 title="'+title+'">'+s_name+'</h1>'+          
+          // '<div class="school_level">'+s_level+' '+s_school+' '+s_ritual+'</div>'+
+          // '<div class="source">'+(s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</div>'+
+          // '<div><span class="subtitle">'+st_castingTime+'</span> '+s_castingTime+'</div>'+   
+          // '<div><span class="subtitle">'+st_range+'</span> '+s_range+'</div>'+           
+          // '<div><span class="subtitle">'+st_components+'</span> '+s_components+' ' +s_materials+'</div>'+ 
+          // '<div><span class="subtitle">'+st_duration+'</span> '+s_duration+'</div>'+          
+          // '<div class="text">'+s_text+'</div>'+          
+        // '</div>';
+        s_materials = (s_materials && s_materials.length>2)? "* ("+s_materials+")" : "";
+        s_text = s_text.split("<br>").map(i=>"<p>"+i+"</p>").join("");
+        ret = '<div class="textCardContainer '+sClass+ sLockedSpell +'"  data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
+          '<div class="inner">'+
+						bLockSpell +
+						bHideSpell +
+            '<div class="flex">'+
+              '<div class="flex column primal">'+
+                '<h1 title="'+title+'">'+s_name+'</h1>'+          
+                '<div class="school_level">'+s_level+', '+s_school+' '+s_ritual+'</div>'+
+              '</div>'+
+              '<div class="flex secondal">'+
+                '<div class="column thirdal">'+
+                  '<div class="cvasi_row"><div class="subtitle">'+st_castingTime+'</div> <div>'+s_castingTime+'</div></div>'+   
+                  '<div class="cvasi_row"><div class="subtitle">'+st_range+'</div> <div>'+s_range+'</div></div>'+           
+                '</div>'+
+                '<div class="column thirdal">'+              
+                  '<div class="cvasi_row"><div class="subtitle">'+st_components+'</div> <div>'+s_components +(s_materials?"*":"")+'</div></div>'+ 
+                  '<div class="cvasi_row"><div class="subtitle">'+st_duration+'</div> <div>'+s_duration+'</div></div>'+       
+                '</div>'+ 
+            '</div>'+
+          '</div>'+
+          
+          //
+            
+          '<div class="text">'+s_text+'</div>'+ 
+          '<div class="material_components">'+s_materials+
+            '<div class="source">'+(s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</div>'+
+          '</div>'+
+          
+          '</div>'+
+        '</div>';
+      } else {
+        ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" '+ style +' data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
 						bLockSpell +
@@ -286,6 +330,8 @@ window.onload = function(){
 					'</div>'+
 				'</div>'+
 			'</div>';
+      }
+			
 			return ret;
 		} else {
 			console.log("not found: ");
@@ -312,7 +358,9 @@ window.onload = function(){
 		var nLevelEnd = oParams.nLevelEnd;
 		var aSchools = oParams.aSchools;
 		var aSources = oParams.aSources;
+    var fRitual = oParams.fRitual || /ritual|ритуал/.test(sName);
 		var sLang = oParams.sLang;
+    var sView = oParams.sView;
 
 		var fHiddenSpells = (aHiddenSpells.length>0)? true: false;
 		var fLockedSpells = (aLockedSpells.length>0)? true: false;
@@ -392,8 +440,18 @@ window.onload = function(){
 			});
 		}
 
+		//ritual
+		if(fRitual) {
+			filteredSpells = filteredSpells.filter(function(spell){
+        if(spell.en.ritual) {
+          return true;
+        }				
+				return false;
+			});
+		}
+
 		// name
-		if (sName) {
+		if (sName && sName!=='ritual' && sName!=='ритуал') {
 			sName = sName.toLowerCase().trim();
 			filteredSpells = filteredSpells.filter(function(spell){
 				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
@@ -428,7 +486,7 @@ window.onload = function(){
 		for (var i in filteredSpells) {
 			if(filteredSpells[i]) {
 				var fLocked = filteredSpells[i].locked? true: false;
-				var tmp = createCard(filteredSpells[i], sLang, sClass, fLocked)
+				var tmp = createCard(filteredSpells[i], sLang, sClass, fLocked, sView=="text")
 				if (tmp)
 					spells += tmp;
 			}
@@ -451,7 +509,9 @@ window.onload = function(){
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
 		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
+    var fRitual = ($("#RitualCheckbox").prop('checked'));
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
+    var sView = $("#CardViewSelect .label").attr("data-selected-key");
 
 		var fHidden = (aHiddenSpells.length>0)? true: false;
 
@@ -469,7 +529,9 @@ window.onload = function(){
 				aSchools: aSchools,
 				aSources: aSources,
 				sLang: sLang,
-				fHidden: fHidden
+        sView: sView,
+				fHidden: fHidden,
+        fRitual: fRitual
 				});
 		}, nTimerSeconds/4);
 
@@ -618,6 +680,10 @@ window.onload = function(){
 			oSource[el.key] = el.en;
 		});
 	}
+  function createRitualCheckbox() {
+    var oCh = "<div class='customCheckbox'><input type='checkbox' id='RitualCheckbox'><label for='RitualCheckbox'>Ритуальные заклинания</label></div>"
+    $(".p_side").append("<div class='mediaWidth'>" + oCh + "</div>");
+  }
 	function createNameFilter() {
 		var ret=createInput({id: "NameInput"});
 		var label = createLabel("Название");
@@ -645,7 +711,24 @@ window.onload = function(){
 		var label = createLabel("Язык");
 		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
 	}
-
+  function createCardViewSelect(selected) {
+		var src = [
+			{
+				name: "card",
+				title: "Карточки"
+			},
+			{
+				name: "text",
+				title: "Текст"
+			}
+		];
+		if(!selected)
+			selected = "card";
+		var Select = createSelect(src, {id: "CardViewSelect", selected_key: selected, width: "100%"});
+		var label = createLabel("Вид");
+		$(".p_side").append("<div class='mediaWidth'>" + label + Select + "</div>");
+	}
+  
 	function createHiddenSpellsList(){
 		if(aHiddenSpells.length < 1){
 			$("#HiddenSpells").parent().remove();
@@ -653,7 +736,7 @@ window.onload = function(){
 		}
 		if(!$("#HiddenSpells").length>0){
 			var label = createLabel("Скрытые заклинания");
-			$("#LangSelect").parent().after("<div class='mediaWidth'>" + label + "<div id='HiddenSpells'></div></div>");
+			$(".p_side").append("<div class='mediaWidth'>" + label + "<div id='HiddenSpells'></div></div>");
 		}
 		var listHiddenSpells = aHiddenSpells.map(function(item){
 			return "<a href='#' title='Вернуть на место' class='bUnhideSpell' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
@@ -664,7 +747,8 @@ window.onload = function(){
 	}
 
 	function createLockedSpellsArea(){
-		var aLocked = [];
+		var aLocked = [];    
+    var sView = $("#CardViewSelect .label").attr("data-selected-key");
 		for (var i in aLockedSpells){
 			aLocked.push(i);
 		}
@@ -693,7 +777,7 @@ window.onload = function(){
 						return 1;
 				}
 				return 0
-			}).map(function(el){return createCard(el, el.lang, el.class, true)}));
+			}).map(function(el){return createCard(el, el.lang, el.class, true, sView=='text')}));
 
 			//COUNTER
 			$("#lockedSpellsArea .topHeader").html("("+l+")");
@@ -714,9 +798,11 @@ window.onload = function(){
 		createLevelSelect();
 		createSchoolCombobox(schoolOpen);
 		createSourceCombobox(sourceOpen);
+    createRitualCheckbox();
 		createCardWidthButtons();    
 		createAutoSizeTextButton();
 		createLangSelect(lang);
+    createCardViewSelect("card");
 
 		$(".p_side").fadeIn();
 	}
@@ -1004,6 +1090,21 @@ window.onload = function(){
 		setConfig("sourceOpen", $("#SourceCombobox").attr("data-content-open"));
 	});
 
+  // ritual
+  $("body").on("change", "#RitualCheckbox", function() {
+    clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			updateHash();
+			filterSpells();
+		}, nTimerSeconds/3);
+    // $("#RitualCheckbox").prop('checked')
+    if($("#RitualCheckbox").prop('checked')) {
+      $("#RitualCheckbox").prop('checked', true);
+    } else {
+      $("#RitualCheckbox").prop('checked', false);
+    }
+    return false;
+  });
 	// lang select
 	$("body").on('focusout', "#LangSelect", function(){
 		clearTimeout(oTimer);
@@ -1036,19 +1137,20 @@ window.onload = function(){
 		var sName, sNameRu;
 
 		var nSelectedCards = $(".spellCard.selected").length;
+    var sSelector = ($(this).closest(".cardContainer").length>0)?".cardContainer":".textCardContainer";
 		if(nSelectedCards > 0) {
 			var oButtonLock = $(this);
 			$(".spellCard.selected").each(function() {
-				sName = $(this).closest(".cardContainer").attr("data-name");
-				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+				sName = $(this).closest(sSelector).attr("data-name");
+				sNameRu = $(this).closest(sSelector).attr("data-name-ru");
 
 				oButtonLock.hide();
 				// update hidden spells array
 				aHiddenSpells.push({en: sName, ru: sNameRu});
 			});
 		} else {
-			sName = $(this).closest(".cardContainer").attr("data-name");
-			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+			sName = $(this).closest(sSelector).attr("data-name");
+			sNameRu = $(this).closest(sSelector).attr("data-name-ru");
 
 			$(this).hide();
 			// update hidden spells array
@@ -1090,12 +1192,13 @@ window.onload = function(){
 		var sName, sNameRu, sLang, sClass;
 
 		var nSelectedCards = $(".spellCard.selected").length;
+    var sSelector = ($(this).closest(".cardContainer").length>0)?".cardContainer":".textCardContainer";
 		if(nSelectedCards > 0) {
 			$(".spellCard.selected").each(function() {
-				sName = $(this).closest(".cardContainer").attr("data-name");
-				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
-				sLang = $(this).closest(".cardContainer").attr("data-lang");
-				sClass= $(this).closest(".cardContainer").attr("data-class");
+				sName = $(this).closest(sSelector).attr("data-name");
+				sNameRu = $(this).closest(sSelector).attr("data-name-ru");
+				sLang = $(this).closest(sSelector).attr("data-lang");
+				sClass= $(this).closest(sSelector).attr("data-class");
 
 				aLockedSpells[sName] = {
 					ru: sNameRu,
@@ -1104,10 +1207,10 @@ window.onload = function(){
 					};
 			});
 		} else {
-			sName = $(this).closest(".cardContainer").attr("data-name");
-			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
-			sLang = $(this).closest(".cardContainer").attr("data-lang");
-			sClass= $(this).closest(".cardContainer").attr("data-class");
+			sName = $(this).closest(sSelector).attr("data-name");
+			sNameRu = $(this).closest(sSelector).attr("data-name-ru");
+			sLang = $(this).closest(sSelector).attr("data-lang");
+			sClass= $(this).closest(sSelector).attr("data-class");
 
 
 			aLockedSpells[sName] = {
@@ -1270,6 +1373,14 @@ window.onload = function(){
 			});
 		}
 	});
+  	// card view select
+	$("body").on('focusout', "#CardViewSelect", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			updateHash();
+			filterSpells();
+		}, nTimerSeconds);
+	});
 
 	$(document).keydown(function(event){
 		// CTRL pressed
@@ -1322,6 +1433,8 @@ window.onload = function(){
 		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
+    var sCardView = $("#CardViewSelect .label").attr("data-selected-key");
+    var sRitual = $("#RitualCheckbox").prop('checked');
 
 		//#q=spell_name&ls=0&le=9
 		var aFilters = [];
@@ -1349,8 +1462,14 @@ window.onload = function(){
 		if(aSources && aSources.length>0 && $("#SourceCombobox .combo_box_content input").length > aSources.length) {
 			aFilters.push("sources="+aSources.join(","));
 		}
+		if(sRitual) {
+			aFilters.push("ritual=true");
+		}
 		if(sLang && sLang.length > 0 && sLang != "ru") {
 			aFilters.push("lang="+sLang.replace(/\s+/g, "_"));
+		}
+    if(sCardView && sCardView.length > 0 && sCardView != "card") {
+			aFilters.push("view="+sCardView.replace(/\s+/g, "_"));
 		}
 
 		if(aFilters.length>0) {
@@ -1375,6 +1494,8 @@ window.onload = function(){
       var sLang = sHash.match(/\blang=([\w]+)/);
       var sSchools = sHash.match(/\bschools=([\w,]+)/);
       var sSources = sHash.match(/\bsources=([\w,_]+)/);
+      var sRitual=/\britual=true/.test(sHash);
+      var sView = sHash.match(/\bview=([\w]+)/);
 
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
@@ -1426,6 +1547,12 @@ window.onload = function(){
       	});
       	$("#SourceCombobox .combo_box_title").attr("data-val", sSources[1])
 
+      }
+      if(sRitual) {
+        $("#RitualCheckbox").attr("checked", "checked"); 
+      }
+      if(sView && sView[1]) {
+      	$("#CardViewSelect .label").attr("data-selected-key", sView[1]).html($("#CardViewSelect li[data-key='"+sView[1]+"']").text().replace(/[_]+/g," "));
       }
     } else {
       removeHash();

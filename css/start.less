@@ -23,8 +23,8 @@ body {
   margin-top: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
-  background-color: #fff;
-  color: #555;
+ // background-color: #fff;
+ // color: #555;
   width: 100%;
   min-height: 100%;
   height: auto;
@@ -74,7 +74,7 @@ p {
    // float: left;
     //background: #eee;
     width: 100%;
-    padding: 10px 0;
+    padding: 1.6rem 0;
     //padding-top: 6em;
 }
 .p_side{
@@ -92,4 +92,71 @@ p {
     display: inline-block;
     color: @white;
     
+}
+
+.customCheckbox{
+  .fr-convex();
+  margin: 0;
+  padding: 0;
+  label {
+
+    @ml: 1.4em;
+    display: block;
+    padding: .2em;
+    .noselect();
+    margin-left: @ml;
+    z-index: 9;
+    position: relative;
+    color: @l-gray;
+    transition: background .2s ease-out;
+    text-transform: capitalize;
+
+    &[data-hierarchy="child"] {
+      margin-left: @ml*1.8;
+    }
+
+    &:hover {
+     // background: @l-gray - #111;
+      cursor: pointer;
+    }
+  }
+
+  input[type=checkbox]{
+    display: none;
+    position: relative;
+
+    &+label::before{
+      @w: 0.6em;
+      @b: 0.2em;
+      content: "";
+      position: absolute;
+      width: @w;
+      height: @w;
+      top: 0.4em;
+      left: -1.1em;
+      background: @l-gray;
+      border: @b solid @m-gray+#555;
+      border-radius: 3px;
+      transition: border-color .2s ease-out;
+      box-shadow: inset 0 0 0px 2px @l-gray;
+    }
+
+    &:hover+label::before,
+    &:checked:hover+label::before{
+      border-color: @m-gray+#333;
+    }
+    &:checked+label::before{
+      border-color: @m-gray+#444;
+    }
+    &:checked+label::after{
+      content: "\2714";
+      position: absolute;
+      top: -0.2em;
+      left: -0.75em;
+      color: @color;
+      font-size: 150%;
+    }
+    /**/
+  }
+
 }

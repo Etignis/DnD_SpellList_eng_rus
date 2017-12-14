@@ -1,10 +1,10 @@
 var oInfo = {
   title: "Новая версия",
   url: "www.tentaculus.ru/spells",
-  resume: "Добавили заклинания из Прорастающего Хаоса",
+  resume: "Есть фильтр по Ритуальности заклиннаий",
   details: "",
-  date: "10.11.2017",
-  version: "2.2.5"
+  date: "07.12.2017",
+  version: "2.3.1"
 }
 
 function showMessage(oParams) {	

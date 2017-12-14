@@ -13,6 +13,15 @@
    // overflow: auto;
     color: @white;
     border-radius: 0 0 3px 0;
+
+  .blink{
+    animation-name: blink;
+    animation-duration: 4s;
+  }
+  @keyframes blink {
+    from {background-color: @color;}
+    to {background-color: @l-gray;}
+  }
     .s_block{
         float: left;
         min-width: 13em;

@@ -59,19 +59,166 @@
         display: none;
     }
 }
+.bHideSpell, .bLockSpell, .bUnlockSpell{
+  position: absolute;
+  top: -.1em;
+  color: @l-gray;
+  cursor: pointer;
+  transition: color .3s;
 
+  &:hover{
+    color: @color + #222;
+  }
+  &:active{
+    color: @color;
+  }
+}
+.bHideSpell{
+  right: .1em;
+}
+.bLockSpell, .bUnlockSpell{
+  left: .1em;
+}
 .spellContainer{
   position: relative;
   &:before{
     content: attr(data-spellcount);
     position: absolute;
     padding: .1em;
-    top: 0;
+    top: -1.4rem;
     right: 1.9em;
     font-weight: bold;
     background: rgba(255,255,255,0.3);
   }
 }
+.textContainer{
+  page-break-inside: avoid;
+  float: none;
+  width: auto;
+  max-width: 90rem;
+  margin: 0 auto 1rem;
+  padding: 0.4rem;
+  background: rgba(255, 255, 234, 0.99);
+  border: 1px solid @l-gray;
+  border-radius: @r-rad;
+  position: relative;
+
+  h1{
+    font-size: 120%;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: normal;
+    color: #770002;
+  }
+  .source{
+    position: absolute;
+    top: 0.8rem;
+    right: 0.4rem;
+    font-size: 80%;
+    font-weight: bold;
+  }
+  .school_level{
+    font-style: italic;
+    margin: 0 0 0.2em;
+  }
+  .subtitle{
+    font-weight: bold;
+    &:after{
+      content: ": "
+    }
+  }
+  .text{
+    margin: 0.3rem 0 0;
+  }
+}
+
+.textCardContainer{
+  page-break-inside: avoid;
+  float: none;
+  width: auto;
+  max-width: 90rem;
+  margin: 0 auto 1.3rem;
+  .inner {
+    margin: 0.3rem;
+    padding: 0.2rem 1.7rem 0.9rem;
+    background: rgba(255, 255, 247, 0.98);
+    border: 1px solid @l-gray;
+    border-radius: @r-rad;
+    position: relative;
+  }
+
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-around;
+    //align-content: space-around;
+  }
+  .column{
+    flex-direction: column;
+    //justify-content: space-around;
+    &:not(:last-child){
+      padding-right: 0.5rem;
+    }
+  }
+  .primal{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30%;
+    min-width: 190px;
+    margin-bottom: 1em;
+  }
+  .secondal{
+    flex-grow: 6;
+    flex-basis: 70%;
+    flex-shrink: 1;
+  }
+  .thirdal{
+   // flex-shrink: 3;
+    flex-basis: 50%;
+    min-width: 22rem;
+  }
+
+  h1{
+    font-size: 120%;
+    text-transform: uppercase;
+    margin: 0;// 1em 0 0;
+    font-weight: normal;
+    color: #770002;
+  }
+  .source{
+    position: absolute;
+    bottom: 0.4rem;
+    right: 0.4rem;
+    font-size: 90%;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: @m-gray;
+    //float: right;
+  }
+  .school_level{
+    font-style: italic;
+    //margin: 0 0 0.2em;
+    text-transform: lowercase;
+  }
+  .subtitle{
+    font-weight: bold;
+    //&:after{
+    //  content: ": "
+    //}
+  }
+  .text{
+    border-top: 2px solid fade(@l-gray, 20%);
+    padding: 0.9rem 0 0;
+    margin-top: 0.9rem;
+  }
+  .material_components{
+    font-size: 90%;
+    margin-top: 1.2rem;
+    font-style: italic;
+    text-transform: lowercase;
+  }
+}
+
 .cardContainer{
     page-break-inside: avoid;
     width: 2.5in;
@@ -104,6 +251,7 @@
             }
         }
     }
+
 }
 
 .spellCard{
@@ -124,26 +272,7 @@
     	}
     }
     
-    .bHideSpell, .bLockSpell, .bUnlockSpell{
-        position: absolute;
-        top: -.1em;
-        color: @l-gray;
-        cursor: pointer;
-        transition: color .3s;
-        
-        &:hover{
-            color: @color + #222;    
-        }
-        &:active{
-            color: @color;    
-        }
-    }
-    .bHideSpell{
-       right: .1em; 
-    }
-    .bLockSpell, .bUnlockSpell{
-       left: .1em; 
-    }
+
     .content{
         border-radius: @radius;
         background: @white;
