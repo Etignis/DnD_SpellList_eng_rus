@@ -1484,6 +1484,7 @@ window.onload = function(){
     $('html, body').animate({scrollTop:0}, 'fast');
 
     var sHash = window.location.hash.slice(1); // /archive#q=spell_name
+    sHash = decodeURIComponent(sHash);
     if(sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|,_=-]/.test(sHash)) {
       var sName = sHash.match(/\bq=([А-Яа-яЁё\/\w\d_]+)/);
       var sClass = sHash.match(/\bclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
