@@ -48,7 +48,10 @@ window.onload = function(){
 		arr.splice(i, 1);
 		return arr
 	}
-
+	function is_touch_device() {
+	  return 'ontouchstart' in window        // works on most browsers
+	      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
+	};
 	function getViewPortSize(mod) {
 		var viewportwidth;
 		var viewportheight;
@@ -692,7 +695,7 @@ window.onload = function(){
   function createAutoSizeTextButton() {
 		var label = createLabel("Размер текста");
 		var bTextSize = "<a href='#' class='bt flexChild cardTestAutoSize' title='Автоподстройка размера текста заклинания'><i class='fa fa-text-height' aria-hidden='true'></i> Рассчитать </a>";
-		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bTextSize + "</div>");		
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bTextSize + "</div>");
 	}
 	function createLangSelect(lang) {
 		var src = [
@@ -798,8 +801,10 @@ window.onload = function(){
 		createLevelSelect();
 		createSchoolCombobox(schoolOpen);
 		createSourceCombobox(sourceOpen);
+
     createRitualCheckbox();
 		createCardWidthButtons();    
+
 		createAutoSizeTextButton();
 		createLangSelect(lang);
     createCardViewSelect("card");
@@ -1343,7 +1348,7 @@ window.onload = function(){
 			setConfig("cardWidth", width);
 		}
 	});
-  
+
   // autoszie Text in the cards
 	$("body").on("click", ".cardTestAutoSize", function() {
 		var nSelectedCards = $(".spellCard.selected").length;
@@ -1351,11 +1356,11 @@ window.onload = function(){
 			$(".spellCard.selected").each(function() {
 				var f_s=$(this).find(".text").css("font-size");
 				f_s=f_s.substring(0, f_s.length - 2);
-				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {						
+				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {
 					f_s-=0.3;
-					
+
 					var sFontSize = f_s+"px";
-					var sLineHeight = f_s-1+"px";			
+					var sLineHeight = f_s-1+"px";
 					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 				}
 			});
@@ -1363,11 +1368,11 @@ window.onload = function(){
 			$(".spellCard").each(function() {
 				var f_s=$(this).find(".text").css("font-size");
 				f_s=f_s.substring(0, f_s.length - 2);
-				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {	
+				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {
 					 f_s-=0.3;
 					//console.log(f_s);
 					var sFontSize = f_s+"px";
-					var sLineHeight = f_s-1+"px";			
+					var sLineHeight = f_s-1+"px";
 					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 				}
 			});
@@ -1409,14 +1414,16 @@ window.onload = function(){
 	$("body").on("click", ".spellCard", function() {
 		if(fCtrlIsPressed)
 			$(this).toggleClass("selected");
-	});	
+	});
   $("body").on("dblclick", ".spellCard", function() {
 		$(this).toggleClass("selected");
 		clearSelection();
 		return false;
 	});
 	$("body").on("taphold", ".spellCard", function() {
-		$(this).toggleClass("selected");
+		if(is_touch_device()){
+			$(this).toggleClass("selected");
+		}
 	});
 
 
