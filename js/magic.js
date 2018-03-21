@@ -1581,16 +1581,16 @@ window.onload = function(){
 
 	$.when(createSidebar()).done(
 		function(){
-      //$("body").css("border-top", "1px solid blue");
 			$("#showAllSpells").slideDown();
-			if(getViewPortSize("width") > 600){
-				if(getConfig("infoIsShown")==true)
-					getHash();
-					//filterSpells();
-			} else{
-        //setTimeout(getHash, 1000);
-        getHash();
-      }
+			if(window.location.hash.length>0 || getConfig("infoIsShown")==true){
+				getHash();
+			}
+			// if(getViewPortSize("width") > 600){
+				// if(getConfig("infoIsShown")==true)
+					// getHash();
+			// } else {
+				// getHash();
+			// }
 		}
 	);
 };
