@@ -18,5 +18,10 @@ var sourceList = [
     en: "Sprouting Chaos",
     ru: "Прорастающий Хаос",
     key: "SCPC"
+  },
+  {
+    en: "Xanathar's Guide to Everuthing",
+    ru: "Руководство Зантара обо всем",
+    key: "XGTE"
   }
 ]

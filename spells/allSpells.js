@@ -11308,5 +11308,212 @@ var allSpells = [
       "duration": "Концентрация, вплоть до 1 минуты",
       "source": "SCPC"
     }
+  },
+	
+	
+  {
+    "en": {
+      "name": "AEI-DALZIM’S HORRID WILTING",
+      "level": "8",
+      "school": "necromancy",
+      "castingTime": "1 action",
+      "range": "150 feet",
+      "components": "V, S, M",
+      "materials": "(a bit of sponge)",
+      "duration": "Instantaneous",
+      "text": "You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren’t affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 12d8 necrotic damage on a failed save, or half as much damage on a successful one.<br> Nonmagical plants in the area that aren’t creatures, such as trees and shrubs, wither and die instantly.",
+      "source": "XGTE"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
+      "level": "4",
+      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(маленькая веточка)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "XGTE"
+    }
+  },
+  {
+    "en": {
+      "name": "ABSORB ELEMENTS",
+      "level": "1",
+      "school": "abjuration",
+      "castingTime": "1 reaction",
+      "range": "Self",
+      "components": "S",
+      "duration": "1 round",
+      "text": "Reaction, which you take when you take acid, cold, fire, lightning, or thunder damage. <br>The spell captures some of the incoming energy, lessening its effect on you and storing it for your next melee attack. You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 damage of the triggering type, and the spell ends.<br> <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above lst.",
+      "source": "XGTE"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
+      "level": "4",
+      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(маленькая веточка)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "XGTE"
+    }
+  },
+  {
+    "en": {
+      "name": "AGANAEZAR’S SCORCHER",
+      "level": "2",
+      "school": "evocation",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "V, S, M",
+      "materials": "(a red dragon’s scale)",
+      "duration": "Instantaneous",
+      "text": "A line of roaring flame 30 feet long and 5 feet wide emanates from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 3d8 fire damage on a failed save, or half as much damage on a successful one.<br> <b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher. the damage increases by MB for each slot level above 2nd. ",
+      "source": "XGTE"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
+      "level": "4",
+      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(маленькая веточка)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "XGTE"
+    }
+  },
+  {
+    "en": {
+      "name": "BEAST BOND",
+      "level": "1",
+      "school": "divination",
+      "castingTime": "1 action",
+      "range": "Touch",
+      "components": "V, S, M",
+      "materials": "(a bit of fur wrapped in a cloth)",
+      "duration": "Concentration, up to 10 minutes",
+      "text": "You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beasts Intelligence score is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.",
+      "source": "XGTE"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
+      "level": "4",
+      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(маленькая веточка)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "XGTE"
+    }
+  },
+  {
+    "en": {
+      "name": "BONES of THE EARTH",
+      "level": "6",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "120 feet",
+      "components": "V, S",
+      "duration": "Instantaneouss",
+      "text": "You cause up to six pillars of stone to burst from places on the ground that you can see within range. Each pillar is a cylinder that has a diameter of 5 feet and a height of up to 30 feet. The ground where a pillar appears must be wide enough for its diameter, and you can target the ground under a creature if that creature is Medium or smaller. Each pillar has AC 5 and 30 hit points. When reduced to 0 hit points, a pillar crumbles into rubble, which creates an area of difficult terrain with a 10-foot radius that lasts until the rubble is cleared. Each 5—foot-diameter portion of the area requires at least 1 minute to clear by hand.<br> If a pillar is created under a creature, that creature must succeed on a Dexterity saving throw or be lifted by the pillar. A creature can choose to fail the save.<br> If a pillar is prevented from reaching its full height because of a ceiling or other obstacle, a creature on the pillar takes 6d6 bludgeoning damage and is restrained, pinched between the pillar and the obstacle. The restrained creature can use an action to make a Strength or Dexterity check (the creature’s choice) against the spell’s save DC. On a success, the creature is no longer restrained and must either move off the pillar or fall off it. <b>At Higher Levels.</b> When you cast this spell using a spell slot of 7th level or higher, you can create two additional pillars for each slot level above 6th.",
+      "source": "XGTE"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
+      "level": "4",
+      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(маленькая веточка)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "XGTE"
+    }
+  },
+  {
+    "en": {
+      "name": "CATAPULT",
+      "level": "1",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "60 feet",
+      "components": "S",
+      "duration": "Instantaneous",
+      "text": "Choose one object weighing 1 to 5 pounds within range that isn’t being worn or carried. The object flies in a straight line up to 90 feet in a direction you choose before falling to the ground, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw. On a failed save, the object strikes the target and stops moving. When the object strikes something, the object and what it strikes each take 3d8 bludgeoning damage.<br> <b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of objects that you can target with this spell increases by 5 pounds, and the damage increases by 1d8, for each slot level above Ist.",
+      "source": "XGTE"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
+      "level": "4",
+      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(маленькая веточка)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "XGTE"
+    }
+  },
+  {
+    "en": {
+      "name": "CATNAP",
+      "level": "3",
+      "school": "enchantment",
+      "castingTime": "1 action",
+      "range": "30 feet",
+      "components": "S, M",
+      "materials": "(a pinch of sandh)",
+      "duration": "10 minutes",
+      "text": "You make a calming gesture, and up to three willing creatures of your choice that you can see within range fall unconscious for the spell’s duration. The spell ends on a target early if it takes damage or someone uses an action to shake or slap it awake. If a target remains unconscious for the full duration, that target gains the benefit of a short rest, and it can’t be affected by this spell again until it finishes a long rest. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, you can target one additional willing creature for each slot level above 3rd.",
+      "source": "XGTE"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
+      "level": "4",
+      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(маленькая веточка)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "XGTE"
+    }
+  },
+  {
+    "en": {
+      "name": "BONES of THE EARTH",
+      "level": "6",
+      "school": "transmutation",
+      "castingTime": "1 action",
+      "range": "120 feet",
+      "components": "V, S",
+      "materials": "(a bit of fur wrapped in a cloth)",
+      "duration": "Concentration, up to 10 minutes",
+      "text": "You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beasts Intelligence score is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.",
+      "source": "XGTE"
+    },
+    "ru": {
+      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
+      "level": "4",
+      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
+      "school": "Преобразование",
+      "castingTime": "1 действие",
+      "range": "30 футов",
+      "components": "В,С,М",
+      "materials": "(маленькая веточка)",
+      "duration": "Концентрация, вплоть до 1 минуты",
+      "source": "XGTE"
+    }
   }
 ]
