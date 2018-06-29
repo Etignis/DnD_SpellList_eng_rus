@@ -1235,13 +1235,14 @@ window.onload = function(){
 		var sName;
 
 		var nSelectedCards = $(".spellCard.selected").length;
+		var sSelector = ($(this).closest(".cardContainer").length>0)?".cardContainer":".textCardContainer";
 		if(nSelectedCards > 0) {
 			$(".spellCard.selected").each(function() {
-				sName = $(this).closest(".cardContainer").attr("data-name");
+				sName = $(this).closest(sSelector).attr("data-name");
 				delete aLockedSpells[sName];
 			});
 		} else {
-			sName = $(this).closest(".cardContainer").attr("data-name");
+			sName = $(this).closest(sSelector).attr("data-name");
 			delete aLockedSpells[sName];
 		}
 
@@ -1384,6 +1385,7 @@ window.onload = function(){
 		oTimer = setTimeout(function(){
 			updateHash();
 			filterSpells();
+			createLockedSpellsArea();
 		}, nTimerSeconds);
 	});
 
