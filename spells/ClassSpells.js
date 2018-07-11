@@ -28,6 +28,8 @@ var classSpells = {
 		  "Overgrowth",
 		  "Rapport spores",
 		  "Slicing leaves",
+			"Catnap",
+			"Enemies abound",
 
 
 		  "Animal Friendship",
@@ -52,6 +54,7 @@ var classSpells = {
 		  "Thunderwave",
 		  "Unseen Servant",
 		  "Arm of the wild",
+			"Charm monster",
 
 
 		  "Animal Messenger",
@@ -78,6 +81,8 @@ var classSpells = {
 		  "Zone of Truth",
 		  "Engulfing thorns",
 		  "Spray of thorns",
+			"Skill empowerment",
+			"Synaptic static",
 
 
 		  "Bestow Curse",
@@ -159,7 +164,11 @@ var classSpells = {
 		  "Foresight",
 		  "Power Word Heal",
 		  "Power Word Kill",
-		  "True Polymorph"
+		  "True Polymorph",
+			"Mass poivmorph",
+			"Psychic scream"
+			
+			
 		]
 
 	},
@@ -180,6 +189,8 @@ var classSpells = {
 		  "Thaumaturgy",
 		  "Bonding vine",
 		  "Thorn shield",
+			"Toll the dead",
+			"Word ofradiance",
 
 
 		  "Bane",
@@ -199,6 +210,7 @@ var classSpells = {
 		  "Shield of Faith",
 		  "Bridge of branches",
 		  "Rapport spores",
+			"Ceremony",
 
 
 		  "Aid",
@@ -220,6 +232,7 @@ var classSpells = {
 		  "Zone of Truth",
 		  "Fell",
 		  "Spray of thorns",
+			"Life transference",
 
 
 		  "Animate Dead",
@@ -253,6 +266,8 @@ var classSpells = {
 		  "Guardian of Faith",
 		  "Locate Creature",
 		  "Stone Shape",
+			"Dawn",
+			"Holy weapon",
 
 
 		  "Commune",
@@ -290,6 +305,7 @@ var classSpells = {
 		  "Regenerate",
 		  "Resurrection",
 		  "Symbol",
+			"Temple ofthe gods",
 
 
 		  "Antimagic Field",
@@ -544,6 +560,21 @@ var classSpells = {
 		"Piercing thorn",
 		"Mold plant",
 		"Thorn shield",
+		"Frostbite",
+		"infestation",
+		"Primal savagery",
+		"lce knife",
+		"Snare",
+		"Wording wind",
+		"Charm monster",
+		"Guardian of nature",
+		"Maelstrom",
+		"Wrath ofnature",
+		"Druid grove",
+		"lnvestiture of flame",
+		"lnvestiture of ice",
+		"lnvestiture of stone",
+		"lnvestiture of wind",
 
 		  "Druidcraft",
 		  "Guidance",
@@ -915,7 +946,7 @@ var classSpells = {
 		  "Shield of Faith",
 		  "Thunderous Smite",
 		  "Wrathful Smite",
-
+			"Ceremony",
 
 		  "Aid",
 		  "Branding Smite",
@@ -938,7 +969,8 @@ var classSpells = {
 		  "Magic Circle",
 		  "Remove Curse",
 		  "Revivify",
-
+			"Find greater steed",
+			"Holy weapon",
 
 		  "Aura of Life",
 		  "Aura of Purity",
@@ -1051,7 +1083,13 @@ var classSpells = {
 		"Absorb Elements",
 		"Beast Bond",
 		"Flame Arrows",
-
+		"Snare",
+		"Zephyr strike",
+		"Guardian ofnature",
+		"Steel wind strike",
+		"Wrath ofnature",
+		
+		
 		  "Alarm",
 		  "Animal Friendship",
 		  "Cure Wounds",
@@ -1067,6 +1105,7 @@ var classSpells = {
 		  "Speak with Animals",
 		  "Gaea’s hand",
 		  "Slicing leaves",
+			"Healing spirit",
 
 
 		  "Animal Messenger",
@@ -1132,6 +1171,36 @@ var classSpells = {
 		"Bonding vine",
 		"Piercing thorn",
 		"Mold plant",
+		
+		"infestation",
+		"Chaos bolt",
+		"lce knife",
+		"Dragon's breath",
+		"Mind spike",
+		"Shadow blade",
+		"Catnap",
+		"Enemies abound",
+		"Thunder step",
+		"Tidal wave",
+		"Charm monster",
+		"Sickening radiance",
+		"Enervation",
+		"Far step",
+		"lmmolation",
+		"Skill empowerment",
+		"Wall of light",
+		"lnvestiture of flame",
+		"lnvestiture of ice",
+		"lnvestiture of stone",
+		"lnvestiture of wind",
+		"Mental prison",
+		"Scatter",
+		"Crown ofstars",
+		"Power word pain",
+		"Whirlwind",
+		"Mass polymorph",
+		"Psychic scream",
+		
 
 	  "Create Bonfire",
     "Control Flames",
@@ -1170,6 +1239,7 @@ var classSpells = {
     "Overgrowth",
     "Rapport spores",
     "Slicing leaves",
+		"Healing spirit",
 
 		  "Acid Splash",
 		  "Blade Ward",
@@ -1337,7 +1407,32 @@ var classSpells = {
 		"LIGHTNING LURE",
 		"Bonding vine",
 		"Piercing thorn",
-
+		"Toll the dead",
+		"Cause fear",
+		"Mind spike",
+		"Shadow blade",
+		"Enemies abound",
+		"Thunder step",
+		"Summon lesser demons",
+		"Charm monster",
+		"Shadow ofmoil",
+		"Sickening radiance",
+		"Summon greater demon",
+		"Danse macabre",
+		"Enervation",
+		"Far step",
+		"infernal calling",
+		"Negative energyflood",
+		"Synaptic static",
+		"Wall of light",
+		"Mental prison",
+		"Scatter",
+		"Soul cage",
+		"Crown of stars",
+		"Power word pain",
+		"Maddening darkness",
+		"Psychic scream",		
+		
 	   "Create Bonfire",
     "Frostbite",
     "Magic Stone",
@@ -1351,6 +1446,11 @@ var classSpells = {
     "Gaea’s hand",
     "Rapport spores",
     "Slicing leaves",
+		"infestation",
+		"lnvestiture of flame",
+		"lnvestiture of ice",
+		"lnvestiture of stone",
+		"lnvestiture of wind",
 
 		  "Blade Ward",
 		  "Chill Touch",
@@ -1541,6 +1641,54 @@ var classSpells = {
 		ru: "Волшебник"
 	  },
 	  spells: [
+		"infestation",
+		"Toll the dead",
+		"Cause fear",
+		"Earth tremor",
+		"lce knife",
+		"Snare",
+		"Dragon's breath",
+		"lviind spike",
+		"Shadow blade",
+		"Wording wind",
+		"Catnap",
+		"Enemies abound",
+		"Melf's minute meteors",
+		"Life transference",
+		"Summon lesser demons",
+		"Thunder step",
+		"Tiny servant",
+		"Charm monster",
+		"Sickening radiance",
+		"Storm sphere",
+		"Summon greater demon",
+		"Control winds",
+		"Danse macabre",
+		"Dawn",
+		"Enervation",
+		"Far step",
+		"lmmolation",
+		"infernal calling",
+		"Negative energyflood",
+		"Skill empowerment",
+		"Steel wind strike",
+		"Synaptic static",
+		"Wall oflight",
+		"Create homunculus",
+		"Mental prison",
+		"Scatter",
+		"Soul cage",
+		"Tenser’s transformation",
+		"Crown of stars",
+		"Power word pain",
+		"illusory dragon",
+		"Maddening darkness",
+		"Mightyfortress",
+		"Inuulnerabiiity",
+		"Mass polymorph",
+		"Psychic scream",
+		
+		
 		"BOOMING BLADE",
 		"GREEN-FLAME BLADE",
 		"LIGHTNING LURE",
@@ -1565,6 +1713,7 @@ var classSpells = {
 		"Mind spore",
 		"Conjure plant creature",
 
+		
 
 	  "Create Bonfire",
     "Control Flames",

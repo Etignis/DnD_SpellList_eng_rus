@@ -293,9 +293,14 @@ window.onload = function(){
             
           '<div class="text">'+s_text+'</div>'+ 
           '<div class="material_components">'+s_materials+
-            '<div class="source">'+(s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</div>'+
+           // '<div class="source">'+(s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</div>'+
+					  '<div class="source">'+(s_source?" ("+s_source.split(",").map(function(src){
+						return " <span title=\"Источник: "+ oSource[src.trim()]+"\">"+src.trim()+"</span>";
+					}).join(", ")+")" :"")+'</div>'+
           '</div>'+
           
+							
+					
           '</div>'+
         '</div>';
       } else {
@@ -329,7 +334,9 @@ window.onload = function(){
 						'<div class="text">' + s_text + '</div>	'+
 						textSizeButtons +
 						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
-						'<b class="school">' + s_level + ", " + s_school + (s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</b>'+
+						'<b class="school">' + s_level + ", " + s_school + (s_source? " ("+s_source.split(",").map(function(src){
+						return " <span title=\"Источник: "+ oSource[src.trim()]+"\">"+src.trim()+"</span>";
+					}).join(", ")+")" :"")+'</b>'+
 					'</div>'+
 				'</div>'+
 			'</div>';
@@ -434,10 +441,17 @@ window.onload = function(){
 		if(aSources && aSources.length>0 && aSources.length<9) {
 			filteredSpells = filteredSpells.filter(function(spell){
 				for(var i = 0; i < aSources.length; i++) {
+					
+					// if(spell.en.name == "Abi-Dalzim’s Horrid Wilting") {
+						// debugger;
+					// }
 
-					if(aSources[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
+					// if(aSources[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
+						// return true;
+					// }
+					if(spell.en.source.toLowerCase().trim().indexOf(aSources[i].toLowerCase().trim()) >= 0){
 						return true;
-					}
+					} 
 				}
 				return false;
 			});
@@ -457,7 +471,7 @@ window.onload = function(){
 		if (sName && sName!=='ritual' && sName!=='ритуал') {
 			sName = sName.toLowerCase().trim();
 			filteredSpells = filteredSpells.filter(function(spell){
-				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
+				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0) || (spell.ru && spell.ru.nic && spell.ru.nic.toLowerCase().trim().indexOf(sName)>=0));
 			});
 		}
 
