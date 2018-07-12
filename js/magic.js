@@ -330,7 +330,7 @@ window.onload = function(){
 								'<span>' + s_duration + '</span>'+
 							'</div>'+
 						'</div>'+
-						'<div class="materials">' + s_materials + '</div>'+
+						'<div class="materials">' + ((s_materials && s_materials.length>2)? "("+s_materials+")" : "") + '</div>'+
 						'<div class="text">' + s_text + '</div>	'+
 						textSizeButtons +
 						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
