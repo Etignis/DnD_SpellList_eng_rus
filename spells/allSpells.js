@@ -11762,6 +11762,7 @@ var allSpells = [
    "name": "HOLY WEAPON",
    "school": "evocation",
    "castingTime": "1 bonus action",
+   "level": "5",
    "range": "Touch",
    "components": "V, S",
    "duration": "Concentration, up to 1 hour",
@@ -12025,6 +12026,7 @@ var allSpells = [
   "en": {
    "name": "NEGATIVE ENERGY FLOOD",
    "school": "necromancy",
+   "level": "5",
    "castingTime": "1 action",
    "range": "60 feet",
    "components": "V, M",
@@ -12236,6 +12238,7 @@ var allSpells = [
    "name": "SNARE",
    "school": "abjuration",
    "castingTime": "1 minute",
+   "level": "1",
    "range": "Touch",
    "components": "S, M",
    "materials": "(25 feet of rope, which the spell consumes)",
@@ -12479,8 +12482,9 @@ var allSpells = [
    "name": "TOLL THE DEAD",
    "school": "Necromancy",
    "castingTime": "1 action",
+   "level": 0,
    "range": "60 feet",
-   "components": "V, 8",
+   "components": "V, S",
    "duration": "Instantaneous",
    "text": "You point at one creature you can see within range,and the sound of a dolorous bell fills the air around itfor a moment. The target must succeed on a Wisdomsaving throw or take 1d8 necrotic damage. If the targetis missing any of its hit points, it instead takes 1d] 2 ne—crotic damage.<br>The spell’s damage increases by one die when youreach 5th level (2d8 or 2(112), 11th level (3d8 or 3d12),and 17th level (4d8 or 4dl2).",
 	 "source": "XGTE"
@@ -12501,6 +12505,7 @@ var allSpells = [
    "name": "WALL OF LIGHT",
    "school": "evocation",
    "castingTime": "1 action",
+   "level": "5",
    "range": "120 feet",
    "components": "V, S, M",
    "materials": "(a hand mirror)",
@@ -12548,6 +12553,7 @@ var allSpells = [
  {
   "en": {
    "name": "WORD of RADIANCE",
+   "level": 0,
    "school": "Evocation",
    "castingTime": "1 action",
    "range": "5 feet",
@@ -12596,6 +12602,7 @@ var allSpells = [
   "en": {
    "name": "ZEPHYR STRIKE",
    "school": "transmutation",
+   "level": "1",
    "castingTime": "1 bonus action",
    "range": "Self",
    "components": "V",
