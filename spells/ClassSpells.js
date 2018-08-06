@@ -515,6 +515,54 @@ var classSpells = {
 			  "Hold Monster"
 			]
 
+		},
+		ForgeDomain: {
+		  title: {
+			en: "Forge Domain",
+			ru: "Домен Кузни"
+		  },
+		  spells: [
+
+			  "identify",
+			  "searing smite",
+
+			  "heat metal",
+			  "magic weapon",
+
+			  "elemental weapon",
+			  "protection from energy",
+
+			  "fabricate",
+			  "wall of fire",
+
+			  "animate objects",
+			  "creation"
+			]
+
+		},
+		GraveDomain: {
+		  title: {
+			en: "Grave Domain",
+			ru: "Домен Упокоения"
+		  },
+		  spells: [
+
+			  "bane",
+			  "false life",
+
+			  "gentle repose",
+			  "ray of enfeeblement",
+
+			  "revivify",
+			  "vampiric touch",
+
+			  "blight",
+			  "death ward",
+
+			  "antilife shell",
+			  "raise dead"
+			]
+
 		}
 	  }
 	},
@@ -1071,6 +1119,65 @@ var classSpells = {
 				"Scrying"
 			  ]
 
+		},
+		{
+		  title: {
+				en: {
+					text: "Oath of  Redemption",
+					source: "XGTE"
+				},
+				ru: {
+					text: "Клятва Искупления",
+					source: "XGTE"
+				}
+					
+			},
+			spells: [
+				"sanctuary",
+				"sleep",
+
+				"calm emotions",
+				"hold person",
+
+				"counterspell",
+				"hypnotic pattern",
+
+				"Otiluke’s resilient sphere",
+				"stoneskin",
+
+				"Hold Monster",
+				"wall of force"
+			  ]
+
+		},
+		{
+		  title: {
+				en: {
+					text: "Oath of  Conquest",
+					source: "XGTE"
+				},
+				ru: {
+					text: "Клятва Покорения",
+					source: "XGTE"
+				}
+			},
+			spells: [
+				"armor of Agathys",
+				"command",
+
+				"hold person",
+				"spiritual weapon",
+
+				"bestow curse",
+				"fear",
+
+				"dominate beast",
+				"stoneskin",
+
+				"cloudkill",
+				"dominate person"
+			  ]
+
 		}
 	  ]
 	},
@@ -1155,6 +1262,68 @@ var classSpells = {
 		  "Swift Quiver",
 		  "Tree Stride",
 		  "Conjure plant creature"
+		],
+	  subclasses: [
+		{
+		  title: {
+				en: {
+						text: "Horizon Walker",
+						source: "XGTE"
+				},
+				ru: {
+						text: "Странник горизонта",
+						source: "XGTE"
+				}
+			},
+			spells: [
+				"Protection from Evil and Good",
+				"misty step",
+				"haste",
+				"banishment",
+				"teleportation circle"
+			  ]
+
+		},
+		{
+		  title: {
+				en: {
+							text: "Gloom Stalker",
+							source: "XGTE"
+				},
+				ru: {
+							text: "Сумрачный охотник",
+							source: "XGTE"
+				}
+			},
+			spells: [
+				"disguise self",
+				"rope trick",
+				"fear",
+				"greater invisibility",
+				"seeming"
+			  ]
+
+		},
+		{
+		  title: {
+				en: {
+								text: "Monster Slayer",
+								source: "XGTE"
+				},
+				ru: {
+								text: "Убийца монстров",
+								source: "XGTE"
+				}
+			},
+			spells: [
+				"Protection from Evil and Good",
+				"zone of truth",
+				"magic circle",
+				"banishment",
+				"hold monster"
+			  ]
+
+		}
 		]
 	},
 	Sorcerer: {
@@ -1394,6 +1563,28 @@ var classSpells = {
 		  "Power Word Kill",
 		  "Time Stop",
 		  "Wish"
+		],
+	  subclasses: [
+		{
+		  title: {
+				en: {
+					text: "Divine Soul",
+					source: "XGTE"
+					},
+				ru: {
+					text: "Божественная душа",
+					source: "XGTE"
+					}
+			},
+			spells: [
+				"cure wounds",
+				"inflict wounds",
+				"bless",
+				"bane",
+				"protection from evil and good"
+			  ]
+
+		}
 		]
 	},
 	Warlock: {
@@ -1630,6 +1821,66 @@ var classSpells = {
 
 				"Dominate Person",
 				"Telekinesis"
+			  ]
+
+		},
+		{
+		  title: {
+			en: {
+					text: "The Hexblade",
+					source: "XGTE"
+					}, 
+			ru: {
+					text: "Ведьмовской клинок",
+					source: "XGTE"
+					}
+			},
+			spells: [
+
+				"shield",
+				"wrathful smite",
+
+				"blur",
+				"branding smite",
+
+				"blink",
+				"elemental weapon",
+
+				"phantasmal killer",
+				"staggering smite",
+
+				"banishing smite",
+				"cone of cold"
+			  ]
+
+		},
+		{
+		  title: {
+			en: {
+					text: "The Celestial",
+					source: "XGTE"
+					},
+			ru: {
+					text: "Небожитель",
+					source: "XGTE"
+					}
+			},
+			spells: [
+
+				"cure wounds",
+				"guiding bolt",
+
+				"flaming sphere",
+				"lesser restoration",
+
+				"revivify",
+				"daylight",
+
+				"guardian of faith",
+				"wall of fire",
+
+				"flame strike",
+				"greater restoration"
 			  ]
 
 		}

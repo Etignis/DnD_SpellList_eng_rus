@@ -94,6 +94,7 @@ window.onload = function(){
 		var width = params.width? "; width: "+ params.width: "";
 		var lableText;
 		var min_width = 0;
+		var sLabeltooltip = params.tooltip || '';
 		var oParams = params.params;
 		var aParams = [], sParams="";
 		if(oParams) {
@@ -105,11 +106,12 @@ window.onload = function(){
 		src.forEach(function(item){
 			var key = item.name;
 			var text = item.title;
+			var tooltip = item.tooltip? " title='"+item.tooltip+"' " : "";
 			if(text.length > min_width)
 				min_width = text.length/2;
-			options += "<li class='option' data-key='"+key+"'>"+text+"</li>";
+			options += "<li class='option' data-key='"+key+"' "+tooltip+">"+text+"</li>";
 			if(key == selected_key){
-				lableText = text
+				lableText = sLabeltooltip?"<span title='"+sLabeltooltip+"'>"+text+"</span>" :text
 			}
 		});
 		min_width = min_width>20? 20: min_width;
@@ -593,14 +595,19 @@ window.onload = function(){
 		$("#SubSubClassSelect").remove();
 		var src = [{
 			name: "[NONE]",
-		    title: "[ПОДКЛАСС]"
+		  title: "[ПОДКЛАСС]"
 		}];
 		if(classSpells[sClass] && classSpells[sClass].subclasses)
 		for (var i in classSpells[sClass].subclasses){
+			let sEnLabel = classSpells[sClass].subclasses[i].title.en.text || classSpells[sClass].subclasses[i].title.en;
+			let sEnTitle = classSpells[sClass].subclasses[i].title.en.source;
+			
+			let sRuLabel = classSpells[sClass].subclasses[i].title.ru.text || classSpells[sClass].subclasses[i].title.ru;
 			src.push(
 			{
 				name: i,
-				title: classSpells[sClass].subclasses[i].title.en+"<br>"+classSpells[sClass].subclasses[i].title.ru
+				title: sEnLabel+"<br>"+sRuLabel,
+				tooltip: sEnTitle? "Источник: "+sEnTitle : ""
 			}
 			);
 		}
@@ -639,7 +646,9 @@ window.onload = function(){
 			}
 			);
 		}
-		var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%"});
+		let tooltip = $("#SubClassSelect").find(".label span").attr('title') || '';
+		
+		var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%", tooltip: tooltip});
 		var label = createLabel("Класс");
 		//src[0].title= "[Полкласс]";
 
@@ -854,7 +863,8 @@ window.onload = function(){
 	$("body").on("click", ".customSelect .option", function() {
 	  var key = $(this).attr("data-key");
 	  var text = $(this).html().replace("<br>", " | ");
-	  $(this).closest(".customSelect").find(".label").attr("data-selected-key", key).text(text);
+		var tooltip = $(this).attr("title");
+	  $(this).closest(".customSelect").find(".label").attr("data-selected-key", key).html(tooltip?"<span title='"+tooltip+"'>"+text+"</span>" :text);
 	  $(this).parent("ul").fadeOut();
 	  $(this).closest(".customSelect").focusout();
 	  $(this).closest(".customSelect").blur();
