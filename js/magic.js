@@ -208,7 +208,7 @@ window.onload = function(){
 			var s_duration = pretifyString(o.duration.replace(/концентрация/ig, "конц-я"));
 			var s_materials = o.materials;
 			var s_text = o.text;
-			var s_level = o.level;
+			var s_level = spell.en.level;
 			var s_source = o.source? o.source : spell.en.source? spell.en.source: "";
 			var st_castingTime, st_range, st_components, st_duration;
 			switch (lang){
