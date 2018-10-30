@@ -20,7 +20,7 @@ var sourceList = [
     key: "SCPC"
   },
   {
-    en: "Xanathar's Guide to Everuthing",
+    en: "Xanathar's Guide to Everything",
     ru: "Руководство Зантара обо всем",
     key: "XGTE"
   }
