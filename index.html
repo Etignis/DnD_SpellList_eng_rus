@@ -27,11 +27,166 @@
 </head>
 <body>
 
-<div class='wrap'>
-	<div class='p_side'>
+<div class='wrap'  id='app' @keyup.ctrl.65="selectAll">
+	<div class='p_side'  v-cloak>
+		<div class="mediaWidth flexParent">
+			<a href="/" class="bt flexChild" title="На главную страницу"><i class="fa fa-home"></i></a>
+			<a href="#" class="bt flexChild" id="bInfo" title="Справка" @click="showInfo"><i class="fa fa-question-circle"></i></a>
+			<a href="#" class="bt flexChild" id="bPrint" title="Распечатать" @click="print"><i class="fa fa-print" aria-hidden="true"></i></a>
+		</div>
+		<div class='mediaWidth'>
+			<searchfield
+				id="NameInput"
+				title="Название"
+				:value="sSearch"
+				@input="onSearchName"
+				@searchrndom="getRandomItem"
+			>
+			</searchfield>
+			
+			<div class='mediaWidth'>				
+				<custom-select
+					id="ClassSelect"
+					ref="ClassSelect"
+					title="Классы"
+					:selected="sClassSelected"
+					:items="aClassList"
+					@iclick="onClassChange($event)"
+				>
+				</custom-select>
+			</div>
+
+			<div class='mediaWidth'>	
+				<label class='filterLabel'>Уровень с/по</label>
+				<div class="row">
+					<div class="cell">
+						<custom-select
+							id="LevelSelectStart"
+							ref="LevelSelectStart"
+							:selected="sLevelStartSelected"
+							:items="aLevelList"
+							@iclick="onLevelStartChange($event)"
+						>
+						</custom-select>	
+					</div>		
+					<div class="cell">
+						<custom-select
+							id="LevelSelectEnd"
+							ref="LevelSelectEnd"
+							:selected="sLevelEndSelected"
+							:items="aLevelList"
+							@iclick="onLevelEndChange($event)"
+						>
+						</custom-select>
+					</div>	
+				</div>
+			</div>
+			
+			<div class='mediaWidth'>
+				<combobox
+					id="SchoolCombobox"
+					ref="SchoolCombobox"
+					title="Школы"
+					:items="aSchoolList"
+					:opened="bSchoolsOpend"
+					@iclick="onSchoolChange($event)"
+					@opened="onSchoolsToggled($event)"
+				>
+				</combobox>
+			</div>
+			<div class='mediaWidth'>
+				<combobox
+					id="SourceCombobox"
+					ref="SourceCombobox"
+					title="Источники"
+					:items="aSrcList"
+					:opened="bSourcesOpend"
+					@iclick="onSourceChange($event)"
+					@opened="onSourcesToggled($event)"
+				>
+				</combobox>
+			</div>
+			<div class='mediaWidth'>
+				<check-button
+					id="RitualCheckbox"
+					title="Ритуальные заклинания"
+					:checked="bRitualOnly"
+					@press="onRitualsPress"
+				>
+				</check-button>
+			</div>
+			<div class='mediaWidth'>
+				<custom-select
+					id="SortSelect"
+					ref="SortSelect"
+					title="Сортировка"
+					:selected="sSortSelected"
+					:items="aSortList"
+					@iclick="onSortChange($event)"
+				>
+				</custom-select>
+			</div>
+			
+			<div class='mediaWidth'>
+				<custom-select
+					id="LangSelect"
+					ref="LangSelect"
+					title="Язык"
+					:selected="sLangSelected"
+					:items="aLanguageList"
+					@iclick="onLanguageChange($event)"
+				>
+				</custom-select>
+			</div>
+			<div class='mediaWidth'>
+				<custom-select
+					id="ViewSelect"
+					ref="ViewSelect"
+					title="Вид"
+					:selected="sViewSelected"
+					:items="aViewList"
+					@iclick="onViewChange($event)"
+				>
+				</custom-select>
+			</div>
+		</div>
 	</div>
 	<div class='p_cont'>
 		<!--span id='before_spells'><div class='loader'></div>Читаем заклинания...</span-->
+		<div class="row spellContainer" :class="{noprint: aLockedItemsList.length>0}" :data-itemcount="aItemsList.length" v-show="bCardsAreVisible">
+			<span class='itemCounter noprint' v-show="aLockedItemsList.length<1"  v-cloak title='Количество элементов'>{{aItemsList.length}}</span>
+			<card
+				v-for="item in aItemsList"
+				:key="item.name"
+				:id="item.id"
+				:name="item.name"
+				:tooltip="item.tooltip"
+				:text="item.text"
+				:src="item.src"
+				:source="item.source"
+				:school="item.school"
+				:level="item.level"
+				:duration="item.duration"
+				:casting-time="item.castingTime"
+				:range="item.range"
+				:materials="item.materials"
+				:ritual="item.ritual"
+				:components="item.components"
+				:casting-Time-Title="item.castingTimeTitle"
+				:duration-Title="item.durationTitle"
+				:range-Title="item.rangeTitle"
+				:components-Title="item.componentsTitle"
+				:color="item.color"
+				:view="sView"
+				:selected="item.selected"
+				:pre="item.pre"
+				@lock="lockCard(item)"
+				@hide="hideCard(item)"
+				@select="selectCard(item)"
+			>
+			</card>
+		</div>
+		
 		<div id='info_text'>
 			<h1>Заклинания D&D5</h2>
 			<h2>
@@ -117,14 +272,16 @@
 	</div>
 </div>
 
+	<script type='text/javascript' src="js/vue.js" defer></script>
   <script type='text/javascript' src='js/jquery-1.11.3.min.js' defer></script>  
   <script type='text/javascript' src='../_js/jquery.mobile.custom.min.js' defer></script>
   <script type='text/javascript' src='spells/schoolList.js' defer></script>
   <script type='text/javascript' src='spells/sourceList.js?v=0.41' defer></script>
   <script type='text/javascript' src='spells/allSpells.js?v=0.43' defer></script>
   <script type='text/javascript' src='spells/ClassSpells.js?v=0.4' defer></script>
-  <script type='text/javascript' src='js/magic.js?v=2.2.9' defer></script>
-  <script type='text/javascript' src='js/update.js' defer></script>
+  <!-- <script type='text/javascript' src='js/magic.js?v=2.2.9' defer></script> -->
+  <script type='text/javascript' src='js/controller.js' defer></script>
+  <!-- <script type='text/javascript' src='js/update.js' defer></script> -->
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {

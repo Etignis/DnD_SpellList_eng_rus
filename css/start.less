@@ -98,7 +98,7 @@ p {
   .fr-convex();
   margin: 0;
   padding: 0;
-  label {
+  .label {
 
     @ml: 1.4em;
     display: block;
@@ -125,7 +125,7 @@ p {
     display: none;
     position: relative;
 
-    &+label::before{
+    &+.label::before{
       @w: 0.6em;
       @b: 0.2em;
       content: "";
@@ -141,19 +141,19 @@ p {
       box-shadow: inset 0 0 0px 2px @l-gray;
     }
 
-    &:hover+label::before,
-    &:checked:hover+label::before{
+    &:hover+.label::before,
+    &:checked:hover+.label::before{
       border-color: @m-gray+#333;
     }
-    &:checked+label::before{
+    &:checked+.label::before{
       border-color: @m-gray+#444;
     }
-    &:checked+label::after{
+    &:checked+.label::after{
       content: "\2714";
       position: absolute;
       top: -0.2em;
       left: -0.75em;
-      color: @color;
+      color: #487EC5;
       font-size: 150%;
     }
     /**/

@@ -263,7 +263,7 @@ var allSpells = [
     "en": {
       "name": "Minor Illusion",
       "level": "0",
-      "text": "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again. If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends. If you create an image of an object such as a chair, muddy footprints, or a small chest it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it. If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.",
+      "text": "You create a sound or an image of an object within range that lasts for the duration. The Illusion also ends if you dismiss it as an action or cast this spell again. If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends. If you create an image of an object such as a chair, muddy footprints, or a small chest it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an Illusion, because things can pass through it. If a creature uses its action to examine the sound or image, the creature can determine that it is an Illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the Illusion for what it is, the Illusion becomes faint to the creature.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -607,7 +607,7 @@ var allSpells = [
     "en": {
       "name": "Disguise Self",
       "level": "1",
-      "text": "You make yourself including your clothing, armor, weapons, and other belongings on your person look different until the spell ends or until you use your action to dismiss it. You can seem  1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you. The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of som eone who reaches out to touch you would bump into you while it was seemingly still in midair. To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.",
+      "text": "You make yourself including your clothing, armor, weapons, and other belongings on your person look different until the spell ends or until you use your action to dismiss it. You can seem  1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the Illusion is up to you. The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of som eone who reaches out to touch you would bump into you while it was seemingly still in midair. To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "Self",
@@ -820,7 +820,7 @@ var allSpells = [
       "name": "Illusory Script",
       "ritual": "ritual",
       "level": "1",
-      "text": "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know. Should the spell be dispelled, the original script and the illusion both disappear. A creature with truesight can read the hidden message.",
+      "text": "You write on parchment, paper, or some other suitable writing material and imbue it with a potent Illusion that lasts for the duration. To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know. Should the spell be dispelled, the original script and the Illusion both disappear. A creature with truesight can read the hidden message.",
       "school": "Illusion",
       "castingTime": "1 minute",
       "range": "Touch",
@@ -1029,7 +1029,7 @@ var allSpells = [
     "en": {
       "name": "Silent Image",
       "level": "1",
-      "text": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual, it isn't accompanied by sound, smell, or other sensory effects. You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image.",
+      "text": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual, it isn't accompanied by sound, smell, or other sensory effects. You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Physical interaction with the image reveals it to be an Illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an Illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the Illusion for what it is, the creature can see through the image.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "60 feet",
@@ -1266,7 +1266,7 @@ var allSpells = [
     "en": {
       "name": "Blur",
       "level": "2",
-      "text": "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesnt rely on sight, as with blindsight, or can see through illusions, as with truesight.",
+      "text": "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesnt rely on sight, as with blindsight, or can see through Illusions, as with truesight.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "Self",
@@ -1764,7 +1764,7 @@ var allSpells = [
     "en": {
       "name": "Mirror Image",
       "level": "2",
-      "text": "Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real. You can use your action to dismiss the illusory duplicates. Each time a creature targets you with an attack during the spell's duration, roll a d20 to determine whether the attack instead targets one of your duplicates. If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher. A duplicate's AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed. A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with truesight.",
+      "text": "Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real. You can use your action to dismiss the illusory duplicates. Each time a creature targets you with an attack during the spell's duration, roll a d20 to determine whether the attack instead targets one of your duplicates. If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher. A duplicate's AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed. A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive Illusions as false, as with truesight.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "Self",
@@ -1816,7 +1816,7 @@ var allSpells = [
     "en": {
       "name": "Nystul's Magic Aura",
       "level": "2",
-      "text": "You place an illusion on a creature or an object you touch so that divination spells reveal false information about it. The target can be a willing creature or an object that isn't being carried or worn by another creature. When you cast the spell, choose one or both of the following effects. The effect lasts for the duration. If you cast this spell on the same creature or object every day for 30 days, placing the same effect on it each time, the illusion lasts until it is dispelled. False Aura. You change the way the target appears to spells and magical effects, such as detect magic, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item. Mask. You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of a sym bol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment.",
+      "text": "You place an Illusion on a creature or an object you touch so that Divination spells reveal false information about it. The target can be a willing creature or an object that isn't being carried or worn by another creature. When you cast the spell, choose one or both of the following effects. The effect lasts for the duration. If you cast this spell on the same creature or object every day for 30 days, placing the same effect on it each time, the Illusion lasts until it is dispelled. False Aura. You change the way the target appears to spells and magical effects, such as detect magic, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item. Mask. You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of a sym bol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "Touch",
@@ -1842,7 +1842,7 @@ var allSpells = [
     "en": {
       "name": "Phantasmal Force",
       "level": "2",
-      "text": "You craft an illusion that takes root in the mind of a creature that you can see within range. The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs. The phantasm includes sound, temperature, and other stimuli, also evident only to the creature. The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends. While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall it was pushed, it slipped, or a strong wind might have knocked it off. An affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion.",
+      "text": "You craft an Illusion that takes root in the mind of a creature that you can see within range. The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs. The phantasm includes sound, temperature, and other stimuli, also evident only to the creature. The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an Illusion, and the spell ends. While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall it was pushed, it slipped, or a strong wind might have knocked it off. An affected target is so convinced of the phantasm's reality that it can even take damage from the Illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the Illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the Illusion.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "60 feet",
@@ -2471,7 +2471,7 @@ var allSpells = [
     "en": {
       "name": "Major Image",
       "level": "3",
-      "text": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a troglodyte's stench). As long as you are within range of the illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example. Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature. At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your concentration.",
+      "text": "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a troglodyte's stench). As long as you are within range of the Illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the Illusion to make different sounds at different times, even making it carry on a conversation, for example. Physical interaction with the image reveals it to be an Illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an Illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the Illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature. At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your concentration.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "120 feet",
@@ -2497,7 +2497,7 @@ var allSpells = [
     "en": {
       "name": "Nondetection",
       "level": "3",
-      "text": "For the duration, you hide a target that you touch from divination magic. The target can be a willing creature or a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any divination magic or perceived through magical scrying sensors.",
+      "text": "For the duration, you hide a target that you touch from Divination magic. The target can be a willing creature or a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any Divination magic or perceived through magical scrying sensors.",
       "school": "Abjuration",
       "castingTime": "1 action",
       "range": "Touch",
@@ -3073,7 +3073,7 @@ var allSpells = [
     "en": {
       "name": "Hallucinatory Terrain",
       "level": "4",
-      "text": "You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance. The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain.",
+      "text": "You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance. The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the Illusion. If the difference isn't obvious by touch, a creature carefully examining the Illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the Illusion for what it is, sees it as a vague image superimposed on the terrain.",
       "school": "Illusion",
       "castingTime": "10 minutes",
       "range": "300 feet",
@@ -3177,7 +3177,7 @@ var allSpells = [
     "en": {
       "name": "Mordenkainen's Faithful Hound",
       "level": "4",
-      "text": "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it. The hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions. At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals 4d8 piercing damage.",
+      "text": "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it. The hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores Illusions. At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals 4d8 piercing damage.",
       "school": "Conjuration",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -3203,7 +3203,7 @@ var allSpells = [
     "en": {
       "name": "Mordenkainen's Private Sanctum",
       "level": "4",
-      "text": "You make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration or until you use an action to dismiss it. When you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties: <br> • Sound can't pass through the barrier at the edge of the warded area. <br> • The barrier of the warded area appears dark and foggy, preventing vision (including darkvision) through it. <br> • Sensors created by divination spells can't appear inside the protected area or pass through the barrier at its perimeter.  Creatures in the area can't be targeted by divination spells. <br> • Nothing can teleport into or out of the warded area. <br> • Planar travel is blocked within the warded area. Casting this spell on the same spot every day for a year makes this effect permanent. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a spell slot of 5th level.",
+      "text": "You make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration or until you use an action to dismiss it. When you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties: <br> • Sound can't pass through the barrier at the edge of the warded area. <br> • The barrier of the warded area appears dark and foggy, preventing vision (including darkvision) through it. <br> • Sensors created by Divination spells can't appear inside the protected area or pass through the barrier at its perimeter.  Creatures in the area can't be targeted by Divination spells. <br> • Nothing can teleport into or out of the warded area. <br> • Planar travel is blocked within the warded area. Casting this spell on the same spot every day for a year makes this effect permanent. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a spell slot of 5th level.",
       "school": "Abjuration",
       "castingTime": "10 minutes",
       "range": "120 feet",
@@ -3857,7 +3857,7 @@ var allSpells = [
     "en": {
       "name": "Seeming",
       "level": "5",
-      "text": "This spell allows you to change the appearance of any number of creatures that you cna see within range. You give each target you choose a new, illusory appearance. An unwilling target can make a Charisma saving throw, and if it succeeds, it is unaffected by this spell. The spell disguises physicial appearances as well as clothing, armor, weapons, and equipment. You can make each creature seem 1 foot shorter or taller and appear thin, fat, or inbetween. You can't change a target's body type, so you must choose a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you. The spell lasts for the duration, unless you use your action to dismiss it sooner. The changes wrought by this spell fail to hold up to physical inspections. For example, if you use this spell to add a hat to a creature's outfitm objects pass through the hat, and anyone who touches it would feel nothing or would feel the creature's head and hair. If you use this spell to appear thinner then you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair. A creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised.",
+      "text": "This spell allows you to change the appearance of any number of creatures that you cna see within range. You give each target you choose a new, illusory appearance. An unwilling target can make a Charisma saving throw, and if it succeeds, it is unaffected by this spell. The spell disguises physicial appearances as well as clothing, armor, weapons, and equipment. You can make each creature seem 1 foot shorter or taller and appear thin, fat, or inbetween. You can't change a target's body type, so you must choose a form that has the same basic arrangement of limbs. Otherwise, the extent of the Illusion is up to you. The spell lasts for the duration, unless you use your action to dismiss it sooner. The changes wrought by this spell fail to hold up to physical inspections. For example, if you use this spell to add a hat to a creature's outfitm objects pass through the hat, and anyone who touches it would feel nothing or would feel the creature's head and hair. If you use this spell to appear thinner then you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair. A creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "30 feet",
@@ -4250,7 +4250,7 @@ var allSpells = [
     "en": {
       "name": "Guards and Wards",
       "level": "6",
-      "text": "You create a ward that protects up to 2,500 square feet of floor space (an area 50 feet square, or one hundred 5-foot squares or twenty-five 10-foot squares). The warded area can be up to 20 feet tall, and shaped as you desire. You can ward several stories of a stronghold by dividing the area among them, as long as you can walk into each contiguous area while you are casting the spell. When you cast this spell, you can specify individuals that are unaffected by any or all of the effects that you choose. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects. Guards and wards creates the following effects within the warded area. Corridors. Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than you will believe it is going in the opposite direction from the one it chooses. Doors. All doors in the warded area are magically locked, as if sealed by an arcane lock spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the m inor illusion spell) to make them appear as plain sections of wall. Stairs. Webs fill all stairs in the warded area from top to bottom, as the web spell. These strands regrow in 10 minutes if they are burned or torn away while guards and wards lasts. Other Spell Effect. You can place your choice of one of the following magical effects within the warded area of the stronghold.   Place dancing lights in four corridors. You can desiginate a simple program that the lights repeat as long as guards and wards lasts. <br> • Place magic mouth in two locations. <br> • Place stinking cloud in two locations. The vapors appear in the places you designate they return within 10 minutes if dispersed by wind while guards and wards lasts. <br> • Place a constant gust of wind in one corridor or room. Place a suggestion in one location. You select an area of up to 5 feet square, and any creature that enters or passes through the area receives the suggestion mentally. The whole warded area radiates magic. A dispel magic cast on a specific effect, if successful, removes only that effect. You can create a permanently guarded and warded structure by casting this spell there every day for one year.",
+      "text": "You create a ward that protects up to 2,500 square feet of floor space (an area 50 feet square, or one hundred 5-foot squares or twenty-five 10-foot squares). The warded area can be up to 20 feet tall, and shaped as you desire. You can ward several stories of a stronghold by dividing the area among them, as long as you can walk into each contiguous area while you are casting the spell. When you cast this spell, you can specify individuals that are unaffected by any or all of the effects that you choose. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects. Guards and wards creates the following effects within the warded area. Corridors. Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than you will believe it is going in the opposite direction from the one it chooses. Doors. All doors in the warded area are magically locked, as if sealed by an arcane lock spell. In addition, you can cover up to ten doors with an Illusion (equivalent to the illusory object function of the m inor Illusion spell) to make them appear as plain sections of wall. Stairs. Webs fill all stairs in the warded area from top to bottom, as the web spell. These strands regrow in 10 minutes if they are burned or torn away while guards and wards lasts. Other Spell Effect. You can place your choice of one of the following magical effects within the warded area of the stronghold.   Place dancing lights in four corridors. You can desiginate a simple program that the lights repeat as long as guards and wards lasts. <br> • Place magic mouth in two locations. <br> • Place stinking cloud in two locations. The vapors appear in the places you designate they return within 10 minutes if dispersed by wind while guards and wards lasts. <br> • Place a constant gust of wind in one corridor or room. Place a suggestion in one location. You select an area of up to 5 feet square, and any creature that enters or passes through the area receives the suggestion mentally. The whole warded area radiates magic. A dispel magic cast on a specific effect, if successful, removes only that effect. You can create a permanently guarded and warded structure by casting this spell there every day for one year.",
       "school": "Abjuration",
       "castingTime": "10 minutes",
       "range": "Touch",
@@ -4406,7 +4406,7 @@ var allSpells = [
     "en": {
       "name": "Programmed Illusion",
       "level": "6",
-      "text": "V, S You create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific condition occurs. The illusion is imperceptible until then. It must be no larger than a 30-foot cube, and you decide when you cast the spell how the illusion behaves and what sounds it makes. This scripted performance can last up to 5 minutes. When the condition you specify occurs, the illusion springs into existence and performs in the manner you described. Once the illusion finishes performing, it disappears and remains dormant for 10 minutes. After this time, the illusion can be activated again. The triggering condition can be as general or as detailed as you like, though it must be based on visual or audible materials that occur within 30 feet of the area. For example, you could create an illusion of yourself to appear and warn off others who attempt to open a trapped door, or you could set the illusion to trigger only when a creature says the correct word or phrase. Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature.",
+      "text": "V, S You create an Illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific condition occurs. The Illusion is imperceptible until then. It must be no larger than a 30-foot cube, and you decide when you cast the spell how the Illusion behaves and what sounds it makes. This scripted performance can last up to 5 minutes. When the condition you specify occurs, the Illusion springs into existence and performs in the manner you described. Once the Illusion finishes performing, it disappears and remains dormant for 10 minutes. After this time, the Illusion can be activated again. The triggering condition can be as general or as detailed as you like, though it must be based on visual or audible materials that occur within 30 feet of the area. For example, you could create an Illusion of yourself to appear and warn off others who attempt to open a trapped door, or you could set the Illusion to trigger only when a creature says the correct word or phrase. Physical interaction with the image reveals it to be an Illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an Illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the Illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "120 feet",
@@ -4614,7 +4614,7 @@ var allSpells = [
     "en": {
       "name": "Mirage Arcane",
       "level": "7",
-      "text": "You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. The terrain's general shape remains the same, however. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Similarly, you can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal, or add creatures. The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately. Creatures with truesight can see through the illusion to the terrain's true form,  however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion.",
+      "text": "You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. The terrain's general shape remains the same, however. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Similarly, you can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal, or add creatures. The Illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately. Creatures with truesight can see through the Illusion to the terrain's true form,  however, all other elements of the Illusion remain, so while the creature is aware of the Illusion's presence, the creature can still physically interact with the Illusion.",
       "school": "Illusion",
       "castingTime": "10 minutes",
       "range": "Sight",
@@ -4744,7 +4744,7 @@ var allSpells = [
     "en": {
       "name": "Project Image",
       "level": "7",
-      "text": "You create an illusory copy of yourself that lasts for the duration. The copy can appear at any location within range that you have seen before, regardless of intervening obstacles. The illusion looks and sounds like you but is intangible. If the illusion takes any damage, it disappears, and the spell ends. You can use your action to move this illusion up to twice your speed, and make it gesture, speak, and behave in whatever way you choose. It mimics your mannerisms perfectly. You can see through its eyes and hear through its ears as if you were in its space. On your turn as a bonus action, you can switch from using its senses to using your own, or back again. While you are using its senses, you are blinded and deafened in regard to your own surroundings. Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature.",
+      "text": "You create an illusory copy of yourself that lasts for the duration. The copy can appear at any location within range that you have seen before, regardless of intervening obstacles. The Illusion looks and sounds like you but is intangible. If the Illusion takes any damage, it disappears, and the spell ends. You can use your action to move this Illusion up to twice your speed, and make it gesture, speak, and behave in whatever way you choose. It mimics your mannerisms perfectly. You can see through its eyes and hear through its ears as if you were in its space. On your turn as a bonus action, you can switch from using its senses to using your own, or back again. While you are using its senses, you are blinded and deafened in regard to your own surroundings. Physical interaction with the image reveals it to be an Illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an Illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the Illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "500 miles",
@@ -4796,7 +4796,7 @@ var allSpells = [
     "en": {
       "name": "Sequester",
       "level": "7",
-      "text": "By means of this spell, a willing creature of an object can be hidden away, safe from detection for the duration. When you cast the spell and touch the target, it becomes invisible and can't be targeted by divination spells or perceived through scrying sensors created by the divination of spells. If the target is a crreature, it falls into a state of suspended animation. Time ceases to flow for it, and it doesn't grow older. You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include after 1,000 years or when the tarrasque awakes. This spells also ends if the target takes any damage.",
+      "text": "By means of this spell, a willing creature of an object can be hidden away, safe from detection for the duration. When you cast the spell and touch the target, it becomes invisible and can't be targeted by Divination spells or perceived through scrying sensors created by the Divination of spells. If the target is a crreature, it falls into a state of suspended animation. Time ceases to flow for it, and it doesn't grow older. You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include after 1,000 years or when the tarrasque awakes. This spells also ends if the target takes any damage.",
       "school": "Transmutation",
       "castingTime": "1 action",
       "range": "Touch",
@@ -4822,7 +4822,7 @@ var allSpells = [
     "en": {
       "name": "Simulacrum",
       "level": "7",
-      "text": "You shape an illusory duplicate of one beast or humanoid that is within range for the entire castingTime of the spell. The duplicate is a creature, partiallyreal and formed from ice or snow, and it can take actions and otherwise be affected as a normal creature. It appears to be the same as the original, but it has half the creature's hit point maximum and is formed without any equipment. Otherwise, the illusion uses all the statistics of the creature it duplicates. The simulacrum is friendly to you and creatures you designate. It obeys your spoken commands, moving and acting in accordance with your wishes and acting on your turn in combat. The simulacrum lacks the ability to learn or become more powerful, so it never increases its level or other abilities, nor can it regain expended spell slots. If the simulacrum is damaged, you can repair it in an alchemical laboratory, using rare herbs and minerals worth 100 gp per hit point it regains. The simulacrum lasts until it drops to 0 hit points, at which point it reverts to snow and melts instantly. If you cast this spell again, any currently active duplicates you created with this spell are instantly destroyed.",
+      "text": "You shape an illusory duplicate of one beast or humanoid that is within range for the entire castingTime of the spell. The duplicate is a creature, partiallyreal and formed from ice or snow, and it can take actions and otherwise be affected as a normal creature. It appears to be the same as the original, but it has half the creature's hit point maximum and is formed without any equipment. Otherwise, the Illusion uses all the statistics of the creature it duplicates. The simulacrum is friendly to you and creatures you designate. It obeys your spoken commands, moving and acting in accordance with your wishes and acting on your turn in combat. The simulacrum lacks the ability to learn or become more powerful, so it never increases its level or other abilities, nor can it regain expended spell slots. If the simulacrum is damaged, you can repair it in an alchemical laboratory, using rare herbs and minerals worth 100 gp per hit point it regains. The simulacrum lasts until it drops to 0 hit points, at which point it reverts to snow and melts instantly. If you cast this spell again, any currently active duplicates you created with this spell are instantly destroyed.",
       "school": "Illusion",
       "castingTime": "12 hours",
       "range": "Touch",
@@ -5134,7 +5134,7 @@ var allSpells = [
     "en": {
       "name": "Mind Blank",
       "level": "8",
-      "text": "Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition. The spell even foils wish spells and spells or effects of similar power used to affect the target's mind or to gain information about the target.",
+      "text": "Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, Divination spells, and the charmed condition. The spell even foils wish spells and spells or effects of similar power used to affect the target's mind or to gain information about the target.",
       "school": "Abjuration",
       "castingTime": "1 action",
       "range": "Touch",
@@ -5498,7 +5498,7 @@ var allSpells = [
     "en": {
       "name": "Weird",
       "level": "9",
-      "text": "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.",
+      "text": "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The Illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.",
       "school": "Illusion",
       "castingTime": "1 action",
       "range": "120 feet",
@@ -5550,7 +5550,7 @@ var allSpells = [
     "en": {
       "name": "Vicious Mockery",
       "level": "0",
-      "text": "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (thought it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.   This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4) and 17th level (4d4)",
+      "text": "You unleash a string of insults laced with subtle Enchantments at a creature you can see within range. If the target can hear you (thought it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.   This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4) and 17th level (4d4)",
       "school": "Enchantment",
       "castingTime": "1 action",
       "range": "60 feet",
@@ -9505,7 +9505,7 @@ var allSpells = [
       "name": "Absorb Elements",
       "level": "1",
       "text": "(when you take acid, cold, fire, lightning, or thunder damage) The spell captures some of the incoming energy, lessening its effect on you and storing it for your next melee attack. You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 damage of the triggering type, and the spell ends.<br> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st.",
-      "school": "abjuration",
+      "school": "Abjuration",
       "castingTime": "1 reaction",
       "range": "Self",
       "components": "S",
@@ -9531,7 +9531,7 @@ var allSpells = [
       "name": "Aganazzar’s Scorcher",
       "level": "2",
       "text": "A line of roaring flame 30 feet long and 5 feet wide emanates from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 3d8 fire damage on a failed save, or half as much damage on a successful one. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "30 feet",
       "components": "V, S, M",
@@ -9557,7 +9557,7 @@ var allSpells = [
       "name": "Beast Bond",
       "level": "1",
       "text": "You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beast’s Intelligence is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.",
-      "school": "divination",
+      "school": "Divination",
       "castingTime": "1 action",
       "range": "Touch",
       "components": "V, S, M",
@@ -9732,7 +9732,7 @@ var allSpells = [
       "name": "Earth Tremor",
       "level": "1",
       "text": " You cause a tremor in the ground in a 10-foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 1d6 bludgeoning damage and is knocked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "Self (10-foot radius)",
       "components": "V, S",
@@ -9934,7 +9934,7 @@ var allSpells = [
       "name": "Immolation",
       "level": "5",
       "text": " Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes 7d6 fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell’s duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes 3d6 fire damage on a failed save, and the spell ends on a successful one. These magical flames can’t be extinguished through nonmagical means. If damage from this spell reduces a target to 0 hit points, the target is turned to ash.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "90 feet",
       "components": "V",
@@ -10064,7 +10064,7 @@ var allSpells = [
       "name": "Maelstrom",
       "level": "5",
       "text": "A mass of 5-foot-deep water appears and swirls in a 30-foot radius centered on a point you can see within range. The point must be on ground or in a body of water. Until the spell ends, that area is difficult terrain, and any creature that starts its turn there must succeed on a Strength saving throw or take 6d6 bludgeoning damage and be pulled 10 feet toward the center.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "120 feet",
       "components": "V, S, M",
@@ -10089,7 +10089,7 @@ var allSpells = [
       "name": "Magic Stone",
       "level": "0",
       "text": " You touch one to three pebbles and imbue them with magic. You or someone else can make a ranged spell attack with one of the pebbles by throwing it or hurling it with a sling. If thrown, it has a range of 60 feet. If someone else attacks with the pebble, that attacker adds your spellcasting ability modifier, not the attacker’s, to the attack roll. On a hit, the target takes bludgeoning damage equal to 1d6 + your spellcasting ability modifier. Hit or miss, the spell then ends on the stone. If you cast this spell again, the spell ends early on any pebbles still affected by it.",
-      "school": "Transmutation ",
+      "school": "Transmutation",
       "castingTime": "1 bonus action",
       "range": "Touch",
       "components": "V, S",
@@ -10139,7 +10139,7 @@ var allSpells = [
       "name": "Melf’s Minute Meteors",
       "level": "3",
       "text": "You create six tiny meteors in your space. They float in the air and orbit you for the spell’s duration. When you cast the spell—and as a bonus action on each of your turns thereafter—you can expend one or two of the meteors, sending them streaking toward a point or points you choose within 120 feet of you. Once a meteor reaches its destination or impacts against a solid surface, the meteor explodes. Each creature within 5 feet of the point where the meteor explodes must make a Dexterity saving throw. A creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the number of meteors created increases by two for each slot level above 3rd.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "Self",
       "components": "V, S, M",
@@ -10189,7 +10189,7 @@ var allSpells = [
       "name": "Primordial Ward",
       "level": "6",
       "text": " You have resistance to acid, cold, fire, lightning, and thunder damage for the spell’s duration. When you take damage of one of those types, you can use your reaction to gain immunity to that type of damage, including against the triggering damage. If you do so, the resistances end, and you have the immunity until the end of your next turn, at which time the spell ends.",
-      "school": "abjuration",
+      "school": "Abjuration",
       "castingTime": "1 action",
       "range": "Self",
       "components": "V, S",
@@ -10291,7 +10291,7 @@ var allSpells = [
       "name": "Snilloc’s Snowball Swarm",
       "level": "2",
       "text": "A flurry of magic snowballs erupts from a point you choose within range. Each creature in a 5-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes 3d6 cold damage on a failed save, or half as much damage on a successful one. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "90 feet",
       "components": "V, S, M",
@@ -10316,7 +10316,7 @@ var allSpells = [
       "name": "Storm Sphere",
       "level": "4",
       "text": "A 20-foot-radius sphere of whirling air springs into existence centered on a point you choose within range. The sphere remains for the spell’s duration. Each creature in the sphere when it appears or that ends its turn there must succeed on a Strength saving throw or take 2d6 bludgeoning damage. The sphere’s space is difficult terrain. Until the spell ends, you can use a bonus action on each of your turns to cause a bolt of lightning to leap from the center of the sphere toward one creature you choose within 60 feet of the center. Make a ranged spell attack. You have advantage on the attack roll if the target is in the sphere. On a hit, the target takes 4d6 lightning damage. Creatures within 30 feet of the sphere have disadvantage on Wisdom (Perception) checks made to listen. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases for each of its effects by 1d6 for each slot level above 4th.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "150 feet",
       "components": "V, S",
@@ -10416,7 +10416,7 @@ var allSpells = [
       "name": "Vitriolic Sphere",
       "level": "4",
       "text": "You point at a place within range, and a glowing 1-foot ball of emerald acid streaks there and explodes in a 20-foot radius. Each creature in that area must make a Dexterity saving throw. On a failed save, a creature takes 10d4 acid damage and 5d4 acid damage at the end of its next turn. On a successful save, a creature takes half the initial damage and no damage at the end of its next turn. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by 2d4 for each slot level above 4th.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "150 feet",
       "components": "V, S, M",
@@ -10436,38 +10436,13 @@ var allSpells = [
       "duration": "Мгновенно"
     }
   },
-  {
-    "en": {
-      "name": "Tsunami",
-      "level": "8",
-      "text": "A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration. When the wall appears, each creature within its area must make a Strength saving throw. On a failed save, a creature takes 6d10 bludgeoning damage, or half as much damage on a successful save. At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a Strength saving throw or take 5d10 bludgeoning damage. A creature can take this damageonly once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends. A creature caught in the wall can move by sqimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground.",
-      "school": "Conjuration",
-      "castingTime": "1 minute",
-      "range": "Sight",
-      "components": "V, S",
-      "materials": "Athletics",
-      "duration": "Concentration, up to 6 rounds",
-      "source": "TOEE"
-    },
-    "ru": {
-      "name": "Цунами",
-      "level": "8",
-      "text": "Стена воды возникает в точке, которую вы выбираете в радиусе действия. Вы можете сделать стену длиной до 300 футов, высотой 300 футов и толщиной 50 футов. Стена остается в течение всего времени действия заклинания. Когда стена появляется, каждое существо в этой области должно сделать спасбросок по Силе. При провале существо получает 6d10 дробящего урона, или вдвое меньший урон при успехе. В начале каждого из ваших ходов после того, как стена появляется, стена, вместе с любыми существами в ней, перемещается на расстоянии 50 футов от вас. Любое Огромное или меньшее существо внутри стены или пространство, в которое входит стена, когда оно движется, должно преуспеть в спасброске по Силе или получить 5d10 дробящего урона. Существо может получить это повреждение только один раз за раунд. В конце хода высота стены уменьшается на 50 футов, а урон, получаемый существами в следующих раундах, уменьшаются на 1d10. Когда стена достигает 0 футов в высоту, заклинание заканчивается. Существо, пойманное на стене, может плыть. Из-за силы волны, однако, существо должно сделать успешную проверку Силы (Атлетика) против сложности вашего заклинания, чтобы вообще двигаться. Если провалена, оно не может двигаться. Существо, которое выходит за пределы области, падает на землю.",
-      "school": "призыв",
-      "castingTime": "1 минута",
-      "range": "прямая видимость",
-      "components": "В, С",
-      "materials": "",
-      "duration": "Концентрация до 6 раундов",
-      "source": "TOEE"
-    }
-  },
+ 
   {
     "en": {
       "name": "Warding Wind",
       "level": "2",
       "text": "A strong wind (20 miles per hour) blows around you in a 10-foot radius and moves with you, remaining centered on you. The wind lasts for the spell’s duration. The wind has the following effects: <br> • It deafens you and other creatures in its area. <br> • It extinguishes unprotected flames in its area that are torch-sized or smaller. <br> • The area is difficult terrain for creatures other than you. <br> • The attack rolls of ranged weapon attacks have disadvantage if they pass in or out of the wind. <br> • It hedges out vapor, gas, and fog that can be dispersed by strong wind.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "Self",
       "components": "V",
@@ -10518,7 +10493,7 @@ var allSpells = [
       "name": "Whirlwind",
       "level": "7",
       "text": "A whirlwind howls down to a point on the ground you specify. The whirlwind is a 10-foot-radius, 30-foot-high cylinder centered on that point. Until the spell ends, you can use your action to move the whirlwind up to 30 feet in any direction along the ground. The whirlwind sucks up any Medium or smaller objects that aren’t secured to anything and that aren’t worn or carried by anyone. A creature must make a Dexterity saving throw the first time on a turn that it enters the whirlwind or that the whirlwind enters its space, including when the whirlwind first appears. A creature takes 10d6 bludgeoning damage on a failed save, or half as much damage on a successful one. In addition, a Large or smaller creature that fails the save must succeed on a Strength saving throw or become restrained in the whirlwind until the spell ends. When a creature starts its turn restrained by the whirlwind, the creature is pulled 5 feet higher inside it, unless the creature is at the top. A restrained creature moves with the whirlwind and falls when the spell ends, unless the creature has some means to stay aloft. A restrained creature can use an action to make a Strength or Dexterity check against your spell save DC. If successful, the creature is no longer restrained by the whirlwind and is hurled 3d6 ? 10 feet away from it in a random direction.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "300 feet",
       "components": "V, M",
@@ -10543,7 +10518,7 @@ var allSpells = [
       "name": "WALL OF WATER",
       "level": "3",
       "text": "You conjure up a wall of water on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 1 foot thick, or you can make a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall vanishes when the spell ends. The wall's space is difficult terrain. Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause the area of the wall they pass through to freeze solid (at least a 5-foot square section is frozen). Each 5-foot-square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it. ",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "60 feet",
       "components": "V, S, M",
@@ -10581,7 +10556,7 @@ var allSpells = [
       "name": "BOOMING BLADE",
       "level": "0",
       "text": "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and it becomes sheathed in booming energy until the start of your next turn. If the target willingly moves before then, it immediately takes 1d8 thunder damage, and the spell ends.<br> This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra 1d8 thunder damage to the target, and the damage the target takes for moving increases to 2d8. Both damage rolls increase by 1d8 at 11th level and 17th level.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "5 feet",
       "components": "V, M",
@@ -10607,7 +10582,7 @@ var allSpells = [
       "name": "GREEN-FLAME BLADE",
       "level": "0",
       "text": "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and green fire leaps from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.<br> This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra 1d8 fire damage to the target, and the fire damage to the second creature increases to 1d8 +your spellcasting ability modifier. Both damage rolls increase by 1d8 at 11th level and 17th level.",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "5 feet",
       "components": "V, M",
@@ -10633,7 +10608,7 @@ var allSpells = [
       "name": "LIGHTNING LURE",
       "level": "0",
       "text": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within range. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d8 lightning damage if it is within 5 feet of you.<br> This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "15 feet",
       "components": "V",
@@ -10751,7 +10726,7 @@ var allSpells = [
     "ru": {
       "name": "ДРЕВЕСНЫЙ МОСТ",
       "level": "1",
-      "text": "Вы призываете крупные ветви, которые прорастаютиз указанной вами точке на поверхности, создаваявременный мост длиной до 20 футов. Мост можетвыдержать нагрузку до 600 фунтов за один раз,имеет КД 10 и 50 ОЗ. Если прочность моста умень-шается до нуля, то он обрушивается и немедленноувядает.<br><b>а более высоких кругах.</b> Если вы наклады-ваете это заклинание, используя ячейку 2 круга иливыше, длина моста увеличивается на 10 футов,грузоподъемность на 100 фунтов, а его ОЗ - на 25за каждый круг выше второго.",
+      "text": "Вы призываете крупные ветви, которые прорастаютиз указанной вами точке на поверхности, создаваявременный мост длиной до 20 футов. Мост можетвыдержать нагрузку до 600 фунтов за один раз,имеет КД 10 и 50 ОЗ. Если прочность моста умень-шается до нуля, то он обрушивается и немедленноувядает.<br><b>На более высоких кругах.</b> Если вы наклады-ваете это заклинание, используя ячейку 2 круга иливыше, длина моста увеличивается на 10 футов,грузоподъемность на 100 фунтов, а его ОЗ - на 25за каждый круг выше второго.",
       "school": "Призыв",
       "ritual": "ритуал",
       "castingTime": "1 действие",
@@ -10921,7 +10896,7 @@ var allSpells = [
     "en": {
       "name": "Fell",
       "level": "3",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "30 feet",
       "components": "V, S, M",
@@ -11180,7 +11155,7 @@ var allSpells = [
     "en": {
       "name": "Sporecaller’s Smite",
       "level": "2",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 bonus action",
       "range": "Self",
       "components": "S",
@@ -11320,7 +11295,7 @@ var allSpells = [
     "en": {
       "name": "AGANAEZAR’S SCORCHER",
       "level": "2",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "30 feet",
       "components": "V, S, M",
@@ -11344,7 +11319,7 @@ var allSpells = [
     "en": {
       "name": "CATNAP",
       "level": "3",
-      "school": "enchantment",
+      "school": "Enchantment",
       "castingTime": "1 action",
       "range": "30 feet",
       "components": "S, M",
@@ -11415,7 +11390,7 @@ var allSpells = [
     "en": {
       "name": "CHAOS BOLT",
       "level": "1",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "120 feet",
       "components": "V, S",
@@ -11438,7 +11413,7 @@ var allSpells = [
     "en": {
       "name": "CHARM MONSTER",
       "level": "4",
-      "school": "enchantment",
+      "school": "Enchantment",
       "castingTime": "1 action",
       "range": "30 feet",
       "components": "V, S",
@@ -11460,7 +11435,7 @@ var allSpells = [
     "en": {
       "name": "CREATE HOMUNCULUS",
       "level": "6",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 hour",
       "range": "Touch",
       "components": "V, S, M",
@@ -11484,7 +11459,7 @@ var allSpells = [
     "en": {
       "name": "CROWN OF STARS",
       "level": "7",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "Self",
       "components": "V, S",
@@ -11507,7 +11482,7 @@ var allSpells = [
     "en": {
       "name": "DANSE MACABRE",
       "level": "5",
-      "school": "necromancy",
+      "school": "Necromancy",
       "castingTime": "1 action",
       "range": "60 feet",
       "components": "V, S",
@@ -11529,7 +11504,7 @@ var allSpells = [
     "en": {
       "name": "DAWN",
       "level": "5",
-      "school": "evocation",
+      "school": "Evocation",
       "castingTime": "1 action",
       "range": "60 feet",
       "components": "V, S, M",
@@ -11553,7 +11528,7 @@ var allSpells = [
     "en": {
       "name": "DRAGON’S BREATH",
       "level": "2",
-      "school": "transmutation",
+      "school": "Transmutation",
       "castingTime": "1 bonus action",
       "range": "Touch",
       "components": "V, S, M",
@@ -11577,7 +11552,7 @@ var allSpells = [
     "en": {
       "name": "DRUID GROVE",
       "level": "6",
-      "school": "abjuration",
+      "school": "Abjuration",
       "castingTime": "10 minutes",
       "range": "Touch",
       "components": "V, S, M",
@@ -11601,7 +11576,7 @@ var allSpells = [
     "en": {
       "name": "ENEMIES ABOUND",
       "level": "3",
-      "school": "enchantment",
+      "school": "Enchantment",
       "castingTime": "1 action",
       "range": "120 fee",
       "components": "V, S",
@@ -11623,7 +11598,7 @@ var allSpells = [
     "en": {
       "name": "ENERVATION",
       "level": "5",
-      "school": "necromancy",
+      "school": "Necromancy",
       "castingTime": "1 action",
       "range": "60 feet",
       "components": "V, S",
@@ -11670,7 +11645,7 @@ var allSpells = [
 	{
   "en": {
    "name": "FAR STEP",
-   "school": "conjuration",
+   "school": "Conjuration",
    "level": "5",
    "castingTime": "1 bunus action",
    "range": "Self",
@@ -11693,7 +11668,7 @@ var allSpells = [
  {
   "en": {
    "name": "FIND GREATER STEED",
-   "school": "conjuration",
+   "school": "Conjuration",
    "level": "4",
    "castingTime": "10 minutes",
    "range": "30 feet",
@@ -11716,7 +11691,7 @@ var allSpells = [
  {
   "en": {
    "name": "GUARDIAN OF NATURE",
-   "school": "transmutation",
+   "school": "Transmutation",
    "level": "4",
    "castingTime": "1 bonus action",
    "range": "Self",
@@ -11743,7 +11718,7 @@ var allSpells = [
    "castingTime": "1 bonus action",
    "range": "60 feet",
 	 "level": 2,
-	 "school": "conjuration",	 
+	 "school": "Conjuration",	 
    "components": "V, S",
    "duration": "Concentration, up to 1 minute",
 	 "source": "XGTE"
@@ -11762,7 +11737,7 @@ var allSpells = [
  {
   "en": {
    "name": "HOLY WEAPON",
-   "school": "evocation",
+   "school": "Evocation",
    "castingTime": "1 bonus action",
    "level": "5",
    "range": "Touch",
@@ -11785,7 +11760,7 @@ var allSpells = [
  {
   "en": {
    "name": "ILLUSORY DRAGON",
-   "school": "illusion",
+   "school": "Illusion",
    "level": "8",
    "castingTime": "1 action",
    "range": "120 feet",
@@ -11808,7 +11783,7 @@ var allSpells = [
  {
   "en": {
    "name": "INFERNAL CALLING",
-   "school": "conjuration",
+   "school": "Conjuration",
    "level": "5",
    "castingTime": "1 minute",
    "range": "90 feet",
@@ -11862,7 +11837,7 @@ var allSpells = [
    "castingTime": "1 action",
    "range": "Self",
 	 "level": 9,
-	 "school": "abjuration",
+	 "school": "Abjuration",
    "components": "V, S, M",
    "materials": "(a small piece of adamantine worth at least 500 gp, which the spell consumes)",
    "duration": "Concentration, up to 10 minutes",
@@ -11883,7 +11858,7 @@ var allSpells = [
  {
   "en": {
    "name": "LIFE TRANSFERENCE",
-   "school": "necromancy",
+   "school": "Necromancy",
    "level": "3",
    "castingTime": "1 action",
    "range": "30 feet",
@@ -11906,7 +11881,7 @@ var allSpells = [
  {
   "en": {
    "name": "MADDENING DARKNESS",
-   "school": "evocation",
+   "school": "Evocation",
    "level": "8",
    "castingTime": "1 action",
    "range": "150 feet",
@@ -11931,7 +11906,7 @@ var allSpells = [
  {
   "en": {
    "name": "MASS POLYMORPH",
-   "school": "transmutation",
+   "school": "Transmutation",
    "level": "9",
    "castingTime": "1 action",
    "range": "120 feet",
@@ -11955,7 +11930,7 @@ var allSpells = [
  {
   "en": {
    "name": "MENTAL PRISON",
-   "school": "illusion",
+   "school": "Illusion",
    "level": "6",
    "castingTime": "1 action",
    "range": "60 feet",
@@ -11979,7 +11954,7 @@ var allSpells = [
  {
   "en": {
    "name": "MIGHTY FORTRESS",
-   "school": "conjuration",
+   "school": "Conjuration",
    "level": "8",
    "castingTime": "1 minute",
    "range": "1 mile",
@@ -12004,7 +11979,7 @@ var allSpells = [
  {
   "en": {
    "name": "MIND SPIKE",
-   "school": "divination",
+   "school": "Divination",
    "level": "2",
    "castingTime": "1 action",
    "range": "60 feet",
@@ -12027,7 +12002,7 @@ var allSpells = [
  {
   "en": {
    "name": "NEGATIVE ENERGY FLOOD",
-   "school": "necromancy",
+   "school": "Necromancy",
    "level": "5",
    "castingTime": "1 action",
    "range": "60 feet",
@@ -12052,7 +12027,7 @@ var allSpells = [
  {
   "en": {
    "name": "POWER WORD PAIN",
-   "school": "enchantment",
+   "school": "Enchantment",
    "level": "7",
    "castingTime": "1 action",
    "range": "60 feet",
@@ -12098,7 +12073,7 @@ var allSpells = [
  {
   "en": {
    "name": "PSYCHIC SCREAM",
-   "school": "enchantment",
+   "school": "Enchantment",
    "level": "9",
    "castingTime": "1 action",
    "range": "90 feet",
@@ -12144,7 +12119,7 @@ var allSpells = [
  {
   "en": {
    "name": "SHADOW BLADE",
-   "school": "illusion",
+   "school": "Illusion",
    "level": "2",
    "castingTime": "1 bonus action",
    "range": "Self",
@@ -12167,7 +12142,7 @@ var allSpells = [
  {
   "en": {
    "name": "SHADOW OF M0IL",
-   "school": "necromancy",
+   "school": "Necromancy",
    "level": "4",
    "castingTime": "1 action",
    "range": "Self",
@@ -12192,7 +12167,7 @@ var allSpells = [
  {
   "en": {
    "name": "SICKENING RADIANCE",
-   "school": "evocation",
+   "school": "Evocation",
    "level": "4",
    "castingTime": "1 action",
    "range": "120 feet",
@@ -12215,7 +12190,7 @@ var allSpells = [
  {
   "en": {
    "name": "SKILL EMPOWERMENT",
-   "school": "transmutation",
+   "school": "Transmutation",
    "level": "5",
    "castingTime": "1 action",
    "range": "Touch",
@@ -12238,7 +12213,7 @@ var allSpells = [
  {
   "en": {
    "name": "SNARE",
-   "school": "abjuration",
+   "school": "Abjuration",
    "castingTime": "1 minute",
    "level": "1",
    "range": "Touch",
@@ -12263,7 +12238,7 @@ var allSpells = [
   {
   "en": {
    "name": "SOUL CAGE",
-   "school": "necromancy",
+   "school": "Necromancy",
    "level": "6",
    "castingTime": "1 reaction, which you take when a humanoid you can see within 60 feet of you dies",
    "range": "60 feet",
@@ -12292,7 +12267,7 @@ var allSpells = [
    "castingTime": "1 action",
    "range": "30 feet",
 	 "level": "5",
-	 "school": "conjuration",
+	 "school": "Conjuration",
    "components": "S, M",
    "materials": "(a melee weapon worth at least 1 sp)",
    "duration": "Instantaneous",
@@ -12313,7 +12288,7 @@ var allSpells = [
  {
   "en": {
    "name": "SUMMON GREATER DEMON",
-   "school": "conjuration",
+   "school": "Conjuration",
    "level": "4",
    "castingTime": "1 action",
    "range": "60 feet",
@@ -12342,7 +12317,7 @@ var allSpells = [
    "castingTime": "1 action",
    "range": "60 feet",
 	 "level": 3,
-	 "school": "conjuration",
+	 "school": "Conjuration",
    "components": "V, S, M",
    "materials": "(a vial of blood from a humanoid killed within the past 24 hours)",
    "duration": "Concentration, up to 1 hour",
@@ -12363,7 +12338,7 @@ var allSpells = [
  {
   "en": {
    "name": "SYNAPTIC STATIC",
-   "school": "enchantment",
+   "school": "Enchantment",
    "level": "5",
    "castingTime": "1 action",
    "range": "120 feet",
@@ -12386,7 +12361,7 @@ var allSpells = [
  {
   "en": {
    "name": "TEMPLE OF THE GODS",
-   "school": "divination",
+   "school": "Divination",
    "level": "7",
    "castingTime": "1 hour",
    "range": "120 feet",
@@ -12411,7 +12386,7 @@ var allSpells = [
  {
   "en": {
    "name": "TENSER’S TRANSFORMATION",
-   "school": "transmutation",
+   "school": "Transmutation",
    "level": "6",
    "castingTime": "1 action",
    "range": "Self",
@@ -12442,7 +12417,7 @@ var allSpells = [
    "components": "V",
    "duration": "Instantaneous",
 	 "level": "3",
-	 "school": "conjuration",
+	 "school": "Conjuration",
 	 "source": "XGTE"
   },
   "ru": {
@@ -12459,7 +12434,7 @@ var allSpells = [
  {
   "en": {
    "name": "TINY SERVANT",
-   "school": "transmutation",
+   "school": "Transmutation",
    "level": "3",
    "castingTime": "1 minute",
    "range": "Touch",
@@ -12505,7 +12480,7 @@ var allSpells = [
  {
   "en": {
    "name": "WALL OF LIGHT",
-   "school": "evocation",
+   "school": "Evocation",
    "castingTime": "1 action",
    "level": "5",
    "range": "120 feet",
@@ -12530,7 +12505,7 @@ var allSpells = [
  {
   "en": {
    "name": "WALL of SAND",
-   "school": "evocation",
+   "school": "Evocation",
    "level": "3",
    "castingTime": "1 action",
    "range": "90 feet",
@@ -12580,7 +12555,7 @@ var allSpells = [
  {
   "en": {
    "name": "WRATH OF NATURE",
-   "school": "evocation",
+   "school": "Evocation",
    "level": "5",
    "castingTime": "1 action",
    "range": "120 feet",
@@ -12603,7 +12578,7 @@ var allSpells = [
  {
   "en": {
    "name": "ZEPHYR STRIKE",
-   "school": "transmutation",
+   "school": "Transmutation",
    "level": "1",
    "castingTime": "1 bonus action",
    "range": "Self",

@@ -230,7 +230,7 @@ p {
   margin: 0;
   padding: 0;
 }
-.customCheckbox label {
+.customCheckbox .label {
   display: block;
   padding: .2em;
   -webkit-touch-callout: none;
@@ -246,10 +246,10 @@ p {
   transition: background 0.2s ease-out;
   text-transform: capitalize;
 }
-.customCheckbox label[data-hierarchy="child"] {
+.customCheckbox .label[data-hierarchy="child"] {
   margin-left: 2.52em;
 }
-.customCheckbox label:hover {
+.customCheckbox .label:hover {
   cursor: pointer;
 }
 .customCheckbox input[type=checkbox] {
@@ -257,7 +257,7 @@ p {
   position: relative;
   /**/
 }
-.customCheckbox input[type=checkbox] + label::before {
+.customCheckbox input[type=checkbox] + .label::before {
   content: "";
   position: absolute;
   width: 0.6em;
@@ -270,19 +270,19 @@ p {
   transition: border-color 0.2s ease-out;
   box-shadow: inset 0 0 0px 2px #ddd;
 }
-.customCheckbox input[type=checkbox]:hover + label::before,
-.customCheckbox input[type=checkbox]:checked:hover + label::before {
+.customCheckbox input[type=checkbox]:hover + .label::before,
+.customCheckbox input[type=checkbox]:checked:hover + .label::before {
   border-color: #aaaaaa;
 }
-.customCheckbox input[type=checkbox]:checked + label::before {
+.customCheckbox input[type=checkbox]:checked + .label::before {
   border-color: #bbbbbb;
 }
-.customCheckbox input[type=checkbox]:checked + label::after {
+.customCheckbox input[type=checkbox]:checked + .label::after {
   content: "\2714";
   position: absolute;
   top: -0.2em;
   left: -0.75em;
-  color: #777;
+  color: #487EC5;
   font-size: 150%;
 }
 .combo_box {
@@ -977,33 +977,33 @@ p {
 #lockedSpellsArea .content {
   margin-bottom: .3em;
 }
-#lockedSpellsArea .bHideSpell {
+#lockedSpellsArea .bHideItem {
   display: none;
 }
-.bHideSpell,
-.bLockSpell,
-.bUnlockSpell {
+.bHideItem,
+.bLockItem,
+.bUnlockItem {
   position: absolute;
   top: -0.1em;
   color: #ddd;
   cursor: pointer;
   transition: color .3s;
 }
-.bHideSpell:hover,
-.bLockSpell:hover,
-.bUnlockSpell:hover {
+.bHideItem:hover,
+.bLockItem:hover,
+.bUnlockItem:hover {
   color: #6aa0e7;
 }
-.bHideSpell:active,
-.bLockSpell:active,
-.bUnlockSpell:active {
+.bHideItem:active,
+.bLockItem:active,
+.bUnlockItem:active {
   color: #487EC5;
 }
-.bHideSpell {
+.bHideItem {
   right: .1em;
 }
-.bLockSpell,
-.bUnlockSpell {
+.bLockItem,
+.bUnlockItem {
   left: .1em;
 }
 .spellContainer {
@@ -1274,7 +1274,7 @@ p {
   color: #fff;
   cursor: default;
 }
-.lockedSpell .bLockSpell {
+.lockedSpell .bLockItem {
   color: #000;
   text-shadow: 0 0 2px #487EC5;
 }

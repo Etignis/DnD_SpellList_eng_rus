@@ -1,8 +1,8 @@
 var classSpells = {
 	Bard: {
 	  title: {
-		en: "Bard",
-		ru: "Бард"
+			en: "Bard",
+			ru: "Бард"
 	  },
 	  spells: [
 			"Thunderclap",
