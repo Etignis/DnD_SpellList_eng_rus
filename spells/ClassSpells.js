@@ -608,7 +608,6 @@ var classSpells = {
 		"Piercing thorn",
 		"Mold plant",
 		"Thorn shield",
-		"Frostbite",
 		"infestation",
 		"Primal savagery",
 		"lce knife",
