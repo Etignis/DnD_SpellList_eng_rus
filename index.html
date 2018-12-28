@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css?v=0.8">
   <meta name="description" content="Заклинания D&D5">
-  <link href="https://tentaculus.ru/_fonts/FortAwesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../_fonts/FortAwesome/css/font-awesome.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="canonical" href="https://tentaculus.ru/spells" />
   <meta property="og:image" content="img/bg2.jpg" />
@@ -48,10 +48,30 @@
 				<custom-select
 					id="ClassSelect"
 					ref="ClassSelect"
-					title="Классы"
+					title="Класс"
 					:selected="sClassSelected"
 					:items="aClassList"
 					@iclick="onClassChange($event)"
+				>
+				</custom-select>
+			</div>
+			<div class='mediaWidth' v-show='aSubClassList.length>1'>				
+				<custom-select
+					id="SubClassSelect"
+					ref="SubClassSelect"
+					:selected="sSubClassSelected"
+					:items="aSubClassList"
+					@iclick="onSubClassChange($event)"
+				>
+				</custom-select>
+			</div>
+			<div class='mediaWidth' v-show='aSubSubClassList.length>1'>				
+				<custom-select
+					id="SubSubClassSelect"
+					ref="SubSubClassSelect"
+					:selected="sSubSubClassSelected"
+					:items="aSubSubClassList"
+					@iclick="onSubSubClassChange($event)"
 				>
 				</custom-select>
 			</div>
@@ -115,6 +135,38 @@
 				>
 				</check-button>
 			</div>
+			
+			<div class='mediaWidth'>	
+				<label class='filterLabel'>Ширина карточек</label>
+				<div class="flexParent">
+	
+						<button 
+							class='bt flexChild'
+							title='Уменьшить ширину карточек'
+							@click='makeCardWidthLess'
+							>
+							<i class="fa fa-caret-right" aria-hidden="true"></i> <i class="fa fa-caret-left" aria-hidden="true"></i>
+						</button>
+					
+						<button 
+							class='bt flexChild'
+							title='Сбросить ширину карточек'
+							@click='makeCardWidthNorm'
+							>
+							<i class="fa fa-square-o" aria-hidden="true"></i>
+						</button>
+						
+						<button 
+							class='bt flexChild'
+							title='Увеличить ширину карточек'
+							@click='makeCardWidthMore'
+							>
+							<i class="fa fa-caret-left" aria-hidden="true"></i> <i class="fa fa-caret-right" aria-hidden="true"></i>
+						</button>
+					
+				</div>
+			</div>
+			
 			<div class='mediaWidth'>
 				<custom-select
 					id="SortSelect"
@@ -163,6 +215,7 @@
 				:tooltip="item.tooltip"
 				:text="item.text"
 				:src="item.src"
+				:class-name="item.className"
 				:source="item.source"
 				:school="item.school"
 				:level="item.level"

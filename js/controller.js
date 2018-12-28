@@ -446,7 +446,9 @@ Vue.component('card', {
 	data: function(){
 		return {
 			//mainClass: "cardContainer",
-			viewClass: "cardView"
+			viewClass: "cardView",
+			textSize: "",
+			cardWidth: ""
 		};
 	},
 	computed: {
@@ -474,11 +476,24 @@ Vue.component('card', {
 		selectedClass: function(){
 			return this.selected? "selected" : "";
 		},
+		colorClass: function(){
+			return this.color? this.color: "";			
+		},
+		preparedText: function(){
+			return this.text? this.text.split(/<br>/g).map(el=> "<p>"+el+"</p>").join("") : "";
+		},
 		ItemCard: function(){
 			return "spellCard";
 		},
 		prerequisite: function(){
 			return this.pre.length>0? "<span title='Требования необходимые для возможности получения черты'>["+this.pre+"]</span>": "";
+		},
+		ritualMark: function(){
+			return this.ritual? "("+this.ritual+") " : "";
+		},
+		
+		textSizeStyle: function(){
+			return this.textSize? this.textSize: "";
 		}
 	},
 	methods: {
@@ -493,16 +508,23 @@ Vue.component('card', {
 		},
 		select: function(oEvent){
 			this.$emit('select', oEvent);
-		}
+		},
+		
+		onTextMin: function(){
+			
+		},
+		onTextMax: function(){
+			
+		},
 	},
 
-	template: `<div :class="[mainClass, viewClass]" @click.ctrl="select">
+	template: `<div :class="[mainClass, viewClass, colorClass]" @click.ctrl="select">
 				<div :class='[ItemCard, selectedClass]' v-if="cardView" >
 					<div class="content">
 						<span v-show="locked" class="bUnlockItem" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
 						<span v-show="!locked" class="bLockItem" title="Закорепить черту (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
 						<span class="bHideItem" title="Скрыть черту (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
-						<h1 :title="tooltip">{{name}}</h1>
+						<h1 :title="tooltip">{{name}} {{ritualMark}}</h1>
 						<div class="row">
 							<div class="cell castingTime">
 								<b>{{castingTimeTitle}}</b>
@@ -524,8 +546,13 @@ Vue.component('card', {
 							</div>
 						</div>
 						<div class="materials">{{materials}}</div>
-						<div class="text" v-html="text"></div>
+						<div class="text" v-html="preparedText" :style="textSizeStyle">
+						</div>
 						
+						<div class="sizeButtonsContainer noprint">
+							<a href="#" class="textMin" title="Уменьшить размер текста" @click='onTextMin'>–</a>
+							<a href="#" class="textMax" title="Увеличить размер текста" @click='onTextMax'>+</a>
+						</div>
 						<b class="class">{{className}}</b>
 						<b class="school">{{level}}, {{school}} <span :title="srcTitle">({{src}})</span></b>
 					</div>
@@ -538,7 +565,7 @@ Vue.component('card', {
             <div class="flex">
               <div class="flex column primal">
                 <h1 :title="tooltip">{{name}}</h1>          
-                <div class="school_level">{{level}}, {{school}} {{ritual}}</div>
+                <div class="school_level">{{level}}, {{school}} {{ritualMark}}</div>
               </div>
               <div class="flex secondal">
                 <div class="column thirdal">
@@ -551,7 +578,7 @@ Vue.component('card', {
                 </div> 
             </div>
           </div>
-          <div class="text" v-html="text"></div> 
+          <div class="text" v-html="preparedText"></div> 
           <div class="material_components">{{materialsLine}}</div>
 					<div class="source" :title="srcTitle">({{src}})</div>
         </div>
@@ -571,6 +598,8 @@ Vue.component('card', {
 			sView: "card",
 			sSort: "levelAlpha",
 			sClass: "",
+			sSubClass: "",
+			sSubSubClass: "",
 			sSearch: "",
 			aLevels: [0,1,2,3,4,5,6,7,8,9],
 			sLevelStartSelected: "0",
@@ -582,6 +611,9 @@ Vue.component('card', {
 			aLockedItems: [],
 			aSelectedItems: [],
 			aSelectedLockedItems: [],
+			sTextSizeDefault: "",
+			sCardwidth: "",
+			sCardWidthDefault: "2.5in",
 			
 			oConfig: {},
 			bSchoolsOpend: false,			
@@ -691,7 +723,7 @@ Vue.component('card', {
 			/**/
 			
 			aClassList: function(){
-				let aSclasses = [];
+				let aSclasses = [{key: "", title: "[ВСЕ]"}];
 				for (let key in classSpells) {
 					aSclasses.push({
 						key: key,
@@ -701,8 +733,42 @@ Vue.component('card', {
 				
 				return aSclasses;
 			},
+			aSubClassList: function(){
+				let aSclasses = [{key: "", title: "[ПОДКЛАСС]"}];
+				if(this.sClass && classSpells[this.sClass].subclasses){
+					for (let key in classSpells[this.sClass].subclasses) {
+						aSclasses.push({
+							key: key,
+							title: classSpells[this.sClass].subclasses[key].title.en + "<br>" + classSpells[this.sClass].subclasses[key].title.ru
+						});
+					}
+				}
+				
+				return aSclasses;
+			},
+			
+			aSubSubClassList: function(){
+				let aSclasses = [{key: "", title: "[ПОДПОДКЛАСС]"}];
+				if(this.sClass && classSpells[this.sClass].subclasses && this.sSubClass && classSpells[this.sClass].subclasses[this.sSubClass].subclasses){
+					for (let key in classSpells[this.sClass].subclasses[this.sSubClass].subclasses) {
+						aSclasses.push({
+							key: key,
+							title: classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en + "<br>" + classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru
+						});
+					}
+				}
+				
+				return aSclasses;
+			},
+			
 			sClassSelected: function(){
 				return this.sClass? classSpells[this.sClass].title[this.sLang] : "[ВСЕ]";
+			},
+			sSubClassSelected: function(){
+				return this.sSubClass? classSpells[this.sClass].subclasses[this.sSubClass].title[this.sLang] : "[ПОДКЛАСС]";
+			},
+			sSubSubClassSelected: function(){
+				return (this.sSubClass && this.sSubSubClass)? classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass].title[this.sLang] : "[ПОДПОДКЛАСС]";
 			},
 			
 			aLevelList: function(){
@@ -717,9 +783,32 @@ Vue.component('card', {
 			},
 			
 			
+			sClassTitle: function(){
+				return this.sClass? classSpells[this.sClass].title[this.sLang]: "";
+			},
 			
-			aItemsList: function(){
-				let aFiltered = this.aItems.filter(function(oItem){
+			aClassSpells: function(){
+				let aSpells = [];
+				if(this.sClass !="") {
+					//aClassSpellList = classSpells.sClass
+					aSpells = aSpells.concat(classSpells[this.sClass].spells);
+					if(classSpells[this.sClass].subclasses && this.sSubClass && classSpells[this.sClass].subclasses[this.sSubClass]) {
+						if(classSpells[this.sClass].subclasses[this.sSubClass].spells)
+							aSpells = aSpells.concat(classSpells[this.sClass].subclasses[this.sSubClass].spells);
+						if(classSpells[this.sClass].subclasses[this.sSubClass].subclasses && this.sSubSubClass && classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass]) {
+							aSpells = aSpells.concat(classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass].spells);
+						}
+					}
+					aSpells = this.aItems.filter(el => (aSpells.map(el=> el.toLowerCase().replace(/\s+/g, "")).indexOf(el.en.name.toLowerCase().replace(/\s+/g, ""))>-1));
+				} else {
+					aSpells = this.aItems
+				}
+				
+				return aSpells;
+			},
+			
+			aItemsList: function(){				
+				let aFiltered = /*/this.aItems/**/ this.aClassSpells.filter(function(oItem){
 					return (
 						this.aSrcSelected.filter(value => -1 !== oItem.en.source.split(",").map(item => item.trim()).indexOf(value)).length &&
 						//this.aSrcSelected.indexOf(oItem.en.source)>-1 && // old filter for sources
@@ -730,7 +819,10 @@ Vue.component('card', {
 							)
 						&&
 						(this.bRitualOnly && oItem.en.ritual || !this.bRitualOnly) &&
-						this.aHiddenItems.indexOf(oItem.en.name)<0/**/
+						this.aHiddenItems.indexOf(oItem.en.name)<0/**/  &&
+						this.nLevelStart <= this.nLevelEnd &&
+						this.nLevelStart <= oItem.en.level &&
+						this.nLevelEnd >= oItem.en.level 
 					) 
 				}.bind(this));
 				
@@ -742,6 +834,7 @@ Vue.component('card', {
 						"tooltip": oItem[this.sOtherLang].name || oItem.en.name,
 						"text": oItem[this.sLang].text || oItem.en.text,
 						"src": oItem[this.sLang].source || oItem.en.source,
+						"className": this.sClassTitle,
 						"source": sSrc /*this.aSources[oItem.en.source].text[this.sLang].title*/,
 						"school": this.aSchools[oItem.en.school.trim()].text[this.sLang].title,
 						"level": oLevelsText[oItem.en.level]? oLevelsText[oItem.en.level].text[this.sLang].title : oItem.en.level + " " + oLevelsText.units[this.sLang].title,
@@ -758,7 +851,7 @@ Vue.component('card', {
 						"componentsTitle": oDict.components[this.sLang].title,
 						
 						"levelNum": oItem.en.level,
-						"color": oItem.en.school,
+						"color": this.sClass,
 						"view": this.sView,
 						"locked": this.aLockedItems.indexOf(oItem.en.name)>-1,
 						"selected": this.aSelectedItems.indexOf(oItem.en.name)>-1
@@ -843,6 +936,37 @@ Vue.component('card', {
 			this.bAppIsReady = true;
 		},
 		methods: {
+			onClassChange: function(sKey){
+				this.sClass = sKey;
+				this.setConfig("class", sKey);
+				this.onSubClassChange("");
+				this.updateHash();
+			},
+			onSubClassChange: function(sKey){
+				this.sSubClass = sKey;
+				this.setConfig("subclass", sKey);
+				this.onSubSubClassChange("");
+				
+				this.updateHash();
+			},
+			onSubSubClassChange: function(sKey){
+				this.sSubSubClass = sKey;
+				this.setConfig("subsubclass", sKey);
+				
+				this.updateHash();
+			},
+			onLevelStartChange: function(sKey){
+				this.nLevelStart = sKey;
+				this.setConfig("ls", sKey);
+				
+				this.updateHash();
+			},
+			onLevelEndChange: function(sKey){
+				this.nLevelEnd = sKey;
+				this.setConfig("le", sKey);
+				
+				this.updateHash();
+			},
 			onSourceChange: function(sKey){
 				this.aSources[sKey].checked = !this.aSources[sKey].checked; 
 				this.updateHash();
@@ -879,6 +1003,7 @@ Vue.component('card', {
 			},
 			onRitualsPress: function(){
 				this.bRitualOnly = !this.bRitualOnly;
+				this.updateHash();
 			},
 			
 			onSchoolsToggled: function(bStat){
@@ -981,6 +1106,15 @@ Vue.component('card', {
 				}				
 			},
 			
+			makeCardWidthLess: function(){
+				
+			},			
+			makeCardWidthMore: function(){
+				
+			},			
+			makeCardWidthNorm: function(){
+				
+			},
 			
 			updateHash: function() {
 				var aHash = [];
@@ -992,16 +1126,29 @@ Vue.component('card', {
 					aHash.push("src="+this.aSrcSelected.join(","));
 				}
 				if(this.aSchoolSelected.length != this.aSchoolList.length) {
-					aHash.push("type="+this.aSchoolSelected.join(","));
+					aHash.push("school="+this.aSchoolSelected.join(","));
 				}
 				if(this.sLang != "ru") {
 					aHash.push("lang="+this.sLang);
+				}
+				if(this.sClass != "") {
+					aHash.push("class="+this.sClass);
+				}
+				if(this.nLevelStart > 0) {
+					aHash.push("ls="+this.nLevelStart);
+				}
+				if(this.nLevelEnd < 9) {
+					aHash.push("le="+this.nLevelEnd);
 				}
 				if(this.sView != "card") {
 					aHash.push("view="+this.sView);
 				}
 				if(this.sSort != "levelAlpha") {
 					aHash.push("sort="+this.sSort);
+				}
+				
+				if(this.bRitualOnly) {
+					aHash.push("ritual=1");
 				}
 				
 				if(aHash.length>0) {
@@ -1034,9 +1181,9 @@ Vue.component('card', {
 						}
 					}
 				}
-				if(oHash.type) {
+				if(oHash.school) {
 					for (let key in this.aSchools) {
-						if(oHash.type.indexOf(key)>-1) {
+						if(oHash.school.indexOf(key)>-1) {
 							this.aSchools[key].checked=true;
 						} else {
 							this.aSchools[key].checked=false;
@@ -1046,6 +1193,15 @@ Vue.component('card', {
 				if(oHash.lang) {
 					this.sLang = oHash.lang[0]
 				}
+				if(oHash.class) {
+					this.sClass = oHash.class[0]
+				}
+				if(oHash.le) {
+					this.nLevelEnd = oHash.ls[0]
+				}
+				if(oHash.le) {
+					this.nLevelStart = oHash.ls[0]
+				}
 				if(oHash.view) {
 					this.sView = oHash.view[0]
 				}
@@ -1054,6 +1210,9 @@ Vue.component('card', {
 				}
 				if(oHash.q) {
 					this.sSearch = oHash.q[0];
+				}
+				if(oHash.ritual) {
+					this.bRitualOnly = true;
 				}
 				
 			},

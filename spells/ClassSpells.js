@@ -190,7 +190,7 @@ var classSpells = {
 		  "Bonding vine",
 		  "Thorn shield",
 			"Toll the dead",
-			"Word ofradiance",
+			"Word of radiance",
 
 
 		  "Bane",
@@ -320,250 +320,250 @@ var classSpells = {
 		  "True Resurrection"
 		],
 	  subclasses: {
-		KnowlegeDomain: {
-		  title: {
-			en: "Knowlege Domain",
-			ru: "Домен Знаний"
-		  },
-		  spells: [
+			KnowlegeDomain: {
+				title: {
+					en: "Knowlege Domain",
+					ru: "Домен Знаний"
+				},
+				spells: [
 
-			  "Command",
-			  "Identify",
+					"Command",
+					"Identify",
 
 
-			  "Augury",
-			  "Suggestion",
+					"Augury",
+					"Suggestion",
 
 
-			  "Nondetection",
-			  "Speak with Dead",
+					"Nondetection",
+					"Speak with Dead",
 
 
-			  "Arcane Eye",
-			  "Confusion",
+					"Arcane Eye",
+					"Confusion",
 
 
-			  "Legend Lore",
-			  "Scrying"
-			]
+					"Legend Lore",
+					"Scrying"
+				]
 
-		},
-		LifeDomain: {
-		  title: {
-			en: "Life Domain",
-			ru: "Домен Жизни"
-		  },
-		  spells: [
+			},
+			LifeDomain: {
+				title: {
+				en: "Life Domain",
+				ru: "Домен Жизни"
+				},
+				spells: [
 
-			  "Bless",
-			  "Cure Wounds",
+					"Bless",
+					"Cure Wounds",
 
 
-			  "Lesser Restoration",
-			  "Spiritual Weapon",
+					"Lesser Restoration",
+					"Spiritual Weapon",
 
 
-			  "Beacon of Hope",
-			  "Revivify",
+					"Beacon of Hope",
+					"Revivify",
 
 
-			  "Death Ward",
-			  "Guardian of Faith",
+					"Death Ward",
+					"Guardian of Faith",
 
 
-			  "Mass Cure Wounds",
-			  "Raise Dead"
-			]
+					"Mass Cure Wounds",
+					"Raise Dead"
+				]
 
-		},
-		LightDomain: {
-		  title: {
-			en: "Lite Domain",
-			ru: "Домен Света"
-		  },
-		  spells: [
+			},
+			LightDomain: {
+				title: {
+				en: "Lite Domain",
+				ru: "Домен Света"
+				},
+				spells: [
 
-			  "Burning Hands",
-			  "Faerie Fire",
+					"Burning Hands",
+					"Faerie Fire",
 
 
-			  "Flaming Sphere",
-			  "Scorching Ray",
+					"Flaming Sphere",
+					"Scorching Ray",
 
 
-			  "Daylight",
-			  "Fireball",
+					"Daylight",
+					"Fireball",
 
 
-			  "Guardian of Faith",
-			  "Wall of Fire",
+					"Guardian of Faith",
+					"Wall of Fire",
 
 
-			  "Flame Strike",
-			  "Scrying"
-			]
+					"Flame Strike",
+					"Scrying"
+				]
 
-		},
-		NatureDomain: {
-		  title: {
-			en: "Nature Domain",
-			ru: "Домен Природы"
-		  },
-		  spells: [
+			},
+			NatureDomain: {
+				title: {
+				en: "Nature Domain",
+				ru: "Домен Природы"
+				},
+				spells: [
 
-			  "Animal Friendship",
-			  "Speak with Animals",
+					"Animal Friendship",
+					"Speak with Animals",
 
 
-			  "Barkskin",
-			  "Spike Growth",
+					"Barkskin",
+					"Spike Growth",
 
 
-			  "Plant Growth",
-			  "Wind Wall",
+					"Plant Growth",
+					"Wind Wall",
 
 
-			  "Dominate Beast",
-			  "Grasping Vine",
+					"Dominate Beast",
+					"Grasping Vine",
 
 
-			  "Insect Plague",
-			  "Tree Stride"
+					"Insect Plague",
+					"Tree Stride"
 
-		  ]
-		},
-		TempestDomain: {
-		  title: {
-			en: "Tempest Domain",
-			ru: "Домен Бури"
-		  },
-		  spells: [
+				]
+			},
+			TempestDomain: {
+				title: {
+				en: "Tempest Domain",
+				ru: "Домен Бури"
+				},
+				spells: [
 
-			  "Fog Cloud",
-			  "Thunderwave",
+					"Fog Cloud",
+					"Thunderwave",
 
 
-			  "Gust of Wind",
-			  "Shatter",
+					"Gust of Wind",
+					"Shatter",
 
 
-			  "Call Lightning",
-			  "Sleet Storm",
+					"Call Lightning",
+					"Sleet Storm",
 
 
-			  "Control Water",
-			  "Ice Storm",
+					"Control Water",
+					"Ice Storm",
 
 
-			  "Destructive Wave",
-			  "Insect Plague"
+					"Destructive Wave",
+					"Insect Plague"
 
-		  ]
-		},
-		TrickeryDomain: {
-		  title: {
-			en: "Trickery Domain",
-			ru: "Домен Обмана"
-		  },
-		  spells: [
+				]
+			},
+			TrickeryDomain: {
+				title: {
+				en: "Trickery Domain",
+				ru: "Домен Обмана"
+				},
+				spells: [
 
-			  "Charm Person",
-			  "Disguise Self",
+					"Charm Person",
+					"Disguise Self",
 
 
-			  "Mirror Image",
-			  "Pass without Trace",
+					"Mirror Image",
+					"Pass without Trace",
 
 
-			  "Blink",
-			  "Dispel Magic",
+					"Blink",
+					"Dispel Magic",
 
 
-			  "Dimension Door",
-			  "Polymorph",
+					"Dimension Door",
+					"Polymorph",
 
 
-			  "Dominate Person",
-			  "Modify Memory"
+					"Dominate Person",
+					"Modify Memory"
 
-		  ]
-		},
-		WarDomain: {
-		  title: {
-			en: "War Domain",
-			ru: "Домен Войны"
-		  },
-		  spells: [
+				]
+			},
+			WarDomain: {
+				title: {
+				en: "War Domain",
+				ru: "Домен Войны"
+				},
+				spells: [
 
-			  "Divine Favor",
-			  "Shield of Faith",
+					"Divine Favor",
+					"Shield of Faith",
 
 
-			  "Magic Weapon",
-			  "Spiritual Weapon",
+					"Magic Weapon",
+					"Spiritual Weapon",
 
 
-			  "Crusader's Mantle",
-			  "Spirit Guardians",
+					"Crusader's Mantle",
+					"Spirit Guardians",
 
 
-			  "Freedom of Movement",
-			  "Stoneskin",
+					"Freedom of Movement",
+					"Stoneskin",
 
 
-			  "Flame Strike",
-			  "Hold Monster"
-			]
+					"Flame Strike",
+					"Hold Monster"
+				]
 
-		},
-		ForgeDomain: {
-		  title: {
-			en: "Forge Domain",
-			ru: "Домен Кузни"
-		  },
-		  spells: [
+			},
+			ForgeDomain: {
+				title: {
+				en: "Forge Domain",
+				ru: "Домен Кузни"
+				},
+				spells: [
 
-			  "identify",
-			  "searing smite",
+					"identify",
+					"searing smite",
 
-			  "heat metal",
-			  "magic weapon",
+					"heat metal",
+					"magic weapon",
 
-			  "elemental weapon",
-			  "protection from energy",
+					"elemental weapon",
+					"protection from energy",
 
-			  "fabricate",
-			  "wall of fire",
+					"fabricate",
+					"wall of fire",
 
-			  "animate objects",
-			  "creation"
-			]
+					"animate objects",
+					"creation"
+				]
 
-		},
-		GraveDomain: {
-		  title: {
-			en: "Grave Domain",
-			ru: "Домен Упокоения"
-		  },
-		  spells: [
+			},
+			GraveDomain: {
+				title: {
+				en: "Grave Domain",
+				ru: "Домен Упокоения"
+				},
+				spells: [
 
-			  "bane",
-			  "false life",
+					"bane",
+					"false life",
 
-			  "gentle repose",
-			  "ray of enfeeblement",
+					"gentle repose",
+					"ray of enfeeblement",
 
-			  "revivify",
-			  "vampiric touch",
+					"revivify",
+					"vampiric touch",
 
-			  "blight",
-			  "death ward",
+					"blight",
+					"death ward",
 
-			  "antilife shell",
-			  "raise dead"
-			]
+					"antilife shell",
+					"raise dead"
+				]
 
-		}
+			}
 	  }
 	},
 	Druid: {
@@ -613,16 +613,12 @@ var classSpells = {
 		"Primal savagery",
 		"lce knife",
 		"Snare",
-		"Wording wind",
+		"Warding wind",
 		"Charm monster",
 		"Guardian of nature",
 		"Maelstrom",
 		"Wrath ofnature",
 		"Druid grove",
-		"lnvestiture of flame",
-		"lnvestiture of ice",
-		"lnvestiture of stone",
-		"lnvestiture of wind",
 
 		  "Druidcraft",
 		  "Guidance",
@@ -1358,10 +1354,10 @@ var classSpells = {
 		"lmmolation",
 		"Skill empowerment",
 		"Wall of light",
-		"lnvestiture of flame",
-		"lnvestiture of ice",
-		"lnvestiture of stone",
-		"lnvestiture of wind",
+		"Investiture of flame",
+		"Investiture of ice",
+		"Investiture of stone",
+		"Investiture of wind",
 		"Mental prison",
 		"Scatter",
 		"Crown ofstars",
@@ -1397,10 +1393,6 @@ var classSpells = {
     "Watery Sphere",
     "Control Winds",
     "Immolation",
-    "Investiture of Flame",
-    "Investiture of Ice",
-    "Investiture of Stone",
-    "Investiture of Wind",
     "Abi-Dalzim’s Horrid Wilting",
     "Absorb Elements",
     "Maelstrom",
@@ -1638,10 +1630,6 @@ var classSpells = {
     "Rapport spores",
     "Slicing leaves",
 		"infestation",
-		"lnvestiture of flame",
-		"lnvestiture of ice",
-		"lnvestiture of stone",
-		"lnvestiture of wind",
 
 		  "Blade Ward",
 		  "Chill Touch",
@@ -1901,7 +1889,7 @@ var classSpells = {
 		"Dragon's breath",
 		"lviind spike",
 		"Shadow blade",
-		"Wording wind",
+		"Warding wind",
 		"Catnap",
 		"Enemies abound",
 		"Melf's minute meteors",
