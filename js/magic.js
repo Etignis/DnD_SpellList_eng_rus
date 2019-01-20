@@ -387,7 +387,7 @@ window.onload = function(){
 		//class
 		var aSpells = [];
 		if(sClass) {
-			if(classSpells[sClass]) {
+			if(classSpells[sClass]) {				
 				aSpells = aSpells.concat(classSpells[sClass].spells);
 				if(classSpells[sClass].subclasses && classSpells[sClass].subclasses[sSubClass]) {
 					if(classSpells[sClass].subclasses[sSubClass].spells)
@@ -396,7 +396,12 @@ window.onload = function(){
 						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
 					}
 				}
-				aSpells.forEach(function(spellName){
+				
+				let undoubledSpells = aSpells.map(el=>el.toLowerCase()).filter(function(item, pos, self) {
+					return self.indexOf(item) == pos;
+				})
+				
+				undoubledSpells.forEach(function(spellName){
 					var fFind = false;
 					for (var i = 0; i<allSpells.length; i++){
 
