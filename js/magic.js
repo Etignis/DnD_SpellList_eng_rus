@@ -370,7 +370,7 @@ window.onload = function(){
 		var nLevelEnd = oParams.nLevelEnd;
 		var aSchools = oParams.aSchools;
 		var aSources = oParams.aSources;
-    var fRitual = oParams.fRitual || /ritual|ритуал/.test(sName);
+    var fRitual = oParams.fRitual || /(^|\W)ritual|ритуал/.test(sName);
 		var sLang = oParams.sLang;
     var sView = oParams.sView;
 
