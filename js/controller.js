@@ -549,10 +549,10 @@ Vue.component('card', {
 						<div class="text" v-html="preparedText" :style="textSizeStyle">
 						</div>
 						
-						<div class="sizeButtonsContainer noprint">
+						<!--div class="sizeButtonsContainer noprint">
 							<a href="#" class="textMin" title="Уменьшить размер текста" @click='onTextMin'>–</a>
 							<a href="#" class="textMax" title="Увеличить размер текста" @click='onTextMax'>+</a>
-						</div>
+						</div-->
 						<b class="class">{{className}}</b>
 						<b class="school">{{level}}, {{school}} <span :title="srcTitle">({{src}})</span></b>
 					</div>

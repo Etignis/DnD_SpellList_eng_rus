@@ -43,100 +43,100 @@
 				@searchrndom="getRandomItem"
 			>
 			</searchfield>
-			
-			<div class='mediaWidth'>				
-				<custom-select
-					id="ClassSelect"
-					ref="ClassSelect"
-					title="Класс"
-					:selected="sClassSelected"
-					:items="aClassList"
-					@iclick="onClassChange($event)"
-				>
-				</custom-select>
-			</div>
-			<div class='mediaWidth' v-show='aSubClassList.length>1'>				
-				<custom-select
-					id="SubClassSelect"
-					ref="SubClassSelect"
-					:selected="sSubClassSelected"
-					:items="aSubClassList"
-					@iclick="onSubClassChange($event)"
-				>
-				</custom-select>
-			</div>
-			<div class='mediaWidth' v-show='aSubSubClassList.length>1'>				
-				<custom-select
-					id="SubSubClassSelect"
-					ref="SubSubClassSelect"
-					:selected="sSubSubClassSelected"
-					:items="aSubSubClassList"
-					@iclick="onSubSubClassChange($event)"
-				>
-				</custom-select>
-			</div>
+		</div>
+		<div class='mediaWidth'>				
+			<custom-select
+				id="ClassSelect"
+				ref="ClassSelect"
+				title="Класс"
+				:selected="sClassSelected"
+				:items="aClassList"
+				@iclick="onClassChange($event)"
+			>
+			</custom-select>
+		</div>
+		<div class='mediaWidth' v-show='aSubClassList.length>1'>				
+			<custom-select
+				id="SubClassSelect"
+				ref="SubClassSelect"
+				:selected="sSubClassSelected"
+				:items="aSubClassList"
+				@iclick="onSubClassChange($event)"
+			>
+			</custom-select>
+		</div>
+		<div class='mediaWidth' v-show='aSubSubClassList.length>1'>				
+			<custom-select
+				id="SubSubClassSelect"
+				ref="SubSubClassSelect"
+				:selected="sSubSubClassSelected"
+				:items="aSubSubClassList"
+				@iclick="onSubSubClassChange($event)"
+			>
+			</custom-select>
+		</div>
 
-			<div class='mediaWidth'>	
-				<label class='filterLabel'>Уровень с/по</label>
-				<div class="row">
-					<div class="cell">
-						<custom-select
-							id="LevelSelectStart"
-							ref="LevelSelectStart"
-							:selected="sLevelStartSelected"
-							:items="aLevelList"
-							@iclick="onLevelStartChange($event)"
-						>
-						</custom-select>	
-					</div>		
-					<div class="cell">
-						<custom-select
-							id="LevelSelectEnd"
-							ref="LevelSelectEnd"
-							:selected="sLevelEndSelected"
-							:items="aLevelList"
-							@iclick="onLevelEndChange($event)"
-						>
-						</custom-select>
-					</div>	
-				</div>
+		<div class='mediaWidth'>	
+			<label class='filterLabel'>Уровень с/по</label>
+			<div class="row">
+				<div class="cell">
+					<custom-select
+						id="LevelSelectStart"
+						ref="LevelSelectStart"
+						:selected="sLevelStartSelected"
+						:items="aLevelList"
+						@iclick="onLevelStartChange($event)"
+					>
+					</custom-select>	
+				</div>		
+				<div class="cell">
+					<custom-select
+						id="LevelSelectEnd"
+						ref="LevelSelectEnd"
+						:selected="sLevelEndSelected"
+						:items="aLevelList"
+						@iclick="onLevelEndChange($event)"
+					>
+					</custom-select>
+				</div>	
 			</div>
+		</div>
+		
+		<div class='mediaWidth'>
+			<combobox
+				id="SchoolCombobox"
+				ref="SchoolCombobox"
+				title="Школы"
+				:items="aSchoolList"
+				:opened="bSchoolsOpend"
+				@iclick="onSchoolChange($event)"
+				@opened="onSchoolsToggled($event)"
+			>
+			</combobox>
+		</div>
+		<div class='mediaWidth'>
+			<combobox
+				id="SourceCombobox"
+				ref="SourceCombobox"
+				title="Источники"
+				:items="aSrcList"
+				:opened="bSourcesOpend"
+				@iclick="onSourceChange($event)"
+				@opened="onSourcesToggled($event)"
+			>
+			</combobox>
+		</div>
+		<div class='mediaWidth'>
+			<check-button
+				id="RitualCheckbox"
+				title="Ритуальные заклинания"
+				:checked="bRitualOnly"
+				@press="onRitualsPress"
+			>
+			</check-button>
+		</div>
 			
-			<div class='mediaWidth'>
-				<combobox
-					id="SchoolCombobox"
-					ref="SchoolCombobox"
-					title="Школы"
-					:items="aSchoolList"
-					:opened="bSchoolsOpend"
-					@iclick="onSchoolChange($event)"
-					@opened="onSchoolsToggled($event)"
-				>
-				</combobox>
-			</div>
-			<div class='mediaWidth'>
-				<combobox
-					id="SourceCombobox"
-					ref="SourceCombobox"
-					title="Источники"
-					:items="aSrcList"
-					:opened="bSourcesOpend"
-					@iclick="onSourceChange($event)"
-					@opened="onSourcesToggled($event)"
-				>
-				</combobox>
-			</div>
-			<div class='mediaWidth'>
-				<check-button
-					id="RitualCheckbox"
-					title="Ритуальные заклинания"
-					:checked="bRitualOnly"
-					@press="onRitualsPress"
-				>
-				</check-button>
-			</div>
-			
-			<div class='mediaWidth'>	
+			<!--div class='mediaWidth'>	
 				<label class='filterLabel'>Ширина карточек</label>
 				<div class="flexParent">
 	
@@ -165,7 +165,7 @@
 						</button>
 					
 				</div>
-			</div>
+			</div-->
 			
 			<div class='mediaWidth'>
 				<custom-select
