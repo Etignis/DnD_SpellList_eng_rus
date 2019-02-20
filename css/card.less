@@ -13,46 +13,59 @@
         width: 50%;  
     }
 }
-#lockedSpellsArea{
+#lockedItemsArea{
     margin-bottom: .3em;
     position: relative;
     
+		.flex_row{
+			display: flex;
+			background: rgba(255,255,255,.5);
+			background: linear-gradient(to bottom, rgba(255,255,255,.3) 60%, rgba(255,255,255,0) 100%), 
+				linear-gradient(to right, rgba(255,255,255,.3) 0%, rgba(255,255,255,0) 10%), ;
+		}
+		
     .topHeader, .bottomHeader, .bUnlockAll{
         font-weight: 600;
        // display: block;
         padding: .2em;
-        text-shadow: 0 0 4px rgba(255,255,255,.9);
-        background: rgba(255,255,255,.5);
+				font-weight: bold;
+        text-shadow: 0 1px 2px rgba(255,255,255,.7), 
+					1px 1px 2px rgba(255,255,255,.7), 
+					-1px  0 2px rgba(255,255,255,.7), 
+					0 -1px 2px rgba(255,255,255,.7);
+        
         color: @d-gray;
         border-radius: .1em;
     }
-    .bUnlockAll{
-        position: absolute;
-        top: 0;
-        right: 0;
-        cursor: pointer;
-        
-        &:hover{
-            background: rgba(255,255,255,.7);
-        }
-    }
     .topHeader{
-        cursor: pointer;        
-        &:hover{
-            background: rgba(255,255,255,.7);
-        }
-        &:before{
-            content: "Закрепленные заклинания "
-        }
+			flex-grow: 99;
+        /* cursor: pointer;         */
+        /* &:hover{ */
+            /* background: rgba(255,255,255,.7); */
+        /* } */
+        /* &:before{ */
+            /* content: "Закрепленные предметы " */
+        /* } */
         
+    }
+    .bUnlockAll{
+        /* position: absolute; */
+        /* top: 0; */
+        /* right: 0; */
+        cursor: pointer;
+        transition: background .3s;
+        &:hover{
+            background: rgba(255,255,255,.7);						
+        }
     }
     .bottomHeader{
-        &:before{
-            content: "Каталог заклинаний "
-        }
+			flex-grow: 99;
+        /* &:before{ */
+            /* content: "Каталог предметов " */
+        /* } */
         
     }
-    .content{
+    &>.content{
         margin-bottom: .3em;
     }
     .bHideItem{

@@ -508,6 +508,7 @@ Vue.component('card', {
 		},
 		select: function(oEvent){
 			this.$emit('select', oEvent);
+			return false;
 		},
 		
 		onTextMin: function(){
@@ -518,7 +519,7 @@ Vue.component('card', {
 		},
 	},
 
-	template: `<div :class="[mainClass, viewClass, colorClass]" @click.ctrl="select">
+	template: `<div :class="[mainClass, viewClass, colorClass]" @click.ctrl="select" v-on:dblclick.stop="select">
 				<div :class='[ItemCard, selectedClass]' v-if="cardView" >
 					<div class="content">
 						<span v-show="locked" class="bUnlockItem" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
@@ -584,6 +585,36 @@ Vue.component('card', {
         </div>
 			</div>`
 });
+	
+Vue.component('hiddenitem', {
+	props: {
+		id: {
+			type: String,
+			default: ""
+		},
+		title: {
+			type: String,
+			default: ""
+		},
+		tooltip: {
+			type: String,
+			default: ""
+		}
+	},
+	data: function(){
+		return {};
+	},
+	methods: {
+		unhide: function(oEvent){
+			this.$emit('unhide', oEvent);
+		}
+	},
+	computed: {
+	
+	},
+
+	template: `<a href='#' @click.stop="unhide">{{title}} ({{tooltip}})</a>`
+});	
 	
   var app = new Vue({
     el: '#app',
@@ -882,17 +913,34 @@ Vue.component('card', {
 					return 	this.aLockedItems.indexOf(oItem.en.name)>-1
 				}.bind(this));
 				return aFiltered.map(function(oItem){
+					let sSrc = oItem.en.source.split(",").map(item => this.aSources[item.trim()].text[this.sLang].title).join(", ");
 					let o={
 						"id": oItem.en.name,
 						"name": oItem[this.sLang].name || oItem.en.name,
 						"tooltip": oItem[this.sOtherLang].name || oItem.en.name,
 						"text": oItem[this.sLang].text || oItem.en.text,
 						"src": oItem[this.sLang].source || oItem.en.source,
-						"source": this.aSources[oItem.en.source].text[this.sLang].title,
-						"type": this.aSchools[oItem.en.type].text[this.sLang].title,
-						"color": oItem.en.type,
+						"className": this.sClassTitle,
+						"source": sSrc /*this.aSources[oItem.en.source].text[this.sLang].title*/,
+						"school": this.aSchools[oItem.en.school.trim()].text[this.sLang].title,
+						"level": oLevelsText[oItem.en.level]? oLevelsText[oItem.en.level].text[this.sLang].title : oItem.en.level + " " + oLevelsText.units[this.sLang].title,
+						"castingTime": oItem[this.sLang].castingTime || oItem.en.castingTime,
+						"range": oItem[this.sLang].range || oItem.en.range,
+						"components": oItem[this.sLang].components || oItem.en.components,
+						"materials": oItem[this.sLang].materials || oItem.en.materials,
+						"duration": oItem[this.sLang].duration || oItem.en.duration,
+						"ritual": oItem.en.ritual? oDict.ritual[this.sLang].title: "",		
+
+						"castingTimeTitle": oDict.castingTime[this.sLang].title,
+						"durationTitle": oDict.duration[this.sLang].title,
+						"rangeTitle": oDict.range[this.sLang].title,
+						"componentsTitle": oDict.components[this.sLang].title,
+						
+						"levelNum": oItem.en.level,
+						"color": this.sClass,
+						"view": this.sView,
 						"locked": this.aLockedItems.indexOf(oItem.en.name)>-1,
-						"selected": this.aSelectedLockedItems.indexOf(oItem.en.name)>-1
+						"selected": this.aSelectedItems.indexOf(oItem.en.name)>-1
 					};
 					if(oItem[this.sLang].pre || oItem.en.pre) {
 						o.pre = oItem[this.sLang].pre || oItem.en.pre;
@@ -1044,7 +1092,7 @@ Vue.component('card', {
 				} else {
 					let id = oCard.id;
 					let nInd = this.aLockedItems.indexOf(id);
-					if(nInd>1) {
+					if(nInd>-1) {
 						this.aLockedItems.splice(nInd, 1);
 					}
 				}
@@ -1281,3 +1329,29 @@ Vue.component('card', {
 			}
 		}
   });
+	
+	$(document).keydown(function(event){
+		// CTRL pressed
+		if(event.which=="17") {
+			fCtrlIsPressed = true;
+		}
+
+		// A pressed
+		if(event.which=="65" && fCtrlIsPressed) {
+			/*/
+			if($(".spellCard.selected").length == $(".spellCard").length) {
+				// deselect all
+				$(".spellCard").removeClass("selected");
+			} else {
+				// select all
+				$(".spellCard").addClass("selected");
+			}
+			/**/
+			app.selectAll();
+			return false;
+		}
+	});
+
+	$(document).keyup(function(){
+		fCtrlIsPressed = false;
+	});

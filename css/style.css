@@ -905,6 +905,12 @@ p {
   color: #376db4;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
+*[v-cloak] {
+  display: none !important;
+}
+.itemCounter {
+  position: fixed;
+}
 @media screen and (min-width: 65em) {
   body {
     background: url('../img/bg2.jpg') center center no-repeat;
@@ -939,45 +945,55 @@ p {
   float: left;
   width: 50%;
 }
-#lockedSpellsArea {
+#lockedItemsArea {
   margin-bottom: .3em;
   position: relative;
 }
-#lockedSpellsArea .topHeader,
-#lockedSpellsArea .bottomHeader,
-#lockedSpellsArea .bUnlockAll {
+#lockedItemsArea .flex_row {
+  display: flex;
+  background: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 100%), linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 10%);
+}
+#lockedItemsArea .topHeader,
+#lockedItemsArea .bottomHeader,
+#lockedItemsArea .bUnlockAll {
   font-weight: 600;
   padding: .2em;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), 1px 1px 2px rgba(255, 255, 255, 0.7), -1px 0 2px rgba(255, 255, 255, 0.7), 0 -1px 2px rgba(255, 255, 255, 0.7);
   color: #222;
   border-radius: .1em;
 }
-#lockedSpellsArea .bUnlockAll {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
+#lockedItemsArea .topHeader {
+  flex-grow: 99;
+  /* cursor: pointer;         */
+  /* &:hover{ */
+  /* background: rgba(255,255,255,.7); */
+  /* } */
+  /* &:before{ */
+  /* content: "Закрепленные предметы " */
+  /* } */
 }
-#lockedSpellsArea .bUnlockAll:hover {
+#lockedItemsArea .bUnlockAll {
+  /* position: absolute; */
+  /* top: 0; */
+  /* right: 0; */
+  cursor: pointer;
+  transition: background .3s;
+}
+#lockedItemsArea .bUnlockAll:hover {
   background: rgba(255, 255, 255, 0.7);
 }
-#lockedSpellsArea .topHeader {
-  cursor: pointer;
+#lockedItemsArea .bottomHeader {
+  flex-grow: 99;
+  /* &:before{ */
+  /* content: "Каталог предметов " */
+  /* } */
 }
-#lockedSpellsArea .topHeader:hover {
-  background: rgba(255, 255, 255, 0.7);
-}
-#lockedSpellsArea .topHeader:before {
-  content: "Закрепленные заклинания ";
-}
-#lockedSpellsArea .bottomHeader:before {
-  content: "Каталог заклинаний ";
-}
-#lockedSpellsArea .content {
+#lockedItemsArea > .content {
   margin-bottom: .3em;
 }
-#lockedSpellsArea .bHideItem {
+#lockedItemsArea .bHideItem {
   display: none;
 }
 .bHideItem,
@@ -1584,18 +1600,19 @@ p {
   max-width: 100%;
   width: auto;
 }
-#HiddenSpells a {
+#HiddenItems a {
   text-decoration: none;
   color: #ddd;
   transition: color .3s;
+  margin: .2em;
 }
-#HiddenSpells a:hover {
+#HiddenItems a:hover {
   color: #6aa0e7;
 }
-#HiddenSpells a:active {
+#HiddenItems a:active {
   color: #487EC5;
 }
-#HiddenSpells .bReturnUnvisible {
+#HiddenItems .bReturnUnvisible {
   display: inline-block;
   padding: .1em .2em;
   margin: .4em 0;

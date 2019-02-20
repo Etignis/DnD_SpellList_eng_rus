@@ -27,7 +27,7 @@
 </head>
 <body>
 
-<div class='wrap'  id='app' @keyup.ctrl.65="selectAll">
+<div class='wrap'  id='app' @keyup="selectAll">
 	<div class='p_side'  v-cloak>
 		<div class="mediaWidth flexParent">
 			<a href="/" class="bt flexChild" title="На главную страницу"><i class="fa fa-home"></i></a>
@@ -201,9 +201,68 @@
 				>
 				</custom-select>
 			</div>
+			
+		<div class='mediaWidth' v-show="aHiddenItemsList.length>0">
+			<label class="filterLabel">Скрытые заклинания ({{aHiddenItemsList.length}})</label>
+			<div id="HiddenItems">
+				<a href='#' class='bReturnUnvisible' @click.stop="unhideAll">Вернуть все обратно</a>
+				<hiddenitem 
+					v-for="item in aHiddenItemsList"
+					:key="item.id"
+					:id="item.id"
+					:title="item.title"
+					:tooltip="item.tooltip"
+					@unhide="unhideCard(item.id)"
+				>
+				</hiddenitem>
+			</custom-select>
+			</div>
 		</div>
 	</div>
 	<div class='p_cont'>
+		<div id='lockedItemsArea' v-show="aLockedItemsList.length>0 && bCardsAreVisible"  v-cloak>
+			<div class='flex_row noprint'>
+				<span class='topHeader'>Закрепленные заклинания ({{aLockedItemsList.length}})</span>
+				<span class='bUnlockAll' @click="unlockAll">Открепить все</span>
+			</div>
+			<div class='content row'>
+				<card
+					v-for="item in aLockedItemsList"
+					:key="item.name"
+					:id="item.id"
+					:name="item.name"
+					:tooltip="item.tooltip"
+					:text="item.text"
+					:src="item.src"
+					:class-name="item.className"
+					:source="item.source"
+					:school="item.school"
+					:level="item.level"
+					:duration="item.duration"
+					:casting-time="item.castingTime"
+					:range="item.range"
+					:materials="item.materials"
+					:ritual="item.ritual"
+					:components="item.components"
+					:casting-Time-Title="item.castingTimeTitle"
+					:duration-Title="item.durationTitle"
+					:range-Title="item.rangeTitle"
+					:components-Title="item.componentsTitle"
+					:color="item.color"
+					:view="sView"
+					:selected="item.selected"
+					:locked="item.locked"
+					:pre="item.pre"
+					@unlock="unlockCard(item)"
+					@hide="hideCard(item)"
+					@select="selectCard(item)"
+				>
+				</card>
+			</div>
+			<div class='flex_row noprint'>
+				<span class='bottomHeader'>Каталог черт ({{aItemsList.length}})</span>
+			</div>
+		</div>
 		<!--span id='before_spells'><div class='loader'></div>Читаем заклинания...</span-->
 		<div class="row spellContainer" :class="{noprint: aLockedItemsList.length>0}" :data-itemcount="aItemsList.length" v-show="bCardsAreVisible">
 			<span class='itemCounter noprint' v-show="aLockedItemsList.length<1"  v-cloak title='Количество элементов'>{{aItemsList.length}}</span>
@@ -294,7 +353,7 @@
 				Чтобы увидеть заклинания выберите класс, или другой фильтр. Либо нажмите:
 			</p>
 			<p style="padding: .3em 0; text-align: center">
-				<a class="button" id="showAllSpells" href="#" style="display: none">Показать все заклинания</a>
+				<a class="button" id="showAllSpells" href="#" v-show="bAppIsReady" @click="showAllItems">Показать все заклинания</a>
 			</p>
 
 			<h2>Печать заклинаний</h2>
