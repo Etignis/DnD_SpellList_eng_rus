@@ -940,7 +940,7 @@ Vue.component('hiddenitem', {
 						"color": this.sClass,
 						"view": this.sView,
 						"locked": this.aLockedItems.indexOf(oItem.en.name)>-1,
-						"selected": this.aSelectedItems.indexOf(oItem.en.name)>-1
+						"selected": this.aSelectedLockedItems.indexOf(oItem.en.name)>-1
 					};
 					if(oItem[this.sLang].pre || oItem.en.pre) {
 						o.pre = oItem[this.sLang].pre || oItem.en.pre;

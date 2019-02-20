@@ -707,68 +707,6 @@ p {
   color: #376db4;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
-.mod_win_wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.mod_win_wrapper .mod_win {
-  -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
-  -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
-  border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
-  overflow: visible;
-  background: #fff;
-  border: 0px solid #d8d8d8;
-  border-top-width: 0px;
-  /*display: inline-block;*/
-  font-weight: bold;
-  padding: 0.7em;
-  margin: 0.3em;
-  border-width: 1px;
-  border-style: solid;
-  border-bottom-width: 2px;
-  text-decoration: none;
-  border-color: #777;
-  color: #fff;
-  background: #666666;
-  box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.2) inset;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  display: block;
-  position: absolute;
-  width: 95%;
-  max-width: 50em;
-  min-height: 15em;
-  top: 1em;
-  z-index: 999;
-  background: #eeeeee;
-  color: #222;
-  cursor: default;
-  font-weight: normal;
-}
-.mod_win_wrapper .bCloseInfoWin {
-  position: absolute;
-  top: -0.2em;
-  right: 0;
-  padding: .1em .2em;
-  font-size: 300%;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.2);
-}
-.mod_win_wrapper .bCloseInfoWin:hover {
-  color: rgba(0, 0, 0, 0.4);
-}
 #dbg {
   position: fixed;
   top: 0;
@@ -910,6 +848,173 @@ p {
 }
 .itemCounter {
   position: fixed;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.mod_win_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: hidden;
+  z-index: 999;
+}
+.mod_win_wrapper .mod_win {
+  -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  -moz-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+  overflow: visible;
+  background: #fff;
+  border: 0px solid #d8d8d8;
+  border-top-width: 0px;
+  /*display: inline-block;*/
+  font-weight: bold;
+  padding: 0.7em;
+  margin: 0.3em;
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-width: 2px;
+  text-decoration: none;
+  border-color: #777;
+  color: #fff;
+  background: #666666;
+  box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.2) inset;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0.3em;
+  display: flex;
+  position: absolute;
+  width: 95%;
+  max-width: 50em;
+  min-height: 15em;
+  max-height: 95%;
+  overflow-y: hidden;
+  top: 1em;
+  z-index: 9999;
+  background: #eeeeee;
+  color: #222;
+  cursor: default;
+  font-weight: normal;
+  position: relative;
+}
+.mod_win_wrapper .mod_win .randomProp {
+  cursor: pointer;
+  border-bottom: 1px rgba(72, 126, 197, 0) dashed;
+  transition: border 0.2s;
+}
+.mod_win_wrapper .mod_win .randomProp:hover {
+  border-bottom: 1px #487EC5 dashed;
+}
+.mod_win_wrapper .mod_win .randomPropButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity .3s;
+}
+.mod_win_wrapper .mod_win .randomPropButton:hover {
+  opacity: 1;
+}
+.mod_win_wrapper .mod_win a {
+  font-style: italic;
+  text-decoration: none;
+}
+.mod_win_wrapper .mod_win a[href*="spells"] {
+  color: #2e5992;
+  border-bottom: 1px rgba(72, 126, 197, 0) dashed;
+  background: #f6f9fc;
+  transition: border 0.2s;
+}
+.mod_win_wrapper .mod_win a[href*="spells"]:hover {
+  border-bottom: 1px #487EC5 dashed;
+}
+.mod_win_wrapper .mod_win a[href*="spells"]:visited {
+  color: #2e5992;
+}
+.mod_win_wrapper .mod_win a[href*="spells"] {
+  color: #2e5992;
+  border-bottom: 1px rgba(72, 126, 197, 0) dashed;
+  background: #f6f9fc;
+  transition: border 0.2s;
+}
+.mod_win_wrapper .mod_win a[href*="spells"]:hover {
+  border-bottom: 1px #487EC5 dashed;
+}
+.mod_win_wrapper .mod_win a[href*="spells"]:visited {
+  color: #2e5992;
+}
+.mod_win_wrapper .mod_win a[href*="magic-item"] {
+  color: #925d2e;
+  background: #fcf9f6;
+  border-bottom-color: rgba(197, 131, 72, 0);
+}
+.mod_win_wrapper .mod_win a[href*="magic-item"]:hover {
+  border-bottom: 1px #c58348 dashed;
+}
+.mod_win_wrapper .mod_win a[href*="magic-item"]:visited {
+  color: #925d2e;
+}
+.mod_win_wrapper .mod_win a[href*="monsters"] {
+  color: #922e45;
+  background: #fcf6f8;
+  border-bottom-color: rgba(197, 72, 100, 0);
+}
+.mod_win_wrapper .mod_win a[href*="monsters"]:hover {
+  border-bottom: 1px #c54864 dashed;
+}
+.mod_win_wrapper .mod_win a[href*="monsters"]:visited {
+  color: #922e45;
+}
+.mod_win_wrapper .mod_win_content {
+  padding: .5em;
+  overflow-y: scroll;
+}
+.mod_win_wrapper .mod_win_content::-webkit-scrollbar {
+  width: 0.2em;
+  height: 0.2em;
+}
+.mod_win_wrapper .mod_win_content::-webkit-scrollbar-thumb {
+  background: #777;
+}
+.mod_win_wrapper .mod_win_content::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.mod_win_wrapper .mod_win_content body {
+  scrollbar-face-color: #777;
+  scrollbar-track-color: #ddd;
+}
+.mod_win_wrapper .bCloseInfoWin {
+  position: absolute;
+  top: -0.2em;
+  right: .4em;
+  padding: .1em .2em;
+  font-size: 300%;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+}
+.mod_win_wrapper .bCloseInfoWin:hover {
+  color: rgba(0, 0, 0, 0.4);
 }
 @media screen and (min-width: 65em) {
   body {

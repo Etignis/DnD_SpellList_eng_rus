@@ -255,7 +255,7 @@
 					:pre="item.pre"
 					@unlock="unlockCard(item)"
 					@hide="hideCard(item)"
-					@select="selectCard(item)"
+					@select="selectLockedCard(item)"
 				>
 				</card>
 			</div>
@@ -346,15 +346,17 @@
 				</ul>
 			</p>
 
-			<h2>
-				Отображение заклинаний
-			</h2>
-			<p>
-				Чтобы увидеть заклинания выберите класс, или другой фильтр. Либо нажмите:
-			</p>
-			<p style="padding: .3em 0; text-align: center">
-				<a class="button" id="showAllSpells" href="#" v-show="bAppIsReady" @click="showAllItems">Показать все заклинания</a>
-			</p>
+			<div v-show="bAppIsReady">
+				<h2>
+					Отображение заклинаний
+				</h2>
+				<p>
+					Чтобы увидеть заклинания выберите класс, или другой фильтр. Либо нажмите:
+				</p>
+				<p style="padding: .3em 0; text-align: center">
+					<a class="button" id="showAllSpells" href="#" @click="showAllItems">Показать все заклинания</a>
+				</p>
+			</div>
 
 			<h2>Печать заклинаний</h2>
 			<p>
@@ -382,6 +384,14 @@
 		<div class='row spellContainer'>
 		</div>
 	</div>
+	<transition name="fade">
+		<modal-win
+			v-show="bModalWinShow"
+			:content="sModalWinCont"
+			@close="closeMosWin"
+		>
+		</modal-win>
+	</transition>
 </div>
 
 	<script type='text/javascript' src="js/vue.js" defer></script>
