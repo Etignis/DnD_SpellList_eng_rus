@@ -325,7 +325,7 @@ Vue.component('custom-select', {
 	},
 	template: `<div :id="id">
 	<label class='filterLabel' v-if="title.length>0">{{title}}</label>
-	<button  class="customSelect" @click="toggle">
+	<div  class="customSelect" @click="toggle">
 		<div class="label">{{selected}}</div>
 		<ul class="list" style="display: none;">
 			<li 
@@ -336,7 +336,7 @@ Vue.component('custom-select', {
 				@click.stop="itemclick(item.key)"
 				></li>
 		</ul>
-	</button>
+	</div>
 </div>`
 });
 
@@ -976,7 +976,7 @@ Vue.component('hiddenitem', {
 			
 			this.getHash();			
 			
-			this.$refs.SchoolCombobox.toggle(null, this.bTypesOpend);
+			this.$refs.SchoolCombobox.toggle(null, this.bSchoolsOpend);
 			this.$refs.SourceCombobox.toggle(null, this.bSourcesOpend);
 			
 			this.updateHash();
@@ -1004,13 +1004,13 @@ Vue.component('hiddenitem', {
 				this.updateHash();
 			},
 			onLevelStartChange: function(sKey){
-				this.nLevelStart = sKey;
+				this.sLevelStartSelected = String(this.nLevelStart = sKey);
 				this.setConfig("ls", sKey);
 				
 				this.updateHash();
 			},
 			onLevelEndChange: function(sKey){
-				this.nLevelEnd = sKey;
+				this.sLevelEndSelected = String(this.nLevelEnd = sKey);
 				this.setConfig("le", sKey);
 				
 				this.updateHash();
@@ -1317,9 +1317,9 @@ Vue.component('hiddenitem', {
 					this.aLockedItems = aTmpLocked;
 				}
 				
-				let bTmpTypesOpend = this.getConfig("typesOpend");
-				if(bTmpTypesOpend != undefined) {
-					this.bTypesOpend = bTmpTypesOpend
+				let bTmpSchoolsOpend = this.getConfig("schoolsOpend");
+				if(bTmpSchoolsOpend != undefined) {
+					this.bSchoolsOpend = bTmpSchoolsOpend
 				}
 				
 				let bTMPSourcesOpend = this.getConfig("sourcesOpend");
