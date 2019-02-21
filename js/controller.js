@@ -1232,7 +1232,7 @@ Vue.component('hiddenitem', {
 			
 			makeCardWidthLess: function(){
 				var aCards = this.$refs.itemCard;
-				if(this.aSelectedLockedItems.length>0 || this.aSelectedItems) {
+				if(this.aSelectedLockedItems.length>0 || this.aSelectedItems.length>0) {
 					aCards = aCards.filter(el => this.aSelectedLockedItems.indexOf(el.id)>-1 || this.aSelectedItems.indexOf(el.id)>-1)
 				}
 				// aSelectedLockedItems
@@ -1243,7 +1243,7 @@ Vue.component('hiddenitem', {
 			},			
 			makeCardWidthMore: function(){
 				var aCards = this.$refs.itemCard;
-				if(this.aSelectedLockedItems.length>0 || this.aSelectedItems) {
+				if(this.aSelectedLockedItems.length>0 || this.aSelectedItems.length>0) {
 					aCards = aCards.filter(el => this.aSelectedLockedItems.indexOf(el.id)>-1 || this.aSelectedItems.indexOf(el.id)>-1)
 				}
 				aCards.forEach(function(oCard){
@@ -1252,7 +1252,7 @@ Vue.component('hiddenitem', {
 			},			
 			makeCardWidthNorm: function(){
 				var aCards = this.$refs.itemCard;
-				if(this.aSelectedLockedItems.length>0 || this.aSelectedItems) {
+				if(this.aSelectedLockedItems.length>0 || this.aSelectedItems.length>0) {
 					aCards = aCards.filter(el => this.aSelectedLockedItems.indexOf(el.id)>-1 || this.aSelectedItems.indexOf(el.id)>-1)
 				}
 				aCards.forEach(function(oCard){
