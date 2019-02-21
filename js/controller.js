@@ -494,12 +494,20 @@ Vue.component('card', {
 		
 		textSizeStyle: function(){
 			return this.textSize? "font-size: "+this.textSize+"px": "";
+		},
+		cardWidthStyle: function(){
+			return this.cardWidth? "width: "+this.cardWidth+"px": "";
 		}
 	},
 	mounted: function(){
-		let oEl = this.$refs.itemText;		
-		let style = window.getComputedStyle(oEl, null).getPropertyValue('font-size');
-		this.textSize= parseFloat(style); 
+		let oText = this.$refs.itemText;		
+		let styleText = window.getComputedStyle(oText, null).getPropertyValue('font-size');
+		this.textSize= parseFloat(styleText); 
+		
+		
+		let oContainer = this.$refs.cardContainer;	
+		let styleContainer = window.getComputedStyle(oContainer, null).getPropertyValue('width');
+		this.cardWidth= parseFloat(styleContainer); 
 	},
 	methods: {
 		lock: function(oEvent){
@@ -525,19 +533,48 @@ Vue.component('card', {
 		autosizeText: function() {
 			let oEl = this.$refs.itemText;		
 			let style = window.getComputedStyle(oEl, null).getPropertyValue('scrollWidth');
-			while (this.textSize > 7 && oEl.scrollWidth < oEl.innerWidth) {
+			
+			if (this.textSize > 7 && oEl.scrollHeight > oEl.offsetHeight) {
 				this.textSize-=0.3;
-				//console.log(f_s);
-				/*/
-				var sFontSize = f_s+"px";
-				var sLineHeight = f_s-1+"px";
-				$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
-				/**/
+				return true;
+			} else {
+				return false;
 			}
+			
+			//while (this.textSize > 7 && oEl.scrollWidth < oEl.innerWidth) {
+			//let nDiff = oEl.scrollHeight/oEl.offsetHeight;
+			//let nNewFontSize = this.textSize / nDiff;
+			//this.textSize = nNewFontSize<7? 7 : nNewFontSize;
+			/*/
+			function min(){
+				if (this.textSize > 7 && oEl.scrollHeight > oEl.offsetHeight) {
+					this.textSize-=0.3;
+				} else {
+					clearInterval(oTimer);
+				}
+			}
+			
+			var oTimer = setInterval(min.bind(this), 1);
+			/**/
+			/*/
+			while (this.textSize > 7 && oEl.scrollHeight > oEl.offsetHeight) {
+				this.textSize-=0.3;
+
+			}
+			/**/
+		},
+		onCardWidthMax: function() {
+			this.cardWidth+=10;
+		},
+		onCardWidthMin: function() {
+			this.cardWidth-=10;			
+		},
+		setCardWidth: function(nWidth) {
+			this.cardWidth = nWidth;
 		}
 	},
 
-	template: `<div :class="[mainClass, viewClass, colorClass]" @click.ctrl="select" v-on:dblclick.stop="select">
+	template: `<div :class="[mainClass, viewClass, colorClass]" @click.ctrl="select" v-on:dblclick.stop="select" ref="cardContainer" :style="cardWidthStyle">
 				<div :class='[ItemCard, selectedClass]' v-if="cardView" >
 					<div class="content">
 						<span v-show="locked" class="bUnlockItem" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
@@ -1073,9 +1110,24 @@ Vue.component('hiddenitem', {
 			},
 			
 			autosizeAllText: function () {
+				var aCards = this.$refs.itemCard;
+				let oTimer = setInterval(function(){
+					if(aCards.length>0){
+						for(let i=0; i<aCards.length; i++) {
+							let bResult = aCards[i].autosizeText();
+							if(!bResult) {
+								aCards.splice(i, 1);
+							}
+						}
+					} else {
+						clearInterval(oTimer);
+					}
+				}.bind(this), 1);
+				/*/
 				this.$refs.itemCard.forEach(function(oCard){
 					oCard.autosizeText();
 				});
+				/**/
 			},
 			
 			onSchoolsToggled: function(bStat){
@@ -1179,13 +1231,33 @@ Vue.component('hiddenitem', {
 			},
 			
 			makeCardWidthLess: function(){
-				
+				var aCards = this.$refs.itemCard;
+				if(this.aSelectedLockedItems.length>0 || this.aSelectedItems) {
+					aCards = aCards.filter(el => this.aSelectedLockedItems.indexOf(el.id)>-1 || this.aSelectedItems.indexOf(el.id)>-1)
+				}
+				// aSelectedLockedItems
+				// aSelectedItems
+				aCards.forEach(function(oCard){
+					oCard.onCardWidthMin();
+				}.bind(this));
 			},			
 			makeCardWidthMore: function(){
-				
+				var aCards = this.$refs.itemCard;
+				if(this.aSelectedLockedItems.length>0 || this.aSelectedItems) {
+					aCards = aCards.filter(el => this.aSelectedLockedItems.indexOf(el.id)>-1 || this.aSelectedItems.indexOf(el.id)>-1)
+				}
+				aCards.forEach(function(oCard){
+					oCard.onCardWidthMax();
+				}.bind(this));
 			},			
 			makeCardWidthNorm: function(){
-				
+				var aCards = this.$refs.itemCard;
+				if(this.aSelectedLockedItems.length>0 || this.aSelectedItems) {
+					aCards = aCards.filter(el => this.aSelectedLockedItems.indexOf(el.id)>-1 || this.aSelectedItems.indexOf(el.id)>-1)
+				}
+				aCards.forEach(function(oCard){
+					oCard.setCardWidth(240);
+				}.bind(this));
 			},
 			
 			updateHash: function() {
