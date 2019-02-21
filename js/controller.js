@@ -493,8 +493,13 @@ Vue.component('card', {
 		},
 		
 		textSizeStyle: function(){
-			return this.textSize? this.textSize: "";
+			return this.textSize? "font-size: "+this.textSize+"px": "";
 		}
+	},
+	mounted: function(){
+		let oEl = this.$refs.itemText;		
+		let style = window.getComputedStyle(oEl, null).getPropertyValue('font-size');
+		this.textSize= parseFloat(style); 
 	},
 	methods: {
 		lock: function(oEvent){
@@ -512,10 +517,10 @@ Vue.component('card', {
 		},
 		
 		onTextMin: function(){
-			
+			this.textSize--;
 		},
 		onTextMax: function(){
-			
+			this.textSize++;
 		},
 	},
 
@@ -547,13 +552,13 @@ Vue.component('card', {
 							</div>
 						</div>
 						<div class="materials">{{materials}}</div>
-						<div class="text" v-html="preparedText" :style="textSizeStyle">
+						<div class="text" v-html="preparedText" :style="textSizeStyle" ref="itemText">
 						</div>
 						
-						<!--div class="sizeButtonsContainer noprint">
-							<a href="#" class="textMin" title="Уменьшить размер текста" @click='onTextMin'>–</a>
-							<a href="#" class="textMax" title="Увеличить размер текста" @click='onTextMax'>+</a>
-						</div-->
+						<div class="sizeButtonsContainer noprint">
+							<a href="#" class="textMin" title="Уменьшить размер текста" @click.stop='onTextMin'>–</a>
+							<a href="#" class="textMax" title="Увеличить размер текста" @click.stop='onTextMax'>+</a>
+						</div>
 						<b class="class">{{className}}</b>
 						<b class="school">{{level}}, {{school}} <span :title="srcTitle">({{src}})</span></b>
 					</div>
