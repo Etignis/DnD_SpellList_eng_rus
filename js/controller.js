@@ -1040,12 +1040,16 @@ Vue.component('hiddenitem', {
 		},
 		methods: {
 			onClassChange: function(sKey){
+				this.showAllItems();
+				
 				this.sClass = sKey;
 				this.setConfig("class", sKey);
 				this.onSubClassChange("");
 				this.updateHash();
 			},
 			onSubClassChange: function(sKey){
+				this.showAllItems();
+				
 				this.sSubClass = sKey;
 				this.setConfig("subclass", sKey);
 				this.onSubSubClassChange("");
@@ -1053,58 +1057,80 @@ Vue.component('hiddenitem', {
 				this.updateHash();
 			},
 			onSubSubClassChange: function(sKey){
+				this.showAllItems();
+				
 				this.sSubSubClass = sKey;
 				this.setConfig("subsubclass", sKey);
 				
 				this.updateHash();
 			},
 			onLevelStartChange: function(sKey){
+				this.showAllItems();
+				
 				this.sLevelStartSelected = String(this.nLevelStart = sKey);
 				this.setConfig("ls", sKey);
 				
 				this.updateHash();
 			},
 			onLevelEndChange: function(sKey){
+				this.showAllItems();
+				
 				this.sLevelEndSelected = String(this.nLevelEnd = sKey);
 				this.setConfig("le", sKey);
 				
 				this.updateHash();
 			},
 			onSourceChange: function(sKey){
+				this.showAllItems();
+				
 				this.aSources[sKey].checked = !this.aSources[sKey].checked; 
 				this.updateHash();
 			},
 			onSchoolChange: function(sKey){
+				this.showAllItems();
+				
 				this.aSchools[sKey].checked = !this.aSchools[sKey].checked; 
 				this.updateHash();
 			},
 			onLanguageChange: function(sKey){
+				this.showAllItems();
+				
 				this.sLang = sKey;
 				this.setConfig("lang", sKey);
 				
 				this.updateHash();
 			},
 			onViewChange : function(sKey){
+				this.showAllItems();
+				
 				this.sView = sKey;
 				this.setConfig("view", sKey);
 				
 				this.updateHash();
 			},
 			onSortChange: function(sKey){
+				this.showAllItems();
+				
 				this.sSort = sKey;
 				this.updateHash();
 				this.setConfig("sort", sKey);
 			},
 			onSearchName: function(sValue){
+				this.showAllItems();
+				
 				this.sSearch = sValue.trim();
 				this.updateHash();
 			},
 			getRandomItem: function(){
+				this.showAllItems();
+				
 				this.sSearch = "";
 				this.sSearch = this.aItemsList[randd(0, this.aItemsList.length-1)].name;
 				this.updateHash();
 			},
 			onRitualsPress: function(){
+				this.showAllItems();
+				
 				this.bRitualOnly = !this.bRitualOnly;
 				this.updateHash();
 			},
@@ -1364,7 +1390,7 @@ Vue.component('hiddenitem', {
 			showInfo: function(){
 				this.bModalWinShow = true;
 			},
-			closeMosWin: function(){
+			closeModWin: function(){
 				this.bModalWinShow = false;
 			},
 			print: function(){
@@ -1377,7 +1403,7 @@ Vue.component('hiddenitem', {
 			},
 			
 			showAllItems: function(){
-				this.closeMosWin();
+				this.closeModWin();
 				this.hideInfo();
 				this.showCards();
 				this.setConfig("infoIsRead", true);
