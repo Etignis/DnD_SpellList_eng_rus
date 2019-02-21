@@ -522,6 +522,19 @@ Vue.component('card', {
 		onTextMax: function(){
 			this.textSize++;
 		},
+		autosizeText: function() {
+			let oEl = this.$refs.itemText;		
+			let style = window.getComputedStyle(oEl, null).getPropertyValue('scrollWidth');
+			while (this.textSize > 7 && oEl.scrollWidth < oEl.innerWidth) {
+				this.textSize-=0.3;
+				//console.log(f_s);
+				/*/
+				var sFontSize = f_s+"px";
+				var sLineHeight = f_s-1+"px";
+				$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+				/**/
+			}
+		}
 	},
 
 	template: `<div :class="[mainClass, viewClass, colorClass]" @click.ctrl="select" v-on:dblclick.stop="select">
@@ -1057,6 +1070,12 @@ Vue.component('hiddenitem', {
 			onRitualsPress: function(){
 				this.bRitualOnly = !this.bRitualOnly;
 				this.updateHash();
+			},
+			
+			autosizeAllText: function () {
+				this.$refs.itemCard.forEach(function(oCard){
+					oCard.autosizeText();
+				});
 			},
 			
 			onSchoolsToggled: function(bStat){

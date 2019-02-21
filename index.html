@@ -168,6 +168,15 @@
 			</div-->
 			
 			<div class='mediaWidth'>
+				<button
+					class="bt btn"
+					@click="autosizeAllText"
+					>
+					Подстроить текст
+				</button>
+			</div>
+			
+			<div class='mediaWidth'>
 				<custom-select
 					id="SortSelect"
 					ref="SortSelect"
@@ -219,7 +228,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='p_cont'>
+	<div class='p_cont' ref="cardContainer">
 		<div id='lockedItemsArea' v-show="aLockedItemsList.length>0 && bCardsAreVisible"  v-cloak>
 			<div class='flex_row noprint'>
 				<span class='topHeader'>Закрепленные заклинания ({{aLockedItemsList.length}})</span>
@@ -228,6 +237,7 @@
 			<div class='content row'>
 				<card
 					v-for="item in aLockedItemsList"
+					ref="itemCard"
 					:key="item.name"
 					:id="item.id"
 					:name="item.name"
@@ -268,6 +278,7 @@
 			<span class='itemCounter noprint' v-show="aLockedItemsList.length<1"  v-cloak title='Количество элементов'>{{aItemsList.length}}</span>
 			<card
 				v-for="item in aItemsList"
+				ref="itemCard"
 				:key="item.name"
 				:id="item.id"
 				:name="item.name"
