@@ -78,41 +78,7 @@
     }
 }
 
-.mod_win_wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
 
-    .mod_win{
-        .fr-concave;
-        display: block;
-        position: absolute;
-        width: 95%;
-        max-width: 50em;
-        min-height: 15em;
-        top: 1em;
-        //margin: 0 auto;
-        z-index: 999;
-        background: @white - #111;
-        color: @d-gray;
-        cursor: default;
-        font-weight: normal;
-    }
-    .bCloseInfoWin{
-        position: absolute;
-        top: -.2em;
-        right: 0;
-        padding: .1em .2em;
-        font-size: 300%;
-        cursor: pointer;
-        color: rgba(0,0,0,.2);
-        
-        &:hover{
-            color: rgba(0,0,0,.4);
-        }
-    }
-}
 
 #dbg{
     position: fixed;
@@ -186,10 +152,11 @@
 }
 
 #info_text{
-    padding: .3em;
-    background: rgba(255,255,255,.6);
+    padding: .7em 1.3em;
+    background: rgba(255,255,255,.88);
     color: @d-gray;
     font-weight: 600;
+    max-width: 90rem;
 }
 
 #topMessage{
@@ -238,6 +205,77 @@
     }
 }
 
+*[v-cloak]{
+	display: none !important
+}
+
+.itemCounter {
+	position: fixed;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.mod_win_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    z-index: 999;
+
+    .mod_win{
+        .fr-concave;
+				padding: 0.3em;
+        display: flex;
+        position: absolute;
+        width: 95%;
+        max-width: 50em;
+        min-height: 15em;
+				max-height: 95%;
+				overflow-y: hidden;
+        top: 1em;
+        //margin: 0 auto;
+        z-index: 9999;
+        background: @white - #111;
+        color: @d-gray;
+        cursor: default;
+        font-weight: normal;
+				position: relative;
+				 .outLinks();
+    }
+		.mod_win_content{
+			
+			padding: .5em;
+			overflow-y: scroll;
+			.scrollbars(.2em, @m-gray, @l-gray)
+		}
+    .bCloseInfoWin{
+        position: absolute;
+        top: -.2em;
+        right: .4em;
+        padding: .1em .2em;
+        font-size: 300%;
+        cursor: pointer;
+        color: rgba(0,0,0,.2);
+        
+        &:hover{
+            color: rgba(0,0,0,.4);
+        }
+    }
+}
+
 @media screen and (min-width: @m_w_1) {
     body{        
 	    background: url('../img/bg2.jpg') center center no-repeat;
@@ -247,7 +285,7 @@
     .page{
         //margin-left: 21em;
         //width: 100%;
-        padding-top: 5px;
+        padding-top: 0.5rem;
     }  
     .p_cont{
        // width: 55em;

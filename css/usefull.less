@@ -95,3 +95,82 @@
 .flexChild{
     flex-grow: 1;
 }
+
+.outLinks(){
+	
+			.randomProp{
+				cursor: pointer;
+				border-bottom: 1px fade(@color, 0%) dashed;
+				transition: border 0.2s;
+				&:hover{
+					border-bottom: 1px @color dashed;
+				}
+			}
+			.randomPropButton{
+				border: none;
+				background: transparent;
+				cursor: pointer;
+				opacity: 0.5;
+				transition: opacity .3s;
+				
+				&:hover{
+					opacity: 1;
+				}
+			}
+			
+      a{
+        font-style: italic;
+        text-decoration: none;
+        
+				
+				&[href*="spells"]{
+					color: darken(@color, 15%);
+					border-bottom: 1px fade(@color, 0%) dashed;
+					background: lighten(@color, 45%);
+					transition: border 0.2s;
+					&:hover{
+						border-bottom: 1px @color dashed;
+					}
+					&:visited{
+						color: darken(@color, 15%);
+					}
+				}				
+				&[href*="spells"]{
+					color: darken(@color, 15%);
+					border-bottom: 1px fade(@color, 0%) dashed;
+					background: lighten(@color, 45%);
+					transition: border 0.2s;
+					&:hover{
+						border-bottom: 1px @color dashed;
+					}
+					&:visited{
+						color: darken(@color, 15%);
+					}
+				}
+				&[href*="magic-item"]{
+					@color: #c58348;
+					color: darken(@color, 15%);
+					background: lighten(@color, 45%);
+					border-bottom-color: fade(@color, 0%);
+					&:hover{
+						border-bottom: 1px @color dashed;
+					}
+					&:visited{
+						color: darken(@color, 15%);
+					}
+				}
+				&[href*="monsters"]{
+					@color: #c54864;
+					color: darken(@color, 15%);
+					background: lighten(@color, 45%);
+					border-bottom-color: fade(@color, 0%);
+					&:hover{
+						border-bottom: 1px @color dashed;
+					}
+					&:visited{
+						color: darken(@color, 15%);
+					}
+				}
+        
+      }
+}

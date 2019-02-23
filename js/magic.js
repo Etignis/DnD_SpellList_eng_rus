@@ -1,4 +1,4 @@
-var TENTACULUS_APP_VERSION = "2.2.4";
+var TENTACULUS_APP_VERSION = "2.3.1";
 
 var oConfig = {}; // global app config data
 function setConfig(prop, val) {
@@ -48,7 +48,10 @@ window.onload = function(){
 		arr.splice(i, 1);
 		return arr
 	}
-
+	function is_touch_device() {
+	  return 'ontouchstart' in window        // works on most browsers
+	      || navigator.maxTouchPoints;       // works on IE10/11 and Surface
+	};
 	function getViewPortSize(mod) {
 		var viewportwidth;
 		var viewportheight;
@@ -91,6 +94,7 @@ window.onload = function(){
 		var width = params.width? "; width: "+ params.width: "";
 		var lableText;
 		var min_width = 0;
+		var sLabeltooltip = params.tooltip || '';
 		var oParams = params.params;
 		var aParams = [], sParams="";
 		if(oParams) {
@@ -102,11 +106,12 @@ window.onload = function(){
 		src.forEach(function(item){
 			var key = item.name;
 			var text = item.title;
+			var tooltip = item.tooltip? " title='"+item.tooltip+"' " : "";
 			if(text.length > min_width)
 				min_width = text.length/2;
-			options += "<li class='option' data-key='"+key+"'>"+text+"</li>";
+			options += "<li class='option' data-key='"+key+"' "+tooltip+">"+text+"</li>";
 			if(key == selected_key){
-				lableText = text
+				lableText = sLabeltooltip?"<span title='"+sLabeltooltip+"'>"+text+"</span>" :text
 			}
 		});
 		min_width = min_width>20? 20: min_width;
@@ -128,7 +133,7 @@ window.onload = function(){
 		var ret = '';
 		var id =  param.id? "id='"+param.id+"'": "";
 		var title = param.title? param.title: "Выберите";
-		var checked = param.checkAll? "checked": "";
+		var checked = "";//param.checkAll? "checked": "";
 		var isOpen = (param.isOpen!=undefined) ? param.isOpen : true;
 		var arrow, display = "", content_open=true;
 		var min_width = 0;
@@ -192,7 +197,7 @@ window.onload = function(){
 		return s.substr(0,1).toUpperCase() + s.substr(1);
 	}
 
-	function createCard(spell, lang, sClass, sLockedSpell) {
+	function createCard(spell, lang, sClass, sLockedSpell, fText) {
 		if (spell[lang] || (lang="en", spell[lang])) {
 			var o = spell[lang];
 			var s_name = o.name;
@@ -203,7 +208,7 @@ window.onload = function(){
 			var s_duration = pretifyString(o.duration.replace(/концентрация/ig, "конц-я"));
 			var s_materials = o.materials;
 			var s_text = o.text;
-			var s_level = o.level;
+			var s_level = spell.en.level;
 			var s_source = o.source? o.source : spell.en.source? spell.en.source: "";
 			var st_castingTime, st_range, st_components, st_duration;
 			switch (lang){
@@ -248,11 +253,60 @@ window.onload = function(){
 
 			var cardWidth = getConfig("cardWidth");
 			var style = "";
-			if(cardWidth) {
+			if(cardWidth && !fText) {
 				var style = " style='width: " + cardWidth + "' ";
 			}
 
-			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" '+ style +' data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
+      if (fText) {
+        // ret = '<div class="textContainer" >'+
+          // '<h1 title="'+title+'">'+s_name+'</h1>'+          
+          // '<div class="school_level">'+s_level+' '+s_school+' '+s_ritual+'</div>'+
+          // '<div class="source">'+(s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</div>'+
+          // '<div><span class="subtitle">'+st_castingTime+'</span> '+s_castingTime+'</div>'+   
+          // '<div><span class="subtitle">'+st_range+'</span> '+s_range+'</div>'+           
+          // '<div><span class="subtitle">'+st_components+'</span> '+s_components+' ' +s_materials+'</div>'+ 
+          // '<div><span class="subtitle">'+st_duration+'</span> '+s_duration+'</div>'+          
+          // '<div class="text">'+s_text+'</div>'+          
+        // '</div>';
+        s_materials = (s_materials && s_materials.length>2)? "* ("+s_materials+")" : "";
+        s_text = s_text.split("<br>").map(i=>"<p>"+i+"</p>").join("");
+        ret = '<div class="textCardContainer '+sClass+ sLockedSpell +'"  data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
+          '<div class="inner">'+
+						bLockSpell +
+						bHideSpell +
+            '<div class="flex">'+
+              '<div class="flex column primal">'+
+                '<h1 title="'+title+'">'+s_name+'</h1>'+          
+                '<div class="school_level">'+s_level+', '+s_school+' '+s_ritual+'</div>'+
+              '</div>'+
+              '<div class="flex secondal">'+
+                '<div class="column thirdal">'+
+                  '<div class="cvasi_row"><div class="subtitle">'+st_castingTime+'</div> <div>'+s_castingTime+'</div></div>'+   
+                  '<div class="cvasi_row"><div class="subtitle">'+st_range+'</div> <div>'+s_range+'</div></div>'+           
+                '</div>'+
+                '<div class="column thirdal">'+              
+                  '<div class="cvasi_row"><div class="subtitle">'+st_components+'</div> <div>'+s_components +(s_materials?"*":"")+'</div></div>'+ 
+                  '<div class="cvasi_row"><div class="subtitle">'+st_duration+'</div> <div>'+s_duration+'</div></div>'+       
+                '</div>'+ 
+            '</div>'+
+          '</div>'+
+          
+          //
+            
+          '<div class="text">'+s_text+'</div>'+ 
+          '<div class="material_components">'+s_materials+
+           // '<div class="source">'+(s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</div>'+
+					  '<div class="source">'+(s_source?" ("+s_source.split(",").map(function(src){
+						return " <span title=\"Источник: "+ oSource[src.trim()]+"\">"+src.trim()+"</span>";
+					}).join(", ")+")" :"")+'</div>'+
+          '</div>'+
+          
+							
+					
+          '</div>'+
+        '</div>';
+      } else {
+        ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" '+ style +' data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
 				'<div class="spellCard">'+
 					'<div class="content">'+
 						bLockSpell +
@@ -278,14 +332,18 @@ window.onload = function(){
 								'<span>' + s_duration + '</span>'+
 							'</div>'+
 						'</div>'+
-						'<div class="materials">' + s_materials + '</div>'+
+						'<div class="materials">' + ((s_materials && s_materials.length>2)? "("+s_materials+")" : "") + '</div>'+
 						'<div class="text">' + s_text + '</div>	'+
 						textSizeButtons +
 						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
-						'<b class="school">' + s_level + ", " + s_school + (s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</b>'+
+						'<b class="school">' + s_level + ", " + s_school + (s_source? " ("+s_source.split(",").map(function(src){
+						return " <span title=\"Источник: "+ oSource[src.trim()]+"\">"+src.trim()+"</span>";
+					}).join(", ")+")" :"")+'</b>'+
 					'</div>'+
 				'</div>'+
 			'</div>';
+      }
+			
 			return ret;
 		} else {
 			console.log("not found: ");
@@ -312,7 +370,9 @@ window.onload = function(){
 		var nLevelEnd = oParams.nLevelEnd;
 		var aSchools = oParams.aSchools;
 		var aSources = oParams.aSources;
+    var fRitual = oParams.fRitual || /ritual|ритуал/.test(sName);
 		var sLang = oParams.sLang;
+    var sView = oParams.sView;
 
 		var fHiddenSpells = (aHiddenSpells.length>0)? true: false;
 		var fLockedSpells = (aLockedSpells.length>0)? true: false;
@@ -340,7 +400,7 @@ window.onload = function(){
 					var fFind = false;
 					for (var i = 0; i<allSpells.length; i++){
 
-						if(allSpells[i].en.name == spellName) {
+						if(allSpells[i].en.name.toLowerCase() == spellName.toLowerCase()) {
 							filteredSpells.push(allSpells[i]);
 							fFind = true;
 							break;
@@ -383,20 +443,37 @@ window.onload = function(){
 		if(aSources && aSources.length>0 && aSources.length<9) {
 			filteredSpells = filteredSpells.filter(function(spell){
 				for(var i = 0; i < aSources.length; i++) {
+					
+					// if(spell.en.name == "Abi-Dalzim’s Horrid Wilting") {
+						// debugger;
+					// }
 
-					if(aSources[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
+					// if(aSources[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
+						// return true;
+					// }
+					if(spell.en.source.toLowerCase().trim().indexOf(aSources[i].toLowerCase().trim()) >= 0){
 						return true;
-					}
+					} 
 				}
 				return false;
 			});
 		}
 
+		//ritual
+		if(fRitual) {
+			filteredSpells = filteredSpells.filter(function(spell){
+        if(spell.en.ritual) {
+          return true;
+        }				
+				return false;
+			});
+		}
+
 		// name
-		if (sName) {
+		if (sName && sName!=='ritual' && sName!=='ритуал') {
 			sName = sName.toLowerCase().trim();
 			filteredSpells = filteredSpells.filter(function(spell){
-				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
+				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0) || (spell.ru && spell.ru.nic && spell.ru.nic.toLowerCase().trim().indexOf(sName)>=0));
 			});
 		}
 
@@ -428,13 +505,14 @@ window.onload = function(){
 		for (var i in filteredSpells) {
 			if(filteredSpells[i]) {
 				var fLocked = filteredSpells[i].locked? true: false;
-				var tmp = createCard(filteredSpells[i], sLang, sClass, fLocked)
+				var tmp = createCard(filteredSpells[i], sLang, sClass, fLocked, sView=="text")
 				if (tmp)
 					spells += tmp;
 			}
 		}
 
 		$(".spellContainer").html(spells);
+    $(".spellContainer").attr("data-spellCount", filteredSpells.length);
 		$("#before_spells").hide();
 		$("#info_text").hide();
 	}
@@ -450,7 +528,9 @@ window.onload = function(){
 			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
 		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
+    var fRitual = ($("#RitualCheckbox").prop('checked'));
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
+    var sView = $("#CardViewSelect .label").attr("data-selected-key");
 
 		var fHidden = (aHiddenSpells.length>0)? true: false;
 
@@ -468,7 +548,9 @@ window.onload = function(){
 				aSchools: aSchools,
 				aSources: aSources,
 				sLang: sLang,
-				fHidden: fHidden
+        sView: sView,
+				fHidden: fHidden,
+        fRitual: fRitual
 				});
 		}, nTimerSeconds/4);
 
@@ -513,14 +595,19 @@ window.onload = function(){
 		$("#SubSubClassSelect").remove();
 		var src = [{
 			name: "[NONE]",
-		    title: "[ПОДКЛАСС]"
+		  title: "[ПОДКЛАСС]"
 		}];
 		if(classSpells[sClass] && classSpells[sClass].subclasses)
 		for (var i in classSpells[sClass].subclasses){
+			let sEnLabel = classSpells[sClass].subclasses[i].title.en.text || classSpells[sClass].subclasses[i].title.en;
+			let sEnTitle = classSpells[sClass].subclasses[i].title.en.source;
+			
+			let sRuLabel = classSpells[sClass].subclasses[i].title.ru.text || classSpells[sClass].subclasses[i].title.ru;
 			src.push(
 			{
 				name: i,
-				title: classSpells[sClass].subclasses[i].title.en+"<br>"+classSpells[sClass].subclasses[i].title.ru
+				title: sEnLabel+"<br>"+sRuLabel,
+				tooltip: sEnTitle? "Источник: "+sEnTitle : ""
 			}
 			);
 		}
@@ -559,7 +646,9 @@ window.onload = function(){
 			}
 			);
 		}
-		var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%"});
+		let tooltip = $("#SubClassSelect").find(".label span").attr('title') || '';
+		
+		var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%", tooltip: tooltip});
 		var label = createLabel("Класс");
 		//src[0].title= "[Полкласс]";
 
@@ -617,6 +706,10 @@ window.onload = function(){
 			oSource[el.key] = el.en;
 		});
 	}
+  function createRitualCheckbox() {
+    var oCh = "<div class='customCheckbox'><input type='checkbox' id='RitualCheckbox'><label for='RitualCheckbox'>Ритуальные заклинания</label></div>"
+    $(".p_side").append("<div class='mediaWidth'>" + oCh + "</div>");
+  }
 	function createNameFilter() {
 		var ret=createInput({id: "NameInput"});
 		var label = createLabel("Название");
@@ -625,7 +718,7 @@ window.onload = function(){
   function createAutoSizeTextButton() {
 		var label = createLabel("Размер текста");
 		var bTextSize = "<a href='#' class='bt flexChild cardTestAutoSize' title='Автоподстройка размера текста заклинания'><i class='fa fa-text-height' aria-hidden='true'></i> Рассчитать </a>";
-		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bTextSize + "</div>");		
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bTextSize + "</div>");
 	}
 	function createLangSelect(lang) {
 		var src = [
@@ -644,7 +737,24 @@ window.onload = function(){
 		var label = createLabel("Язык");
 		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
 	}
-
+  function createCardViewSelect(selected) {
+		var src = [
+			{
+				name: "card",
+				title: "Карточки"
+			},
+			{
+				name: "text",
+				title: "Текст"
+			}
+		];
+		if(!selected)
+			selected = "card";
+		var Select = createSelect(src, {id: "CardViewSelect", selected_key: selected, width: "100%"});
+		var label = createLabel("Вид");
+		$(".p_side").append("<div class='mediaWidth'>" + label + Select + "</div>");
+	}
+  
 	function createHiddenSpellsList(){
 		if(aHiddenSpells.length < 1){
 			$("#HiddenSpells").parent().remove();
@@ -652,7 +762,7 @@ window.onload = function(){
 		}
 		if(!$("#HiddenSpells").length>0){
 			var label = createLabel("Скрытые заклинания");
-			$("#LangSelect").parent().after("<div class='mediaWidth'>" + label + "<div id='HiddenSpells'></div></div>");
+			$(".p_side").append("<div class='mediaWidth'>" + label + "<div id='HiddenSpells'></div></div>");
 		}
 		var listHiddenSpells = aHiddenSpells.map(function(item){
 			return "<a href='#' title='Вернуть на место' class='bUnhideSpell' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
@@ -663,7 +773,8 @@ window.onload = function(){
 	}
 
 	function createLockedSpellsArea(){
-		var aLocked = [];
+		var aLocked = [];    
+    var sView = $("#CardViewSelect .label").attr("data-selected-key");
 		for (var i in aLockedSpells){
 			aLocked.push(i);
 		}
@@ -692,7 +803,7 @@ window.onload = function(){
 						return 1;
 				}
 				return 0
-			}).map(function(el){return createCard(el, el.lang, el.class, true)}));
+			}).map(function(el){return createCard(el, el.lang, el.class, true, sView=='text')}));
 
 			//COUNTER
 			$("#lockedSpellsArea .topHeader").html("("+l+")");
@@ -713,9 +824,13 @@ window.onload = function(){
 		createLevelSelect();
 		createSchoolCombobox(schoolOpen);
 		createSourceCombobox(sourceOpen);
+
+    createRitualCheckbox();
 		createCardWidthButtons();    
+
 		createAutoSizeTextButton();
 		createLangSelect(lang);
+    createCardViewSelect("card");
 
 		$(".p_side").fadeIn();
 	}
@@ -748,7 +863,8 @@ window.onload = function(){
 	$("body").on("click", ".customSelect .option", function() {
 	  var key = $(this).attr("data-key");
 	  var text = $(this).html().replace("<br>", " | ");
-	  $(this).closest(".customSelect").find(".label").attr("data-selected-key", key).text(text);
+		var tooltip = $(this).attr("title");
+	  $(this).closest(".customSelect").find(".label").attr("data-selected-key", key).html(tooltip?"<span title='"+tooltip+"'>"+text+"</span>" :text);
 	  $(this).parent("ul").fadeOut();
 	  $(this).closest(".customSelect").focusout();
 	  $(this).closest(".customSelect").blur();
@@ -1003,6 +1119,21 @@ window.onload = function(){
 		setConfig("sourceOpen", $("#SourceCombobox").attr("data-content-open"));
 	});
 
+  // ritual
+  $("body").on("change", "#RitualCheckbox", function() {
+    clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			updateHash();
+			filterSpells();
+		}, nTimerSeconds/3);
+    // $("#RitualCheckbox").prop('checked')
+    if($("#RitualCheckbox").prop('checked')) {
+      $("#RitualCheckbox").prop('checked', true);
+    } else {
+      $("#RitualCheckbox").prop('checked', false);
+    }
+    return false;
+  });
 	// lang select
 	$("body").on('focusout', "#LangSelect", function(){
 		clearTimeout(oTimer);
@@ -1035,19 +1166,20 @@ window.onload = function(){
 		var sName, sNameRu;
 
 		var nSelectedCards = $(".spellCard.selected").length;
+    var sSelector = ($(this).closest(".cardContainer").length>0)?".cardContainer":".textCardContainer";
 		if(nSelectedCards > 0) {
 			var oButtonLock = $(this);
 			$(".spellCard.selected").each(function() {
-				sName = $(this).closest(".cardContainer").attr("data-name");
-				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+				sName = $(this).closest(sSelector).attr("data-name");
+				sNameRu = $(this).closest(sSelector).attr("data-name-ru");
 
 				oButtonLock.hide();
 				// update hidden spells array
 				aHiddenSpells.push({en: sName, ru: sNameRu});
 			});
 		} else {
-			sName = $(this).closest(".cardContainer").attr("data-name");
-			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
+			sName = $(this).closest(sSelector).attr("data-name");
+			sNameRu = $(this).closest(sSelector).attr("data-name-ru");
 
 			$(this).hide();
 			// update hidden spells array
@@ -1089,12 +1221,13 @@ window.onload = function(){
 		var sName, sNameRu, sLang, sClass;
 
 		var nSelectedCards = $(".spellCard.selected").length;
+    var sSelector = ($(this).closest(".cardContainer").length>0)?".cardContainer":".textCardContainer";
 		if(nSelectedCards > 0) {
 			$(".spellCard.selected").each(function() {
-				sName = $(this).closest(".cardContainer").attr("data-name");
-				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
-				sLang = $(this).closest(".cardContainer").attr("data-lang");
-				sClass= $(this).closest(".cardContainer").attr("data-class");
+				sName = $(this).closest(sSelector).attr("data-name");
+				sNameRu = $(this).closest(sSelector).attr("data-name-ru");
+				sLang = $(this).closest(sSelector).attr("data-lang");
+				sClass= $(this).closest(sSelector).attr("data-class");
 
 				aLockedSpells[sName] = {
 					ru: sNameRu,
@@ -1103,10 +1236,10 @@ window.onload = function(){
 					};
 			});
 		} else {
-			sName = $(this).closest(".cardContainer").attr("data-name");
-			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
-			sLang = $(this).closest(".cardContainer").attr("data-lang");
-			sClass= $(this).closest(".cardContainer").attr("data-class");
+			sName = $(this).closest(sSelector).attr("data-name");
+			sNameRu = $(this).closest(sSelector).attr("data-name-ru");
+			sLang = $(this).closest(sSelector).attr("data-lang");
+			sClass= $(this).closest(sSelector).attr("data-class");
 
 
 			aLockedSpells[sName] = {
@@ -1126,13 +1259,14 @@ window.onload = function(){
 		var sName;
 
 		var nSelectedCards = $(".spellCard.selected").length;
+		var sSelector = ($(this).closest(".cardContainer").length>0)?".cardContainer":".textCardContainer";
 		if(nSelectedCards > 0) {
 			$(".spellCard.selected").each(function() {
-				sName = $(this).closest(".cardContainer").attr("data-name");
+				sName = $(this).closest(sSelector).attr("data-name");
 				delete aLockedSpells[sName];
 			});
 		} else {
-			sName = $(this).closest(".cardContainer").attr("data-name");
+			sName = $(this).closest(sSelector).attr("data-name");
 			delete aLockedSpells[sName];
 		}
 
@@ -1239,7 +1373,7 @@ window.onload = function(){
 			setConfig("cardWidth", width);
 		}
 	});
-  
+
   // autoszie Text in the cards
 	$("body").on("click", ".cardTestAutoSize", function() {
 		var nSelectedCards = $(".spellCard.selected").length;
@@ -1247,11 +1381,11 @@ window.onload = function(){
 			$(".spellCard.selected").each(function() {
 				var f_s=$(this).find(".text").css("font-size");
 				f_s=f_s.substring(0, f_s.length - 2);
-				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {						
+				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {
 					f_s-=0.3;
-					
+
 					var sFontSize = f_s+"px";
-					var sLineHeight = f_s-1+"px";			
+					var sLineHeight = f_s-1+"px";
 					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 				}
 			});
@@ -1259,15 +1393,24 @@ window.onload = function(){
 			$(".spellCard").each(function() {
 				var f_s=$(this).find(".text").css("font-size");
 				f_s=f_s.substring(0, f_s.length - 2);
-				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {	
+				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {
 					 f_s-=0.3;
 					//console.log(f_s);
 					var sFontSize = f_s+"px";
-					var sLineHeight = f_s-1+"px";			
+					var sLineHeight = f_s-1+"px";
 					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 				}
 			});
 		}
+	});
+  	// card view select
+	$("body").on('focusout', "#CardViewSelect", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			updateHash();
+			filterSpells();
+			createLockedSpellsArea();
+		}, nTimerSeconds);
 	});
 
 	$(document).keydown(function(event){
@@ -1297,14 +1440,16 @@ window.onload = function(){
 	$("body").on("click", ".spellCard", function() {
 		if(fCtrlIsPressed)
 			$(this).toggleClass("selected");
-	});	
+	});
   $("body").on("dblclick", ".spellCard", function() {
 		$(this).toggleClass("selected");
 		clearSelection();
 		return false;
 	});
 	$("body").on("taphold", ".spellCard", function() {
-		$(this).toggleClass("selected");
+		if(is_touch_device()){
+			$(this).toggleClass("selected");
+		}
 	});
 
 
@@ -1321,6 +1466,8 @@ window.onload = function(){
 		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
+    var sCardView = $("#CardViewSelect .label").attr("data-selected-key");
+    var sRitual = $("#RitualCheckbox").prop('checked');
 
 		//#q=spell_name&ls=0&le=9
 		var aFilters = [];
@@ -1348,8 +1495,14 @@ window.onload = function(){
 		if(aSources && aSources.length>0 && $("#SourceCombobox .combo_box_content input").length > aSources.length) {
 			aFilters.push("sources="+aSources.join(","));
 		}
+		if(sRitual) {
+			aFilters.push("ritual=true");
+		}
 		if(sLang && sLang.length > 0 && sLang != "ru") {
 			aFilters.push("lang="+sLang.replace(/\s+/g, "_"));
+		}
+    if(sCardView && sCardView.length > 0 && sCardView != "card") {
+			aFilters.push("view="+sCardView.replace(/\s+/g, "_"));
 		}
 
 		if(aFilters.length>0) {
@@ -1364,6 +1517,7 @@ window.onload = function(){
     $('html, body').animate({scrollTop:0}, 'fast');
 
     var sHash = window.location.hash.slice(1); // /archive#q=spell_name
+    sHash = decodeURIComponent(sHash);
     if(sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|,_=-]/.test(sHash)) {
       var sName = sHash.match(/\bq=([А-Яа-яЁё\/\w\d_]+)/);
       var sClass = sHash.match(/\bclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
@@ -1374,6 +1528,8 @@ window.onload = function(){
       var sLang = sHash.match(/\blang=([\w]+)/);
       var sSchools = sHash.match(/\bschools=([\w,]+)/);
       var sSources = sHash.match(/\bsources=([\w,_]+)/);
+      var sRitual=/\britual=true/.test(sHash);
+      var sView = sHash.match(/\bview=([\w]+)/);
 
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
@@ -1423,8 +1579,14 @@ window.onload = function(){
       			$(this).prop('checked', false);
       		}
       	});
-      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1])
+      	$("#SourceCombobox .combo_box_title").attr("data-val", sSources[1])
 
+      }
+      if(sRitual) {
+        $("#RitualCheckbox").attr("checked", "checked"); 
+      }
+      if(sView && sView[1]) {
+      	$("#CardViewSelect .label").attr("data-selected-key", sView[1]).html($("#CardViewSelect li[data-key='"+sView[1]+"']").text().replace(/[_]+/g," "));
       }
     } else {
       removeHash();
@@ -1445,16 +1607,16 @@ window.onload = function(){
 
 	$.when(createSidebar()).done(
 		function(){
-      //$("body").css("border-top", "1px solid blue");
 			$("#showAllSpells").slideDown();
-			if(getViewPortSize("width") > 600){
-				if(getConfig("infoIsShown")==true)
-					getHash();
-					//filterSpells();
-			} else{
-        //setTimeout(getHash, 1000);
-        getHash();
-      }
+			if(window.location.hash.length>0 || getConfig("infoIsShown")==true){
+				getHash();
+			}
+			// if(getViewPortSize("width") > 600){
+				// if(getConfig("infoIsShown")==true)
+					// getHash();
+			// } else {
+				// getHash();
+			// }
 		}
 	);
 };
