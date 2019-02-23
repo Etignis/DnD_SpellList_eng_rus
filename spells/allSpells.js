@@ -1644,7 +1644,7 @@ var allSpells = [
     "ru": {
       "name": "Левитация",
       "level": "2",
-      "text": "Одно существо или объект на ваш выбор в пределах дальности заклинания взлетает вертикально на высоту до 20 футов и остается висеть пока действует заклинание. Это заклинание способно поднять до 500 фунтов веса. Цель может передвигаться только отталкиваясь или притягиваясь к неподвижным объектам или поверхностям, до которых может дотянуться (например стены или потолок), в этом случае вы передвигаетесь так, слово лазаете. В свой ход вы можете изменять высоту цели до 20 футов в любом направлении. Если вы являетесь целью заклинания, то можете подниматься или опускаться в качестве части своего передвижения. В противном случае вы должны тратить действие, чтобы передвигать цель, которая должна находиться в пределах дальности заклинания. Когда заклинание заканчивается, цель медленно опускается на землю.",
+      "text": "<p>Одно существо или объект на ваш выбор в пределах дальности заклинания взлетает вертикально на высоту до 20 футов и остается висеть пока действует заклинание. Это заклинание способно поднять до 500 фунтов веса. Несогласное существо, преуспевшее в спасброске Телосложения, не попадает под действие этого заклинания.</p> <p> Цель может передвигаться только отталкиваясь или притягиваясь к неподвижным объектам или поверхностям, до которых может дотянуться (например стены или потолок), в этом случае вы передвигаетесь так, слово лазаете. В свой ход вы можете изменять высоту цели до 20 футов в любом направлении. Если вы являетесь целью заклинания, то можете подниматься или опускаться в качестве части своего передвижения. В противном случае вы должны тратить действие, чтобы передвигать цель, которая должна находиться в пределах дальности заклинания. Когда заклинание заканчивается, цель медленно опускается на землю.</p>",
       "school": "преобразование",
       "castingTime": "1 действие",
       "range": "60 футов",
@@ -11187,13 +11187,13 @@ var allSpells = [
       "components": "V, S, M",
       "materials": "(a rose thorn)",
       "duration": "Concentration, up to 1 minute",
-       "text": "You shoot forth a burst of thorns from your hands which piercethrough your enemy’s defenses, making them vulnerable toattacks. Each creature in a 20-foot cone must make a Dexteritysaving throw. On a failed save, a creature takes 6d6 piercingdamage, and until the start of your next turn they take anadditional 1d6 piercing damage whenever they are hit by aweapon attack. On a successful save, a creature takes half damageand suffers no other effect.<br><b>At Higher Levels.</b> When you cast this spell using a spell slot of4th level or higher, the initial damage increases by 1d6 for each slot level above 3rd.",
+       "text": "You shoot forth a burst of thorns from your hands which pierce through your enemy’s defenses, making them vulnerable toattacks. Each creature in a 20-foot cone must make a Dexteritysaving throw. On a failed save, a creature takes 6d6 piercing damage, and until the start of your next turn they take anadditional 1d6 piercing damage whenever they are hit by aweapon attack. On a successful save, a creature takes half damageand suffers no other effect.<br><b>At Higher Levels.</b> When you cast this spell using a spell slot of4th level or higher, the initial damage increases by 1d6 for each slot level above 3rd.",
       "source": "SCPC"
     },
     "ru": {
       "name": "Залп ШИПОВ",
       "level": "3",
-      "text": "Из ваших рук вырывается поток шипов, который пронзает всех существ на своем пути. Каждое существо в области 15 футового конуса должно сделать спасбросок Ловкости и при провале получит 3к6 колющего урона, а также уязвимость к колющему, дробящему и рубящему урону. В случае успеха, существо получает половину урона и не получает уязвимости.",
+      "text": "Из ваших рук вырывается поток шипов, который пронзает всех существ на своем пути. Каждое существо в области 15 футового конуса должно сделать спасбросок Ловкости и при провале получит 6к6 колющего урона, а также получает 1к6 урона от оружия до конца своего следующего хода. В случае успеха, существо получает половину урона и не получает дополнительного урона от оружия.",
       "school": "Призыв",
       "castingTime": "1 бонусное действие",
       "range": "5 на себя",
