@@ -498,7 +498,7 @@ Vue.component('card', {
 			return this.textSize? "font-size: "+this.textSize+"px": "";
 		},
 		cardWidthStyle: function(){
-			return this.cardWidth? "width: "+this.cardWidth+"px": "";
+			return (this.cardWidth>0 && this.cardView) ? "width: "+this.cardWidth+"px": "";
 		}
 	},
 	mounted: function(){
