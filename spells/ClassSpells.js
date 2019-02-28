@@ -1179,8 +1179,8 @@ var classSpells = {
 	},
 	Ranger: {
 	  title: {
-		en: "Ranger",
-		ru: "Рейнджер"
+			en: "Ranger",
+			ru: "Рейнджер"
 	  },
 	  spells: [
 		"Absorb Elements",

@@ -7191,7 +7191,7 @@ var allSpells = [
       "materials": "",
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
-      "source": "(Nature)"
+      "source": "PHB"
     },
     "ru": {
       "name": "Опутывающая лоза",
@@ -7217,7 +7217,7 @@ var allSpells = [
       "materials": "",
       "components": "V, S",
       "duration": "Concentration, up to 1 minute",
-      "source": "(Nature)"
+      "source": "PHB"
     },
     "ru": {
       "name": "От дерева к дереву",
@@ -7243,7 +7243,7 @@ var allSpells = [
       "materials": "ashes from a burned leaf of mistletoe and a sprig of spruce",
       "components": "V, S, M",
       "duration": "Concentration, up to 1 hour",
-      "source": "(Trickery)"
+      "source": "PHB"
     },
     "ru": {
       "name": "Пройти без следа",
@@ -7269,7 +7269,7 @@ var allSpells = [
       "materials": "",
       "components": "V",
       "duration": "Concentration, up to 1 minute",
-      "source": "(War)"
+      "source": "PHB"
     },
     "ru": {
       "name": "Мантия крестоносца",
@@ -7949,7 +7949,7 @@ var allSpells = [
       "materials": "",
       "components": "V, S",
       "duration": "Instantaneous",
-      "source": "(Oathbreaker)"
+      "source": "PHB"
     },
     "ru": {
       "name": "Адское возмездие",
@@ -7975,7 +7975,7 @@ var allSpells = [
       "materials": "",
       "components": "V",
       "duration": "Concentration, up to 1 hour",
-      "source": "(Vengeance)"
+      "source": "PHB"
     },
     "ru": {
       "name": "Метка охотника",
