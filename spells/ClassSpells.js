@@ -1581,55 +1581,55 @@ var classSpells = {
 	},
 	Warlock: {
 	  title: {
-		en: "Warlock",
-		ru: "Колдун"
+			en: "Warlock",
+			ru: "Колдун"
 	  },
 	  spells: [
 	  	"BOOMING BLADE",
-		"GREEN-FLAME BLADE",
-		"LIGHTNING LURE",
-		"Bonding vine",
-		"Piercing thorn",
-		"Toll the dead",
-		"Cause fear",
-		"Mind spike",
-		"Shadow blade",
-		"Enemies abound",
-		"Thunder step",
-		"Summon lesser demons",
-		"Charm monster",
-		"Shadow ofmoil",
-		"Sickening radiance",
-		"Summon greater demon",
-		"Danse macabre",
-		"Enervation",
-		"Far step",
-		"infernal calling",
-		"Negative energyflood",
-		"Synaptic static",
-		"Wall of light",
-		"Mental prison",
-		"Scatter",
-		"Soul cage",
-		"Crown of stars",
-		"Power word pain",
-		"Maddening darkness",
-		"Psychic scream",		
-		
-	   "Create Bonfire",
-    "Frostbite",
-    "Magic Stone",
-    "Thunderclap",
-    "Earthbind",
-    "Elemental Bane",
-    "Investiture of Flame",
-    "Investiture of Ice",
-    "Investiture of Stone",
-    "Investiture of Wind",
-    "Gaea’s hand",
-    "Rapport spores",
-    "Slicing leaves",
-		"infestation",
+			"GREEN-FLAME BLADE",
+			"LIGHTNING LURE",
+			"Bonding vine",
+			"Piercing thorn",
+			"Toll the dead",
+			"Cause fear",
+			"Mind spike",
+			"Shadow blade",
+			"Enemies abound",
+			"Thunder step",
+			"Summon lesser demons",
+			"Charm monster",
+			"Shadow ofmoil",
+			"Sickening radiance",
+			"Summon greater demon",
+			"Danse macabre",
+			"Enervation",
+			"Far step",
+			"infernal calling",
+			"Negative energyflood",
+			"Synaptic static",
+			"Wall of light",
+			"Mental prison",
+			"Scatter",
+			"Soul cage",
+			"Crown of stars",
+			"Power word pain",
+			"Maddening darkness",
+			"Psychic scream",		
+			
+			 "Create Bonfire",
+			"Frostbite",
+			"Magic Stone",
+			"Thunderclap",
+			"Earthbind",
+			"Elemental Bane",
+			"Investiture of Flame",
+			"Investiture of Ice",
+			"Investiture of Stone",
+			"Investiture of Wind",
+			"Gaea’s hand",
+			"Rapport spores",
+			"Slicing leaves",
+			"infestation",
 
 		  "Blade Ward",
 		  "Chill Touch",
@@ -1731,8 +1731,8 @@ var classSpells = {
 	  subclasses: [
 		{
 		  title: {
-			en: "Archfey",
-			ru: "Архифея"
+				en: "Archfey",
+				ru: "Архифея"
 			},
 			spells: [
 
@@ -1758,8 +1758,8 @@ var classSpells = {
 		},
 		{
 		  title: {
-			en: "Fiend",
-			ru: "Исчадие"
+				en: "Fiend",
+				ru: "Исчадие"
 			},
 			spells: [
 
@@ -1786,8 +1786,8 @@ var classSpells = {
 		},
 		{
 		  title: {
-			en: "The Great Old One",
-			ru: "Великий Древний"
+				en: "The Great Old One",
+				ru: "Великий Древний"
 			},
 			spells: [
 
@@ -1814,14 +1814,14 @@ var classSpells = {
 		},
 		{
 		  title: {
-			en: {
-					text: "The Hexblade",
-					source: "XGTE"
-					}, 
-			ru: {
-					text: "Ведьмовской клинок",
-					source: "XGTE"
-					}
+				en: {
+						text: "The Hexblade",
+						source: "XGTE"
+						}, 
+				ru: {
+						text: "Ведьмовской клинок",
+						source: "XGTE"
+						}
 			},
 			spells: [
 

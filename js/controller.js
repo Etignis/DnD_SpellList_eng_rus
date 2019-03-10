@@ -813,9 +813,10 @@ Vue.component('hiddenitem', {
 			aClassList: function(){
 				let aSclasses = [{key: "", title: "[ВСЕ]"}];
 				for (let key in classSpells) {
+					let sTitle = (classSpells[key].title.en.text || classSpells[key].title.en) + "<br>" + (classSpells[key].title.ru.text || classSpells[key].title.ru);
 					aSclasses.push({
 						key: key,
-						title: classSpells[key].title.en + "<br>" + classSpells[key].title.ru
+						title: sTitle
 					});
 				}
 				
@@ -825,9 +826,26 @@ Vue.component('hiddenitem', {
 				let aSclasses = [{key: "", title: "[ПОДКЛАСС]"}];
 				if(this.sClass && classSpells[this.sClass].subclasses){
 					for (let key in classSpells[this.sClass].subclasses) {
+						let sTitle = "";
+						if(classSpells[this.sClass].subclasses[key].title.en.text) {
+							sTitle+=classSpells[this.sClass].subclasses[key].title.en.text;
+						} else {
+							sTitle+=classSpells[this.sClass].subclasses[key].title.en;
+						}
+						if(classSpells[this.sClass].subclasses[key].title.en.source) {
+							sTitle+=" ("+classSpells[this.sClass].subclasses[key].title.en.source+")";
+						}
+						sTitle+="<br>";
+						
+						if(classSpells[this.sClass].subclasses[key].title.ru.text) {
+							sTitle+=classSpells[this.sClass].subclasses[key].title.ru.text;
+						} else {
+							sTitle+=classSpells[this.sClass].subclasses[key].title.ru;
+						}
+
 						aSclasses.push({
 							key: key,
-							title: classSpells[this.sClass].subclasses[key].title.en + "<br>" + classSpells[this.sClass].subclasses[key].title.ru
+							title: sTitle//classSpells[this.sClass].subclasses[key].title.en + "<br>" + classSpells[this.sClass].subclasses[key].title.ru
 						});
 					}
 				}
@@ -839,9 +857,11 @@ Vue.component('hiddenitem', {
 				let aSclasses = [{key: "", title: "[ПОДПОДКЛАСС]"}];
 				if(this.sClass && classSpells[this.sClass].subclasses && this.sSubClass && classSpells[this.sClass].subclasses[this.sSubClass].subclasses){
 					for (let key in classSpells[this.sClass].subclasses[this.sSubClass].subclasses) {
+						let sTitle = (classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en.text || classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en) + "<br>" + (classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru.text || classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru);
+					
 						aSclasses.push({
 							key: key,
-							title: classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en + "<br>" + classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru
+							title: sTitle//classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en + "<br>" + classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru
 						});
 					}
 				}
