@@ -213,6 +213,18 @@
 				>
 				</custom-select>
 			</div>
+		<div class='mediaWidth'>
+			<button
+				@click="downloadDB"
+			>Скачать</button>
+		</div>
+		<div class='mediaWidth'>
+			<input type="file" style="display: none" ref="fileUploader" id="fileUploader" @change="fileSelected">
+			<button
+				@click="uploadDB">
+				Загрузить</button>
+		</div>
+		
 			
 		<div class='mediaWidth' v-show="aHiddenItemsList.length>0">
 			<label class="filterLabel">Скрытые заклинания ({{aHiddenItemsList.length}})</label>
@@ -230,7 +242,9 @@
 			</custom-select>
 			</div>
 		</div>
+		
 	</div>
+	
 	<div class='p_cont' ref="cardContainer">
 		<div id='lockedItemsArea' v-show="aLockedItemsList.length>0 && bCardsAreVisible"  v-cloak>
 			<div class='flex_row noprint'>
@@ -417,6 +431,7 @@
   <script type='text/javascript' src='spells/ClassSpells.js?v=0.4' defer></script>
   <!-- <script type='text/javascript' src='js/magic.js?v=2.2.9' defer></script> -->
   <script type='text/javascript' src='js/controller.js?v=0.32' defer></script>
+  <script type='text/javascript' src="js/FileSaver.min.js"></script>
   <!-- <script type='text/javascript' src='js/update.js' defer></script> -->
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

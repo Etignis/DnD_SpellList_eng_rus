@@ -1470,6 +1470,60 @@ Vue.component('hiddenitem', {
 				if(bTMPSourcesOpend != undefined) {		
 					this.bSourcesOpend = bTMPSourcesOpend;					
 				}	
+			},
+			
+			
+			downloadDB: function() {
+				/*
+				aSources: sourceList,
+			aSchools: schoolList,
+			aLanguages: oLanguages,
+			aViews: oView,
+			aSort: oSort,
+			aItems: allSpells,
+				*/
+				var oDB = {};
+				oDB.sourceList = this.aSources;
+				oDB.schoolList = this.aSchools;
+				oDB.oLanguages = this.aLanguages;
+				oDB.allSpells = this.aItems;
+				
+				var sData = JSON.stringify(oDB, null, 2);
+				var filename = "DnD5e_spells_BD";
+				var blob = new Blob([sData], {type: "text/plain;charset=utf-8"});
+				saveAs(blob, filename+".dtn");
+			},
+			uploadDB: function() {
+				let oUploader = this.$refs.fileUploader;
+				//debugger;
+				document.getElementById('fileUploader').click();
+			},
+			fileSelected: function(oEvent){
+				this.handleLocalBDSelect(oEvent);
+			},
+			
+			handleLocalBDSelect(evt) {
+				var files = evt.target.files; // FileList object
+
+				var reader = new FileReader();
+				reader.onload = (function(theFile) {
+					return function(e) {
+						var sText = e.target.result;
+						this.parceLocalFile(sText);
+					}.bind(this);
+				}.bind(this))(files[0]);
+
+				// Read in the image file as a data URL.
+				reader.readAsText(files[0]);
+
+			},
+			parceLocalFile(sText) {
+				var oDB = JSON.parse(sText);
+				//debugger;
+				this.aSources = oDB.sourceList;
+				this.aSchools = oDB.schoolList;
+				this.aLanguages = oDB.oLanguages;
+				this.aItems = oDB.allSpells;
 			}
 		}
   });
