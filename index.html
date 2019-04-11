@@ -221,12 +221,14 @@
 		<hr>
 		<div class='mediaWidth'>
 			<button class="btn"
+				title="Скачать базу данных в формате JSON"
 				@click="downloadDB"
 			>Скачать</button>
 		</div>
 		<div class='mediaWidth'>
 			<input type="file" style="display: none" ref="fileUploader" id="fileUploader" @change="fileSelected">
 			<button  class="btn"
+				title="Загрузить базу данных в формате JSON"
 				@click="uploadDB">
 				Загрузить</button>
 		</div>
