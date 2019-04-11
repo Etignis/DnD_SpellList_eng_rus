@@ -230,6 +230,15 @@
 				@click="uploadDB">
 				Загрузить</button>
 		</div>
+		<div class='mediaWidth'>
+			<check-button
+				id="EditorCheckbox"
+				title="Редактирование"
+				:checked="bEditMode"
+				@press="onEditModePress"
+			>
+			</check-button>
+		</div>
 		
 			
 		<div class='mediaWidth' v-show="aHiddenItemsList.length>0">
@@ -286,6 +295,7 @@
 					:selected="item.selected"
 					:locked="item.locked"
 					:pre="item.pre"
+					:editable="item.editable"
 					@unlock="unlockCard(item)"
 					@hide="hideCard(item)"
 					@select="selectLockedCard(item)"
@@ -326,9 +336,12 @@
 				:view="sView"
 				:selected="item.selected"
 				:pre="item.pre"
+				:editable="item.editable"
 				@lock="lockCard(item)"
 				@hide="hideCard(item)"
 				@select="selectCard(item)"
+				@cancel="cancelCard"
+				@input="saveCard"
 			>
 			</card>
 		</div>

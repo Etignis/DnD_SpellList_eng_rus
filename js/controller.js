@@ -443,6 +443,10 @@ Vue.component('card', {
 		pre: {
 			type: String,
 			default: ""
+		},
+		editable: {
+			type: Boolean,
+			default: false
 		}
 	},
 	data: function(){
@@ -499,6 +503,10 @@ Vue.component('card', {
 		},
 		cardWidthStyle: function(){
 			return (this.cardWidth>0 && this.cardView) ? "width: "+this.cardWidth+"px": "";
+		},
+		
+		editableButtons: function() {
+			return this.editable? "": "display: none";
 		}
 	},
 	mounted: function(){
@@ -532,6 +540,16 @@ Vue.component('card', {
 		onTextMax: function(){
 			this.textSize++;
 		},
+		
+		onTextCancel: function(){
+			this.$emit('cancel', {id: this.id});
+		},
+		onTextSave: function(oEvent){
+			let oEl = this.$refs.itemText;		
+			let sText = oEl.innerHTML;
+			this.$emit('input', {id: this.id, text: sText});
+		},
+		
 		autosizeText: function() {
 			let oEl = this.$refs.itemText;		
 			let style = window.getComputedStyle(oEl, null).getPropertyValue('scrollWidth');
@@ -604,12 +622,16 @@ Vue.component('card', {
 							</div>
 						</div>
 						<div class="materials">{{materials}}</div>
-						<div class="text" v-html="preparedText" :style="textSizeStyle" ref="itemText">
+						<div class="text" v-html="preparedText" :style="textSizeStyle" ref="itemText" :contenteditable="editable">
 						</div>
 						
 						<div class="sizeButtonsContainer noprint">
-							<a href="#" class="textMin" title="Уменьшить размер текста" @click.stop='onTextMin'>–</a>
-							<a href="#" class="textMax" title="Увеличить размер текста" @click.stop='onTextMax'>+</a>
+							<span class="textMin" title="Уменьшить размер текста" @click.stop='onTextMin'>–</span>
+							
+							<span class="textCancel" title="Отменить" @click.stop='onTextCancel' :style="editableButtons">✖</span>
+							<span class="textSave" title="Сохранить" @click.stop='onTextSave' :style="editableButtons">✔</span>
+							
+							<span class="textMax" title="Увеличить размер текста" @click.stop='onTextMax'>+</span>
 						</div>
 						<b class="class">{{className}}</b>
 						<b class="school">{{level}}, {{school}} <span :title="srcTitle">({{src}})</span></b>
@@ -617,26 +639,33 @@ Vue.component('card', {
 				</div>
 				
 				<div class="inner" v-if="!cardView">
-						<span v-show="locked" class="bUnlockItem" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-						<span v-show="!locked" class="bLockItem" title="Закорепить черту (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
-						<span class="bHideItem" title="Скрыть черту (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
-            <div class="flex">
-              <div class="flex column primal">
-                <h1 :title="tooltip">{{name}}</h1>          
-                <div class="school_level">{{level}}, {{school}} {{ritualMark}}</div>
-              </div>
-              <div class="flex secondal">
-                <div class="column thirdal">
-                  <div class="cvasi_row"><div class="subtitle">{{castingTimeTitle}}</div> <div>{{castingTime}}</div></div>   
-                  <div class="cvasi_row"><div class="subtitle">{{rangeTitle}}</div> <div>{{range}}</div></div>           
-                </div>
-                <div class="column thirdal">              
-                  <div class="cvasi_row"><div class="subtitle">{{componentsTitle}}</div> <div>{{components}} {{materials?"*":""}}</div></div> 
-                  <div class="cvasi_row"><div class="subtitle">{{durationTitle}}</div> <div>{{duration}}</div></div>       
-                </div> 
-            </div>
-          </div>
-          <div class="text" v-html="preparedText"></div> 
+					<span v-show="locked" class="bUnlockItem" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+					<span v-show="!locked" class="bLockItem" title="Закорепить черту (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
+					<span class="bHideItem" title="Скрыть черту (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
+					<div class="flex">
+						<div class="flex column primal">
+							<h1 :title="tooltip">{{name}}</h1>          
+							<div class="school_level">{{level}}, {{school}} {{ritualMark}}</div>
+						</div>
+						<div class="flex secondal">
+							<div class="column thirdal">
+								<div class="cvasi_row"><div class="subtitle">{{castingTimeTitle}}</div> <div>{{castingTime}}</div></div>   
+								<div class="cvasi_row"><div class="subtitle">{{rangeTitle}}</div> <div>{{range}}</div></div>           
+							</div>
+							<div class="column thirdal">              
+								<div class="cvasi_row"><div class="subtitle">{{componentsTitle}}</div> <div>{{components}} {{materials?"*":""}}</div></div> 
+								<div class="cvasi_row"><div class="subtitle">{{durationTitle}}</div> <div>{{duration}}</div></div>       
+							</div> 
+						</div>
+					</div>
+					<div class="sizeButtonsContainer noprint">
+							
+							<span></span>
+							<span class="textCancel" title="Отменить" @click.stop='onTextCancel' :style="editableButtons">✖</span>
+							<span class="textSave" title="Сохранить" @click.stop='onTextSave' :style="editableButtons">✔</span>
+							<span></span>
+					</div>
+          <div class="text" v-html="preparedText" :contenteditable="editable" ref="itemText"></div> 
           <div class="material_components">{{materialsLine}}</div>
 					<div class="source" :title="srcTitle">({{src}})</div>
         </div>
@@ -709,6 +738,7 @@ Vue.component('hiddenitem', {
 			bCardsAreVisible: false,	
 			bAppIsReady: false,	
 			bRitualOnly: false,
+			bEditMode: false,
 			
 			bModalWinShow: false,
 			sModalWinCont: ""
@@ -962,7 +992,9 @@ Vue.component('hiddenitem', {
 						"color": this.sClass,
 						"view": this.sView,
 						"locked": this.aLockedItems.indexOf(oItem.en.name)>-1,
-						"selected": this.aSelectedItems.indexOf(oItem.en.name)>-1
+						"selected": this.aSelectedItems.indexOf(oItem.en.name)>-1,
+						
+						"editable": this.bEditMode
 					};
 					if(oItem[this.sLang].pre || oItem.en.pre) {
 						o.pre = oItem[this.sLang].pre || oItem.en.pre;
@@ -1524,6 +1556,37 @@ Vue.component('hiddenitem', {
 				this.aSchools = oDB.schoolList;
 				this.aLanguages = oDB.oLanguages;
 				this.aItems = oDB.allSpells;
+			},
+			
+			
+			onEditModePress: function(){
+				//this.showAllItems();
+				
+				this.bEditMode = !this.bEditMode;
+				//this.updateHash();
+			},
+			cancelCard: function(oData){
+				let sId = oData.id;
+				let oItem = this.aItems.find(el => el.en.name.toLowerCase().replace(/\s+/,"") == sId.toLowerCase().replace(/\s+/,""));
+				if(oItem) {
+					let sText = oItem[this.sLang].text + "  ";
+				
+					oItem[this.sLang].text = sText;
+				}
+				
+				return false;
+				
+			},
+			saveCard: function(oData){
+				let sId = oData.id;
+				let sText = oData.text;
+				
+				let oItem = this.aItems.find(el => el.en.name.toLowerCase().replace(/\s+/,"") == sId.toLowerCase().replace(/\s+/,""));
+				if(oItem) {
+					oItem[this.sLang].text = sText;
+				}
+				
+				return false;
 			}
 		}
   });

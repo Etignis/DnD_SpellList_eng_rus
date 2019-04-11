@@ -103,6 +103,56 @@
     font-weight: bold;
     background: rgba(255,255,255,0.3);
   }
+	
+	.sizeButtonsContainer{
+    	position: absolute;
+    	bottom: 0;
+    	left: .1em;
+    	right: .1em;
+    	display: flex;
+			flex-direction: row;
+			align-content: stretch;
+			justify-content: space-between;
+				
+    	.textMin, .textMax{
+    		padding: 0 .5em;
+    		font-size: 120%;
+				cursor: pointer;
+    		//color: @d-gray;
+    		//opacity: 0.3;
+    		color: @l-gray - #111;
+    		font-weight: bold;
+    		text-decoration: none;
+    		transition: color 0.2s;
+    		&:hover{
+    			color: @color;
+    		}
+    	}
+			
+    	.textCancel, .textSave{
+    		padding: 0 .5em;
+    		font-size: 120%;
+				cursor: pointer;    		
+    		color: @l-gray - #111;
+    		font-weight: bold;
+    		text-decoration: none;
+    		transition: color 0.2s;
+    		
+    	}
+			
+    	.textCancel{    		
+    		&:hover{
+    			color: #b00;
+    		}
+    	}
+			
+    	.textSave{    		
+    		&:hover{
+    			color: #0b0;
+    		}
+    	}
+			
+    }
 }
 .textContainer{
   page-break-inside: avoid;
@@ -330,29 +380,7 @@
         line-height: normal;
         .scrollbars(5px, @m-gray, @l-gray);
     }
-    .sizeButtonsContainer{
-    	position: absolute;
-    	bottom: 0;
-    	left: .1em;
-    	right: .1em;
-    	display: flex;
-        flex-direction: row;
-        align-content: stretch;
-        justify-content: space-between;
-    	.textMin, .textMax{
-    		padding: 0 .5em;
-    		font-size: 120%;
-    		//color: @d-gray;
-    		//opacity: 0.3;
-    		color: @l-gray - #111;
-    		font-weight: bold;
-    		text-decoration: none;
-    		transition: color 0.2s;
-    		&:hover{
-    			color: @color;
-    		}
-    	}
-    }
+    
     .class{
         position: absolute;
         left: 1px;

@@ -1180,6 +1180,46 @@ p {
   font-weight: bold;
   background: rgba(255, 255, 255, 0.3);
 }
+.spellContainer .sizeButtonsContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0.1em;
+  right: 0.1em;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-between;
+}
+.spellContainer .sizeButtonsContainer .textMin,
+.spellContainer .sizeButtonsContainer .textMax {
+  padding: 0 0.5em;
+  font-size: 120%;
+  cursor: pointer;
+  color: #cccccc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.spellContainer .sizeButtonsContainer .textMin:hover,
+.spellContainer .sizeButtonsContainer .textMax:hover {
+  color: #487EC5;
+}
+.spellContainer .sizeButtonsContainer .textCancel,
+.spellContainer .sizeButtonsContainer .textSave {
+  padding: 0 0.5em;
+  font-size: 120%;
+  cursor: pointer;
+  color: #cccccc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.spellContainer .sizeButtonsContainer .textCancel:hover {
+  color: #b00;
+}
+.spellContainer .sizeButtonsContainer .textSave:hover {
+  color: #0b0;
+}
 .textContainer {
   page-break-inside: avoid;
   float: none;
@@ -1396,29 +1436,6 @@ p {
 .spellCard .text body {
   scrollbar-face-color: #777;
   scrollbar-track-color: #ddd;
-}
-.spellCard .sizeButtonsContainer {
-  position: absolute;
-  bottom: 0;
-  left: 0.1em;
-  right: 0.1em;
-  display: flex;
-  flex-direction: row;
-  align-content: stretch;
-  justify-content: space-between;
-}
-.spellCard .sizeButtonsContainer .textMin,
-.spellCard .sizeButtonsContainer .textMax {
-  padding: 0 0.5em;
-  font-size: 120%;
-  color: #cccccc;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.spellCard .sizeButtonsContainer .textMin:hover,
-.spellCard .sizeButtonsContainer .textMax:hover {
-  color: #487EC5;
 }
 .spellCard .class {
   position: absolute;
