@@ -213,14 +213,20 @@
 				>
 				</custom-select>
 			</div>
+			<!--
 		<div class='mediaWidth'>
-			<button
+			<label></lable>
+		</div>
+		-->
+		<hr>
+		<div class='mediaWidth'>
+			<button class="btn"
 				@click="downloadDB"
 			>Скачать</button>
 		</div>
 		<div class='mediaWidth'>
 			<input type="file" style="display: none" ref="fileUploader" id="fileUploader" @change="fileSelected">
-			<button
+			<button  class="btn"
 				@click="uploadDB">
 				Загрузить</button>
 		</div>

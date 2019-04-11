@@ -1502,7 +1502,7 @@ Vue.component('hiddenitem', {
 				this.handleLocalBDSelect(oEvent);
 			},
 			
-			handleLocalBDSelect(evt) {
+			handleLocalBDSelect: function(evt) {
 				var files = evt.target.files; // FileList object
 
 				var reader = new FileReader();
@@ -1517,7 +1517,7 @@ Vue.component('hiddenitem', {
 				reader.readAsText(files[0]);
 
 			},
-			parceLocalFile(sText) {
+			parceLocalFile: function(sText) {
 				var oDB = JSON.parse(sText);
 				//debugger;
 				this.aSources = oDB.sourceList;
