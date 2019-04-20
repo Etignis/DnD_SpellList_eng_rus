@@ -561,27 +561,6 @@ Vue.component('card', {
 				return false;
 			}
 			
-			//while (this.textSize > 7 && oEl.scrollWidth < oEl.innerWidth) {
-			//let nDiff = oEl.scrollHeight/oEl.offsetHeight;
-			//let nNewFontSize = this.textSize / nDiff;
-			//this.textSize = nNewFontSize<7? 7 : nNewFontSize;
-			/*/
-			function min(){
-				if (this.textSize > 7 && oEl.scrollHeight > oEl.offsetHeight) {
-					this.textSize-=0.3;
-				} else {
-					clearInterval(oTimer);
-				}
-			}
-			
-			var oTimer = setInterval(min.bind(this), 1);
-			/**/
-			/*/
-			while (this.textSize > 7 && oEl.scrollHeight > oEl.offsetHeight) {
-				this.textSize-=0.3;
-
-			}
-			/**/
 		},
 		onCardWidthMax: function() {
 			this.cardWidth+=10;
@@ -639,9 +618,9 @@ Vue.component('card', {
 				</div>
 				
 				<div class="inner" v-if="!cardView">
-					<span v-show="locked" class="bUnlockItem" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-					<span v-show="!locked" class="bLockItem" title="Закорепить черту (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
-					<span class="bHideItem" title="Скрыть черту (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
+					<span v-show="locked" class="bUnlockItem noprint" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+					<span v-show="!locked" class="bLockItem noprint" title="Закорепить черту (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
+					<span class="bHideItem noprint" title="Скрыть черту (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
 					<div class="flex">
 						<div class="flex column primal">
 							<h1 :title="tooltip">{{name}}</h1>          
@@ -661,8 +640,8 @@ Vue.component('card', {
 					<div class="sizeButtonsContainer noprint">
 							
 							<span></span>
-							<span class="textCancel" title="Отменить" @click.stop='onTextCancel' :style="editableButtons">✖</span>
-							<span class="textSave" title="Сохранить" @click.stop='onTextSave' :style="editableButtons">✔</span>
+							<span class="textCancel" title="Отменить" @click.stop='onTextCancel' :style="editableButtons" class='noprint'>✖</span>
+							<span class="textSave" title="Сохранить" @click.stop='onTextSave' :style="editableButtons" class='noprint'>✔</span>
 							<span></span>
 					</div>
           <div class="text" v-html="preparedText" :contenteditable="editable" ref="itemText"></div> 
@@ -836,6 +815,9 @@ Vue.component('hiddenitem', {
 			},
 			
 			sSortSelected: function(){
+				if(!(this.aSort[this.sSort])) {
+					this.sSort = Object.keys(this.aSort)[0];
+				}
 				return this.aSort[this.sSort].text[this.sLang].title;
 			},
 			/**/
@@ -1506,14 +1488,6 @@ Vue.component('hiddenitem', {
 			
 			
 			downloadDB: function() {
-				/*
-				aSources: sourceList,
-			aSchools: schoolList,
-			aLanguages: oLanguages,
-			aViews: oView,
-			aSort: oSort,
-			aItems: allSpells,
-				*/
 				var oDB = {};
 				oDB.sourceList = this.aSources;
 				oDB.schoolList = this.aSchools;
@@ -1527,7 +1501,6 @@ Vue.component('hiddenitem', {
 			},
 			uploadDB: function() {
 				let oUploader = this.$refs.fileUploader;
-				//debugger;
 				document.getElementById('fileUploader').click();
 			},
 			fileSelected: function(oEvent){
@@ -1549,13 +1522,34 @@ Vue.component('hiddenitem', {
 				reader.readAsText(files[0]);
 
 			},
+			_completeDB: function(oMainDB, oFileDB){
+				for(var key in oFileDB) {
+					oMainDB[key] = oFileDB[key];
+				}
+			},
 			parceLocalFile: function(sText) {
-				var oDB = JSON.parse(sText);
-				//debugger;
-				this.aSources = oDB.sourceList;
-				this.aSchools = oDB.schoolList;
-				this.aLanguages = oDB.oLanguages;
-				this.aItems = oDB.allSpells;
+				try{
+					var oDB = JSON.parse(sText);
+						
+					this._completeDB(this.aSources, oDB.sourceList);
+					this._completeDB(this.aSchools, oDB.schoolList);
+					this._completeDB(this.aLanguages, oDB.oLanguages);
+					//this._completeDB(this.aItems = oDB.allSpells);
+
+					/*/
+					this.aSources = oDB.sourceList;
+					this.aSchools = oDB.schoolList;
+					this.aLanguages = oDB.oLanguages;
+					/**/
+					this.aItems = oDB.allSpells;
+					
+					let oUploader = this.$refs.fileUploader;
+					document.getElementById('fileUploader').value = "";
+					alert("Вроде как загружено");
+				} catch (err) {
+					document.getElementById('fileUploader').value = "";
+					alert ("Ошибка в структуре файла файла. Воспользуйтесь валидатором JSON.\n\n"+err);
+				}
 			},
 			
 			

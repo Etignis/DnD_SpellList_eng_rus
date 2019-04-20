@@ -232,7 +232,7 @@ p {
 }
 #before_spells {
   font-weight: bold;
-  padding: 0.2em;
+  padding: .2em;
   display: inline-block;
   color: #fff;
 }
@@ -273,7 +273,7 @@ p {
 }
 .customCheckbox .label {
   display: block;
-  padding: 0.2em;
+  padding: .2em;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -368,14 +368,14 @@ p {
 .combo_box input[type=checkbox]:checked + label::after {
   content: "\2714";
   position: absolute;
-  top: 0.2em;
+  top: .2em;
   left: -0.75em;
   color: #487EC5;
   font-size: 150%;
 }
 .combo_box label {
   display: block;
-  padding: 0.2em;
+  padding: .2em;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -397,7 +397,7 @@ p {
 }
 .combo_box .combo_box_content {
   background: #ddd;
-  padding: 0.3em 0;
+  padding: .3em 0;
 }
 .combo_box_arrow {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -597,22 +597,22 @@ p {
 .customSelect .label {
   padding-right: 2.2em !important;
   position: relative;
-  padding: 0.5em 0.2em;
+  padding: .5em .2em;
   margin: 0em 0em;
 }
 .customSelect .label:before {
   content: "▼";
   position: absolute;
-  right: 0.3em;
-  padding: 0 0.2em;
-  transition: color 0.3s, background 0.3s;
+  right: .3em;
+  padding: 0 .2em;
+  transition: color .3s, background .3s;
 }
 .customSelect .label:after {
   content: "";
   position: absolute;
   right: 1.7em;
-  top: 0.2em;
-  bottom: 0.2em;
+  top: .2em;
+  bottom: .2em;
   border-left: 2px ridge #999999;
 }
 .customSelect .list {
@@ -622,22 +622,22 @@ p {
   right: 0;
   z-index: 33;
   background: #ddd;
-  border-radius: 0 0 0.2em 0.2em;
+  border-radius: 0 0 .2em .2em;
   border: 1px solid #bbbbbb;
-  margin: 0 0.2em;
-  padding: 0.2em 0;
+  margin: 0 .2em;
+  padding: .2em 0;
   box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.3);
-  margin-top: 0.25em;
+  margin-top: .25em;
 }
 .customSelect .option {
   color: #222;
   cursor: pointer;
-  padding: 0.3em 0.2em;
+  padding: .3em .2em;
   list-style: none;
   margin: 0;
   text-align: left;
   font-weight: 400;
-  transition: color 0.3s, background 0.3s;
+  transition: color .3s, background .3s;
 }
 .customSelect .option:hover {
   background: #cccccc;
@@ -652,7 +652,7 @@ p {
   perspective: 800px;
   width: 21cm;
   min-height: 29.7cm;
-  padding: 1cm 0.5cm;
+  padding: 1cm .5cm;
   margin: 0 auto 10px;
   border: 1px #D3D3D3 solid;
   border-radius: 5px;
@@ -712,12 +712,12 @@ p {
   -ms-user-select: none;
   user-select: none;
   background: #777;
-  padding: 0.2em;
+  padding: .2em;
   display: block;
   cursor: pointer;
   text-align: center;
   font-size: 100%;
-  margin: 0.1em;
+  margin: .1em;
 }
 .bt:hover {
   background: #888888;
@@ -736,8 +736,8 @@ p {
   border-top-width: 1px;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.05);
   cursor: pointer;
-  padding: 0.9em 1.6em;
-  margin: 0.5em 0.5em 0em;
+  padding: .9em 1.6em;
+  margin: .5em .5em 0em;
   background: #f9f9f9;
   text-decoration: none;
   color: #487EC5;
@@ -764,7 +764,7 @@ p {
 }
 .filterLabel {
   width: 100%;
-  padding: 0.2em 0.1em 0;
+  padding: .2em 0.1em 0;
   font-weight: bold;
 }
 .filterLabel:after {
@@ -810,7 +810,7 @@ p {
   user-select: none;
   cursor: text;
   background: #fff;
-  padding: 0.6em;
+  padding: .6em;
   padding-right: 1.4em;
   display: block;
   width: 100%;
@@ -820,19 +820,19 @@ p {
 }
 .customInput .cross {
   position: absolute;
-  top: 0.12em;
-  right: 0.2em;
+  top: .12em;
+  right: .2em;
   color: #ddd;
   cursor: pointer;
-  margin: 0.3em;
-  transition: color 0.3s;
+  margin: .3em;
+  transition: color .3s;
 }
 .customInput .cross:before {
   content: "✖";
 }
 .customInput .cross:hover {
   color: #487EC5;
-  opacity: 0.9;
+  opacity: .9;
 }
 .customInput .cross:active {
   color: #265ca3;
@@ -843,15 +843,15 @@ p {
   box-shadow: 0 0 5px 0 #487EC5;
 }
 #info_text {
-  padding: 0.7em 1.3em;
+  padding: .7em 1.3em;
   background: rgba(255, 255, 255, 0.88);
   color: #222;
   font-weight: 600;
   max-width: 90rem;
 }
 #topMessage {
-  padding: 0.2em;
-  padding-bottom: 0.3em;
+  padding: .2em;
+  padding-bottom: .3em;
   background: #487EC5;
   color: #fff;
   display: flex;
@@ -871,12 +871,12 @@ p {
   align-self: flex-end;
   border: none;
   cursor: pointer;
-  padding: 0.1em 0.3em;
-  margin: 0.1em 0.1em 0em;
+  padding: .1em .3em;
+  margin: .1em .1em 0em;
   background: transparent;
   text-decoration: none;
   color: #fff;
-  transition: background 0.3s, color 0.3s;
+  transition: background .3s, color .3s;
   font-weight: 600;
 }
 #topMessage .bHide:hover {
@@ -892,7 +892,7 @@ p {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity .5s;
 }
 .fade-enter,
 .fade-leave-to {
@@ -972,7 +972,7 @@ p {
   background: transparent;
   cursor: pointer;
   opacity: 0.5;
-  transition: opacity 0.3s;
+  transition: opacity .3s;
 }
 .mod_win_wrapper .mod_win .randomPropButton:hover {
   opacity: 1;
@@ -1028,7 +1028,7 @@ p {
   color: #922e45;
 }
 .mod_win_wrapper .mod_win_content {
-  padding: 0.5em;
+  padding: .5em;
   overflow-y: scroll;
 }
 .mod_win_wrapper .mod_win_content::-webkit-scrollbar {
@@ -1048,8 +1048,8 @@ p {
 .mod_win_wrapper .bCloseInfoWin {
   position: absolute;
   top: -0.2em;
-  right: 0.4em;
-  padding: 0.1em 0.2em;
+  right: .4em;
+  padding: .1em .2em;
   font-size: 300%;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.2);
@@ -1092,7 +1092,7 @@ p {
   width: 50%;
 }
 #lockedItemsArea {
-  margin-bottom: 0.3em;
+  margin-bottom: .3em;
   position: relative;
 }
 #lockedItemsArea .flex_row {
@@ -1104,11 +1104,11 @@ p {
 #lockedItemsArea .bottomHeader,
 #lockedItemsArea .bUnlockAll {
   font-weight: 600;
-  padding: 0.2em;
+  padding: .2em;
   font-weight: bold;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), 1px 1px 2px rgba(255, 255, 255, 0.7), -1px 0 2px rgba(255, 255, 255, 0.7), 0 -1px 2px rgba(255, 255, 255, 0.7);
   color: #222;
-  border-radius: 0.1em;
+  border-radius: .1em;
 }
 #lockedItemsArea .topHeader {
   flex-grow: 99;
@@ -1125,7 +1125,7 @@ p {
   /* top: 0; */
   /* right: 0; */
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background .3s;
 }
 #lockedItemsArea .bUnlockAll:hover {
   background: rgba(255, 255, 255, 0.7);
@@ -1137,7 +1137,7 @@ p {
   /* } */
 }
 #lockedItemsArea > .content {
-  margin-bottom: 0.3em;
+  margin-bottom: .3em;
 }
 #lockedItemsArea .bHideItem {
   display: none;
@@ -1149,7 +1149,7 @@ p {
   top: -0.1em;
   color: #ddd;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color .3s;
 }
 .bHideItem:hover,
 .bLockItem:hover,
@@ -1162,11 +1162,11 @@ p {
   color: #487EC5;
 }
 .bHideItem {
-  right: 0.1em;
+  right: .1em;
 }
 .bLockItem,
 .bUnlockItem {
-  left: 0.1em;
+  left: .1em;
 }
 .spellContainer {
   position: relative;
@@ -1174,7 +1174,7 @@ p {
 .spellContainer:before {
   content: attr(data-spellcount);
   position: absolute;
-  padding: 0.1em;
+  padding: .1em;
   top: -1.4rem;
   right: 1.9em;
   font-weight: bold;
@@ -1183,16 +1183,16 @@ p {
 .spellContainer .sizeButtonsContainer {
   position: absolute;
   bottom: 0;
-  left: 0.1em;
-  right: 0.1em;
+  left: .1em;
+  right: .1em;
   display: flex;
   flex-direction: row;
   align-content: stretch;
   justify-content: space-between;
 }
-.spellContainer .sizeButtonsContainer .textMin,
-.spellContainer .sizeButtonsContainer .textMax {
-  padding: 0 0.5em;
+.textCancel,
+.textSave {
+  padding: 0 .5em;
   font-size: 120%;
   cursor: pointer;
   color: #cccccc;
@@ -1200,24 +1200,10 @@ p {
   text-decoration: none;
   transition: color 0.2s;
 }
-.spellContainer .sizeButtonsContainer .textMin:hover,
-.spellContainer .sizeButtonsContainer .textMax:hover {
-  color: #487EC5;
-}
-.spellContainer .sizeButtonsContainer .textCancel,
-.spellContainer .sizeButtonsContainer .textSave {
-  padding: 0 0.5em;
-  font-size: 120%;
-  cursor: pointer;
-  color: #cccccc;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.spellContainer .sizeButtonsContainer .textCancel:hover {
+.textCancel:hover {
   color: #b00;
 }
-.spellContainer .sizeButtonsContainer .textSave:hover {
+.textSave:hover {
   color: #0b0;
 }
 .textContainer {
@@ -1378,7 +1364,7 @@ p {
 .spellCard.selected {
   transform: scale(0.94);
   outline: 5px rgba(250, 250, 250, 0.8) solid;
-  transition: outline 0.2s;
+  transition: outline .2s;
 }
 .spellCard.selected:hover {
   outline-color: #487EC5;
@@ -1403,8 +1389,8 @@ p {
   font-size: 95%;
   margin: 0;
   padding: 0;
-  padding-left: 0.9em;
-  padding-right: 0.9em;
+  padding-left: .9em;
+  padding-right: .9em;
   text-align: center;
   text-transform: uppercase;
   border-bottom: 2px solid #e01a10;
@@ -1613,7 +1599,7 @@ p {
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin: 0;
-  padding: 0.1em;
+  padding: .1em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1640,7 +1626,7 @@ p {
   min-width: 13em;
   max-width: 16em;
   width: 98%;
-  margin: 0.1em;
+  margin: .1em;
   text-align: right;
   min-height: 22px;
 }
@@ -1649,7 +1635,7 @@ p {
 }
 .p_side .s_sp {
   margin: 0;
-  padding: 0.1em;
+  padding: .1em;
   width: 9em;
 }
 .p_side input[type='radio'] {
@@ -1692,7 +1678,7 @@ p {
   text-align: center;
   background: #888888;
   display: inline-block;
-  padding: 0.3em;
+  padding: .3em;
 }
 .p_side input[type='radio'] + label:hover {
   background: #999999;
@@ -1736,7 +1722,7 @@ p {
   -ms-user-select: none;
   user-select: none;
   background: #555555;
-  padding: 0.3em;
+  padding: .3em;
 }
 .p_side .hidden_spells {
   max-width: 99.4%;
@@ -1750,7 +1736,7 @@ p {
   color: #fff;
   width: 100%;
   max-width: 2.5in;
-  padding: 0.3em 0;
+  padding: .3em 0;
 }
 .p_side .hidden_spells .a_h_spell:hover {
   color: #cccccc;
@@ -1766,8 +1752,8 @@ p {
 #HiddenItems a {
   text-decoration: none;
   color: #ddd;
-  transition: color 0.3s;
-  margin: 0.2em;
+  transition: color .3s;
+  margin: .2em;
 }
 #HiddenItems a:hover {
   color: #6aa0e7;
@@ -1777,13 +1763,13 @@ p {
 }
 #HiddenItems .bReturnUnvisible {
   display: inline-block;
-  padding: 0.1em 0.2em;
-  margin: 0.4em 0;
+  padding: .1em .2em;
+  margin: .4em 0;
   background: rgba(200, 200, 200, 0.2);
   border-bottom: 1px dashed rgba(100, 100, 100, 0.6);
 }
 .mediaWidth {
-  margin: 0.3em 0;
+  margin: .3em 0;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 200px;
@@ -1793,7 +1779,7 @@ p {
     width: 15em;
     margin-right: 1em;
     float: left;
-    padding: 0.3em;
+    padding: .3em;
     flex-direction: column;
     align-items: stretch;
     position: absolute;
@@ -1867,8 +1853,9 @@ p {
     margin: 0;
     padding: 0;
   }
-  .bHideSpell,
-  .bLockSpell,
+  .bHideItem,
+  .bLockItem,
+  .bUnlockItem,
   .p_side,
   #helper {
     display: none !important;
@@ -1929,5 +1916,5 @@ p {
   }
 }
 @page {
-  margin: 1.14cm 0.9cm 0.9cm;
+  margin: 1.14cm .9cm .9cm;
 }

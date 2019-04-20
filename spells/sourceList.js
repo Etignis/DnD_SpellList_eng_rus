@@ -58,5 +58,17 @@ var sourceList = {
 		},
 		"checked": false,
 		"visible": true
+	},
+	"HB": {
+		"text": {
+			"en": {
+				"title": "Самопал"
+			},
+			"ru": {
+				"title": "Homebrew"
+			}
+		},
+		"checked": false,
+		"visible": true
 	}
 }
