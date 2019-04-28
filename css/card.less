@@ -13,6 +13,38 @@
         width: 50%;  
     }
 }
+.sizeButtonsContainer{
+	position: absolute;
+	bottom: 0;
+	left: .2em;
+	right: .2em;
+	display: flex;
+	flex-direction: row;
+	align-content: stretch;
+	justify-content: space-between;
+	
+	opacity: 0.6;
+	
+	transition: opacity .2s;
+	
+	&:hover{
+		opacity: 1;
+	}
+	
+	
+}
+.itemButton{
+	padding: .1em .3em;
+	cursor: pointer;
+	background: rgba(250,250,250, 0);
+	transition: background .2s, color .2s;
+	font-weight: bold;
+	&:hover{
+		background: rgba(250,250,250, 1);
+		color: @color;
+	}
+}
+
 #lockedItemsArea{
     margin-bottom: .3em;
     position: relative;
@@ -103,41 +135,30 @@
     font-weight: bold;
     background: rgba(255,255,255,0.3);
   }
-	
-	.sizeButtonsContainer{
-    	position: absolute;
-    	bottom: 0;
-    	left: .1em;
-    	right: .1em;
-    	display: flex;
-			flex-direction: row;
-			align-content: stretch;
-			justify-content: space-between;
-    }
 }
 
 .textCancel, .textSave{
-    		padding: 0 .5em;
-    		font-size: 120%;
-				cursor: pointer;    		
-    		color: @l-gray - #111;
-    		font-weight: bold;
-    		text-decoration: none;
-    		transition: color 0.2s;
-    		
-    	}
-			
-    	.textCancel{    		
-    		&:hover{
-    			color: #b00;
-    		}
-    	}
-			
-    	.textSave{    		
-    		&:hover{
-    			color: #0b0;
-    		}
-    	}
+	padding: 0 .5em;
+	font-size: 120%;
+	cursor: pointer;    		
+	color: @m-gray;
+	font-weight: bold;
+	text-decoration: none;
+	transition: color 0.2s;
+	
+}
+
+.textCancel{    		
+	&:hover{
+		color: #b00;
+	}
+}
+
+.textSave{    		
+	&:hover{
+		color: #0b0;
+	}
+}
 
 .textContainer{
   page-break-inside: avoid;

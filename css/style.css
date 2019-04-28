@@ -1091,6 +1091,32 @@ p {
   float: left;
   width: 50%;
 }
+.sizeButtonsContainer {
+  position: absolute;
+  bottom: 0;
+  left: .2em;
+  right: .2em;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-between;
+  opacity: 0.6;
+  transition: opacity .2s;
+}
+.sizeButtonsContainer:hover {
+  opacity: 1;
+}
+.itemButton {
+  padding: .1em .3em;
+  cursor: pointer;
+  background: rgba(250, 250, 250, 0);
+  transition: background .2s, color .2s;
+  font-weight: bold;
+}
+.itemButton:hover {
+  background: #fafafa;
+  color: #487EC5;
+}
 #lockedItemsArea {
   margin-bottom: .3em;
   position: relative;
@@ -1180,22 +1206,12 @@ p {
   font-weight: bold;
   background: rgba(255, 255, 255, 0.3);
 }
-.spellContainer .sizeButtonsContainer {
-  position: absolute;
-  bottom: 0;
-  left: .1em;
-  right: .1em;
-  display: flex;
-  flex-direction: row;
-  align-content: stretch;
-  justify-content: space-between;
-}
 .textCancel,
 .textSave {
   padding: 0 .5em;
   font-size: 120%;
   cursor: pointer;
-  color: #cccccc;
+  color: #777;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.2s;

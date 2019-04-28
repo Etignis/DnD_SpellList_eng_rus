@@ -605,12 +605,12 @@ Vue.component('card', {
 						</div>
 						
 						<div class="sizeButtonsContainer noprint">
-							<span class="textMin" title="Уменьшить размер текста" @click.stop='onTextMin'>–</span>
+							<span class="textMin itemButton" title="Уменьшить размер текста" @click.stop='onTextMin'>–</span>
 							
-							<span class="textCancel" title="Отменить" @click.stop='onTextCancel' :style="editableButtons">✖</span>
-							<span class="textSave" title="Сохранить" @click.stop='onTextSave' :style="editableButtons">✔</span>
+							<span class="textCancel itemButton" title="Отменить" @click.stop='onTextCancel' :style="editableButtons">✖</span>
+							<span class="textSave itemButton" title="Сохранить" @click.stop='onTextSave' :style="editableButtons">✔</span>
 							
-							<span class="textMax" title="Увеличить размер текста" @click.stop='onTextMax'>+</span>
+							<span class="textMax itemButton" title="Увеличить размер текста" @click.stop='onTextMax'>+</span>
 						</div>
 						<b class="class">{{className}}</b>
 						<b class="school">{{level}}, {{school}} <span :title="srcTitle">({{src}})</span></b>
@@ -640,8 +640,8 @@ Vue.component('card', {
 					<div class="sizeButtonsContainer noprint">
 							
 							<span></span>
-							<span class="textCancel" title="Отменить" @click.stop='onTextCancel' :style="editableButtons" class='noprint'>✖</span>
-							<span class="textSave" title="Сохранить" @click.stop='onTextSave' :style="editableButtons" class='noprint'>✔</span>
+							<span class="textCancel noprint itemButton" title="Отменить" @click.stop='onTextCancel' :style="editableButtons" >✖</span>
+							<span class="textSave noprint itemButton" title="Сохранить" @click.stop='onTextSave' :style="editableButtons" >✔</span>
 							<span></span>
 					</div>
           <div class="text" v-html="preparedText" :contenteditable="editable" ref="itemText"></div> 
@@ -935,7 +935,8 @@ Vue.component('hiddenitem', {
 						this.aSchoolSelected.indexOf(oItem.en.school.toLowerCase().trim())>-1 /**/&& 
 							(
 							oItem.en.name.toLowerCase().indexOf(this.sNameInput)>-1 || 
-							oItem.ru.name.toLowerCase().indexOf(this.sNameInput)>-1
+							oItem.ru.name.toLowerCase().indexOf(this.sNameInput)>-1 || 
+							oItem.ru.nic && oItem.ru.nic.toLowerCase().indexOf(this.sNameInput)>-1
 							)
 						&&
 						(this.bRitualOnly && oItem.en.ritual || !this.bRitualOnly) &&
