@@ -8124,7 +8124,7 @@ var allSpells = [
   },
   {
     "en": {
-      "name": "Armor of Agathya",
+      "name": "Armor of Agathys",
       "level": "1",
       "text": "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot level above 1st.",
       "school": "Abjuration",
@@ -9434,32 +9434,6 @@ var allSpells = [
 		"school": "преобразование",
 		"level": "2"
 	}
-  },
-  {
-    "en": {
-      "name": "Armor of Agathys",
-      "level": "1",
-      "text": "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage. <br> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot level above 1st.",
-      "school": "Abjuration",
-      "castingTime": "1 action",
-      "range": "Self",
-      "materials": "a cup of water",
-      "components": "V, S, M",
-      "duration": "Concentration, up to 1 hour",
-      "source": "PHB"
-    },
-	"ru": {
-      "name": "ДОСПЕХ АГАТИСА",
-      "level": "1",
-      "text": "Вас окружает защитное магическое поле, проявляющееся в виде призрачной изморози, покрывшей вас и ваше снаряжение. Вы получаете 5 временных хитов на период действия заклинания. Если существо попадает по вам рукопашной атакой, пока у вас есть эти хиты, оно получает урон холодом 5.<br>На больших уровнях: Если вы накладываете это заклинание, используя ячейку 2 уровня или выше, и временные хиты и урон холодом увеличиваются на 5 за каждый уровень ячейки выше первого.",
-      "school": "ограждение",
-      "castingTime": "1 action",
-      "range": "На себя",
-      "materials": "чашка воды",
-      "components": "В, С, М",
-      "duration": "1 час",
-      "source": "PHB"
-    }
   },
 
 
