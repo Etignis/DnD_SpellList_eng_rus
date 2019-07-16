@@ -1400,7 +1400,6 @@ var classSpells = {
     "Overgrowth",
     "Rapport spores",
     "Slicing leaves",
-		"Healing spirit",
 
 		  "Acid Splash",
 		  "Blade Ward",
