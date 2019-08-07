@@ -1248,6 +1248,9 @@ p {
   font-size: 80%;
   font-weight: bold;
 }
+.textContainer .second_name {
+  color: #999;
+}
 .textContainer .school_level {
   font-style: italic;
   margin: 0 0 0.2em;
@@ -1308,6 +1311,9 @@ p {
   margin: 0;
   font-weight: normal;
   color: #770002;
+}
+.textCardContainer .second_name {
+  color: #999;
 }
 .textCardContainer .source {
   position: absolute;

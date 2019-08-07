@@ -624,6 +624,7 @@ Vue.component('card', {
 					<div class="flex">
 						<div class="flex column primal">
 							<h1 :title="tooltip">{{name}}</h1>          
+							<div class="second_name">[{{tooltip}}]</div>
 							<div class="school_level">{{level}}, {{school}} {{ritualMark}}</div>
 						</div>
 						<div class="flex secondal">
