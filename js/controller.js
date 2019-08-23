@@ -80,7 +80,7 @@ Vue.component('searchfield', {
 			<input :id="innerId" type="text" :value='value' @input="input">
 			<span class="cross" @click="clear"></span>
 		</div>
-		<a href="#random" class="bt flexChild" id="bRandom" title="Случайная черта" @click.stop="random">🎲</a>
+		<a href="#random" class="bt flexChild" id="bRandom" title="Случайное заклинание" @click.stop="random">🎲</a>
 	</div>
 </div>`
 });
@@ -492,7 +492,7 @@ Vue.component('card', {
 			return "spellCard";
 		},
 		prerequisite: function(){
-			return this.pre.length>0? "<span title='Требования необходимые для возможности получения черты'>["+this.pre+"]</span>": "";
+			return this.pre.length>0? "<span title='Требования необходимые для возможности получения заклинания'>["+this.pre+"]</span>": "";
 		},
 		ritualMark: function(){
 			return this.ritual? "("+this.ritual+") " : "";
@@ -577,8 +577,8 @@ Vue.component('card', {
 				<div :class='[ItemCard, selectedClass]' v-if="cardView" >
 					<div class="content">
 						<span v-show="locked" class="bUnlockItem" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-						<span v-show="!locked" class="bLockItem" title="Закорепить черту (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
-						<span class="bHideItem" title="Скрыть черту (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
+						<span v-show="!locked" class="bLockItem" title="Закорепить заклинание (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
+						<span class="bHideItem" title="Скрыть заклинание (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
 						<h1 :title="tooltip">{{name}} {{ritualMark}}</h1>
 						<div class="row">
 							<div class="cell castingTime">
@@ -619,8 +619,8 @@ Vue.component('card', {
 				
 				<div class="inner" v-if="!cardView">
 					<span v-show="locked" class="bUnlockItem noprint" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-					<span v-show="!locked" class="bLockItem noprint" title="Закорепить черту (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
-					<span class="bHideItem noprint" title="Скрыть черту (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
+					<span v-show="!locked" class="bLockItem noprint" title="Закорепить заклинание (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
+					<span class="bHideItem noprint" title="Скрыть заклинание (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
 					<div class="flex">
 						<div class="flex column primal">
 							<h1 :title="tooltip">{{name}}</h1>          
