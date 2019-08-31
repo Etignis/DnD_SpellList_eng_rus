@@ -95,6 +95,10 @@ Vue.component('check-button', {
 			type: String,
 			default: ""
 		},
+		tooltip: {
+			type: String,
+			default: ""
+		},
 		checked: {
 			type: Boolean,
 			default: false
@@ -117,7 +121,7 @@ Vue.component('check-button', {
 		}
 	},
 
-	template: `<div :id="id" class="customCheckbox" @click.stop="press">
+	template: `<div :id="id" class="customCheckbox" @click.stop="press" :title="tooltip">
 	<input type="checkbox" :id="innerId" :checked="checked">
 	<span class="label">{{title}}</span>
 </div>`
@@ -718,6 +722,7 @@ Vue.component('hiddenitem', {
 			bCardsAreVisible: false,	
 			bAppIsReady: false,	
 			bRitualOnly: false,
+			bAllClassSpells: false,
 			bEditMode: false,
 			
 			bModalWinShow: false,
@@ -911,15 +916,31 @@ Vue.component('hiddenitem', {
 			aClassSpells: function(){
 				let aSpells = [];
 				if(this.sClass !="") {
-					//aClassSpellList = classSpells.sClass
-					aSpells = aSpells.concat(classSpells[this.sClass].spells);
-					if(classSpells[this.sClass].subclasses && this.sSubClass && classSpells[this.sClass].subclasses[this.sSubClass]) {
-						if(classSpells[this.sClass].subclasses[this.sSubClass].spells)
-							aSpells = aSpells.concat(classSpells[this.sClass].subclasses[this.sSubClass].spells);
-						if(classSpells[this.sClass].subclasses[this.sSubClass].subclasses && this.sSubSubClass && classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass]) {
-							aSpells = aSpells.concat(classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass].spells);
+					if(this.bAllClassSpells) {
+						aSpells = aSpells.concat(classSpells[this.sClass].spells);
+						
+						for(let subclass in classSpells[this.sClass].subclasses) {
+							if(classSpells[this.sClass].subclasses[subclass].spells){
+								aSpells = aSpells.concat(classSpells[this.sClass].subclasses[subclass].spells);
+							}
+							
+							for (let subsubclass in classSpells[this.sClass].subclasses[subclass].subclasses) {
+								if(classSpells[this.sClass].subclasses[subclass].subclasses[subsubclass].spells){
+									aSpells = aSpells.concat(classSpells[this.sClass].subclasses[subclass].subclasses[subsubclass].spells);
+								}
+							}
 						}
-					}
+					} else {
+						//aClassSpellList = classSpells.sClass
+						aSpells = aSpells.concat(classSpells[this.sClass].spells);
+						if(classSpells[this.sClass].subclasses && this.sSubClass && classSpells[this.sClass].subclasses[this.sSubClass]) {
+							if(classSpells[this.sClass].subclasses[this.sSubClass].spells)
+								aSpells = aSpells.concat(classSpells[this.sClass].subclasses[this.sSubClass].spells);
+							if(classSpells[this.sClass].subclasses[this.sSubClass].subclasses && this.sSubSubClass && classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass]) {
+								aSpells = aSpells.concat(classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass].spells);
+							}
+						}
+					}	
 					aSpells = this.aItems.filter(el => (aSpells.map(el=> el.toLowerCase().replace(/\s+/g, "")).indexOf(el.en.name.toLowerCase().replace(/\s+/g, ""))>-1));
 				} else {
 					aSpells = this.aItems
@@ -1166,6 +1187,12 @@ Vue.component('hiddenitem', {
 				this.sSearch = this.aItemsList[randd(0, this.aItemsList.length-1)].name;
 				this.updateHash();
 			},
+			onAllClassSpellsPress: function(){
+				this.showAllItems();
+				
+				this.bAllClassSpells = !this.bAllClassSpells;
+				this.updateHash();
+			},
 			onRitualsPress: function(){
 				this.showAllItems();
 				
@@ -1358,6 +1385,9 @@ Vue.component('hiddenitem', {
 				if(this.bRitualOnly) {
 					aHash.push("ritual=1");
 				}
+				if(this.bAllClassSpells) {
+					aHash.push("fullclass=1");
+				}
 				
 				if(aHash.length>0) {
 					window.location.hash = aHash.join("&").replace(/\s+/g, "_");
@@ -1421,6 +1451,9 @@ Vue.component('hiddenitem', {
 				}
 				if(oHash.ritual) {
 					this.bRitualOnly = true;
+				}
+				if(oHash.fullclass) {
+					this.bAllClassSpells = true;
 				}
 				
 			},

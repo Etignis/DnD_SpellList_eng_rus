@@ -76,6 +76,18 @@
 			</custom-select>
 		</div>
 
+		
+		<div class='mediaWidth'>
+			<check-button
+				id="RitualCheckbox"
+				title="Все заклинания класса"
+				tooltip="Все заклинания из этого справочника, которые могут  применять представители класса, включая все архетпы"
+				:checked="bAllClassSpells"
+				@press="onAllClassSpellsPress"
+			>
+			</check-button>
+		</div>
+
 		<div class='mediaWidth'>	
 			<label class='filterLabel'>Уровень с/по</label>
 			<div class="row">
@@ -451,7 +463,7 @@
   <script type='text/javascript' src='spells/allSpells.js?v=0.55' defer></script>
   <script type='text/javascript' src='spells/ClassSpells.js?v=0.51' defer></script>
   <!-- <script type='text/javascript' src='js/magic.js?v=2.2.9' defer></script> -->
-  <script type='text/javascript' src='js/controller.js?v=0.38' defer></script>
+  <script type='text/javascript' src='js/controller.js?v=0.40' defer></script>
   <script type='text/javascript' src="js/FileSaver.min.js"></script>
   <!-- <script type='text/javascript' src='js/update.js' defer></script> -->
 <!-- Yandex.Metrika counter -->
