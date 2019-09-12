@@ -139,6 +139,18 @@
 			</combobox>
 		</div>
 		<div class='mediaWidth'>
+			<combobox
+				id="CastingTimeCombobox"
+				ref="CastingTimeCombobox"
+				title="Время накладывания"
+				:items="aCastingTimeList"
+				:opened="bCastingTimeOpend"
+				@iclick="onCastingTimeChange($event)"
+				@opened="onCastingTimeToggled($event)"
+			>
+			</combobox>
+		</div>
+		<div class='mediaWidth'>
 			<check-button
 				id="RitualCheckbox"
 				title="Ритуальные заклинания"

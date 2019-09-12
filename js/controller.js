@@ -718,7 +718,8 @@ Vue.component('hiddenitem', {
 			
 			oConfig: {},
 			bSchoolsOpend: false,			
-			bSourcesOpend: false,		
+			bSourcesOpend: false,	
+			bCastingTimeOpend: false,			
 			bCardsAreVisible: false,	
 			bAppIsReady: false,	
 			bRitualOnly: false,
@@ -746,6 +747,25 @@ Vue.component('hiddenitem', {
 				}
 				return a;
 			},
+			aCastingTimeList: function() {
+				// collect Casting Time
+				if(!this.aCastingTime){
+					this.collectCastingTime();
+				}
+				
+				let a=[];
+				for (var key in this.aCastingTime){
+					if(this.aCastingTime[key].visible !== false){
+						a.push({
+							key: key,
+							title: this.aCastingTime[key].text.en.title + "<br>" + this.aCastingTime[key].text.ru.title,
+							checked: this.aCastingTime[key].checked
+						});
+					}
+				}
+				return a;
+				
+			},
 			
 			aSrcSelected: function(){
 				let aFiltered = this.aSrcList.filter(item => item.checked);
@@ -771,6 +791,10 @@ Vue.component('hiddenitem', {
 			aSchoolSelected: function(){
 				let aFiltered = this.aSchoolList.filter(item => item.checked);
 				return (aFiltered.length>0)? aFiltered.map(item => item.key.toLowerCase()) : this.aSchoolList.map(item => item.key.toLowerCase());
+			},
+			aCastingTimeSelected: function(){
+				let aFiltered = this.aCastingTimeList.filter(item => item.checked);
+				return (aFiltered.length>0)? aFiltered.map(item => item.key.toLowerCase()) : [];/*this.aCastingTimeList.map(item => item.key.toLowerCase());*/
 			},
 			
 			aLanguageList: function(){
@@ -1098,6 +1122,26 @@ Vue.component('hiddenitem', {
 			this.bAppIsReady = true;
 		},
 		methods: {
+			collectCastingTime: function(){
+				let oTmp ={};
+				this.aCastingTime={};
+				this.aItems.forEach(el=>oTmp[el.en.castingTime] = el.ru.castingTime);
+				
+				for (let key in oTmp) {
+					this.aCastingTime[key] = {
+						checked: false,
+						visible: true,
+						text: {
+							en: {
+								title: key,
+							},
+							ru: {
+								title: oTmp[key],
+							},
+						}
+					}
+				}
+			},
 			onClassChange: function(sKey){
 				this.showAllItems();
 				
@@ -1143,6 +1187,12 @@ Vue.component('hiddenitem', {
 				this.showAllItems();
 				
 				this.aSources[sKey].checked = !this.aSources[sKey].checked; 
+				this.updateHash();
+			},
+			onCastingTimeChange: function(sKey){
+				this.showAllItems();
+				
+				this.aCastingTime[sKey].checked = !this.aCastingTime[sKey].checked; 
 				this.updateHash();
 			},
 			onSchoolChange: function(sKey){
@@ -1226,6 +1276,9 @@ Vue.component('hiddenitem', {
 			},
 			onSourcesToggled: function(bStat){
 					this.setConfig("sourcesOpend", bStat);
+			},
+			onCastingTimeToggled: function(bStat){
+					this.setConfig("castingTimeOpend", bStat);
 			},
 			
 			hideInfo(){
@@ -1363,6 +1416,9 @@ Vue.component('hiddenitem', {
 				if(this.aSchoolSelected.length != this.aSchoolList.length) {
 					aHash.push("school="+this.aSchoolSelected.join(","));
 				}
+				if(this.aCastingTimeSelected.length != this.aCastingTime.length) {
+					aHash.push("cast_time="+this.aCastingTimeSelected.join(","));
+				}
 				if(this.sLang != "ru") {
 					aHash.push("lang="+this.sLang);
 				}
@@ -1425,6 +1481,15 @@ Vue.component('hiddenitem', {
 							this.aSchools[key].checked=true;
 						} else {
 							this.aSchools[key].checked=false;
+						}
+					}
+				}
+				if(oHash.cast_time) {
+					for (let key in this.aCastingTime) {
+						if(oHash.cast_time.indexOf(key)>-1) {
+							this.aCastingTime[key].checked=true;
+						} else {
+							this.aCastingTime[key].checked=false;
 						}
 					}
 				}

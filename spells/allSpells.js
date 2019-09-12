@@ -11626,7 +11626,7 @@ var allSpells = [
    "name": "FAR STEP",
    "school": "Conjuration",
    "level": "5",
-   "castingTime": "1 bunus action",
+   "castingTime": "1 bonus action",
    "range": "Self",
    "components": "V",
    "duration": "Concentration, up to 1 minute",
