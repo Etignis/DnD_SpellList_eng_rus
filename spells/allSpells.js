@@ -8060,7 +8060,7 @@ var allSpells = [
     "ru": {
       "name": "Призыв шквала стрел",
       "level": "3",
-      "text": "Вы выстреливаете из оружия дальнего боя немагическим боеприпасом или бросаете немагическое метательное оружие в воздух, чтобы создать конус одинаковых оружий, которые выстреливают вперед, а затем исчезают. Каждое существо в конусе 60 футов должно сделать спасбросок по Ловкости. В случае провала существо получает 3d8 урона, а в случае успеха - половину этого урона. Тип урона зависит от использованного оружия или боеприпаса.",
+      "text": "Вы выстреливаете из оружия дальнего боя немагическим боеприпасом или бросаете немагическое метательное оружие в воздух, чтобы создать конус одинаковых оружий, которые выстреливают вперед, а затем исчезают. Каждое существо в конусе 60 футов должно сделать спасбросок по Ловкости. В случае провала существо получает 8d8 урона, а в случае успеха - половину этого урона. Тип урона зависит от использованного оружия или боеприпаса.",
       "school": "призыв",
       "castingTime": "1 действие",
       "range": "Заклинатель (60 футовый конус)",
@@ -10960,7 +10960,7 @@ var allSpells = [
       "materials": "",
       "duration": "Until dispelled",
        "text": "You place a magical spore in someone's brain. The creature mustsucceed on a Constitution saving throw or become affected by aMind Spore. On a successful save, the creature knows that it hasbeen targeted by a spell. On a failed save, it is completelyoblivious as the spore enters its brain. <br>Another creature can attempt to discover the spore by lookinginto the affected creature's eyes. They must make an Intelligence(Investigation) check against your spell save DC. On a successfulcheck, they discover the spore, which causes yellowish greenspecks to appear in the creature's eyes. Once discovered, it can beremoved with anything that removes a disease. <br>At first, the spore has no effect on the target. However, itslowly grows over time, infecting the target's brain andeventually giving you control over them. The effects are listedbelow in the order they are given: <br><b>After 10 days.</b> You always know the general location of theinfected creature as long as you are on the same plane ofexistence, though you do not know any specific information aboutthat location. <br><b>After 30 days.</b> As a bonus action, you can read the infectedcreature's surface thoughts (those foremost in its mind, reflectingits current emotions and what it is actively thinking about) as longas you are on the same plane of existence. If you perform a 1 hourritual, you instead gain access to any of that creature's thoughtssince your initial casting of the spell. If the spell is dispelled atthis point, the creature takes 5d10 psychic damage, as the spore has partially melded with their brain. <br> <b>After 1 year.</b> You gain the ability to cast suggestion on the infected creature, without expending a spell slot or material components, as long as you are on the same plane of existence. The creature automatically fails the saving throw. If the spell is dispelled at this point, the creature takes 10d10 psychic damage, as the spore has near completely melded with their brain.",
-      "source": "SCPC, XGTE"
+      "source": "SCPC"
     },
     "ru": {
       "name": "Мозговая СПОРА",

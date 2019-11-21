@@ -4,6 +4,39 @@ function randd(min, max) {
   return Math.floor(arguments.length > 1 ? (max - min + 1) * Math.random() + min : (min + 1) * Math.random());
 };
 
+function isDebug(){
+	if(window.location.href.toLowerCase().indexOf('debug=true')>-1) {
+		return true;
+	}
+	return false;
+}
+function isIos(){
+	if(window.location.href.toLowerCase().indexOf('ios=true')>-1) {
+		return true;
+	}
+	
+	if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+		return true;
+	}
+	
+  var iDevices = [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ];
+
+  if (!!navigator.platform) {
+    while (iDevices.length) {
+      if (navigator.platform === iDevices.pop()){ return true; }
+    }
+  }
+
+  return false;
+}
+
 Vue.component('modalWin', {
 	props: {
 		title: {
@@ -51,6 +84,10 @@ Vue.component('searchfield', {
 		value: {
 			type: String,
 			default: ""
+		},
+		ios: {
+			type: Boolean,
+			default: false
 		}
 	},
 	data: function(){
@@ -77,7 +114,8 @@ Vue.component('searchfield', {
 	<label class='filterLabel' :for="innerId">{{title}}</label>
 	<div style="display: flex">
 		<div class="customInput">
-			<input :id="innerId" type="text" :value='value' @input="input">
+			<textarea v-if="ios" :id="innerId"  @input="input" rows=1 style="width:100%; height: 3rem; font-size:110%">{{value}}</textarea>
+			<input v-else :id="innerId" type="text" :value='value' @input="input">
 			<span class="cross" @click="clear"></span>
 		</div>
 		<a href="#random" class="bt flexChild" id="bRandom" title="Случайное заклинание" @click.stop="random">🎲</a>
@@ -695,6 +733,7 @@ Vue.component('hiddenitem', {
 			aViews: oView,
 			aSort: oSort,
 			aItems: allSpells,
+			oClassSpells: classSpells,
 			sLang: "ru",
 			sView: "card",
 			sSort: "levelAlpha",
@@ -727,7 +766,11 @@ Vue.component('hiddenitem', {
 			bEditMode: false,
 			
 			bModalWinShow: false,
-			sModalWinCont: ""
+			sModalWinCont: "",
+			
+			bDebug: false,
+			
+			bIos: false
     },
 
 		computed: {
@@ -854,8 +897,8 @@ Vue.component('hiddenitem', {
 			
 			aClassList: function(){
 				let aSclasses = [{key: "", title: "[ВСЕ]"}];
-				for (let key in classSpells) {
-					let sTitle = (classSpells[key].title.en.text || classSpells[key].title.en) + "<br>" + (classSpells[key].title.ru.text || classSpells[key].title.ru);
+				for (let key in this.oClassSpells) {
+					let sTitle = (this.oClassSpells[key].title.en.text || this.oClassSpells[key].title.en) + "<br>" + (this.oClassSpells[key].title.ru.text || this.oClassSpells[key].title.ru);
 					aSclasses.push({
 						key: key,
 						title: sTitle
@@ -866,28 +909,28 @@ Vue.component('hiddenitem', {
 			},
 			aSubClassList: function(){
 				let aSclasses = [{key: "", title: "[ПОДКЛАСС]"}];
-				if(this.sClass && classSpells[this.sClass].subclasses){
-					for (let key in classSpells[this.sClass].subclasses) {
+				if(this.sClass && this.oClassSpells[this.sClass].subclasses){
+					for (let key in this.oClassSpells[this.sClass].subclasses) {
 						let sTitle = "";
-						if(classSpells[this.sClass].subclasses[key].title.en.text) {
-							sTitle+=classSpells[this.sClass].subclasses[key].title.en.text;
+						if(this.oClassSpells[this.sClass].subclasses[key].title.en.text) {
+							sTitle+=this.oClassSpells[this.sClass].subclasses[key].title.en.text;
 						} else {
-							sTitle+=classSpells[this.sClass].subclasses[key].title.en;
+							sTitle+=this.oClassSpells[this.sClass].subclasses[key].title.en;
 						}
-						if(classSpells[this.sClass].subclasses[key].title.en.source) {
-							sTitle+=" ("+classSpells[this.sClass].subclasses[key].title.en.source+")";
+						if(this.oClassSpells[this.sClass].subclasses[key].title.en.source) {
+							sTitle+=" ("+this.oClassSpells[this.sClass].subclasses[key].title.en.source+")";
 						}
 						sTitle+="<br>";
 						
-						if(classSpells[this.sClass].subclasses[key].title.ru.text) {
-							sTitle+=classSpells[this.sClass].subclasses[key].title.ru.text;
+						if(this.oClassSpells[this.sClass].subclasses[key].title.ru.text) {
+							sTitle+=this.oClassSpells[this.sClass].subclasses[key].title.ru.text;
 						} else {
-							sTitle+=classSpells[this.sClass].subclasses[key].title.ru;
+							sTitle+=this.oClassSpells[this.sClass].subclasses[key].title.ru;
 						}
 
 						aSclasses.push({
 							key: key,
-							title: sTitle//classSpells[this.sClass].subclasses[key].title.en + "<br>" + classSpells[this.sClass].subclasses[key].title.ru
+							title: sTitle//this.oClassSpells[this.sClass].subclasses[key].title.en + "<br>" + this.oClassSpells[this.sClass].subclasses[key].title.ru
 						});
 					}
 				}
@@ -897,13 +940,13 @@ Vue.component('hiddenitem', {
 			
 			aSubSubClassList: function(){
 				let aSclasses = [{key: "", title: "[ПОДПОДКЛАСС]"}];
-				if(this.sClass && classSpells[this.sClass].subclasses && this.sSubClass && classSpells[this.sClass].subclasses[this.sSubClass].subclasses){
-					for (let key in classSpells[this.sClass].subclasses[this.sSubClass].subclasses) {
-						let sTitle = (classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en.text || classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en) + "<br>" + (classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru.text || classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru);
+				if(this.sClass && this.oClassSpells[this.sClass].subclasses && this.sSubClass && this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses){
+					for (let key in this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses) {
+						let sTitle = (this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en.text || this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en) + "<br>" + (this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru.text || this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru);
 					
 						aSclasses.push({
 							key: key,
-							title: sTitle//classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en + "<br>" + classSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru
+							title: sTitle//this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.en + "<br>" + this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[key].title.ru
 						});
 					}
 				}
@@ -912,13 +955,13 @@ Vue.component('hiddenitem', {
 			},
 			
 			sClassSelected: function(){
-				return this.sClass? classSpells[this.sClass].title[this.sLang] : "[ВСЕ]";
+				return this.sClass? this.oClassSpells[this.sClass].title[this.sLang] : "[ВСЕ]";
 			},
 			sSubClassSelected: function(){
-				return this.sSubClass? classSpells[this.sClass].subclasses[this.sSubClass].title[this.sLang] : "[ПОДКЛАСС]";
+				return this.sSubClass? this.oClassSpells[this.sClass].subclasses[this.sSubClass].title[this.sLang] : "[ПОДКЛАСС]";
 			},
 			sSubSubClassSelected: function(){
-				return (this.sSubClass && this.sSubSubClass)? classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass].title[this.sLang] : "[ПОДПОДКЛАСС]";
+				return (this.sSubClass && this.sSubSubClass)? this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass].title[this.sLang] : "[ПОДПОДКЛАСС]";
 			},
 			
 			aLevelList: function(){
@@ -934,34 +977,34 @@ Vue.component('hiddenitem', {
 			
 			
 			sClassTitle: function(){
-				return this.sClass? classSpells[this.sClass].title[this.sLang]: "";
+				return this.sClass? this.oClassSpells[this.sClass].title[this.sLang]: "";
 			},
 			
 			aClassSpells: function(){
 				let aSpells = [];
 				if(this.sClass !="") {
 					if(this.bAllClassSpells) {
-						aSpells = aSpells.concat(classSpells[this.sClass].spells);
+						aSpells = aSpells.concat(this.oClassSpells[this.sClass].spells);
 						
-						for(let subclass in classSpells[this.sClass].subclasses) {
-							if(classSpells[this.sClass].subclasses[subclass].spells){
-								aSpells = aSpells.concat(classSpells[this.sClass].subclasses[subclass].spells);
+						for(let subclass in this.oClassSpells[this.sClass].subclasses) {
+							if(this.oClassSpells[this.sClass].subclasses[subclass].spells){
+								aSpells = aSpells.concat(this.oClassSpells[this.sClass].subclasses[subclass].spells);
 							}
 							
-							for (let subsubclass in classSpells[this.sClass].subclasses[subclass].subclasses) {
-								if(classSpells[this.sClass].subclasses[subclass].subclasses[subsubclass].spells){
-									aSpells = aSpells.concat(classSpells[this.sClass].subclasses[subclass].subclasses[subsubclass].spells);
+							for (let subsubclass in this.oClassSpells[this.sClass].subclasses[subclass].subclasses) {
+								if(this.oClassSpells[this.sClass].subclasses[subclass].subclasses[subsubclass].spells){
+									aSpells = aSpells.concat(this.oClassSpells[this.sClass].subclasses[subclass].subclasses[subsubclass].spells);
 								}
 							}
 						}
 					} else {
-						//aClassSpellList = classSpells.sClass
-						aSpells = aSpells.concat(classSpells[this.sClass].spells);
-						if(classSpells[this.sClass].subclasses && this.sSubClass && classSpells[this.sClass].subclasses[this.sSubClass]) {
-							if(classSpells[this.sClass].subclasses[this.sSubClass].spells)
-								aSpells = aSpells.concat(classSpells[this.sClass].subclasses[this.sSubClass].spells);
-							if(classSpells[this.sClass].subclasses[this.sSubClass].subclasses && this.sSubSubClass && classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass]) {
-								aSpells = aSpells.concat(classSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass].spells);
+						//aClassSpellList = this.oClassSpells.sClass
+						aSpells = aSpells.concat(this.oClassSpells[this.sClass].spells);
+						if(this.oClassSpells[this.sClass].subclasses && this.sSubClass && this.oClassSpells[this.sClass].subclasses[this.sSubClass]) {
+							if(this.oClassSpells[this.sClass].subclasses[this.sSubClass].spells)
+								aSpells = aSpells.concat(this.oClassSpells[this.sClass].subclasses[this.sSubClass].spells);
+							if(this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses && this.sSubSubClass && this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass]) {
+								aSpells = aSpells.concat(this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass].spells);
 							}
 						}
 					}	
@@ -1120,6 +1163,9 @@ Vue.component('hiddenitem', {
 			this.updateHash();
 			
 			this.bAppIsReady = true;
+			
+			this.bDebug = isDebug();
+			this.bIos = isIos();
 		},
 		methods: {
 			collectCastingTime: function(){
@@ -1225,6 +1271,9 @@ Vue.component('hiddenitem', {
 				this.setConfig("sort", sKey);
 			},
 			onSearchName: function(sValue){
+				if(this.bDebug) {
+					alert ("Введенное значение: \r\n"+ sValue);
+				}
 				this.showAllItems();
 				
 				this.sSearch = sValue.trim();
@@ -1416,7 +1465,7 @@ Vue.component('hiddenitem', {
 				if(this.aSchoolSelected.length != this.aSchoolList.length) {
 					aHash.push("school="+this.aSchoolSelected.join(","));
 				}
-				if(this.aCastingTimeSelected.length != this.aCastingTime.length) {
+				if(this.aCastingTimeSelected.length != this.aCastingTime.length && this.aCastingTimeSelected.length) {
 					aHash.push("cast_time="+this.aCastingTimeSelected.join(","));
 				}
 				if(this.sLang != "ru") {

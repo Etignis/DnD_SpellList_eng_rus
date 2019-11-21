@@ -671,8 +671,11 @@ var classSpells = {
 		  "Pass without Trace",
 		  "Protection from Poison",
 		  "Spike Growth",
+		  "Arm of theMoonbeam wild",
 		  "Arm of the wild",
 		  "Explosive seed",
+			
+			"HEALING SPIRIT",
 
 
 		  "Call Lightning",
@@ -763,7 +766,9 @@ var classSpells = {
 		  "Foresight",
 		  "Shapechange",
 		  "Storm of Vengeance",
-		  "True Resurrection"
+		  "True Resurrection",
+			
+			"Healing spirit"
 		],
 	  subclasses: {
 		Land: {
