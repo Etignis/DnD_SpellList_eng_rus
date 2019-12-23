@@ -1031,8 +1031,8 @@ Vue.component('hiddenitem', {
 						(this.bRitualOnly && oItem.en.ritual || !this.bRitualOnly) &&
 						this.aHiddenItems.indexOf(oItem.en.name)<0/**/  &&
 						this.nLevelStart <= this.nLevelEnd &&
-						this.nLevelStart <= oItem.en.level &&
-						this.nLevelEnd >= oItem.en.level 
+						this.nLevelStart <= Number(oItem.en.level) &&
+						this.nLevelEnd >= Number(oItem.en.level)
 					) 
 				}.bind(this));
 				

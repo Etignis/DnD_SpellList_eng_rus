@@ -11345,7 +11345,7 @@ var allSpells = [
       "name": "CEREMONY",
       "ritual": "ritual",
       "level": "1",
-      "school": "abjurarion",
+      "school": "Abjuration",
       "castingTime": "1 hour",
       "range": "Touch",
       "components": "V, S, M",
@@ -11592,32 +11592,6 @@ var allSpells = [
       "castingTime": "1 действие",
       "range": "60 футов",
       "components": "В,С",
-      "duration": "Концентрация, вплоть до 1 минуты"
-    }
-  },
-  {
-    "en": {
-      "name": "CEREMONY",
-      "ritual": "ritual",
-      "level": "1",
-      "school": "abjurarion",
-      "castingTime": "1 hour",
-      "range": "Touch",
-      "components": "V, S, M",
-      "materials": "(25 gp worth of powdered silver, which the spell consumes)",
-      "duration": "Instantaneous",
-      "text": "You perform a special religious ceremony that is infused with magic. When you cast the spell, choose one of the following rites, the target of which must be within 10 feet of you throughout the casting. <br><b>Atonement.</b> You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom (Insight) check. On a successful check, you restore the target to its original alignment. <br><b>Bless Water.</b> You touch one vial of water and cause it to become holy water. <br><b>Coming oа Age.</b> You touch one humanoid who is a young adult. For the next 24 hours, whenever the target makes an ability check, it can roll a d4 and add the number rolled to the ability check. A creature can benefit from this rite only once. <br><b>Dedication.</b> You touch one humanoid who wishes to be dedicated to your god's service. For the next 24 hours, whenever the target makes a saving throw, it can roll a d4 and add the number rolled to the save. A creature can benefit from this rite only once. <br><b>Funeral Rite.</b> You touch one corpse, and for the next 7 days, the target can't become undead by any means short of a wish spell. <br><b>Wedding.</b> You touch adult humanoids willing to be bonded together in marriage. For the next 7 days, each target gains a +2 bonus to AC while they are within 30 feet of each other. A creature can benefit from this rite again only if widowed.",
-      "source": "XGTE"
-    },
-    "ru": {
-      "name": "ДРЕВЕСНЫЙ ЗАХВАТ",
-      "level": "4",
-      "text": "Вы приказываете дереву с помощью ветвей, схватить, притянуть и удерживать существо в пределах 10 футов от него. Цель должна преуспеть в спасброске Ловкости или получит 6к8 дробящего урона, будет притянуто к дереву и опутано ветвями. Удерживаемое существо может действием совершить проверку Силы или Ловкости на выбор существа, против сложности вашего заклинания, чтобы освободиться.",
-      "school": "Преобразование",
-      "castingTime": "1 действие",
-      "range": "30 футов",
-      "components": "В,С,М",
-      "materials": "(маленькая веточка)",
       "duration": "Концентрация, вплоть до 1 минуты"
     }
   },
