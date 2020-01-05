@@ -729,6 +729,7 @@ Vue.component('hiddenitem', {
     data: {
 			aSources: sourceList,
 			aSchools: schoolList,
+			aCastingTime: {"1 action":{"checked":false,"visible":true,"text":{"en":{"title":"1 action"},"ru":{"title":"1 действие"}}},"1 minute":{"checked":false,"visible":true,"text":{"en":{"title":"1 minute"},"ru":{"title":"1 минута"}}},"1 bonus action":{"checked":false,"visible":true,"text":{"en":{"title":"1 bonus action"},"ru":{"title":"1 бонусное действие"}}},"1 reaction":{"checked":false,"visible":true,"text":{"en":{"title":"1 reaction"},"ru":{"title":"1 реакция"}}},"1 hour":{"checked":false,"visible":true,"text":{"en":{"title":"1 hour"},"ru":{"title":"1 час"}}},"10 minutes":{"checked":false,"visible":true,"text":{"en":{"title":"10 minutes"},"ru":{"title":"10 минут"}}},"12 hours":{"checked":false,"visible":true,"text":{"en":{"title":"12 hours"},"ru":{"title":"12 hours"}}},"1 action or 8 hours":{"checked":false,"visible":true,"text":{"en":{"title":"1 action or 8 hours"},"ru":{"title":"1 действие или 8 часов"}}},"8 hours":{"checked":false,"visible":true,"text":{"en":{"title":"8 hours"},"ru":{"title":"8 часов"}}},"24 hours":{"checked":false,"visible":true,"text":{"en":{"title":"24 hours"},"ru":{"title":"24 часа"}}},"1 reaction, which you take when a humanoid you can see within 60 feet of you dies":{"checked":false,"visible":true,"text":{"en":{"title":"1 reaction, which you take when a humanoid you can see within 60 feet of you dies"},"ru":{"title":"1 реакция"}}}},
 			aLanguages: oLanguages,
 			aViews: oView,
 			aSort: oSort,
@@ -792,9 +793,10 @@ Vue.component('hiddenitem', {
 			},
 			aCastingTimeList: function() {
 				// collect Casting Time
-				if(!this.aCastingTime){
-					this.collectCastingTime();
-				}
+				//if(!this.aCastingTime){
+				// if(Object.entries(this.aCastingTime).length === 0){
+					// this.collectCastingTime();
+				// }
 				
 				let a=[];
 				for (var key in this.aCastingTime){
@@ -835,11 +837,12 @@ Vue.component('hiddenitem', {
 				let aFiltered = this.aSchoolList.filter(item => item.checked);
 				return (aFiltered.length>0)? aFiltered.map(item => item.key.toLowerCase()) : this.aSchoolList.map(item => item.key.toLowerCase());
 			},
+			
 			aCastingTimeSelected: function(){
 				let aFiltered = this.aCastingTimeList.filter(item => item.checked);
 				return (aFiltered.length>0)? aFiltered.map(item => item.key.toLowerCase()) : [];/*this.aCastingTimeList.map(item => item.key.toLowerCase());*/
 			},
-			
+
 			aLanguageList: function(){
 				let a=[];
 				for (var key in this.aLanguages){
@@ -1022,11 +1025,16 @@ Vue.component('hiddenitem', {
 						this.aSrcSelected.filter(value => -1 !== oItem.en.source.split(",").map(item => item.trim()).indexOf(value)).length &&
 						//this.aSrcSelected.indexOf(oItem.en.source)>-1 && // old filter for sources
 						this.aSchoolSelected.indexOf(oItem.en.school.toLowerCase().trim())>-1 /**/&& 
-							(
+						(
+							this.aCastingTimeSelected.length==0 || 
+							this.aCastingTimeSelected.indexOf(oItem.en.castingTime.toLowerCase().trim())>-1 
+						)
+						&& 
+						(
 							oItem.en.name.toLowerCase().indexOf(this.sNameInput)>-1 || 
 							oItem.ru.name.toLowerCase().indexOf(this.sNameInput)>-1 || 
 							oItem.ru.nic && oItem.ru.nic.toLowerCase().indexOf(this.sNameInput)>-1
-							)
+						)
 						&&
 						(this.bRitualOnly && oItem.en.ritual || !this.bRitualOnly) &&
 						this.aHiddenItems.indexOf(oItem.en.name)<0/**/  &&
@@ -1146,7 +1154,8 @@ Vue.component('hiddenitem', {
 			
 		},
 		mounted: function() {
-			this.loadConfigData();			
+			this.loadConfigData();	
+			this.collectCastingTime();			
 			this.sModalWinCont = $("#info_text").html();
 			
 			let bInfoIsRead = this.getConfig("infoIsRead");
@@ -1170,7 +1179,7 @@ Vue.component('hiddenitem', {
 		methods: {
 			collectCastingTime: function(){
 				let oTmp ={};
-				this.aCastingTime={};
+				//this.aCastingTime={};
 				this.aItems.forEach(el=>oTmp[el.en.castingTime] = el.ru.castingTime);
 				
 				for (let key in oTmp) {
@@ -1188,6 +1197,10 @@ Vue.component('hiddenitem', {
 					}
 				}
 			},
+			// aCastingTimeSelected: function(){
+				// let aFiltered = this.aCastingTimeList.filter(item => item.checked);
+				// return (aFiltered.length>0)? aFiltered.map(item => item.key.toLowerCase()) : [];/*this.aCastingTimeList.map(item => item.key.toLowerCase());*/
+			// },
 			onClassChange: function(sKey){
 				this.showAllItems();
 				
@@ -1239,6 +1252,8 @@ Vue.component('hiddenitem', {
 				this.showAllItems();
 				
 				this.aCastingTime[sKey].checked = !this.aCastingTime[sKey].checked; 
+				//this.$recompute('aCastingTimeSelected');
+				//this.$forceUpdate();
 				this.updateHash();
 			},
 			onSchoolChange: function(sKey){
@@ -1465,8 +1480,9 @@ Vue.component('hiddenitem', {
 				if(this.aSchoolSelected.length != this.aSchoolList.length) {
 					aHash.push("school="+this.aSchoolSelected.join(","));
 				}
+				//let aCastingTimeSelected = this.aCastingTimeSelected();
 				if(this.aCastingTimeSelected.length != this.aCastingTime.length && this.aCastingTimeSelected.length) {
-					aHash.push("cast_time="+this.aCastingTimeSelected.join(","));
+					aHash.push("castTime="+this.aCastingTimeSelected.join(","));
 				}
 				if(this.sLang != "ru") {
 					aHash.push("lang="+this.sLang);
@@ -1533,9 +1549,9 @@ Vue.component('hiddenitem', {
 						}
 					}
 				}
-				if(oHash.cast_time) {
+				if(oHash.castTime) {
 					for (let key in this.aCastingTime) {
-						if(oHash.cast_time.indexOf(key)>-1) {
+						if(oHash.castTime.indexOf(key)>-1) {
 							this.aCastingTime[key].checked=true;
 						} else {
 							this.aCastingTime[key].checked=false;
