@@ -665,18 +665,18 @@ Vue.component('card', {
 					<span class="bHideItem noprint" title="Скрыть заклинание (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
 					<div class="flex">
 						<div class="flex column primal">
-							<h1 :title="tooltip">{{name}}</h1>          
-							<div class="second_name">[{{tooltip}}]</div>
-							<div class="school_level">{{level}}, {{school}} {{ritualMark}}</div>
+							<h1 :title="tooltip" :contenteditable="editable">{{name}}</h1>          
+							<div class="second_name" :contenteditable="editable">[{{tooltip}}]</div>
+							<div class="school_level" :contenteditable="editable">{{level}}, {{school}} {{ritualMark}}</div>
 						</div>
 						<div class="flex secondal">
 							<div class="column thirdal">
-								<div class="cvasi_row"><div class="subtitle">{{castingTimeTitle}}</div> <div>{{castingTime}}</div></div>   
-								<div class="cvasi_row"><div class="subtitle">{{rangeTitle}}</div> <div>{{range}}</div></div>           
+								<div class="cvasi_row"><div class="subtitle" :contenteditable="editable">{{castingTimeTitle}}</div> <div>{{castingTime}}</div></div>   
+								<div class="cvasi_row"><div class="subtitle" :contenteditable="editable">{{rangeTitle}}</div> <div>{{range}}</div></div>           
 							</div>
 							<div class="column thirdal">              
-								<div class="cvasi_row"><div class="subtitle">{{componentsTitle}}</div> <div>{{components}} {{materials?"*":""}}</div></div> 
-								<div class="cvasi_row"><div class="subtitle">{{durationTitle}}</div> <div>{{duration}}</div></div>       
+								<div class="cvasi_row"><div class="subtitle" :contenteditable="editable">{{componentsTitle}}</div> <div>{{components}} {{materials?"*":""}}</div></div> 
+								<div class="cvasi_row"><div class="subtitle" :contenteditable="editable">{{durationTitle}}</div> <div>{{duration}}</div></div>       
 							</div> 
 						</div>
 					</div>
@@ -688,7 +688,7 @@ Vue.component('card', {
 							<span></span>
 					</div>
           <div class="text" v-html="preparedText" :contenteditable="editable" ref="itemText"></div> 
-          <div class="material_components">{{materialsLine}}</div>
+          <div class="material_components" :contenteditable="editable">{{materialsLine}}</div>
 					<div class="source" :title="srcTitle">({{src}})</div>
         </div>
 			</div>`
