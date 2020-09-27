@@ -621,28 +621,28 @@ Vue.component('card', {
 						<span v-show="locked" class="bUnlockItem" title="Открепить обратно" @click.stop="unlock"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
 						<span v-show="!locked" class="bLockItem" title="Закорепить заклинание (не будут действовать фильтры)" @click.stop="lock"><i class="fa fa-lock" aria-hidden="true"></i></span>
 						<span class="bHideItem" title="Скрыть заклинание (будет внизу панели фильтров)" @click.stop="hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
-						<h1 :title="tooltip">{{name}} {{ritualMark}}</h1>
+						<h1 :title="tooltip" :contenteditable="editable">{{name}} {{ritualMark}}</h1>
 						<div class="row">
-							<div class="cell castingTime">
+							<div class="cell castingTime" :contenteditable="editable">
 								<b>{{castingTimeTitle}}</b>
 								<span>{{castingTime}}</span>
 							</div>
-							<div class="cell range">
+							<div class="cell range" :contenteditable="editable">
 								<b>{{rangeTitle}}</b>
 								<span>{{range}}</span>
 							</div>
 						</div>
 						<div class="row">
-							<div class="cell components">
+							<div class="cell components" :contenteditable="editable">
 								<b>{{componentsTitle}}</b>
 								<span>{{components}}</span>
 							</div>
-							<div class="cell duration">
+							<div class="cell duration" :contenteditable="editable">
 								<b>{{durationTitle}}</b>
 								<span>{{duration}}</span>
 							</div>
 						</div>
-						<div class="materials">{{materials}}</div>
+						<div class="materials" :contenteditable="editable">{{materials}}</div>
 						<div class="text" v-html="preparedText" :style="textSizeStyle" ref="itemText" :contenteditable="editable">
 						</div>
 						
