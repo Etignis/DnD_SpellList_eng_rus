@@ -1565,9 +1565,9 @@ Vue.component('hiddenitem', {
 					this.sClass = oHash.class[0]
 				}
 				if(oHash.le) {
-					this.nLevelEnd = oHash.ls[0]
+					this.nLevelEnd = oHash.le[0]
 				}
-				if(oHash.le) {
+				if(oHash.ls) {
 					this.nLevelStart = oHash.ls[0]
 				}
 				if(oHash.view) {
