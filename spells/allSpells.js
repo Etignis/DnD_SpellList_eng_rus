@@ -1215,7 +1215,7 @@ var allSpells = [
     "en": {
       "name": "Arcane Lock",
       "level": "2",
-      "text": "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.    While affected by this spell, the object is more difficult to break or force open",
+      "text": "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.    While affected by this spell, the object is more difficult to break or force open. The ВС to break it or pick any locks on it increases by 10.",
       "school": "Abjuration",
       "castingTime": "1 action",
       "range": "Touch",
@@ -1227,7 +1227,7 @@ var allSpells = [
     "ru": {
       "name": "Волшебный замок",
       "level": "2",
-      "text": "Вы касаетесь закрытой двери, окна, врат, сундука или чего-то подобного, и объект становится запертым. Вы и выбранные в момент произнесения существа могут нормально открывать этот объект. Вы можете также установить пароль, который нужно произнести в 5 футах от объекта, чтобы приостановить действие заклинания на 1 минуту. В противном случае объект нельзя открыть, не сломав или не развеяв заклинание. Если применить на объект заклинание стук, то волшебный замок подавляется на 10 минут.   Когда объект находится под воздействием заклинания, его сложней сломать или открыть силой",
+      "text": "Вы касаетесь закрытой двери, окна, врат, сундука или чего-то подобного, и объект становится запертым. Вы и выбранные в момент произнесения существа могут нормально открывать этот объект. Вы можете также установить пароль, который нужно произнести в 5 футах от объекта, чтобы приостановить действие заклинания на 1 минуту. В противном случае объект нельзя открыть, не сломав или не развеяв заклинание. Если применить на объект заклинание стук, то волшебный замок подавляется на 10 минут.   Когда объект находится под воздействием заклинания, его сложней сломать или открыть силой. Сложность броска для того, чтобы открыть или сломать запертое возрастает на 10. ",
       "school": "ограждение",
       "castingTime": "1 действие",
       "range": "Касание",
