@@ -1135,6 +1135,20 @@ Vue.component('hiddenitem', {
 						o.pre = oItem[this.sLang].pre || oItem.en.pre;
 					}
 					return o;
+				}.bind(this)).sort(function(a, b){
+					if(this.sSort == "alpha") {
+						if (a.name.toLowerCase().trim() < b.name.toLowerCase().trim())
+							return -1;
+						if (a.name.toLowerCase().trim() > b.name.toLowerCase().trim())
+							return 1;						
+						return 0
+					} else {
+						if (a.levelNum+a.name.toLowerCase().trim() < b.levelNum+b.name.toLowerCase().trim() )
+							return -1;
+						if (a.levelNum+a.name.toLowerCase().trim() > b.levelNum+b.name.toLowerCase().trim() )
+							return 1;
+						return 0
+					}
 				}.bind(this));
 			},
 			
@@ -1285,7 +1299,13 @@ Vue.component('hiddenitem', {
 				this.updateHash();
 				this.setConfig("sort", sKey);
 			},
-			onSearchName: function(sValue){
+
+			onSearchName: function (sValue) {
+				if (this.timeout) {
+					clearTimeout(this.timeout); 
+				}
+		  
+			  this.timeout = setTimeout(() => {
 				if(this.bDebug) {
 					alert ("Введенное значение: \r\n"+ sValue);
 				}
@@ -1293,7 +1313,9 @@ Vue.component('hiddenitem', {
 				
 				this.sSearch = sValue.trim();
 				this.updateHash();
+			  }, 500)
 			},
+
 			getRandomItem: function(){
 				this.showAllItems();
 				
@@ -1658,6 +1680,7 @@ Vue.component('hiddenitem', {
 				oDB.schoolList = this.aSchools;
 				oDB.oLanguages = this.aLanguages;
 				oDB.allSpells = this.aItems;
+				oDB.lockedItems = this.aLockedItems;
 				
 				var sData = JSON.stringify(oDB, null, 2);
 				var filename = "DnD5e_spells_BD";
@@ -1699,6 +1722,7 @@ Vue.component('hiddenitem', {
 					this._completeDB(this.aSources, oDB.sourceList);
 					this._completeDB(this.aSchools, oDB.schoolList);
 					this._completeDB(this.aLanguages, oDB.oLanguages);
+					this._completeDB(this.aLockedItems, oDB.lockedItems);
 					//this._completeDB(this.aItems = oDB.allSpells);
 
 					/*/
