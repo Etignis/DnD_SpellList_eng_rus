@@ -395,6 +395,10 @@ p {
   background: #cccccc;
   cursor: pointer;
 }
+.combo_box label .subtitle {
+  color: #999;
+  display: block;
+}
 .combo_box .combo_box_content {
   background: #ddd;
   padding: .3em 0;

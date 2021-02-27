@@ -206,6 +206,10 @@ Vue.component('comboboxItem', {
 			type: String,
 			default: ""
 		},
+		subtitle: {
+			type: String,
+			default: ""
+		},
 		checked: {
 			type: Boolean,
 			default: false
@@ -222,6 +226,10 @@ Vue.component('comboboxItem', {
 	computed: {
 		id: function(){
 			return "ch_"+this.val;
+		},
+		label: function(){
+			let subtitle = this.subtitle? "<span class='subtitle'>"+this.subtitle+"</span>" : "";
+			return this.title + subtitle;
 		}
 	},
 	created: function(){
@@ -229,7 +237,7 @@ Vue.component('comboboxItem', {
 	},
 	template: `<div>
 	<input type="checkbox" :value="val" :id="id" :checked="checked">
-	<label data-hierarchy="root" v-html="title" @click="labelClick"></label>
+	<label data-hierarchy="root" v-html="label" @click="labelClick"></label>
 </div>`
 });
 
@@ -298,6 +306,7 @@ Vue.component('combobox', {
 				:val="item.key"
 				:checked="item.checked"
 				:title="item.title"
+				:subtitle="item.subtitle"
 				@lclick="itemclick"
 			>
 			</comboboxItem>
@@ -723,7 +732,7 @@ Vue.component('hiddenitem', {
 
 	template: `<a href='#' @click.stop="unhide">{{title}} ({{tooltip}})</a>`
 });	
-	
+
   var app = new Vue({
     el: '#app',
     data: {
@@ -785,11 +794,13 @@ Vue.component('hiddenitem', {
 						a.push({
 							key: key,
 							title: this.aSources[key].text.en.title + "<br>" + this.aSources[key].text.ru.title,
+							subtitle: this.aSources[key].official==true? "" : "Homebrew /Самопал",
+							official: this.aSources[key].official,
 							checked: this.aSources[key].checked
 						});
 					}
 				}
-				return a;
+				return a.sort((a,b)=>a.official?-1:1);
 			},
 			aCastingTimeList: function() {
 				// collect Casting Time
@@ -1045,41 +1056,46 @@ Vue.component('hiddenitem', {
 				}.bind(this));
 				
 				return aFiltered.map(function(oItem){
-					let sSrc = oItem.en.source.split(",").map(item => this.aSources[item.trim()].text[this.sLang].title).join(", ");
-					let o={
-						"id": oItem.en.name,
-						"name": oItem[this.sLang].name || oItem.en.name,
-						"tooltip": oItem[this.sOtherLang].name || oItem.en.name,
-						"text": oItem[this.sLang].text || oItem.en.text,
-						"src": oItem[this.sLang].source || oItem.en.source,
-						"className": this.sClassTitle,
-						"source": sSrc /*this.aSources[oItem.en.source].text[this.sLang].title*/,
-						"school": this.aSchools[oItem.en.school.trim()].text[this.sLang].title,
-						"level": oLevelsText[oItem.en.level]? oLevelsText[oItem.en.level].text[this.sLang].title : oItem.en.level + " " + oLevelsText.units[this.sLang].title,
-						"castingTime": oItem[this.sLang].castingTime || oItem.en.castingTime,
-						"range": oItem[this.sLang].range || oItem.en.range,
-						"components": oItem[this.sLang].components || oItem.en.components,
-						"materials": oItem[this.sLang].materials || oItem.en.materials,
-						"duration": oItem[this.sLang].duration || oItem.en.duration,
-						"ritual": oItem.en.ritual? oDict.ritual[this.sLang].title: "",		
+					try{
+						let sSrc = oItem.en.source.split(",").map(item => this.aSources[item.trim()].text[this.sLang].title).join(", ");
+						let o={
+							"id": oItem.en.name,
+							"name": oItem[this.sLang].name || oItem.en.name,
+							"tooltip": oItem[this.sOtherLang].name || oItem.en.name,
+							"text": oItem[this.sLang].text || oItem.en.text,
+							"src": oItem[this.sLang].source || oItem.en.source,
+							"className": this.sClassTitle,
+							"source": sSrc /*this.aSources[oItem.en.source].text[this.sLang].title*/,
+							"school": this.aSchools[oItem.en.school.trim()].text[this.sLang].title,
+							"level": oLevelsText[oItem.en.level]? oLevelsText[oItem.en.level].text[this.sLang].title : oItem.en.level + " " + oLevelsText.units[this.sLang].title,
+							"castingTime": oItem[this.sLang].castingTime || oItem.en.castingTime,
+							"range": oItem[this.sLang].range || oItem.en.range,
+							"components": oItem[this.sLang].components || oItem.en.components,
+							"materials": oItem[this.sLang].materials || oItem.en.materials,
+							"duration": oItem[this.sLang].duration || oItem.en.duration,
+							"ritual": oItem.en.ritual? oDict.ritual[this.sLang].title: "",		
 
-						"castingTimeTitle": oDict.castingTime[this.sLang].title,
-						"durationTitle": oDict.duration[this.sLang].title,
-						"rangeTitle": oDict.range[this.sLang].title,
-						"componentsTitle": oDict.components[this.sLang].title,
-						
-						"levelNum": oItem.en.level,
-						"color": this.sClass,
-						"view": this.sView,
-						"locked": this.aLockedItems.indexOf(oItem.en.name)>-1,
-						"selected": this.aSelectedItems.indexOf(oItem.en.name)>-1,
-						
-						"editable": this.bEditMode
-					};
-					if(oItem[this.sLang].pre || oItem.en.pre) {
-						o.pre = oItem[this.sLang].pre || oItem.en.pre;
-					}
+							"castingTimeTitle": oDict.castingTime[this.sLang].title,
+							"durationTitle": oDict.duration[this.sLang].title,
+							"rangeTitle": oDict.range[this.sLang].title,
+							"componentsTitle": oDict.components[this.sLang].title,
+							
+							"levelNum": oItem.en.level,
+							"color": this.sClass,
+							"view": this.sView,
+							"locked": this.aLockedItems.indexOf(oItem.en.name)>-1,
+							"selected": this.aSelectedItems.indexOf(oItem.en.name)>-1,
+							
+							"editable": this.bEditMode
+						};
+						if(oItem[this.sLang].pre || oItem.en.pre) {
+							o.pre = oItem[this.sLang].pre || oItem.en.pre;
+						}
 					return o;
+					
+					} catch (err) {
+						debugger;
+					}
 				}.bind(this)).sort(function(a, b){
 					if(this.sSort == "alpha") {
 						if (a.name.toLowerCase().trim() < b.name.toLowerCase().trim())
@@ -1095,6 +1111,8 @@ Vue.component('hiddenitem', {
 						return 0
 					}
 				}.bind(this));
+				
+				
 			},
 			
 			aLockedItemsList: function(){

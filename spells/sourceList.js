@@ -8,6 +8,7 @@ var sourceList = {
 				"title": "Книга игрока"
 			}
 		},
+		"official": true,
 		"checked": false,
 		"visible": true
 	},
@@ -20,6 +21,7 @@ var sourceList = {
 				"title": "Храм стихийного зла"
 			}
 		},
+		"official": true,
 		"checked": false,
 		"visible": true
 	},
@@ -32,6 +34,7 @@ var sourceList = {
 				"title": "Путеводитель Приключенца по Побережью Мечей"
 			}
 		},
+		"official": true,
 		"checked": false,
 		"visible": true
 	},
@@ -56,6 +59,7 @@ var sourceList = {
 				"title": "Руководство Занатара обо всем"
 			}
 		},
+		"official": true,
 		"checked": false,
 		"visible": true
 	},
