@@ -1,4 +1,22 @@
 var classSpells = {
+	Artificer: {
+	  title: {
+			en: "Artificer,",
+			ru: "Изобретатель"
+	  },
+	  spells: [
+			"Booming Blade",
+			"Green-Flame Blade",
+			"Lightning Lure",
+			"Sword Burst",
+			"Tasha's Caustic B rew",
+			"Intellect Fortress",
+			"Summon Construct"
+			
+			
+		]
+
+	},
 	Bard: {
 	  title: {
 			en: "Bard",
@@ -166,7 +184,10 @@ var classSpells = {
 		  "Power Word Kill",
 		  "True Polymorph",
 			"Mass poivmorph",
-			"Psychic scream"
+			"Psychic scream",
+			
+			"Intellect Fortress",
+			"Dream of the Blue Veil"
 			
 			
 		]
@@ -317,7 +338,9 @@ var classSpells = {
 		  "Astral Projection",
 		  "Gate",
 		  "Mass Heal",
-		  "True Resurrection"
+		  "True Resurrection",
+			"Spirit Shroud",
+			"Summon Celestial"
 		],
 	  subclasses: {
 			KnowlegeDomain: {
@@ -768,7 +791,10 @@ var classSpells = {
 		  "Storm of Vengeance",
 		  "True Resurrection",
 			
-			"Healing spirit"
+			"Healing spirit",
+			"Summon Beast",
+			"Summon Fey",
+			"Summon Elemental"
 		],
 	  subclasses: {
 		Land: {
@@ -1034,7 +1060,9 @@ var classSpells = {
 		  "Destructive Wave",
 		  "Dispel Evil and Good",
 		  "Geas",
-		  "Raise Dead"
+		  "Raise Dead",
+			"Spirit Shroud",
+			"Summon Celestial"
 		],
 	  subclasses: [
 		{
@@ -1262,7 +1290,10 @@ var classSpells = {
 		  "Conjure Volley",
 		  "Swift Quiver",
 		  "Tree Stride",
-		  "Conjure plant creature"
+		  "Conjure plant creature",
+			"Summon Beast",
+			"Summon Fey",
+			"Summon Elemental"
 		],
 	  subclasses: [
 		{
@@ -1558,7 +1589,17 @@ var classSpells = {
 		  "Meteor Swarm",
 		  "Power Word Kill",
 		  "Time Stop",
-		  "Wish"
+		  "Wish",
+			"Booming Blade",
+			"Green-Flame Blade",
+			"Lightning Lure",
+			"Mind Sliver",
+			"Sword Burst",
+			"Tasha's Caustic Brew",
+			"Tasha's Mind Whip",
+			"Tasha's Otherworldly Guise",
+			"Dream of the Blue Veil",
+			"Blade of Disaster"
 		],
 	  subclasses: [
 		{
@@ -1730,7 +1771,22 @@ var classSpells = {
 		  "Foresight",
 		  "Imprisonment",
 		  "Power Word Kill",
-		  "True Polymorph"
+		  "True Polymorph",
+			"Booming Blade",
+			"Green-Flame Blade",
+			"Lightning Lure",
+			"Mind Sliver",
+			"Sword Burst",
+			"Intellect Fortress",
+			"Spirit Shroud",
+			"Summon Fey",
+			"Summon Shadowspawn",
+			"Summon Undead",
+			"Summon Aberration",
+			"Summon Fiend",
+			"Tasha's Otherworldly Guise",
+			"Dream of the Blue Veil",
+			"Blade of Disaster"
 		],
 	  subclasses: [
 		{
@@ -2228,7 +2284,25 @@ var classSpells = {
 		  "Time Stop",
 		  "True Polymorph",
 		  "Weird",
-		  "Wish"
+		  "Wish",
+			"Booming Blade",
+			"Green-Flame Blade",
+			"Lightning Lure",
+			"Mind Sliver",
+			"Sword Burst",
+			"Tasha's Caustic Brew",
+			"Tasha's Mind Whip",
+			"Intellect Fortress",
+			"Spirit Shroud",
+			"Summon Fey",
+			"Summon Shadowspawn",
+			"Summon Undead",
+			"Summon Aberration",
+			"Summon Construct",
+			"Summon Fiend",
+			"Tasha's Otherworldly Guise",
+			"Dream of the Blue Veil",
+			"Blade of Disaster",
 		]
 
 	}

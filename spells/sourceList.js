@@ -63,6 +63,19 @@ var sourceList = {
 		"checked": false,
 		"visible": true
 	},
+	"TCoE": {
+		"text": {
+			"en": {
+				"title": "Tasha’s Cauldron of Everything"
+			},
+			"ru": {
+				"title": "Котёл Таши со всякой всячиной"
+			}
+		},
+		"official": true,
+		"checked": false,
+		"visible": true
+	},
 	"HB": {
 		"text": {
 			"en": {

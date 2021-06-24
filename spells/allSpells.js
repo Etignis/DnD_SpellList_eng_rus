@@ -12550,5 +12550,509 @@ var allSpells = [
    "duration": "Концентрация, вплоть до 1 минуты",
    "text": "Вы движетесь подобно ветру. Пока действует заклинание, ваше движение не вызывает провоцированных атак.<br>Единожды до окончания действия заклинания вы можете получить преимущество к одной атакеоружием в свой ход. Эта атака наносит дополнительные 1к8 урона силовым полем при попадании. Внезависимости от того, попали вы или промахнулись,ваша пешая скорость передвижения увеличиваетсяна 30 футов до конца этого хода."
   }
- }
+ },
+ 
+ 
+ 
+ 
+ //// Tasha
+ 
+ {
+  "en": {
+   "name": "BLADE OF DISASTER",
+   "school": "Conjuration",
+   "level": "9",
+   "castingTime": "1 bonus action",
+   "range": "60 feet",
+   "components": "V, S",
+   "duration": "Concentration, up to 1 minute",
+   "text": "You create a blade-shaped planar rift about 3 feet long in an unoccupied space you can see within range. The blade lasts for the duration. When you cast this spell, you can make up to two melee spell attacks with the blade, each one against a creature, loose object, or structure within 5 feet of the blade. On a hit, the target takes 4d12 force damage. This attack scores a critical hit if the number on the d20 is 18 or higher. On a critical hit, the blade deals an extra 8dl2 force damage (for a total of 12 d 12 force damage). <br>As a bonus action on your turn, you can move the blade up to 30 feet to an unoccupied space you can see and then make up to two melee spell attacks with it again. <br>The blade can harmlessly pass through any barrier, including a wall of force.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Клинок разрушения",
+   "school": "вызов",
+   "level": "9",
+   "castingTime": "1 бонусное действие",
+   "range": "60 футов",
+   "components": "В, С",
+   "duration": "Концентрация, вплоть до 1 минуты",
+   "text": "Вы создаёте пространственный разлом в форме клинка длиной около 3 футов в свободном пространстве, которое вы можете видеть в пределах дистанции заклинания. Клинок существует до окончания действия заклинания. Когда вы произносите это заклинание, то можете совершить до двух рукопашных атак заклинанием с помощью этого клинка, против существа, неудерживаемого предмета или постройки в пределах 5 футов от клинка. При попадании цель получает 4к12 урона силовым полем. Эта атака считается критическим попаданием при выпадении на к20 значений «18–20». При критическом попадании клинок дополнительно наносит 8к12 урона силовым полем (в общей сложности 12к12 урона силовым полем). <br>Вы можете бонусным действием в свой ход переместить клинок на расстояние до 30 футов в незанятое пространство, которое вы можете видеть, а затем снова совершить до двух рукопашных атак заклинанием с помощью клинка. <br>Клинок может беспрепятственно перемещаться через любой барьер, в том числе созданный заклинанием силовая стена [wall of force]."
+  }
+ },
+ {
+  "en": {
+   "name": "BOOMING BLADE",
+   "school": "Evocation",
+   "level": "0",
+   "castingTime": "1 action",
+   "range": "Self (5-foot radius)",
+   "components": "S, M",
+   "materials": "(a melee weapon worth at least 1 sp)",
+   "duration": "1 round",
+   "text": "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects and then becomes sheathed in booming energy until the start of your next turn. If the target willingly moves 5 feet or more before then, the target takes ld8 thunder damage, and the spell ends. <br>This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra ld8 thunder damage to the target on a hit, and the damage the target takes for moving increases to 2d8. Both damage rolls increase by ld8 at 1 1th level (2d8 and 3d8) and again at 17th level (3d8 and 4d8).",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Громовой клинок",
+   "school": "воплощение",
+   "level": "0",
+   "castingTime": "1 действие",
+   "range": "На себя (5-футовый радиус)",
+   "components": "С, М",
+   "materials": "(оружие ближнего боя стоимостью не менее 1 см)",
+   "duration": "1 раунд",
+   "text": "Вы взмахиваете оружием, выбранным в качестве материального компонента, и совершаете рукопашную атаку оружием против одного существа в пределах 5 футов от вас. При попадании цель подвергается обычному эффекту от атаки этим оружием и покрывается бушующей энергией до начала вашего следующего хода. Если цель добровольно перемещается на 5 футов или более до окончания действия заклинания, она получает 1к8 урона звуком, и действие заклинания заканчивается. <br>Урон этого заклинания увеличивается, когда вы достигаете определённых уровней. На 5-м уровне рукопашная атака наносит дополнительно 1к8 урона звуком при попадании, а урон, получаемый при перемещении, увеличивается до 2к8. Оба броска урона снова увеличиваются на 1к8 на 11-м уровне (2к8 и 3к8) и на 17-м уровне (3к8 и 4к8)."
+  }
+ },
+ {
+  "en": {
+   "name": "DREAM OF THE BLUE VEIL",
+   "school": "Conjuration",
+   "level": "7",
+   "castingTime": "10 minutes",
+   "range": "20 feet",
+   "components": "V, S, M",
+   "materials": "(a magic item or a willing creature from the destination world)",
+   "duration": "6 hours",
+   "text": "You and up to eight willing creatures within range fall unconscious for the spell's duration and experience visions of another world on the Material Plane, such as Oerth, Tori!, Krynn, or Eberron. If the spell reaches its full duration, the visions conclude with each of you encountering and pulling back a mysterious blue curtain. The spell then ends with you mentally and physically transported to the world that was in the visions. <br>To cast this spell, you must have a magic item that originated on the world you wish to reach, and you must be aware of the world's existence, even if you don't know the world's name. Your destination in the other world is a safe location within 1 mile of where the magic item was created. Alternatively, you can cast the spell if one of the affected creatures was born on the other world, which causes your destination to be a safe location within 1 mile of where that creature was born. <br>The spell ends early on a creature if that creature takes any damage, and the creature isn't transported. If you take any damage, the spell ends for you and all the other creatures, with none of you being transported.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Сон синей вуали",
+   "school": "вызов",
+   "level": "7",
+   "castingTime": "10 минут",
+   "range": "20 футов",
+   "components": "В, С, М",
+   "materials": "(магический предмет или согласное существо из мира назначения)",
+   "duration": "6 часов",
+   "text": "Вы и до восьми согласных существ в пределах досягаемости теряете сознание на время действия заклинания и испытываете видения другого мира на Материальном плане, как, например, Орта, Торила, Кринна или Эберрона. Если заклинание поддерживается в течение своей полной длительности, то видения приводят к тому, что каждый из вас находит и отодвигает загадочный синий занавес. Заклинание заканчивается тем, что вы ментально и физически переноситесь в мир, который был в видениях. <br>Чтобы произнести это заклинание, у вас должен быть магический предмет, созданный в мире, в который вы хотите попасть, и вы должны знать о существовании этого мира, даже если вы не знаете его названия. Вы попадает в безопасное место в пределах 1 мили от того места, где используемый магический предмет был создан. Вы можете наложить заклинание без магического предмета, если одно из существ под действием этого заклинания родилось в том мире. В таком случае пункт назначения будет безопасным местом в пределах 1 мили от того места, где это существо родилось. <br>Заклинание заканчивается раньше времени для существа, получающего какой-либо урон, и это существо не переносится. Если заклинатель получает какой-либо урон, заклинание заканчивается для всех существ, и никто не будет перенесён."
+  }
+ },
+ {
+  "en": {
+   "name": "INTELLECT FORTRESS",
+   "school": "Abjuration",
+   "level": "3",
+   "castingTime": "1 action",
+   "range": "30 feet",
+   "components": "V",
+   "materials": "",
+   "duration": "Concentration, up to 1 hour",
+   "text": "For the duration, you or one willing creature you can see within range has resistance to psychic damage, as well as advantage on Intelligence, Wisdom, and Charisma saving throws. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd. The creatures must be within 30 feet of each other when you target them.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Крепость интеллекта",
+   "school": "ограждение",
+   "level": "3",
+   "castingTime": "1 действие",
+   "range": "30 футов",
+   "components": "В",
+   "materials": "",
+   "duration": "Концентрация, вплоть до 1 часа",
+   "text": "В течение длительности заклинания вы или одно согласное существо, которое вы можете видеть в пределах дистанции, имеет сопротивление урону психической энергией, а также совершаете с преимуществом спасброски Интеллекта, Мудрости и Харизмы. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 4-го уровня или выше, вы можете сделать целью заклинания дополнительных существ, по одному за каждый уровень ячейки выше третьего. Все цели заклинания должны находиться в пределах 30 футов друг от друга во время накладывания заклинания."
+  }
+ },
+ {
+  "en": {
+   "name": "GREEN-FLAME BLADE",
+   "school": "Evocation",
+   "level": "0",
+   "castingTime": "1 action",
+   "range": "Self (5-foot radius)",
+   "components": "S, M",
+   "materials": "(a melee weapon worth at least 1 sp)",
+   "duration": "Instantaneous",
+   "text": "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects, and you can cause green fire to leap from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier. <br> This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra 1d8 fire damage to the target on a hit, and the fire damage to the second creature increases to 1d8 + your spellcasting ability modifier. Both damage rolls increase by 1d8 at 1 1th level (2d8 and 2d8) and 17th level (3d8 and 3d8).",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Клинок зелёного пламени",
+   "school": "воплощение",
+   "level": "0",
+   "castingTime": "1 действие",
+   "range": "На себя (5-футовый радиус)",
+   "components": "С, М",
+   "materials": "(оружие ближнего боя стоимостью не менее 1 см)",
+   "duration": "Мгновенная",
+   "text": "Вы взмахиваете оружием, выбранным в качестве материального компонента, и совершаете рукопашную атаку оружием против одного существа в пределах 5 футов от вас. При попадании цель подвергается обычному эффекту атаки этим оружием, и вы можете заставить зелёный огонь перекинуться от цели к другому существу по вашему выбору, которое вы можете видеть в пределах 5 футов от цели. Второе существо получает урон огнём, равный вашему модификатору базовой характеристики. <br>Урон этого заклинания увеличивается, когда вы достигаете определённых уровней. На 5-м уровне рукопашная атака наносит дополнительно 1к8 урона огнём, а урон, получаемый вторым существом, увеличивается до 1к8 + ваш модификатор базовой характеристики. Оба этих урона увеличиваются на 1к8 на 11-м уровне (2к8 и 2к8) и 17-м уровне (3к8 и 3к8)."
+  }
+ },
+ {
+  "en": {
+   "name": "LIGHTNING LURE",
+   "school": "Evocation",
+   "level": "0",
+   "castingTime": "1 action",
+   "range": "Self (15-foot radius)",
+   "components": "V",
+   "materials": "",
+   "duration": "Instantaneous",
+   "text": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within 15 feet of you. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d8 lightning damage if it is within 5 feet of you. <br>This spell's damage increases by 1d8 when you reach 5th level (2d8), 1 1th level (3d8), and 17th level (4d8).",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Лассо молнии",
+   "school": "воплощение",
+   "level": "0",
+   "castingTime": "1 действие",
+   "range": "На себя (15-футовый радиус)",
+   "components": "В",
+   "materials": "",
+   "duration": "Мгновенная",
+   "text": "Вы создаете хлыст из молний, поражающий одно существо по вашему выбору, которое вы можете видеть в пределах 15 футов от вас. Цель должна преуспеть в спасброске Силы, иначе будет притянута на 10 футов по прямой к вам, после чего получит 1к8 урона электричеством, если окажется в пределах 5 футов от вас.<br>Урон этого заклинания увеличивается на 1к8, когда вы достигаете 5-го уровня (2к8), 11-го уровня (3к8) и 17-го уровня (4к8)."
+  }
+ },
+ {
+  "en": {
+   "name": "MIND SLIVER",
+   "school": "Enchantment",
+   "level": "0",
+   "castingTime": "1 action",
+   "range": "60 feet",
+   "components": "V",
+   "materials": "",
+   "duration": "1 round",
+   "text": "You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take ld6 psychic damage and subtract ld4 from the next saving throw it makes before the end of your next turn. <br>This spell's damage increases by ld6 when you reach certain levels: 5th level (2d6), 1 1th level (3d6), and 17th level (4d6).",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Расщепление разума",
+   "school": "очарование",
+   "level": "0",
+   "castingTime": "1 действие",
+   "range": "60 футов",
+   "components": "В",
+   "materials": "",
+   "duration": "1 раунд",
+   "text": "Вы отправляете дезориентирующий луч психической энергии в разум одного существа, которое видите в пределах дистанции. Цель должна преуспеть в спасброске Интеллекта, иначе получит 1к6 урона психической энергией и вычтет 1к4 из следующего спасброска, совершаемого ею до конца вашего следующего хода. <br>Урон этого заклинания увеличивается на 1к6, когда вы достигаете следующих уровней: 5-го уровня (2к6), 11-го уровня (3к6) и 17-го уровня (4к6)."
+  }
+ },
+ {
+  "en": {
+   "name": "SUMMON ABERRATION",
+   "school": "Conjuration",
+   "level": "4",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V, S, M",
+   "materials": "(a pickled tentacle and an eyeball in a platinum-inlaid vial worth at least 400 gp)",
+   "duration": "Concentration, up to 1 hour",
+   "text": "You call forth an aberrant spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Aberrant Spirit stat block. When you cast the spell, choose Beholderkin, Slaad, or Star Spawn. The creature resembles an aberration of that kind, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. <br>The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger.<br>At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, use the higher level wherever the spell's level appears in the stat block",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Призыв духа аберрации",
+   "school": "вызов",
+   "level": "4",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(заспиртованные щупальце и глазное яблоко в сосуде с платиновой инкрустацией стоимостью не менее 400 зм)",
+   "duration": "Концентрация, вплоть до 1 минуты",
+   "text": "Вы призываете духа аберрации. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики духа аберрации. Когда вы накладываете заклинание, выберите тип духа: бехолдер, слаад или звёздное порождение. Дух принимает форму выбранной аберрации и имеет соответствующие признаки, описанные в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей. <br>На больших уровнях. Когда вы накладываете это заклинание, используя ячейку 5-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
+  }
+ },
+ {
+  "en": {
+   "name": "SUMMON BEAST",
+   "school": "Conjuration",
+   "level": "2",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V, S, M",
+   "materials": "(a feather, tuft of fur, and fish tail inside a gilded acorn worth at least 200 gp)",
+   "duration": "Concentration, up to 1 hour",
+   "text": "You call forth a bestial spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Bestial Spirit stat block. When you cast the spell, choose an environment: Air, Land, or Water. The creature resembles an animal of your choice that is native to the chosen environment, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. <br>The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger.<br>At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, use the higher level wherever the spell's level appears in the stat block.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Призыв духа зверя",
+   "school": "вызов",
+   "level": "2",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(перо, пучок меха и рыбий хвост внутри позолоченного жёлудя стоимостью не менее 200 зм)",
+   "duration": "Концентрация, вплоть до 1 часа",
+   "text": "Вы призываете духа зверя. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики духа зверя. Когда вы накладываете заклинание, выберите среду обитания: воздух, земля или вода. Дух принимает форму животного по вашему выбору, для которого выбранная среда обитания является родной и имеет соответствующие признаки, описанные в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу иходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 3-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
+  }
+ },
+ {
+  "en": {
+   "name": "SUMMON CELESTIAL",
+   "school": "Conjuration",
+   "level": "5",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V, S, M",
+   "materials": "(a golden reliquary worth at least 500 gp)",
+   "duration": "Concentration, up to 1 hour",
+   "text": "You call forth a celestial spirit. It manifests in an angelic form in an unoccupied space that you can see within range. This corporeal form uses the Celestial Spirit stat block. When you cast the spell, choose Avenger or Defender. Your choice determines the creature's attack in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. <br>The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes.its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Призыв духа небожителя",
+   "school": "вызов",
+   "level": "5",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(золотой реликварий стоимостью не менее 500 зм)",
+   "duration": "Концентрация, вплоть до 1 часа",
+   "text": "Вы призываете духа небожителя. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики духа небожителя. Когда вы накладываете заклинание, выберите тип духа: мститель или защитник. Дух принимает форму выбранного небожителя, что определяет тип его атаки, описанный в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 6-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
+  }
+ },
+ {
+  "en": {
+   "name": "SUMMON CONSTRUCT",
+   "school": "Conjuration",
+   "level": "4",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V, S, M",
+   "materials": "(an ornate stone and metal lockbox worth at least 400 gp)",
+   "duration": "Concentration, up to 1 hour",
+   "text": "You call forth the spirit of a construct. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Construct Spirit stat block. When you cast the spell, choose a material: Clay, Metal, or Stone. The creature resembles a golem or a modron (your choice) made of the chosen material, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. <br>The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours.It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Призыв духа конструкта",
+   "school": "вызов",
+   "level": "4",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(затейливая шкатулка с замком, сделанная из камня и металла, стоимостью не менее 400 зм)",
+   "duration": "Концентрация, вплоть до 1 часа",
+   "text": "Вы призываете духа конструкта. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики духа конструкта. Когда вы накладываете заклинание, выберите материал: глина, металл или камень. Дух принимает форму голема или модрона по вашему выбору, изготовленного из выбранного материала, и имеет соответствующие признаки, описанные в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 4-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
+  }
+ },
+ {
+  "en": {
+   "name": "SUMMON ELEMENTAL",
+   "school": "Conjuration",
+   "level": "4",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V, S, M",
+   "materials": "(air, a pebble, ash, and water inside a gold-inlaid vial worth at least 400 gp)",
+   "duration": "Concentration, up to 1 hour",
+   "text": "You call forth an elemental spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Elemental Spirit stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. <br>The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action requiredby you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 5th level or higher, use the higher level wherever the spell's level appears in the stat block.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Призыв духа стихии",
+   "school": "вызов",
+   "level": "4",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(воздух, галька, пепел и вода во флаконе с золотой инкрустацией стоимостью не менее 400 зм)",
+   "duration": "Концентрация, вплоть до 1 часа",
+   "text": "Вы призываете духа стихии. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики стихийного духа. Когда вы накладываете заклинание, выберите стихию: воздух, земля, огонь или вода. Существо принимает форму чего-то двуногого, сплетённого из выбранной стихии, которая определяет особенности существа, описанные в блоке статистики. Существоисчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 5-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
+  }
+ },
+ {
+  "en": {
+   "name": "SUMMON FEY",
+   "school": "Conjuration",
+   "level": "3",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V, S, M",
+   "materials": "(a gilded flower worth at least 300 gp)",
+   "duration": "Concentration, up to 1 hour",
+   "text": "You call forth a fey spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Fey Spirit stat block. When you cast the spell, choose a mood: Fuming, Mirthful, or Tricksy. The creature resembles a fey creature of your choice marked by the chosen mood, which determines one of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. <br>The creature is an ally to you and your companions. In combat, the creature shares your initiativecount, but i t takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Призыв духа феи",
+   "school": "вызов",
+   "level": "3",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(позолоченный цветок стоимостью не менее 300 зм)",
+   "duration": "Концентрация, вплоть до 1 часа",
+   "text": "Вы призываете духа феи. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики духа феи. Когда вы накладываете заклинание, выберите настроение: сердитое, довольное, или лукавое. Дух принимает форму выбранного фейского существа с отчётливыми проявлениями выбранного настроения которая определяет особенности существа, описанные в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 4-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
+  }
+ },
+ {
+  "en": {
+   "name": "SUMMON FIEND",
+   "school": "Conjuration",
+   "level": "6",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V, S, M",
+   "materials": "(humanoid blood inside a ruby vial worth at least 600 gp)",
+   "duration": "Concentration, up to 1 hour",
+   "text": "You call forth a fiendish spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Fiendish Spirit stat block. When you cast the spell, choose Demon, Devil, or Yugoloth. The creature resembles a fiend of the chosen type, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. <br>The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger. <br><b>t Higher Levels.</b> When you cast this spell using a spell slot of 7th level or higher, use the higher level wherever the spell's level appears in the stat block.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Призыв духа исчадия",
+   "school": "вызов",
+   "level": "6",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(кровь гуманоида внутри рубинового флакона стоимостью не менее 600 зм)",
+   "duration": "Концентрация, вплоть до 1 часа",
+   "text": "Вы призываете духа исчадия. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики духа исчадия. Когда вы накладываете заклинание, выберите тип духа: демон, дьявол или юголот. Дух принимает форму выбранного исчадия и имеет соответствующие признаки, описанные в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей.<br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 7-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
+  }
+ },
+ {
+  "en": {
+   "name": "SUMMON SHADOWSPAWN",
+   "school": "Conjuration",
+   "level": "3",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V, S, M",
+   "materials": "(tears inside a gem worth at least 300 gp)",
+   "duration": "Concentration, up to 1 hour",
+   "text": "You call forth a shadowy spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Shadow Spirit stat block. When you cast the spell, choose an emotion: Fury, Despair, or Fear. The creature resembles a misshapen biped marked by the chosen emotion, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. <br>The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Призыв духа тени",
+   "school": "вызов",
+   "level": "3",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(слезы внутри драгоценного камня стоимостью не менее 300 зм)",
+   "duration": "Концентрация, вплоть до 1 часа",
+   "text": "Вы призываете духа тени. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики духа тени. Когда вы накладываете заклинание, выберите эмоцию: ярость, уныние или страх. Существо принимает форму бесформенного двуногого с отчётливыми проявлениями выбранной эмоции, которая определяет особенности существа, описанные в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 4-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
+  }
+ },
+ {
+  "en": {
+   "name": "SUMMON UNDEAD",
+   "school": "Conjuration",
+   "level": "3",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V, S, M",
+   "materials": "(a gilded skull worth at least 300 gp)",
+   "duration": "Concentration, up to 1 hour",
+   "text": "You call forth an undead spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Undead Spirit stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an undead creature with the chosen form, which determines certain traits in its stat block. The creature disappears when it drops to 0  hit points or when the spell ends. <br>The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Призыв духа нежити",
+   "school": "вызов",
+   "level": "3",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(позолоченный череп стоимостью не менее 300 зм)",
+   "duration": "Концентрация, вплоть до 1 часа",
+   "text": "Вы призываете духа нежити. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики духа нежити. Когда вы накладываете заклинание, выберите форму духа: призрачный, гнилой или скелетный. Дух принимает форму выбранной нежити и имеет соответствующие признаки, описанные в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 4-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
+  }
+ },
+ {
+  "en": {
+   "name": "SWORD BURST",
+   "school": "Conjuration",
+   "level": "0",
+   "castingTime": "1 action",
+   "range": "Self (5-foot radius)",
+   "components": "V,",
+   "materials": "",
+   "duration": "Instantaneous",
+   "text": "You create a momentary circle of spectral blades that sweep around you. All other creatures within 5 feet of you must each succeed on a Dexterity saving throw or take 1d6 force damage.<br> This spell's damage increases by 1d6 when you reach 5th level (2d6), 1 1th level (3d6), and 17th level (4d6).",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Вспышка мечей",
+   "school": "вызов",
+   "level": "0",
+   "castingTime": "1 действие",
+   "range": "На себя (5-футовый радиус)",
+   "components": "В",
+   "materials": "",
+   "duration": "Мгновенная",
+   "text": "Вы на мгновение создаёте круг из вращающихся вокруг вас призрачных лезвий. Все остальные существа в пределах 5 футов от вас должны преуспеть в спасброске Ловкости, иначе получат 1к6 урона силовым полем.<br> Урон этого заклинания увеличивается на 1к6, когда вы достигаете 5-го уровня (2к6), 11-го уровня (3к6) и 17-го уровня (4к6)."
+  }
+ },
+ {
+  "en": {
+   "name": "TASHA'S CAUSTIC BREW",
+   "school": "Conjuration",
+   "level": "1",
+   "castingTime": "1 action",
+   "range": "Self (30-foot line)",
+   "components": "V, S, M",
+   "materials": "(a bit of rotten food)",
+   "duration": "Concentration, up to 1 minute",
+   "text": "A stream of acid emanates from you in a line 30 feet long and 5 feet wide in a direction you choose. Each creature in the line must succeed on a Dexterity saving throw or be covered in acid for the spell's duration or until a creature uses its action to scrape or wash the acid off itself or another creature. A creature covered in the acid takes 2d4 acid damage at start of each of its turns. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 2d4 for each slot level above 1 st.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Едкое варево Таши",
+   "school": "воплощение",
+   "level": "1",
+   "castingTime": "1 действие",
+   "range": "На себя (30-футовая линия)",
+   "components": "В, С, М",
+   "materials": "(немного тухлой пищи)",
+   "duration": "Концентрация, вплоть до 1 минуты",
+   "text": "Вы испускаете струю кислоты вдоль линии длиной 30 футов и шириной 5 футов в выбранном вами направлении. Каждое существо, находящееся на этой линии, должно преуспеть в спасброске Ловкости, иначе станет покрыто кислотой на время действия заклинания или до тех пор, пока кто-то действием не соскребёт или не смоет кислоту с себя или другого существа. Существо, покрытое кислотой, получает 2к4 урона кислотой в начале каждого своего хода. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 2-го уровня или выше, урон увеличивается на 2к4 за каждый уровень ячейки выше первого."
+  }
+ },
+ {
+  "en": {
+   "name": "TASHA'S MIND WHIP",
+   "school": "Conjuration",
+   "level": "2",
+   "castingTime": "1 action",
+   "range": "90 feet",
+   "components": "V",
+   "materials": "",
+   "duration": "1 round",
+   "text": "You psychically lash out at one creature you can see within range. The target must make an Intelligence saving throw. On a failed save, the target takes 3d6 psychic damage, and it can't take a reaction until the end of its next turn. Moreover, on its next turn, it must choose whether it gets a move, an action, or a bonus action; it gets only one of the three. On a successful save, the target takes half as much damage and suffers none of the spell's other effects. <br><b>At Higher Levels.</b> When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Психическая плеть Таши",
+   "school": "очарование",
+   "level": "2",
+   "castingTime": "1 действие",
+   "range": "90 футов",
+   "components": "В, С, М",
+   "materials": "(немного тухлой пищи)",
+   "duration": "1 раунд",
+   "text": "Вы ментально хлещете одно существо, которое видите в пределах дистанции заклинания. Цель должна совершить спасбросок Интеллекта. При провале цель получает 3к6 урона психической энергией и не может совершать реакции до конца своего следующего хода. Более того, цель должна выбрать, что она будет делать в свой следующий ход: передвигаться, совершать действие или бонусное действие — цель может совершить лишь что-то одно. При успехе цель получает половину урона и избегает других эффектов заклинания. На больших уровнях. Когда вы накладываете это заклинание, используя ячейку 3-го уровня или выше, вы можете нацелиться на одно дополнительное существо за каждый уровень ячейки выше второго. Все цели заклинания должны быть в пределах 30 футов друг от друга во время накладывания заклинания."
+  }
+ },
+ {
+  "en": {
+   "name": "TASHA'S OTHERWORLDLY GUISE",
+   "school": "Transmutation",
+   "level": "6",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "components": "V, $, M",
+   "materials": "(an object engraved with a symbol of the Outer Planes, worth at least 500 gp)",
+   "duration": "Concentration, up to 1 minute",
+   "text": "Uttering an incantation, you draw on the magic of the Lower Planes or Upper Planes (your choice) to transform yourself. You gain the following benefits until the spell ends:<br> • You are immune to fire and poison damage (Lower Planes) or radiant and necrotic damage (Upper Planes).<br> • You are immune to the poisoned condition (Lower Planes) or the charmed condition (Upper Planes).<br> • Spectral wings appear on your back, giving you a flying speed of 40 feet.<br> • You have a +2 bonus to AC.<br> • All your weapon attacks are magical, and when you make a weapon attack, you can use your spellcasting ability modifier, instead of Strength or Dexterity, for the attack and damage rolls.<br> • You can attack twice, instead of once, when you take the Attack action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that lets you attack more than once when you take the Attack action on your turn.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Потусторонний облик Таши",
+   "school": "преобразование",
+   "level": "6",
+   "castingTime": "1 бонусное действие",
+   "range": "На себя",
+   "components": "В, С, М",
+   "materials": "(предмет с выгравированным символом Внешних планов, стоимостью не менее 500 зм)",
+   "duration": "Концентрация, вплоть до 1 минуты",
+	 "text": "Произнося заклинание, вы обращаетесь к магии Нижних или Верхних планов (по вашему выбору), для преобразования себя. Вы получаете следующие преимущества до тех пор, пока заклинание не закончится: <br> • Вы имеет иммунитет к урону огнём и ядом (Нижние планы) или к урону излучением и некротической энергией (Верхние планы). <br> • Вы имеете иммунитет к состоянию «отравленный» (Нижние планы) или к состоянию «очарованный» (Верхние планы). <br> • За вашей спиной появляются призрачные крылья, дарующие скорость полета 40 футов. • Вы получаете бонус +2 к КД. <br> • Все ваши атаки оружием считаются магическими, и когда вы совершаете атаку оружием, вы можете использовать свой модификатор базовой характеристики вместо Силы или Ловкости для бросков атаки и урона.<br>  • Действием Атака вы можете совершить две атаки вместо одной. Вы не получаете это преимущество, если у вас уже есть подобное умение (например, «Дополнительная атака»), которое позволяет атаковать более одного раза за действие Атака."
+  }
+ },
 ]

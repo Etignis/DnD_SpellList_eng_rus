@@ -1057,6 +1057,7 @@ Vue.component('hiddenitem', {
 				
 				return aFiltered.map(function(oItem){
 					try{
+						if(oItem.en.name == 'DREAM OF THE BLUE VEIL') debugger;
 						let sSrc = oItem.en.source.split(",").map(item => this.aSources[item.trim()].text[this.sLang].title).join(", ");
 						let o={
 							"id": oItem.en.name,
@@ -1066,7 +1067,7 @@ Vue.component('hiddenitem', {
 							"src": oItem[this.sLang].source || oItem.en.source,
 							"className": this.sClassTitle,
 							"source": sSrc /*this.aSources[oItem.en.source].text[this.sLang].title*/,
-							"school": this.aSchools[oItem.en.school.trim()].text[this.sLang].title,
+							"school": this.aSchools[oItem.en.school.trim()]? this.aSchools[oItem.en.school.trim()].text[this.sLang].title : "",
 							"level": oLevelsText[oItem.en.level]? oLevelsText[oItem.en.level].text[this.sLang].title : oItem.en.level + " " + oLevelsText.units[this.sLang].title,
 							"castingTime": oItem[this.sLang].castingTime || oItem.en.castingTime,
 							"range": oItem[this.sLang].range || oItem.en.range,
