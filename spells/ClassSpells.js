@@ -2303,6 +2303,8 @@ var classSpells = {
 			"Tasha's Otherworldly Guise",
 			"Dream of the Blue Veil",
 			"Blade of Disaster",
+			
+			"Mind spike"
 		]
 
 	}

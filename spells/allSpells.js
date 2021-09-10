@@ -13055,4 +13055,30 @@ var allSpells = [
 	 "text": "Произнося заклинание, вы обращаетесь к магии Нижних или Верхних планов (по вашему выбору), для преобразования себя. Вы получаете следующие преимущества до тех пор, пока заклинание не закончится: <br> • Вы имеет иммунитет к урону огнём и ядом (Нижние планы) или к урону излучением и некротической энергией (Верхние планы). <br> • Вы имеете иммунитет к состоянию «отравленный» (Нижние планы) или к состоянию «очарованный» (Верхние планы). <br> • За вашей спиной появляются призрачные крылья, дарующие скорость полета 40 футов. • Вы получаете бонус +2 к КД. <br> • Все ваши атаки оружием считаются магическими, и когда вы совершаете атаку оружием, вы можете использовать свой модификатор базовой характеристики вместо Силы или Ловкости для бросков атаки и урона.<br>  • Действием Атака вы можете совершить две атаки вместо одной. Вы не получаете это преимущество, если у вас уже есть подобное умение (например, «Дополнительная атака»), которое позволяет атаковать более одного раза за действие Атака."
   }
  },
+ 
+ {
+  "en": {
+   "name": "SPIRIT SHROUD",
+   "school": "Necromancy",
+   "level": "3",
+   "castingTime": "1 bonus action",
+   "range": "Self",
+   "components": "V, $",
+   "materials": "",
+   "duration": "Concentration, up to 1 minute",
+   "text": "You call forth spirits of the dead, which flit around you for the spell's duration. The spirits are intangible and invulnerable.<br> Until the spell ends, any attack you make deals ld8 extra damage when you hit a creature within 10 feet of you. This damage is radiant, necrotic, or cold (your choice when you cast the spell). Any creature that takes this damage can't regain hit points until the start of your next turn.<br> In addition, any creature of your choice that you can see that starts its turn within 10 feet of you has its speed reduced by 10 feet until the start of your next turn.<br> <b>At Higher Levels.</b> When you cast this spell using a spell slot of 4th level or higher, the damage increases by ld8 for every two slot levels above 3rd.",
+	 "source": "TCoE"
+  },
+  "ru": {
+   "name": "Покров духа",
+   "school": "преобразование",
+   "level": "3",
+   "castingTime": "1 бонусное действие",
+   "range": "На себя",
+   "components": "В, С",
+   "materials": "",
+   "duration": "Концентрация, вплоть до 1 минуты",
+	 "text": "Вы взываете к духам умерших, и они окружают вас на протяжении длительности заклинания. Духи неосязаемы и неуязвимы.<br> До окончания действия заклинания любая ваша атака наносит дополнительно 1к8 урона, если вы атакуете существо в пределах 10 футов от вас. Вы выбираете вид урона в момент наложения этого заклинания из следующих вариантов: излучение, некротическая энергия или холод. Любое существо, получившее этот урон, не сможет восстанавливать хиты до начала вашего следующего хода.<br> В дополнение к этому, скорость каждого видимого вами существа по вашему выбору, начинающего ход в пределах 10 футов от вас, будет уменьшена на 10 футов до начала вашего следующего хода.<br> <b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 4-го уровня или выше, дополнительный урон увеличивается на 1к8 за каждые два уровня ячейки выше третьего."
+  }
+ },
 ]
