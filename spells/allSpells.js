@@ -10541,7 +10541,7 @@ var allSpells = [
       "components": "V, M",
       "materials": "weapon",
       "duration": "1 round",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     },
     "ru": {
       "name": "Громовой Клинок",
@@ -10553,7 +10553,7 @@ var allSpells = [
       "components": "В, М",
       "materials": "любое оружие",
       "duration": "1 раунд",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     }
   },
   {
