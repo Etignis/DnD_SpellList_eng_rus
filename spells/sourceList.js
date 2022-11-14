@@ -2,7 +2,7 @@ var sourceList = {
 	"PHB": {
 		"text": {
 			"en": {
-				"title": "Palyers Handbook"
+				"title": "Players Handbook"
 			},
 			"ru": {
 				"title": "Книга игрока"
