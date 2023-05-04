@@ -103,6 +103,120 @@ var classSpells = {
 			"Transmute Rock",
 			"Creation",
 			"Skill Empowerment"			
+		],
+		subclasses: [
+			{
+				title: {
+					en: {
+						text: "Alchemist",
+						source: "TCE"
+					},
+					ru: {
+						text: "Алхимик",
+						source: "TCE"
+					}
+				},
+				spells: [
+					"healing word",
+				    "ray of sickness",
+
+					"melf's acid arrow",
+					"flaming sphere",
+
+					"gaseous form", 
+					"mass healing word",
+
+					"death ward", 
+					"blight",
+
+					"cloudkill", 
+					"raise dead"
+				]
+			},
+			{
+				title: {
+					en: {
+						text: "Artillerist",
+						source: "TCE"
+					},
+					ru: {
+						text: "Артиллерист",
+						source: "TCE"
+					}
+				},
+				spells: [
+					"thunderwave", 
+					"shield",
+
+					"shatter", 
+					"scorching ray",
+
+					"fireball", 
+					"wind wall",
+
+					"ice storm", 
+					"wall of fire",
+
+					"cone of cold", 
+					"wall of force"
+				]
+			},
+			{
+				title: {
+					en: {
+						text: "Battle Smith",
+						source: "TCE"
+					},
+					ru: {
+						text: "Боевой кузнец",
+						source: "TCE"
+					}
+				},
+				spells: [
+					"heroism",
+					"shield",
+
+					"branding smite",
+					"warding bond",
+
+					"aura of vitality",
+					"conjure barrage",
+
+					"aura of purity",
+					"fire shield",
+
+					"banishing smite",
+					"mass cure wounds"
+				]
+			},
+			{
+				title: {
+					en: {
+						text: "Armorer",
+						source: "TCE"
+					},
+					ru: {
+						text: "Бронник",
+						source: "TCE"
+					}
+				},
+				spells: [
+					"magic missile",
+					"thunderwave",
+
+					"shatter",
+					"mirror image",
+
+					"hypnotic pattern",
+					"lightning bolt",
+
+					"greater invisibility",
+					"fire shield",
+
+					"wall of force",
+					"passwall"
+				]
+			}
 		]
 	},
 	Bard: {
