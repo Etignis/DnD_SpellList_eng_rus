@@ -5121,7 +5121,7 @@ var allSpells = [
     "ru": {
       "name": "Душеловка",
       "level": "8",
-      "text": "You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze. The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a minotaur or goristro demon automatically succeeds). When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space.",
+      "text": "Вы изгоняете существо, видимое в пределах дистанции, в похожий на лабиринт демиплан. Цель остаётся там, пока заклинание активно, или пока она не найдёт выход. Цель может действием пытаться найти выход. Для этого она совершает проверку Интеллекта Сл 20. При успехе она находит выход, а заклинание оканчивается (минотавры и демоны гористро преуспевают автоматически). Когда заклинание заканчивается, цель возвращается в пространство, которое она покинула, или, если оно занято, в ближайшее свободное пространство.",
       "school": "призыв",
       "castingTime": "1 действие",
       "range": "60 футов",
