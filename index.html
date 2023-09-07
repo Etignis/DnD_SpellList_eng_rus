@@ -139,6 +139,18 @@
 			>
 			</combobox>
 		</div>
+
+		<div class='mediaWidth'>
+			<check-button
+				id="TashaOptionalCheckbox"
+				title="Опциональные из Таши"
+				tooltip="Показывать в  том числе те заклинания, которые добавлены классу в качестве опциональных в Котле Таши"
+				:checked="bOptionalTasha"
+				@press="onOptionalTashaPress"
+			>
+			</check-button>
+		</div>
+		
 		<div class='mediaWidth'>
 			<combobox
 				id="CastingTimeCombobox"
@@ -474,9 +486,9 @@
   <script type='text/javascript' src='spells/schoolList.js' defer></script>
   <script type='text/javascript' src='spells/sourceList.js?v=0.51' defer></script>
   <script type='text/javascript' src='spells/allSpells.js?v=0.73' defer></script>
-  <script type='text/javascript' src='spells/ClassSpells.js?v=0.63' defer></script>
+  <script type='text/javascript' src='spells/ClassSpells.js?v=0.64' defer></script>
   <!-- <script type='text/javascript' src='js/magic.js?v=2.2.9' defer></script> -->
-  <script type='text/javascript' src='js/controller.js?v=0.50' defer></script>
+  <script type='text/javascript' src='js/controller.js?v=0.51' defer></script>
   <script type='text/javascript' src="js/FileSaver.min.js"></script>
   <!-- <script type='text/javascript' src='js/update.js' defer></script> -->
 <!-- Yandex.Metrika counter -->

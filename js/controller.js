@@ -773,6 +773,7 @@ Vue.component('hiddenitem', {
 			bAppIsReady: false,	
 			bRitualOnly: false,
 			bAllClassSpells: false,
+			bOptionalTasha: false,
 			bEditMode: false,
 			
 			bModalWinShow: false,
@@ -1022,6 +1023,10 @@ Vue.component('hiddenitem', {
 							}
 						}
 					}	
+					if(this.bOptionalTasha) {
+						aSpells = aSpells.concat(this.oClassSpells[this.sClass]?.optional?.TCoE);
+					}
+					
 					aSpells = this.aItems.filter(el => (aSpells.map(el=> el.toLowerCase().replace(/\s+/g, "")).indexOf(el.en.name.toLowerCase().replace(/\s+/g, ""))>-1));
 				} else {
 					aSpells = this.aItems
@@ -1350,6 +1355,12 @@ Vue.component('hiddenitem', {
 				this.bAllClassSpells = !this.bAllClassSpells;
 				this.updateHash();
 			},
+			onOptionalTashaPress: function(){
+				this.showAllItems();
+				
+				this.bOptionalTasha = !this.bOptionalTasha;
+				this.updateHash();
+			},
 			onRitualsPress: function(){
 				this.showAllItems();
 				
@@ -1552,6 +1563,9 @@ Vue.component('hiddenitem', {
 				if(this.bAllClassSpells) {
 					aHash.push("fullclass=1");
 				}
+				if(this.bOptionalTasha) {
+					aHash.push("tasha=1");
+				}
 				
 				if(aHash.length>0) {
 					window.location.hash = aHash.join("&").replace(/\s+/g, "_");
@@ -1628,7 +1642,9 @@ Vue.component('hiddenitem', {
 				if(oHash.fullclass) {
 					this.bAllClassSpells = true;
 				}
-				
+				if(oHash.tasha) {
+					this.bOptionalTasha = true;
+				}						
 			},
 			
 			showInfo: function(){

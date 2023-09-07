@@ -224,6 +224,25 @@ var classSpells = {
 			en: "Bard",
 			ru: "Бард"
 	  },
+		optional: {
+			TCoE: [
+				'Command',
+				'Color Spray',
+				'Mirror Image',
+				'Aid',
+				'Enlarge/Reduce',
+				'Slow',
+				'Intellect Fortress',
+				'Mass Healing Word',
+				'Phantasmal Killer',
+				"Rary's Telepathic Bond",
+				"Heroes' Feast",
+				"Prismatic Spray",
+				"dream of the blue veil",
+				"antipathy/sympathy",
+				"prismatic wall",
+			]
+		},
 	  spells: [
 			"Thunderclap",
 			"Earth Tremor",
@@ -388,8 +407,8 @@ var classSpells = {
 			"Mass poivmorph",
 			"Psychic scream",
 			
-			"Intellect Fortress",
-			"Dream of the Blue Veil"
+			/*"Intellect Fortress",
+			"Dream of the Blue Veil"*/
 			
 			
 		]
@@ -401,6 +420,18 @@ var classSpells = {
 		ru: "Жрец"
 	  },
 	  color: "",
+		optional: {
+			TCoE: [
+				"aura of vitality",
+				"spirit shroud",
+				"aura of life",
+				"aura of purity",
+				"summon celestial",
+				"sunbeam",
+				"sunburst",
+				"power word heal"
+			]
+		},
 	  spells: [
 
 		  "Guidance",
@@ -541,8 +572,8 @@ var classSpells = {
 		  "Gate",
 		  "Mass Heal",
 		  "True Resurrection",
-			"Spirit Shroud",
-			"Summon Celestial"
+		/*	"Spirit Shroud",
+			"Summon Celestial"*/
 		],
 	  subclasses: {
 			KnowlegeDomain: {
@@ -796,6 +827,26 @@ var classSpells = {
 		en: "Druid",
 		ru: "Друид"
 	  },
+		optional: {
+			TCoE: [
+				"protection from evil and good",
+				"continual flame",
+				"augury",
+				"summon beast",
+				"enlarge/reduce",
+				"aura of vitality",
+				"revivify",
+				"summon fey",
+				"elemental weapon",
+				"fire shield",
+				"divination",
+				"summon elemental",
+				"cone of cold",
+				"flesh to stone",
+				"symbol",
+				"incendiary cloud",
+			]
+		},
 	  spells: [
 	  "Wall of water",
 	   "Create Bonfire",
@@ -994,9 +1045,9 @@ var classSpells = {
 		  "True Resurrection",
 			
 			"Healing spirit",
-			"Summon Beast",
+			/*"Summon Beast",
 			"Summon Fey",
-			"Summon Elemental"
+			"Summon Elemental"*/
 		],
 	  subclasses: {
 		Land: {
@@ -1206,6 +1257,15 @@ var classSpells = {
 		en: "Paladin",
 		ru: "Паладин"
 	  },
+		optional: {
+			TCoE: [
+				"gentle repose",
+				"prayer of healing",
+				"warding bond",
+				"spirit shroud",
+				"summon celestial"
+			]
+		},
 	  spells: [
 
 		  "Bless",
@@ -1263,8 +1323,8 @@ var classSpells = {
 		  "Dispel Evil and Good",
 		  "Geas",
 		  "Raise Dead",
-			"Spirit Shroud",
-			"Summon Celestial"
+			/*"Spirit Shroud",*/
+			/*"Summon Celestial"*/
 		],
 	  subclasses: [
 		{
@@ -1417,6 +1477,24 @@ var classSpells = {
 			en: "Ranger",
 			ru: "Рейнджер"
 	  },
+		optional: {
+			TCoE: [
+				"entangle",
+				"searing smite",
+				"magic weapon",
+				"aid",
+				"gust of wind",
+				"summon beast",
+				"enhance ability",
+				"revivify",
+				"meld into stone",
+				"elemental weapon",
+				"summon fey",
+				"dominate beast",
+				"summon elemental",
+				"greater restoration",
+			]
+		},
 	  spells: [
 		"Absorb Elements",
 		"Beast Bond",
@@ -1493,9 +1571,9 @@ var classSpells = {
 		  "Swift Quiver",
 		  "Tree Stride",
 		  "Conjure plant creature",
-			"Summon Beast",
+			/*"Summon Beast",
 			"Summon Fey",
-			"Summon Elemental"
+			"Summon Elemental"*/
 		],
 	  subclasses: [
 		{
@@ -1562,15 +1640,40 @@ var classSpells = {
 	},
 	Sorcerer: {
 	  title: {
-		en: "Sorcerer",
-		ru: "Чародей"
+			en: "Sorcerer",
+			ru: "Чародей"
 	  },
+		optional: {
+			TCoE: [
+				"sword burst",
+				"booming blade",
+				"green-flame blade",
+				"lightning lure",
+				"mind sliver",
+				"Tasha's caustic brew",
+				"grease",
+				"flame blade",
+				"magic weapon",
+				"Tasha's mind whip",
+				"flaming sphere",
+				"intellect fortress",
+				"vampiric touch",
+				"fire shield",
+				"Bigby's hand",
+				"flesh to stone",
+				"Otiluke's freezing sphere",
+				"Tasha's otherwordly guise",
+				"dream of the blue veil]",
+				"demiplane",
+				"blade of disaster",
+			]
+		},
 	  spells: [
 
-		"BOOMING BLADE",
-		"GREEN-FLAME BLADE",
-		"LIGHTNING LURE",
-		"SWORD BURST",
+		//"BOOMING BLADE",
+		//"GREEN-FLAME BLADE",
+		//"LIGHTNING LURE",
+		//"SWORD BURST",
 		"Bonding vine",
 		"Piercing thorn",
 		"Mold plant",
@@ -1792,7 +1895,7 @@ var classSpells = {
 		  "Power Word Kill",
 		  "Time Stop",
 		  "Wish",
-			"Booming Blade",
+			/*"Booming Blade",
 			"Green-Flame Blade",
 			"Lightning Lure",
 			"Mind Sliver",
@@ -1801,7 +1904,7 @@ var classSpells = {
 			"Tasha's Mind Whip",
 			"Tasha's Otherworldly Guise",
 			"Dream of the Blue Veil",
-			"Blade of Disaster"
+			"Blade of Disaster"*/
 		],
 	  subclasses: [
 		{
@@ -1831,10 +1934,34 @@ var classSpells = {
 			en: "Warlock",
 			ru: "Колдун"
 	  },
+		optional: {
+			TCoE: [
+				"sword burst",
+				"booming blade",
+				"green-flame blade",
+				"lightning lure",
+				"mind sliver",
+				"spirit shroud",
+				"intellect fortress",
+				"summon undead",
+				"summon shadowspawn",
+				"summon fey",
+				"summon aberration",
+				"teleportation circle",
+				"planar binding",
+				"mislead",
+				"summon fiend",
+				"Tasha's otherwordly guise",
+				"dream of the blue veil",
+				"gate",
+				"blade of disaster",
+				"weird"
+			]
+		},
 	  spells: [
-	  	"BOOMING BLADE",
-			"GREEN-FLAME BLADE",
-			"LIGHTNING LURE",
+	  	//"BOOMING BLADE",
+			//"GREEN-FLAME BLADE",
+			//"LIGHTNING LURE",
 			"Bonding vine",
 			"Piercing thorn",
 			"Toll the dead",
@@ -1974,11 +2101,11 @@ var classSpells = {
 		  "Imprisonment",
 		  "Power Word Kill",
 		  "True Polymorph",
-			"Booming Blade",
+			/*"Booming Blade",
 			"Green-Flame Blade",
 			"Lightning Lure",
-			"Mind Sliver",
-			"Sword Burst",
+			"Mind Sliver",*/
+			/*"Sword Burst",
 			"Intellect Fortress",
 			"Spirit Shroud",
 			"Summon Fey",
@@ -1988,7 +2115,7 @@ var classSpells = {
 			"Summon Fiend",
 			"Tasha's Otherworldly Guise",
 			"Dream of the Blue Veil",
-			"Blade of Disaster"
+			"Blade of Disaster"*/
 		],
 	  subclasses: [
 		{
