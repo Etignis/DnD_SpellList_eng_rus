@@ -9585,7 +9585,7 @@ var allSpells = [
       "text": "Choose one object weighing 1 to 5 pounds within range that isn't being worn or carried. The object flies in a straight line up to 90 feet in a direction you choose before falling to the ground, stopping early if it impacts against a solid surface. If the object would strike a creature, that creature must make a Dexterity saving throw. On a failed save, the object strikes the target and stops moving. In either case, both the object and the creature or solid surface take 3d8 bludgeoning damage. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of objects that you can target with this spell increases by 5 pounds, and the damage increases by 1d8, for each slot level above 1st.",
       "school": "Transmutation",
       "castingTime": "1 action",
-      "range": "150 feet",
+      "range": "60 feet",
       "components": "S",
       "materials": "",
       "duration": "Instantaneous",
@@ -9597,7 +9597,7 @@ var allSpells = [
       "text": "Выберите один предмет весом от 1 до 5 фунтов в пределах диапазона, который не надет и не носят. Объект пролетает до 90 футов по прямой в выбранном вами направлении, прежде чем упасть на землю, и останавливается раньше, если ударится о твердую поверхность. Если объект поразил существо, это существо должно сделать спасбросок по Ловкости. При неудаче объект ударяет по цели и останавливается. В любом случае, и объект, и существо, или твердая поверхность получают 3d8 дробящего урона. На более высоких уровнях. Когда вы используете это заклинание, используя ячейку 2-го уровня или выше, максимальный вес предметов, которые вы можете использовать с этим заклинанием, увеличивается на 5 фунтов, а урон увеличивается на 1d8, для каждого уровня слота выше 1-го.",
       "school": "Превращение",
       "castingTime": "1 действие",
-      "range": "150 футов",
+      "range": "60 футов",
       "components": "С",
       "materials": "",
       "duration": "Мгновенно"
