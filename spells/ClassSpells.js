@@ -70,6 +70,9 @@ var classSpells = {
 			"Rope Trick",
 			"Enlarge/Reduce",
 			"Enhance Ability",
+			// 2 lvl
+"Kinetic Jaunt",
+"Vortex Warp",
 		// 3 lvl
 			"Revivify",
 			"Catnap",
@@ -244,6 +247,20 @@ var classSpells = {
 			]
 		},
 	  spells: [
+			// 1 lvl
+			"Silvery Barbs",
+			// 2 lvl
+			"Borrowed Knowledge",
+			"Kinetic Jaunt",
+			
+			// 1 lvl
+			"Distort Value",
+			// 2 lvl
+			"Gift of Gab",
+			// 3 lvl
+			"Fast Friends",
+			"Motivational Speech",
+		
 			"Thunderclap",
 			"Earth Tremor",
 			"Pyrotechnics",
@@ -433,6 +450,14 @@ var classSpells = {
 			]
 		},
 	  spells: [
+		
+			// 2 lvl
+			"Borrowed Knowledge",
+			
+			// 3 lvl
+			"Fast Friends",
+			"Incite Greed",
+			"Motivational Speech",
 
 		  "Guidance",
 		  "Light",
@@ -848,6 +873,10 @@ var classSpells = {
 			]
 		},
 	  spells: [
+		
+		// 2 lvl
+		"Wither and Bloom",
+		
 	  "Wall of water",
 	   "Create Bonfire",
 		"Control Flames",
@@ -1669,6 +1698,18 @@ var classSpells = {
 			]
 		},
 	  spells: [
+		
+		// 1 lvl
+		"Silvery Barbs",
+		// 2 lvl
+		"Kinetic Jaunt",
+		"Vortex Warp",
+		"Wither and Bloom",
+		
+		// 1 lvl
+		"Distort Value",
+		// 3 lvl
+		"Incite Greed",
 
 		//"BOOMING BLADE",
 		//"GREEN-FLAME BLADE",
@@ -1959,6 +2000,14 @@ var classSpells = {
 			]
 		},
 	  spells: [
+			// 2 lvl
+			"Borrowed Knowledge",
+			
+			// 1 lvl
+			"Distort Value",
+			// 3 lvl
+			"Incite Greed",
+
 	  	//"BOOMING BLADE",
 			//"GREEN-FLAME BLADE",
 			//"LIGHTNING LURE",
@@ -2269,6 +2318,24 @@ var classSpells = {
 		ru: "Волшебник"
 	  },
 	  spells: [
+		// 1 lvl
+		"Silvery Barbs",
+		// 2 lvl
+		"Borrowed Knowledge",
+		"Kinetic Jaunt",
+		"Vortex Warp",
+		"Wither and Bloom",
+		
+		// 1 lvl
+		"Distort Value",
+		"Jim's Magic Missle",
+		// 2 lvl
+		"Gift of Gab",
+		"Jim's Glowing Coin",
+		// 3 lvl
+		"Fast Friends",
+		"Incite Greed",
+		
 		"infestation",
 		"Toll the dead",
 		"Cause fear",

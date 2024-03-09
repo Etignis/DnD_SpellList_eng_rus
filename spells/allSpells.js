@@ -13081,4 +13081,320 @@ var allSpells = [
 	 "text": "Вы взываете к духам умерших, и они окружают вас на протяжении длительности заклинания. Духи неосязаемы и неуязвимы.<br> До окончания действия заклинания любая ваша атака наносит дополнительно 1к8 урона, если вы атакуете существо в пределах 10 футов от вас. Вы выбираете вид урона в момент наложения этого заклинания из следующих вариантов: излучение, некротическая энергия или холод. Любое существо, получившее этот урон, не сможет восстанавливать хиты до начала вашего следующего хода.<br> В дополнение к этому, скорость каждого видимого вами существа по вашему выбору, начинающего ход в пределах 10 футов от вас, будет уменьшена на 10 футов до начала вашего следующего хода.<br> <b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 4-го уровня или выше, дополнительный урон увеличивается на 1к8 за каждые два уровня ячейки выше третьего."
   }
  },
+ 
+     {
+      "en": {
+        "name": "Silvery Barbs",
+        "level": "1",
+        "text": "You magically distract the triggering creature and turn its momentary uncertainty into encouragement for another creature. The triggering creature must reroll the d20 and use the lower roll. You can then choose a different creature you can see within range (you can choose yourself). The chosen creature has advantage on the next attack roll, ability check, or saving throw it makes within 1 minute. A creature can be empowered by only one use of this spell at a time.",
+        "school": "Enchantment",
+        "castingTime": "1 reaction, which you take when a creature you can see within 60 feet of yourself succeeds on an attack roll, an ability check, or a saving throw",
+        "range": "60 feet",
+        "materials": "",
+        "components": "V",
+        "duration": "Instantaneous",
+        "source": "SCC"
+      },
+      "ru": {
+        "name": "Искусная острота",
+        "level": "1",
+        "text": "Вы магическим образом отвлекаете спровоцировавшее реакцию существо и превращаете его секундное замешательство в ободрение другого существа. Спровоцировавшее вас существо должно повторно совершить бросок к20 и использовать меньшее значение. После этого вы можете выбрать другое существо, которое видите в пределах дистанции (вы можете выбрать себя). Выбранное существо совершит с преимуществом следующий бросок атаки, проверку характеристики или спасбросок, который оно совершит в течение 1 минуты. Существо может иметь на себе лишь одно усиление от этого заклинания за раз.",
+        "school": "очарование",
+        "castingTime": "1 реакция, совершаемая вами, когда видимое вами существо в пределах 60 футов от вас преуспевает в броске атаке, проверке характеристики или спасброске",
+        "range": "60 футов",
+        "materials": "",
+        "components": "В",
+        "duration": "Мгновенно",
+        "source": "SCC"
+      }
+    },
+    {
+      "en": {
+        "name": "Borrowed Knowledge",
+        "level": "2",
+        "text": "You draw on knowledge from spirits of the past. Choose one skill in which you lack proficiency. For the spell’s duration, you have proficiency in the chosen skill. The spell ends early if you cast it again.",
+        "school": "Divination",
+        "castingTime": "1 action",
+        "range": "Self",
+        "materials": "a book worth at least 25 gp",
+        "components": "V, S, M",
+        "duration": "1 round",
+        "source": "SCC"
+      },
+      "ru": {
+        "name": "Заимствованные знания",
+        "level": "2",
+        "text": "Вы черпаете знания у духов прошлого. Выберите один навык, которым вы не владеете. На время действия заклинания вы получаете владение выбранным навыком. Заклинание заканчивается раньше, если вы накладываете его снова.",
+        "school": "прорицание",
+        "castingTime": "1 действие",
+        "range": "Вы",
+        "materials": "",
+        "components": "В, С, М",
+        "duration": "1 раунд",
+        "source": "SCC"
+      }
+    },
+    {
+      "en": {
+        "name": "Kinetic Jaunt",
+        "level": "2",
+        "text": "You magically empower your movement with dancelike steps, giving yourself the following benefits for the duration: <br> • Your walking speed increases by 10 feet.<br> • You don’t provoke opportunity attacks.<br> • You can move through the space of another creature, and it doesn’t count as difficult terrain. If you end your turn in another creature’s space, you are shunted to the last unoccupied space you occupied, and you take ld8 force damage.",
+        "school": "Transmutation",
+        "castingTime": "1 bonus action",
+        "range": "Self",
+        "materials": "",
+        "components": "S",
+        "duration": "Concentration, up to 1 minute",
+        "source": "SCC"
+      },
+      "ru": {
+        "name": "Увлекательная прогулка",
+        "nic": "Кинетическая прогулка",
+        "level": "2",
+        "text": "Вы магическим образом усиливаете свои движение танцевальными шагами, даруя себе следующие преимущества: <br> • Ваша скорость ходьбы увеличивается на 10 футов. <br> • Вы не провоцируете атаки. <br> • Вы можете перемещаться сквозь других существ и это перемещение не считается перемещением по труднопроходимой местностью. Если вы оканчиваете свой ход в пространстве другого существа, то вас выталкивает в последнее занимаемое вами незанятое пространство и вы получаете 1к8 урона силовым полем.",
+        "school": "преобразование",
+        "castingTime": "1 бонусное действие",
+        "range": "Вы",
+        "materials": "",
+        "components": "В, С, М",
+        "duration": "К-ция, до 1 минуты",
+        "source": "SCC"
+      }
+    },
+    {
+      "en": {
+        "name": "Vortex Warp",
+        "level": "2",
+        "text": "You magically twist space around another creature you can see within range. The target must succeed on a Constitution saving throw (the target can choose to fail), or the target is teleported to an unoccupied space of your choice that you can see within range. The chosen space must be on a surface or in a liquid that can support the target without the target having to squeeze. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the range of the spell increases by 30 feet for each slot level above 2nd.",
+        "school": "Conjuration",
+        "castingTime": "1 action",
+        "range": "90 feet",
+        "materials": "",
+        "components": "V, S",
+        "duration": "Instantaneous",
+        "source": "SCC"
+      },
+      "ru": {
+        "name": "Вихрь искривления",
+        "level": "2",
+        "text": "Вы магическим образом сворачиваете пространство вокруг другого существа, которое видите в пределах дистанции. Цель должна преуспеть в спасброске Телосложения (цель может добровольно провалить), иначе будет телепортирована в незанятое пространство по вашему выбору, которое вы можете видеть в пределах дистанции заклинания. Выбранное пространство должно находиться на поверхности или в жидкости, в котором цель может находиться без необходимости протискиваться. <br>На более высоких уровнях: Если вы накладываете это заклинание, используя ячейку 3-го уровня или выше, дистанция заклинания увеличивается на 30 футов, за каждый уровень ячейки выше второго.",
+        "school": "вызов",
+        "castingTime": "1 действие",
+        "range": "90 футов",
+        "materials": "",
+        "components": "В, С",
+        "duration": "Мгновенно",
+        "source": "SCC"
+      }
+    },
+    {
+      "en": {
+        "name": "Wither and Bloom",
+        "level": "2",
+        "text": "You invoke both death and life upon a 10-foot-radius sphere centered on a point within range. Each creature of your choice in that area must make a Constitution saving throw, taking 2d6 necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical vegetation in that area withers. In addition, one creature of your choice in that area can spend and roll one of its unspent Hit Dice and regain a number of hit points equal to the roll plus your spellcasting ability modifier. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1 d6 for each slot above 2nd, and the number of Hit Dice that can be spent and added to the healing roll increases by one for each slot above 2nd.",
+        "school": "Necromancy",
+        "castingTime": "1 action",
+        "range": "60 feet",
+        "materials": "a withered vine twisted into a loop",
+        "components": "V, S, M",
+        "duration": "Instantaneous",
+        "source": "SCC"
+      },
+      "ru": {
+        "name": "Увядание и цветение",
+        "level": "2",
+        "text": "Вы пробуждаете жизнь и смерть в сфере радиусом 10 футов, в указанной точке в пределах дистанции заклинания. Каждое существо по вашему выбору в этой области должно совершить спасбросок Телосложения, получая 2к6 урона некротической энергией в случае провала или половину этого урона в случае успеха. Немагическая растительность в этой области увядает. Кроме того, одно существо по вашему выбору в этой области может потратить и бросить одну из своих неизрасходованных Костей Хитов, восстанавливая себе количество хитов, равное результату броска + модификатор вашей базовой характеристики. <br>На более высоких уровнях: Если вы накладываете это заклинание, используя ячейку 3-го уровня или выше, урон увеличивается на 1к6 за каждый уровень ячейки выше второго, а количество Костей Хитов, которые существо может потратить и добавить к броску восстановления хитов увеличивается на 1 каждый уровень ячейки выше второго.",
+        "school": "некромантия",
+        "castingTime": "1 действие",
+        "range": "60 футов",
+        "materials": "увядшая виноградная лоза, свернутая петлёй",
+        "components": "В, С, М",
+        "duration": "Мгновенно",
+        "source": "SCC"
+      }
+    },
+		
+		    {
+      "en": {
+        "name": "Distort Value",
+        "level": "1",
+        "text": "Do you need to squeeze a few more gold pieces out of a merchant as you try to sell that weird octopus statue you liberated from the chaos temple? Do you need to downplay the worth of some magical assets when the tax collector stops by? Distort value has you covered. You cast this spell on an object no more than 1 foot on a side, doubling the object's perceived value by adding illusory flourishes or polish to it, or reducing its perceived value by half with the help of illusory scratches, dents, and other unsightly features. Anyone examining the object can ascertain its true value with a successful Intelligence (Investigation) check against your spell save DC. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the maximum size of the object increases by 1 foot for each slot level above 1st.",
+        "school": "Illusion",
+        "castingTime": " 1 minute",
+        "range": "Touch",
+        "materials": "",
+        "components": "V",
+        "duration": "8 hours",
+        "source": "AI"
+      },
+      "ru": {
+        "name": "Искажение цены",
+        "level": "1",
+        "text": "Вам нужно выжать ещё несколько золотых из торговца, которому вы пытаетесь продать странную статую осьминога, «освобождённую» вами из храма хаоса? Или занизить стоимость кое-каких магических ценностей, когда к вам заглянет сборщик налогов? Искажение цены поможет вам в этом. Выберите один объект со стороной не больше одного фута, вы можете удвоить видимую ценность, добавив иллюзорные блеск и привлекательность, или уменьшить на половину, добавив иллюзорных царапин, вмятин и других неприглядных черт. Любой, кто внимательно изучит предмет и совершит проверку Интеллекта (Расследование) против вашей Сл заклинаний, узнаёт настоящую цену. <br>На более высоких уровнях: Если вы накладываете это заклинание, используя ячейку 2-го уровня или выше, максимальная длина предмета увеличивается на 1 фут за каждый уровень ячейки выше первого.",
+        "school": "иллюзия",
+        "castingTime": "1 минута",
+        "range": "касание",
+        "materials": "",
+        "components": "В",
+        "duration": "8 часов",
+        "source": "AI"
+      }
+    },
+    {
+      "en": {
+        "name": "Fast Friends",
+        "level": "3",
+        "text": "When you need to make sure something gets done, you can't rely on vague promises, sworn oaths, or binding contracts of employment. When you cast this spell, choose one humanoid within range that can see and hear you, and that can understand you. The creature must succeed on a Wisdom saving throw or become charmed by you for the duration. While the creature is charmed in this way, it undertakes to perform any services or activities you ask of it in a friendly manner, to the best of its ability. You can set the creature new tasks when a previous task is completed, or if you decide to end its current task. If the service or activity might cause harm to the creature, or if it conflicts with the creature's normal activities and desires, the creature can make another Wisdom saving throw to try to end the effect. This save is made with advantage if you or your companions are fighting the creature. If the activity would result in certain death for the creature, the spell ends. When the spell ends, the creature knows it was charmed by you. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
+        "school": "Enchantment",
+        "castingTime": "1 action",
+        "range": "30 feet",
+        "materials": "",
+        "components": "V",
+        "duration": "Concentration, up to 1 hour",
+        "source": "AI"
+      },
+      "ru": {
+        "name": "Быстрые друзья",
+        "level": "3",
+        "text": "Когда вам нужно убедиться, что что-то сделано, вы не можете полагаться на чьи-то обещания, клятвы или обязательные трудовые договоры. Когда вы накладываете это заклинание, выберите одного Гуманоида в пределах дистанции, который может видеть и слышать вас, и который может вас понять. Существо должно преуспеть в спасброске Мудрости, иначе станет очарованным вами, пока заклинание активно. Когда существо очаровано таким образом, оно обязуется выполнять любые распоряжения, которые вы попросите его выполнить в дружеской манере, в меру своих возможностей. Вы можете дать существу новую задачу, когда предыдущая задача будет завершена, или, если вы решите, окончить действие заклинания. Если ваши распоряжения могут причинить вред очарованному существу или если они противоречат обычной деятельности и желаниям существа, то существо может сделать ещё один спасбросок Мудрости, чтобы попытаться досрочно окончить действие эффекта. Спасбросок совершается с преимуществом, если вы или ваши товарищи сражаетесь с этим существом. Если существо умирает, действие заклинания оканчивается. После окончания действия данного заклинания существо точно знает, кем оно было очарованно. <br>На более высоких уровнях: Когда вы накладываете это заклинание, используя ячейку заклинаний 4-го уровня или выше, вы можете нацелиться на одно дополнительное существо для каждого уровня ячейки выше 3-го.",
+        "school": "очарование",
+        "castingTime": "1 действие",
+        "range": "30 футов",
+        "materials": "",
+        "components": "В",
+        "duration": "К-ция, до 1 часа",
+        "source": "AI"
+      }
+    },
+    {
+      "en": {
+        "name": "Gift of Gab",
+        "level": "2",
+        "text": "Jim Darkmagic is said to have invented this spell, originally calling it I said what?! Have you ever been talking to the local monarch and accidentally mentioned how their son looks like your favorite hog from when you were growing up on the family farm? We've all been there! But rather than being beheaded for an honest slip of the tongue, you can pretend it never happened - by ensuring that no one knows it happened. When you cast this spell, you skillfully reshape the memories of listeners in your immediate area, so that each creature of your choice within 5 feet of you forgets everything you said within the last 6 seconds. Those creatures then remember that you actually said the words you speak as the verbal component of the spell.",
+        "school": "Enchantment",
+        "castingTime": "1 reaction, which you take when you speak to another creature",
+        "range": "Self",
+        "materials": "",
+        "components": "V, S, R (2 gp)",
+        "duration": "Instantaneous",
+        "source": "AI"
+      },
+      "ru": {
+        "name": "Подарок болтуна",
+        "level": "2",
+        "text": "Говорят, что Джим Даркмагик изобрёл это заклинание, изначально назвав его «Я сказал что?»! Вы в разговоре с местным монархом случайно упомянули, что его сын похож на вашего любимого борова из тех времён, когда вы росли на семейной ферме? Мы все побывали в такой ситуации! Но вместо того, чтобы быть обезглавленным за честную оговорку, вы можете притвориться, что этого никогда не было, с гарантией, что никто не узнает, что это произошло. Когда вы накладываете это заклинание, вы умело изменяете воспоминания слушателей в вашем непосредственном окружении так, что каждое существо по вашему выбору в пределах 5 футов от вас забывает все, что вы сказали в течение последних 6 секунд. Затем эти существа вспоминают, что вы на самом деле произнесли слова, которые вы произносите как вербальный компонент заклинания.",
+        "school": "очарование",
+        "castingTime": "1 реакция, совершаемая вами, когда вы говорите с другим существом",
+        "range": "Вы",
+        "materials": "",
+        "components": "В, С, А (2 зм)",
+        "duration": "мгновенно",
+        "source": "AI"
+      }
+    },
+    {
+      "en": {
+        "name": "Incite Greed",
+        "level": "3",
+        "text": "When you cast this spell, you present the gem used as the material component and choose any number of creatures within range that can see you. Each target must succeed on a Wisdom saving throw or be charmed by you until the spell ends, or until you or your companions do anything harmful to it. While charmed in this way, a creature can do nothing but use its movement to approach you in a safe manner. While an affected creature is within 5 feel of you, it cannot move, but simply stares greedily at the gem you present. At the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target.",
+        "school": "Enchantment",
+        "castingTime": "1 action",
+        "range": "30 feet",
+        "materials": "a gem worth at least 50 gp",
+        "components": "V, S, M",
+        "duration": "Concentration, up to 1 minute",
+        "source": "AI"
+      },
+      "ru": {
+        "name": "Спровоцированная жадность",
+        "level": "3",
+        "text": "Когда вы произносите это заклинание, вы показываете драгоценный камень, используемый в качестве материального компонента, и выбираете любое количество существ в пределах дальности заклинания, которые могут видеть вас. Каждая цель должна преуспеть в спасброске Мудрости или быть очарована вами до тех пор, пока заклинание не закончится, или пока вы или ваши спутники не сделаете что-нибудь вредное для очарованного существа. Будучи очарованным таким образом, существо не может ничего сделать, кроме как использовать свое движение, чтобы безопасно приблизиться к вам. Существо, находящееся в пределах 5 футов от вас, не может двигаться, а просто жадно смотрит на драгоценный камень, который вы показываете. В конце каждого своего хода пораженная цель может сделать спасбросок Мудрости. Если это удается, то для этой цели эффект развеивается.",
+        "school": "очарование",
+        "castingTime": "1 действие",
+        "range": "30 футов",
+        "materials": "драгоценный камень стоимостью 50 зм",
+        "components": "В, С, М",
+        "duration": "К-ция, до 1 минуты",
+        "source": "AI"
+      }
+    },
+    {
+      "en": {
+        "name": "Jim's Glowing Coin",
+        "level": "2",
+        "text": "Of the many tactics employed by master magician and renowned adventurer Jim Darkmagic, the old glowing coin trick is a time-honored classic. When you cast the spell, you hurl the coin that is the spell's material component to any spot within range. The coin lights up as if under the effect of a light spell. Each creature of your choice that you can see within 30 feet of the coin must succeed on a Wisdom saving throw or be distracted for the duration. While distracted, a creature has disadvantage on Wisdom (Perception) checks and iniciative rolls.",
+        "school": "Enchantment",
+        "castingTime": "1 action",
+        "range": "60 feet",
+        "materials": "a coin",
+        "components": "S, M, R (2 gp)",
+        "duration": "1 minute",
+        "source": "AI"
+      },
+      "ru": {
+        "name": "Сверкающая монета Джима",
+        "level": "2",
+        "text": "Из множества приёмов, используемых великим фокусником и известным авантюристом Джимом Даркмагиком, старый добрый трюк со сверкающей монетой — это проверенная временем классика. Когда вы накладываете заклинание, вы бросаете монету, которая является материальным компонентом заклинания, в любую точку в пределах дистанции. Монета зажигается, как будто под действием заклинания Cвет. Каждое существо по вашему выбору, которое вы можете видеть в пределах 30 футов от монеты, должно преуспеть в спасброске Мудрости, иначе отвлечётся на монетку. Будучи отвлечённым, существо совершает с помехой проверки Мудрости (Восприятие) и бросок инициативы.",
+        "school": "очарование",
+        "castingTime": "1 действие",
+        "range": "60 футов",
+        "materials": "монетка",
+        "components": "С, М, А (2 зм)",
+        "duration": "1 минута",
+        "source": "AI"
+      }
+    },
+    {
+      "en": {
+        "name": "Jim's Magic Missle",
+        "level": "1",
+        "text": "Any apprentice wizard can cast a boring old magic missile. Sure, it always strikes its target. Yawn. Do away with the drudgery of your grandfather's magic with this improved version of the spell, as used by Jim Darkmagic! You create three twisting, whistling, hypoallergenic, gluten-free darts of magical force. Each dart targets a creature of your choice that you can see within range. Make a ranged spell attack for each missile. On a hit, a missile deals 2d4 force damage to its target. lf the attack roll scores a critical hit, the target of that missile takes 5d4 force damage instead of you rolling damage twice for a critical hit. If the attack roll for any missile is a 1, all missiles miss their targets and blow up in your face, dealing 1 force damage per missile to you. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart, and the royalty component increases by 1 gp, for each slot level above 1st.",
+        "school": "evocation",
+        "castingTime": "1 action",
+        "range": "120 feet",
+        "materials": "",
+        "components": "V, S, R (1 gp)",
+        "duration": "Instantaneous",
+        "source": "AI"
+      },
+      "ru": {
+        "name": "Волшебная стрела Джима",
+        "level": "1",
+        "text": "Любой обучающийся волшебник умеет запускать старую и скучную магическую стрелу. Конечно, она всегда поражает свою цель. Скука. Покончите с рутинной магией вашего деда с помощью улучшенной версией заклинания, как это сделал Джим Даркмагик! Вы создаете три вращающихся свистящих гипоаллергенных безглютеновых дротика из магической силы. Каждый нацелен на существо по вашему выбору, которое вы можете видеть в пределах дистанции. Совершите дальнобойную атаку заклинанием для каждого дротика. При попадании дротик наносит своей цели урон силовым полем 2к4. Если бросок атаки критический, то цель этого дротика получает урон силовым полем 5к4 вместо того, чтобы вам дважды бросать урон за критический удар. Если бросок атаки для любого из дротиков равен 1, то все дротики промахиваются мимо своих целей и взрываются у вас перед носом, нанося вам 1 урон силовым полем за каждый дротик. <br>На более высоких уровнях: Если вы накладываете это заклинание, используя ячейку 2-го уровня или выше, заклинание создает по одному дополнительному дротику за каждый уровень ячейки выше первого. Также увеличивается стоимость на 1 зм, за каждую ячейку выше первого уровня.",
+        "school": "воплощение",
+        "castingTime": "1 действие",
+        "range": "120 футов",
+        "materials": "",
+        "components": "В, С, А (1 зм)",
+        "duration": "мгновенно",
+        "source": "AI"
+      }
+    },
+    {
+      "en": {
+        "name": "Motivational Speech",
+        "level": "3",
+        "text": "You address allies, staff, or innocent bystanders to exhort and inspire them to greatness, whether they have anything to get excited about or not. Choose up to five creatures within range that can hear you. For the duration, each affected creature gains 5 temporary hit points and has advantage on Wisdom saving throws. If an affected creature is hit by an attack, it has advantage on the next attack roll it makes. Once an affected creature loses the temporary hit points granted by this spell, the spell ends for that creature. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the temporary hit points increase by 5 for each slot level above 3rd.",
+        "school": "enchantment",
+        "castingTime": "1 minute",
+        "range": "60 feet",
+        "materials": "",
+        "components": "V",
+        "duration": "1 hour",
+        "source": "AI"
+      },
+      "ru": {
+        "name": "Мотивирующая речь",
+        "level": "3",
+        "text": "Вы обращаетесь к союзникам, помощникам или невинным прохожим, чтобы замотивировать и вдохновить их на подвиги, независимо от того, есть ли у них для этого повод или нет. Выберите до пяти существ в пределах дистанции, которые могут вас слышать. На время действия заклинания, каждое замотивированное существо получает 5 временных хитов и получает преимущество на спасброски Мудрости. Если по замотивированному существу попадают атакой, то оно получает преимущество для следующего броска атаки, который оно совершит. Как только замотивированное существо теряет временные хиты, полученные от этого заклинания, то заклинание для него оканчивается. <br>На более высоких уровнях: Если вы накладываете это заклинание, используя ячейку 4-го уровня или выше, временные хиты увеличиваются на 5 за каждый уровень ячейки выше третьего. ",
+        "school": "очарование",
+        "castingTime": "1 минута",
+        "range": "60 футов",
+        "materials": "",
+        "components": "В",
+        "duration": "1 час",
+        "source": "AI"
+      }
+    },
+
 ]

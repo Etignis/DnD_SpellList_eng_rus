@@ -76,6 +76,32 @@ var sourceList = {
 		"checked": false,
 		"visible": true
 	},
+	"SCC": {
+		"text": {
+			"en": {
+				"title": "Strixhaven: Curriculum of Chaos"
+			},
+			"ru": {
+				"title": "Стриксхейвен"
+			}
+		},
+		"official": true,
+		"checked": false,
+		"visible": true
+	},
+	"AI": {
+		"text": {
+			"en": {
+				"title": "Acquisitions Incorporated"
+			},
+			"ru": {
+				"title": "Acquisitions Incorporated"
+			}
+		},
+		"official": true,
+		"checked": false,
+		"visible": true
+	},
 	"HB": {
 		"text": {
 			"en": {
