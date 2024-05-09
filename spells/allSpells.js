@@ -11010,7 +11010,7 @@ var allSpells = [
       "components": "V, S",
       "materials": "",
       "duration": "Concentration, up to 1 hour",
-       "text": "You create a 10-foot-radius area of thick overgrowth centered ona point within range. The sphere spreads around corners, and itsarea is heavily obscured and difficult terrain. It lasts for theduration or until it is destroyed.<br>If the overgrowth is lit on fire, it burns away immediately. Eachcreature in the area must make a Dexterity saving throw. On afailed save, a creature takes 2d6 fire damage, or half damage on asuccessful one.<br><b>At Higher Levels.</b> When you cast this spell using a spell slot of2nd level or higher, the radius of the overgrowth increases by 10feet for each slot level above 1st.",
+      "text": "You create a 10-foot-radius area of thick overgrowth centered ona point within range. The sphere spreads around corners, and itsarea is heavily obscured and difficult terrain. It lasts for theduration or until it is destroyed.<br>If the overgrowth is lit on fire, it burns away immediately. Eachcreature in the area must make a Dexterity saving throw. On afailed save, a creature takes 2d6 fire damage, or half damage on asuccessful one.<br><b>At Higher Levels.</b> When you cast this spell using a spell slot of2nd level or higher, the radius of the overgrowth increases by 10feet for each slot level above 1st.",
       "source": "SCPC"
     },
     "ru": {
@@ -11036,13 +11036,13 @@ var allSpells = [
       "components": "V, S, M",
       "materials": "(a rose thorn)",
       "duration": "Concentration, up to 1 minute",
-       "text": "You hurl a magical piercing thorn at a creature within range.Make a ranged spell attack against the target. On a hit, the targettakes 2d4 piercing damage, and the thorn lodges itself into thecreature for the duration or until the thorn explodes.<br>If the creature is hit by a spell of 1st level or higher, the thornabsorbs some of the spell's magical power and explodes into arain of thorns, dealing 1d4 piercing damage to the creature. Allcreatures within a 5 ft radius of the creature must succeed on aDexterity saving throw or take 1d4 piercing damage as well.<br>This spell's initial damage and explosion damage increases by1d4 when you reach 5th level (3d4/2d4), 11th level (5d4/3d4),and 17th level (6d4/5d4).",
+      "text": "You hurl a magical piercing thorn at a creature within range.Make a ranged spell attack against the target. On a hit, the targettakes 2d4 piercing damage, and the thorn lodges itself into thecreature for the duration or until the thorn explodes.<br>If the creature is hit by a spell of 1st level or higher, the thornabsorbs some of the spell's magical power and explodes into arain of thorns, dealing 1d4 piercing damage to the creature. Allcreatures within a 5 ft radius of the creature must succeed on aDexterity saving throw or take 1d4 piercing damage as well.<br>This spell's initial damage and explosion damage increases by1d4 when you reach 5th level (3d4/2d4), 11th level (5d4/3d4),and 17th level (6d4/5d4).",
       "source": "SCPC"
     },
     "ru": {
       "name": "ПРОНЗАЮЩИЙ ШИП",
       "level": "0",
-      "text": "Вы бросаете острый магический шип в существо в пределах дальности заклинания. Совершите дальнобойную атаку заклинанием. При попадании цель получает 2к4 колющего урона, а шип остается внутри существа на время действия заклинания или пока шип не взорвется. Если существо поражено заклинанием первого круга или выше, шип поглощает магическую силу заклинания и взрывается россыпью мелких шипов, нанося 1к4 колющего урона существу. Все существа в радиусе 5 футов должны преуспеть в спасброске Ловкости или получают 1к4 колющего урона.<br>Начальный урон и урон от взрыва увеличивается на 5 уровне (3к4\2к4), 11 уровне (5к4\3к4), 17 уровень (6к4\5к4).",
+      "text": "Вы бросаете острый магический шип в существо в пределах дальности заклинания. Совершите дальнобойную атаку заклинанием. При попадании цель получает 2к4 колющего урона, а шип остается внутри существа на время действия заклинания или пока шип не взорвется. Если существо поражено заклинанием первого круга или выше, шип поглощает магическую силу заклинания и взрывается россыпью мелких шипов, нанося 1к4 колющего урона существу. Все существа в радиусе 5 футов должны преуспеть в спасброске Ловкости или получают 1к4 колющего урона.<br>Начальный урон и урон от взрыва увеличивается на 5 уровне (3к4\\2к4), 11 уровне (5к4\\3к4), 17 уровень (6к4\\5к4).",
       "school": "Призыв",
       "castingTime": "1 действие",
       "range": "60 футов",
@@ -11062,7 +11062,7 @@ var allSpells = [
       "components": "V, S, M",
       "materials": "(a fungal spore)",
       "duration": "1 hour",
-       "text": "You conjure a 30-foot radius of spores extending from your position. These spores can go around corners and affect only creatures with an Intelligence of 2 or higher that aren't undead, constructs, or elementals. For the duration, affected creatures can communicate telepathically with one another while they are within 60 feet of each other.",
+      "text": "You conjure a 30-foot radius of spores extending from your position. These spores can go around corners and affect only creatures with an Intelligence of 2 or higher that aren't undead, constructs, or elementals. For the duration, affected creatures can communicate telepathically with one another while they are within 60 feet of each other.",
       "source": "SCPC"
     },
     "ru": {
@@ -11088,7 +11088,7 @@ var allSpells = [
       "components": "V, S",
       "materials": "",
       "duration": "Concentration, up to 10 minutes",
-       "text": "You cause a thick branch to shoot out of the ground along a line 5feet wide and 30 feet long. Each creature in the line must succeedon a Dexterity saving throw or be pushed along the length of thebranch as it grows in a direction of your choice. If the branchimpacts a hard surface, such as a wall, it immediately stops andskewers all creatures that were pushed against that wall. Eachcreature takes 3d4 piercing damage and is restrained, skewered tothe surface. A restrained creature can use an action to make aStrength or Dexterity check (the creature's choice) against thespell's saving throw DC. On a failed save, a creature takes anadditional 2d4 piercing damage. On a success, the creature is nolonger restrained.",
+      "text": "You cause a thick branch to shoot out of the ground along a line 5feet wide and 30 feet long. Each creature in the line must succeedon a Dexterity saving throw or be pushed along the length of thebranch as it grows in a direction of your choice. If the branchimpacts a hard surface, such as a wall, it immediately stops andskewers all creatures that were pushed against that wall. Eachcreature takes 3d4 piercing damage and is restrained, skewered tothe surface. A restrained creature can use an action to make aStrength or Dexterity check (the creature's choice) against thespell's saving throw DC. On a failed save, a creature takes anadditional 2d4 piercing damage. On a success, the creature is nolonger restrained.",
       "source": "SCPC"
     },
     "ru": {
@@ -11114,7 +11114,7 @@ var allSpells = [
       "components": "V, S",
       "materials": "",
       "duration": "Concentration, up to 1 hour",
-       "text": "You touch up to 6 leaves and imbue them with magic, hardeningthem and making their edges razor sharp. You or someone elsecan make a ranged spell attack with one of the leaves by throwingit with a range of 60 feet. If someone else attacks with a leaf, thatattacker adds your spellcasting ability modifier, not the attacker's,to the attack roll. On a hit, the target takes slashing damagedamage equal to 2d4 + your spellcasting ability modifier.<br>Hit or miss, the spell then ends on the leaf.<br>At Higher Levels. When you cast this spell using a spell slot of2nd level or higher, the number of leaves you can effect with thisspell increases by 2 and their damage increases by 1d4 for eachslot level above 1st.",
+      "text": "You touch up to 6 leaves and imbue them with magic, hardeningthem and making their edges razor sharp. You or someone elsecan make a ranged spell attack with one of the leaves by throwingit with a range of 60 feet. If someone else attacks with a leaf, thatattacker adds your spellcasting ability modifier, not the attacker's,to the attack roll. On a hit, the target takes slashing damagedamage equal to 2d4 + your spellcasting ability modifier.<br>Hit or miss, the spell then ends on the leaf.<br>At Higher Levels. When you cast this spell using a spell slot of2nd level or higher, the number of leaves you can effect with thisspell increases by 2 and their damage increases by 1d4 for eachslot level above 1st.",
       "source": "SCPC"
     },
     "ru": {
@@ -11140,7 +11140,7 @@ var allSpells = [
       "components": "S",
       "materials": "",
       "duration": "Concentration, up to 1 minute",
-       "text": "The next time you hit a creature with a melee weapon attackduring this spell's duration, your weapon is followed by a trail ofspores, and the attack deals an extra 2d6 poison damage damageto the target. Additionally, the target must succeed on aConstitution saving throw or be stunned until the start of yournext turn as pacifying spores enter their body.",
+      "text": "The next time you hit a creature with a melee weapon attackduring this spell's duration, your weapon is followed by a trail ofspores, and the attack deals an extra 2d6 poison damage damageto the target. Additionally, the target must succeed on aConstitution saving throw or be stunned until the start of yournext turn as pacifying spores enter their body.",
       "source": "SCPC"
     },
     "ru": {
@@ -11166,7 +11166,7 @@ var allSpells = [
       "components": "V, S, M",
       "materials": "(a rose thorn)",
       "duration": "Concentration, up to 1 minute",
-       "text": "You shoot forth a burst of thorns from your hands which pierce through your enemy's defenses, making them vulnerable toattacks. Each creature in a 20-foot cone must make a Dexteritysaving throw. On a failed save, a creature takes 6d6 piercing damage, and until the start of your next turn they take anadditional 1d6 piercing damage whenever they are hit by aweapon attack. On a successful save, a creature takes half damageand suffers no other effect.<br><b>At Higher Levels.</b> When you cast this spell using a spell slot of4th level or higher, the initial damage increases by 1d6 for each slot level above 3rd.",
+      "text": "You shoot forth a burst of thorns from your hands which pierce through your enemy's defenses, making them vulnerable toattacks. Each creature in a 20-foot cone must make a Dexteritysaving throw. On a failed save, a creature takes 6d6 piercing damage, and until the start of your next turn they take anadditional 1d6 piercing damage whenever they are hit by aweapon attack. On a successful save, a creature takes half damageand suffers no other effect.<br><b>At Higher Levels.</b> When you cast this spell using a spell slot of4th level or higher, the initial damage increases by 1d6 for each slot level above 3rd.",
       "source": "SCPC"
     },
     "ru": {
@@ -13349,7 +13349,7 @@ var allSpells = [
         "name": "Jim's Magic Missle",
         "level": "1",
         "text": "Any apprentice wizard can cast a boring old magic missile. Sure, it always strikes its target. Yawn. Do away with the drudgery of your grandfather's magic with this improved version of the spell, as used by Jim Darkmagic! You create three twisting, whistling, hypoallergenic, gluten-free darts of magical force. Each dart targets a creature of your choice that you can see within range. Make a ranged spell attack for each missile. On a hit, a missile deals 2d4 force damage to its target. lf the attack roll scores a critical hit, the target of that missile takes 5d4 force damage instead of you rolling damage twice for a critical hit. If the attack roll for any missile is a 1, all missiles miss their targets and blow up in your face, dealing 1 force damage per missile to you. At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart, and the royalty component increases by 1 gp, for each slot level above 1st.",
-        "school": "evocation",
+        "school": "Evocation",
         "castingTime": "1 action",
         "range": "120 feet",
         "materials": "",
@@ -13375,7 +13375,7 @@ var allSpells = [
         "name": "Motivational Speech",
         "level": "3",
         "text": "You address allies, staff, or innocent bystanders to exhort and inspire them to greatness, whether they have anything to get excited about or not. Choose up to five creatures within range that can hear you. For the duration, each affected creature gains 5 temporary hit points and has advantage on Wisdom saving throws. If an affected creature is hit by an attack, it has advantage on the next attack roll it makes. Once an affected creature loses the temporary hit points granted by this spell, the spell ends for that creature. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the temporary hit points increase by 5 for each slot level above 3rd.",
-        "school": "enchantment",
+        "school": "Enchantment",
         "castingTime": "1 minute",
         "range": "60 feet",
         "materials": "",
@@ -13394,6 +13394,192 @@ var allSpells = [
         "components": "В",
         "duration": "1 час",
         "source": "AI"
+      }
+    },
+
+
+    /*     */
+
+    {
+      "en": {
+        "name": "Ashardalon's Stride",
+        "level": "3",
+        "text": "The billowing flames of a dragon blast from your feet, granting you explosive speed. For the duration, your speed increases by 20 feet and moving doesn't provoke opportunity attacks. When you move within 5 feet of a creature or an object that isn't being worn or carried, it takes ld6 fire damage from your trail of heat. A creature or object can take this damage only once during a turn. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, increase your speed by 5 feet for each spell slot level above 3rd. The spell deals an additional ld6 fire damage for each slot level above 3rd.",
+        "school": "Transmutation",
+        "castingTime": "1 bonus action",
+        "range": "Self",
+        "materials": "",
+        "components": "V, S",
+        "duration": "Concentration, up to 1 minute",
+        "source": "FTD"
+      },
+      "ru": {
+        "name": "Ашардалонова поступь",
+        "level": "3",
+        "text": "Из-под ваших ног вырывается бушующее драконье пламя, дарующее вам взрывное ускорение. Пока заклинание активно, ваша скорость ходьбы увеличивается на 20 футов, и ваше движение не вызывает провоцированных атак. Когда вы перемещаетесь в пределах 5 футов от существа или предмета, который не несут и не носят, оно получает 1к6 урона огнём от вашего пылающего следа. Существо или предмет может получить этот урон только один раз за ход. На больших уровнях. Если вы накладываете это заклинание, используя ячейку 4-го уровня или выше, скорость увеличивается на 5 футов за каждый уровень ячейки выше третьего. Урон огнём увеличивается на 1к6 за каждый уровень ячейки выше третьего.",
+        "school": "преобразование",
+        "castingTime": "1 бонусное действие",
+        "range": "Вы",
+        "materials": "",
+        "components": "В, С",
+        "duration": "К-ция, до 1 минуты",
+        "source": "FTD"
+      }
+    },
+    {
+      "en": {
+        "name": "Draconic Transformation",
+        "level": "7",
+        "text": "With a roar, you draw on the magic of dragons to transform yourself, taking on draconic features. You gain the following benefits until the spell ends: <br> • Blindsight. You have blindsight with a range of 30 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature, unless the creature successfully hides from you. <br> • Breath Weapon. When you cast this spell, and as a bonus action on subsequent turns for the duration, you can exhale shimmering energy in a 60-foot cone. Each creature in that area must make a Dexterity saving throw, taking 6d8 force damage on a failed save, or half as much damage on a successful one. <br> • Wings. Incorporeal wings sprout from your back, giving you a flying speed of 60 feet.",
+        "school": "Transmutation",
+        "castingTime": "1 bonus action",
+        "range": "Self",
+        "materials": "a statuette of a dragon, worth at least 500 gp",
+        "components": "V, S, M",
+        "duration": "Concentration, up to 1 minute",
+        "source": "FTD"
+      },
+      "ru": {
+        "name": "Драконоподобное превращение",
+        "level": "7",
+        "text": "Издав громкий рык, вы прибегаете к магии драконов, чтобы преобразить себя, приобретая черты дракона. Пока заклинание активно, вы получаете следующие преимущества: <br> • Слепое зрение. Вы получаете слепое зрение в пределах 30 футов. В пределах этой дистанции вы можете видеть всё, что не находится за полным укрытием, даже если вы ослеплены или находитесь в темноте. Более того, вы можете увидеть невидимое существо в пределах этой дистанции, если только оно не преуспело в попытке спрятаться от вас. <br> • Оружие дыхания. Когда вы накладываете это заклинание, а также в последующие ходы, бонусным действием, вы можете выдыхать переливающуюся энергию 60-футовом конусом. Каждое существо в этой области должно совершить спасбросок Ловкости, получая 6к8 урона силовым полем в случае провала и половину этого урона в случае успеха. <br> • Крылья. Бесплотные крылья расправляются за вашей спиной, даруя вам скорость полёта 60 футов.",
+        "school": "преобразование",
+        "castingTime": "1 бонусное действие",
+        "range": "Вы",
+        "materials": "статуэтка дракона, стоимостью не менее 500 зм",
+        "components": "В, С, М",
+        "duration": "К-ция, до 1 минуты",
+        "source": "FTD"
+      }
+    },
+    {
+      "en": {
+        "name": "Fizban's Platinum Shield",
+        "level": "6",
+        "text": "You create a field of silvery light that surrounds a creature of your choice within range (you can choose yourself). The field sheds dim light out to 5 feet. While surrounded by the field, a creature gains the following benefits: <br> • Cover. The creature has half cover. <br> • Damage Resistance. The creature has resistance to acid, cold, fire, lightning, and poison damage. <br> • Evasion. If the creature is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the creature instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. <br> As a bonus action on subsequent turns, you can move the field to another creature within 60 feet of the field. ",
+        "school": "Abjuration",
+        "castingTime": "1 bonus action",
+        "range": "60 feet",
+        "materials": "a platinum-plated dragon scale, worth at least 500 gp",
+        "components": "V, S, M",
+        "duration": "Concentration, up to 1 minute ",
+        "source": "FTD"
+      },
+      "ru": {
+        "name": "Платиновый щит Физбана",
+        "level": "6",
+        "text": "Вы создаёте поле серебристого света, окружающее существо по вашему выбору в пределах дистанции (включая себя). Поле испускает тусклый свет в радиусе 5 футов. Находясь в поле, существо получает следующие преимущества: <br> • Укрытие. Существо получает укрытие на половину. <br> • Сопротивление урону. Существо получает сопротивление урону кислотой, огнём, холодом, электричеством и ядом. <br> • Увёртливость. Если существо попадает под действие эффекта, который позволяет ему совершить спасбросок Ловкости, чтобы получить только половину урона, вместо этого существо не получает никакого урона вовсе, если спасбросок был успешен, и только половину урона, если он был провален. <br> Бонусным действием в последующие ходы вы можете переместить поле к другому существу находящемуся в 60 футах от поля.",
+        "school": "ограждение",
+        "castingTime": "1 бонусное действие",
+        "range": "60 футов",
+        "materials": "покрытая платиной чешуя Дракона, стоимостью не менее 500 зм",
+        "components": "В, С, М",
+        "duration": "К-ция, до 1 минуты",
+        "source": "FTD"
+      }
+    },
+    {
+      "en": {
+        "name": "Nathair's Mischief",
+        "level": "2",
+        "text": "You fill a 20-foot cube you can see within range with fey and draconic magic. Roll on the Mischievous Surge table to determine the magical effect produced, and roll again at the start of each of your turns until the spell ends. You can move the cube up to 10 feet before you roll. <br> Mischievous Surge <br> d4 Effect <br> 1 The smell of apple pie fills the air, and each creature in the cube must succeed on a Wisdom saving throw or become charmed by you until the start of your next turn. <br> 2 Bouquets of flowers appear all around, and each creature in the cube must succeed on a Dexterity saving throw or be blinded until the start of your next turn as the flowers spray water in their faces. <br> 3 Each creature in the cube must succeed on a Wisdom saving throw or begin giggling until the start of your next turn. A giggling creature is incapacitated and uses all its movement to move in a random direction. <br> 4 Drops of molasses hover in the cube, making it difficult terrain until the start of your next turn.",
+        "school": "Illusion",
+        "castingTime": "1 action",
+        "range": "60 feet",
+        "materials": "a piece of crust from an apple pie",
+        "components": "S, M",
+        "duration": "Concentration, up to 1 minute",
+        "source": "FTD"
+      },
+      "ru": {
+        "name": "Натайрово озорство",
+        "level": "2",
+        "text": "Вы заполняете 20-футовый куб, который видите в пределах дистанции, магией Фей и Драконов. Совершите бросок по таблице «Озорной порыв» для определения создаваемого магического эффекта, и совершайте новый бросок в начале каждого вашего хода, пока заклинание не закончится. Вы можете переместить куб на 10 футов, прежде чем совершить бросок. <br> Озорной Порыв <br> к4 Эффект <br> 1	Запах яблочного пирога наполняет воздух и каждое существо в кубе должно преуспеть в спасброске Мудрости, иначе станет очарованным вами до начала вашего следующего хода. <br> 2	Букеты цветов появляются повсюду и каждое существо в кубе должно преуспеть в спасброске Ловкости, иначе станет ослеплённым до начала вашего следующего хода, так как цветы брызгают водой им в лица. <br> 3	Каждое существо в кубе должно преуспеть в спасброске Мудрости, иначе оно будет смеяться до начала вашего следующего хода. Смеющееся существо недееспособно и использует всё своё передвижение, чтобы переместиться в случайном направлении. <br> 4 Капли патоки начинают парить в кубе, превращая его в труднопроходимую местность до начала вашего следующего хода.",
+        "school": "иллюзия",
+        "castingTime": "1 действие",
+        "range": "60 футов",
+        "materials": "кусочек корочки яблочного пирога",
+        "components": "В, М",
+        "duration": "К-ция, до 1 минуты",
+        "source": "FTD"
+      }
+    },
+    {
+      "en": {
+        "name": "Raulothim's Psychic Lance",
+        "level": "4",
+        "text": "You unleash a shimmering lance of psychic power from your forehead at a creature that you can see within range. Alternatively, you can utter a creature's name. If the named target is within range, it becomes the spell's target even if you can't see it. If the named target isn't within range, the lance dissipates without effect. The target must make an Intelligence saving throw. On a failed save, the target takes 7d6 psychic damage and is incapacitated until the start of your next turn. On a successful save, the creature takes half as much damage and isn't incapacitated. At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by ld6 for each slot level above 4th.",
+        "school": "Enchantment",
+        "castingTime": "1 action",
+        "range": "120 feet",
+        "materials": "",
+        "components": "V",
+        "duration": "Instantaneous",
+        "source": "FTD"
+      },
+      "ru": {
+        "name": "Психическое копье Раулотима",
+        "level": "4",
+        "text": "Вы выпускаете мерцающее копье психической силы из своего лба в существо, которое вы можете видеть в пределах дистанции. В качестве альтернативы вы можете произнести имя существа. Если названная цель находится в пределах дистанции, она становится целью заклинания, даже если вы её не видите. Если названная цель не находится в пределах дистанции, копье исчезает без эффекта. Цель должна совершить спасбросок Интеллекта. В случае провала цель получает 7к6 урона психической энергией и становится недееспособной до начала вашего следующего хода. В случае успеха существо получает половину этого урона и остаётся дееспособным. На больших уровнях. Если вы накладываете это заклинание, используя ячейку 5-го уровня или выше, урон увеличивается на 1к6 за каждый уровень ячейки выше 4-го.",
+        "school": "очарование",
+        "castingTime": "1 действие",
+        "range": "120 футов",
+        "materials": "",
+        "components": "В",
+        "duration": "Мгновенная",
+        "source": "FTD"
+      }
+    },
+    {
+      "en": {
+        "name": "Rime's Binding Ice",
+        "level": "2",
+        "text": "A burst of cold energy emanates from you in a 30-foot cone. Each creature in that area must make a Constitution saving throw. On a failed save, a creature takes 3d8 cold damage and is hindered by ice formations for 1 minute, or until it or another creature within reach of it uses an action to break away the ice. A creature hindered by ice has its speed reduced to 0. On a successful save, a creature takes half as much damage and isn't hindered by ice. At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, increase the cold damage by ld8 for each slot level above 2nd.",
+        "school": "Evocation",
+        "castingTime": "1 action",
+        "range": "Self (30-foot cone)",
+        "materials": "a vial of meltwater",
+        "components": "S, M",
+        "duration": "Instantaneous",
+        "source": "FTD"
+      },
+      "ru": {
+        "name": "Сковывающий лёд Райма",
+        "level": "2",
+        "text": "Порыв ледяной энергии исходит от вас 30-футовым конусом. Каждое существо в этой области должно совершить спасбросок Телосложения. При провале существо получает 3к8 урона холодом и его удерживают ледяные образования в течение 1 минуты или до тех пор, пока оно или другое существо в пределах дистанции действием не разобьёт лёд. У существа, которое удерживается льдом, скорость уменьшается до 0. При успехе существо получает вдвое меньше урона, и оно не удерживается льдом. На больших уровнях. Если вы накладываете это заклинание, используя ячейку 3-го уровня или выше, урон увеличивается на 1к8 за каждый уровень ячейки выше второго.",
+        "school": "воплощение",
+        "castingTime": "1 действие",
+        "range": "Вы (30-футовый конус)",
+        "materials": "флакон с талой водой",
+        "components": "С, М",
+        "duration": "Мгновенная",
+        "source": "FTD"
+      }
+    },
+    {
+      "en": {
+        "name": "Summon Draconic Spirit",
+        "level": "5",
+        "text": "You call forth a draconic spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Draconic Spirit stat block. When you cast this spell, choose a family of dragon: chromatic, gem, or metallic. The creature resembles a dragon of the chosen family, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger. At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block.",
+        "school": "Conjuration",
+        "castingTime": "1 action",
+        "range": "60 feet",
+        "materials": "an object with the image of a dragon engraved on it, worth at least 500 gp",
+        "components": "V, S, M",
+        "duration": "Concentration, up to 1 hour",
+        "source": "FTD"
+      },
+      "ru": {
+        "name": "Призыв духа дракона",
+        "level": "5",
+        "text": "Вы призываете духа дракона. Он проявляется в свободном пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики Дух дракона. Когда вы накладываете заклинание, выберите род Дракона: цветной, самоцветный или металлический. Существо напоминает Дракона выбранного рода, что определяет особенности духа, описанные в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. Это существо дружелюбно к вам и вашим товарищам. В бою существо получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим вербальным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно применяет действие Уклонение и перемещается, избегая опасностей. На больших уровнях. Когда вы накладываете это заклинание, используя ячейку 6-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики.",
+        "school": "призыв",
+        "castingTime": "1 действие",
+        "range": "60 футов",
+        "materials": "предмет с выгравированным на нём изображением дракона, стоимостью не менее 500 зм",
+        "components": "В, С, М",
+        "duration": "К-ция, до 1 часа",
+        "source": "FTD"
       }
     },
 

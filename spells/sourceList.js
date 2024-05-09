@@ -102,6 +102,19 @@ var sourceList = {
 		"checked": false,
 		"visible": true
 	},
+	"FTD": {
+		"text": {
+			"en": {
+				"title": "Fizban's Treasury of Dragons"
+			},
+			"ru": {
+				"title": "Сокровищница драконов Физбана"
+			}
+		},
+		"official": true,
+		"checked": false,
+		"visible": true
+	},
 	"HB": {
 		"text": {
 			"en": {

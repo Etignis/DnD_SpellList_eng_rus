@@ -105,7 +105,12 @@ var classSpells = {
 			"Animate Objects",
 			"Transmute Rock",
 			"Creation",
-			"Skill Empowerment"			
+			"Skill Empowerment",			
+
+			//ftd
+
+			// 3 lvl
+			"Ashardalon's Stride",
 		],
 		subclasses: [
 			{
@@ -427,7 +432,11 @@ var classSpells = {
 			/*"Intellect Fortress",
 			"Dream of the Blue Veil"*/
 			
-			
+			//ftd
+			// 2 lvl
+			"Nathair's Mischief",
+			// 4 lvl
+			"Raulothim's Psychic Lance",
 		]
 
 	},
@@ -1077,6 +1086,12 @@ var classSpells = {
 			/*"Summon Beast",
 			"Summon Fey",
 			"Summon Elemental"*/
+
+			//ftd
+			// 5 lvl
+			"Summon Draconic Spirit",
+			// 7 lvl
+			"Draconic Transformation",
 		],
 	  subclasses: {
 		Land: {
@@ -1603,6 +1618,10 @@ var classSpells = {
 			/*"Summon Beast",
 			"Summon Fey",
 			"Summon Elemental"*/
+
+			//ftd
+			// 3 lvl
+			"Ashardalon's Stride",
 		],
 	  subclasses: [
 		{
@@ -1946,6 +1965,21 @@ var classSpells = {
 			"Tasha's Otherworldly Guise",
 			"Dream of the Blue Veil",
 			"Blade of Disaster"*/
+
+			//ftd
+			// 2 lvl
+			"Nathair's Mischief",
+			"Rime's Binding Ice",
+			// 3 lvl
+			"Ashardalon's Stride",
+			// 4 lvl
+			"Raulothim's Psychic Lance",
+			// 5 lvl
+			"Summon Draconic Spirit",
+			// 6 lvl
+			"Fizban's Platinum Shield",
+			// 7 lvl
+			"Draconic Transformation",
 		],
 	  subclasses: [
 		{
@@ -2165,6 +2199,10 @@ var classSpells = {
 			"Tasha's Otherworldly Guise",
 			"Dream of the Blue Veil",
 			"Blade of Disaster"*/
+
+			//ftd
+			// 4 lvl
+			"Raulothim's Psychic Lance",
 		],
 	  subclasses: [
 		{
@@ -2700,7 +2738,23 @@ var classSpells = {
 			"Dream of the Blue Veil",
 			"Blade of Disaster",
 			
-			"Mind spike"
+			"Mind spike",
+
+
+			//ftd
+			// 2 lvl
+			"Nathair's Mischief",
+			"Rime's Binding Ice",
+			// 3 lvl
+			"Ashardalon's Stride",
+			// 4 lvl
+			"Raulothim's Psychic Lance",
+			// 5 lvl
+			"Summon Draconic Spirit",
+			// 6 lvl
+			"Fizban's Platinum Shield",
+			// 7 lvl
+			"Draconic Transformation",
 		]
 
 	}
