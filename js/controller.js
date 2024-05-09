@@ -802,7 +802,8 @@ Vue.component('hiddenitem', {
 					}
 				}
 				//return a.sort((a,b)=>a.official?-1:1);
-				return a.sort((a,b)=>a.official?-1:1);
+				//return a.sort((a,b)=>a.official?-1:1);
+				return a;
 			},
 			aCastingTimeList: function() {
 				// collect Casting Time
