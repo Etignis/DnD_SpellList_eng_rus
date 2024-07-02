@@ -1372,6 +1372,7 @@ Vue.component('hiddenitem', {
 			},
 			onPrintBlack: function(){				
 				this.bPrintBlack = !this.bPrintBlack;
+				this.setConfig("bPrintBlack", this.bPrintBlack);
 				
 				const r = document.querySelector(':root');
 				const rs = getComputedStyle(r);
@@ -1720,6 +1721,11 @@ Vue.component('hiddenitem', {
 				let bTMPSourcesOpend = this.getConfig("sourcesOpend");
 				if(bTMPSourcesOpend != undefined) {		
 					this.bSourcesOpend = bTMPSourcesOpend;					
+				}	
+				
+				let bPrintBlack = this.getConfig("bPrintBlack");
+				if(bPrintBlack != undefined) {		
+					this.bPrintBlack = bPrintBlack;					
 				}	
 			},
 			
