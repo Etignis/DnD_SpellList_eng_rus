@@ -1,3 +1,8 @@
+:root {
+  --card_text_color_default: #666666;
+  --card_text_color_print: #000;
+  --card_text_color: var(--card_text_color_default);
+}
 .clear {
   float: none!important;
   clear: both!important;
@@ -1385,7 +1390,7 @@ p {
   border: 9px solid #e01a10;
   border-bottom-width: 25px;
   position: relative;
-  color: #666666;
+  color: var(--card_text_color);
 }
 .spellCard.selected {
   transform: scale(0.94);

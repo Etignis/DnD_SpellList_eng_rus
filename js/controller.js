@@ -772,6 +772,7 @@ Vue.component('hiddenitem', {
 			bCardsAreVisible: false,	
 			bAppIsReady: false,	
 			bRitualOnly: false,
+			bPrintBlack: false,
 			bAllClassSpells: false,
 			bOptionalTasha: false,
 			bEditMode: false,
@@ -1368,6 +1369,16 @@ Vue.component('hiddenitem', {
 				
 				this.bRitualOnly = !this.bRitualOnly;
 				this.updateHash();
+			},
+			onPrintBlack: function(){				
+				this.bPrintBlack = !this.bPrintBlack;
+				
+				const r = document.querySelector(':root');
+				const rs = getComputedStyle(r);
+				const card_text_color_default = rs.getPropertyValue('--card_text_color_default');
+				const card_text_color_print = rs.getPropertyValue('--card_text_color_print');
+				
+				r.style.setProperty('--card_text_color', this.bPrintBlack?card_text_color_print:card_text_color_default);
 			},
 			
 			autosizeAllText: function () {
