@@ -2355,6 +2355,39 @@ var classSpells = {
 		en: "Wizard",
 		ru: "Волшебник"
 	  },
+	  	subclasses: [
+			{
+			title: {
+					en: {
+						text: "Dunamancy",
+						source: "EGW"
+						},
+					ru: {
+						text: "Дюнамантия",
+						source: "EGW"
+						}
+				},
+				spells: [
+					"sapping sting",
+					"fortune's favor",
+					"wristpocket",
+					"pulse wave",
+					"tether essence",
+
+					"gift of alacrity",
+					"temporal shunt",
+					"reality break",
+					"time ravage",
+
+					"magnify gravity",
+					"immovable object",
+					"gravity sinkhole",
+					"gravity fissure",
+					"dark star",
+					"ravenous void"
+				]
+			}
+		],
 	  spells: [
 		// 1 lvl
 		"Silvery Barbs",

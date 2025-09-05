@@ -115,6 +115,19 @@ var sourceList = {
 		"checked": false,
 		"visible": true
 	},
+	"EGW": {
+		"text": {
+			"en": {
+				"title": "Explorer's Guide to Wildemount"
+			},
+			"ru": {
+				"title": "Explorer's Guide to Wildemount"
+			}
+		},
+		"official": true,
+		"checked": false,
+		"visible": true
+	},
 	"HB": {
 		"text": {
 			"en": {
