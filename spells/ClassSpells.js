@@ -2355,6 +2355,43 @@ var classSpells = {
 		en: "Wizard",
 		ru: "Волшебник"
 	  },
+		optional: {
+			TCoE: [
+				// 0
+				"booming blade",
+				"green-flame blade",
+				"lightning lure",
+				"mind sliver",
+				"sword burst",
+				// 1
+				"Tasha's caustic brew",
+				// 2
+				"augury",
+				"Tasha's mind whip",
+				"enhance ability",
+				// 3
+				"intellect fortress",
+				"spirit shroud",
+				"summon undead",
+				"summon shadowspawn",
+				"summon fey",
+				"speak with dead",
+				// 4
+				"divination",
+				"summon aberration",
+				"summon construct",
+				"summon elemental",
+				// 5
+				// 6
+				"Tasha's otherwordly guise",
+				"summon fiend",
+				// 7
+				"dream of the blue veil",
+				// 8
+				// 9
+				"blade of disaster"
+			]
+		},
 	  	subclasses: [
 			{
 			title: {
