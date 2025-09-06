@@ -976,7 +976,10 @@ Vue.component('hiddenitem', {
 				return this.sClass? this.oClassSpells[this.sClass].title[this.sLang] : "[ВСЕ]";
 			},
 			sSubClassSelected: function(){
-				return this.sSubClass? this.oClassSpells[this.sClass].subclasses[this.sSubClass].title[this.sLang] : "[ПОДКЛАСС]";
+				const sValue = this.oClassSpells[this.sClass]?.subclasses[this.sSubClass]?.title[this.sLang]?.text || this.oClassSpells[this.sClass]?.subclasses[this.sSubClass]?.title[this.sLang] || "[ПОДКЛАСС]";
+				
+				//return this.sSubClass? this.oClassSpells[this.sClass].subclasses[this.sSubClass].title[this.sLang] : "[ПОДКЛАСС]";
+				return sValue;
 			},
 			sSubSubClassSelected: function(){
 				return (this.sSubClass && this.sSubSubClass)? this.oClassSpells[this.sClass].subclasses[this.sSubClass].subclasses[this.sSubSubClass].title[this.sLang] : "[ПОДПОДКЛАСС]";

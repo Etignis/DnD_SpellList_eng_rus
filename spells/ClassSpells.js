@@ -2394,7 +2394,7 @@ var classSpells = {
 		},
 	  	subclasses: [
 			{
-			title: {
+				title: {
 					en: {
 						text: "Dunamancy",
 						source: "EGW"
