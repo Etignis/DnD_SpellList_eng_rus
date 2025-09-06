@@ -13582,5 +13582,397 @@ var allSpells = [
         "source": "FTD"
       }
     },
+ 
+ //// EGW
 
+    {
+      "en": {
+        "name": "Gift of alacrity",
+        "level": "1",
+        "text": "text",
+        "school": "Divination",
+        "castingTime": "1 minute",
+        "range": "Touch",
+        "materials": "You touch a willing creature. For the duration, the target can add 1d8 to its initiative rolls.",
+        "components": "V, S",
+        "duration": "8 hours",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Дар готовности",
+        "level": "1",
+        "text": "Вы касаетесь согласного существа. На время действия заклинания цель может прибавлять 1к8 к своим броскам инициативы.",
+        "school": "прорицание",
+        "castingTime": "1 минута",
+        "range": "Касание",
+        "materials": "",
+        "components": "В, С",
+        "duration": "8 часов",
+        "source": "EGW"
+      },
+    }, 
+    {
+      "en": {
+        "name": "Sapping sting",
+        "level": "0",
+        "text": "You sap the vitality of one creature you can see in range. The target must succeed on a Constitution saving throw or take 1d4 necrotic damage and fall prone.<br>At Higher Levels. This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).",
+        "school": "Necromancy",
+        "castingTime": "1 action",
+        "range": "30 feet",
+        "materials": "",
+        "components": "V, S",
+        "duration": "Instantaneous",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Иссушающий укол",
+        "level": "0",
+        "text": "Вы вытягиваете жизненные силы одного видимого существа в пределах дистанции. Цель должна преуспеть в спасброске Телосложения, иначе получит 1к4 урона некротической энергией и упадёт ничком.<br>Урон этого заклинания увеличивается на 1к4, когда вы достигаете 5-го уровня (2к4), 11-го уровня (3к4) и 17-го уровня (4к4).",
+        "school": "некромантия",
+        "castingTime": "1 действие",
+        "range": "30 футов",
+        "materials": "",
+        "components": "В, С",
+        "duration": "Мгновенная",
+        "source": "EGW"
+      },
+    }, 
+    {
+      "en": {
+        "name": "Magnify gravity",
+        "level": "1",
+        "text": "The gravity in a 10-foot-radius sphere centered on a point you can see within range increases for a moment. Each creature in the sphere on the turn when you cast the spell must make a Constitution saving throw. On a failed save, a creature takes 2d8 force damage, and its speed is halved until the end of its next turn. On a successful save, a creature takes half as much damage and suffers no reduction to its speed.<br>Until the start of your next turn, any object that isn't being worn or carried in the sphere requires a successful Strength check against your spell save DC to pick up or move.<br><b>At Higher Levels:</b> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
+        "school": "Transmutation",
+        "castingTime": "1 action",
+        "range": "60 feet",
+        "materials": "",
+        "components": "V, S",
+        "duration": "1 round",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Притяжение",
+        "level": "5",
+        "text": "Сила притяжения увеличивается на некоторое время в сфере с радиусом 10 футов, центром которой является видимая точка пространства в пределах дальности. В момент появления сферы, все существа в её пределах должны совершить спасбросок Телосложения. При провале существо получает 2к8 урона силовым полем, и его скорость уменьшена вдвое до конца его следующего хода. В случае успеха существо получает половину урона и его скорость не уменьшается.<br>До конца вашего следующего хода, чтобы в сфере поднять или сдвинуть предмет, который никто не несёт и не носит, необходимо преуспеть в проверке Силы Сл вашего спасброска заклинаний.<br><b>На больших уровнях</b> Если вы накладываете это заклинание, используя ячейку 2-го уровня или выше, урон увеличивается на 1к8 за каждый уровень ячейки выше первого.",
+        "school": "преобразование",
+        "castingTime": "1 действие",
+        "range": "60 футов",
+        "materials": "",
+        "components": "В, С",
+        "duration": "1 раунд",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Fortune's favor",
+        "level": "2",
+        "text": "You impart latent luck to yourself or one willing creature you can see within range. When the chosen creature makes an attack roll, an ability check, or a saving throw before the spell ends, it can dismiss this spell on itself to roll an additional d20 and choose which of the d20s to use. Alternatively, when an attack roll is made against the chosen creature, it can dismiss this spell on itself to roll a d20 and choose which of the d20s to use, the one it rolled or the one the attacker rolled.<br>If the original d20 roll has advantage or disadvantage, the creature rolls the additional d20 after advantage or disadvantage has been applied to the original roll.<br><b>At Higher Levels:</b> When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
+        "school": "Divination",
+        "castingTime": "1 minute",
+        "range": "60 feet",
+        "materials": "a white pearl worth at least 100 gp, which the spell consumes",
+        "components": "V, S, M",
+        "duration": "1 hour",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Благословение удачи",
+        "level": "2",
+        "text": "Вы даруете искру потенциала себе или другому согласному существу, которое вы можете видеть в пределах дистанции. Когда выбранное существо совершает бросок атаки, проверку характеристики или спасбросок до окончания заклинания, оно может окончить заклинание на себе и бросить дополнительный к20 и решить, какой из бросков использовать. В качестве альтернативы, когда по выбранному существу совершается бросок атаки, оно может окончить заклинание на себе и бросить дополнительный к20 и решить, какой из бросков использовать: цели или противника. Если оригинальный бросок к20 совершался с преимуществом или помехой, существо совершает дополнительный бросок к20 после того, как оригинальный бросок был совершён с преимуществом или помехой.<br><b>На больших уровнях:</b> Если вы накладываете это заклинание, используя ячейку 3-го уровня или выше, вы можете сделать целью одно дополнительное существо за каждую ячейку выше второго.",
+        "school": "прорицание",
+        "castingTime": "1 минута",
+        "range": "60 футов",
+        "materials": "жемчужина, стоящая как минимум 100 зм, расходуемая заклинанием",
+        "components": "В, С, М",
+        "duration": "1 час",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Wristpocket",
+        "level": "2",
+        "text": "You flick your wrist, causing one object in your hand to vanish. The object, which only you can be holding and can weigh no more than 5 pounds, is transported to an extradimensional space, where it remains for the duration.<br>Until the spell ends, you can use your action to summon the object to your free hand, and you can use your action to return the object to the extradimensional space. An object still in the pocket plane when the spell ends appears in your space, at your feet.",
+        "school": "Transmutation",
+        "castingTime": "1 action",
+        "range": "Self",
+        "materials": "",
+        "components": "S",
+        "duration": "Concentration, up to 1 hour",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Карман на запястье",
+        "level": "2",
+        "text": "Вы делаете движение кистью, заставляя один предмет в вашей руке исчезнуть. Предмет, который только вы способны держать и весящий не более 5 фунтов (2,3 кг), перемещается в карманное измерение, где остается на время действия заклинания.<br>До окончания заклинания, вы можете действием вернуть предмет в вашу свободную руку, и вы можете действием спрятать его обратно в карманное измерение. После окончания заклинания предмет, оставшийся в карманном измерении, падает у ваших ног.",
+        "school": "преобразование",
+        "castingTime": "1 действие",
+        "range": "На себя",
+        "materials": "",
+        "components": "С",
+        "duration": "К-ция, до 1 часа",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Immovable object",
+        "level": "2",
+        "text": "You touch an object that weighs no more than 10 pounds and cause it to become magically fixed in place. You and the creatures you designate when you cast this spell can move the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute.<br>If the object is fixed in the air, it can hold up to 4,000 pounds of weight. More weight causes the object to fall. Otherwise, a creature can use an action to make a Strength check against your spell save DC. On a success, the creature can move the object up to 10 feet.<br><b>At Higher Levels:</b> If you cast this spell using a spell slot of 4th or 5th level, the DC to move the object increases by 5, it can carry up to 8,000 pounds of weight, and the duration increases to 24 hours. If you cast this spell using a spell slot of 6th level or higher, the DC to move the object increases by 10, it can carry up to 20,000 pounds of weight, and the effect is permanent until dispelled.",
+        "school": "Transmutation",
+        "castingTime": "1 action",
+        "range": "Touch",
+        "materials": "gold dust worth at least 25 gp, which the spell consumes",
+        "components": "V, S, M",
+        "duration": "1 hour",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Неподвижный предмет",
+        "level": "2",
+        "text": "Вы касаетесь предмета, вес которого не превышает 10 фунтов (4,5 кг), и магическим образом фиксируете его в пространстве. Вы и указанные вами существа можете перемещать предмет как обычно. Кроме того, вы можете указать пароль, который при его произнесении в 5 футов от объекта подавляет эффект заклинания на 1 минуту.<br>Если предмет находится в воздухе, он может выдержать нагрузку до 4 000 фунтов, при превышении которой заклинание заканчивается. Существо может действием совершить проверку Силы против Сл ваших заклинаний. При успехе оно может сдвинуть предмет на расстояние до 10 футов.<br><b>На больших уровнях:</b> Если вы накладываете заклинание, используя ячейку 4-го или 5-го уровня, то максимальная нагрузка увеличивается до 8 000 фунтов, Сл сдвига увеличивается на 5, а длительность заклинания увеличивается до 24 часов. Если вы накладываете заклинание, используя ячейку 6-го уровня или выше, то максимальная нагрузка увеличивается до 20 000 фунтов, Сл сдвига увеличивается на 10, а заклинание длится, пока не будет рассеяно.",
+        "school": "преобразование",
+        "castingTime": "1 действие",
+        "range": "Касание",
+        "materials": "золотая пыль стоимостью не менее 25 зм, расходуемая заклинанием",
+        "components": "В, С, М",
+        "duration": "1 час",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Pulse wave",
+        "level": "3",
+        "text": "You create intense pressure, unleash it in a 30-foot cone, and decide whether the pressure pulls or pushes creatures and objects. Each creature in that cone must make a Constitution saving throw. A creature takes 6d6 force damage on a failed save, or half as much damage on a successful one. And every creature that fails the save is either pulled 15 feet toward you or pushed 15 feet away from you, depending on the choice you made for the spell.<br>In addition, unsecured objects that are completely within the cone are likewise pulled or pushed 15 feet.<br><b>At Higher Levels:</b> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 and the distance pulled or pushed increases by 5 feet for each slot level above 3rd.",
+        "school": "Evocation",
+        "castingTime": "1 action",
+        "range": "Self (30-foot cone)",
+        "materials": "",
+        "components": "V, S",
+        "duration": "Instantaneous",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Силовая волна",
+        "level": "3",
+        "text": "Вы создаёте сильное давление, выпускаемое в форме 30-футового конуса, и определяете направление волны. Каждое существо в пределах конуса должно совершить спасбросок Телосложения, получая 6к6 урона силовым полем при провале или половину этого урона при успехе. Все существа, провалившие спасбросок, в зависимости от вашего решения либо притягиваются к вам, либо отталкиваются от вас на 15 футов. Кроме того, все незакреплённые предметы в соответствующей области перемещаются на 15 футов.<br><b>На больших уровнях:</b> Если вы накладываете это заклинание, используя ячейку 4-го уровня или выше, урон увеличивается на 1к6, а расстояние толчка — на 5 футов за каждый уровень ячейки выше третьего.",
+        "school": "воплощение",
+        "castingTime": "1 действие",
+        "range": "На себя (30-футовый конус)",
+        "materials": "",
+        "components": "В, С",
+        "duration": "Мгновенная",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Gravity sinkhole",
+        "level": "4",
+        "text": "A 20-foot-radius sphere of crushing force forms at a point you can see within range and tugs at the creatures there. Each creature in the sphere must make a Constitution saving throw. On a failed save, the creature takes 5d10 force damage, and is pulled in a straight line toward the center of the sphere, ending in an unoccupied space as close to the center as possible (even if that space is in the air). On a successful save, the creature takes half as much damage and isn't pulled.<br><b>At Higher Levels:</b> When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d10 for each slot level above 4th.",
+        "school": "Evocation",
+        "castingTime": "1 action",
+        "range": "120 feet",
+        "materials": "a black marble",
+        "components": "V, S, M",
+        "duration": "Instantaneous",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Центр притяжения",
+        "level": "4",
+        "text": "Сфера разрушительной силы радиусом 20 футов появляется в видимой вами точке пространства, резко притягивая существ к своему центру. Каждое существо в области сферы должно совершить спасбросок Телосложения. При провале существо получает 5к10 урона силовым полем, и притягивается к центру сферы по прямой, заканчивая передвижение в свободном пространстве как можно ближе к центру (даже если он находится в воздухе). При успехе существо получает половину урона и не притягивается.<br><b>На больших уровнях:</b> Если вы накладываете это заклинание, используя ячейку 5-го уровня или выше, урон увеличивается на 1к10 за каждый уровень выше четвертого.",
+        "school": "воплощение",
+        "castingTime": "1 действие",
+        "range": "120 футов",
+        "materials": "шарик из черного мрамора",
+        "components": "В, С, М",
+        "duration": "Мгновенная",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Temporal shunt",
+        "level": "5",
+        "text": "You target the triggering creature, which must succeed on a Wisdom saving throw or vanish, being thrown to another point in time and causing the attack to miss or the spell to be wasted. At the start of its next turn, the target reappears where it was or in the closest unoccupied space. The target doesn't remember you casting the spell or being affected by it.<br><b>At Higher Levels:</b> When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th. All targets must be within 30 feet of each other.",
+        "school": "Transmutation",
+        "castingTime": "1 reaction, taken when a creature you see makes an attack roll or starts to cast a spell",
+        "range": "120 feet",
+        "materials": "",
+        "components": "V, S",
+        "duration": "1 round",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Временной сдвиг",
+        "level": "5",
+        "text": "Вы нацеливаетесь на спровоцировавшее реакцию существо, и оно должно преуспеть в спасброске Мудрости, иначе оно исчезает, оказываясь в ином временном промежутке, в котором его атака промахивается, а заклинание не оказывает никакого эффекта. В начале своего следующего хода цель появляется в том же месте или ближайшем к нему свободном пространстве. Цель не помнит как вы накладывали заклинание и как она была подвержена эффекту этого заклинания.<br><b>На больших уровнях</b> Если вы накладываете это заклинание, используя ячейку 6-го уровня или выше, вы можете выбрать в качестве цели одно дополнительное существо за каждый уровень выше пятого. Все цели должны быть в пределах 30 футов друг от друга.",
+        "school": "преобразование",
+        "castingTime": "1 реакция, совершаемая вами, когда существо, которое вы видите, совершает бросок атаки или накладывает заклинание",
+        "range": "120 футов",
+        "materials": "",
+        "components": "В, С",
+        "duration": "1 раунд",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Gravity fissure",
+        "level": "6",
+        "text": "You manifest a ravine of gravitational energy in a line originating from you that is 100 feet long and 5 feet wide. Each creature in that line must make a Constitution saving throw, taking 8d8 force damage on a failed save, or half as much damage on a successful one.<br>Each creature within 10 feet of the line but not in it must succeed on a Constitution saving throw or take 8d8 force damage and be pulled toward the line until the creature is in its area.<br><b>At Higher Levels:</b> When you cast this spell using a spell slot of 7th level or higher, the damage increases by 1d8 for each slot level above 6th.",
+        "school": "Evocation",
+        "castingTime": "1 action",
+        "range": "Self (100-foot line)",
+        "materials": "a fistful of iron filings",
+        "components": "V, S, M",
+        "duration": "Instantaneous",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Гравитационный разлом",
+        "level": "6",
+        "text": "Вы создаёте червоточину, обладающую огромным притяжением. Червоточина исходит от вас на 100 футов в длину и 5 футов в ширину. Все существа, попавшие в эту линию, должны совершить спасбросок Телосложения, получая 8к8 урона силовым полем при провале и половину этого урона при успехе. Все существа в пределах 10 футов от линии, не находящиеся в ней, должны преуспеть в спасброске Телосложения, иначе получат 8к8 урона силовым полем и притянутся по прямой к линии, пока не окажутся в её пространстве.<br><b>На больших уровнях:</b> Если вы накладываете это заклинание, используя ячейку 7-го уровня или выше, урон увеличивается на 1к8 за каждый уровень выше шестого.",
+        "school": "воплощение",
+        "castingTime": "1 действие",
+        "range": "На себя (100-футовая линия)",
+        "materials": "горсть железных опилок",
+        "components": "В, С, М",
+        "duration": "Мгновенная",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Tether essence",
+        "level": "7",
+        "text": "Two creatures you can see within range must make a Constitution saving throw, with disadvantage if they are within 30 feet of each other. Either creature can willingly fail the save. If either save succeeds, the spell has no effect. If both saves fail, the creatures are magically linked for the duration, regardless of the distance between them. When damage is dealt to one of them, the same damage is dealt to the other one. If hit points are restored to one of them, the same number of hit points are restored to the other one. If either of the tethered creatures is reduced to 0 hit points, the spell ends on both. If the spell ends on one creature, it ends on both.",
+        "school": "Necromancy",
+        "castingTime": "1 action",
+        "range": "60 feet",
+        "materials": "a spool of platinum cord worth at least 250 gp, which the spell consumes",
+        "components": "V, S, M",
+        "duration": "Concentration, up to 1 hour",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Единство сущностей",
+        "level": "7",
+        "text": "Два существа, видимых в пределах дистанции, должны совершить спасбросок Телосложения. Бросок совершается с помехой, если существа находятся не дальше 30 футов друг от друга. Оба существа могут по желанию провалить этот бросок. Если хотя бы одно существо преуспевает в спасброске, заклинание не имеет эффекта. Если оба существа проваливают спасбросок, существа магически соединяются друг с другом на время действия заклинания, вне зависимости от расстояния между ними. Если одно существо получает урон, второе существо получает тот же урон. Если одно существо восстанавливает хиты, другое существо восстанавливает то же самое количество хитов. Когда хиты одного из существ опускается до 0, заклинание оканчивается на обоих. Если заклинание оканчивается на одном существе, оно оканчивается на другом.",
+        "school": "некромантия",
+        "castingTime": "1 действие",
+        "range": "60 футов",
+        "materials": "катушка с платиновым шнуром стоимостью не менее 250 зм, расходуемая заклинанием",
+        "components": "В, С, М",
+        "duration": "К-ция, до 1 часа",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Dark star",
+        "level": "8",
+        "text": "This spell creates a sphere centered on a point you choose within range. The sphere can have a radius of up to 40 feet. The area within this sphere is filled with magical darkness and crushing gravitational force.<br>For the duration, the spell's area is difficult terrain. A creature with darkvision can't see through the magical darkness, and nonmagical light can't illuminate it. No sound can be created within or pass through the area. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there.<br>Any creature that enters the spell's area for the first time on a turn or starts its turn there must make a Constitution saving throw. The creature takes 8d10 force damage on a failed save or half as much damage on a successful save. A creature reduced to 0 hit points by this damage is disintegrated. A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust.",
+        "school": "Evocation",
+        "castingTime": "1 action",
+        "range": "150 feet",
+        "materials": "a shard of onyx and a drop of the caster's blood, both of which the spell consumes",
+        "components": "V, S, M",
+        "duration": "Concentration, up to 1 minute",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Тёмная звезда",
+        "level": "8",
+        "text": "Вы создаёте сферу с центром в точке выбранной в пределах дистанции. Сфера может иметь радиус до 40 футов. Область внутри сферы наполнена магической тьмой и сокрушительной силой притяжения. На время действия заклинания область внутри сферы становится труднопроходимой местностью. Существа с темным зрением не могут видеть сквозь эту тьму, и немагический свет не может её осветить. Никакие звуки не могут раздаться в пределах сферы, а также не могут проходить сквозь неё. Все существа и предметы, полностью находящиеся в сфере, получают иммунитет к урону звуком, и существа считаются оглохшими, когда полностью находятся в ней. Там невозможно накладывать заклинания с вербальным компонентом. Все существа, впервые за ход входящие в пространство сферы или начинающие ход внутри должны совершить спасбросок Телосложения. При провале существо получает 8к10 урона силовым полем, и половину этого урона при успехе. Если этот урон опускает хиты цели до 0, она распадается. Распавшееся существо, а также всё, что оно несло и носило, кроме магических предметов, превращается в кучку мелкого серого порошка.",
+        "school": "воплощение",
+        "castingTime": "1 действие",
+        "range": "150 футов",
+        "materials": "осколок оникса и капля крови заклинателя, расходуемые заклинанием",
+        "components": "В, С, М",
+        "duration": "К-ция, до 1 минуты",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Reality break",
+        "level": "8",
+        "text": "You shatter the barriers between realities and timelines, thrusting a creature into turmoil and madness. The target must succeed on a Wisdom saving throw, or it can't take reactions until the spell ends. The affected target must also roll a d10 at the start of each of its turns; the number rolled determines what happens to the target as shown on the Reality Break Effects table.<br>At the end of each of its turns, the affected target can repeat the Wisdom saving throw, ending the spell on itself on a success<br><table><tr><th>d10</th><th>Effect</th></tr><br><tr><td>1-2</td>	<td><b>Vision of the Far Realm.</b> The target takes 6d12 psychic damage, and it is stunned until the end of the turn</td></tr><br><tr><td>3-5</td>	<td><b>Rending Rift.</b> The target must make a Dexterity saving throw, taking 8d12 force damage on a failed save, or half as much damage on a successful save.</td></tr><br><tr><td>6-8</td>	<td><b>Wormhole.</b> The target is teleported, along with everything it is wearing and carrying, up to 30 feet to an unoccupied space of your choice that you can see. The target also takes 10d12 force damage and is knocked prone.</td></tr><tr><td>9-10</td>	<td><b>Chill of the Dark Void.</b> The target takes 10d12 cold damage, and it is blinded until the end of the turn.</td></tr></table>",
+        "school": "Conjuration",
+        "castingTime": "1 action",
+        "range": "60 feet",
+        "materials": "a crystal prism",
+        "components": "V, S, M",
+        "duration": "Concentration, up to 1 minute",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Брешь в реальности",
+        "level": "8",
+        "text": "Вы разрушаете границы между пространствами и временными линиями, погружая существо в пучину хаоса и безумия. Цель должна преуспеть в спасброске Мудрости, иначе она не может совершать реакции, пока заклинание не окончится.<br>В начале каждого своего хода существо под действием заклинания совершает бросок к10 и попадает под действие одного из эффектов, указанных ниже. В конце своего хода существо может повторить спасбросок Мудрости, при успехе оканчивая на себе эффект.<br>        <table><tr><th>к10</th><th>Эффект</th></tr><tr><td>1-2</td>	<td><b>Виденье Дальнего Предела.</b> Цель получает 6к12 урона психической энергией и является ошеломлённым до конца хода.</td></tr><tr><td>3-5</td>	<td><b>Разрыв пространства.</b> Цель совершает спасбросок Ловкости и получает 8к12 урона силовым полем при провале и половину урона при успехе.</td></tr><tr><td>6-8</td>	<td><b>Червоточина.</b> Цель, вместе с всем, что она несёт и носит, телепортируется до 30 футов в незанятое видимое пространство по вашему выбору, получает 10к12 урона силовым полем и падает ничком.</td></tr><tr><td>9-10</td>	<td><b>Хлад пустоты.</b> Цель получает 10к12 урона холодом и ослеплена до конца хода.</td></tr></table>",
+        "school": "вызов",
+        "castingTime": "1 действие",
+        "range": "60 футов",
+        "materials": "кристаллическая призма",
+        "components": "В, С, М",
+        "duration": "К-ция, до 1 минуты",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Time ravage",
+        "level": "9",
+        "text": "You target a creature you can see within range, putting its physical form through the devastation of rapid aging. The target must make a Constitution saving throw, taking 10d12 necrotic damage on a failed save, or half as much damage on a successful one. If the save fails, the target also ages to the point where it has only 30 days left before it dies of old age. In this aged state, the target has disadvantage on attack rolls, ability checks, and saving throws, and its walking speed is halved. Only the Wish spell or the Greater Restoration spell cast with a 9th-level spell slot can end these effects and restore the target to its previous age.",
+        "school": "Necromancy",
+        "castingTime": "1 action",
+        "range": "90 feet",
+        "materials": "an hourglass filled with diamond dust worth at least 5,000 gp, which the spell consumes",
+        "components": "V, S, M",
+        "duration": "Instantaneous",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Утрата времени",
+        "level": "9",
+        "text": "Вы нацеливаетесь на существо, видимое в пределах дистанции, и подвергаете его процессу опустошающего старения. Существо должно совершить спасбросок Телосложения. При провале существо получает 10к12 урона некротической энергией, и половину этого урона при успехе. При провале существо стареет до той степени, при которой оно умрет от старости через 30 суток. В таком состоянии цель совершает броски атаки, проверки характеристик и спасброски с помехой, и её скорость уменьшена вдвое. Только заклинания исполнение желаний [wish] и высшее восстановление [greater restoration], наложенное как заклинание 9-го уровня, могут обратить вспять эти эффекты и вернуть цели её предыдущий возраст.",
+        "school": "некромантия",
+        "castingTime": "1 действие",
+        "range": "90 футов",
+        "materials": "песочные часы, наполненные алмазной пылью стоимостью не менее 5000 зм, поглощаемые заклинанием",
+        "components": "В, С, М",
+        "duration": "Мгновенная",
+        "source": "EGW"
+      }, 
+    }, 
+    {
+      "en": {
+        "name": "Ravenous void",
+        "level": "9",
+        "text": "You create a 20-foot-radius sphere of destructive gravitation force centered on a point you can see within range. For the spell's duration, the sphere and any space within 100 feet of it are difficult terrain, and nonmagical objects fully inside the sphere are destroyed if they aren't being worn or carried.<br>When the sphere appears and at the start of each of your turns until the spell ends, unsecured objects within 100 feet of the sphere are pulled toward the sphere's center, ending in an unoccupied space as close to the center as possible.<br>A creature that starts its turn within 100 feet of the sphere must succeed on a Strength saving throw or be pulled straight toward the sphere's center, ending in an unoccupied space as close to the center as possible. A creature that enters the sphere for the first time on a turn or starts its turn there takes 5d10 force damage and is restrained until it is no longer in the sphere. If the sphere is in the air, the restrained creature hovers inside the sphere. A creature can use its action to make a Strength check against your spell save DC, ending this restrained condition on itself or another creature in the sphere that it can reach. A creature reduced to 0 hit points by this spell is annihilated, along with any nonmagical items it is wearing or carrying.",
+        "school": "Evocation",
+        "castingTime": "1 action",
+        "range": "1000 feet",
+        "materials": "a small, nine-pointed star made of iron",
+        "components": "V, S, M",
+        "duration": "Concentration, up to 1 minute",
+        "source": "EGW"
+      },
+      "ru": {
+        "name": "Ревущая бездна",
+        "level": "9",
+        "text": "Вы создаёте сферу разрушительной гравитации радиусом 20 футов с центром в видимой точке в пределах дистанции. На время действия заклинания пространство сферы и область радиусом 100 футов вокруг неё является труднопроходимой местностью. Все немагические предметы, не носимые и не несомые, полностью находящиеся в сфере, уничтожаются.<br>Сразу после появления, а также в начале каждого вашего хода до окончания заклинания, все незакрепленные предметы в пределах 100 футов от сферы притягиваются к центру, оканчивая движение как можно ближе к центру. Существа должны совершить спасбросок Силы, при провале подвергаясь этому эффекту.<br>Существо, начинающее ход внутри или впервые за ход входящее в пространство сферы получает 5к10 урона силовым полем и остаётся опутанным до тех пор, пока не покинет пространство сферы. Если сфера находится в воздухе, опутанное существо парит в её пространстве. Существо внутри сферы может действием совершить проверку Силы против Сл ваших заклинаний, оканчивая на себе состояние опутанный или другом существе в пределах досягаемости. Если хиты существа уменьшаются до 0, оно бесследно уничтожается со всеми немагическими предметами, которое оно несёт или носит.",
+        "school": "воплощение",
+        "castingTime": "1 действие",
+        "range": "1000 футов",
+        "materials": "маленькая железная девятиконечная звезда",
+        "components": "В, С, М",
+        "duration": "К-ция, до 1 минуты",
+        "source": "EGW"
+      }, 
+    }
 ]

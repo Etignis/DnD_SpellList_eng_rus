@@ -2355,6 +2355,76 @@ var classSpells = {
 		en: "Wizard",
 		ru: "Волшебник"
 	  },
+		optional: {
+			TCoE: [
+				// 0
+				"booming blade",
+				"green-flame blade",
+				"lightning lure",
+				"mind sliver",
+				"sword burst",
+				// 1
+				"Tasha's caustic brew",
+				// 2
+				"augury",
+				"Tasha's mind whip",
+				"enhance ability",
+				// 3
+				"intellect fortress",
+				"spirit shroud",
+				"summon undead",
+				"summon shadowspawn",
+				"summon fey",
+				"speak with dead",
+				// 4
+				"divination",
+				"summon aberration",
+				"summon construct",
+				"summon elemental",
+				// 5
+				// 6
+				"Tasha's otherwordly guise",
+				"summon fiend",
+				// 7
+				"dream of the blue veil",
+				// 8
+				// 9
+				"blade of disaster"
+			]
+		},
+	  	subclasses: [
+			{
+			title: {
+					en: {
+						text: "Dunamancy",
+						source: "EGW"
+						},
+					ru: {
+						text: "Дюнамантия",
+						source: "EGW"
+						}
+				},
+				spells: [
+					"sapping sting",
+					"fortune's favor",
+					"wristpocket",
+					"pulse wave",
+					"tether essence",
+
+					"gift of alacrity",
+					"temporal shunt",
+					"reality break",
+					"time ravage",
+
+					"magnify gravity",
+					"immovable object",
+					"gravity sinkhole",
+					"gravity fissure",
+					"dark star",
+					"ravenous void"
+				]
+			}
+		],
 	  spells: [
 		// 1 lvl
 		"Silvery Barbs",
