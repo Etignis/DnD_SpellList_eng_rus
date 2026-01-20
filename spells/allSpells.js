@@ -10541,7 +10541,7 @@ var allSpells = [
       "components": "V, M",
       "materials": "weapon",
       "duration": "1 round",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     },
     "ru": {
       "name": "Громовой Клинок",
@@ -10553,7 +10553,7 @@ var allSpells = [
       "components": "В, М",
       "materials": "любое оружие",
       "duration": "1 раунд",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     }
   },
   {
@@ -10567,7 +10567,7 @@ var allSpells = [
       "components": "V, M",
       "materials": "weapon",
       "duration": "Instantaneous",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     },
     "ru": {
       "name": "Клинок Зеленого Пламени",
@@ -10579,7 +10579,7 @@ var allSpells = [
       "components": "В, М",
       "materials": "любое оружие",
       "duration": "Мгновенно",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     }
   },
   {
@@ -10593,7 +10593,7 @@ var allSpells = [
       "components": "V",
       "materials": "",
       "duration": "Instantaneous",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     },
     "ru": {
       "name": "Лассо Молнии",
@@ -10605,7 +10605,7 @@ var allSpells = [
       "components": "В",
       "materials": "",
       "duration": "Мгновенно",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     }
   },
   {
@@ -10619,7 +10619,7 @@ var allSpells = [
       "components": "V",
       "materials": "",
       "duration": "Instantaneous",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     },
     "ru": {
       "name": "Вспышка Мечей",
@@ -10631,7 +10631,7 @@ var allSpells = [
       "components": "В",
       "materials": "",
       "duration": "Мгновенно",
-      "source": "SCAG"
+      "source": "SCAG, TCoE"
     }
   },
   
@@ -12582,31 +12582,6 @@ var allSpells = [
  },
  {
   "en": {
-   "name": "BOOMING BLADE",
-   "school": "Evocation",
-   "level": "0",
-   "castingTime": "1 action",
-   "range": "Self (5-foot radius)",
-   "components": "S, M",
-   "materials": "(a melee weapon worth at least 1 sp)",
-   "duration": "1 round",
-   "text": "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects and then becomes sheathed in booming energy until the start of your next turn. If the target willingly moves 5 feet or more before then, the target takes ld8 thunder damage, and the spell ends. <br>This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra ld8 thunder damage to the target on a hit, and the damage the target takes for moving increases to 2d8. Both damage rolls increase by ld8 at 1 1th level (2d8 and 3d8) and again at 17th level (3d8 and 4d8).",
-	 "source": "TCoE"
-  },
-  "ru": {
-   "name": "Громовой клинок",
-   "school": "воплощение",
-   "level": "0",
-   "castingTime": "1 действие",
-   "range": "На себя (5-футовый радиус)",
-   "components": "С, М",
-   "materials": "(оружие ближнего боя стоимостью не менее 1 см)",
-   "duration": "1 раунд",
-   "text": "Вы взмахиваете оружием, выбранным в качестве материального компонента, и совершаете рукопашную атаку оружием против одного существа в пределах 5 футов от вас. При попадании цель подвергается обычному эффекту от атаки этим оружием и покрывается бушующей энергией до начала вашего следующего хода. Если цель добровольно перемещается на 5 футов или более до окончания действия заклинания, она получает 1к8 урона звуком, и действие заклинания заканчивается. <br>Урон этого заклинания увеличивается, когда вы достигаете определённых уровней. На 5-м уровне рукопашная атака наносит дополнительно 1к8 урона звуком при попадании, а урон, получаемый при перемещении, увеличивается до 2к8. Оба броска урона снова увеличиваются на 1к8 на 11-м уровне (2к8 и 3к8) и на 17-м уровне (3к8 и 4к8)."
-  }
- },
- {
-  "en": {
    "name": "DREAM OF THE BLUE VEIL",
    "school": "Conjuration",
    "level": "7",
@@ -12653,56 +12628,6 @@ var allSpells = [
    "materials": "",
    "duration": "Концентрация, вплоть до 1 часа",
    "text": "В течение длительности заклинания вы или одно согласное существо, которое вы можете видеть в пределах дистанции, имеет сопротивление урону психической энергией, а также совершаете с преимуществом спасброски Интеллекта, Мудрости и Харизмы. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 4-го уровня или выше, вы можете сделать целью заклинания дополнительных существ, по одному за каждый уровень ячейки выше третьего. Все цели заклинания должны находиться в пределах 30 футов друг от друга во время накладывания заклинания."
-  }
- },
- {
-  "en": {
-   "name": "GREEN-FLAME BLADE",
-   "school": "Evocation",
-   "level": "0",
-   "castingTime": "1 action",
-   "range": "Self (5-foot radius)",
-   "components": "S, M",
-   "materials": "(a melee weapon worth at least 1 sp)",
-   "duration": "Instantaneous",
-   "text": "You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects, and you can cause green fire to leap from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier. <br> This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra 1d8 fire damage to the target on a hit, and the fire damage to the second creature increases to 1d8 + your spellcasting ability modifier. Both damage rolls increase by 1d8 at 1 1th level (2d8 and 2d8) and 17th level (3d8 and 3d8).",
-	 "source": "TCoE"
-  },
-  "ru": {
-   "name": "Клинок зелёного пламени",
-   "school": "воплощение",
-   "level": "0",
-   "castingTime": "1 действие",
-   "range": "На себя (5-футовый радиус)",
-   "components": "С, М",
-   "materials": "(оружие ближнего боя стоимостью не менее 1 см)",
-   "duration": "Мгновенная",
-   "text": "Вы взмахиваете оружием, выбранным в качестве материального компонента, и совершаете рукопашную атаку оружием против одного существа в пределах 5 футов от вас. При попадании цель подвергается обычному эффекту атаки этим оружием, и вы можете заставить зелёный огонь перекинуться от цели к другому существу по вашему выбору, которое вы можете видеть в пределах 5 футов от цели. Второе существо получает урон огнём, равный вашему модификатору базовой характеристики. <br>Урон этого заклинания увеличивается, когда вы достигаете определённых уровней. На 5-м уровне рукопашная атака наносит дополнительно 1к8 урона огнём, а урон, получаемый вторым существом, увеличивается до 1к8 + ваш модификатор базовой характеристики. Оба этих урона увеличиваются на 1к8 на 11-м уровне (2к8 и 2к8) и 17-м уровне (3к8 и 3к8)."
-  }
- },
- {
-  "en": {
-   "name": "LIGHTNING LURE",
-   "school": "Evocation",
-   "level": "0",
-   "castingTime": "1 action",
-   "range": "Self (15-foot radius)",
-   "components": "V",
-   "materials": "",
-   "duration": "Instantaneous",
-   "text": "You create a lash of lightning energy that strikes at one creature of your choice that you can see within 15 feet of you. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take 1d8 lightning damage if it is within 5 feet of you. <br>This spell's damage increases by 1d8 when you reach 5th level (2d8), 1 1th level (3d8), and 17th level (4d8).",
-	 "source": "TCoE"
-  },
-  "ru": {
-   "name": "Лассо молнии",
-   "school": "воплощение",
-   "level": "0",
-   "castingTime": "1 действие",
-   "range": "На себя (15-футовый радиус)",
-   "components": "В",
-   "materials": "",
-   "duration": "Мгновенная",
-   "text": "Вы создаете хлыст из молний, поражающий одно существо по вашему выбору, которое вы можете видеть в пределах 15 футов от вас. Цель должна преуспеть в спасброске Силы, иначе будет притянута на 10 футов по прямой к вам, после чего получит 1к8 урона электричеством, если окажется в пределах 5 футов от вас.<br>Урон этого заклинания увеличивается на 1к8, когда вы достигаете 5-го уровня (2к8), 11-го уровня (3к8) и 17-го уровня (4к8)."
   }
  },
  {
@@ -12953,31 +12878,6 @@ var allSpells = [
    "materials": "(позолоченный череп стоимостью не менее 300 зм)",
    "duration": "Концентрация, вплоть до 1 часа",
    "text": "Вы призываете духа нежити. Он проявляется в незанятом пространстве, которое вы можете видеть в пределах дистанции. Воплощённая форма духа использует блок статистики духа нежити. Когда вы накладываете заклинание, выберите форму духа: призрачный, гнилой или скелетный. Дух принимает форму выбранной нежити и имеет соответствующие признаки, описанные в блоке статистики. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается. <br>Это существо дружелюбно к вам и вашим товарищам. В бою оно получает вашу инициативу и ходит сразу же после вас. Оно подчиняется вашим словесным командам (никаких действий от вас не требуется). Если вы ничего не приказываете, то оно совершает действие Уклонение и перемещается, избегая опасностей. <br><b>На больших уровнях.</b> Когда вы накладываете это заклинание, используя ячейку 4-го уровня или выше, характеристики призываемого существа изменяются в соответствии с описанием в блоке статистики."
-  }
- },
- {
-  "en": {
-   "name": "SWORD BURST",
-   "school": "Conjuration",
-   "level": "0",
-   "castingTime": "1 action",
-   "range": "Self (5-foot radius)",
-   "components": "V,",
-   "materials": "",
-   "duration": "Instantaneous",
-   "text": "You create a momentary circle of spectral blades that sweep around you. All other creatures within 5 feet of you must each succeed on a Dexterity saving throw or take 1d6 force damage.<br> This spell's damage increases by 1d6 when you reach 5th level (2d6), 1 1th level (3d6), and 17th level (4d6).",
-	 "source": "TCoE"
-  },
-  "ru": {
-   "name": "Вспышка мечей",
-   "school": "вызов",
-   "level": "0",
-   "castingTime": "1 действие",
-   "range": "На себя (5-футовый радиус)",
-   "components": "В",
-   "materials": "",
-   "duration": "Мгновенная",
-   "text": "Вы на мгновение создаёте круг из вращающихся вокруг вас призрачных лезвий. Все остальные существа в пределах 5 футов от вас должны преуспеть в спасброске Ловкости, иначе получат 1к6 урона силовым полем.<br> Урон этого заклинания увеличивается на 1к6, когда вы достигаете 5-го уровня (2к6), 11-го уровня (3к6) и 17-го уровня (4к6)."
   }
  },
  {
